@@ -1,0 +1,242 @@
+{
+ "_doc": "HAND-EDIT. Settings for _wiki/_tools/dc_monitor.py (weekly lane dc-projects-monitor). Thresholds are in USD; owner_aliases are matched case-insensitively as substrings of TDLR owner/project/facility/scope text, TCEQ company names and Epoch owner/user fields. edgar_tickers: ticker -> registry match tokens (developer/tenant names as written in the registry).",
+ "lookback_days_first_run": 7,
+ "tdlr": {
+  "min_cost_scan": 20000000,
+  "min_cost_detail": 40000000,
+  "min_cost_keyword": 5000000,
+  "max_scan_rows": 600,
+  "max_detail_fetches": 70,
+  "max_watch_fetches": 150,
+  "sleep_s": 0.4
+ },
+ "dc_keywords": [
+  "data center",
+  "datacenter",
+  "data centre",
+  "data hall",
+  "hyperscale",
+  "powered shell",
+  "colocation",
+  "server hall",
+  "critical it",
+  "ai factory",
+  "hpc campus",
+  "compute campus",
+  "dc campus",
+  "dc bldg",
+  "dc building"
+ ],
+ "owner_aliases": [
+  "amazon data services",
+  "vadata",
+  "amazon.com",
+  "aws",
+  "google llc",
+  "google",
+  "meta platforms",
+  "facebook",
+  "microsoft",
+  "oracle",
+  "openai",
+  "stargate",
+  "crusoe",
+  "lancium",
+  "vantage",
+  "qts",
+  "stack infrastructure",
+  "cyrusone",
+  "skybox",
+  "aligned",
+  "compass datacenters",
+  "stream data",
+  "edged",
+  "edgeconnex",
+  "databank",
+  "digital realty",
+  "digital garland",
+  "prime data",
+  "rowan digital",
+  "novva",
+  "switch, ltd",
+  "switch ltd",
+  "sabey",
+  "cloudhq",
+  "tract capital",
+  "related digital",
+  "fermi",
+  "riot",
+  "core scientific",
+  "galaxy digital",
+  "helios",
+  "iren",
+  "cipher",
+  "terawulf",
+  "hut 8",
+  "applied digital",
+  "ionic digital",
+  "nscale",
+  "nebius",
+  "coreweave",
+  "poolside",
+  "sb energy",
+  "chirisa",
+  "powerhouse data",
+  "nexus data",
+  "cloudburst",
+  "tenaska",
+  "energy abundance",
+  "fluidstack",
+  "xai",
+  "spacex",
+  "x.ai",
+  "pacifico",
+  "hillwood",
+  "menlo",
+  "t5 data",
+  "ntt",
+  "iron mountain",
+  "corscale",
+  "fidelis",
+  "blue owl",
+  "blackstone",
+  "data center"
+ ],
+ "edgar_forms": [
+  "8-K",
+  "10-Q",
+  "10-K",
+  "S-1",
+  "S-1/A",
+  "424B4",
+  "6-K",
+  "20-F",
+  "40-F",
+  "10-K/A",
+  "10-Q/A"
+ ],
+ "edgar_max_docs": 45,
+ "edgar_tickers": {
+  "IREN": [
+   "IREN"
+  ],
+  "RIOT": [
+   "Riot"
+  ],
+  "CORZ": [
+   "Core Scientific"
+  ],
+  "GLXY": [
+   "Galaxy"
+  ],
+  "WULF": [
+   "TeraWulf"
+  ],
+  "CIFR": [
+   "Cipher"
+  ],
+  "APLD": [
+   "Applied Digital"
+  ],
+  "HUT": [
+   "Hut 8"
+  ],
+  "BTDR": [
+   "Bitdeer"
+  ],
+  "CLSK": [
+   "CleanSpark"
+  ],
+  "MARA": [
+   "MARA"
+  ],
+  "CRWV": [
+   "CoreWeave"
+  ],
+  "NBIS": [
+   "Nebius"
+  ],
+  "FRMI": [
+   "Fermi"
+  ],
+  "DLR": [
+   "Digital Realty"
+  ],
+  "EQIX": [
+   "Equinix"
+  ],
+  "IRM": [
+   "Iron Mountain"
+  ],
+  "TLN": [
+   "Talen"
+  ],
+  "VST": [
+   "Vistra"
+  ],
+  "CEG": [
+   "Constellation"
+  ],
+  "NRG": [
+   "NRG"
+  ],
+  "SEI": [
+   "Solaris"
+  ],
+  "WYFI": [
+   "WhiteFiber"
+  ]
+ },
+ "corpus_query": "(\"data center\" OR \"data centre\" OR datacenter OR campus) AND (MW OR GW OR megawatt OR megawatts OR gigawatt OR gigawatts)",
+ "corpus_kinds_skip": [
+  "wiki",
+  "theme",
+  "figure"
+ ],
+ "corpus_max": 40,
+ "ambiguous_places": [
+  "Claude",
+  "Center",
+  "Commerce",
+  "Energy",
+  "Liberty",
+  "Independence",
+  "Justice",
+  "Industry",
+  "Power"
+ ],
+ "moratoria_url": "https://mjbommar.github.io/moratorium-data-2026/data/moratorium_inventory.csv",
+ "tceq_turbines_url": "https://www.tceq.texas.gov/downloads/permitting/air/memos/turbine-lst.xlsx",
+ "epoch_urls": {
+  "data_centers": "https://epoch.ai/data/data_centers/data_centers.csv",
+  "timelines": "https://epoch.ai/data/data_centers/data_center_timelines.csv"
+ },
+ "manual_watch": [
+  {
+   "what": "ERCOT large-load interconnection status / batch study / Dec-10-2026 audit report",
+   "why": "ercot.com returns 403 to scripts; check by WebSearch/WebFetch in the lane",
+   "instrument": "TX-ERCOT-LL"
+  },
+  {
+   "what": "Texas TCEQ data-center permit freeze (Abbott letter 2026-09-21) and the 2027 session (Jan-May)",
+   "instrument": "TX-TCEQ-PERMIT-FREEZE"
+  },
+  {
+   "what": "Virginia SB 843 (2027 session) and county actions in Loudoun / Prince William / Culpeper / Louisa",
+   "instrument": "VA-SB843"
+  },
+  {
+   "what": "Ohio (Acton), Georgia (Bottoms), New Mexico (Haaland EO), Oregon DEQ hold, New York EO 62 / RDCD",
+   "instrument": "OH-ACTON-CONDITIONAL;GA-BOTTOMS-PAUSE;NM-HAALAND-EO;OR-DEQ-HOLD;NY-EO62;NY-RDCD"
+  },
+  {
+   "what": "Kentucky EO 2026-494 conditions; any new governor or legislature action in IN, PA, MO, NV, LA, AZ, WY",
+   "instrument": "context"
+  },
+  {
+   "what": "Bernstein 2026-11-06 catalysts: Nov 10 St. Clair Township ban hearing (AWS Trenton 1.5 GW) · Nov 17 Effingham County Camellia site plan · Nov 17 Loudoun 12-month pause vote (our LOC-VA-011 says enacted 2026-09-16 — reconcile) · Nov 24 Ohio certification (Meta Piqua) · Dec 16 Louisiana PSC on Meta Hyperion expansion · Dec 31 Georgia large-customer pricing docket and Ohio HB 646",
+   "instrument": "LOC-OH-028;LOC-VA-011;LOC-OH-087;GA-BOTTOMS-PAUSE",
+   "why": "dated decisions named in the Bernstein post-midterm note; see the dashboard's Bernstein tab"
+  }
+ ]
+}

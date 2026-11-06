@@ -1,0 +1,21 @@
+{
+  "validated_at": "2026-11-06T09:16:15",
+  "tests": "16 passed",
+  "live_matches_generated": true,
+  "attachment_diff": "Expected absolute-link conversion only",
+  "dashboard_sha256": "fa2418fe5c64f70b0fd295cf7f25d14c45e02c5332d0bb47d7baa56995b50314",
+  "attachment_sha256": "e913edd71979c2a88f06930426436e7449eb4e785e14edab4c041e0149610666",
+  "body_sha256": "c20fdf3c28c43bb2cdff1329ca633e0894d96af1439231c7b4d34566fe4591a7",
+  "external_render_assets": [],
+  "input_hashes_match_run": true,
+  "market_status": "partial",
+  "limitations": [
+    "Issuer board XAI_12.5_2030: stale observation 2026-03-04.",
+    "Official workbook refresh partial: 4 instrument(s) returned no values \u2014 previous values kept; unavailable instruments: BL482176 Corp, BL563698 Corp, NBIS 2 3/4 09/15/32 Corp, BL097034 Corp. Retained values are not fresh quotes.",
+    "Official workbook CRWV DDTL 1.0 03/2028: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date.",
+    "Official workbook CRWV DDTL 4.0 fixed 03/2032: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date.",
+    "Official workbook NBIS 2.75% cv Sep-2032: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date.",
+    "Official workbook SPCX revolver 2031: retained earlier value; individual observation date unavailable. Do not treat the overall refresh date as its quote date."
+  ],
+  "email_body_reviewed": true
+}

@@ -7227,6 +7227,48 @@
    "ci": true,
    "rule": "ASR of Childress, TX.",
    "first_seen": "2026-06-18 Cantor CoreWeave/datacenter call (_equity_calls/Overall/2026-06-18_Cantor_CoreWeave-datacenter.md); caught 2026-11-06 building _wiki/IREN.md"
+  },
+  "Sophronia": {
+   "correct": "Senfronia (Senfronia Thompson, Houston Democrat, longest-serving Texas House member)",
+   "domain": "names",
+   "ci": true,
+   "rule": "Notion summary/ASR spelling of Senfronia Thompson, named as the expected Texas House Speaker on the call.",
+   "first_seen": "2026-11-06 Jefferies JEF Access Texas Power & Utility (_equity_calls/Overall/2026-11-06_Jefferies_Texas-power-DC-moratorium-post-election-Hinojosa-WBK-DuBois-Sashkin-Dumoulin-Smith.md)"
+  },
+  "Vicki Goodwin": {
+   "correct": "Vikki Goodwin (Texas Lt. Governor-elect per the call; Democrat, Austin-area state Rep.)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR/summary spelling; the politician spells it Vikki.",
+   "first_seen": "2026-11-06 Jefferies JEF Access Texas Power & Utility (_equity_calls/Overall/2026-11-06_Jefferies_Texas-power-DC-moratorium-post-election-Hinojosa-WBK-DuBois-Sashkin-Dumoulin-Smith.md)"
+  },
+  "non-caller": {
+   "correct": "no-collar (M&A exchange-ratio structure)",
+   "domain": "finance",
+   "ci": true,
+   "rule": "ASR of 'no-collar' in deal-structure talk (fixed exchange ratio, no price collar).",
+   "first_seen": "2026-11-06 Jefferies Semis Update Call (_equity_calls/Semis/2026-11-06_Jefferies_Semis-update-call-tape-flows-MRVL-LITE-roadshow-MCHP-semicap-PI-Curtis-Favuzza.md), MRVL-LITE deal"
+  },
+  "Rienosa": {
+   "correct": "Hinojosa (Gina Hinojosa, Texas Governor-elect)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Hinojosa in Texas-politics talk.",
+   "first_seen": "2026-11-06 Jefferies JEF Access Texas Power & Utility (_equity_calls/Overall/2026-11-06_Jefferies_Texas-power-DC-moratorium-post-election-Hinojosa-WBK-DuBois-Sashkin-Dumoulin-Smith.md)"
+  },
+  "PCQ": {
+   "correct": "TCEQ (Texas Commission on Environmental Quality)",
+   "domain": "regulators",
+   "ci": false,
+   "rule": "ASR of TCEQ in Texas air-permit talk.",
+   "first_seen": "2026-11-06 Jefferies JEF Access Texas Power & Utility (_equity_calls/Overall/2026-11-06_Jefferies_Texas-power-DC-moratorium-post-election-Hinojosa-WBK-DuBois-Sashkin-Dumoulin-Smith.md)"
+  },
+  "Wilkins & Barker": {
+   "correct": "Wilkinson Barker Knauer (WBK, law firm)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of the law firm's name.",
+   "first_seen": "2026-11-06 Jefferies JEF Access Texas Power & Utility (_equity_calls/Overall/2026-11-06_Jefferies_Texas-power-DC-moratorium-post-election-Hinojosa-WBK-DuBois-Sashkin-Dumoulin-Smith.md)"
   }
  },
  "summary_traps": [

@@ -12,7 +12,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\UBER` (filings + trans
 | Gross margin | 43.1% | 45.0% |
 | EBITDA | $11.3bn | $14.0bn |
 | EPS | $3.35 | $4.40 |
-| Capex | $401m | $555m |
+| Capex | $402m | $555m |
 | OCF (≈EBITDA) | $11.3bn | $14.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

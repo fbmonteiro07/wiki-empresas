@@ -11,7 +11,7 @@ _Wiki · created 2026-10-31 · research cutoff 2026-10-31 · email review 2026-1
 | Gross profit | $10.6bn | $11.7bn |
 | Gross margin | 68.9% | 74.1% |
 | EBITDA | $7.9bn | $8.4bn |
-| EPS | $18.15 | $20.10 |
+| EPS | $18.15 | $20.13 |
 | Capex | $241m | $184m |
 | OCF (≈EBITDA) | $7.9bn | $8.4bn |
 

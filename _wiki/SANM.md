@@ -7,7 +7,7 @@ _Wiki · generated 2026-06-25 · synthesis-only (no local filings archive) · so
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $13.6bn | $18.0bn |
+| Revenue | $13.6bn | $18.1bn |
 | Gross profit | $1.3bn | $1.7bn |
 | Gross margin | 9.8% | 9.2% |
 | EBITDA | $1.1bn | $1.4bn |

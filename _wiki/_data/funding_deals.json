@@ -1,5 +1,5 @@
 {
-  "asof": "2026-10-29",
+  "asof": "2026-11-05",
   "note": "HAND-EDIT research ledger for the AI credit and funding monitor. Preserve every source and date. Official AI credit base is Daniel Grozdea's AI_Credit_Live.xlsx, ingested/refreshed through credit_workbook.json (user instruction 2026-10-16). The four broad indices use funding_market.json; the separate issuer history uses credit_watch.json. CDS_FLAT_SPREAD and PX_LAST are different fields and must not be chained. Historical broker snapshots keep original dates. The legacy bonds[] slot being empty does not imply disconnected issuer coverage.",
   "meeting_thesis": "If AI credit trades poorly, it is hard for the equity to perform - it signals funding deceleration and a brake on capex. Hyperscalers can self-fund; neoclouds and sovereigns depend on the credit market. (internal weekly 2026-08-24; monitor owner: PM)",
   "market_series": [
@@ -446,15 +446,135 @@
       "issuer": "META",
       "category": "Equity financing framework",
       "instrument": "6.50% mandatory convertible preferred; Class A common forwards; planned Class C ATM",
-      "size": "$12.5bn base preferred offering closed; $25bn common forward offering; ~$60bn ATM planned",
+      "size": "$12.5bn base preferred closed; $25bn base common forwards plus 6m option shares; ~$60bn ATM planned",
       "pricing": "Preferred: $50 per depositary share, 6.50% dividend; common public price $625, initial adjusted forward price $622.91875",
       "counterparty": "Morgan Stanley / Goldman Sachs underwriters and forward counterparties",
-      "note": "October 29 8-K confirms preferred closing that day. Common forwards bring no initial proceeds to Meta; settlement is by November 19, 2027, subject to adjustments. The October 26 ~$60bn ATM remains a plan, with no agreement then entered. Common launch was $22.5bn, increased to $25bn in the filed final prospectus. Option exercise and supplier indications are not assumed funded. Class C effectiveness remains January 19, 2027. Same financing ID; these components are not all cash raised now.",
-      "source": "Meta, 424B5 prospectuses filed 2026-10-28 and 8-K filed 2026-10-29; launch 2026-10-26 — https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000119312526436410/d94886d424b5.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000119312526436405/d133631d424b5.htm ; https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/",
-      "source_date": "2026-10-29",
+      "note": "October 29 preferred closing remains confirmed. November 5 8-K now confirms full exercise on November 4 of the 6m-share common option and additional forwards on substantially similar terms, alongside the 40m base shares. This supersedes the prior unverified common-option status. No common-forward cash settlement established; contractual settlement remains by November 19, 2027, subject to terms. Preferred option exercise and supplier indications remain unverified. The ~$60bn Class C ATM remains prospective and charter effectiveness January 19, 2027. No sum of deferred forwards and planned ATM is treated as cash received.",
+      "source": "Meta / 8-K 2026-11-05 Item 8.01 (common option), 8-K 2026-10-29 (preferred close), 424B5 filings 2026-10-28 — https://www.sec.gov/Archives/edgar/data/1326801/000119312526450074/d166273d8k.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm",
+      "source_date": "2026-11-05",
       "recorded_at": "2026-10-23",
-      "evidence_status": "filed preferred closing; forward settlement deferred; ATM planned",
-      "reviewed_at": "2026-10-30"
+      "evidence_status": "filed preferred closing and common-option exercise; forward cash deferred; ATM planned",
+      "reviewed_at": "2026-11-06"
+    },
+    {
+      "deal_id": "ORCL-CAPITAL-FIN-20261028",
+      "date": "2026-10-28",
+      "issuer": "ORCL",
+      "category": "Hyperscaler capital markets",
+      "instrument": "Common stock and five senior-note tranches; November 4 closing",
+      "size": "$10bn common offering and $10bn aggregate note principal",
+      "pricing": "Notes: 7.000% 2029; 7.450% 2031; 7.850% 2033; 8.000% 2037; 8.650% 2046 (coupons)",
+      "counterparty": "Public equity and unsecured-note investors",
+      "note": "8-K confirms 86,206,897 common shares issued at the November 4 closing and $10bn notes issued/sold that day. Executes the existing October 28 $20bn capital-markets plan, excluding refinancing; no additional $20bn increment. Timeline already recorded this close November 5. General corporate uses are not ring-fenced AI spending. Does not confirm the separate chip-lease proposal or compute delivery.",
+      "source": "Oracle / 8-K Item 8.01 filed 2026-11-04; original Investor Day 2026-10-28 — https://www.sec.gov/Archives/edgar/data/1341439/000119312526447507/d131790d8k.htm",
+      "source_date": "2026-11-04",
+      "recorded_at": "2026-11-06",
+      "evidence_status": "filed stock closing and notes issuance; same existing capital plan"
+    },
+    {
+      "deal_id": "DEQ-MSFT-20261029-1",
+      "date": "2026-10-29",
+      "issuer": "MSFT",
+      "category": "Hyperscaler debt",
+      "instrument": "Ten senior unsecured-note tranches issued November 4",
+      "size": "$25bn aggregate principal",
+      "pricing": "Fixed coupons 4.850%-6.350%, maturities 2028-2066; two floating-rate tranches mature 2028/2029",
+      "counterparty": "Public unsecured-note investors",
+      "note": "November 4 8-K confirms issuance under the October 29 underwriting agreement. Reuses the capital-raising register ID; do not count pricing and issuance twice. Corporate debt financing, not a new compute contract or proof of delivered capacity. Coupon levels are not credit spreads.",
+      "source": "Microsoft / 8-K Item 8.01 filed 2026-11-04 — https://www.sec.gov/Archives/edgar/data/789019/000119312526447173/d178557d8k.htm",
+      "source_date": "2026-11-04",
+      "recorded_at": "2026-11-06",
+      "evidence_status": "filed notes issued"
+    },
+    {
+      "deal_id": "DEQ-META-20261103-1",
+      "date": "2026-11-03",
+      "issuer": "META",
+      "category": "Hyperscaler debt",
+      "instrument": "Five US-dollar senior-note tranches completed November 5",
+      "size": "$15bn aggregate principal",
+      "pricing": "5.850% 2031; 6.250% 2033; 6.550% 2036; 7.350% 2046; 7.500% 2056 (coupons)",
+      "counterparty": "Public unsecured-note investors",
+      "note": "November 5 8-K confirms completion. Separate debt instrument from the preferred/common-forward/Class C framework META-CLASSC-FIN-20261021 and the euro offering. No additional compute MW or contract TCV.",
+      "source": "Meta / 8-K Item 8.01 filed 2026-11-05 — https://www.sec.gov/Archives/edgar/data/1326801/000119312526450074/d166273d8k.htm",
+      "source_date": "2026-11-05",
+      "recorded_at": "2026-11-06",
+      "evidence_status": "filed offering completed"
+    },
+    {
+      "deal_id": "DEQ-META-20261104-1",
+      "date": "2026-11-04",
+      "issuer": "META",
+      "category": "Hyperscaler debt",
+      "instrument": "Six euro-note tranches priced; November 12 settlement expected",
+      "size": "EUR 9bn aggregate principal; not yet closed",
+      "pricing": "4.300% 2031; 4.650% 2033; 4.900% 2035; 5.400% 2038; 6.050% 2044; 6.400% 2065 (coupons)",
+      "counterparty": "Euro-note investors",
+      "note": "November 4 final pricing terms expect November 12 settlement (T+5). Priced financing is not received proceeds. Keep EUR basis; no USD translation or sum with dollar issues. Same capital-raising register ID, separate from Meta USD debt and equity forwards.",
+      "source": "Meta / final pricing term sheet, FWP filed 2026-11-04 — https://www.sec.gov/Archives/edgar/data/1326801/000119312526447522/d154804dfwp.htm",
+      "source_date": "2026-11-04",
+      "recorded_at": "2026-11-06",
+      "evidence_status": "filed pricing; settlement future"
+    },
+    {
+      "deal_id": "DEQ-GOOG-20261102-1",
+      "date": "2026-11-02",
+      "issuer": "GOOG",
+      "category": "Hyperscaler debt",
+      "instrument": "Seven euro-note tranches closed November 5",
+      "size": "EUR 6bn aggregate principal",
+      "pricing": "2028 floating-rate notes; fixed coupons 3.700%-5.250%, maturities 2028-2045",
+      "counterparty": "Euro-note investors",
+      "note": "November 5 8-K confirms closing. Native EUR principal retained; no USD conversion or incremental compute commitment. Reuses the capital-raising register ID for the same offering.",
+      "source": "Alphabet / 8-K Item 8.01 filed 2026-11-05 — https://www.sec.gov/Archives/edgar/data/1652044/000119312526449835/d174184d8k.htm",
+      "source_date": "2026-11-05",
+      "recorded_at": "2026-11-06",
+      "evidence_status": "filed offering closed"
+    },
+    {
+      "deal_id": "DEQ-AMZN-20261030-1",
+      "date": "2026-10-30",
+      "issuer": "AMZN",
+      "category": "Supplier financing",
+      "instrument": "Secured supplier-loan facility for technology infrastructure",
+      "size": "Up to approximately $80bn; future discretionary borrowings",
+      "pricing": "Variable rate; each borrowing matures five years after its draw",
+      "counterparty": "Supplier; specific counterparty not named in the reviewed Note 5",
+      "note": "October 30 10-Q permits discretionary borrowings Q1 2027 through Q3 2028; size depends on purchase orders and pricing. Secured by certain purchased technology-infrastructure assets. Facility availability is not current drawn debt, cash proceeds or delivered equipment. Existing October 30 timeline context and capital-register ID; this addition is reconciliation, not a November 6 commitment.",
+      "source": "Amazon / Q3 10-Q Note 5 filed 2026-10-30 — https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm",
+      "source_date": "2026-10-30",
+      "recorded_at": "2026-11-06",
+      "evidence_status": "filed facility; future draws discretionary"
+    },
+    {
+      "deal_id": "DEQ-ANTHROPIC-20260904-1",
+      "date": "2026-09",
+      "issuer": "Anthropic",
+      "category": "Lab credit facility",
+      "instrument": "Amended and restated senior secured revolving credit facility",
+      "size": "$15bn capacity; no borrowings at 2026-09-30; $205m standby LCs outstanding",
+      "pricing": "Benchmark plus margin; September 4, 2031 maturity subject to springing provisions",
+      "counterparty": "Syndicated lenders; company credit agreement",
+      "note": "Historical backfill from November 2 S-1/A: September agreement replaces the prior $3.25bn revolver. The reviewed narrative gives the agreement month; the stable register ID is retained without inventing an exact signing day. Full facility supports letters of credit, so no borrowings does not mean zero utilization. Minimum liquidity $5bn from the quarter ending December 31, 2026. No new November proceeds; separate from the North Star SPV and conditional rent-note facility.",
+      "source": "Anthropic / S-1/A filed 2026-11-02, Credit Facility and subsequent-event provisions — https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+      "source_date": "2026-11-02",
+      "recorded_at": "2026-11-06",
+      "evidence_status": "filed historical facility; no borrowings as of September 30"
+    },
+    {
+      "deal_id": "DEQ-ANTHROPIC-20260528-1",
+      "date": "2026-Q2",
+      "issuer": "Anthropic",
+      "category": "Lab equity",
+      "instrument": "Series H-1 and H-2 redeemable convertible preferred stock",
+      "size": "$65.2bn gross proceeds; completed in Q2 2026",
+      "pricing": "$589.0095 per share, pre-split, per the filed financial-statement note",
+      "counterparty": "Series H preferred investors",
+      "note": "Historical backfill, not capital raised this week. November 2 S-1/A F-47 states the sale completed in Q2 2026. Retains the existing register ID (May 28 announcement); the filed quarter is used for completion-date precision. Do not add Series G-2 proceeds, partner NPA capacity, IPO scenarios or this amount to North Star financing.",
+      "source": "Anthropic / S-1/A filed 2026-11-02, financial-statement note F-47 — https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+      "source_date": "2026-11-02",
+      "recorded_at": "2026-11-06",
+      "evidence_status": "filed historical equity proceeds; Q2 completion"
     }
   ],
   "scoreboard": [
@@ -485,8 +605,8 @@
     {
       "signpost": "Supply absorption",
       "status": "warning",
-      "read": "JPM October 16 reports $446bn YTD TMT supply, unchanged on its weekly basis, with issuers largely in blackout. This TMT universe is distinct from MS October 1's ~$466bn AI credit across channels through September 30; the latter remains the dated issuance headline. Quiet issuance does not itself prove that debt markets are closed.",
-      "source": "J.P. Morgan / Erica R. Spear and Quinn Degen, 2026-10-16, Weekly Investment Grade TMT Review; Morgan Stanley / Lima et al., 2026-10-01, observed through 2026-09-30"
+      "read": "Primary filings confirm November 4-5 closings for Oracle ($10bn stock / $10bn notes), Microsoft ($25bn notes), Meta ($15bn USD notes) and Alphabet (EUR 6bn notes). Meta EUR 9bn remains priced for November 12. This establishes access for named issuers, not a comprehensive weekly or YTD issuance aggregate. Historical JPM/MS universe totals retain their source dates.",
+      "source": "Oracle and Microsoft 8-Ks 2026-11-04; Meta and Alphabet 8-Ks 2026-11-05; Meta FWP 2026-11-04"
     },
     {
       "signpost": "2027 funding pinch",
@@ -503,8 +623,8 @@
     {
       "signpost": "Duration channel",
       "status": "serious",
-      "read": "Oracle now targets positive FCF in 2H FY28 and limits additional FY27-FY30 capital-markets raises to $20bn, ex-refinancing, after the completed ATM. Vendor financing and lease liabilities enter its leverage definition. Targets do not establish execution or a rating action; individual chip-lease terms remain undisclosed.",
-      "source": "Oracle Investor Day / Hilary Maxson, 8-K EX-99.1, 2026-10-28"
+      "read": "Oracle completed the public-capital legs of its October 28 plan on November 4. The positive-FCF target for 2H FY28, lease-adjusted leverage and vendor-financing dependence still require execution. Closing does not validate undisclosed chip-lease terms or site permitting.",
+      "source": "Oracle 8-K 2026-11-04; Investor Day / Hilary Maxson 2026-10-28"
     },
     {
       "signpost": "Sovereign AI issuance",
@@ -521,8 +641,14 @@
     {
       "signpost": "Hyperscaler financing flexibility",
       "status": "warning",
-      "read": "Meta moved beyond the October 21 enabling framework: the base preferred offering closed October 29, common proceeds await forward settlement, and the Class C ATM remains prospective. Funding access improved, while cash timing and dilution still differ by instrument.",
-      "source": "Meta 424B5 filings 2026-10-28 and 8-K 2026-10-29; original October 21 and October 26 vintages archived"
+      "read": "Completed corporate note offerings broaden financing access. Meta also exercised the 6m common-share forward option November 4, but forward cash settlement remains deferred. Amazon disclosed up to ~$80bn supplier borrowing at its discretion in 2027-28, not current proceeds. Native-currency principal, debt, equity and contingent capacity remain separate.",
+      "source": "Meta 8-K 2026-11-05; Amazon 10-Q Note 5 2026-10-30; named-issuer filings November 4-5"
+    },
+    {
+      "signpost": "IREN funding conditions and deployment",
+      "status": "serious",
+      "read": "IREN reports $15bn remaining FY27 capex from September 30, against $9bn cash/committed GPU finance/prepayments and $6bn targeted sources. The $9bn includes restricted cash, undrawn facilities and prepayments not received; fully funded refers to the 0.3GW IT program with conditions. The >$4bn operating-ARR target moves from year-end to January 31, possibly end-February 2027. Horizon 1 is in service for Microsoft; delivered MW is not specified. Aggregate timing changes are not assigned to Microsoft.",
+      "source": "IREN / Daniel Roberts, Q1 FY27 release 2026-11-05, footnotes 4-5 and 11 — https://iren.gcs-web.com/news-releases/news-release-details/iren-reports-q1-fy27-results"
     }
   ],
   "watch": [
@@ -552,7 +678,7 @@
     },
     {
       "date": "ongoing",
-      "event": "Oracle: test October 28 capital-markets cap, vendor-financing terms, lease-adjusted leverage and FCF timetable against subsequent filings and rating actions; no executed chip lease or Jupiter/Lighthouse permit approval established."
+      "event": "Oracle: November 4 stock/notes closing resolves the capital-markets execution component of the October 28 plan. Continue checking vendor-financing terms, lease-adjusted leverage, FCF timetable and site permits; no chip lease confirmed (8-K November 4)."
     },
     {
       "date": "ongoing",
@@ -580,7 +706,7 @@
     },
     {
       "date": "2027-11-19",
-      "event": "Meta common forwards: latest contractual settlement date, subject to terms. Check actual settlements and proceeds; October 29 8-K says no initial common-offering proceeds. Preferred offering closed separately; verify any over-allotment exercise and actual Class C ATM launch."
+      "event": "Meta common forwards: latest contractual settlement date. November 5 8-K confirms November 4 exercise of all 6m common-option shares; verify actual forward settlements/proceeds, preferred option exercise and Class C ATM launch. Common-option exercise is not cash settlement."
     },
     {
       "date": "ongoing",
@@ -588,7 +714,23 @@
     },
     {
       "date": "ongoing",
-      "event": "Read full JPM / Spear-Degen October 30 Weekly IG TMT Review and MS / Tyler-Guerrero October 29 ORCL Credit report; this review screened only Outlook metadata/previews. Old issuance aggregates remain dated and are not refreshed from headlines."
+      "event": "Read full JPM / Spear-Degen November 6 Weekly IG TMT Review; MS / Tyler-Guerrero November 2 ORCL Credit; MS / Tirupattur November 6 AI-credit podcast; BofA November 5 HY & Loan Strategy. This review screened Outlook metadata/previews only; no numerical conclusion adopted from headlines."
+    },
+    {
+      "date": "2026-11-12",
+      "event": "Meta EUR 9bn notes: expected settlement per November 4 FWP; obtain filed close before classifying proceeds as received."
+    },
+    {
+      "date": "2026-12-31",
+      "event": "Anthropic: first quarter-end $5bn minimum-liquidity test under the September revolver per November 2 S-1/A. Last draw observation September 30: no borrowings, $205m standby LCs. Refresh actual draws/LCs and IPO pricing; no outcome inferred today."
+    },
+    {
+      "date": "2027-01-31",
+      "event": "IREN: revised >$4bn operating-ARR target, potentially extending to end-February; verify escrow releases, financing availability and prepayment receipts. November 5 company release; preserve 0.3GW IT scope and avoid assuming all $9bn is unrestricted cash."
+    },
+    {
+      "date": "ongoing",
+      "event": "Amazon: track any actual borrowing under the up-to-$80bn supplier facility; disclosed discretionary window Q1 2027-Q3 2028, five-year maturity per draw (10-Q filed October 30)."
     }
   ],
   "history": [
@@ -1218,6 +1360,192 @@
           }
         }
       ]
+    },
+    {
+      "recorded_at": "2026-11-06T09:12:56",
+      "reason": "November 6 bounded primary-source credit review; distinguish closings, pricing, future draws and historical backfills.",
+      "archive": "_data/credit-monitor/research-history/2026-11-06T091256-pre-edit/_data/funding_deals.json",
+      "sha256": "d98b489c266cb03a65e6a050e840118e31c34d9ba3eb68232bbb3e02296a5a25",
+      "previous_asof": "2026-10-29",
+      "previous_weekly_review": {
+        "reviewed_at": "2026-10-30T09:12:31",
+        "window_start": "2026-10-23",
+        "window_end": "2026-10-30",
+        "summary": "Review window October 23-30; latest substantive primary evidence is October 29.\nMeta: the preferred offering closed; common-forward settlement and a prospective Class C ATM have different cash dates. North Star: announced committed financing and filed Broadcom residual-value support upgrade the old syndication proposal. SpaceX: a binding Apollo lease commitment upgrades talks, while closing, pricing and deliveries remain future conditions. These revise existing stable IDs, without adding duplicate commitments.\nOracle's October 28 Investor Day replaces the earlier funding outlook with a $20bn additional capital-markets cap, excluding refinancing, and a positive-FCF target in 2H FY28. This resolves the disclosure watch, not the funding/execution thesis. Jupiter/Lighthouse approvals remain unverified.\nAnthropic's October 26 S-1 supplies financing disclosure; it is not a completed IPO. Its up-to-$42bn rent-note capacity is conditional and undrawn as of the prospectus, separate from SPV capital. UBS / Keirstead's October 26 CoreWeave DDTL discussion relays an unnamed source's expectations, not executed debt. No new Nebius draw or OpenAI chip-financing close established.\nCoverage: graph and relevant company Debate/Changelog sections; compute-deal history; full-corpus searches; Oracle release, SpaceX financing 8-K, Meta offering/closing sections, selected Anthropic liquidity provisions, Broadcom 8-K and Milbank announcement. Outlook previews identify JPM October 30 and MS October 29 credit reports as follow-up leads; their full bodies/PDFs were not reviewed. No exhaustive filing or mailbox audit claimed. Old MS/JPM issuance totals and broker quotes retain their original dates. Sovereign-AI coverage, final tranches, actual draws, permits and unavailable quotes remain gaps. Official workbook CDS_FLAT_SPREAD and issuer PX_LAST histories remain separate.",
+        "sources": [
+          "Meta / 8-K filed 2026-10-29; offering prospectuses filed 2026-10-28 — https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000119312526436410/d94886d424b5.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000119312526436405/d133631d424b5.htm",
+          "Oracle / Investor Day release, 2026-10-28 — https://www.sec.gov/Archives/edgar/data/1341439/000119312526435853/d75538dex991.htm",
+          "SpaceX / Bret Johnsen, 8-K Item 8.01, 2026-10-26 — http://ds-cap-33:8080/SPCX/SPCX_8-K_2026-10-26_0001104659-26-118614.html",
+          "Milbank / North Star, 2026-10-26; Broadcom 8-K, 2026-10-27 — https://www.milbank.com/en/news/milbank-advises-north-star-on-landmark-dollar63b-financing-structure-to-enable-ai-compute-capacity-in-partnership-with-broadcom.html ; https://investors.broadcom.com/static-files/0ee4f6b7-4a23-4de0-8f3e-48f147ae30d3",
+          "Anthropic / S-1, 2026-10-26, selected liquidity/Infrastructure Partner NPA provisions — https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
+          "UBS / Karl Keirstead et al., 2026-10-26, selected spoken financing remarks — http://ds-cap-33:8080/_equity_calls/Overall/2026-10-26_UBS_AIs-Credit-Stress-Test-who-finances-next-wave-Keirstead-Mish-Parker-Richardson-Sady-Gravett.md"
+        ]
+      },
+      "previous_scoreboard": [
+        {
+          "signpost": "Index-level credit (the meeting's equity-read trigger)",
+          "status": "good",
+          "read": "Historical August 24 snapshot only: HY OAS ~268bp / IG OAS ~80bp - benign vs history; the aggregate market is NOT flashing. The stress is relative, not systemic. Use the separately dated Bloomberg gauges for the latest reading.",
+          "source": "BBG LF98OAS/LUACOAS, 2026-08-24"
+        },
+        {
+          "signpost": "AI-vs-market differentiation",
+          "status": "warning",
+          "read": "Hyperscaler buckets +26/29bp YTD vs broad IG +1bp; 'the credit market is differentiating within tech, not repricing tech'",
+          "source": "MS US Credit 2026-08-14"
+        },
+        {
+          "signpost": "Counterparty tiering",
+          "status": "serious",
+          "read": "Broadcom filed the conditional North Star residual-value support, which is limited by lease amounts and asset recoveries. UBS / Keirstead October 26 relays an unnamed source expecting another CoreWeave DDTL; this is not an announced borrowing. Continue to separate sponsor support, completion risk, contractual cash cost and secondary-market yield; CDS_FLAT_SPREAD and PX_LAST are different quote fields.",
+          "source": "Broadcom 8-K 2026-10-27; UBS / Karl Keirstead, AI Credit Stress Test call, 2026-10-26, machine transcript; field basis per official workbook"
+        },
+        {
+          "signpost": "Buy-side pushback",
+          "status": "serious",
+          "read": "Insurance 30Y orders halved; new-issue concessions 2-3bp -> ~20bp; the AI basket spread roughly doubled from 74bp",
+          "source": "GS credit desk 2026-08-03 (on-record 08-19 block)"
+        },
+        {
+          "signpost": "Supply absorption",
+          "status": "warning",
+          "read": "JPM October 16 reports $446bn YTD TMT supply, unchanged on its weekly basis, with issuers largely in blackout. This TMT universe is distinct from MS October 1's ~$466bn AI credit across channels through September 30; the latter remains the dated issuance headline. Quiet issuance does not itself prove that debt markets are closed.",
+          "source": "J.P. Morgan / Erica R. Spear and Quinn Degen, 2026-10-16, Weekly Investment Grade TMT Review; Morgan Stanley / Lima et al., 2026-10-01, observed through 2026-09-30"
+        },
+        {
+          "signpost": "2027 funding pinch",
+          "status": "warning",
+          "read": "Debt-financed share of capex 27% -> 33% -> 35% PEAK 2027 (GS) + $300bn project finance 2027 (MS) + >$200bn funding gap 2027 (Barclays) - three houses converge on the date",
+          "source": "GS 08-03; MS 08-20; Barclays 08-13"
+        },
+        {
+          "signpost": "Vendor-backstop dependency",
+          "status": "warning",
+          "read": "NVIDIA August 26 filing confirms the conditional $105bn SB Energy guarantee tied to ~4.25 GW IT, separate from the $3.5bn existing program. Disclosure watch resolved; no cash funding or delivery implied. Older $230bn broker aggregate and $500bn MOU are not filed funded-debt totals.",
+          "source": "NVIDIA 10-Q 2026-08-26; historical backfill reviewed 2026-10-09"
+        },
+        {
+          "signpost": "Duration channel",
+          "status": "serious",
+          "read": "Oracle now targets positive FCF in 2H FY28 and limits additional FY27-FY30 capital-markets raises to $20bn, ex-refinancing, after the completed ATM. Vendor financing and lease liabilities enter its leverage definition. Targets do not establish execution or a rating action; individual chip-lease terms remain undisclosed.",
+          "source": "Oracle Investor Day / Hilary Maxson, 8-K EX-99.1, 2026-10-28"
+        },
+        {
+          "signpost": "Sovereign AI issuance",
+          "status": "gap",
+          "read": "Called out in the meeting as part of the monitor's scope; the corpus carries no dedicated sovereign-AI-bond tracking yet - genuine gap, needs an ingest source",
+          "source": "internal weekly 2026-08-24"
+        },
+        {
+          "signpost": "Proposed chip financing versus funded execution",
+          "status": "warning",
+          "read": "North Star is now announced committed financing; SpaceX has a filed binding lease commitment; Meta preferred issuance closed. None establishes that all announced capacity has funded. Keep the Anthropic rent-note facility, contingent Broadcom support and prospective Meta ATM separate. Nebius draws and the OpenAI/Oracle chip-finance closings remain unverified.",
+          "source": "Milbank 2026-10-26; Broadcom 8-K 2026-10-27; SpaceX 8-K 2026-10-26; Meta 8-K 2026-10-29; Anthropic S-1 2026-10-26"
+        },
+        {
+          "signpost": "Hyperscaler financing flexibility",
+          "status": "warning",
+          "read": "Meta moved beyond the October 21 enabling framework: the base preferred offering closed October 29, common proceeds await forward settlement, and the Class C ATM remains prospective. Funding access improved, while cash timing and dilution still differ by instrument.",
+          "source": "Meta 424B5 filings 2026-10-28 and 8-K 2026-10-29; original October 21 and October 26 vintages archived"
+        }
+      ],
+      "previous_watch": [
+        {
+          "date": "2026-09-02",
+          "event": "AVGO print - MS single-name credit watch (with ORCL) into September; XPV/Anthropic SPV exposure — Unresolved in this bounded credit review; no outcome inferred from elapsed date."
+        },
+        {
+          "date": "2026-09-25",
+          "event": "SPCX: ~30% of shares tradable + full index weight on the late-Sept rebalance - peak supply meets peak passive demand (MS · Jonas; 22V) — Unresolved in this bounded credit review; no outcome inferred from elapsed date."
+        },
+        {
+          "date": "ongoing",
+          "event": "Anthropic IPO: October 26 public S-1 replaces the stale August timing expectation. Await priced amendments, net proceeds and closing; monitor conditional rent-note draws and current consolidated commitments schedule. No new listing date assumed."
+        },
+        {
+          "date": "ongoing",
+          "event": "New-issue concessions + capex second derivative - GS's own two named signposts for when appetite turns"
+        },
+        {
+          "date": "2026-12-31",
+          "event": "SpaceX / Apollo: company expects master finance lease closing before year-end; verify conditions, fixed rate and actual closing, then GPU-delivery commencement in 1H27. October 26 filing confirms only the binding commitment letter (SPCX-NVDA-FIN-20261006)."
+        },
+        {
+          "date": "ongoing",
+          "event": "Oracle Lighthouse: PSC September 2026 refiling and MS September 30 timing-risk note do not establish approval or confirmed delay; check new docket and company milestone against CY2H27 initial / 2028 full-campus source forecasts."
+        },
+        {
+          "date": "ongoing",
+          "event": "Oracle: test October 28 capital-markets cap, vendor-financing terms, lease-adjusted leverage and FCF timetable against subsequent filings and rating actions; no executed chip lease or Jupiter/Lighthouse permit approval established."
+        },
+        {
+          "date": "ongoing",
+          "event": "CoreWeave CDS: use official-workbook CDS_FLAT_SPREAD for the spread view; issuer-board PX_LAST is a different field on the same D14 ticker. Do not chain them or treat a field switch as market widening. Verify remaining desk contract/quote comparability before measuring desk-versus-Bloomberg changes. Field basis reviewed 2026-10-23."
+        },
+        {
+          "date": "ongoing",
+          "event": "North Star ANTH-AVGO-CHIP-FIN-20261005: verify $63bn financing funding/closing, final debt/equity split and pricing, then 2027 deliveries. Keep ~$43bn contingent support and the separate up-to-$42bn rent-note facility distinct. Company/counsel October 26; Broadcom filing October 27; Anthropic S-1 October 26."
+        },
+        {
+          "date": "ongoing",
+          "event": "Oracle Jupiter: UBS / Vogt 2026-10-16 relays a request for expedited gas-pipeline approval. Obtain the specific FERC filing and decision; the request is not approval, commissioning or proof that the full campus timetable changed."
+        },
+        {
+          "date": "ongoing",
+          "event": "Nebius NBIS-CITI-FIN-20261022: check draws, security/covenant documentation, step-up schedule and takeout financing of the 364-day facility. Source: company / Nave, 2026-10-22. >$40bn IG customer contracts are a prospective financing base, not additional debt."
+        },
+        {
+          "date": "2027-01-19",
+          "event": "Meta Class C charter effective date per PRE 14C filed 2026-10-21. Verify effectiveness and any separate offering, prospectus or proceeds; the date alone establishes no capital raise."
+        },
+        {
+          "date": "ongoing",
+          "event": "Official credit workbook: refresh missing instruments and preserve individual quote dates. Monitor stale SPCX revolver BL097034 Corp and xAI March 4 issuer-history endpoint; global fetch success does not validate either quote."
+        },
+        {
+          "date": "2027-11-19",
+          "event": "Meta common forwards: latest contractual settlement date, subject to terms. Check actual settlements and proceeds; October 29 8-K says no initial common-offering proceeds. Preferred offering closed separately; verify any over-allotment exercise and actual Class C ATM launch."
+        },
+        {
+          "date": "ongoing",
+          "event": "CoreWeave: obtain executed DDTL/pricing and customer-prepayment evidence; UBS / Keirstead October 26 unnamed-source expectations are not commitments. OpenAI / AVGO chip-financing and latest OpenAI equity round also require primary closing confirmation."
+        },
+        {
+          "date": "ongoing",
+          "event": "Read full JPM / Spear-Degen October 30 Weekly IG TMT Review and MS / Tyler-Guerrero October 29 ORCL Credit report; this review screened only Outlook metadata/previews. Old issuance aggregates remain dated and are not refreshed from headlines."
+        }
+      ],
+      "changed_deals": [
+        {
+          "deal_id": "META-CLASSC-FIN-20261021",
+          "previous": {
+            "deal_id": "META-CLASSC-FIN-20261021",
+            "date": "2026-10-21",
+            "issuer": "META",
+            "category": "Equity financing framework",
+            "instrument": "6.50% mandatory convertible preferred; Class A common forwards; planned Class C ATM",
+            "size": "$12.5bn base preferred offering closed; $25bn common forward offering; ~$60bn ATM planned",
+            "pricing": "Preferred: $50 per depositary share, 6.50% dividend; common public price $625, initial adjusted forward price $622.91875",
+            "counterparty": "Morgan Stanley / Goldman Sachs underwriters and forward counterparties",
+            "note": "October 29 8-K confirms preferred closing that day. Common forwards bring no initial proceeds to Meta; settlement is by November 19, 2027, subject to adjustments. The October 26 ~$60bn ATM remains a plan, with no agreement then entered. Common launch was $22.5bn, increased to $25bn in the filed final prospectus. Option exercise and supplier indications are not assumed funded. Class C effectiveness remains January 19, 2027. Same financing ID; these components are not all cash raised now.",
+            "source": "Meta, 424B5 prospectuses filed 2026-10-28 and 8-K filed 2026-10-29; launch 2026-10-26 — https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000119312526436410/d94886d424b5.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000119312526436405/d133631d424b5.htm ; https://investor.atmeta.com/investor-news/press-release-details/2026/Meta-Announces-Launch-of-Offering-of-Depositary-Shares-Representing-Series-A-Mandatory-Convertible-Preferred-Stock-and-Offering-of-Class-A-Common-Stock-in-Connection-with-Forward-Sale-Agreements/",
+            "source_date": "2026-10-29",
+            "recorded_at": "2026-10-23",
+            "evidence_status": "filed preferred closing; forward settlement deferred; ATM planned",
+            "reviewed_at": "2026-10-30"
+          }
+        }
+      ],
+      "added_deal_ids": [
+        "ORCL-CAPITAL-FIN-20261028",
+        "DEQ-MSFT-20261029-1",
+        "DEQ-META-20261103-1",
+        "DEQ-META-20261104-1",
+        "DEQ-GOOG-20261102-1",
+        "DEQ-AMZN-20261030-1",
+        "DEQ-ANTHROPIC-20260904-1",
+        "DEQ-ANTHROPIC-20260528-1"
+      ]
     }
   ],
   "watch_history": [
@@ -1251,17 +1579,18 @@
     }
   ],
   "weekly_review": {
-    "reviewed_at": "2026-10-30T09:12:31",
-    "window_start": "2026-10-23",
-    "window_end": "2026-10-30",
-    "summary": "Review window October 23-30; latest substantive primary evidence is October 29.\nMeta: the preferred offering closed; common-forward settlement and a prospective Class C ATM have different cash dates. North Star: announced committed financing and filed Broadcom residual-value support upgrade the old syndication proposal. SpaceX: a binding Apollo lease commitment upgrades talks, while closing, pricing and deliveries remain future conditions. These revise existing stable IDs, without adding duplicate commitments.\nOracle's October 28 Investor Day replaces the earlier funding outlook with a $20bn additional capital-markets cap, excluding refinancing, and a positive-FCF target in 2H FY28. This resolves the disclosure watch, not the funding/execution thesis. Jupiter/Lighthouse approvals remain unverified.\nAnthropic's October 26 S-1 supplies financing disclosure; it is not a completed IPO. Its up-to-$42bn rent-note capacity is conditional and undrawn as of the prospectus, separate from SPV capital. UBS / Keirstead's October 26 CoreWeave DDTL discussion relays an unnamed source's expectations, not executed debt. No new Nebius draw or OpenAI chip-financing close established.\nCoverage: graph and relevant company Debate/Changelog sections; compute-deal history; full-corpus searches; Oracle release, SpaceX financing 8-K, Meta offering/closing sections, selected Anthropic liquidity provisions, Broadcom 8-K and Milbank announcement. Outlook previews identify JPM October 30 and MS October 29 credit reports as follow-up leads; their full bodies/PDFs were not reviewed. No exhaustive filing or mailbox audit claimed. Old MS/JPM issuance totals and broker quotes retain their original dates. Sovereign-AI coverage, final tranches, actual draws, permits and unavailable quotes remain gaps. Official workbook CDS_FLAT_SPREAD and issuer PX_LAST histories remain separate.",
+    "reviewed_at": "2026-11-06T09:12:56",
+    "window_start": "2026-10-30",
+    "window_end": "2026-11-06",
+    "summary": "Primary evidence through November 5. Oracle completed the same October 28 capital plan ($10bn common/$10bn notes), Microsoft issued $25bn notes, Meta completed $15bn USD notes, and Alphabet closed EUR 6bn notes. Meta EUR 9bn is priced for November 12, not yet closed. Amounts retain native currencies; no aggregate cash total or new compute commitment inferred.\nMeta also exercised the full 6m-share common-forward option November 4; cash settlement remains deferred. Amazon disclosed an up-to-~$80bn supplier facility with discretionary draws in Q1 2027-Q3 2028, not cash received. Anthropic additions are historical backfills: $65.2bn Series H completed in Q2; $15bn September revolver had no borrowings and $205m standby LCs at September 30. These are not new November raises.\nIREN November 5 funding and deployment disclosures are reconciled to the existing timeline: restricted cash, undrawn capacity and unreceived prepayments remain conditional; no duplicate commitment added. Operating-ARR timing moved to January/possibly February; no inference that Microsoft caused or bore the aggregate delay.\nCoverage: graph context; relevant company Debate/Changelogs, canonical assumptions and compute-deal history; full-corpus financing search; selected original SEC offering/credit-facility provisions and IREN release footnotes. Outlook subject/metadata/previews supplied broker leads, not full-report conclusions. No exhaustive filing/mailbox audit claimed. No new funded North Star, Apollo/SpaceX lease close, Nebius draw or OpenAI chip-finance/equity close established in this bounded review. Past-dated AVGO/SPCX watch outcomes and site permits remain unverified. Old broker snapshots and issuance totals retain original dates. Quote gaps and market baselines are reported separately by the refresh.",
     "sources": [
-      "Meta / 8-K filed 2026-10-29; offering prospectuses filed 2026-10-28 — https://www.sec.gov/Archives/edgar/data/1326801/000119312526438017/d183592d8k.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000119312526436410/d94886d424b5.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000119312526436405/d133631d424b5.htm",
-      "Oracle / Investor Day release, 2026-10-28 — https://www.sec.gov/Archives/edgar/data/1341439/000119312526435853/d75538dex991.htm",
-      "SpaceX / Bret Johnsen, 8-K Item 8.01, 2026-10-26 — http://ds-cap-33:8080/SPCX/SPCX_8-K_2026-10-26_0001104659-26-118614.html",
-      "Milbank / North Star, 2026-10-26; Broadcom 8-K, 2026-10-27 — https://www.milbank.com/en/news/milbank-advises-north-star-on-landmark-dollar63b-financing-structure-to-enable-ai-compute-capacity-in-partnership-with-broadcom.html ; https://investors.broadcom.com/static-files/0ee4f6b7-4a23-4de0-8f3e-48f147ae30d3",
-      "Anthropic / S-1, 2026-10-26, selected liquidity/Infrastructure Partner NPA provisions — https://www.sec.gov/Archives/edgar/data/2130357/000162828026067168/anthropicpbc-sx1.htm",
-      "UBS / Karl Keirstead et al., 2026-10-26, selected spoken financing remarks — http://ds-cap-33:8080/_equity_calls/Overall/2026-10-26_UBS_AIs-Credit-Stress-Test-who-finances-next-wave-Keirstead-Mish-Parker-Richardson-Sady-Gravett.md"
+      "Oracle / 8-K 2026-11-04 — https://www.sec.gov/Archives/edgar/data/1341439/000119312526447507/d131790d8k.htm",
+      "Microsoft / 8-K 2026-11-04 — https://www.sec.gov/Archives/edgar/data/789019/000119312526447173/d178557d8k.htm",
+      "Meta / 8-K 2026-11-05 and FWP 2026-11-04 — https://www.sec.gov/Archives/edgar/data/1326801/000119312526450074/d166273d8k.htm ; https://www.sec.gov/Archives/edgar/data/1326801/000119312526447522/d154804dfwp.htm",
+      "Alphabet / 8-K 2026-11-05 — https://www.sec.gov/Archives/edgar/data/1652044/000119312526449835/d174184d8k.htm",
+      "Amazon / 10-Q Note 5 2026-10-30 — https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm",
+      "Anthropic / S-1/A 2026-11-02, F-47 and Credit Facility — https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+      "IREN / Daniel Roberts, Q1 FY27 release 2026-11-05 — https://iren.gcs-web.com/news-releases/news-release-details/iren-reports-q1-fy27-results"
     ]
   }
 }

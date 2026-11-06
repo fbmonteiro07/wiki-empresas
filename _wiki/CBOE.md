@@ -11,8 +11,8 @@ _Wiki · created 2026-11-02 · research cutoff 2026-11-02 · Outlook review 2026
 | Gross profit | — | — |
 | Gross margin | — | — |
 | EBITDA | $2.1bn | $2.3bn |
-| EPS | $13.86 | $15.49 |
-| Capex | $86m | $99m |
+| EPS | $13.87 | $15.54 |
+| Capex | $87m | $99m |
 | OCF (≈EBITDA) | $2.1bn | $2.3bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

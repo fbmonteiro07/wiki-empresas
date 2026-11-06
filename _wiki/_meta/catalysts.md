@@ -2,10 +2,11 @@
 
 _Generated 2026-11-06 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (50)
+## 📅 Upcoming (52)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
+| 2026-11-06 | SMCI | **✅ SETTLED 2026-11-06 (10-Q) — see `## Current state`: reported non-GAAP diluted 764.4m vs 761m guided (F2Q ~769m); as-converted ~895m including 4.3125m mandatory convertible preferred × 30.304 = ~13 |
 | 2026-11-09 | CME | Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract ends 2026-11-09 (Duffy said he "believe[s]" so; filed under a full 40.3 review), then the agency decides ([Duf |
 | 2026-11-09 | KKR | **2026-11-09 — Q3 results and call**, announced by KKR on 2026-09-29. Test fee activation, insurance earnings, K-Series flows and realization progress. [Company announcement](https://media.kkr.com/new |
 | 2026-11-09 | QCOM | **🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed** (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. **B |
@@ -39,6 +40,7 @@ _Generated 2026-11-06 · parsed from every page's 'Catalysts / what to watch'. D
 | 2026-12-18 | TER | 🆕 **Q4 CY26 print (late Jan / early Feb 2027)** — guide $1,250-1,350M / non-GAAP EPS $1.95-2.25 / GM 57.5-58.5%; the test is the 2027 shape management pre-committed to on the Q3 call — *"each quarter  |
 | 2026-12-27 | LRCX | ✅ **RESOLVED 2026-10-29 — 10-Q for the September 2026 quarter (filed 2026-10-22, folded 10-29; details in the 📄 sub-block under Current state).** The open items were RPO, customer concentration, China |
 | 2026-12-31 | CME | SEC clearing requirement for cash US Treasury transactions takes effect 2026-12-31 (repo transactions follow by 2027-06-30; [FY2025 10-K](../CME/CME_10-K_2026-02-26_0001156375-26-000009.html)). |
+| 2026-12-31 | IREN | the $1.5bn of GPU Financing 2.0 still to draw before 2026-12-31. |
 | 2026-12-31 | TRU | 2026-12-31 — Todd Cello's last day as CFO (he then serves as an advisor through March 1). The $1.5bn swap at 1.39% matures the same day; more than half of its replacement is already executed at about  |
 | 2027-01-01 | BKNG | **🆕 B2B STAND-ALONE LAUNCH ON 2027-01-01 with dedicated management (BKNG exec (likely CFO Steenbergen ⚠) @ Communacopia-week investor group mtg, 2026-09-09 — Capstone Notion transcript).** Watch for t |
 | 2027-01-10 | CDNS | **🆕 2026-11-09 — BIS 50%-affiliates rule suspension lapses unless formally extended.** The September US-China extension of trade arrangements to 2027-01-10 *"is expected to extend the suspension; howe |
@@ -65,7 +67,7 @@ _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_me
 |---|---|---|
 | _none_ | | |
 
-## ✅ Resolved (390)
+## ✅ Resolved (391)
 
 | Date | Ticker | Verdict |
 |---|---|---|
@@ -75,6 +77,7 @@ _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_me
 | 2026-11-05 | CRWD | neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-06): 11-05 is the ingest date of the Fal.Con Europe keynote (Kurtz / Richardson, 2026-11-03, company keynote). SafeMind direct model access 'in Q4', Fiddler AI acquisition and Dreadnode 'intent to acquire' are forward items; scored at the F3Q27 print ~2026-12-02 (pre-registered test T2). |
 | 2026-11-04 | TRU | neutral — Same FICO read-through, not a separate earnings print: FY2027 guidance withheld because mortgage pricing transition/agreements and market remain uncertain (FICO company release November 4). TRU royalty pass-through versus bureau data economics remain separate; policy outcome unresolved. [FICO release](https://investors.fico.com/news-releases/news-release-details/fico-announces-earnings-812-share-fourth-quarter-fiscal-2026) · [source record](analyst-evidence/2026-11-05-morning-source-checks.json). |
 | 2026-11-04 | EFX | neutral — FICO read-through event occurred, but pricing uncertainty did not resolve: FICO's November 4 company release explicitly withholds FY2027 guidance while bespoke mortgage agreements remain unfinished. Do not translate FICO royalty pass-through revenue into bureau profit or infer a new bi-merge rule. Formal 2027 contracts and EFX margin economics remain open. [FICO release](https://investors.fico.com/news-releases/news-release-details/fico-announces-earnings-812-share-fourth-quarter-fiscal-2026) · [source record](analyst-evidence/2026-11-05-morning-source-checks.json). |
+| 2026-11-03 | SMCI | neutral — UNRESOLVED (D+3, wiki-catalyst 2026-11-06): the F1Q27 full print/call (2026-11-03, 5pm ET) has NOT reached the corpus — newest SMCI primary on disk is the 10-20 8-K pre-announcement (rev $18.5-19.5bn vs $14.5-15.5bn guide; GM 12.0-12.5% vs 10.4-10.8%), no 11-03 8-K, transcript or desk relay in _inbox/_done or the analyst briefs. EPS, DSO, customer mix and the F2Q27 guide unscored → route to /run-inbox. |
 | 2026-11-03 | SMCI | neutral — UNRESOLVED (D+3, wiki-catalyst 2026-11-06): the F1Q27 full print/call (2026-11-03, 5pm ET) has NOT reached the corpus — newest SMCI primary on disk is the 10-20 8-K pre-announcement (rev $18.5-19.5bn vs $14.5-15.5bn guide; GM 12.0-12.5% vs 10.4-10.8%), no 11-03 8-K, transcript or desk relay in _inbox/_done or the analyst briefs. EPS, DSO, customer mix and the F2Q27 guide unscored → route to /run-inbox. |
 | 2026-11-03 | INTC | neutral — UNRESOLVED (D+3, wiki-catalyst 2026-11-06): the London dinner NDR with CFO and IR (Susquehanna index 09-30; UBS Ruple events calendar) has no readout in the corpus. Nearest data point is Arcuri's 11-04 AMD recap ('not rushing' to upgrade INTC on wafer allocation; UBS Neutral), which is not a readout of this meeting. |
 | 2026-11-03 | BKNG | bear won (on the guide; stock reaction not on disk) — 3Q26 beat every bar (room nights 345m, +6.7% vs +3-5% guide; adj. EPS $4.66 vs $4.49 cons), but the 4Q guide (room nights +1-3%, adj. EBITDA ~flat) came in below Street +6% and the house/BofA +3-5%, and management cited European-city unrest, contradicting the house 'only wars move BKNG' call; +$900m FTC revenue reduction in the 10-Q (BKNG prepared remarks / deck / 10-Q, 2026-11-03; run-inbox 2026-11-05). |

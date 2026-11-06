@@ -1,0 +1,41 @@
+{
+  "reviewed_at": "2026-11-06T09:12:56",
+  "archive": "_data\\credit-monitor\\research-history\\2026-11-06T091256-pre-edit",
+  "ledger_before_sha256": "d98b489c266cb03a65e6a050e840118e31c34d9ba3eb68232bbb3e02296a5a25",
+  "ledger_after_sha256": "be3f10997fb4e22f44f6ebc83d9b4486a4bd793a882152fa9eed1c3e10e5c16a",
+  "added_ids": [
+    "ORCL-CAPITAL-FIN-20261028",
+    "DEQ-MSFT-20261029-1",
+    "DEQ-META-20261103-1",
+    "DEQ-META-20261104-1",
+    "DEQ-GOOG-20261102-1",
+    "DEQ-AMZN-20261030-1",
+    "DEQ-ANTHROPIC-20260904-1",
+    "DEQ-ANTHROPIC-20260528-1"
+  ],
+  "revised_ids": [
+    "META-CLASSC-FIN-20261021"
+  ],
+  "source_urls": {
+    "ORCL": "https://www.sec.gov/Archives/edgar/data/1341439/000119312526447507/d131790d8k.htm",
+    "MSFT": "https://www.sec.gov/Archives/edgar/data/789019/000119312526447173/d178557d8k.htm",
+    "META": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526450074/d166273d8k.htm",
+    "META_EUR": "https://www.sec.gov/Archives/edgar/data/1326801/000119312526447522/d154804dfwp.htm",
+    "GOOG": "https://www.sec.gov/Archives/edgar/data/1652044/000119312526449835/d174184d8k.htm",
+    "AMZN": "https://www.sec.gov/Archives/edgar/data/1018724/000101872426000040/amzn-20260930.htm",
+    "ANTH": "https://www.sec.gov/Archives/edgar/data/2130357/000162828026068676/anthropicpbc-sx1ax1.htm",
+    "IREN": "https://iren.gcs-web.com/news-releases/news-release-details/iren-reports-q1-fy27-results"
+  },
+  "changed_files": [
+    "_data\\funding_deals.json",
+    "themes\\ai-compute-deals.md",
+    "_meta\\outcomes.md",
+    "ORCL.md",
+    "META.md",
+    "MSFT.md",
+    "GOOG.md",
+    "AMZN.md",
+    "ANTHROPIC.md"
+  ],
+  "coverage_note": "Bounded primary provisions and original company release; full-corpus FTS run; Outlook previews only. Original SEC HTML/text archived; IREN release read through web tool after direct Python TLS-proxy certificate failure."
+}

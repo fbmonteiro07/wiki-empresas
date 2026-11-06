@@ -1,0 +1,830 @@
+{
+ "date": "2026-11-06",
+ "since": "2026-10-30",
+ "registry_rows": 361,
+ "sources": {
+  "tdlr_new": {
+   "ok": true,
+   "note": "100 of 537 registrations since 2026-10-30 scanned, 10 detail pages, 0 data-center leads",
+   "n": 0,
+   "secs": 18.7
+  },
+  "tdlr_watch": {
+   "ok": true,
+   "note": "75 cited TABS projects re-read (0 errors, baseline); 3 changes or registry mismatches",
+   "n": 3,
+   "secs": 113.0
+  },
+  "tceq": {
+   "ok": true,
+   "note": "version 2026.10.7 (391 turbine rows; baseline)",
+   "n": 1,
+   "secs": 0.8
+  },
+  "moratoria": {
+   "ok": true,
+   "note": "1104 data-center records (baseline; 71 in the model)",
+   "n": 0,
+   "secs": 1.3
+  },
+  "epoch": {
+   "ok": true,
+   "note": "baseline: 77 US data centers, 455 timeline points; 4 not matched to the registry",
+   "n": 4,
+   "secs": 0.2
+  },
+  "edgar": {
+   "ok": true,
+   "note": "23 tickers, 25 new filings since 2026-10-30 (25 read)",
+   "n": 25,
+   "secs": 25.6
+  },
+  "corpus": {
+   "ok": true,
+   "note": "13 corpus documents dated 2026-10-30..2026-11-06 match; 13 listed",
+   "n": 13,
+   "secs": 11.3
+  }
+ },
+ "leads": [
+  {
+   "source": "edgar",
+   "key": "0001104659-26-120710",
+   "sev": "high",
+   "title": "DLR 10-Q filed 2026-10-30 — 1 MW/GW passages",
+   "detail": "As of September 30, 2026, 63% of the 1,464 megawatts of projects underway was pre-leased.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1297996/000110465926120710/dlr-20260930x10q.htm",
+   "registry_ids": [
+    "NC-CHARLOTTE-DLRMOORESCHAPEL-B1",
+    "NC-CHARLOTTE-DLRMOORESCHAPEL-B2"
+   ],
+   "data": {
+    "ticker": "DLR",
+    "form": "10-Q",
+    "filed": "2026-10-30",
+    "snippets": [
+     "As of September 30, 2026, 63% of the 1,464 megawatts of projects underway was pre-leased."
+    ]
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001104659-26-122368",
+   "sev": "high",
+   "title": "RIOT 8-K filed 2026-11-04 — 8 MW/GW passages",
+   "detail": "Riot has now leased 1,151 MW of critical IT capacity, representing approximately $38 billion of long-term contracted revenue . ​ . ‖ Riot has signed a 15-year triple-net powered land lease with a leading Frontier AI Lab for the entirety of the Company's Corsicana campus, covering 910 MW of critical IT capacity on a contiguous 332-acre parcel. . . . ‖ Transaction highlights: . ● Capacity Leased: Leased the entirety of the Corsicana campus representing 910 MW of critical IT capacity. . ● Total Contract Value: Approximately $28 billion of total contract value and approximately $1.8 billion of average annual rent, including contractual escalators. ‖ Riot will fund $2 million per IT MW for site work and electrical infrastructure, while the remaining $4 million per IT MW will be reimbursed to the tenant in phases, after each phase is delivered and paying rent. . ● Delivery Schedule: 400 MW in September 2027, 200 MW in January 2028 and 310 MW in July 2028, with rent on each phase commencing no later than 60 days after delivery of its powered pads. . ● Financing: Re ‖ • Data Center revenue of $18.4 million for the quarter, comprised of $7.7 million in base rent, $0.5 million in variable lease revenue, and $10.2 million in tenant fit-out reimbursement revenue, reflecting the first full quarter of the stabilized 25 MW delivered to AMD. .",
+   "url": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926122368/riot-20261029x8k.htm",
+   "registry_ids": [
+    "TX-CORSICANA-RIOT-P1",
+    "TX-CORSICANA-RIOT-P2",
+    "TX-CORSICANA-RIOT-P3",
+    "TX-ROCKDALE-RIOT-AMD1",
+    "TX-ROCKDALE-RIOT-AMD2A",
+    "TX-ROCKDALE-RIOT-AMD2B",
+    "TX-ROCKDALE-RIOT-ANTH1",
+    "TX-ROCKDALE-RIOT-ANTH2"
+   ],
+   "data": {
+    "ticker": "RIOT",
+    "form": "8-K",
+    "filed": "2026-11-04",
+    "snippets": [
+     "Riot has now leased 1,151 MW of critical IT capacity, representing approximately $38 billion of long-term contracted revenue . ​ .",
+     "Riot has signed a 15-year triple-net powered land lease with a leading Frontier AI Lab for the entirety of the Company's Corsicana campus, covering 910 MW of critical IT capacity on a contiguous 332-acre parcel. . . .",
+     "Transaction highlights: . ● Capacity Leased: Leased the entirety of the Corsicana campus representing 910 MW of critical IT capacity. . ● Total Contract Value: Approximately $28 billion of total contract value and approximately $1.8 billion of average annual rent, including contractual escalators.",
+     "Riot will fund $2 million per IT MW for site work and electrical infrastructure, while the remaining $4 million per IT MW will be reimbursed to the tenant in phases, after each phase is delivered and paying rent. . ● Delivery Schedule: 400 MW in September 2027, 200 MW in January 2028 and 310 MW in July 2028, with rent on each phase commencing no later than 60 days after delivery of its powered pads. . ● Financing: Re",
+     "• Data Center revenue of $18.4 million for the quarter, comprised of $7.7 million in base rent, $0.5 million in variable lease revenue, and $10.2 million in tenant fit-out reimbursement revenue, reflecting the first full quarter of the stabilized 25 MW delivered to AMD. .",
+     "LONG-TERM POWERED LAND LEASE WITH FRONTIER AI LAB FOR ENTIRE CORSICANA CAMPUS • ~$28B of total initial contract value • 910 MW of critical IT and 1.0 GW of utility load • NNN Powered Land Lease • Tenant responsible for reimbursement of cost of power and onsite operations 7 . . . . . . 910 MW Critical IT Capacity September 2027 400 MW Phase 1 Deployment Complete Two 5-Year Extension Options $28 Billion Total Contract ",
+     "Reimbursements to Tenant and Site Work 2 $6M / IT MW Reimbursements to Tenant and Site Work 2 99% Estimated NOI Margin 3 15 Year Initial Term Upon Full Deployment 4 $1.8 Billion Average Annual Rent 5 FRONTIER AI LAB CORSICANA DATA CENTER POWERED LAND LEASE OVERVIEW DEAL HIGHLIGHTS 400 MW Phase 1 Capacity On-Schedule for Delivery September 2027 TODAY Signed lease with Frontier AI Lab 400 MW Phase 1 400 MW Fully Delive",
+     "FRONTIER AI LAB TODAY A U G 2 0 2 6 General contractor mobilized SEP 2026 Demolition complete; sitework underway NOV 2026 Excavation, site development, and and equipment orders in progress progress FEB 2027 Building delivery delivery and vertical construction APR 2027 Building fit out begins DEC 2027 RFS1 96 MW JUN 2028 RFS2 95 MW (191 MW Total) P R O G R E S S U P D A T E S - 1 9 1 M W Construction progressing, with"
+    ]
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001104659-26-122417",
+   "sev": "high",
+   "title": "RIOT 10-Q filed 2026-11-04 — 8 MW/GW passages",
+   "detail": "The Rockdale Facility currently provides up to approximately 700 megawatts (“MW”) of developed capacity for Bitcoin Mining and data center leasing. ‖ The Corsicana Facility is currently equipped to provide up to approximately 400 MW of developed capacity for Bitcoin Mining, and upon completion, is expected to have a total of approximately 1 gigawatt (“GW”) of developed capacity available for high-density compute workloads. ‖ The Kentucky Facility currently provides approximately 232 MW of developed capacity. . ​ . ‖ (“AMD”) for the deployment of 50 MW of critical IT load capacity (the “AMD Lease”), with the potential for additional expansion of up to a total of 200 MW of critical IT load capacity, and with the Frontier AI Lab for the deployment of 191 MW of critical IT load capacity (the “Rockdale Lease”). ‖ The AMD Lease included an initial deployment of 25 MW of critical IT load capacity delivered in phases beginning with 5 MW of critical IT load capacity that was . . 9. . . . .",
+   "url": "https://www.sec.gov/Archives/edgar/data/1167419/000110465926122417/riot-20260930x10q.htm",
+   "registry_ids": [
+    "TX-CORSICANA-RIOT-P1",
+    "TX-CORSICANA-RIOT-P2",
+    "TX-CORSICANA-RIOT-P3",
+    "TX-ROCKDALE-RIOT-AMD1",
+    "TX-ROCKDALE-RIOT-AMD2A",
+    "TX-ROCKDALE-RIOT-AMD2B",
+    "TX-ROCKDALE-RIOT-ANTH1",
+    "TX-ROCKDALE-RIOT-ANTH2"
+   ],
+   "data": {
+    "ticker": "RIOT",
+    "form": "10-Q",
+    "filed": "2026-11-04",
+    "snippets": [
+     "The Rockdale Facility currently provides up to approximately 700 megawatts (“MW”) of developed capacity for Bitcoin Mining and data center leasing.",
+     "The Corsicana Facility is currently equipped to provide up to approximately 400 MW of developed capacity for Bitcoin Mining, and upon completion, is expected to have a total of approximately 1 gigawatt (“GW”) of developed capacity available for high-density compute workloads.",
+     "The Kentucky Facility currently provides approximately 232 MW of developed capacity. . ​ .",
+     "(“AMD”) for the deployment of 50 MW of critical IT load capacity (the “AMD Lease”), with the potential for additional expansion of up to a total of 200 MW of critical IT load capacity, and with the Frontier AI Lab for the deployment of 191 MW of critical IT load capacity (the “Rockdale Lease”).",
+     "The AMD Lease included an initial deployment of 25 MW of critical IT load capacity delivered in phases beginning with 5 MW of critical IT load capacity that was . . 9. . . . .",
+     "The AMD Lease included an expansion option for an additional 75 MW of critical IT load capacity and a right of first refusal for another 100 MW, totaling 200 MW.. ​ .",
+     "In April 2026, the Company entered into an amendment to the AMD Lease (the “AMD Lease Amendment”), in which AMD exercised a portion of the existing expansion option in the AMD Lease to provide an additional deployment of 25 MW of critical IT load capacity to be delivered in phases beginning with 10 MW of critical IT load capacity expected to be delivered in November 2026 and the remaining 15 MW expected to be deliver",
+     "Under the AMD Lease Amendment, AMD holds a remaining balance of 50 MW of reserved critical IT load capacity under the existing expansion option."
+    ]
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001193125-26-446146",
+   "sev": "high",
+   "title": "HUT 10-Q filed 2026-11-04 — 6 MW/GW passages",
+   "detail": "The proceeds are being used to (1) finance a portion of the development and construction of a 245 MW critical IT capacity data center and related substation infrastructure at the Company's River Bend site in St. ‖ The proceeds are being used to (1) finance the development and construction of a 352 MW critical IT capacity data center and related substation infrastructure at the Company's Beacon Point site in Nueces County, Texas, (2) fund the debt service reserves, and (3) pay fees and expenses of the offering. ‖ The sites have up to 230 MW in energy capacity subject to final power approvals and infrastructure development, to support AI and HPC workloads. ‖ Energy Capacity Under Construction as of September 30, 2026 was 1,330 MW, comprised of the 330 MW River Bend site, 500 MW Beacon Point Phase 1 site, and the 500 MW Beacon Point Phase 2 site, compared to zero MW as of September 30, 2025. . ‖ As of September 30, 2026, we managed 280 MW of energy capacity under this program at one site in the United States owned by the King Mountain JV. .",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000119312526446146/hut-20260930.htm",
+   "registry_ids": [
+    "LA-STFRANCISVILLE-RIVERBEND-ALL"
+   ],
+   "data": {
+    "ticker": "HUT",
+    "form": "10-Q",
+    "filed": "2026-11-04",
+    "snippets": [
+     "The proceeds are being used to (1) finance a portion of the development and construction of a 245 MW critical IT capacity data center and related substation infrastructure at the Company's River Bend site in St.",
+     "The proceeds are being used to (1) finance the development and construction of a 352 MW critical IT capacity data center and related substation infrastructure at the Company's Beacon Point site in Nueces County, Texas, (2) fund the debt service reserves, and (3) pay fees and expenses of the offering.",
+     "The sites have up to 230 MW in energy capacity subject to final power approvals and infrastructure development, to support AI and HPC workloads.",
+     "Energy Capacity Under Construction as of September 30, 2026 was 1,330 MW, comprised of the 330 MW River Bend site, 500 MW Beacon Point Phase 1 site, and the 500 MW Beacon Point Phase 2 site, compared to zero MW as of September 30, 2025. .",
+     "As of September 30, 2026, we managed 280 MW of energy capacity under this program at one site in the United States owned by the King Mountain JV. .",
+     "Through our Hut 8 Canada business, we provide data center colocation solutions, supported by approximately 3 MW of energy capacity and more than 36,000 square feet of geo-diverse data center space across five locations in Canada."
+    ]
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001628280-26-069810",
+   "sev": "high",
+   "title": "WULF 8-K filed 2026-11-04 — 1 MW/GW passages",
+   "detail": "(“TeraWulf” or the “Company”), in July 2026, the Company’s subsidiary Raylan Data LLC (“Raylan”) entered into a 20-year lease agreement with Anthropic, PBC (“Anthropic”), as tenant, to provide Anthropic with approximately 401 MW of critical IT load for high-performance computing (“HPC”) operations at the Company’s data center campus located in Hawesville, Kentucky.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1083301/000162828026069810/wulf-20261104.htm",
+   "registry_ids": [
+    "KY-HAWESVILLE-TERAWULF-JUSTIFIED"
+   ],
+   "data": {
+    "ticker": "WULF",
+    "form": "8-K",
+    "filed": "2026-11-04",
+    "snippets": [
+     "(“TeraWulf” or the “Company”), in July 2026, the Company’s subsidiary Raylan Data LLC (“Raylan”) entered into a 20-year lease agreement with Anthropic, PBC (“Anthropic”), as tenant, to provide Anthropic with approximately 401 MW of critical IT load for high-performance computing (“HPC”) operations at the Company’s data center campus located in Hawesville, Kentucky."
+    ]
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001819989-26-000050",
+   "sev": "high",
+   "title": "CIFR 10-Q filed 2026-11-02 — 8 MW/GW passages",
+   "detail": "The Company has a 300 MW data center in Wink, Texas that draws power from the power grid (the “Black Pearl Facility”) that was used for bitcoin mining through February 2026, and in August 2026 commenced phased delivery to an HPC tenant. ‖ The Company is also in the process of constructing two other sites for HPC tenants, with the 300 MW Barber Lake Facility for Fluidstack USA II Inc. ‖ (“Fluidstack”), expecting phased commencement in the fourth quarter of 2026 and the 100 MW Stingray data center (the “Stingray Facility”) expecting commencement in 2027. ‖ The Company also operates one wholly owned bitcoin mining data center, a 207 MW site located in Odessa, Texas that draws fixed priced power from a power purchase agreement with its electricity provider (the “Odessa Facility”). . ‖ In October 2025, the Company purchased 53 % of the equity in Colchis LLC (“Colchis”), a joint venture of a potential 1 GW site in Texas, the “Colchis Site.” The Company is the managing member and consolidates Colchis, and records redeemable noncontrolling interest for the minority interest in the site.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000050/cifr-20260930.htm",
+   "registry_ids": [
+    "TX-ANDREWS-STINGRAY-PH1",
+    "TX-COLORADOCITY-BARBERLAKE-PH1",
+    "TX-COLORADOCITY-BARBERLAKE-PH2",
+    "TX-WINK-BLACKPEARL-DH1NH1",
+    "TX-WINK-BLACKPEARL-DH2",
+    "TX-WINK-BLACKPEARL-DH3",
+    "TX-WINK-BLACKPEARL-DH4",
+    "TX-WINK-BLACKPEARL-NH2",
+    "TX-WINK-BLACKPEARL-PH1REM"
+   ],
+   "data": {
+    "ticker": "CIFR",
+    "form": "10-Q",
+    "filed": "2026-11-02",
+    "snippets": [
+     "The Company has a 300 MW data center in Wink, Texas that draws power from the power grid (the “Black Pearl Facility”) that was used for bitcoin mining through February 2026, and in August 2026 commenced phased delivery to an HPC tenant.",
+     "The Company is also in the process of constructing two other sites for HPC tenants, with the 300 MW Barber Lake Facility for Fluidstack USA II Inc.",
+     "(“Fluidstack”), expecting phased commencement in the fourth quarter of 2026 and the 100 MW Stingray data center (the “Stingray Facility”) expecting commencement in 2027.",
+     "The Company also operates one wholly owned bitcoin mining data center, a 207 MW site located in Odessa, Texas that draws fixed priced power from a power purchase agreement with its electricity provider (the “Odessa Facility”). .",
+     "In October 2025, the Company purchased 53 % of the equity in Colchis LLC (“Colchis”), a joint venture of a potential 1 GW site in Texas, the “Colchis Site.” The Company is the managing member and consolidates Colchis, and records redeemable noncontrolling interest for the minority interest in the site.",
+     "Our data center portfolio consists of approximately 4.3 gigawatts (“GW”) of grid capacity across 11 sites, at various stages of interconnection, as well as on-site generation capacity from the development of lateral pipelines capable of delivering natural gas sufficient to support up to 2.5 gigawatts of generation across multiple sites.",
+     "We are currently developing 700 MW of HPC data center facilities across three sites for hyperscaler tenants, and we currently operate approximately 207 MW of capacity at one bitcoin mining data center in Texas.",
+     "We also maintain a grid pipeline of approximately 3.4 GW across six sites in Texas and one additional site in Ohio. ."
+    ]
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001839341-26-000030",
+   "sev": "high",
+   "title": "CORZ 10-Q filed 2026-11-05 — 8 MW/GW passages",
+   "detail": "In July 2026, the Company entered into lease agreements with AMD and a Neocloud counterparty (collectively, the \"AMD Leases\") for an aggregate of approximately 530 MW of critical IT capacity across five of the Company's sites. ‖ AMD was provided with a reservation capacity right to lease from the Company at certain times and circumstances an additional 1,925 MW of critical IT capacity through December 28, 2028. ‖ In 2024, we announced our first HDC contract with CoreWeave, a provider of HPC services, which was subsequently expanded to approximately 590 MW of leased customer power capacity across five sites. ‖ In July 2026, we announced our second HDC contract with AMD and a Neocloud counterparty for an aggregate of approximately 530 MW of critical IT capacity across five of our sites. ‖ Additionally, we provided AMD with a reservation capacity right to lease at certain times and circumstances an additional 1,925 MW of critical IT capacity through December 28, 2028.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000030/core-20260930.htm",
+   "registry_ids": [
+    "GA-DALTON-COREWEAVEDALTON-D1",
+    "GA-DALTON-COREWEAVEDALTON-D3",
+    "NC-MARBLE-CORESCI-HALL3",
+    "NC-MARBLE-CORESCI-HALLS12",
+    "OK-MUSKOGEE-CORZ-B1",
+    "OK-MUSKOGEE-CORZ-B2",
+    "TX-DENTON-CORZ-2026",
+    "TX-DENTON-CORZ-B8"
+   ],
+   "data": {
+    "ticker": "CORZ",
+    "form": "10-Q",
+    "filed": "2026-11-05",
+    "snippets": [
+     "In July 2026, the Company entered into lease agreements with AMD and a Neocloud counterparty (collectively, the \"AMD Leases\") for an aggregate of approximately 530 MW of critical IT capacity across five of the Company's sites.",
+     "AMD was provided with a reservation capacity right to lease from the Company at certain times and circumstances an additional 1,925 MW of critical IT capacity through December 28, 2028.",
+     "In 2024, we announced our first HDC contract with CoreWeave, a provider of HPC services, which was subsequently expanded to approximately 590 MW of leased customer power capacity across five sites.",
+     "In July 2026, we announced our second HDC contract with AMD and a Neocloud counterparty for an aggregate of approximately 530 MW of critical IT capacity across five of our sites.",
+     "Additionally, we provided AMD with a reservation capacity right to lease at certain times and circumstances an additional 1,925 MW of critical IT capacity through December 28, 2028.",
+     "As of September 30, 2026, we controlled approximately 2.6 GW of gross utility power capacity, or approximately 1.7 GW of total leasable customer power capacity across 11 data centers in seven U.S. states including Alabama (1), Georgia (2 ) , Kentucky (1), North Carolina (1), North Dakota (1), Oklahoma (1), and Texas (4).",
+     "• On July 28, 2026, we announced a strategic commercial relationship with AMD with the potential to support up to 2.5 GW of leasable capacity, anchored by a 15-year agreement with AMD and a Neocloud counterparty for an aggregate of approximately 530 MW across five of our sites. .",
+     "• Billable customer power capacity of 485 MW as of September 30, 2026, against 590 MW of leased customer power capacity to CoreWeave, with the remaining 105 MW in various stages of construction and commissioning. ."
+    ]
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001878848-26-000066",
+   "sev": "high",
+   "title": "IREN 10-Q filed 2026-11-05 — 2 MW/GW passages",
+   "detail": "As of September 30, 2026, our installed Bitcoin mining capacity was approximately 7.9 EH/s, representing approximately 180MW of data center capacity. . ‖ As of September 30, 2026, we had executed grid connection agreements, letters of agreement or equivalents representing approximately 5GW of total power capacity in the United States, Canada, Spain and Australia and data center projects in varying stages of development. . 42 . . . . . .",
+   "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/iren-20260930.htm",
+   "registry_ids": [
+    "TX-CHILDRESS-IREN-2027AIR",
+    "TX-CHILDRESS-IREN-2027VR",
+    "TX-CHILDRESS-IREN-H1",
+    "TX-CHILDRESS-IREN-H2H4",
+    "TX-SWEETWATER-IREN-S1VR"
+   ],
+   "data": {
+    "ticker": "IREN",
+    "form": "10-Q",
+    "filed": "2026-11-05",
+    "snippets": [
+     "As of September 30, 2026, our installed Bitcoin mining capacity was approximately 7.9 EH/s, representing approximately 180MW of data center capacity. .",
+     "As of September 30, 2026, we had executed grid connection agreements, letters of agreement or equivalents representing approximately 5GW of total power capacity in the United States, Canada, Spain and Australia and data center projects in varying stages of development. . 42 . . . . . ."
+    ]
+   }
+  },
+  {
+   "source": "tdlr_watch",
+   "key": "TABS2026004659|TX-WHITNEY-CYRUSONEDFW17-ALL",
+   "sev": "high",
+   "title": "Registry date vs TDLR: TX-WHITNEY-CYRUSONEDFW17-ALL records completion 2027-01-01 for TABS2026004659; TDLR now shows 2027-08-25",
+   "detail": "CyrusOne DFW11 | Tenant Fit Out · status Project Registered · the registry's cod_base is completion +6m (Epoch convention)",
+   "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026004659",
+   "registry_ids": [
+    "TX-WHITNEY-CYRUSONEDFW17-ALL"
+   ],
+   "data": {
+    "registry": [
+     "2027-01-01"
+    ],
+    "tdlr": "2027-08-25"
+   }
+  },
+  {
+   "source": "tdlr_watch",
+   "key": "TABS2026007523|TX-WHITNEY-CYRUSONEDFW17-ALL",
+   "sev": "high",
+   "title": "Registry date vs TDLR: TX-WHITNEY-CYRUSONEDFW17-ALL records completion 2027-04-30 for TABS2026007523; TDLR now shows 2027-07-30",
+   "detail": "CyrusOne DFW17C - TFO · status Project Registered · the registry's cod_base is completion +6m (Epoch convention)",
+   "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026007523",
+   "registry_ids": [
+    "TX-WHITNEY-CYRUSONEDFW17-ALL"
+   ],
+   "data": {
+    "registry": [
+     "2027-04-30"
+    ],
+    "tdlr": "2027-07-30"
+   }
+  },
+  {
+   "source": "tdlr_watch",
+   "key": "TABS2026008308|TX-ABILENE-CRUSOEEXP-B2",
+   "sev": "high",
+   "title": "Registry date vs TDLR: TX-ABILENE-CRUSOEEXP-B2 records completion 2027-11-11 for TABS2026008308; TDLR now shows 2027-09-17",
+   "detail": "Abilene Building 9 · status Review Complete · the registry's cod_base is completion +6m (Epoch convention)",
+   "url": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026008308",
+   "registry_ids": [
+    "TX-ABILENE-CRUSOEEXP-B2"
+   ],
+   "data": {
+    "registry": [
+     "2027-11-11"
+    ],
+    "tdlr": "2027-09-17"
+   }
+  },
+  {
+   "source": "corpus",
+   "key": "IREN\\transcripts\\IREN_Q1-FY27-earnings_2026-11-05.md",
+   "sev": "medium",
+   "title": "[transcript 2026-11-05] IREN Q1-FY27-earnings 2026-11-05",
+   "detail": " … Finally, we advanced construction of new [data center] campuses across the globe, including our flagship 2 [GW] Sweetwater hub. Compared to the last quarter, AI Cloud revenue nearly …  · places: Sweetwater, Childress",
+   "url": "IREN\\transcripts\\IREN_Q1-FY27-earnings_2026-11-05.md",
+   "registry_ids": [],
+   "data": {
+    "mw_mentions": 25
+   }
+  },
+  {
+   "source": "corpus",
+   "key": "_equity_calls\\Internet\\2026-11-02_Jefferies_Hyperscaler-AI-deep-dive-capex-miss-backlog-ORCL-AI-World-DC-constraints-Thill.md",
+   "sev": "medium",
+   "title": "[call 2026-11-02] 2026-11-02 Jefferies Hyperscaler-AI-deep-dive-capex-miss-backlog-ORCL-AI-World-DC-constraints-Thill",
+   "detail": " … Plans to add <b>10 incremental [gigawatts]</b> of AI compute capacity. At ~$50B/[gigawatt], this implies a <b>~$500B buildout</b>, putting SpaceX CapEx on par with …  · places: Charlotte",
+   "url": "_equity_calls\\Internet\\2026-11-02_Jefferies_Hyperscaler-AI-deep-dive-capex-miss-backlog-ORCL-AI-World-DC-constraints-Thill.md",
+   "registry_ids": [],
+   "data": {
+    "mw_mentions": 10
+   }
+  },
+  {
+   "source": "corpus",
+   "key": "_podcasts\\semianalysis\\_summaries\\2026-11-04 - Ep. 043 - The Midterms and the 2028 Datacenter Buildout (Datacenters) — summary.md",
+   "sev": "medium",
+   "title": "[podcast 2026-11-04] 2026-11-04 - Ep. 043 - The Midterms and the 2028 Datacenter Buildout (Datacenters) — summary",
+   "detail": " … [gigawatt] [transcribed \"gawatt\"]\", \"10 to 20x\" the annual build of ~5 years earlier | [00:12:48] | themes/ai-[datacenter]-power | 🔭 vs 33.8 [GW] (article) / ~35 [GW] (Patel …  · campuses: Vantage Frontier, Goodnight",
+   "url": "_podcasts\\semianalysis\\_summaries\\2026-11-04 - Ep. 043 - The Midterms and the 2028 Datacenter Buildout (Datacenters) — summary.md",
+   "registry_ids": [
+    "TX-ABILENE-FRONTIER-B1",
+    "TX-ABILENE-FRONTIER-B10",
+    "TX-ABILENE-FRONTIER-B2",
+    "TX-ABILENE-FRONTIER-B3",
+    "TX-ABILENE-FRONTIER-B4",
+    "TX-ABILENE-FRONTIER-B5",
+    "TX-ABILENE-FRONTIER-B6",
+    "TX-ABILENE-FRONTIER-B7",
+    "TX-ABILENE-FRONTIER-B8",
+    "TX-ABILENE-FRONTIER-B9",
+    "TX-CLAUDE-GOODNIGHT-B1",
+    "TX-CLAUDE-GOODNIGHT-B2",
+    "TX-CLAUDE-GOODNIGHT-B3B6"
+   ],
+   "data": {
+    "mw_mentions": 44
+   }
+  },
+  {
+   "source": "corpus",
+   "key": "relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html",
+   "sev": "medium",
+   "title": "[report 2026-11-01] 2026 11 01 ENC The Datacenter Backlash Goes Bipartisan Next Weeks Midterms and the 2028 Buildout email",
+   "detail": " … half a [gigawatt] today. AWS is the main builder: It accounts for nearly 44% of the 2.4 [GW] of total 2028 additions, including the [campus] it is …  · campuses: Vantage Frontier, Goodnight · places: Council Bluffs, Hubbard",
+   "url": "relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html",
+   "registry_ids": [
+    "TX-ABILENE-FRONTIER-B1",
+    "TX-ABILENE-FRONTIER-B10",
+    "TX-ABILENE-FRONTIER-B2",
+    "TX-ABILENE-FRONTIER-B3",
+    "TX-ABILENE-FRONTIER-B4",
+    "TX-ABILENE-FRONTIER-B5",
+    "TX-ABILENE-FRONTIER-B6",
+    "TX-ABILENE-FRONTIER-B7",
+    "TX-ABILENE-FRONTIER-B8",
+    "TX-ABILENE-FRONTIER-B9",
+    "TX-CLAUDE-GOODNIGHT-B1",
+    "TX-CLAUDE-GOODNIGHT-B2",
+    "TX-CLAUDE-GOODNIGHT-B3B6"
+   ],
+   "data": {
+    "mw_mentions": 23
+   }
+  },
+  {
+   "source": "corpus",
+   "key": "relatórios bons\\2026_11_06_amigo_felipe_gw_atrasa_pausas_estaduais.html",
+   "sev": "medium",
+   "title": "[report 2026-11-06] 2026 11 06 amigo felipe gw atrasa pausas estaduais",
+   "detail": " … base curve labelled \"Base (Aterio)\" — Aterio [data-centre] census, campuses under construction in the US, [GW] dated 2026-30; the delay scenario (\"cenário bear pós-eleição\") is the …  · campuses: Stargate Abilene · places: Abilene",
+   "url": "relatórios bons\\2026_11_06_amigo_felipe_gw_atrasa_pausas_estaduais.html",
+   "registry_ids": [
+    "TX-ABILENE-STARGATE-B3",
+    "TX-ABILENE-STARGATE-B4",
+    "TX-ABILENE-STARGATE-B5",
+    "TX-ABILENE-STARGATE-B6",
+    "TX-ABILENE-STARGATE-B7",
+    "TX-ABILENE-STARGATE-B8"
+   ],
+   "data": {
+    "mw_mentions": 23
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001104659-26-122347",
+   "sev": "medium",
+   "title": "HUT 8-K filed 2026-11-04 — 4 MW/GW passages",
+   "detail": "Hut 8 fully commercializes Beacon Point AI data center campus and advances 1,300 MW of energy capacity to exclusivity . . ‖ Power . . - Generated $1.3 million in third quarter revenue from Managed Services. . . - Advanced 500 MW of utility capacity at Beacon Point into Energy Capacity Under Construction following execution of the Phase 2 lease, increasing total Energy Capacity Under Construction to 1,330 MW, comprising 330 MW at the River Bend campus and 1,000 MW at the Beacon Point campus. . . - Entered into agreements to acquire two ene ‖ Excludes 1,000 MW of potential expansion capacity at River Bend (subject to the expansion of power at the site), for which Fluidstack holds a ROFO under the River Bend lease. . 2. ‖ Excludes 710 MW of Energy Capacity Under Management, which comprises all power-related assets, including managed services, ASIC and Central Processing Unit (“CPU”) infrastructure, ASIC compute, and non-operational sites. . . .",
+   "url": "https://www.sec.gov/Archives/edgar/data/1964789/000110465926122347/tm2628741d1_8k.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "HUT",
+    "form": "8-K",
+    "filed": "2026-11-04",
+    "snippets": [
+     "Hut 8 fully commercializes Beacon Point AI data center campus and advances 1,300 MW of energy capacity to exclusivity . .",
+     "Power . . - Generated $1.3 million in third quarter revenue from Managed Services. . . - Advanced 500 MW of utility capacity at Beacon Point into Energy Capacity Under Construction following execution of the Phase 2 lease, increasing total Energy Capacity Under Construction to 1,330 MW, comprising 330 MW at the River Bend campus and 1,000 MW at the Beacon Point campus. . . - Entered into agreements to acquire two ene",
+     "Excludes 1,000 MW of potential expansion capacity at River Bend (subject to the expansion of power at the site), for which Fluidstack holds a ROFO under the River Bend lease. . 2.",
+     "Excludes 710 MW of Energy Capacity Under Management, which comprises all power-related assets, including managed services, ASIC and Central Processing Unit (“CPU”) infrastructure, ASIC compute, and non-operational sites. . . ."
+    ]
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001628280-26-070286",
+   "sev": "medium",
+   "title": "SEI 8-K filed 2026-11-04 — 1 MW/GW passages",
+   "detail": "• Activity – Third quarter 2026 averaged approximately 820 MW of capacity earning revenue, which decreased 14% compared to approximately 950 MW in second quarter 2026 primarily due to the planned release of temporary third-party generation as we transition to owned capacity under long-term contracts. .",
+   "url": "https://www.sec.gov/Archives/edgar/data/1697500/000162828026070286/sei-20261104.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "SEI",
+    "form": "8-K",
+    "filed": "2026-11-04",
+    "snippets": [
+     "• Activity – Third quarter 2026 averaged approximately 820 MW of capacity earning revenue, which decreased 14% compared to approximately 950 MW in second quarter 2026 primarily due to the planned release of temporary third-party generation as we transition to owned capacity under long-term contracts. ."
+    ]
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001628280-26-071604",
+   "sev": "medium",
+   "title": "SEI 10-Q filed 2026-11-06 — 2 MW/GW passages",
+   "detail": "In July 2026, we signed additional agreements to a contract entered into in April 2026 with a new customer to provide approximately 640 MW of power generation equipment and balance of plant to support the customer’s power demand for artificial intelligence computing needs at its data center, which expand the scope of the original contract to now include additional balance of plant and energy storage assets as well as ‖ Stateline maintains a delayed draw term loan facility with an estimated total capacity of $518.5 million, based on its current capital plan, to fund power generation equipment for its approximately 900 MW data center project.",
+   "url": "https://www.sec.gov/Archives/edgar/data/1697500/000162828026071604/sei-20260930.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "SEI",
+    "form": "10-Q",
+    "filed": "2026-11-06",
+    "snippets": [
+     "In July 2026, we signed additional agreements to a contract entered into in April 2026 with a new customer to provide approximately 640 MW of power generation equipment and balance of plant to support the customer’s power demand for artificial intelligence computing needs at its data center, which expand the scope of the original contract to now include additional balance of plant and energy storage assets as well as",
+     "Stateline maintains a delayed draw term loan facility with an estimated total capacity of $518.5 million, based on its current capital plan, to fund power generation equipment for its approximately 900 MW data center project."
+    ]
+   }
+  },
+  {
+   "source": "epoch",
+   "key": "coverage|CoreWeave Chester VA",
+   "sev": "medium",
+   "title": "Coverage: Epoch US data center 'CoreWeave Chester VA' has no registry match (82 MW now)",
+   "detail": "owner CoreWeave #confident; users OpenAI #speculative; 1401 Meadowville Technology Parkway, Chester, VA",
+   "url": "https://epoch.ai/data/ai-data-centers",
+   "registry_ids": [],
+   "data": {}
+  },
+  {
+   "source": "epoch",
+   "key": "coverage|CoreWeave Ellendale ND",
+   "sev": "medium",
+   "title": "Coverage: Epoch US data center 'CoreWeave Ellendale ND' has no registry match (68 MW now)",
+   "detail": "owner CoreWeave #confident; users OpenAI #speculative; 9685 87th Ave SE, Ellendale, ND 58436",
+   "url": "https://epoch.ai/data/ai-data-centers",
+   "registry_ids": [],
+   "data": {}
+  },
+  {
+   "source": "epoch",
+   "key": "coverage|Microsoft Goodyear",
+   "sev": "medium",
+   "title": "Coverage: Epoch US data center 'Microsoft Goodyear' has no registry match (202 MW now)",
+   "detail": "owner Microsoft #confident; users OpenAI #likely, Microsoft #confident; 14250 W Broadway Rd, Goodyear, AZ 85338",
+   "url": "https://epoch.ai/data/ai-data-centers",
+   "registry_ids": [],
+   "data": {}
+  },
+  {
+   "source": "epoch",
+   "key": "coverage|Microsoft Project Osmium",
+   "sev": "medium",
+   "title": "Coverage: Epoch US data center 'Microsoft Project Osmium' has no registry match (190 MW now)",
+   "detail": "owner Microsoft #confident; users OpenAI #speculative; 5855 SW Kerry St, Cumming, IA 50061",
+   "url": "https://epoch.ai/data/ai-data-centers",
+   "registry_ids": [],
+   "data": {}
+  },
+  {
+   "source": "tceq",
+   "key": "pending|TX-PECOS-KILBY-ALL",
+   "sev": "medium",
+   "title": "TX-PECOS-KILBY-ALL is air_permit=pending, and TCEQ lists issued turbine permit(s) in Reeves Co. dated on/after its filing",
+   "detail": "184584 Kinetik Power LLC 38 MW issued 2026-07-29; 182541 Featherwood Capital LLC 931 MW issued 2026-01-08 — check whether one is this site",
+   "url": "https://www.tceq.texas.gov/downloads/permitting/air/memos/turbine-lst.xlsx",
+   "registry_ids": [
+    "TX-PECOS-KILBY-ALL"
+   ],
+   "data": {}
+  },
+  {
+   "source": "corpus",
+   "key": "MRVL\\transcripts\\MRVL_Jefferies-CEO-fireside-MRVL-LITE-merger-Murphy-Hurlston_2026-11-03.md",
+   "sev": "low",
+   "title": "[transcript 2026-11-03] MRVL Jefferies-CEO-fireside-MRVL-LITE-merger-Murphy-Hurlston 2026-11-03",
+   "detail": " … 2 with external light source, 3 with internal light source.\n- <b>External light source:</b> ~400 [mW] lasers, higher ASPs.\n- <b>Internal light source:</b> ~200 [mW] (can … ",
+   "url": "MRVL\\transcripts\\MRVL_Jefferies-CEO-fireside-MRVL-LITE-merger-Murphy-Hurlston_2026-11-03.md",
+   "registry_ids": [],
+   "data": {
+    "mw_mentions": 7
+   }
+  },
+  {
+   "source": "corpus",
+   "key": "SMCI\\transcripts\\SMCI_Q1-FY27-earnings_2026-11-03.md",
+   "sev": "low",
+   "title": "[transcript 2026-11-03] SMCI Q1-FY27-earnings 2026-11-03",
+   "detail": " … Number four, lower TCO by slashing energy consumption and facility downtime to accelerate and improve [data center] profitability. Whether our customer are building [gigawatt]-scale AI factory or … ",
+   "url": "SMCI\\transcripts\\SMCI_Q1-FY27-earnings_2026-11-03.md",
+   "registry_ids": [],
+   "data": {
+    "mw_mentions": 0
+   }
+  },
+  {
+   "source": "corpus",
+   "key": "_equity_calls\\Internet\\2026-10-30_MorganStanley_AMZN-GOOGL-3Q26-group-callback-Nowak.md",
+   "sev": "low",
+   "title": "[call 2026-10-30] 2026-10-30 MorganStanley AMZN-GOOGL-3Q26-group-callback-Nowak",
+   "detail": " … The [GW] figures ('add 6 [gigawatts] this year', '10 [gigawatts] next year') are Nowak's framing of AWS capacity - basis unstated. ⚠ RECURRING - prior Nowak callbacks on disk: `_equity … ",
+   "url": "_equity_calls\\Internet\\2026-10-30_MorganStanley_AMZN-GOOGL-3Q26-group-callback-Nowak.md",
+   "registry_ids": [],
+   "data": {
+    "mw_mentions": 6
+   }
+  },
+  {
+   "source": "corpus",
+   "key": "_equity_calls\\Semis\\2026-11-04_UBS_AMD-3Q26-recap-call-server-CPU-warrant-dilution-Arcuri-Ruple.md",
+   "sev": "low",
+   "title": "[call 2026-11-04] 2026-11-04 UBS AMD-3Q26-recap-call-server-CPU-warrant-dilution-Arcuri-Ruple",
+   "detail": " … Each <b>6 [gigawatt] deal</b> ≈ 160 million shares\n- Rule of thumb: <b>~26 million shares per [gigawatt] shipped</b>\n- With ~3–3.5 [GW] expected to ship … ",
+   "url": "_equity_calls\\Semis\\2026-11-04_UBS_AMD-3Q26-recap-call-server-CPU-warrant-dilution-Arcuri-Ruple.md",
+   "registry_ids": [],
+   "data": {
+    "mw_mentions": 4
+   }
+  },
+  {
+   "source": "corpus",
+   "key": "_podcasts\\adhoc\\_summaries\\2026-11-02 - FULL Sam Altman Announces OpenAI Partnership With ADNOC & G42 to Transform Energy Operatio — summary.md",
+   "sev": "low",
+   "title": "[podcast 2026-11-02] 2026-11-02 - FULL Sam Altman Announces OpenAI Partnership With ADNOC & G42 to Transform Energy Operatio — summary",
+   "detail": " … No [GW], [MW] or $/[GW] figure was given, so nothing to map to a [GW] basis.\n- **✅ CONFIRMS OPENAI robotics/self-build** (10-29 Cheeky Pint: robots for data … ",
+   "url": "_podcasts\\adhoc\\_summaries\\2026-11-02 - FULL Sam Altman Announces OpenAI Partnership With ADNOC & G42 to Transform Energy Operatio — summary.md",
+   "registry_ids": [],
+   "data": {
+    "mw_mentions": 0
+   }
+  },
+  {
+   "source": "corpus",
+   "key": "_podcasts\\adhoc\\_summaries\\2026-11-03 - #FalConEurope2026 Securing the AI Revolution George Kurtz, Bartley Richardson, & Timothee — summary.md",
+   "sev": "low",
+   "title": "[podcast 2026-11-03] 2026-11-03 - #FalConEurope2026 Securing the AI Revolution George Kurtz, Bartley Richardson, & Timothee — summary",
+   "detail": " … Mistral has recently added compute, \"developing uh [data center] infrastructure uh in Europe\" (no [MW] or $ given). The latest model is \"frontier at coding and cyber\" [01:11 … ",
+   "url": "_podcasts\\adhoc\\_summaries\\2026-11-03 - #FalConEurope2026 Securing the AI Revolution George Kurtz, Bartley Richardson, & Timothee — summary.md",
+   "registry_ids": [],
+   "data": {
+    "mw_mentions": 0
+   }
+  },
+  {
+   "source": "corpus",
+   "key": "_podcasts\\adhoc\\_summaries\\2026-11-05 - Watch Live OpenAI Co-Founder Greg Brockman at WSJ Tech WSJ — summary.md",
+   "sev": "low",
+   "title": "[podcast 2026-11-05] 2026-11-05 - Watch Live OpenAI Co-Founder Greg Brockman at WSJ Tech WSJ — summary",
+   "detail": " … He gives no moratorium impact, [MW], site or delay, so it does not change the page's 1.5 [GW]-delayed-of-~20 [GW] SemiAnalysis framing. ✅ Consistent with … ",
+   "url": "_podcasts\\adhoc\\_summaries\\2026-11-05 - Watch Live OpenAI Co-Founder Greg Brockman at WSJ Tech WSJ — summary.md",
+   "registry_ids": [],
+   "data": {
+    "mw_mentions": 2
+   }
+  },
+  {
+   "source": "corpus",
+   "key": "_podcasts\\semianalysis\\2026-11-04 - Ep. 043 - The Midterms and the 2028 Datacenter Buildout (Datacenters).md",
+   "sev": "low",
+   "title": "[podcast 2026-11-04] 2026-11-04 - Ep. 043 - The Midterms and the 2028 Datacenter Buildout (Datacenters)",
+   "detail": " … SemiAnalysis’s model has about 62 [GW] of US [datacenter] additions in 2028, most not yet under construction and sitting in states electing a governor. Texas alone is … ",
+   "url": "_podcasts\\semianalysis\\2026-11-04 - Ep. 043 - The Midterms and the 2028 Datacenter Buildout (Datacenters).md",
+   "registry_ids": [],
+   "data": {
+    "mw_mentions": 2
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001020569-26-000081",
+   "sev": "low",
+   "title": "IRM 8-K filed 2026-11-05 — no MW/GW passage",
+   "detail": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/1020569/000102056926000081/irm-20261105.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "IRM",
+    "form": "8-K",
+    "filed": "2026-11-05",
+    "snippets": []
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001020569-26-000084",
+   "sev": "low",
+   "title": "IRM 10-Q filed 2026-11-05 — no MW/GW passage",
+   "detail": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/1020569/000102056926000084/irm-20260930.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "IRM",
+    "form": "10-Q",
+    "filed": "2026-11-05",
+    "snippets": []
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001140361-26-042013",
+   "sev": "low",
+   "title": "VST 8-K filed 2026-11-05 — no MW/GW passage",
+   "detail": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/1692819/000114036126042013/ef20084950_8k.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "VST",
+    "form": "8-K",
+    "filed": "2026-11-05",
+    "snippets": []
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001144879-26-000063",
+   "sev": "low",
+   "title": "APLD 8-K filed 2026-11-06 — no MW/GW passage",
+   "detail": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/1144879/000114487926000063/apld-20261104.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "APLD",
+    "form": "8-K",
+    "filed": "2026-11-06",
+    "snippets": []
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001193125-26-441892",
+   "sev": "low",
+   "title": "DLR 8-K filed 2026-10-30 — no MW/GW passage",
+   "detail": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/1297996/000119312526441892/d170330d8k.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "DLR",
+    "form": "8-K",
+    "filed": "2026-10-30",
+    "snippets": []
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001213900-26-115575",
+   "sev": "low",
+   "title": "WYFI 8-K filed 2026-11-03 — no MW/GW passage",
+   "detail": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/2042022/000121390026115575/ea0310639-8k_whitefiber.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "WYFI",
+    "form": "8-K",
+    "filed": "2026-11-03",
+    "snippets": []
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001213900-26-115928",
+   "sev": "low",
+   "title": "FRMI 8-K filed 2026-11-04 — no MW/GW passage",
+   "detail": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/2071778/000121390026115928/ea0310920-8k_fermi.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "FRMI",
+    "form": "8-K",
+    "filed": "2026-11-04",
+    "snippets": []
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001622536-26-000084",
+   "sev": "low",
+   "title": "TLN 8-K filed 2026-11-03 — no MW/GW passage",
+   "detail": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000084/tln-20261103.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "TLN",
+    "form": "8-K",
+    "filed": "2026-11-03",
+    "snippets": []
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001622536-26-000086",
+   "sev": "low",
+   "title": "TLN 10-Q filed 2026-11-03 — no MW/GW passage",
+   "detail": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/1622536/000162253626000086/tln-20260930.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "TLN",
+    "form": "10-Q",
+    "filed": "2026-11-03",
+    "snippets": []
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001628280-26-071306",
+   "sev": "low",
+   "title": "WULF 8-K filed 2026-11-06 — no MW/GW passage",
+   "detail": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/1083301/000162828026071306/wulf-20261106.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "WULF",
+    "form": "8-K",
+    "filed": "2026-11-06",
+    "snippets": []
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001692819-26-000023",
+   "sev": "low",
+   "title": "VST 8-K filed 2026-11-06 — no MW/GW passage",
+   "detail": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/1692819/000169281926000023/vistra-20261106.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "VST",
+    "form": "8-K",
+    "filed": "2026-11-06",
+    "snippets": []
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001819989-26-000047",
+   "sev": "low",
+   "title": "CIFR 8-K filed 2026-11-02 — no MW/GW passage",
+   "detail": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000047/cifr-20261102.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "CIFR",
+    "form": "8-K",
+    "filed": "2026-11-02",
+    "snippets": []
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001839341-26-000028",
+   "sev": "low",
+   "title": "CORZ 8-K filed 2026-11-05 — no MW/GW passage",
+   "detail": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/1839341/000183934126000028/core-20261105.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "CORZ",
+    "form": "8-K",
+    "filed": "2026-11-05",
+    "snippets": []
+   }
+  },
+  {
+   "source": "edgar",
+   "key": "0001878848-26-000065",
+   "sev": "low",
+   "title": "IREN 8-K filed 2026-11-05 — no MW/GW passage",
+   "detail": "",
+   "url": "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000065/iren-20261105.htm",
+   "registry_ids": [],
+   "data": {
+    "ticker": "IREN",
+    "form": "8-K",
+    "filed": "2026-11-05",
+    "snippets": []
+   }
+  }
+ ]
+}

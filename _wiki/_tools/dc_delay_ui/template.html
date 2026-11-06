@@ -12,6 +12,7 @@
   --c-energized:#6b6a65; --c-nopause:#b4b3ac; --c-protected:#2a78d6; --c-ends:#1baf7a; --c-delayed:#eb6834;
   --c-base:#8a8984; --gov-d:#d6e6fa; --gov-r:#f7dbda; --gov-na:#ecebe6; --state-line:#ffffff; --pause-line:#0b0b0b;
   --accent:#2a78d6; --chip-bg:#ecebe6;
+  --s-active:#6b6a65; --s-uc:#2a78d6; --s-ann:#a9c7ec; --s-fr:#f7dcc6; --s-mf:#f0b48c; --s-ca:#e2864f; --s-re:#c95a24; --s-ho:#8f3510;
 }
 @media (prefers-color-scheme: dark){
   :root:where(:not([data-theme="light"])){
@@ -21,6 +22,7 @@
     --c-energized:#8f8e86; --c-nopause:#55544f; --c-protected:#3987e5; --c-ends:#199e70; --c-delayed:#d95926;
     --c-base:#77766f; --gov-d:#1f3350; --gov-r:#4a2828; --gov-na:#262624; --state-line:#121211; --pause-line:#f0efec;
     --accent:#3987e5; --chip-bg:#2a2a27;
+    --s-active:#8f8e86; --s-uc:#3987e5; --s-ann:#2d4a6e; --s-fr:#4d3324; --s-mf:#7a4526; --s-ca:#a85a2a; --s-re:#d8702f; --s-ho:#f59a62;
   }
 }
 :root[data-theme="dark"]{
@@ -30,6 +32,7 @@
   --c-energized:#8f8e86; --c-nopause:#55544f; --c-protected:#3987e5; --c-ends:#199e70; --c-delayed:#d95926;
   --c-base:#77766f; --gov-d:#1f3350; --gov-r:#4a2828; --gov-na:#262624; --state-line:#121211; --pause-line:#f0efec;
   --accent:#3987e5; --chip-bg:#2a2a27;
+  --s-active:#8f8e86; --s-uc:#3987e5; --s-ann:#2d4a6e; --s-fr:#4d3324; --s-mf:#7a4526; --s-ca:#a85a2a; --s-re:#d8702f; --s-ho:#f59a62;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--page);color:var(--ink);font:14px/1.5 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
@@ -108,7 +111,20 @@ tr.tot td{font-weight:650;border-top:1px solid var(--border)}
 .flag{font-size:14px}
 .foot{font-size:12px;color:var(--ink-3);margin-top:24px}
 details summary{cursor:pointer;font-weight:600}
-@media (max-width:1000px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}}
+.tabs{display:flex;gap:10px;align-items:center;margin:14px 0 0;flex-wrap:wrap}
+.tabs .seg button{padding:7px 14px;font-size:13.5px}
+.hb{display:flex;height:14px;border-radius:3px;overflow:hidden;min-width:2px}
+.hb span{display:block;height:100%;min-width:1px}
+.hb span+span{border-left:2px solid var(--surface)}
+.btbl td{vertical-align:middle}
+.btbl td.hbc{width:46%;min-width:160px}
+.read-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+.read-col h4{margin:0 0 6px;font-size:13.5px}
+.read-col ul{margin:0;padding:0 0 0 16px}
+.read-col li{margin:0 0 8px;font-size:12.5px;color:var(--ink-2)}
+.read-col li b{color:var(--ink);display:block;margin-bottom:1px}
+.legend i.sw{border-radius:2px}
+@media (max-width:1000px){.read-grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}}
 @media (max-width:620px){header,main{padding-left:16px;padding-right:16px}.cards{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}}
 </style>
 </head>
@@ -119,11 +135,12 @@ details summary{cursor:pointer;font-weight:600}
   <div class="warn" id="warn"></div>
 </header>
 <main>
+  <div class="tabs"><span class="seg" id="segTab"></span><span class="seg theme-btn"><button id="themeBtn" aria-pressed="false" title="Toggle light/dark">◐ Theme</button></span></div>
+  <div id="tabModel">
   <div class="bar">
     <span class="lbl">Scenario</span><span class="seg" id="segScen"></span>
     <span class="lbl">Universe</span><span class="seg" id="segUni"></span>
     <span class="blurb" id="scenBlurb"></span>
-    <span class="seg theme-btn"><button id="themeBtn" aria-pressed="false" title="Toggle light/dark">◐ Theme</button></span>
   </div>
   <div class="warn" id="scaleNote" style="display:none;margin:0 0 10px"></div>
   <div class="kpis" id="kpis"></div>
@@ -182,6 +199,12 @@ details summary{cursor:pointer;font-weight:600}
   </section>
 
   <section>
+    <h2>What moved</h2>
+    <p class="lead" id="movedLead"></p>
+    <div class="panel" id="moved"></div>
+  </section>
+
+  <section>
     <h2>Guardrails and coverage</h2>
     <p class="lead">Each check compares the registry to an observable that was not used to build it. 🟢 within ±25%, 🟡 within ±50%, 🔴 outside. A red level check means the registry is incomplete: read the state mix and the delay shares, not the absolute GW.</p>
     <div class="two">
@@ -194,6 +217,43 @@ details summary{cursor:pointer;font-weight:600}
     <h2>Method and assumptions</h2>
     <div class="panel" id="method"></div>
   </section>
+  </div>
+  <div id="tabBern" hidden>
+    <div class="warn" id="bSrc" style="margin-top:14px"></div>
+    <section>
+      <h2>What is new, and what contradicts us</h2>
+      <p class="lead">Capstone read of the note against our registry, the rules file and the research already on the wiki. Our inferences are labelled as such.</p>
+      <div class="read-grid" id="bRead"></div>
+    </section>
+    <section>
+      <h2>Status by player, US</h2>
+      <p class="lead" id="bNatLead"></p>
+      <div class="legend" id="bNatLegend"></div>
+      <div id="bNat"></div>
+    </section>
+    <section>
+      <h2>Status by region</h2>
+      <div class="filters"><span class="seg" id="bSegState"></span><span class="seg" id="bSegView"></span></div>
+      <p class="lead" id="bStLead"></p>
+      <div class="legend" id="bStLegend"></div>
+      <div class="tbl-wrap" style="max-height:none"><table class="btbl" id="bState"></table></div>
+      <div class="two" style="margin-top:12px"><div class="panel" id="bStateNote"></div><div class="panel" id="bUnmatched"></div></div>
+    </section>
+    <section>
+      <h2>State stance regimes, before and after the election</h2>
+      <p class="lead" id="bStanceLead"></p>
+      <div class="legend" id="bStanceLegend"></div>
+      <div class="panel" id="bStance"></div>
+    </section>
+    <section class="two">
+      <div><h2>Texas pipeline by target year</h2><p class="lead">Unstarted capacity is what the pause can reach; Bernstein treats the 21 GW under construction as grandfathered.</p><div class="panel" id="bTx"></div></div>
+      <div><h2>Texas construction starts, 2026</h2><p class="lead">GW started per month (Exhibit 28). The pauses began Aug 3 (ERCOT grid connections) and Sep 21 (TCEQ permits).</p><div class="panel chart" id="bTxStarts"></div></div>
+    </section>
+    <section>
+      <h2>Catalysts, and where they sit in our model</h2>
+      <div class="tbl-wrap" style="max-height:none"><table id="bCat"></table></div>
+    </section>
+  </div>
   <p class="foot" id="foot"></p>
 </main>
 <div id="tip"></div>
@@ -426,6 +486,40 @@ function table(){
   $("ptable").querySelectorAll("th[data-k]").forEach(th => th.onclick = () => { const k = th.dataset.k; S.dir = S.sort === k ? -S.dir : -1; S.sort = k; table(); });
 }
 
+function moved(){
+  const MV = M.moved || {}, mon = MV.monitor || {}, sc = S.scen, uni = S.uni === "pipeline" ? "pipeline" : "construction";
+  const inU = r => uni === "pipeline" ? !!r.u : r.u === "construction";
+  const lc = mon.last_counts || {};
+  $("movedLead").innerHTML = `A weekly monitor (Fridays 15:00) re-reads Texas TDLR building registrations, TCEQ gas-turbine permits, local moratoria (Moratorium Nation), Epoch AI's campus timelines, developers' SEC filings and the wiki corpus, and turns what changed into leads. A registry row changes only on a primary source, and every change is logged with its old value. ` +
+    (mon.last_poll ? `Last run <b>${esc(mon.last_poll)}</b> (window from ${esc(mon.last_since)}): ${lc.high || 0} high · ${lc.medium || 0} medium · ${lc.low || 0} low leads${(mon.last_failed || []).length ? ` · <b>sources failed: ${esc(mon.last_failed.join(", "))}</b>` : ""}${mon.review_file ? ` · open questions in <code>${esc(mon.review_file)}</code>` : ""}.` : "The monitor has not run yet.") +
+    ` Bucket and date moves follow the selected scenario; phase lists follow the ${uni === "pipeline" ? "registry + announced" : "registry (campuses under construction)"} universe.`;
+  const blocks = [];
+  if (MV.live) blocks.push(["Since the last weekly check (not yet logged)", MV.live, true]);
+  (MV.log || []).forEach((d, i) => blocks.push([`Week to ${d.head.slice(0, 10)} (vs ${d.base.slice(0, 10)})`, d, i === 0 && !MV.live]));
+  if (!blocks.length) { $("moved").innerHTML = `<p style="margin:0;color:var(--ink-2);font-size:13px">${MV.since ? "No registry or bucket change since the check of " + esc(MV.since.replace("T", " ")) + "." : "No checkpoint yet: the first weekly run sets the baseline."}</p>`; return; }
+  const bk = x => x ? `${BL[x[0]] || x[0]}${x[1] ? " · " + x[1] : ""}` : "–";
+  const gw = xs => f1(xs.reduce((t, r) => t + (r.it || 0), 0) / 1000);
+  const srcLink = r => { const s = (r.src || "").split(";").map(x => x.trim()).filter(Boolean)[0]; return s ? (/^https?:/.test(s) ? `<a href="${esc(s)}" target="_blank" rel="noopener">source</a>` : `<span class="tag" title="${esc(s)}">corpus</span>`) : ""; };
+  const tbl = (head, rows) => `<div class="tbl-wrap" style="max-height:260px"><table><tr>${head.map(([l, n]) => `<th class="${n ? "n" : ""}">${l}</th>`).join("")}</tr>${rows.join("")}</table></div>`;
+  $("moved").innerHTML = blocks.map(([title, d, open]) => {
+    const t = d.tot[sc] || {}, dl = o => o && o.delayed && o.delayed[0] != null ? `${f1(o.delayed[0])} → <b>${f1(o.delayed[1])}</b>` : (o && o.delayed ? f1(o.delayed[1]) : "–");
+    const mv = (d.moves[sc] || []).filter(inU).sort((a, b) => b.it - a.it);
+    const nw = d.new.filter(inU).sort((a, b) => b.it - a.it), dr = d.dropped.filter(inU).sort((a, b) => b.it - a.it);
+    const ch = d.changed.slice().sort((a, b) => b.it - a.it);
+    const asof = d.as_of && d.as_of[0] !== d.as_of[1] ? ` · as-of month ${esc(d.as_of[0])} → ${esc(d.as_of[1])}` : "";
+    let h = `<details ${open ? "open" : ""} style="margin:0 0 10px"><summary style="cursor:pointer;font-weight:600;font-size:13.5px">${esc(title)}: delayed GW ${dl(t.construction)} registry · ${dl(t.scaled)} scaled · ${nw.length} new phase${nw.length === 1 ? "" : "s"} (${gw(nw)} GW) · ${dr.length} dropped (${gw(dr)} GW) · ${ch.length} changed · ${mv.length} bucket or date moves${asof}</summary>`;
+    if (mv.length) h += `<h4 style="margin:8px 0 4px;font-size:13px">Bucket or date moves · ${esc(M.scenarios[sc].label)}</h4>` + tbl([["Campus · phase"], ["St"], ["MW IT-eq", 1], ["Before"], ["Now"]],
+      mv.slice(0, 80).map(m => `<tr><td><b>${esc(m.campus)}</b><div style="color:var(--ink-3)">${esc(m.phase)}</div></td><td>${m.st}</td><td class="n">${Math.round(m.it)}</td><td>${esc(bk(m.from))}</td><td>${esc(bk(m.to))}</td></tr>`));
+    if (nw.length) h += `<h4 style="margin:8px 0 4px;font-size:13px">New phases</h4>` + tbl([["Campus · phase"], ["Location"], ["MW IT-eq", 1], ["Base date"], ["Now (scenario)"], ["Source"]],
+      nw.slice(0, 80).map(r => `<tr><td><b>${esc(r.campus)}</b><div style="color:var(--ink-3)">${esc(r.phase)} · ${esc((r.ps || "").replace("_", " "))}</div></td><td>${esc(r.city)}, ${r.st}</td><td class="n">${Math.round(r.it)}</td><td>${esc(r.cod)}</td><td>${esc(bk(r.res[sc]))}</td><td>${srcLink(r)}<div style="color:var(--ink-3)">${esc(r.sd)}</div></td></tr>`));
+    if (ch.length) h += `<h4 style="margin:8px 0 4px;font-size:13px">Changed fields (old → new)</h4>` + tbl([["Campus · phase"], ["St"], ["MW IT-eq", 1], ["Change"], ["Source"]],
+      ch.slice(0, 120).map(r => `<tr><td><b>${esc(r.campus)}</b><div style="color:var(--ink-3)">${esc(r.phase)}</div></td><td>${r.st}</td><td class="n">${Math.round(r.it)}</td><td>${Object.entries(r.f).map(([k, v]) => `${esc(k)} <span style="color:var(--ink-3)">${esc(v[0] ?? "–")}</span> → <b>${esc(v[1] ?? "–")}</b>`).join("<br>")}</td><td>${srcLink(r)}<div style="color:var(--ink-3)">${esc(r.sd)}</div></td></tr>`));
+    if (dr.length) h += `<h4 style="margin:8px 0 4px;font-size:13px">Dropped phases</h4>` + tbl([["Campus · phase"], ["Location"], ["MW IT-eq", 1], ["Base date"]],
+      dr.slice(0, 80).map(r => `<tr><td><b>${esc(r.campus)}</b><div style="color:var(--ink-3)">${esc(r.phase)}</div></td><td>${esc(r.city)}, ${r.st}</td><td class="n">${Math.round(r.it)}</td><td>${esc(r.cod)}</td></tr>`));
+    return h + `</details>`;
+  }).join("");
+}
+
 function checks(){
   $("checks").innerHTML = `<tr><th></th><th>Check</th><th class="n">Model</th><th class="n">Anchor</th><th class="n">×</th></tr>` + M.checks.map(c =>
     `<tr><td class="flag">${c.flag}</td><td>${esc(c.check)} <span class="tag">${esc(c.kind)}</span><div style="color:var(--ink-3);font-size:11.5px">${esc(c.source)} — ${esc(c.caveat)}</div></td><td class="n">${c.model ?? "–"}</td><td class="n">${esc(c.anchor)}</td><td class="n">${c.ratio ?? "–"}</td></tr>`).join("") +
@@ -460,19 +554,107 @@ function method(){
     <tr><td>Delayed, change year</td><td class="n">${f1(a.delayed_year_shift)}</td><td class="n">${f1(deck.waterfall.delayed_year_shift)}</td></tr><tr><td>Pushed to 2031+</td><td class="n">${f1(a.to_2031)}</td><td class="n">${f1(deck.waterfall.to_2031)}</td></tr>
     <tr class="tot"><td>Total under construction 2026-30</td><td class="n">${f1(a.total)}</td><td class="n">${f1(deck.total)}</td></tr></table>
     <p style="font-size:12px;color:var(--ink-3)">The deck's basis is not stated, and it covers every building Aterio tracks; this registry covers the large public campuses. Compare shares, not levels.</p>
-    <h4 style="margin:10px 0 4px">Files</h4><p style="font-size:12.5px;color:var(--ink-2);margin:0">Registry <code>_wiki/_data/dc_projects/projects.csv</code> (merged from <code>raw/*.csv</code>; schema in <code>SCHEMA.md</code>; hand fixes in <code>overrides.csv</code>) · rules <code>state_rules.json</code> + <code>local_moratoria.json</code> · engine <code>_wiki/_tools/build_dc_delay.py</code> · output <code>model_output.json</code>. ${M.problems.length} schema warnings in <code>validation.txt</code>.</p>`;
+    <h4 style="margin:10px 0 4px">Files</h4><p style="font-size:12.5px;color:var(--ink-2);margin:0">Registry <code>_wiki/_data/dc_projects/projects.csv</code> (merged from <code>raw/*.csv</code>; schema in <code>SCHEMA.md</code>; hand fixes in <code>overrides.csv</code>) · rules <code>state_rules.json</code> + <code>local_moratoria.json</code> · engine <code>_wiki/_tools/build_dc_delay.py</code> · output <code>model_output.json</code> · weekly monitor <code>_wiki/_tools/dc_monitor.py</code> (leads in <code>monitor/runs/&lt;date&gt;/leads.md</code>, config <code>monitor/config.json</code>) · change log <code>history/changelog.jsonl</code>. ${M.problems.length} schema warnings in <code>validation.txt</code>.</p>`;
   $("foot").textContent = `Built ${M.built || ""} by build_dc_delay.py · data: public sources per row · state geometry: us-atlas 3.0.1 (Albers USA).`;
 }
 
-let render = function(){ controls(); kpis(); map(); cards(); top10(); rulesText(); cities(); waterfall(); annual(); table(); checks(); method(); }
+/* ---------------------------------------------------------------- Bernstein tab (broker view) */
+const BD = (M.broker || [])[0];
+const SK = ["active","uc","friendly","mostly_friendly","cautious","restrictive","hostile"];
+const SKL = {active:"Operating",uc:"Under construction",friendly:"Announced · friendly state",mostly_friendly:"Announced · mostly friendly",cautious:"Announced · cautious",restrictive:"Announced · restrictive",hostile:"Announced · hostile"};
+const SKV = {active:"--s-active",uc:"--s-uc",friendly:"--s-fr",mostly_friendly:"--s-mf",cautious:"--s-ca",restrictive:"--s-re",hostile:"--s-ho"};
+const STV = {op:"--s-active",uc:"--s-uc",ann:"--s-ann"}, STL = {op:"Operating",uc:"Under construction",ann:"Announced"};
+const TICK = {"Amazon AWS":"AMZN","Google":"GOOGL","Facebook":"META","Microsoft":"MSFT","Oracle":"ORCL","Digital Realty":"DLR","Equinix":"EQIX","Fermi America":"FRMI","Galaxy":"GLXY","Soluna Holdings":"SLNH","Cipher Mining":"CIFR","Core Scientific":"CORZ","Hut8":"HUT","TeraWulf":"WULF","MARA":"MARA","Riot Platforms":"RIOT","CleanSpark":"CLSK","CoreWeave":"CRWV","Iren Ltd":"IREN","Nebius":"NBIS","Applied Digital":"APLD"};
+let BS = {st:"TX", view:"total"};
+const legend = (keys, lab, vars) => keys.map(k => `<span><i class="sw" style="background:var(${vars[k]})"></i>${esc(lab[k])}</span>`).join("");
+function hbar(parts, tot, max, unit){
+  if (!tot) return "";
+  return `<div class="hb" style="width:${Math.max(0.6, tot / max * 100)}%">` + parts.filter(p => p[1] > 0).map(p =>
+    `<span style="width:${p[1] / tot * 100}%;background:var(${p[2]})" data-t="${esc(p[3])}: <b>${p[1] >= 100 ? Math.round(p[1]).toLocaleString("en-US") : f1(p[1])} ${unit}</b>"></span>`).join("") + `</div>`;
+}
+function bern(){
+  if (!BD) { $("bSrc").textContent = "No broker file under _data/dc_projects/broker/."; return; }
+  const s = BD.source, R = BD.capstone_read || {};
+  $("bSrc").innerHTML = `<b>${esc(s.broker)} · ${esc(s.analysts)} — “${esc(s.title)}”, ${esc(s.date)}</b> (<a href="../../${esc(s.file).replace(/ /g, "%20")}" target="_blank" rel="noopener">report</a>). Data: ${esc(s.data_base)}. Chart values were read from the PDF's vector bars (±~1% of each axis). Bernstein does not state a MW basis (Aterio nameplate). "Credible" is Bernstein's credibility-weighted pipeline. Registry comparisons use our own rows: MW as reported, mixed bases.`;
+  const col = (h, items, cls) => `<div class="panel read-col"><h4>${h}</h4><ul>${(items || []).map(x => `<li><b>${esc(x.t)}</b>${esc(x.d)}</li>`).join("")}</ul></div>`;
+  $("bRead").innerHTML = col("Contradicts our model or other sources", R.contradicts) + col("New to the wiki and the registry", R.new) + col("Consistent", (R.consistent || []).concat((R.caveats || []).map(c => ({t: "Caveat", d: c}))));
+  // national by player
+  $("bNatLead").innerHTML = `GW by company: operating, under construction, and announced capacity split by the stance of the state it sits in (post-election). <b>% at risk</b> = restrictive + hostile share of under-construction + announced GW. Bars are scaled within each group.`;
+  $("bNatLegend").innerHTML = legend(SK, SKL, SKV);
+  $("bNat").innerHTML = BD.national.groups.map(g => {
+    const tot = r => SK.reduce((t, k) => t + (r[k] || 0), 0), max = Math.max(...g.rows.map(tot));
+    return `<div class="panel" style="margin-bottom:10px"><h3 style="margin:0 0 6px;font-size:14px">${esc(g.group)}</h3><table class="btbl"><tr><th>Player</th><th>GW by status</th><th class="n">Total GW</th><th class="n">Under constr.</th><th class="n">% at risk</th></tr>` +
+      g.rows.map(r => { const t = tot(r), ex = (r.uc || 0) + BD.stance_order.reduce((a, k) => a + (r[k] || 0), 0), risk = ex ? ((r.restrictive || 0) + (r.hostile || 0)) / ex : 0;
+        const tk = TICK[r.player];
+        return `<tr><td><b>${esc(r.player)}</b>${tk ? ` <span class="tag">${tk}</span>` : ""}</td><td class="hbc">${hbar(SK.map(k => [k, r[k] || 0, SKV[k], SKL[k]]), t, max, "GW")}</td><td class="n">${f1(t)}</td><td class="n">${f1(r.uc || 0)}</td><td class="n" style="${risk >= 0.5 ? "font-weight:650" : ""}">${Math.round(risk * 100)}%</td></tr>`; }).join("") + `</table></div>`; }).join("");
+  // by region
+  seg($("bSegState"), [["TX","Texas"],["GA","Georgia"],["OH","Ohio"]], BS.st, k => { BS.st = k; bern(); });
+  seg($("bSegView"), [["total","Total pipeline"],["credible","Credible pipeline"]], BS.view, k => { BS.view = k; bern(); });
+  const ch = BD.states[BS.st][BS.view], cmp = (BD.registry_cmp || {})[BS.st] || {}, mx = Math.max(...ch.map(r => r.op + r.uc + r.ann));
+  const sum = k => ch.reduce((t, r) => t + r[k], 0);
+  $("bStLead").innerHTML = `${SN(BS.st)}, ${BS.view} pipeline, MW, the top ${ch.length} players Bernstein charts: operating ${Math.round(sum("op")).toLocaleString("en-US")} · under construction <b>${Math.round(sum("uc")).toLocaleString("en-US")}</b> · announced ${Math.round(sum("ann")).toLocaleString("en-US")}. Right-hand columns: what our registry holds under the same developer name (all dated phases, MW as reported). A blank registry cell means the player has no row with a sourced date.`;
+  $("bStLegend").innerHTML = legend(["op","uc","ann"], STL, STV);
+  $("bState").innerHTML = `<tr><th>Player</th><th>MW by status</th><th class="n">Operating</th><th class="n">Under constr.</th><th class="n">Announced</th><th class="n">Registry: under constr.</th><th class="n">Registry: not started</th><th class="n">Registry: energized '26</th></tr>` +
+    ch.map(r => { const c = cmp[r.player] || {}; const has = c.n > 0; const flag = has ? (r.uc && Math.abs((c.under_construction || 0) - r.uc) / Math.max(r.uc, 1) > 0.5 ? " ⚠" : "") : "";
+      return `<tr><td><b>${esc(r.player)}</b></td><td class="hbc">${hbar([["op", r.op, STV.op, "Operating"], ["uc", r.uc, STV.uc, "Under construction"], ["ann", r.ann, STV.ann, "Announced"]], r.op + r.uc + r.ann, mx, "MW")}</td>` +
+        `<td class="n">${r.op.toLocaleString("en-US")}</td><td class="n">${r.uc.toLocaleString("en-US")}</td><td class="n">${r.ann.toLocaleString("en-US")}</td>` +
+        `<td class="n">${has ? (c.under_construction || 0).toLocaleString("en-US") + flag : ""}</td><td class="n">${has ? (c.not_started || 0).toLocaleString("en-US") : ""}</td><td class="n">${has ? (c.energized || 0).toLocaleString("en-US") : ""}</td></tr>`; }).join("") +
+    `<tr><td colspan="8" style="color:var(--ink-3);font-size:11.5px">⚠ registry under-construction MW differs from Bernstein's by more than 50%. Bases differ: Bernstein/Aterio nameplate vs our MW as reported (IT, facility, grid or generator nameplate per row). Company A/B/D and "Not disclosed" are Bernstein's own anonymisation.</td></tr>`;
+  const note = {TX: () => { const t = BD.texas; return `<h4 style="margin:0 0 4px">Texas</h4><p style="font-size:12.5px;color:var(--ink-2);margin:0">~${t.forward_nameplate_gw} GW forward nameplate, ~${t.likely_built_gw} GW likely built; ${t.uc_grandfathered.total} GW (${t.uc_grandfathered.credible} credible) under construction and grandfathered; Texas held ~${Math.round(t.share_of_us_starts * 100)}% of US construction starts before and after the audit. Since the Aug moratoria: +${BD.moratoria_delta_since_aug.TX.uc} GW under construction, +${BD.moratoria_delta_since_aug.TX.pipeline} GW pipeline, ${BD.moratoria_delta_since_aug.TX.stranded} GW stranded (Exhibit 27).</p>`; },
+    GA: () => { const g = BD.georgia; return `<h4 style="margin:0 0 4px">Georgia</h4><p style="font-size:12.5px;color:var(--ink-2);margin:0">${esc(g.psc)}. The ~${g.certification_gw} GW certification and OpenAI's ${g.openai_contract_gw} GW contract (up to ${g.openai_flex_gw} GW flexible) are done. Exposure sits in a few campuses: ${g.campuses.map(c => esc(c.name) + " " + c.gw + " GW").join(", ")}. ${g.pre_construction_credible_2029_plus_pct}% of pre-construction credible capacity is dated 2029 or later; the equipment sales-tax exemption runs through ${g.sales_tax_exemption_through}.</p>`; },
+    OH: () => { const o = BD.ohio; return `<h4 style="margin:0 0 4px">Ohio</h4><p style="font-size:12.5px;color:var(--ink-2);margin:0 0 4px">Bans look like ~${o.headline_zoned_out_credible_gw} GW of credible capacity zoned out, but bind on ~${o.bans_bind_credible_gw} GW. ${esc(o.leakage)}.</p><ul style="margin:0 0 0 16px;padding:0;font-size:12.5px;color:var(--ink-2)">${o.sites.map(x => `<li><b>${esc(x.name)}</b> (${esc(x.player)}${x.gw ? ", " + x.gw + " GW" : ""}): ${esc(x.status)}</li>`).join("")}</ul>`; }}[BS.st];
+  $("bStateNote").innerHTML = note();
+  const um = cmp._unmatched || [];
+  $("bUnmatched").innerHTML = `<h4 style="margin:0 0 4px">In our registry, not among Bernstein's charted players</h4>` + (um.length ? `<table><tr><th>Developer (registry)</th><th class="n">MW all phases</th><th class="n">Under constr.</th></tr>${um.slice(0, 10).map(u => `<tr><td>${esc(u.dev)}</td><td class="n">${u.mw.toLocaleString("en-US")}</td><td class="n">${u.uc.toLocaleString("en-US")}</td></tr>`).join("")}</table>` : `<p style="font-size:12.5px;color:var(--ink-3)">None.</p>`);
+  // stance regimes
+  const so = BD.stance_order, sv = {friendly:"--s-fr",mostly_friendly:"--s-mf",cautious:"--s-ca",restrictive:"--s-re",hostile:"--s-ho"};
+  const st = BD.stance_totals, h = BD.headline;
+  $("bStanceLead").innerHTML = `GW of pipeline by the stance of its state. At risk (restrictive + hostile): pipeline <b>${h.at_risk_pipeline_gw[0]} → ${h.at_risk_pipeline_gw[1]} GW</b>, credible <b>${h.at_risk_credible_gw[0]} → ${h.at_risk_credible_gw[1]} GW</b>. Of the extra ~${h.incremental_credible_gw} GW credible, ~${h.of_which_uc_grandfathered_gw} GW is under construction and grandfathered, leaving ~${h.potentially_subject_gw} GW exposed: a ${h.downside_shock_pct_credible}% downside shock to the credible pipeline, ${h.realistic_impact_pct[0]}-${h.realistic_impact_pct[1]}% realistically.`;
+  $("bStanceLegend").innerHTML = legend(so, BD.stance_labels, sv);
+  const smax = Math.max(...["pipeline","credible"].flatMap(k => ["pre","post"].map(w => so.reduce((t, x) => t + st[k][w][x], 0))));
+  $("bStance").innerHTML = `<table class="btbl">` + [["pipeline","pre","Pipeline, pre-election"],["pipeline","post","Pipeline, post-election"],["credible","pre","Credible, pre-election"],["credible","post","Credible, post-election"]].map(([k, w, l]) => {
+    const v = st[k][w], tot = so.reduce((t, x) => t + v[x], 0);
+    return `<tr><td style="width:170px">${l}</td><td class="hbc" style="width:auto">${hbar(so.map(x => [x, v[x], sv[x], BD.stance_labels[x]]), tot, smax, "GW")}</td><td class="n">${tot} GW</td><td class="n">at risk ${v.restrictive + v.hostile}</td></tr>`; }).join("") + `</table>`;
+  // Texas by year + starts
+  const tx = BD.texas;
+  $("bTx").innerHTML = `<table><tr><th>Target year (not started)</th><th class="n">Total GW</th><th class="n">Credible GW</th><th>Bernstein's read</th></tr>` +
+    `<tr><td>Under construction (grandfathered)</td><td class="n">${tx.uc_grandfathered.total}</td><td class="n">${tx.uc_grandfathered.credible}</td><td>not reached by the pause</td></tr>` +
+    tx.not_started_by_target_year.map(r => `<tr><td>${r.year}</td><td class="n">${r.total}</td><td class="n">${r.credible}</td><td>${esc(r.note)}</td></tr>`).join("") +
+    `<tr><td colspan="4" style="color:var(--ink-3);font-size:11.5px">${esc(tx._note.split("Internal inconsistency: ")[1] ? "Note: " + tx._note.split("Internal inconsistency: ")[1] : "")}</td></tr></table>`;
+  const ms = Object.keys(tx.starts_2026_gw), vs = ms.map(m => tx.starts_2026_gw[m]);
+  const W = 520, Hh = 210, pl = 34, pb = 24, pt = 10, xs = i => pl + i * (W - pl - 10) / (ms.length - 1), ys = v => pt + (Hh - pt - pb) * (1 - v / 4);
+  const xm = d => pl + (d - 1) * (W - pl - 10) / (ms.length - 1);  // month index from 1
+  $("bTxStarts").innerHTML = `<svg viewBox="0 0 ${W} ${Hh}" role="img" aria-label="Texas data-center construction starts by month, 2026">` +
+    [0, 1, 2, 3, 4].map(v => `<line class="gl" x1="${pl}" x2="${W - 10}" y1="${ys(v)}" y2="${ys(v)}"/><text class="ax" x="${pl - 6}" y="${ys(v) + 4}" text-anchor="end">${v}</text>`).join("") +
+    ms.map((m, i) => `<text class="ax" x="${xs(i)}" y="${Hh - 6}" text-anchor="middle">${m}</text>`).join("") +
+    [[7 + 2 / 31, "Aug 3"], [8 + 20 / 30, "Sep 21"]].map(([d, l]) => `<line x1="${xm(d)}" x2="${xm(d)}" y1="${pt}" y2="${Hh - pb}" stroke="var(--c-delayed)" stroke-dasharray="4 3"/><text class="ax" x="${xm(d) - 4}" y="${pt + 10}" text-anchor="end">${l}</text>`).join("") +
+    `<polyline fill="none" stroke="var(--s-uc)" stroke-width="2" points="${vs.map((v, i) => xs(i) + "," + ys(v)).join(" ")}"/>` +
+    vs.map((v, i) => `<circle cx="${xs(i)}" cy="${ys(v)}" r="4" fill="var(--s-uc)" stroke="var(--surface)" stroke-width="2" data-t="${ms[i]} 2026: <b>${v.toFixed(2)} GW</b> started"/>`).join("") +
+    `<text class="val" x="${xs(8) - 6}" y="${ys(vs[8]) - 8}" text-anchor="end">${vs[8].toFixed(1)} GW</text></svg>`;
+  // catalysts
+  $("bCat").innerHTML = `<tr><th>Date</th><th>Event (Bernstein)</th><th>In our model</th></tr>` + BD.catalysts.map(c => `<tr><td class="n" style="text-align:left">${esc(c.date)}</td><td>${esc(c.what)}</td><td style="color:var(--ink-2)">${esc(c.model || "–")}</td></tr>`).join("");
+}
+document.addEventListener("mousemove", e => { const t = e.target.closest && e.target.closest("[data-t]"); if (t) showTip(e, t.dataset.t); else if (tip.style.display === "block" && !e.target.closest("svg")) hideTip(); });
+function tabs(){
+  seg($("segTab"), [["model","Delay model"],["bern", BD ? `Bernstein ${BD.source.date.slice(5)} · pipeline by player & region` : "Broker view"]], S.tab, k => { S.tab = k; show(); });
+}
+function show(){
+  $("tabModel").hidden = S.tab !== "model"; $("tabBern").hidden = S.tab !== "bern"; tabs();
+  if (S.tab === "bern") bern();
+  try { history.replaceState(null, "", "#" + (S.tab === "bern" ? "bernstein" : S.scen + "/" + S.uni)); } catch(e) {}
+}
+
+let render = function(){ controls(); kpis(); map(); cards(); top10(); rulesText(); cities(); waterfall(); annual(); table(); moved(); checks(); method(); }
 $("fState").onchange = e => { S.st = e.target.value; cards(); table(); };
 $("fBucket").onchange = e => { S.bk = e.target.value; table(); };
 $("fText").oninput = e => { S.q = e.target.value; table(); };
 $("themeBtn").onclick = () => { const r = document.documentElement; const dark = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; r.dataset.theme = dark ? "light" : "dark"; try { localStorage.setItem("dcdr-theme", r.dataset.theme); } catch(e) {} };
 try { const t = localStorage.getItem("dcdr-theme"); if (t) document.documentElement.dataset.theme = t; } catch(e) {}
-(() => { const h = decodeURIComponent(location.hash.slice(1)).split("/"); if (M.scenarios[h[0]]) S.scen = h[0]; if (["construction","pipeline","scaled"].includes(h[1])) S.uni = h[1]; })();
-const _render = render; render = function(){ _render(); try { history.replaceState(null, "", "#" + S.scen + "/" + S.uni); } catch(e) {} };
-header(); render();
+S.tab = "model";
+(() => { const h = decodeURIComponent(location.hash.slice(1)).split("/"); if (h[0] === "bernstein") S.tab = "bern"; if (M.scenarios[h[0]]) S.scen = h[0]; if (["construction","pipeline","scaled"].includes(h[1])) S.uni = h[1]; })();
+const _render = render; render = function(){ _render(); if (S.tab === "model") { try { history.replaceState(null, "", "#" + S.scen + "/" + S.uni); } catch(e) {} } };
+header(); render(); show();
+addEventListener("hashchange", () => { const h = decodeURIComponent(location.hash.slice(1)).split("/"); const t = h[0] === "bernstein" ? "bern" : "model"; if (t !== S.tab) { S.tab = t; show(); } });
 </script>
 </body>
 </html>

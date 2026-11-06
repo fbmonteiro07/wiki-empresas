@@ -11,7 +11,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\VST` (filings + transc
 | Gross profit | $11.8bn | — |
 | Gross margin | 53.9% | — |
 | EBITDA | $7.1bn | $8.1bn |
-| EPS | $8.32 | $10.46 |
+| EPS | $8.36 | $10.46 |
 | Capex | $2.4bn | $2.6bn |
 | OCF (≈EBITDA) | $7.1bn | $8.1bn |
 

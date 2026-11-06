@@ -201,11 +201,13 @@ The long-dated converts trade at 41–52, effectively as distressed straight deb
 - **Execution:** the $4bn ARR date has already moved once, from 2026-12-31 to Jan–Mar 2027. The causes were a customer design change, supplier timing and third-party delays (release, call, 10-Q). Mackenzie and Sweetwater construction run in parallel.
 - **GPU residual value and re-pricing (Capstone view, not management's):** pricing is strong today ($22–40m/MW). The bear case is that rental rates reset if power stops being the binding constraint in 2027–28. Roberts' own scenario is the reverse: weak markets plus scarce power push GPU *purchase* prices down, which he calls "right-way risk" for IREN as a buyer (call 1:01).
 - **Stock comp:** $106m in Q1 FY27, 46% of revenue.
+- 🆕 **2026-11-06 — Texas is the political exposure (Bernstein · Rezaei et al., "US Data Centers: Unpacking the midterm results…", 2026-11-06, Aterio base; chart values read from the PDF vector bars, ±~1% of axis).** Exhibit 17: 0.15 GW active, 1.4 GW under construction, 1.6 GW announced in friendly states and 1.4 GW announced in hostile states (~4.5 GW); 32% of under-construction + announced capacity sits in restrictive/hostile states (Exhibit 20). Texas, Exhibit 9: 83 MW operating / 1,293 under construction / 1,382 announced, which ties in total to the ~2.75 GW of Texas planned gross MW in the site table (Capstone arithmetic). Governor-elect Hinojosa has promised an approvals moratorium until new protections pass; capacity already under construction is grandfathered.
 - **Community and permitting:** Texas, Australia and Spain. Management frames opposition as "entirely sensible" and leans on its rural siting.
 
 <!-- Consensus estimates (BBG) block auto-injected here by the HTML builder -->
 
 ## Sources
+- 🆕 **2026-11-06 (/run-inbox):** [Bernstein · Madison Rezaei / Chad Dillard / Sunaina Ocalan / Varun Govindaraj / Daniel Zhu / Gautam Chhugani / Mark L. Moerdler / Mark Shmulik / Nancy Wu / Alexander Feitler — "US Data Centers: Unpacking the midterm results - a new balance of power, the same power imbalance?" (2026-11-06, 35pp)](../relat%C3%B3rios%20bons/BERN_262934_1.html) — thematic, Aterio base. GW content only. Exhibits 9/17/20 (IREN pipeline by state stance; Texas MW).
 - **Filings:** [10-Q Sep-26](../IREN/IREN_10-Q_2026-11-05_0001878848-26-000066.html) · [10-K FY26](../IREN/IREN_10-K_2026-08-27_0001878848-26-000052.html) · [10-K FY25](../IREN/IREN_10-K_2025-08-28_0001878848-25-000063.html) · 10-Qs [Nov-25](../IREN/IREN_10-Q_2025-11-06_0001878848-25-000081.html), [Feb-26](../IREN/IREN_10-Q_2026-02-05_0001878848-26-000015.html), [May-26](../IREN/IREN_10-Q_2026-05-08_0001878848-26-000026.html) · [Q1 FY27 release (8-K EX-99.1)](../IREN/IREN_8-K_ex991_pressrelease_2026-11-05_0001878848-26-000065.html) · [Q4 FY26 release](../IREN/IREN_8-K_ex991_pressrelease_2026-08-27_0001878848-26-000051.html).
 - **Transcripts:** [Q1 FY27 call, 2026-11-05](../IREN/transcripts/IREN_Q1-FY27-earnings_2026-11-05.md): Quartr via Yahoo, 102 turns. Prior calls are paywalled on Yahoo and not archived.
 - **BBG:** `IREN US Equity` consensus and price, pulled 2026-11-06 (estimates.json). The Q1 FY27 consensus uses an absolute-quarter override (`2027Q1`).
@@ -222,6 +224,7 @@ The long-dated converts trade at 41–52, effectively as distressed straight deb
 - **Deals:** stable IDs IREN-MSFT-202511, IREN-NVDA-2026 and IREN-MACKENZIE-FIN-20260828 in [ai-compute-deals](themes/ai-compute-deals.md).
 
 ## Changelog
+- 2026-11-06 — ingest (/run-inbox, Bernstein 11-06 post-midterm DC note), **GW content only** (Felipe, 2026-11-06): 1 Risks bullet and 1 Sources line, covering IREN's pipeline by state stance (Exhibits 17/20) and Texas MW (Exhibit 9). Exhibit 9/17 values are chart-read from the PDF vector bars (±~1% of axis). The desk-email PT history was not ingested either. The note's ticker-table rating, PT and EPS and the post-election stock move were deliberately not ingested; nothing superseded.
 - 2026-11-06 — sell-side, debate, peers, credit and stock sections added from the corpus sweep.
   - Ratings and PTs checked against the broker emails: GS $39/$50, Bernstein $100, Jefferies $79, JPM UW→OW.
   - Arete's $131 is a **Jun-'27E** PT (p.5). The sweep had said Jun-28; corrected.

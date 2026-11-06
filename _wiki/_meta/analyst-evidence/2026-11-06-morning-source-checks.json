@@ -1,0 +1,646 @@
+{
+  "date": "2026-11-06",
+  "cutoff": "2026-11-06T10:25:47.244Z",
+  "coverage": {
+    "mail_window_start": "2026-11-05T10:26:48Z",
+    "mail_window_end": "2026-11-06T10:25:47Z",
+    "inventoried": 905,
+    "pagination_complete": true,
+    "scope": "All fixed-window subjects inventoried; selected message excerpts reviewed. Not an exhaustive report or filings audit. Own automation messages not independent evidence."
+  },
+  "amzn": {
+    "signal_id": "supp-20261106-amzn",
+    "source": "Capstone internal AWS cash-cost study, 2026-10-30, ingested November 5",
+    "evidence_paths": [
+      "_wiki/AMZN.md",
+      "_wiki/_meta/reconciliation-2026-11-05-inbox.md",
+      "relatórios bons/AWS_Cash_Costs_Estudo_2026-10-30.html"
+    ],
+    "review": "All four archived page images visually inspected; underlying expert transcripts and original XLSX not re-audited this morning.",
+    "facts": {
+      "model_margin_cy27": 46.2,
+      "study_margin_cy27": [
+        41.4,
+        43.5
+      ],
+      "model_cash_cost_pct": 30,
+      "study_cash_cost_pct": [
+        32.7,
+        34.8
+      ],
+      "study_reported_ebit_gap_bn": [
+        7,
+        13
+      ],
+      "study_assumed_aws_growth_cy27_pct": 48
+    },
+    "status": "These are the existing study's derived scenarios, not new assistant estimates or company guidance. Model L202 hard-code vs elasticity, D&A/lease basis and Bedrock gross/net need adjudication."
+  },
+  "iren": {
+    "signal_id": "supp-20261106-iren",
+    "primary": {
+      "source": "IREN / Daniel Roberts, Q1 FY27 release, 2026-11-05",
+      "url": "https://iren.gcs-web.com/news-releases/news-release-details/iren-reports-q1-fy27-results",
+      "review": "HTML operating summary, funding and all relevant notes 1-12 reviewed.",
+      "facts": [
+        "Total AI Cloud revenue $200m comprises services $135m plus leases $65m; GS headline labels $200m services, creating comparison-basis risk.",
+        "Adjusted EBITDA $66m; GS November 6 quotes Visible Alpha consensus $64m.",
+        "Fully funded refers to 0.3GW IT program for >$4bn operational ARR; conditions apply, including escrow release/availability; sources include restricted cash, undrawn committed financing and customer prepayments not yet received.",
+        "Operational ARR target moved from year-end 2026 to January 2027, may extend end-February, after customer-requested change and supplier timing. No customer attribution for this aggregate delay.",
+        "Remaining planned FY27 capex $15bn from September 30: $9bn cash/committed sources and $6bn target financing/prepayments/corporate sources subject to market conditions.",
+        "Horizon 1 delivered to Microsoft; Horizon 2-4 late-stage construction.",
+        "90% associated GPU capex prepayment on one five-year contract is not a fleet-wide condition or confirmation of received cash; customer identity and overlap with unnamed lab extension not resolved.",
+        "Company per-MW revenue measures are annual and IT-load, not TCV; pipeline gross power speculative, not IT load."
+      ]
+    },
+    "broker_sources": [
+      {
+        "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWoSs6sAAA=",
+        "subject": "IREN Ltd. (IREN): F1Q27 Review: EBITDA beat, favorable pricing trends, and capex flexibility",
+        "sender": {
+          "emailAddress": {
+            "address": "michael.ng@alerts.publishing.gs.com",
+            "name": "Michael Ng, CFA"
+          }
+        },
+        "received_at": "2026-11-06T08:07:35Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWoSs6sAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+        "reviewed_excerpt": "| |    \n---  \n  \n|   \n---  \n|  | Print PDF |  | | |  | Read  \n---|---|---|---|---|---  \n  \n|  \n---  \n|  \n---  \nIREN Ltd. (IREN): F1Q27 Review: EBITDA beat, favorable pricing trends, and\ncapex flexibility  \n---  \n6 November 2026 | 3:04AM EST | Research | Equity   \n---  \n| | | | | **IREN F1Q27 EBITDA of****$66 mn beat GS/consensus (Visible Alpha) of $28/$64 mn with AI Cloud Services revenue of $200 mn beating GS of $167 mn and consensus of $185 mn.** The company announced positive pricing developments with a contract extension, stronger pricing for shorter and longer term contracts, and contracted 4 year old H100 GPUs at double previous pricing. IREN also demonstrated capital investment flexibility by lowering its overall F2027E capex to ~$20 bn from $25-30 bn with its prior $12-15 bn expected funding gap reduced to ~$6 bn. That said, we expect heightened industry execution risk and financing concerns to remain an overhang, particularly after IREN delayed its $4 bn + C2026 ARR target to January-February 2027 on customer-requested design change and supplier timing.   \n---  \n| | | Read Full Report   \n---  \n  \n\n  \n---  \n  \n---  \n| | | | \n\n### Michael Ng, CFA\n\n+1 212 902-8618 | michael.ng@gs.com | Goldman Sachs & Co. LLC | \n\n### Lindsey Shema\n\n+1 212 902-6506 | lindsey.shema@gs.com | Goldman Sachs & Co. LLC   \n---|---  \n  \n### Yash Goenka, CFA\n\n+1 212 934-6312 | yash.goenka@gs.com | Goldman Sachs India SPL | \n\n### Lizzy Xie\n\n+1 212 357-3206 | lizzy.xie@gs.com | Goldman Sachs & Co. LLC   \n| |   \n---  \n| | You have received this email because you are subscribed to following alerts/tags:  \n  \nMichael Ng, CFA  \n  \nIf you no longer wish to receive this email, click here to\nunsubscribe,\nor manage all of your subscriptions in your Goldman Sachs Research\naccount.  \n---  \n| | For Reg AC certification and other important disclosures, see the Disclosure Appendix, or go to publishing.gs.com/disclosures/hedge.html.   \n---  \n| | Legal Disclaimers & Disclosures   \n---  \n\n\n",
+        "excerpt_limit": 5000,
+        "full_attachment_reviewed": false
+      },
+      {
+        "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWoSs6-AAA=",
+        "subject": "BERNSTEIN * IREN Q1FY27: Built on power and not just GPUs: Why the IREN model wins in a tight compute market",
+        "sender": {
+          "emailAddress": {
+            "address": "gautam.chhugani@bernsteinsg.com",
+            "name": "gautam.chhugani@bernsteinsg.com"
+          }
+        },
+        "received_at": "2026-11-06T09:11:13Z",
+        "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWoSs6%2FAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+        "reviewed_excerpt": "  \n  \n---  \n| | RESEARCH NOTE * FRI 06 NOV 2026  \nGautam Chhugani  +91 226 842\n1416Mahika Sapra  +91 226 842\n1408Sanskar Chindalia  +91 226 842\n1445  \n  \n---  \nIREN Q1FY27: Built on power and not just GPUs: Why the IREN model wins in a\ntight compute\nmarket  \n  \nIREN Rating: Outperform  Target Price: 55.00 USDIREN remains misunderstood and\nthe victim of the recent ‘offensive’ Neocloud label. There maybe over 200+\nneoclouds who sell compute collateralising GPUs as their sole physical asset.\nNeoclouds as defined today face long term lease commitments (10-15 years) and\ndebt repayments, while selling compute over shorter horizons (short term spot\ncontracts to multi-year term contracts). This mismatch creates financial\nuncertainty and potential liquidity challenges, when you combine debt funded\ncapex & leases should the GPU compute prices suffer. IREN’s business model is\nbased on self-owned unencumbered physical power assets with the flexibility to\ndecide the pace of development, leverage profile and optimise compute pricing\nto benefit from movements in spot pricing. IREN is not sold out for the next 2\nyears at suboptimal historical pricing - IREN has over ~1.4GW of approved\ncapacity to sell (over 5GW grid connected sites), while the compute markets\nremain tight with political headwinds and the option to pace capex, should the\nfinancing markets remain challenging. And the skeptics are missing a big part\nof the financing equation - prepayments. On a recent contract, IREN reported\n90% prepayments with 45-50% prepayments being the norm for any new compute\ncontract.Click on the title for the full report and important disclosures.  \n|\n|\nGautam ChhuganiSenior AnalystGlobal\nDigital AssetsView analyst page and full bio\n  \n---|---  \nYOU MAY ALSO LIKE\nFEATURED\nCONTENT Blackbook: US Long View: 2026\nEditionBlackbook:\nDigital Assets: The Rising Titans of the Blockchain\nEraGlobal\nDigital Assets marketing deck - Crypto to\nComputeInitiation\nDeck - WULF and\nCIFR  \nMOST\nREAD 21 SEP 2026: A primer on equity tokenization: Innovation exemption,\noperating models, industry landscape and potential\nwinners22\nSEP 2026: A Primer on prediction markets: Sportsbook or exchange? A new\nfinancial markets primitive with a $10Tn\nTAM04\nNOV 2026: Emerging AI Infra: Texas turns blue...not the end but DC power\npipelines at risk & approved MWs more\nvaluable  \nEXPLORE\nGlobal Digital\nAssetsBernstein\nEvents   \n  \n  \n  \nPlease email support@bernsteinsg.com for\nassistance. The comments herein are part of a larger body of investment\nanalysis. For Bernstein research reports, which contain an analysis of\nsecurities that may be used to support investment decisions, please see our\nwebsite BernsteinResearch.com. For\nimportant disclosures please see Legal and Regulatory\nDisclosures.  \n  \n\n",
+        "excerpt_limit": 4000,
+        "full_attachment_reviewed": false
+      }
+    ],
+    "no_company_page": true,
+    "theme_id": "IREN-MSFT-202511",
+    "unmapped_contracts": "Kept as watch entries, no additive MW/TCV pending scope/identity reconciliation."
+  },
+  "travel": {
+    "signal_id": "supp-20261106-travel",
+    "primary": {
+      "source": "Airbnb newsroom, November 5, 2026",
+      "url": "https://news.airbnb.com/airbnb-q3-2026-financial-results",
+      "facts": [
+        "Revenue $4.9bn +19%; nights and seats +16%; every region double-digit nights growth."
+      ]
+    },
+    "broker": {
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWoSs62AAA=",
+      "subject": "JPM ANMUTH - Airbnb: Growth Mode and Share Gains",
+      "sender": {
+        "emailAddress": {
+          "address": "douglas.anmuth@jpmresearchmail.com",
+          "name": "Doug Anmuth"
+        }
+      },
+      "received_at": "2026-11-06T08:46:39Z",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWoSs62AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "reviewed_excerpt": "| |  | North America Equity Research  \n---|---  \n  \n# Airbnb\n\n## Growth Mode and Share Gains\n\n  \n---  \n  \nBy Doug Anmuth\nAC,\nDae K Lee,\nCFA,\nMargaret\nHoffman\n\nClick here for the full document and\ndisclaimers\n\n| Neutral  \n---  \nABNB, ABNB US  \nPrice (05 Nov 26):$170.13  \n**▲** Price Target (Dec-27):$202.00  \nPrior (Dec-27):$170.00  \n  \nABNB shares traded up +11% post-close w/strong execution driving upside to 3Q\nresults & the full year outlook. ABNB delivered its fastest revenue growth in\nover 3 years, w/acceleration across the business including both core &\nexpansion markets. Every region delivered DD% nights growth in 3Q & North\nAmerica grew at the fastest pace in four years. While underlying global travel\ndemand remains healthy, ABNB’s execution across product & growth\ninitiatives—spurred by AI—have been key to driving strong performance. After\nyears of work rebuilding the tech stack, redesigning the app, & improving the\ncore experience, AI is enabling ABNB to build, test, & iterate on products at\nan accelerated pace. Notably, Reserve Now, Pay Later drove a 3%pt lift to 3Q\nnights growth & is supporting lead time expansion & higher priced bookings.\nABNB now expects mid-teens% GBV growth & high-teens% revenue growth for the\nfull year, & Adj. EBITDA margin of 36%. Looking ahead, ABNB is focused on\nexecuting on a robust product roadmap in 2027 to continue its momentum. In\n1H27, ABNB plans to begin rolling out its own specialized AI agent, which mgmt\nbelieves will be superior to general agents for complex tasks like travel. The\nagent will leverage ABNB’s 20 years of data & expertise, build custom\ngenerative UIs, & integrate with external MCPs. We remain encouraged by ABNB’s\nstrong execution & compounding AI-driven product innovation, & our Nights,\nGBV, revenue, & Adj. EBITDA come up 2-3% in 2026E & 0-3% in 2027E. Our\nDecember 2027 PT of $202 based on ~16x our ’28E FCF, and we remain Neutral-\nrated while looking for a better entry point and durability of execution.\n\n  * Strong Execution Drives Upside to 3Q Results & Outlook. ABNB’s 3Q N&S booked (+16% Y/Y to 155M), GBV (+21% Y/Y to $27.7B), revenue (+19% Y/Y to $4.9B), & Adj. EBITDA ($2.5B, 52% margin) were all ahead of expectations. Every region delivered DD% nights growth, with acceleration across nearly all expansion markets, as well as all five core markets. In addition to healthy underlying travel demand, N&S benefited from continued product momentum including Reserve Now, Pay Later, which contributed a 3%pt lift to 3Q N&S. The 4Q revenue guide of $3.22B-$3.28B (+16%-18%, or +14%-16% FXN) implys high teens revenue growth for the full year (vs. prior mid-teens%+), reflecting continued execution & resilient travel demand, though ABNB is closely monitoring ongoing developments in EMEA. On profits, ABNB raised the full-year Adj. EBITDA margin guide to 36% (vs. prior 35.5%) driven by ongoing cost discipline & AI-driven efficiencies, but still expects Y/Y margin compression in 4Q due to the timing of marketing spend. Looking ahead, mgmt is focused on continuing to execute across a robust product roadmap to drive continued durable growth & believes the company has demonstrated the ability to reinvest upside to support continued momentum. \n  * AI Innovation Continues. ABNB continues to leverage AI to accelerate the pace of innovation & in 3Q shipped 50+ products and features, ~70% more than a year ago. Additionally, ABNB’s AI assistant is now available in 50+ languages & drove customer support cost down -17% Y/Y in 3Q, with ~40% of all customer support issues solved without a human agent (up from ~33% in 2Q). Importantly, ABNB is building its own specialized agent & expects to begin rolling the product out in 1H27. Mgmt believes that specialized agents will be superior to general agents in handling complex tasks like travel planning & booking, w/ABNB maintaining three distinct advantages: 1) Deep understanding of both sides of its marketplace, w/20 years of experience supporting how people search, book, & host; 2) ABNB’s role in the reservation extends beyond just the booking, & includes payments, customer support, etc; & 3) ABNB is building a custom designed, AI-native interface specifically for travel that will draw on hundreds of travel specific components incl maps, photos, itineraries, etc. to match customers with what they are looking for.\n  * Other Notable Points. 1)First-time booker growth accelerated to +13% Y/Y, with Gen Z growing the fastest & acceleration in many of ABNB’s largest markets; 2) ABNB repurchased ~$700M shares in 3Q & announced a new authorization to repurchase an additional $12B on top of the remaining $2.7B from the existing authorization; 3) By region, North America grew LDD%, EMEA grew mid-teens%, & LATAM/APAC both grew over 20%, an acceleration across all four regions relative to 2Q; 4) Nights booked on the app increased +29% & accounted for 66% of total nights booked (vs. 62% in 3Q25); 5) While Hotels remain a SD% of total nights booked, it is growing faster than the core business & mgmt believes it can generate multiple billions of dollars from hotels in the coming years without needing significant market share; 6) 3Q take rate was down slightly Y/Y driven by the expansion of Reserve Now, Pay Later, partially offset by travel insurance & the single service fee, which ABNB expects to support a modest increase in take rate over time. \n\n\n\nClick here for the full document and\ndisclaimers  \n  \n---  \n  \nInternet - Large Cap / Mid & Small Cap\n\nDoug Anmuth\nAC\n\n(1-212) 622-6571\n\ndouglas.anmuth@jpmorgan.com\n\nJ.P. Morgan Securities LLC\n\n  \n\nDae K Lee,\nCFA\n\n(1-415) 315-8500\n\ndae.k.lee@jpmorgan.com\n\nJ.P. Morgan Securities LLC\n\n  \n\nMargaret\nHoffman\n\n(1-212) 622-1710\n\nmargaret.hoffman@jpmchase.com\n\nJ.P. Morgan Securities LLC\n\n  \n  \n  \n---  \n  \nVisit **_J.P. Morgan\nMarkets_**\nfor more market-leading research and financial solutions across the full trade\nand investment lifecycle.\n\nGo to **_My\nResearch_**\nwhere the award-winning J.P. Morgan research that you receive in your inbox is\nintelligently structured into your personalized view.\n\n_You received this e-mail because the content matches one of your saved\npreferences.  \nYou can modify your preferences or subscription\n**_here_**._\n\nIf you no longer wish to receive these e-mails then click here to\nunsubscribe|\n**www.jpmorganmarkets.com**  \n---|---  \n  \nHistory of Investment Recommendations:  \n​A history of J.P. Morgan investment recommendations disseminated during the\npr",
+      "excerpt_limit": 6500,
+      "full_attachment_reviewed": false
+    },
+    "local_baseline": "_wiki/BKNG.md current state and Changelog 2026-11-05, with November 3 company guidance and November 5 Airbnb letter read-through",
+    "facts": [
+      "JPM / Doug Anmuth, Dae K Lee, Margaret Hoffman November 6 relays RNPL 3pp contribution, Q4 revenue guide $3.22-3.28bn.",
+      "JPM raises PT170 to202, remains Neutral.",
+      "BKNG Q4 room nights +1-3%, company November3. Airbnb includes seats and different geographic/lead-time exposures, so no pure share calculation."
+    ]
+  },
+  "net": {
+    "signal_id": "supp-20261106-net",
+    "primary": {
+      "source": "Cloudflare Q3 release, November 5, 2026",
+      "url": "https://www.cloudflare.com/press/press-releases/2026/cloudflare-announces-third-quarter-2026-financial-results/",
+      "facts": [
+        "Q3 revenue $782.5m +39%; Q4 guide $845-846m.",
+        "Non-GAAP GM72.4%, operating margin17.5%; FCF margin10% vs13% a year ago.",
+        "FY26 exact revenue guide $2.963-2.964bn; do not confuse rounded JPM $3bn with exact annualized/run-rate or FY guidance."
+      ]
+    },
+    "jpm": {
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWoSs6YAAA=",
+      "subject": "JPM | Software | NET: F3Q26 Review: Acceleration in Growth and Stellar Customer Momentum KPIs Increase Visibility into Higher Structural Growth; Reiterate OW",
+      "sender": {
+        "emailAddress": {
+          "address": "samik.x.chatterjee@jpmresearchmail.com",
+          "name": "Samik Chatterjee, CFA"
+        }
+      },
+      "received_at": "2026-11-06T06:54:32Z",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWoSs6YAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "reviewed_excerpt": "| |  | North America Equity Research  \n---|---  \n  \n# Cloudflare\n\n## F3Q26 Review: Acceleration in Growth and Stellar Customer Momentum KPIs\nIncrease Visibility into Higher Structural Growth; Reiterate OW\n\n  \n---  \n  \nBy Samik Chatterjee, CFA\nAC,\nJaiden R\nPatel,\nMashu\nNishi\n\nClick here for the full document and\ndisclaimers\n\n| Overweight  \n---  \nNET, NET US  \nPrice (05 Nov 26):$244.51  \n**▲** Price Target (Dec-27):$375.00  \nPrior (Dec-27):$350.00  \n  \nCloudflare delivered another quarter, bearing proof to the thesis that the\nstructural growth rate for the company is higher with AI driving demand for\nproducts across Acts I -III, even as the company already booked initial\nrevenues for Act IV, which the company expects will ramp over time to exceed\nthe magnitude of revenue from the other Acts. The quarter marked a double-\ndigit sequential revenue growth of 12% from F2Q, ahead of the typical\nsequential growth rates in the range of 4%-10% over the last couple of years,\nand also supported a much stronger revenue beat in the quarter compared to the\ntypical magnitude. While momentum was strong across the portfolio, the primary\ndriver of the stronger-than-typical beat and strong growth metrics was\nvariable revenue led by consumption, which is now tracking closer to mid-teens\nof revenue. NRR accelerated to 122%, showcasing increasing momentum with\nexisting customers, as well as the sequential addition of 158K customers,\ntracking at almost 2x the pace of new customer adds in F2Q. The wins announced\nby Cloudflare highlighted the increasing momentum of attach of Zero Trust\nsecurity as well as attach of Workers, evidencing the flywheel of growth from\na stack running across Acts I-III. In relation to Act IV, the company outlined\ninitial revenues being recorded from the cooperation with OpenAI to optimize\nweb crawling, providing visibility into the returns from the product to\ncustomers, even as the company continues to make progress towards material\nmonetization of microtransactions in relation to the interaction between\ncontent providers and agents. The acceleration in the momentum increases our\nconfidence in the TAM expansion as well as the higher share of wins relative\nto competition across products, supporting our outlook for robust and\naccelerating growth in the out-years and expectations of stronger earnings and\nfree cash flow growth helped by leverage on the robust revenue growth. The\nacceleration is putting the company in a position to achieve GAAP income\nprofitability in 4Q FY26, well ahead of its initial target for FY28, and in a\nposition for significant positive revisions to its long-term targets. We are\nraising our revenue and profit forecasts, as well as our Dec-27 price target\nto $375 (from $350 prior).\n\n  * F3Q26 (Sep-end) Results: Broad-based variable consumption demand and operating leverage drove a record quarter, with accelerating Workers and agentic workloads, large-customer expansion, and strong GTM execution. Revenue tracked to $783M or +39% y/y, ahead of JPMe at $747M and consensus of $742M and the guidance range of $736M-$737M.  The revenue outperformance was driven by rapid expansion in variable consumption workloads, continued momentum among large customers, and broad-based go-to-market execution. Cloudflare added more than 158K paying customers during the quarter, nearly double the previous record of more than 80K in F2Q and saw record y/y net additions across all large customer annualized revenue cohorts.  While RPO growth of +34% y/y decelerated in F3Q from +38% y/y last quarter, cRPO accelerated to +37% y/y compared to 34% y/y last quarter. For a second consecutive quarter, NRR increased by 2 points sequentially to now 122%, reaching a four-year record. While gross margin of 72% came in slightly below JPMe and consensus at 73%, PF operating profit came in ahead at $137M relative to the guidance mid-point as well as JPMe and consensus at ~$130M, with PF operating margin landing in-line with the guide. Workers’ growth is supporting operating margin expansion, with lower cost to book. PF EPS of $0.38 was ahead of the $0.34 guide for F3Q and JPMe/consensus of $0.34/$0.35.\n  * F4Q26 (Dec-end) Guidance: Revenue outlook is well ahead of expectations, sustaining high-30s growth as strong demand and improving execution support earlier GAAP profitability. Cloudflare provided F4Q revenue guidance of $845M-$846M, with the midpoint ahead of JPMe and consensus of $805M and $799M, respectively. The guidance implies revenue growth of +38% y/y vs. JPMe/consensus at +33%/+32%. Management notes that the F4Q guidance framework is supported by a long tail of customers, rather than being concentrated among a few. Cloudflare guided PF operating income of $156M-$157M, representing a PF operating margin of 19%, which is in-line with JPMe and ahead of consensus at 18%. Workers’ growth and improving compute efficiency are supporting operating leverage and the expectation of GAAP profitability in F4Q, well ahead of the company’s prior target by FY28. PF EPS guidance of $0.43 is also ahead of JPMe of $0.39 and consensus of $0.38.\n  * FY26 (Dec-end) Guidance: Outlook edges higher more than the F3Q revenue beat, reiterates network CapEx target. Revenue increased by $97M at the midpoint (relative to the $46M 3Q beat) to $3B vs. JPMe and consensus of $2.9B. The guidance now implies revenue growth of 37% compared to JPMe of 33%, consensus of 32%, and the prior outlook of 32%.  PF operating income was revised to $462M-$463M vs. $443M-$444M prior, ahead of JPMe and consensus at $451M and $446M, respectively. Cloudflare raised the PF EPS target to $1.35 relative, an increase of nearly $0.10 and higher than JPMe/consensus of $1.27. The company reiterated its full-year network CapEx of 14-15% of revenue. \n  * Key notes from the call back (please reach out for more detailed notes). Variable consumption was mid-teens of revenue pool-of-funds was low-double-digit. Cloudflare reiterated its historical guidance philosophy heading into next year, as well as a likely need to take a holistic view to updating guidance on the next print on account of meeting most targets well ahead of earlier plans. \n\n\n\nClick here for the full document and\ndisclaimers  \n  \n---  \n  \nSoftware - Large Cap / Mid & Small Cap\n\nSamik Chatterjee, CFA\nAC\n\n(1-212) 622-0798\n\nsamik.x.chatterjee@jpmorgan.com\n\nJ.P. Morgan Securities LLC\n\n  \n\nJaiden R\nPatel\n\n(1-212) 270-6953\n\njaiden.patel@jpmchase.com\n\nJ.P. Morgan Securities LLC\n\n  \n\nMashu\nNishi\n\n(1-212) 622-0078\n\nmashu.nishi@jpmorgan.com\n\nJ.P. Morgan Securities LLC\n\n  \n  \n  \n---  \n  \nVisit **_J.P. Morgan\nMarkets_**\nfor more market-leading research and financial solutions across the full trade\nand investment lifecycle.\n\nGo to **_My\nResearch_**\nwhere the award-winning J.P. Morgan research that you receive in your inbox is\nintelligently structured into your personalized view.\n\n_You received this e-mail because the content matches one of your saved\npreferences.  \nYou can modify your preferences or subscription\n**_here_**._\n\nIf you no longer wish to receive these e-mails then click here to\nunsubscribe| **www.jpmorganmarkets.com**  \n---|---  \n  \nHistory of Investment Recommendations:  \n​A history of J.P. Morgan investment recommendations disseminated during the\npreceding 12 months can be accessed on the Research & Commentary page of\nhttp://www.jpmorganmarkets.com\nwhere you can also",
+      "excerpt_limit": 7400,
+      "full_attachment_reviewed": false
+    },
+    "barclays": {
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWoSs5cAAA=",
+      "subject": "Cloudflare, Inc.: More PoF at Higher NRR; Act 4 Has Right to Win; Thoughts on DC Supply; At BarCap Tech Conf 12/9",
+      "sender": {
+        "emailAddress": {
+          "address": "saket.kalia@barclays.com",
+          "name": "Saket Kalia, CFA"
+        }
+      },
+      "received_at": "2026-11-06T04:45:36Z",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWoSs5cAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "reviewed_excerpt": "| | | |   \n---  \n| | | Hello, Felipe  \n---  \n| | | |   \n---  \n| Equity Research  |  U.S. Software  \n---  \n| | | |   \n---|---|---  \n| Earnings Review|  \n| |   \nCloudflare, Inc.  \nMore PoF at Higher NRR; Act 4 Has Right to Win; Thoughts on DC Supply; At\nBarCap Tech Conf\n12/9  \nNET revenue accelerated again to ~39% y/y driven by large customer PoF\nexpansion as a result of continued traffic growth, which is also driving\nhigher NRR; We dig deeper into Act 4, and how potentially slower DC buildouts\ncould impact NET's business...  \n| 5 November 2026  |  6 MIN READ   \n---  \n| | | |   \n---|---|---  \n| Read the\nReport|  \n| |   \n| | | |   \n---  \nNET's revenue growth acceleration at this scale speaks for itself, so we focus\nthis note on three forward looking points: (1) big customers on PoF contracts\nare becoming a bigger portion of the business, and traffic is continuing to\ninflect causing customers to raise run​-​rates on their PoF contracts faster,\ndriving higher net revenue retention - we think these factors could continue\ninto 4Q, which is why the guide is at a higher starting point than expected;\n(2) Act 4 revenue is starting to come in, most from OpenAI given their help\nwith more visible​/​efficient internet crawling - with ~25% of the internet\nrunning through Cloudflare's pipes, we do not know who else has the right to\nwin in this space, though NET's capabilities still need to scale to tens of\nmillions of transactions per ...  \n| | | |   \n---|---|---  \n| Continue\nReading|  \n| |   \n|  \n---  \n| | | |   \n---|---|---|---  \n| Cloudflare, Inc. ( NET ) | | | |   \n---|---|---  \n|\n[Overweight|  \n| |   \nUnchanged  \n| | |   \n| | |   \n| U.S. Software| | | |   \n---|---|---  \n|\nPositive|  \n| |   \nUnchanged  \n| Price Target| USD\n400.00Unchanged|  \n| Price (05-Nov-26)| USD\n244.51  \n|  \n| Potential Upside/Downside|\n+63.6%  \n|  \n| | | ](https://barclaysresearch.email.streetcontxt.net/platform/al?a=14369746&ad=5129042894&h=49P3ung&sig=QjWoKgj9WBZLNJZyYI1aIjIP9kQ&v=2&url=https://live.barcap.com/go/research/equitycompany/NET)  \n---  \nSource: Bloomberg, Barclays Research  \n| | | |   \n---|---|---  \n| | | |   \n---|---|---  \n| U.S. Software|  \n| |   \n| | | | | Saket Kalia, CFA  \n+1 212 526 8465  \nBCI, US  \n---|---|---  \n| | | | Ethan Sneckenberger  \n+1 212 526 2971  \nBCI, US  \n---|---|---  \n| |   \n| |   \n| | | |   \n---|---|---  \n| Scan code to view the report|  \n| |  \n| |   \n| | | |   \n---|---|---  \n| Barclays Capital Inc. and/or one of its affiliates does and seeks to do\nbusiness with companies covered in its research reports. As a result,\ninvestors should be aware that the firm may have a conflict of interest that\ncould affect the objectivity of this report. Investors should consider this\nreport as only a single factor in making their investment decision.For analyst\ncertifications and important disclosures including, where applicable, foreign\naffiliate disclosures, and the date and time when the production of each\nrecommendation was completed and first disseminated, please refer to the full\ndocument(s) attached or included by hyperlink in this email.Completed:\n06-Nov-26,",
+      "excerpt_limit": 3100,
+      "full_attachment_reviewed": false
+    },
+    "status": "JPM / Chatterjee, Patel, Nishi November6: NRR122%, variable consumption mid-teens revenue, initial ActIV OpenAI revenue. Barclays / Saket Kalia note header Nov5, releasedNov6: only email excerpt read."
+  },
+  "stx": {
+    "signal_id": "supp-20261106-stx",
+    "source": {
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWoSs5GAAA=",
+      "subject": "IDEA: Seagate Technology: Management Meetings Highlight the Disconnect Between Strong Fundamentals and Weak Sentiment",
+      "sender": {
+        "emailAddress": {
+          "address": "Erik.Woodring@morganstanley.com",
+          "name": " Erik W Woodring"
+        }
+      },
+      "received_at": "2026-11-06T03:52:10Z",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWoSs5GAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "reviewed_excerpt": "| | | |   \n---  \n  \n---  \n| | |   \n---  \nSeagate Technology (STX.O)    \nManagement Meetings Highlight the Disconnect Between Strong Fundamentals and\nWeak Sentiment  \n| | Read Full Report  \n---  \n(PDF: 24 Pages)  \n---  \n| North America  \n---  \nStock Rating   Overweight  \nPrice Target   $1,148.00  \nErik W Woodring, Dylan Liu, Maya C Neuman, Rauf Ural  \nNovember 6, 2026  \n---  \n| | | STX fundamentals remain strong – revs/pricing are accelerating, supply/demand gap is widening, and buybacks could reach ~30% of mkt cap in 2.5 years. Yet shares trade at just 5x our CY28 EPS (or ~3x our bull-case). We address 5 key debates and 3 factors for re-rating once the storm passes; Top Pick.   \n---  \n| | Key takeaways  \n---  \n  \n  * No signs of HDD industry irrationality – unit capacity stays disciplined, while supply growth remains driven by areal density gains. \n  * While component inflation slows cost-downs, stronger pricing should offset cost pressure and continue the margin expansion trajectory. \n  * HAMR remains on track with no technical qualification issues; rising HAMR mix supports ~25% EB CAGR target without adding HDD units. \n  * HDDs are less cyclical than memory, with growth more EB-driven and far lower capital intensity and fixed-cost leverage than NAND/DRAM. \n  * A•Areal density + mix shift towards data center are structurally lifting HDD margins, supporting higher through-cycle earnings and multiples than history. \n\n  \n  \nWe walk away from our 3-day roadshow with STX CFO Gianluca Romano and Head of\nIR Shanye Hudson with more conviction in our OW thesis – what’s the path\nforward? Over the last 3 months, STX shares are down 43% (and 59% off 52 week\nhighs) while our FY27/FY28 EPS estimates have moved 25-50% higher – leaving\nshares trading at 5.2x our CY28 EPS of $89.21 and 3.4x our bull-case CY28 EPS\n(which embeds pricing from our June Taiwan checks) – below historical trough\nmultiples for HDDs (Exhibit 1). While higher rates and questions about capex\nspend/financing have driven the bulk of this de-rating, concerns about HDD\nindustry rationality have caused a disconnect between HDD’s and other AI capex\nbottlenecks in the last month, with HDD’s underperforming memory, semi-cap,\ncompute, and optical by 5pts in the month of October, despite strong earnings\nresults. However, our roadshow with STX mgmt this week reinforced the strength\nof this story – AI tailwinds to HDD demand are still very early innings but\nare helping to accelerate EB demand leaving the supply/demand gap wider today\nthan 3 months ago, pricing is also accelerating and more than offsetting\ncomponent cost inflation to drive strengthening incremental margins, customer\nvisibility is improving/elongating, HAMR commercialization and qualifications\nare progressing as-scheduled, and with FCF growing each quarter, STX should be\nable to buyback ~30% of the company in the next 2-2.5 years.\n\nWe appreciate that there are a number of broader AI/data center concerns that\nare impacting AI bottlenecks, and as long as we are in an environment\ncharacterized by fear and uncertainty, HDDs are going to underperform, even at\nsub-trough valuations. However, we remain steadfast that fundamentals are\nrobust, any potential DC build delays would do little to impact our model\ngiven HDD demand is far outpacing supply, these stocks are cheap even on\nStreet EPS (we are 13-15% above Consensus), and mgmt sounds convicted.\nTherefore, once this fear and uncertainty subsides, STX (and HDDs more\nbroadly) should be amongst the first AI winners investors return to, and we\nreiterate our OW rating.\n\nSTX is now trading at 6x/7x our/Consensus FY28 EPS, which is below/near the\nhistorical trough multiple of 8x despite strengthening earnings outlook.\n Source: Company data,\nFactSet, Morgan Stanley Research  \n---  \n  \n_Below, we leverage our management meetings to answer 5 of the markets most\npressing questions (including market rationality), and then highlight 3 facts\nwe believe can help to shift the narrative towards HDD multiple expansion._\n\n1\\. What happened with Nearline EB growth in the Sept/Dec qtrs, and what’s the\nmessage on LT EB growth, demand, and customer visibility? September quarter\nnearline EBs were up just 2% Q/Q as a result of two factors: STX (1) over-\nindexed supply towards enterprise OEM customers that historically buy lower\ncapacity drives than CSPs, and (2) staged (i.e. prepared) 40TB HAMR drives in\nanticipation of major hyperscaler customer qualifications being completed\nbeyond the September quarter. In our meetings, mgmt made clear land, power,\nshell/data center readiness was not an issue, nor were there any technical\nchallenges with HAMR quals – the slower Q/Q EB growth in September was\nentirely mix and timing related. As a result, nearline EB growth will re-\naccelerate in the December quarter (both Q/Q and Y/Y). As mgmt framed it –\ntheir December quarter revenue guide implies $600M of Q/Q growth, but in\ncontrast to the September quarter, EB growth will be a greater Q/Q contributor\nof revenue growth relative to pricing as 40TB Mosaic 4 volumes ramp.\n\nMore importantly, STX sees no evidence that underlying demand is weakening. In\nfact, mgmt made clear hyperscaler EB demand is running “well above” STX's ~25%\nlong-term annual EB growth framework, while visibility remains strong and\ncontinues to elongate. Consistent with what mgmt has been saying, STX has\nrelatively precise product/mix visibility over the next 4 quarters, with both\nvolume and pricing negotiated for CY27, and only EB’s committed into\nCY28/CY29. In the coming months, STX will start negotiating pricing for CY28\namidst an even tighter supply/demand and inflationary component cost\nenvironment, which to us implies only stronger pricing into 2028 (even if NAND\nprices fall). Taken together, (1) the September quarter EB growth decel looks\nmore like a timing/mix quarter than a reversal of the HDD cycle, with Dec\nrepresenting the next leg of EB acceleration, and (2) medium-to-long-term\ndemand trends are improving, with supply still the gating factor, helping to\nelongate the HDD cycle.\n\n2\\. Is there any evidence of industry irrationality impacting HDD supply\ngrowth or pricing? The short and very clear answer is no. Despite investor\nconcerns around incremental industry capacity following misleading headlines a\nmonth ago (see\nhere,\nhere,\nand\nhere),\nSTX sees rational supply behavior in the industry and has no plans to add\nincremental unit capacity, maintaining capex at 4-6% of revenue as has been\nthe case for years. Mgmt reiterated that it targets to achieve ~25% annual EB\ngrowth primarily through areal density gains (i.e. mix to higher-capacity HAMR\ndrives) – again, a consistent message – while keeping physical unit growth\nroughly flat. And while some investors may question the additional equipment\ninvestments and reasons for STX purchasing external PMR heads, these are\ninitiatives intended to support HAMR EB growth that requires more heads, more\nplatters, and a longer production cycle time. Expanding unit capacity is not\nin the cards.\n\nThe broader industry rationality message also remains constructive. Mgmt sees\ncompetitors as similarly focused on technology-driven EB growth – not\ncapturing unit share – and lower-end competition remains constrained by a lack\nof vertical integration (and not enough capex at critical suppliers to support\nnon-vertically integrated competitors doubling capacity) and leading edge\ntechnology, where STX is 3-4+ years ahead. Importantly, industry pricing is\nalso very rational, despite concerns to the contrary – lower-end competitors\nare not making headway in gaining share; they remain the distant third source.\nAnd given the supply/demand imbalance in HDD’s, there are no examples of\ncompetition using pricing to capture demand. In fact, our checks would suggest\nlower-end competitors are sometimes more price aggressive to the upside. All\ntold, we remain encouraged that we see no evidence of industry competitors\nreverting to the prior playbook of prioritizing share gains over\nprofitability, and we expect this landscape to persist.\n\n3\\. How should we model Cost/TB given component cost pressure, and what does\nthis mean for HDD pricing and margins? The message from mgmt is that the\ncurrent MSD% Y/Y cost/TB declines should persist for a few quarters. The cost\nof internally manufactured heads and media continues to decline, and as mix\nshifts to higher capacity HAMR drives continues, cost/TB declines should\nremain robust (i.e. going from a 30TB to 40TB HDD lowers cost/TB by 25%, all\nelse equal). However, there is upward cost pressure from externally purchased\ncomponents, including DRAM, NAND, SoCs, controllers, electronics and\nmechanical components. And as STX has worked down lower-cost inventory, this\ncomponent inflation is having a more pronounced offset to the tailwinds listed\nabove. This implies a shallower cost-down trajectory this year, rather than a\ndeterioration in STX's underlying technology cost curve, though STX mgmt noted\nthat they expect external component costs to “rise, stabilize, and then fall\nagain” (no timeline attached to this comment).\n\nImportantly, STX incorporates expected component cost inflection when\nnegotiating pricing. This was one reason why nearline price/TB accelerated in\nthe September quarter, resulting in even stronger incremental margins in the\nSeptember quarter vs. June, despite the shallower Cost/TB trajectory. Mgmt\nindicated future pricing will continue to embed changes to its cost structure,\nthough as we noted earlier, pricing will also incorporate the added value of\ndelivering higher capacity drives and a favorable supply/demand environment.\nIn our view, this should reaffirm that Y/Y pricing growth should generally\naccelerate through CY27 and into CY28, consistent with our checks.\n\n4\\. Are there any issues with HAMR qualifications, and how does growing HAMR\nmix impact STX EB growth and competition? No. Mozaic 4 is already shipping at\nSTX's 2 largest cloud customers, and additional qualifications with other\nlarge hyperscalers and enterprise OEMs is progressing normally, with quals\nstill lasting a standard 6-9 months. STX expects a number of these additional\ncustomers to complete Mozaic 4 qualifications this quarter, which alongside\ngreater head and media production will support HAMR reaching 50% of nearline\nEBs shipped and 40TB HAMR products surpassing 50% of HAMR mix exiting this\nquarter. Beyond Mosaic 4, STX expects to begins 5TB/platter HAMR\nqualifications towards the end of CY27, which means 50TB/drive shipments\nshould commence in C2H28, and has already successfully reached 8TB/platter\ntechnology in the lab, with lab to commercialization typically taking 3-4\nyears. This compares favorably to competitors without comparable areal density\nprogress that are likely to face eventual physical limitations on capacity per\ndrive. HAMR success therefore represents the strongest path towards ~25% long-\nterm EB growth while likely widening STX’s technology advantage as smaller\ncompetitors work to qualify/ship 2 generations old technology.\n\n5\\. When should we expect buybacks to step-up, and how much stock could STX\nbuy back in the next 2-3 years? In the last 12 months, STX has reduced gross\ndebt outstanding from $5.0B to $2.8B and retired 100% of their previously\ndilutive convertible debt. Mgmt made clear these targeted efforts to improve\nB/S quality are now complete, and attention is shifting towards capital\nreturn, where returning 75% of FCF to shareholders is still the stated goal,\nbut “opportunistic” repurchases (outside of 10b5-1 plans) could commence given\nrecent performance in the stock. Importantly, revenue and margins will\ncontinue to grow/expand sequentially through FY27, which means FCF generation\nwill also continue to strengthen quarterly. As a result, we model ~$5.6B of\nbuybacks in FY27 and up to $14B in FY28, followed by $16B of buybacks in FY29\n– implying STX can buyback 30% of the company in the next 2.5 years,\nconservatively. We believe the direction is clear – STX’s debt reduction phase\nis complete, making way for a substantially more buyback-intensive phase for\nthe foreseeable future (alongside continued dividend increases).\n\n_Beyond our meeting takeaways, we also detail and visualize 3 misconceptions\non the HDD industry that we believe have contributed to recent multiple\ncompression. Looking forward, (1) strength in fundamentals, (2) elongation of\ncustomer visibility, and (3) clarity on these 3 factors should help the market\nre-rate HDD stocks once the storm passes:_\n\n1\\. HDDs are critical data center infrastructure in the midst of an\naccelerating upcycle, with KPIs signaling continued outperformance. For STX,\nnearline EB growth remains one of the clearest forward indicators tied to\nshare price (Exhibit 2), while for WDC we see a similar relationship between\nshare price and Q/Q gross profit dollar growth (Exhibit 3). For each company,\nboth measures are accelerating, yet the consternation around broader AI\nspending and HDD market rationality has resulting on STX/WDC diverging from\nthese historical relationships. Importantly, this is not just a pricing story.\nNearline EB growth is strengthening alongside pricing, reflecting continued\ncloud demand, higher-capacity drive adoption and an increasingly data-\nintensive workload environment. AI adds another layer of data creation on top\nof traditional cloud workloads, reinforcing HDD's role as critical data center\ninfrastructure rather than simply another component tied to the pace of new\nserver deployments.\n\nWe therefore see an unusual setup – the fundamental indicators that have\nhistorically supported HDD stock outperformance remain intact, while\nvaluations increasingly discount deterioration ahead. Until we see evidence in\nour checks that EB growth, pricing or margins are deteriorating, we believe\nthese fundamental leading indicators point to higher – not lower – HDD stock\nprices.\n\nSTX's shares historically have been positively correlated with its nearline EB\nshipments, which are expected to grow at a 25%+ CAGR in the coming few years.\n Source: Company data,\nMorgan Stanley Research estimates  \n---  \nWDC shares historically have been positively correlated with its gross\nprofits, which we expect to continue to increase with margin expansion as well\nas revenue growth. \nSource: Company data, FactSet, Morgan Stanley Research estimates  \n---  \n  \n2\\. HDDs are less cyclical than memory; just look at CY23-CY27 price/bit\ngrowth and the ",
+      "excerpt_limit": 14500,
+      "full_attachment_reviewed": false
+    },
+    "classification": "Morgan Stanley / Erik Woodring, Dylan Liu, Maya Neuman, Rauf Ural November6 broker relay of 3-day CFO Gianluca Romano / IR Shanye Hudson roadshow; not independently attended; actual days not given.",
+    "facts": [
+      "CY27 volume/pricing negotiated; CY28/29 EB commitments but pricing still to negotiate.",
+      "No unit capacity expansion planned; no HAMR qualification issue; December EB acceleration expected.",
+      "Nearline EB +2% q/q in September is different denominator from total EB ~+1% on wiki.",
+      "MS CY28 EPS89.21 and ~30% equity buyback over2-2.5years are broker scenarios, not management guidance.",
+      "Broker gross debt2.8bn conflicts with wiki company primary2.383bn September/~1.63bn postOctober redemption: do not use broker amount until date/basis reconciled."
+    ],
+    "local_paths": [
+      "_wiki/STX.md",
+      "_wiki/_meta/outcomes.md"
+    ],
+    "prior_status": "November5 logged no readout for November2/3 meeting; now superseded with broker readout, not confirmation of future2028pricing."
+  },
+  "model_controls": {
+    "signals": [
+      {
+        "id": "esti-08489ebe8988",
+        "asof": "2026-11-06",
+        "source_date": "2026-11-05",
+        "type": "model_check",
+        "priority": "high",
+        "score": 71,
+        "title": "GOOG — 2026 revenue house view is 18% above consensus",
+        "tickers": [
+          "GOOG"
+        ],
+        "in_book": [
+          "GOOG"
+        ],
+        "impact": "high",
+        "urgency": "standing",
+        "confidence": "provisional",
+        "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $428.3bn as of 2026-11-05, a derived +17.9% gap. Revenue comparisons require a basis check.",
+        "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
+        "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+        "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
+        "readthrough": [
+          {
+            "ticker": "AVGO",
+            "relation": "supplier",
+            "detail": "custom ASIC (TPU)",
+            "from": "GOOG",
+            "in_book": true
+          },
+          {
+            "ticker": "NVDA",
+            "relation": "supplier",
+            "detail": "GPUs",
+            "from": "GOOG",
+            "in_book": true
+          },
+          {
+            "ticker": "SNOW",
+            "relation": "competitor",
+            "detail": "warehouse vs BigQuery",
+            "from": "GOOG",
+            "in_book": false
+          },
+          {
+            "ticker": "ANTHROPIC",
+            "relation": "customer",
+            "detail": "TPU compute",
+            "from": "GOOG",
+            "in_book": false
+          },
+          {
+            "ticker": "BE",
+            "relation": "supplier",
+            "detail": "on-site fuel cells",
+            "from": "GOOG",
+            "in_book": false
+          },
+          {
+            "ticker": "CIEN",
+            "relation": "supplier",
+            "detail": "DCI/optical",
+            "from": "GOOG",
+            "in_book": false
+          },
+          {
+            "ticker": "COHR",
+            "relation": "supplier",
+            "detail": "optical",
+            "from": "GOOG",
+            "in_book": false
+          }
+        ],
+        "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-11-05",
+        "evidence_paths": [
+          "_data/house.json",
+          "_data/estimates.json"
+        ],
+        "evidence_anchor": "GOOG 2026 revenue",
+        "origin": "house_vs_consensus",
+        "values": {
+          "house": 505,
+          "consensus": 428.29046,
+          "delta_pct": 17.91,
+          "unit": "$bn"
+        },
+        "feedback": "",
+        "feedback_note": "",
+        "hidden": false
+      },
+      {
+        "id": "esti-8faeb5b5943c",
+        "asof": "2026-11-06",
+        "source_date": "2026-11-05",
+        "type": "model_check",
+        "priority": "medium",
+        "score": 54,
+        "title": "CRWV — 2027 EPS house view is 19% below consensus",
+        "tickers": [
+          "CRWV"
+        ],
+        "in_book": [],
+        "impact": "medium",
+        "urgency": "standing",
+        "confidence": "provisional",
+        "why_now": "Capstone carries 2027 EPS at $-1.83 versus Bloomberg consensus at $-2.25 as of 2026-11-05, a derived -18.7% gap.",
+        "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
+        "action": "Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+        "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
+        "readthrough": [
+          {
+            "ticker": "MSFT",
+            "relation": "customer",
+            "detail": "neocloud compute",
+            "from": "CRWV",
+            "in_book": true
+          },
+          {
+            "ticker": "NVDA",
+            "relation": "supplier",
+            "detail": "GPUs",
+            "from": "CRWV",
+            "in_book": true
+          },
+          {
+            "ticker": "NSCALE",
+            "relation": "competitor",
+            "detail": "GPU neocloud",
+            "from": "CRWV",
+            "in_book": false
+          },
+          {
+            "ticker": "AMD",
+            "relation": "supplier",
+            "detail": "MI GPUs",
+            "from": "CRWV",
+            "in_book": false
+          },
+          {
+            "ticker": "OPENAI",
+            "relation": "customer",
+            "detail": "neocloud compute",
+            "from": "CRWV",
+            "in_book": false
+          }
+        ],
+        "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-05",
+        "evidence_paths": [
+          "_data/house.json",
+          "_data/estimates.json"
+        ],
+        "evidence_anchor": "CRWV 2027 EPS",
+        "origin": "house_vs_consensus",
+        "values": {
+          "house": -1.83,
+          "consensus": -2.25,
+          "delta_pct": -18.67,
+          "unit": ""
+        },
+        "feedback": "",
+        "feedback_note": "",
+        "hidden": false
+      },
+      {
+        "id": "esti-da5fddd49d94",
+        "asof": "2026-11-06",
+        "source_date": "2026-11-05",
+        "type": "model_check",
+        "priority": "medium",
+        "score": 53,
+        "title": "CRWV — 2026 EPS house view is 17% below consensus",
+        "tickers": [
+          "CRWV"
+        ],
+        "in_book": [],
+        "impact": "medium",
+        "urgency": "standing",
+        "confidence": "provisional",
+        "why_now": "Capstone carries 2026 EPS at $-3.27 versus Bloomberg consensus at $-3.95 as of 2026-11-05, a derived -17.2% gap.",
+        "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
+        "action": "Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+        "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
+        "readthrough": [
+          {
+            "ticker": "MSFT",
+            "relation": "customer",
+            "detail": "neocloud compute",
+            "from": "CRWV",
+            "in_book": true
+          },
+          {
+            "ticker": "NVDA",
+            "relation": "supplier",
+            "detail": "GPUs",
+            "from": "CRWV",
+            "in_book": true
+          },
+          {
+            "ticker": "NSCALE",
+            "relation": "competitor",
+            "detail": "GPU neocloud",
+            "from": "CRWV",
+            "in_book": false
+          },
+          {
+            "ticker": "AMD",
+            "relation": "supplier",
+            "detail": "MI GPUs",
+            "from": "CRWV",
+            "in_book": false
+          },
+          {
+            "ticker": "OPENAI",
+            "relation": "customer",
+            "detail": "neocloud compute",
+            "from": "CRWV",
+            "in_book": false
+          }
+        ],
+        "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-05",
+        "evidence_paths": [
+          "_data/house.json",
+          "_data/estimates.json"
+        ],
+        "evidence_anchor": "CRWV 2026 EPS",
+        "origin": "house_vs_consensus",
+        "values": {
+          "house": -3.27,
+          "consensus": -3.95,
+          "delta_pct": -17.22,
+          "unit": ""
+        },
+        "feedback": "",
+        "feedback_note": "",
+        "hidden": false
+      },
+      {
+        "id": "esti-3b370f174b10",
+        "asof": "2026-11-06",
+        "source_date": "2026-11-05",
+        "type": "model_check",
+        "priority": "medium",
+        "score": 51,
+        "title": "LITE — 2026 EPS house view is 16% below consensus",
+        "tickers": [
+          "LITE"
+        ],
+        "in_book": [],
+        "impact": "medium",
+        "urgency": "standing",
+        "confidence": "provisional",
+        "why_now": "Capstone carries 2026 EPS at $12.81 versus Bloomberg consensus at $15.22 as of 2026-11-05, a derived -15.8% gap.",
+        "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
+        "action": "Open the LITE model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+        "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
+        "readthrough": [
+          {
+            "ticker": "AMZN",
+            "relation": "customer",
+            "detail": "optical",
+            "from": "LITE",
+            "in_book": true
+          },
+          {
+            "ticker": "MSFT",
+            "relation": "customer",
+            "detail": "optical",
+            "from": "LITE",
+            "in_book": true
+          },
+          {
+            "ticker": "NVDA",
+            "relation": "customer",
+            "detail": "optical",
+            "from": "LITE",
+            "in_book": true
+          },
+          {
+            "ticker": "COHR",
+            "relation": "competitor",
+            "detail": "optical/InP",
+            "from": "LITE",
+            "in_book": false
+          },
+          {
+            "ticker": "AIXA",
+            "relation": "supplier",
+            "detail": "MOCVD tools",
+            "from": "LITE",
+            "in_book": false
+          },
+          {
+            "ticker": "ANET",
+            "relation": "customer",
+            "detail": "optical",
+            "from": "LITE",
+            "in_book": false
+          }
+        ],
+        "source": "Capstone official model (Modelo consolidado incl. LITE .xlsx — consolidated optics, 2026-06-16). · Bloomberg consensus 2026-11-05",
+        "evidence_paths": [
+          "_data/house.json",
+          "_data/estimates.json"
+        ],
+        "evidence_anchor": "LITE 2026 EPS",
+        "origin": "house_vs_consensus",
+        "values": {
+          "house": 12.81,
+          "consensus": 15.22,
+          "delta_pct": -15.83,
+          "unit": ""
+        },
+        "feedback": "",
+        "feedback_note": "",
+        "hidden": false
+      }
+    ],
+    "local_paths": [
+      "_wiki/_data/house.json",
+      "_wiki/_data/estimates.json",
+      "_wiki/_meta/reconciliation-2026-11-02-inbox.md"
+    ],
+    "controls": [
+      "GOOG gross/net basis mismatch is standing, not fresh operating gap.",
+      "CRWV negative EPS: house losses smaller, so more optimistic; engine below label wrong.",
+      "LITE June16 house versus Nov5 consensus stale vintage, not new revision."
+    ]
+  },
+  "calendar": {
+    "signal_id": "supp-20261106-calendar",
+    "jefferies": {
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWnDJttAAA=",
+      "subject": "*NEW* JEF Access: More Texas Power & Utility Post Election. A Deep Conversation On Policy Outlook From Here - November 6th at 1 PM ET",
+      "sender": {
+        "emailAddress": {
+          "address": "jds@jefferies.com",
+          "name": "Julien Dumoulin-Smith"
+        }
+      },
+      "received_at": "2026-11-05T22:01:32Z",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWnDJttAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "reviewed_excerpt": "\n\n| Jefferies University  \n---|---  \n  \n  \nWEBINAR  \nJEF Access: More Texas Power & Utility Post Election. A Deep Conversation On\nPolicy Outlook From Here **Speakers:  \n** Will DuBois: Partner – Wilkinson Barker Knauer LLPDavina Sashkin: Partner –\nWilkinson Barker Knauer LLP **Host:** Julien Dumoulin-Smith: US Power,\nUtilities, Midstream & Clean Energy – Lead Analyst **Background******We invite\nyou to a**Texas Data Center, Power, & Utility** focused event with Will DuBois\nand Davina Sashkin: Partners at Wilkinson Barker Knauer LLP, **Friday,\nNovember 6 th at 1:00PM ET**. Will DuBois is an energy lawyer with deep and\nbroad industry experience representing investor-owned utilities, independent\npower producers, investors, and other participants across the power sector,\nwith a deep expertise in utility regulatory and energy policy matters. Davina\nSashkin brings extensive experience in federal regulatory matters and\nstrategic policy advocacy, including advising clients on complex regulatory\nissues and the business implications of evolving policy. We intend to focus\nthe discussion on the **utility regulatory and legislative policy outlook in\nTexas, as well as broader power and data center topics.** This will be a\nrelevant discussion for investors in **VST, NRG, CEG, CNP, SRE, AEP, ETR, XEL,\nCIFR, HUT** and more.  \n**Please note: this session will not have a replay**  \nDate: Friday, November 6th, 2026.  \nTime: 1:00 PM ET  \n  \n\\------------------------------------------------------------------------------------------------------------  \n  \nPlease note Jefferies’ Expert Events are for Jefferies’ investor clients only,\nand subject to the appropriate research agreement in place. Please contact\nyour Jefferies representative if you have any queries. IMPORTANT\nDISCLOSURE:This event i",
+      "excerpt_limit": 1800,
+      "full_attachment_reviewed": false
+    },
+    "ddog_invitation": {
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWnCmIJAAA=",
+      "subject": "JPM | Software | DDOG: TODAY – Datadog Virtual NDR with CEO, Olivier Pomel & CFO David Obstler",
+      "sender": {
+        "emailAddress": {
+          "address": "samik.x.chatterjee@jpmresearchmail.com",
+          "name": "Samik Chatterjee, CFA"
+        }
+      },
+      "received_at": "2026-11-05T13:02:49Z",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWnCmIJAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "reviewed_excerpt": "| |  | NORTH AMERICA EQUITY RESEARCH  \n---|---  \nYOU'RE INVITED |   \n---|---  \n  \n---  \nJPM | Software | DDOG: TODAY – Datadog Virtual NDR with CEO Olivier Pomel & CFO David Obstler   \n  \nPlease join us for a virtual NDR where we are hosting Datadog (DDOG) CEO and\nCFO, Olivier Pomel & David Obstler, following the company’s 3Q Earnings\nResults. RSVP here\nand\njoin us for the conversation.  \n  \n  \n---  \nDate & Time  \n  \nThursday, November 5 @ 10:00am ET / 15:00 UK  \nPre-Registration required: Please register your attendance.  \n  \n|\nREGISTER  \n---  \n  \nOnce registered, you will receive an email with the event details. Access\ninformation is for intended recipients and should not be shared.  \n  \n**Replay will be available after the call.** Find it on J.P. Morgan Markets\nMultimedia\nPage\nonce available.  \n  \nPlease note, this call is only open to Institutional Clients of J.P. Morgan\n\n  \n---  \n---  \n  \nJ.P. Morgan Speakers:  \n---  \n  \nSamik Chatterjee, CFA, Software - Large Cap / Mid & Small Cap  \n  \nExternal Speakers:  \n  \nOlivier Pomel, CEO, Datadog  \nDavid Obstler, CFO, Datadog  \n  \n---  \n  \n\n  \n---  \n  \n---  \n| Modify Your Subscriptions  |  Unsubscribe | www.jpmm.com/#research  \n---|---  \n  \n---  \n  \nSoftware - Large Cap / Mid & Small Cap\n\nSamik Chatterjee,\nCFA\n\n(1-212) 622-0798\n\nsamik.x.chatterjee@jpmorgan.com\n\nJ.P. Morgan Securities LLC\n\n  \n\nJaiden R\nPatel\n\n(1-212) 270-6953\n\njaiden.patel@jpmchase.com\n\nJ.P. Morgan Securities LLC\n\n  \n\nMashu\nNishi\n\n(1-212) 622-0078\n\nmashu.nishi@jpmorgan.com\n\nJ.P. Morgan Securities LLC\n\n  \n  \n  \n---  \n  \nIf you are subject to the MiFID II Research",
+      "excerpt_limit": 1600,
+      "full_attachment_reviewed": false
+    },
+    "ddog_status": "No dedicated NDR readout found in this window's subjects/selected excerpts; not proof none exists. November5 invite says replay available. Do not claim meeting takeaways from pre-meeting notes.",
+    "crwv": "November10 5pmET results, October27 company notice cited in November5 evidence; liquidity/restrictedcash/project recourse prep.",
+    "engine_catalysts": [
+      "cata-c030b28ed093",
+      "cata-30cf21294c0d",
+      "cata-ce699c62b4f0"
+    ]
+  },
+  "narrative": {
+    "source": {
+      "id": "AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk-hCdiBwDBpLwblpT0TZ_t-vz7Ao6sAAAAAAEMAADBpLwblpT0TZ_t-vz7Ao6sAAWoSs67AAA=",
+      "subject": "Americas Technology: US Data Center Capacity update: Framing risks to our data center forecasts",
+      "sender": {
+        "emailAddress": {
+          "address": "michael.ng@alerts.publishing.gs.com",
+          "name": "Michael Ng, CFA"
+        }
+      },
+      "received_at": "2026-11-06T09:05:41Z",
+      "web_link": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWoSs67AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "reviewed_excerpt": "| |    \n---  \n  \n|   \n---  \n|  | Print PDF |  | | |  | Read  \n---|---|---|---|---|---  \n  \n|  \n---  \n|  \n---  \nAmericas Technology: US Data Center Capacity update: Framing risks to our data\ncenter forecasts  \n---  \n6 November 2026 | 4:00AM EST | Research | Equity   \n---  \n| | | | | Following several gubernatorial election flips (from Republican to Democratic), and campaigns in many states which featured stricter data center regulation including Texas, Ohio, Nevada, Georgia, and Michigan (D-incumbent), we analyze data center capacity at the state level to help frame risks to the data center buildout.   \n---  \n| Looking only at under construction data centers, which we view as lower-\nrisk, we see US data center net additions of 22/24/5 GW-IT for 2027/28/29\n(assuming a 1.5 PUE, using Aterio data) compares to our US data center net\naddition forecasts of 20/24/23 GW-\nIT\nand gives us confidence in our forecasts. We believe our forecasts have been\nappropriately conservative and recognize that they have likely been below\nconsensus expectations.  \n---  \n| Based only on under construction data centers, Texas represents 20% of 2027E\nnet additions and 27% of 2028E net additions. We focus on Texas as a market\ngiven that the Governor elect has called for an immediate moratorium on data\ncenters. We note that moratoriums are not bans or cancellations, and believe\nthe key risks to data center operators are related to delays to ready-for-\nservice and higher costs.  \n---  \n| | | Read Full Report   \n---  \n  \n| | | | \n\n### Michael Ng, CFA\n\n+1 212 902-8618 | michael.ng@gs.com | Goldman Sachs & Co. LLC | \n\n### Lindsey Shema\n\n+1 212 902-6506 | lindsey.shema@gs.com | Goldman Sachs & Co. LLC   \n---|---  \n  \n### Lizzy Xie\n\n+1 212 357-3206 | lizzy.xie@gs.com | Goldman Sachs & Co. LLC   \n| |   \n---  \n| | You have received this email because you are subscribed to following alerts/tags:  \n  \nMichael Ng, CFA  \n  \nIf you no longer wish to receive this email, click here to\nunsubscribe,\nor manage all of your subscriptions in your Goldman Sachs Research\naccount.  \n---  \n| | For Reg AC certification and other important disclosures, see the Disclosure Appendix, or go to publishing.gs.com/disclosures/hedge.html.   \n---  \n| | Legal Disclaimers & Disclosures   \n---  \n\n\n",
+      "excerpt_limit": 4000,
+      "full_attachment_reviewed": false
+    },
+    "classification": "GS Michael Ng, Lindsey Shema, Lizzy Xie November6 forecasts/interpretation, not legal evidence of enacted blanket moratorium",
+    "facts": [
+      "GS using Aterio under-construction-only dataset says TX20%of2027/27%of2028 additions; no GW basis conversion made.",
+      "Delay/costrisk is not cancellation; permittinggrandfathering andalreadyenergizedassets require site-specific evidence."
+    ]
+  },
+  "engine_delta": {
+    "published_nov5": {
+      "active": 40,
+      "high": 1,
+      "focus_names": 32
+    },
+    "later_nov5_snapshot": {
+      "signals": 48,
+      "active": 48,
+      "high": 3,
+      "belief_changes": 4,
+      "focus_names": 38
+    },
+    "current": {
+      "signals": 37,
+      "active": 37,
+      "high": 1,
+      "belief_changes": 0,
+      "focus_names": 29
+    },
+    "interpretation": "Later snapshot48/3/38 had4beliefchanges. Current37/1/29:4beliefalerts roll off,4source-date catalyst rows reclassified as notnew events,3unresolved-no-readout ledger entries suppress missingoutcome alerts. Published morning40/1/32 is the user-visible baseline. Zero derivedchanges doesnotmeannonevidence."
+  },
+  "baseline_hashes": [
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\AMZN.md",
+      "Hash": "B816FFA31347B60BA72874A9E0B2E879790B9200A9CA71FBF6D4B08D751D56DE"
+    },
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\NET.md",
+      "Hash": "5246E9C3B8DE49166939B1517162FE0433D419C3F431C271EFCAC6541EF4DDD8"
+    },
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\STX.md",
+      "Hash": "86FB9E26D71B5660C81C549165CF65D395C2B19B7B057DD5BBC7B023A6D70DD2"
+    },
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\CRWV.md",
+      "Hash": "6FD988D2BD4D3E6416EC693612A24DFCD59DC0D7CC968A5D120B8076640287F5"
+    },
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\DDOG.md",
+      "Hash": "044DC0B73E4931E21B58A74269F8981A9E9939BB4C5A83EEB9A04DE09105D0FE"
+    },
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\BKNG.md",
+      "Hash": "52170D8F48F1B36EFDF1A60DA5F5F5EC3F74D9796969832F8255860B0FDC9A9A"
+    },
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\MSFT.md",
+      "Hash": "8FFFF6D9952DC35897DB9EC00980AE6872DDED08162D34742FF088E04D1EE81A"
+    },
+    {
+      "Path": "\\\\capsrv01\\Users$\\felipe.monteiro\\Wiki Felipe empresas\\_wiki\\_data\\house.json",
+      "Hash": "67A3CCC2189570BC9EDE2EDA50C9EC8ADCB9FABBF3B34A30DA02D864FFD8FEC8"
+    }
+  ],
+  "company_pages_edited": false,
+  "house_models_edited": false
+}

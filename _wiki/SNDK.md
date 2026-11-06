@@ -9,11 +9,11 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SNDK` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $36.6bn | $57.2bn |
-| Gross profit | $30.0bn | $48.5bn |
-| Gross margin | 81.9% | 84.7% |
+| Revenue | $36.6bn | $57.3bn |
+| Gross profit | $30.0bn | $48.6bn |
+| Gross margin | 81.9% | 84.8% |
 | EBITDA | $28.2bn | $47.0bn |
-| EPS | $152.77 | $265.67 |
+| EPS | $152.90 | $267.18 |
 | Capex | $459m | $1.3bn |
 | OCF (≈EBITDA) | $28.2bn | $47.0bn |
 

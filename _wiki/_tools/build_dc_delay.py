@@ -9,6 +9,10 @@ Writes  _wiki/_data/dc_projects/projects.csv      merged + validated registry
         _wiki/_data/dc_projects/model_output.json per-phase results, aggregates, guardrails
         _wiki/_data/dc_projects/validation.txt    schema problems found while merging
         _wiki/_dashboards/dc-delay-risk.html      the dashboard
+        _wiki/_data/dc_projects/history/          with --checkpoint: <timestamp>.json snapshot + changelog.jsonl (diff vs the
+                                                  previous checkpoint, old and new values). The weekly monitor lane
+                                                  (dc_monitor.py) checkpoints once per run; every build shows the diff since
+                                                  the newest checkpoint plus the logged weeks ("What moved").
 
 Bucket logic (per phase, per scenario) — mirrors the Capstone internal deck's waterfall:
   1 energized   phase_status == energized, or cod_base before the as-of month
@@ -663,8 +667,136 @@ def guardrails(rows, results, aggs, rules) -> list[dict]:
     return out
 
 
+# ----------------------------------------------------------------------------- broker views (tabs on the page)
+def broker_views(rows: list[dict], rules: dict) -> list[dict]:
+    """_data/dc_projects/broker/*.json (hand-built from a broker note) + for each state chart player what the registry
+    holds under the same name (developer field, regex in the file's registry_aliases): MW as reported by phase status,
+    IT-eq total, and the registry developers in that state that match no charted player."""
+    import re
+    out = []
+    for path in sorted(glob.glob(os.path.join(DATA, "broker", "*.json"))):
+        doc = json.load(open(path, encoding="utf-8"))
+        al = {k: re.compile(v, re.I) for k, v in doc.get("registry_aliases", {}).items() if not k.startswith("_")}
+        cmp_ = {}
+        for st, charts in doc.get("states", {}).items():
+            if st.startswith("_"):
+                continue
+            srows = [r for r in rows if r["state"] == st and r["likelihood"] != "low"]
+            players = [p["player"] for p in charts["total"]]
+            used, res = set(), {}
+            for pl in players:
+                rx = al.get(pl)
+                hit = [r for r in srows if rx and rx.search(r["developer"])]
+                used |= {r["project_id"] for r in hit}
+                d = {"n": len(hit), "it": round(sum(it_eq(r, rules) for r in hit))}
+                for ps in ("energized", "under_construction", "not_started"):
+                    d[ps] = round(sum(r["_mw"] for r in hit if r["phase_status"] == ps))
+                d["bases"] = sorted({r["mw_basis"] or "unknown" for r in hit})
+                res[pl] = d
+            other = defaultdict(lambda: {"mw": 0.0, "uc": 0.0, "n": 0})
+            for r in srows:
+                if r["project_id"] in used:
+                    continue
+                o = other[(r["developer"] or "?").split(";")[0].split("(")[0].strip()[:40]]
+                o["mw"] += r["_mw"]
+                o["n"] += 1
+                if r["phase_status"] == "under_construction":
+                    o["uc"] += r["_mw"]
+            res["_unmatched"] = sorted(({"dev": k, "mw": round(v["mw"]), "uc": round(v["uc"]), "n": v["n"]} for k, v in other.items()),
+                                       key=lambda x: -x["mw"])[:15]
+            cmp_[st] = res
+        doc["registry_cmp"] = cmp_
+        doc["_file"] = os.path.relpath(path, os.path.dirname(os.path.dirname(DATA))).replace("\\", "/")
+        out.append(doc)
+    return out
+
+
+# ----------------------------------------------------------------------------- week-over-week history
+HIST = os.path.join(DATA, "history")
+SNAP_F = ("campus", "phase", "st", "city", "mw", "basis", "cs", "ps", "lk", "cod", "codsrc", "pw", "air", "ic", "loc")
+
+
+def snapshot(model: dict, aggs: dict, scen_ids: list[str]) -> dict:
+    """Compact state of the model: one record per phase (fields + bucket/new date per scenario) + headline totals."""
+    import datetime as _dt
+    rows = {}
+    for p in model["phases"]:
+        rows[p["id"]] = {**{f: p[f] for f in SNAP_F}, "it": p["it"], "u": p["u"],
+                         "res": {s: [p["res"][s]["b"], p["res"][s]["n"]] for s in scen_ids},
+                         "src": (p["src"] or "")[:300], "sd": p["sd"]}
+    tot = {s: {u: {"total": round(aggs[s][u]["total"], 2), "energized": round(aggs[s][u]["wf"]["energized"], 2),
+                   "delayed": round(aggs[s][u]["wf"]["delayed"], 2), "to_2031": round(aggs[s][u]["to_2031"], 2)}
+               for u in ("construction", "pipeline", "scaled")} for s in scen_ids}
+    return {"ts": _dt.datetime.now().strftime("%Y-%m-%dT%H:%M"), "as_of": model["as_of"], "rows": rows, "tot": tot}
+
+
+def latest_checkpoint() -> dict | None:
+    names = sorted(f for f in os.listdir(HIST) if f[:4].isdigit() and f.endswith(".json")) if os.path.isdir(HIST) else []
+    return json.load(open(os.path.join(HIST, names[-1]), encoding="utf-8")) if names else None
+
+
+def diff_snap(old: dict, new: dict, scen_ids: list[str]) -> dict:
+    o, n = old["rows"], new["rows"]
+    common = sorted(o.keys() & n.keys())
+    pick = lambda r, k: {"id": k, "campus": r["campus"], "phase": r["phase"], "st": r["st"], "city": r["city"], "it": r["it"],
+                         "cod": r["cod"], "ps": r["ps"], "u": r["u"], "res": r["res"], "src": r["src"], "sd": r["sd"]}
+    changed = []
+    for k in common:
+        fc = {f: [o[k].get(f), n[k].get(f)] for f in SNAP_F if f not in ("campus", "phase", "city") and o[k].get(f) != n[k].get(f)}
+        if fc:
+            changed.append({"id": k, "campus": n[k]["campus"], "phase": n[k]["phase"], "st": n[k]["st"], "it": n[k]["it"],
+                            "u": n[k]["u"], "f": fc, "src": n[k]["src"], "sd": n[k]["sd"]})
+    moves = {s: [{"id": k, "campus": n[k]["campus"], "phase": n[k]["phase"], "st": n[k]["st"], "it": n[k]["it"], "u": n[k]["u"],
+                  "from": o[k]["res"].get(s), "to": n[k]["res"][s]}
+                 for k in common if o[k]["res"].get(s) != n[k]["res"].get(s)] for s in scen_ids}
+    tot = {s: {u: {m: [old.get("tot", {}).get(s, {}).get(u, {}).get(m), v] for m, v in d.items()} for u, d in new["tot"][s].items()}
+           for s in scen_ids}
+    return {"base": old["ts"], "head": new["ts"], "as_of": [old.get("as_of"), new.get("as_of")],
+            "new": [pick(n[k], k) for k in sorted(n.keys() - o.keys())],
+            "dropped": [pick(o[k], k) for k in sorted(o.keys() - n.keys())],
+            "changed": changed, "moves": moves, "tot": tot}
+
+
+def is_empty(d: dict) -> bool:
+    return not (d["new"] or d["dropped"] or d["changed"] or any(d["moves"].values()))
+
+
+def history(model: dict, aggs: dict, scen_ids: list[str], checkpoint: bool) -> dict:
+    """live = diff vs the newest checkpoint; log = past checkpoint diffs (history/changelog.jsonl, newest first).
+    --checkpoint appends the live diff to the changelog and saves the current state as the new checkpoint."""
+    cur = snapshot(model, aggs, scen_ids)
+    last = latest_checkpoint()
+    live = diff_snap(last, cur, scen_ids) if last else None
+    logp = os.path.join(HIST, "changelog.jsonl")
+    if checkpoint:
+        os.makedirs(HIST, exist_ok=True)
+        if live is not None and not is_empty(live):
+            with open(logp, "a", encoding="utf-8", newline="\n") as fh:
+                fh.write(json.dumps(live, ensure_ascii=False, separators=(",", ":")) + "\n")
+        with open(os.path.join(HIST, cur["ts"].replace(":", "") + ".json"), "w", encoding="utf-8", newline="\n") as fh:
+            json.dump(cur, fh, ensure_ascii=False, separators=(",", ":"))
+        snaps = sorted(f for f in os.listdir(HIST) if f[:4].isdigit() and f.endswith(".json"))
+        for f in snaps[:-12]:            # the changelog keeps every diff; full snapshots only for the last 12 checks
+            os.remove(os.path.join(HIST, f))
+        print(f"checkpoint {cur['ts']}" + (f" · logged diff vs {live['base']}" if live and not is_empty(live) else " · baseline (nothing to log)"))
+        live = None
+    log = []
+    if os.path.exists(logp):
+        log = [json.loads(x) for x in open(logp, encoding="utf-8") if x.strip()][::-1][:8]
+    mon = {}
+    try:
+        mon = json.load(open(os.path.join(DATA, "monitor", "state.json"), encoding="utf-8"))
+        run = os.path.join(DATA, "monitor", "runs", mon.get("last_poll", ""))
+        if os.path.exists(os.path.join(run, "review.md")):
+            mon["review_file"] = f"_wiki/_data/dc_projects/monitor/runs/{mon['last_poll']}/review.md"
+    except (OSError, ValueError):
+        pass
+    return {"live": live if live and not is_empty(live) else None, "since": last["ts"] if last else None, "log": log, "monitor": mon}
+
+
 # ----------------------------------------------------------------------------- main
 def main() -> int:
+    checkpoint = "--checkpoint" in sys.argv
     problems: list[str] = []
     rules = json.load(open(os.path.join(DATA, "state_rules.json"), encoding="utf-8"))
     locals_doc = json.load(open(os.path.join(DATA, "local_moratoria.json"), encoding="utf-8"))
@@ -731,6 +863,8 @@ def main() -> int:
              "scenarios": {s: rules["scenarios"][s] for s in scen_ids},
              "aggs": rnd(aggs), "checks": checks, "rules": public_rules, "locals": locals_doc, "calib": rules["_calib"],
              "phases": phases, "problems": problems[:400]}
+    model["moved"] = history(model, aggs, scen_ids, checkpoint)
+    model["broker"] = broker_views(rows, rules)
     with open(os.path.join(DATA, "model_output.json"), "w", encoding="utf-8") as fh:
         json.dump(model, fh, ensure_ascii=False, indent=1)
 
