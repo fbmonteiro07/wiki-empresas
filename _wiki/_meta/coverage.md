@@ -1,6 +1,6 @@
 # Source-coverage audit
 
-_Generated 2026-11-05 · 116 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
+_Generated 2026-11-05 · 115 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
 
 **15 pages flagged** (severity > 0), worst first.
 
@@ -16,10 +16,10 @@ _Generated 2026-11-05 · 116 public-company pages · flags inputs that exist on 
 | 5.0 | FSLY | 3898 | 18 | — | 2026-08-05 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-05 unread (no same-qtr transcript either) |
 | 5.0 | MP | 887 | 9 | — | 2026-08-06 | ✗ | 1/0 | 0/0 | latest transcript 2026-08-06 unread; latest 10-Q 2026-08-07 unread (no same-qtr transcript either) |
 | 5.0 | POWI | 720 | 12 | — | 2026-08-05 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-05 unread; latest 10-Q 2026-08-06 unread (no same-qtr transcript either) |
-| 3.0 | TM | 3224 | 11 | 92.1 | 2026-08-04 | ✗ | 0/0 | 0/16 | latest transcript 2026-08-04 unread |
+| 3.0 | TM | 3489 | 12 | 99.7 | 2026-08-04 | ✗ | 0/0 | 0/16 | latest transcript 2026-08-04 unread |
 | 3.0 | WOLF | 9415 | 26 | 503.2 | 2026-08-19 | ✗ | 0/0 | 0/0 | latest transcript 2026-08-19 unread |
 | 3.0 | BESI | 29943 | 54 | 3129.3 | 2026-07-23 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-23 unread |
 | 2.0 | AGX | 4022 | 15 | 146.6 | 2026-06-04 | ✓ | 0/0 | 1/1 | latest 10-Q 2026-09-02 unread (no same-qtr transcript either) |
-| 2.0 | CSCO | 33094 | 73 | 485.0 | 2026-08-12 | ✓ | 4/2 | 2/17 | latest 10-Q 2026-05-19 unread (no same-qtr transcript either) |
+| 2.0 | CSCO | 33953 | 74 | 497.3 | 2026-08-12 | ✓ | 4/2 | 2/17 | latest 10-Q 2026-05-19 unread (no same-qtr transcript either) |
 
 _Density = (words + 25·citations) / (filings+transcripts+calls+briefings+decks). Low density + high material = thin synthesis. 'Calls used' = `_equity_calls` links / available (a low ratio is fine if the page links a representative subset)._

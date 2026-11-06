@@ -1,30 +1,44 @@
 {
   "asof": "2026-11-05",
-  "latest_reconciliation": "reconciliation-2026-11-02-inbox.md",
+  "latest_reconciliation": "reconciliation-2026-11-05-inbox.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 43,
-    "active": 43,
-    "high": 1,
-    "belief_changes": 3,
-    "focus_names": 35
+    "signals": 48,
+    "active": 48,
+    "high": 3,
+    "belief_changes": 4,
+    "focus_names": 38
   },
   "focus": [
     {
-      "ticker": "GOOG",
-      "focus_score": 78,
+      "ticker": "AMZN",
+      "focus_score": 85,
       "in_book": true,
-      "signal_count": 2,
+      "signal_count": 1,
       "high_count": 1,
       "sector": "AI — Hyperscalers & Software",
+      "thesis": "AWS re-acceleration (+28%) + in-house silicon (Trainium); debate = $200B capex/ROIC.",
+      "next_catalyst": "",
+      "why": [
+        "AMZN — derived thesis/debate state changed since the prior daily snapshot"
+      ]
+    },
+    {
+      "ticker": "GOOG",
+      "focus_score": 80,
+      "in_book": true,
+      "signal_count": 3,
+      "high_count": 2,
+      "sector": "AI — Hyperscalers & Software",
       "thesis": "Full-stack compounder (Search +17%, Cloud +82%); debate is valuation and capital intensity, not demand.",
-      "next_catalyst": "2026-11-18",
+      "next_catalyst": "2026-11-05",
       "why": [
         "GOOG — 2026 revenue house view is 18% above consensus",
+        "GOOG — 2026-11-05: TPU benchmark and permitting watch items: (1) SemiAnalysis's TPUv8i AgentX results, \"which…",
         "GOOG — 2026-11-18: post-print watch items from the callbacks: (1) 4Q Cloud margin, where Sandler expects the…"
       ]
     },
@@ -190,6 +204,20 @@
       ]
     },
     {
+      "ticker": "CRWD",
+      "focus_score": 51,
+      "in_book": false,
+      "signal_count": 2,
+      "high_count": 0,
+      "sector": "Software / security / internet",
+      "thesis": "Falcon consolidation flywheel + Charlotte AI; net-new ARR re-accel; valuation/crowding + 2024-outage tail the bear.",
+      "next_catalyst": "2026-11-05",
+      "why": [
+        "CRWD — 2026-11-05: SafeMind commercial timing and two pending deals (Fal.Con Europe keynote, 2026-11-03):…",
+        "CRWD — 2026-12-02: PRE-REGISTERED TEST T2 — F3Q27 print ~2026-12-02: net new ARR ≥ ~$378m (guide-implied…"
+      ]
+    },
+    {
       "ticker": "LITE",
       "focus_score": 51,
       "in_book": false,
@@ -213,6 +241,32 @@
       "next_catalyst": "2026-11-10",
       "why": [
         "FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail…"
+      ]
+    },
+    {
+      "ticker": "ORCL",
+      "focus_score": 49,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI — Hyperscalers & Software",
+      "thesis": "Turned into an AI-infra hyperscaler (RPO $638B/+363%); bear = dot-com-peak capex/sales + dilution.",
+      "next_catalyst": "2026-11-05",
+      "why": [
+        "ORCL — 2026-11-05: the hearing date moves to DECEMBER (UNCONFIRMED insider, call recorded 2026-10-23): a new…"
+      ]
+    },
+    {
+      "ticker": "TSLA",
+      "focus_score": 49,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Consumer / Internet / Other",
+      "thesis": "Rotating from EV volume to autonomy/robotics re-rate (FSD, Optimus, Terafab); MS EW $415, JPM just to Neutral.",
+      "next_catalyst": "2026-11-05",
+      "why": [
+        "TSLA — 2026-11-05: ROBOTAXI SCALE CHECK FROM AN AV TRACKER: FORT WORTH BECAME THE 7th UNSUPERVISED CITY ON…"
       ]
     },
     {
@@ -400,19 +454,6 @@
       ]
     },
     {
-      "ticker": "CRWD",
-      "focus_score": 25,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Software / security / internet",
-      "thesis": "Falcon consolidation flywheel + Charlotte AI; net-new ARR re-accel; valuation/crowding + 2024-outage tail the bear.",
-      "next_catalyst": "2026-12-02",
-      "why": [
-        "CRWD — 2026-12-02: PRE-REGISTERED TEST T2 — F3Q27 print ~2026-12-02: net new ARR ≥ ~$378m (guide-implied…"
-      ]
-    },
-    {
       "ticker": "GLW",
       "focus_score": 25,
       "in_book": false,
@@ -479,6 +520,88 @@
     }
   ],
   "signals": [
+    {
+      "id": "beli-4b51d276424a",
+      "asof": "2026-11-05",
+      "source_date": "2026-11-05",
+      "type": "narrative_shift",
+      "priority": "high",
+      "score": 80,
+      "title": "AMZN — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "AMZN"
+      ],
+      "in_book": [
+        "AMZN"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "verification (transcription QA): 11-05 Sinal update — \"a16z hosts name Amazon as restricting agent access\" → \"an a16z speaker (UNCONFIRMED, likely Acharya)\" (YouTube ASR has no speaker labels). All a16z and SemiAnalysis Ep. 043 quotes, figures (354, 35%) and timestamps checked against the transcripts; no other change.",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the AMZN thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "networking",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "AMZN",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "Atlas vs DynamoDB",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs Redshift",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AAOI",
+          "relation": "supplier",
+          "detail": "optical transceivers",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "AGX",
+          "relation": "supplier",
+          "detail": "EPC gas power",
+          "from": "AMZN",
+          "in_book": false
+        },
+        {
+          "ticker": "ALAB",
+          "relation": "supplier",
+          "detail": "PCIe/CXL",
+          "from": "AMZN",
+          "in_book": false
+        }
+      ],
+      "source": "AMZN page Changelog 2026-11-05",
+      "evidence_paths": [
+        "AMZN.md"
+      ],
+      "evidence_anchor": "verification (transcription QA): 11-05 Sinal update — \"a16z hosts name Amazon as restricting agent access\" → \"an a16z speaker (UNCONFIRMED, likely Acharya)\" (YouTube ASR has no speaker labels). All a16z and SemiAnalysis Ep. 043 quotes, figures (354, 35%) and timestamps checked against the transcripts; no other change.",
+      "origin": "belief_diff",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
     {
       "id": "esti-08489ebe8988",
       "asof": "2026-11-05",
@@ -569,6 +692,90 @@
       "hidden": false
     },
     {
+      "id": "cata-8aa81f491c63",
+      "asof": "2026-11-05",
+      "source_date": "2026-11-05",
+      "event_date": "2026-11-05",
+      "type": "catalyst",
+      "priority": "high",
+      "score": 69,
+      "title": "GOOG — 2026-11-05: TPU benchmark and permitting watch items: (1) SemiAnalysis's TPUv8i AgentX results, \"which…",
+      "tickers": [
+        "GOOG"
+      ],
+      "in_book": [
+        "GOOG"
+      ],
+      "impact": "high",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕 2026-11-05 (/run-inbox) — TPU benchmark and permitting watch items: (1) SemiAnalysis's TPUv8i AgentX results, \"which we will be benchmarking very soon\", against Rubin NVL72; TPUv8 brings n",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "custom ASIC (TPU)",
+          "from": "GOOG",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "GOOG",
+          "in_book": true
+        },
+        {
+          "ticker": "SNOW",
+          "relation": "competitor",
+          "detail": "warehouse vs BigQuery",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "ANTHROPIC",
+          "relation": "customer",
+          "detail": "TPU compute",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "BE",
+          "relation": "supplier",
+          "detail": "on-site fuel cells",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "CIEN",
+          "relation": "supplier",
+          "detail": "DCI/optical",
+          "from": "GOOG",
+          "in_book": false
+        },
+        {
+          "ticker": "COHR",
+          "relation": "supplier",
+          "detail": "optical",
+          "from": "GOOG",
+          "in_book": false
+        }
+      ],
+      "source": "GOOG page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "GOOG.md"
+      ],
+      "evidence_anchor": "🆕 2026-11-05 (/run-inbox) — TPU benchmark and permitting watch items: (1) SemiAnalysis's TPUv8i AgentX results, \"which we will be benchmarking very soon\", against Rubin NVL72; TPUv8 brings n",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "beli-cf1743d4553b",
       "asof": "2026-11-05",
       "source_date": "2026-11-05",
@@ -642,7 +849,7 @@
       "impact": "medium",
       "urgency": "immediate",
       "confidence": "high",
-      "why_now": "ingest (Notion, 2026-11-04UBSAMD-3Q26-recap-call-server-CPU-warrant-dilution-Arcuri-Ruple.md): 1 Debate bullet (8 sub-bullets) at the top of Debate / thesis — relayed 3Q split (DC GPU ~$3.8bn / server ~$4.4-4.45bn) and 4Q back-out (server ~$6-6.1bn / DC GPU ~$6.7-6.8bn); UBS 2027 server CPU ~$39-40bn (+125%), DC GPU ~$43bn, DC \"low 80s\"; N2-only supply flexibility + substrate diversification vs Intel (Ibiden); ~40 small custom programs + MI500/MI600 semi-custom gray area + Jalapeño head node; relayed warrant rule…",
+      "why_now": "run-inbox: SemiAnalysis \"The Iron(wood) Throne\" (11-05) → 1 Intra-quarter row (top) + 1 Síntese UPDATE: MI355X behind TPUv7 FP8 on AgentX perf/$ (GLM-5.2 1.2-2.7x, Kimi K3 1.15-2.5x, shared with B200/B300); AMD MonoKernel 2,459 → 210 launches, 2.31x at batch 1 on 8× MI350X (AMD-reported); OSS-support comparison vs NVIDIA. Superseded: none.",
       "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
       "action": "Re-grade the AMD thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
       "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
@@ -701,7 +908,7 @@
       "evidence_paths": [
         "AMD.md"
       ],
-      "evidence_anchor": "ingest (Notion, 2026-11-04UBSAMD-3Q26-recap-call-server-CPU-warrant-dilution-Arcuri-Ruple.md): 1 Debate bullet (8 sub-bullets) at the top of Debate / thesis — relayed 3Q split (DC GPU ~$3.8bn / server ~$4.4-4.45bn) and 4Q back-out (server ~$6-6.1bn / DC GPU ~$6.7-6.8bn); UBS 2027 server CPU ~$39-40bn (+125%), DC GPU ~$43bn, DC \"low 80s\"; N2-only supply flexibility + substrate diversification vs Intel (Ibiden); ~40 small custom programs + MI500/MI600 semi-custom gray area + Jalapeño head node; relayed warrant rule…",
+      "evidence_anchor": "run-inbox: SemiAnalysis \"The Iron(wood) Throne\" (11-05) → 1 Intra-quarter row (top) + 1 Síntese UPDATE: MI355X behind TPUv7 FP8 on AgentX perf/$ (GLM-5.2 1.2-2.7x, Kimi K3 1.15-2.5x, shared with B200/B300); AMD MonoKernel 2,459 → 210 launches, 2.31x at batch 1 on 8× MI350X (AMD-reported); OSS-support comparison vs NVIDIA. Superseded: none.",
       "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
@@ -1524,6 +1731,46 @@
       "hidden": false
     },
     {
+      "id": "cata-e26302d89093",
+      "asof": "2026-11-05",
+      "source_date": "2026-11-05",
+      "event_date": "2026-11-05",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "CRWD — 2026-11-05: SafeMind commercial timing and two pending deals (Fal.Con Europe keynote, 2026-11-03):…",
+      "tickers": [
+        "CRWD"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕 2026-11-05 — SafeMind commercial timing and two pending deals (Fal.Con Europe keynote, 2026-11-03): direct model access to Red Tempest and Blue Solano \"in Q4\" (Kurtz [00:34:46]); Blue Solano p",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "OKTA",
+          "relation": "competitor",
+          "detail": "agentic identity",
+          "from": "CRWD",
+          "in_book": false
+        }
+      ],
+      "source": "CRWD page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "CRWD.md"
+      ],
+      "evidence_anchor": "🆕 2026-11-05 — SafeMind commercial timing and two pending deals (Fal.Con Europe keynote, 2026-11-03): direct model access to Red Tempest and Blue Solano \"in Q4\" (Kurtz [00:34:46]); Blue Solano p",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
       "id": "cata-30cf21294c0d",
       "asof": "2026-11-05",
       "source_date": "2026-11-10",
@@ -1558,6 +1805,114 @@
         "FLEX.md"
       ],
       "evidence_anchor": "🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands. Flex said \"more strategy details will be shared at an Innovation Day event on November 10, 2026",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-022f63dbb64a",
+      "asof": "2026-11-05",
+      "source_date": "2026-11-05",
+      "event_date": "2026-11-05",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "ORCL — 2026-11-05: the hearing date moves to DECEMBER (UNCONFIRMED insider, call recorded 2026-10-23): a new…",
+      "tickers": [
+        "ORCL"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕 2026-11-05 — the hearing date moves to DECEMBER (UNCONFIRMED insider, call recorded 2026-10-23): a new NMED hearing officer has the air-permit hearing set for Dec. 5, with an opinion hoped f",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "AVGO",
+          "relation": "supplier",
+          "detail": "networking",
+          "from": "ORCL",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "ORCL",
+          "in_book": true
+        },
+        {
+          "ticker": "MDB",
+          "relation": "competitor",
+          "detail": "operational database",
+          "from": "ORCL",
+          "in_book": false
+        },
+        {
+          "ticker": "AMD",
+          "relation": "supplier",
+          "detail": "MI GPUs",
+          "from": "ORCL",
+          "in_book": false
+        },
+        {
+          "ticker": "OPENAI",
+          "relation": "customer",
+          "detail": "OCI compute",
+          "from": "ORCL",
+          "in_book": false
+        }
+      ],
+      "source": "ORCL page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "ORCL.md"
+      ],
+      "evidence_anchor": "🆕 2026-11-05 — the hearing date moves to DECEMBER (UNCONFIRMED insider, call recorded 2026-10-23): a new NMED hearing officer has the air-permit hearing set for Dec. 5, with an opinion hoped f",
+      "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "cata-91d02e790bd5",
+      "asof": "2026-11-05",
+      "source_date": "2026-11-05",
+      "event_date": "2026-11-05",
+      "type": "catalyst",
+      "priority": "medium",
+      "score": 49,
+      "title": "TSLA — 2026-11-05: ROBOTAXI SCALE CHECK FROM AN AV TRACKER: FORT WORTH BECAME THE 7th UNSUPERVISED CITY ON…",
+      "tickers": [
+        "TSLA"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "medium",
+      "why_now": "🆕 2026-11-05 — ROBOTAXI SCALE CHECK FROM AN AV TRACKER: FORT WORTH BECAME THE 7th UNSUPERVISED CITY ON 11-02; 1,204 TESLA ROBOTAXIS REGISTERED IN TEXAS vs WAYMO'S 1,259; CYBERCAB DALLAS (NOV) AND TH",
+      "belief_update": "A dated event can resolve or reframe an open debate.",
+      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
+      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
+      "readthrough": [
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "TSLA",
+          "in_book": true
+        }
+      ],
+      "source": "TSLA page catalyst ledger; underlying source/date retained in the catalyst text",
+      "evidence_paths": [
+        "_meta/catalysts.md",
+        "TSLA.md"
+      ],
+      "evidence_anchor": "🆕 2026-11-05 — ROBOTAXI SCALE CHECK FROM AN AV TRACKER: FORT WORTH BECAME THE 7th UNSUPERVISED CITY ON 11-02; 1,204 TESLA ROBOTAXIS REGISTERED IN TEXAS vs WAYMO'S 1,259; CYBERCAB DALLAS (NOV) AND TH",
       "origin": "catalyst_calendar",
       "feedback": "",
       "feedback_note": "",

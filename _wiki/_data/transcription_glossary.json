@@ -6398,75 +6398,264 @@
    "rule": "ASR of Inphi.",
    "ci": false,
    "first_seen": "2026-11-05 (Notion: Jefferies MRVL/LITE CEO fireside 2026-11-03)"
-  }
- },
- "summary_traps": [
-  "The Notion AI summary inherits every transcript garble AND adds its own: it expanded 'MPO' to 'Module-Pluggable Optics' (2026-09-28), moved a guidance year (fiscal 2025 vs 2028, LITE 2026-09-18), invented a '<15% of industry TAM' sentence (2026-09-18), rendered 'funding short' as 'valuation short' (2026-09-18), hung Meta's $200-300bn figure on AppLovin (2026-09-22), credited the HOST's numbers to the guest (BofA/Bajarin 2026-09-24), and computed its own '~15% CAGR' (Scala 2026-09-24).",
-  "Speakers are unlabeled: questions (Capstone/other investors) and answers run together; the host's arithmetic assented with a 'yeah' is not the guest's number.",
-  "2026-10-02: Archera/Khanna call - the summary hangs the spoken commitment-growth marks on named clouds (Google 48.5%, AWS 38%, Azure 39.5%); the transcript speaks them as running rates (~45%->48.5% for one cloud, 36.5%->39.5% for another, consumption ~41%) with the cloud named in the surrounding sentence - map each figure to its cloud IN the transcript, never from the summary; the '300-400% mainframe migration volume' is ONE reseller PARTNER's volume (per Khanna), not Archera's total, and '$1 million minimum MAC/PPA' is spoken as a mid-quarter hyperscaler rule for GPU access. AVGO/Arcuri recap - the summary credits Arcuri's relayed statements to Broadcom management and adds 'Jalapeno', 'Sunfish v5', '440s and 430s' that grep does not find in the transcript.",
-  "2026-10-14 (GS Alec Phillips meeting): the summary wrote 'Michigan Senate race (Abdullah al-Saeed vs. Susan Collins-equivalent dynamic)' - conflating the Michigan (El-Sayed) and Maine (Collins) races - and 'expected to accelerate in 2025' for data-center deals pushed to January (next year = 2027). Check polling-error coefficients ('37 bp', '0.7') against the transcript before use.",
-  "2026-10-16: the Notion summary (a) retitled Micron's post-F4Q26 IR call 'Post-3Q FY26' (wrong fiscal quarter) and hung the reported '$33B free cash flow' on 'Fiscal Q1 27' (the transcript says 'the last quarter we reported' = F4Q26; FQ1'27 is only 'significantly stronger'); (b) wrote CXMT's 2025 capacity add as '$45K' - it is 45K wafers per month, not dollars; (c) fused an audience question ('$60 to $64 billion ... brokers see 2028 capex higher than $105') with the expert's conditional '$100 billion' arithmetic into one 'CapEx trajectory' bullet (BTGP TSMC expert).",
-  "2026-10-19: the Notion summary of the JPM TSMC replay wrote 'Amkor (EMA technology)' / 'V9 locked in with Amkor' - the transcript says only 'use EMA when TSMC go off in 27 and 28' and never names Amkor (fabricated entity). Lesson for the lane itself: grep transcripts case-insensitively before declaring a summary figure absent - 'Backlog where we look at Google and Amazon both at $500 billion' IS in the JPM Internet transcript (capitalised).",
-  "2026-10-19: the JPM Internet Zoom host introduced 'eBay, slide 36' while the content (Depop dilution, 2-year GMS stack, Vinted) is Etsy — a HOST slip the Notion summary copied; ticker confusion is a trap even when the transcript is right.",
-  "2026-10-22: (a) the Notion summary of the Wells Fargo TXN/LRCX recap wrote 'Lam's CEO Doug' - Doug Bettinger is Lam's CFO (CEO Tim Archer); it also presented a QUESTIONER's premise ('AI is contributing about 10% to their growth') as TI's statement; (b) the ASML callback summary turned the analyst's estimates into 'guidance' ('Gross margin guidance of 57%+', 'ASP guidance') and wrote 'likely 7-9 units' for High-NA 2028 where the transcript says 'high single digit'; (c) the META recap summary stated the analyst's guesses ('credit spreads tighten', 'raise within next week') as conclusions and dropped the unit on '$31-32 to $32-33' (2027 EPS, buy-side); (d) the StoneX Jain summary credited the HOST's '$50 billion per gigawatt' data-center cost to the discussion and extrapolated 'labs hire aggressively for AI-native chip design' from one job-postings remark; (e) the Jefferies Curtis summary credited the HOST's flow colour ('long-only selling and hedge fund shorting ~12 weeks', 'WFE $300B in 2028') to Blayne and wrote 'AEC/VCSEL-based' where the transcript says 'ALCs' (unresolved).",
-  "2026-10-26 UBS SemiBytes (Arcuri): the summary printed SMH \"closed Friday at $5.27\" - the transcript says \"5, uh, 5.27\" and the arithmetic (21x x $25.23 = ~$530) makes it ~$527; it also wrote \"IFS startup costs\" where the transcript says \"AT&A\" (= 18A)."
- ],
- "Fenyman": {
-  "correct": "Feynman (NVIDIA 2028 GPU generation)",
-  "domain": "products",
-  "rule": "Desk-note spelling.",
-  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
- },
- "Fukikura": {
-  "correct": "Fujikura (5803.T, optical cables / components)",
-  "domain": "names",
-  "rule": "Desk-note spelling.",
-  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
- },
- "PFTE": {
-  "correct": "PTFE (polytetrafluoroethylene laminate, CCL context)",
-  "domain": "acronyms",
-  "rule": "Letter transposition in typed notes.",
-  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
- },
- "D2Q": {
-  "correct": "D2W (direct-to-wafer hybrid bonding) when the sentence is about HBM hybrid bonding",
-  "domain": "acronyms",
-  "rule": "Typed-note slip; the body text says 'direct to wafer approach'.",
-  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
- },
- "NVL 572": {
-  "correct": "NVL576 (NVIDIA Rubin Ultra 576-GPU pod)",
-  "domain": "products",
-  "rule": "Typed-note slip; 572 is not an NVIDIA configuration.",
-  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
- },
- "Taycan": {
-  "correct": "Titan (NVIDIA two-rack Rubin Ultra option) in a rack-design sentence; the NVDA page already names it Titan",
-  "domain": "products",
-  "rule": "Relay/ASR spelling seen in the 07-28 / 08-03 Fubon relays and in the 09-22 desk deck; keep 'Taycan' only for the Porsche.",
-  "keep_when": [
-   "Porsche"
-  ],
-  "first_seen": "2026-07-28 (Fubon relays via Jefferies); also 2026-09-22 desk deck"
- },
- "Tycan": {
-  "correct": "Titan (NVIDIA two-rack Rubin Ultra option)",
-  "domain": "products",
-  "rule": "see 'Taycan'",
-  "first_seen": "2026-08-03 (Fubon / Sherman Shang call, machine transcript)"
- },
- "TELSA": {
-  "correct": "Tesla",
-  "domain": "names",
-  "rule": "Typed-note transposition.",
-  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
- },
- "100KJ": {
-  "correct": "100K (racks) — stray character in typed notes",
-  "domain": "units",
-  "rule": "Typed-note slip on the Google-TPU-rack slide ('135K cv 100KJ for Nvidia').",
-  "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)",
+  },
+  "TVPN": {
+   "correct": "TBPN (tech livestream show)",
+   "domain": "names",
+   "rule": "YouTube ASR ('record an episode every like TVPN style').",
+   "first_seen": "2026-11-05 (a16z \"The New AI Agents That Shop, Plan, and Gossip\", 2026-11-04, YouTube ASR)"
+  },
+  "Chacht": {
+   "correct": "ChatGPT",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR spelling. See 'chatbt', 'chat GBT'.",
+   "first_seen": "2026-11-05 (a16z \"The New AI Agents That Shop, Plan, and Gossip\", 2026-11-04, YouTube ASR)"
+  },
+  "Chad T": {
+   "correct": "ChatGPT",
+   "domain": "names",
+   "rule": "ASR spelling ('all of a sudden Chad T was like a soccer fiend'). See 'Chad GPT'.",
+   "first_seen": "2026-11-05 (a16z \"The New AI Agents That Shop, Plan, and Gossip\", 2026-11-04, YouTube ASR)"
+  },
+  "malt book": {
+   "correct": "Moltbook (AI-agent social network)",
+   "domain": "names",
+   "ci": true,
+   "rule": "See 'Maltbook'.",
+   "first_seen": "2026-11-05 (a16z \"The New AI Agents That Shop, Plan, and Gossip\", 2026-11-04, YouTube ASR)"
+  },
+  "ELSAT": {
+   "correct": "LSAT (law-school admission test)",
+   "domain": "names",
+   "rule": "ASR spelling.",
+   "first_seen": "2026-11-05 (a16z \"The New AI Agents That Shop, Plan, and Gossip\", 2026-11-04, YouTube ASR)"
+  },
+  "Patrick Hollison": {
+   "correct": "Patrick Collison (Stripe CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Collison ('Patrick Hollison's tweet').",
+   "first_seen": "2026-11-05 (a16z \"The New AI Agents That Shop, Plan, and Gossip\", 2026-11-04, YouTube ASR)"
+  },
+  "Shane Mack": {
+   "correct": "Shane Mac (XMTP co-founder) - likely; context = agent trust/permissions",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR spelling; identity inferred from context, treat as likely.",
+   "first_seen": "2026-11-05 (a16z \"The New AI Agents That Shop, Plan, and Gossip\", 2026-11-04, YouTube ASR)"
+  },
+  "John Gisham": {
+   "correct": "John Grisham (author)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR spelling.",
+   "first_seen": "2026-11-05 (a16z \"The New AI Agents That Shop, Plan, and Gossip\", 2026-11-04, YouTube ASR)"
+  },
+  "Amazon B": {
+   "correct": "Amazon Bee (ambient-listening wearable)",
+   "domain": "products",
+   "keep_when": [
+    "Amazon B2B",
+    "Amazon Business"
+   ],
+   "rule": "ASR ('it's like Amazon B. It's a 24/7 ambient listener').",
+   "first_seen": "2026-11-05 (a16z \"The New AI Agents That Shop, Plan, and Gossip\", 2026-11-04, YouTube ASR)"
+  },
+  "Way Joe": {
+   "correct": "UNRESOLVED (smart-home hardware maker that released an MCP) - do not carry",
+   "domain": "names",
+   "rule": "flag only.",
+   "first_seen": "2026-11-05 (a16z \"The New AI Agents That Shop, Plan, and Gossip\", 2026-11-04, YouTube ASR)"
+  },
+  "aircott": {
+   "correct": "ERCOT",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of ERCOT ('an aircott interconnection audit').",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "aircot": {
+   "correct": "ERCOT",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of ERCOT ('the aircot interconnection Q audit' = ERCOT interconnection queue audit).",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "TCAQ": {
+   "correct": "TCEQ (Texas Commission on Environmental Quality)",
+   "domain": "names",
+   "rule": "YouTube ASR of TCEQ (Texas air-permit freeze, Sept 2026).",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "TCQ": {
+   "correct": "TCEQ (Texas Commission on Environmental Quality)",
+   "domain": "names",
+   "rule": "YouTube ASR of TCEQ ('freeze on TCQ permits').",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "Ha Josea": {
+   "correct": "Hinojosa (Gina Hinojosa, Texas governor race vs Abbott)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR ('Gina Ha Josea').",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "Kesha Lance Bottoms": {
+   "correct": "Keisha Lance Bottoms (Georgia governor race)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR spelling of Keisha.",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "India you have PJM": {
+   "correct": "Indiana you have PJM (and MISO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR; Indiana spans PJM and MISO.",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "myo": {
+   "correct": "MISO (Midcontinent ISO)",
+   "domain": "names",
+   "ci": true,
+   "keep_when": [
+    "myo(?:cardi|pi|sin|tonic)"
+   ],
+   "rule": "YouTube ASR ('you have PJM you have myo').",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "codeex environmental": {
+   "correct": "Kotek's environmental (Oregon governor Tina Kotek's permit hold) - NOT OpenAI Codex here",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR; context = Oregon air/water-permit hold (SemiAnalysis 11-01 article: 'Kotek's Oct. 9 air/water-permit hold').",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "grit costs": {
+   "correct": "grid costs",
+   "domain": "terms",
+   "ci": true,
+   "rule": "YouTube ASR ('pay for their own grit costs').",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "rateayers": {
+   "correct": "ratepayers",
+   "domain": "terms",
+   "ci": true,
+   "rule": "YouTube ASR.",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "R27 forecast": {
+   "correct": "our '27 forecast (2027)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "YouTube ASR ('the R27 forecast').",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "34 of the capacity": {
+   "correct": "three-quarters (3/4) of the capacity",
+   "domain": "units",
+   "ci": true,
+   "rule": "YouTube ASR of '3/4'; SemiAnalysis 11-01 article: 'Roughly three-quarters of the 33.8 GW'.",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "US editions": {
+   "correct": "US additions",
+   "domain": "terms",
+   "ci": true,
+   "rule": "YouTube ASR ('62 gawatts of US editions').",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "mortoriums": {
+   "correct": "moratoriums",
+   "domain": "terms",
+   "ci": true,
+   "rule": "YouTube ASR.",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "moratorum": {
+   "correct": "moratorium",
+   "domain": "terms",
+   "ci": true,
+   "rule": "YouTube ASR.",
+   "first_seen": "2026-11-04 (SemiAnalysis Weekly Ep. 043, YouTube ASR; podcasts lane 2026-11-05)"
+  },
+  "table seven": {
+   "correct": "Fable 7 (Anthropic model name; also \"table eight\" = Fable 8)",
+   "domain": "names",
+   "rule": "Caption ASR of Fable in a model-generation list (\"Fable 6 table seven, table eight\").",
+   "first_seen": "2026-11-05 (SemiAnalysis Weekly Ep. 042 GDPx, 2026-11-03, YouTube captions)"
+  },
+  "drop loss": {
+   "correct": "job loss",
+   "domain": "finance",
+   "rule": "Caption ASR in an AI-jobs discussion (\"afraid of drop loss occurring\").",
+   "first_seen": "2026-11-05 (SemiAnalysis Weekly Ep. 042 GDPx, 2026-11-03, YouTube captions)"
+  },
+  "GDP Val": {
+   "correct": "GDPval (OpenAI benchmark)",
+   "domain": "names",
+   "rule": "Split spelling of OpenAI GDPval; do not confuse with SemiAnalysis GDPx.",
+   "first_seen": "2026-11-05 (SemiAnalysis Weekly Ep. 042 GDPx, 2026-11-03, YouTube captions)"
+  },
+  "Fenyman": {
+   "correct": "Feynman (NVIDIA 2028 GPU generation)",
+   "domain": "products",
+   "rule": "Desk-note spelling.",
+   "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+  },
+  "Fukikura": {
+   "correct": "Fujikura (5803.T, optical cables / components)",
+   "domain": "names",
+   "rule": "Desk-note spelling.",
+   "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+  },
+  "PFTE": {
+   "correct": "PTFE (polytetrafluoroethylene laminate, CCL context)",
+   "domain": "acronyms",
+   "rule": "Letter transposition in typed notes.",
+   "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+  },
+  "D2Q": {
+   "correct": "D2W (direct-to-wafer hybrid bonding) when the sentence is about HBM hybrid bonding",
+   "domain": "acronyms",
+   "rule": "Typed-note slip; the body text says 'direct to wafer approach'.",
+   "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+  },
+  "NVL 572": {
+   "correct": "NVL576 (NVIDIA Rubin Ultra 576-GPU pod)",
+   "domain": "products",
+   "rule": "Typed-note slip; 572 is not an NVIDIA configuration.",
+   "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+  },
+  "Taycan": {
+   "correct": "Titan (NVIDIA two-rack Rubin Ultra option) in a rack-design sentence; the NVDA page already names it Titan",
+   "domain": "products",
+   "rule": "Relay/ASR spelling seen in the 07-28 / 08-03 Fubon relays and in the 09-22 desk deck; keep 'Taycan' only for the Porsche.",
+   "keep_when": [
+    "Porsche"
+   ],
+   "first_seen": "2026-07-28 (Fubon relays via Jefferies); also 2026-09-22 desk deck"
+  },
+  "Tycan": {
+   "correct": "Titan (NVIDIA two-rack Rubin Ultra option)",
+   "domain": "products",
+   "rule": "see 'Taycan'",
+   "first_seen": "2026-08-03 (Fubon / Sherman Shang call, machine transcript)"
+  },
+  "TELSA": {
+   "correct": "Tesla",
+   "domain": "names",
+   "rule": "Typed-note transposition.",
+   "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+  },
+  "100KJ": {
+   "correct": "100K (racks) — stray character in typed notes",
+   "domain": "units",
+   "rule": "Typed-note slip on the Google-TPU-rack slide ('135K cv 100KJ for Nvidia').",
+   "first_seen": "2026-09-22 (Jefferies Asia TMT desk deck 'Q326 Techknowledge Tech Trip Takeaways', typed desk notes; ingested 2026-10-13)"
+  },
   "Crockpot": {
    "correct": "Grok (xAI)",
    "domain": "names",
@@ -6537,6 +6726,444 @@
    "ci": true,
    "rule": "URL ASR of costplusdrugs.com.",
    "first_seen": "2026-10-28 (a16z Show, Mark Cuban episode 2026-10-28, YouTube ASR)"
+  },
+  "Jitu": {
+   "correct": "Jeetu (Jeetu Patel, Cisco President & CPO)",
+   "domain": "names",
+   "rule": "Name ASR of Jeetu.",
+   "first_seen": "2026-11-05 (Product School, Jeetu Patel episode 2026-11-04, YouTube ASR)"
+  },
+  "Gitu": {
+   "correct": "Jeetu (Jeetu Patel, Cisco President & CPO)",
+   "domain": "names",
+   "rule": "Name ASR of Jeetu.",
+   "first_seen": "2026-11-05 (Product School, Jeetu Patel episode 2026-11-04, YouTube ASR)"
+  },
+  "Gito": {
+   "correct": "Jeetu (Jeetu Patel, Cisco President & CPO)",
+   "domain": "names",
+   "rule": "Name ASR of Jeetu.",
+   "first_seen": "2026-11-05 (Product School, Jeetu Patel episode 2026-11-04, YouTube ASR)"
+  },
+  "Crockbot": {
+   "correct": "Grok Bot (xAI/SpaceX agent)",
+   "domain": "names",
+   "rule": "Agent list 'Instinct, Muse, Crockbot, Dots' = Grok Bot; see 'Grockbot'/'RockBot'.",
+   "first_seen": "2026-11-05 (Product School, Jeetu Patel episode 2026-11-04, YouTube ASR)"
+  },
+  "Armor Blocks": {
+   "correct": "Armorblox (email-security startup acquired by Cisco; founder DJ Sampath)",
+   "domain": "names",
+   "rule": "Company-name ASR.",
+   "first_seen": "2026-11-05 (Product School, Jeetu Patel episode 2026-11-04, YouTube ASR)"
+  },
+  "mules": {
+   "correct": "Muse (Meta's AI agent)",
+   "domain": "products",
+   "rule": "'Amazon recently decided not to allow mules to go and purchase stuff' = Muse (Amazon blocked Muse, 2026-09-21).",
+   "keep_when": [
+    "mule deer",
+    "money mules?"
+   ],
+   "first_seen": "2026-11-05 (Product School, Jeetu Patel episode 2026-11-04, YouTube ASR)"
+  },
+  "Pro Con": {
+   "correct": "ProductCon (Product School conference)",
+   "domain": "names",
+   "rule": "Event-name ASR on Product School episodes.",
+   "first_seen": "2026-11-05 (Product School, Jeetu Patel episode 2026-11-04, YouTube ASR)"
+  },
+  "Curts": {
+   "correct": "Kurtz (George Kurtz, CrowdStrike CEO)",
+   "domain": "names",
+   "rule": "YouTube ASR of the stage intro ('founder of Crowdstrike, George Curts').",
+   "first_seen": "2026-11-05 (CrowdStrike Fal.Con Europe 2026 keynote, Kurtz/Richardson/Lacroix, YouTube ASR)"
+  },
+  "Crown Strike": {
+   "correct": "CrowdStrike",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR ('joined Crown Strike a few months ago').",
+   "first_seen": "2026-11-05 (CrowdStrike Fal.Con Europe 2026 keynote, Kurtz/Richardson/Lacroix, YouTube ASR)"
+  },
+  "Dread Node": {
+   "correct": "Dreadnode (AI red-teaming startup, CRWD intent to acquire 2026-11-03)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR; same keynote also renders 'Dreadnote' and 'Dreadnode'.",
+   "first_seen": "2026-11-05 (CrowdStrike Fal.Con Europe 2026 keynote, Kurtz/Richardson/Lacroix, YouTube ASR)"
+  },
+  "Dreadnote": {
+   "correct": "Dreadnode (AI red-teaming startup, CRWD intent to acquire 2026-11-03)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR ('warm round of applause to the Dreadnote team').",
+   "first_seen": "2026-11-05 (CrowdStrike Fal.Con Europe 2026 keynote, Kurtz/Richardson/Lacroix, YouTube ASR)"
+  },
+  "Mistl": {
+   "correct": "Mistral (Mistral AI)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR ('co-founded Mistl').",
+   "first_seen": "2026-11-05 (CrowdStrike Fal.Con Europe 2026 keynote, Kurtz/Richardson/Lacroix, YouTube ASR)"
+  },
+  "Misro": {
+   "correct": "Mistral (Mistral AI)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR ('progress that we've done at Misro').",
+   "first_seen": "2026-11-05 (CrowdStrike Fal.Con Europe 2026 keynote, Kurtz/Richardson/Lacroix, YouTube ASR)"
+  },
+  "Mr. large ML4": {
+   "correct": "Mistral Large 4",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR; model confirmed by Reuters relay in BofA EMEA Software daily 2026-10-30 ('Mistral AI publicly releases Large 4').",
+   "first_seen": "2026-11-05 (CrowdStrike Fal.Con Europe 2026 keynote, Kurtz/Richardson/Lacroix, YouTube ASR)"
+  },
+  "Laqu": {
+   "correct": "Lacroix (Timothee Lacroix, Mistral co-founder)",
+   "domain": "names",
+   "rule": "YouTube ASR of the intro ('Tim Laqu founded uh co-founded Mistl').",
+   "first_seen": "2026-11-05 (CrowdStrike Fal.Con Europe 2026 keynote, Kurtz/Richardson/Lacroix, YouTube ASR)"
+  },
+  "Kim Tanelli": {
+   "correct": "Kimi Antonelli (Mercedes-AMG Petronas F1 driver; CRWD sponsor video)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR; 'Mercedes NG Patron1 team' in the same line = Mercedes-AMG Petronas F1 team.",
+   "first_seen": "2026-11-05 (CrowdStrike Fal.Con Europe 2026 keynote, Kurtz/Richardson/Lacroix, YouTube ASR)"
+  },
+  "Mercedes NG Patron1": {
+   "correct": "Mercedes-AMG Petronas F1 team",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of the CrowdStrike F1 sponsor video.",
+   "first_seen": "2026-11-05 (CrowdStrike Fal.Con Europe 2026 keynote, Kurtz/Richardson/Lacroix, YouTube ASR)"
+  },
+  "tokconomics": {
+   "correct": "tokenomics",
+   "domain": "terms",
+   "ci": true,
+   "rule": "YouTube ASR ('shifting the tokconomics').",
+   "first_seen": "2026-11-05 (CrowdStrike Fal.Con Europe 2026 keynote, Kurtz/Richardson/Lacroix, YouTube ASR)"
+  },
+  "pabytes": {
+   "correct": "petabytes",
+   "domain": "units",
+   "ci": true,
+   "rule": "YouTube ASR ('over 12 pabytes of first and third party data every single day').",
+   "first_seen": "2026-11-05 (CrowdStrike Fal.Con Europe 2026 keynote, Kurtz/Richardson/Lacroix, YouTube ASR)"
+  },
+  "Quilt Works": {
+   "correct": "UNRESOLVED — CrowdStrike 'trusted access program' for its SafeMind models (name not identified; do NOT guess)",
+   "domain": "names",
+   "ci": true,
+   "rule": "Bloomberg/YouTube ASR in both the GS Communacopia fireside (2026-09-10) and Fal.Con Europe keynote; keep flagged until a company document names the program.",
+   "first_seen": "2026-11-05 (CrowdStrike Fal.Con Europe 2026 keynote, Kurtz/Richardson/Lacroix, YouTube ASR)"
+  },
+  "came to Broadcom last year": {
+   "correct": "came to ProductCon last year",
+   "domain": "names",
+   "rule": "Product School episode: host anecdote about a Cisco hire who heard Jeetu speak at ProductCon; not Broadcom (AVGO). Phrase key only, so real Broadcom mentions are not flagged.",
+   "first_seen": "2026-11-05 (Product School, Jeetu Patel episode 2026-11-04, YouTube ASR)"
+  },
+  "Sridhar Ramaswam": {
+   "correct": "Sridhar Ramaswamy (Snowflake CEO)",
+   "domain": "names",
+   "rule": "Stage intro 'Please welcome Snowflake's Chief Executive Officer, Sridhar Ramaswam' — trailing 'y' dropped.",
+   "first_seen": "2026-11-05 (Snowflake Expedition opening keynote 2026-11-04, Ramaswamy + Kleinerman, YouTube uploaded captions)"
+  },
+  "Sridhya": {
+   "correct": "Sridhar (Ramaswamy, Snowflake CEO)",
+   "domain": "names",
+   "rule": "Kleinerman referring back to the CEO's four pillars; same keynote also renders him 'Sridha', 'Srira', 'Mostria', 'Frieda', 'Shreeta'.",
+   "first_seen": "2026-11-05 (Snowflake Expedition opening keynote 2026-11-04, Ramaswamy + Kleinerman, YouTube uploaded captions)"
+  },
+  "Mostria": {
+   "correct": "Sridhar (Ramaswamy, Snowflake CEO)",
+   "domain": "names",
+   "rule": "'I think Mostria and I have mentioned' = Sridhar and I.",
+   "first_seen": "2026-11-05 (Snowflake Expedition opening keynote 2026-11-04, Ramaswamy + Kleinerman, YouTube uploaded captions)"
+  },
+  "Shreeta": {
+   "correct": "Sridhar (Ramaswamy, Snowflake CEO)",
+   "domain": "names",
+   "rule": "'Later today, Shreeta will sit down with Microsoft CEO Satya Nadella' = Sridhar.",
+   "first_seen": "2026-11-05 (Snowflake Expedition opening keynote 2026-11-04, Ramaswamy + Kleinerman, YouTube uploaded captions)"
+  },
+  "Cortes Heia Gateway": {
+   "correct": "Cortex AI Gateway (Snowflake)",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of 'Cortex AI Gateway'.",
+   "first_seen": "2026-11-05 (Snowflake Expedition opening keynote 2026-11-04, Ramaswamy + Kleinerman, YouTube uploaded captions)"
+  },
+  "somfl": {
+   "correct": "Snowflake",
+   "domain": "names",
+   "ci": true,
+   "rule": "'we also at somfl want to make it easy to run applications' = at Snowflake.",
+   "first_seen": "2026-11-05 (Snowflake Expedition opening keynote 2026-11-04, Ramaswamy + Kleinerman, YouTube uploaded captions)"
+  },
+  "ARC chart": {
+   "correct": "org chart",
+   "domain": "terms",
+   "rule": "'the line on the ARC chart just completely giving away' = the line on the org chart giving way (same speech opens with 'org charts drew hard lines').",
+   "first_seen": "2026-11-05 (Snowflake Expedition opening keynote 2026-11-04, Ramaswamy + Kleinerman, YouTube uploaded captions)"
+  },
+  "short procedure": {
+   "correct": "stored procedure",
+   "domain": "terms",
+   "ci": true,
+   "rule": "Snowflake demo: 'this short procedure that was created by the offer generation skill' = stored procedure.",
+   "first_seen": "2026-11-05 (Snowflake Expedition opening keynote 2026-11-04, Ramaswamy + Kleinerman, YouTube uploaded captions)"
+  },
+  "Mahotra": {
+   "correct": "Mehrotra (Sanjay Mehrotra, Micron CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "Caption spelling of Mehrotra; same episode also 'Mahrotra' and 'Mirotra'.",
+   "first_seen": "2026-11-05 (Berkeley Engineering 2026 Kuh Lecture, Sanjay Mehrotra, recorded 2026-10-16, YouTube uploaded captions)"
+  },
+  "Mahrotra": {
+   "correct": "Mehrotra (Sanjay Mehrotra, Micron CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "see 'Mahotra'.",
+   "first_seen": "2026-11-05 (Berkeley Engineering 2026 Kuh Lecture, Sanjay Mehrotra, recorded 2026-10-16, YouTube uploaded captions)"
+  },
+  "Mirotra": {
+   "correct": "Mehrotra (Sanjay Mehrotra, Micron CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "see 'Mahotra'. Do not confuse with 'Amit Maratra' (= UBS's Amit Mehrotra).",
+   "first_seen": "2026-11-05 (Berkeley Engineering 2026 Kuh Lecture, Sanjay Mehrotra, recorded 2026-10-16, YouTube uploaded captions)"
+  },
+  "Zandisk": {
+   "correct": "SanDisk",
+   "domain": "names",
+   "ci": true,
+   "rule": "Caption spelling; same episode also 'Sandesk' and 'Zandesk'.",
+   "first_seen": "2026-11-05 (Berkeley Engineering 2026 Kuh Lecture, Sanjay Mehrotra, recorded 2026-10-16, YouTube uploaded captions)"
+  },
+  "Zandesk": {
+   "correct": "SanDisk",
+   "domain": "names",
+   "ci": true,
+   "rule": "see 'Zandisk'.",
+   "first_seen": "2026-11-05 (Berkeley Engineering 2026 Kuh Lecture, Sanjay Mehrotra, recorded 2026-10-16, YouTube uploaded captions)"
+  },
+  "Sandesk": {
+   "correct": "SanDisk",
+   "domain": "names",
+   "ci": true,
+   "rule": "see 'Zandisk'.",
+   "first_seen": "2026-11-05 (Berkeley Engineering 2026 Kuh Lecture, Sanjay Mehrotra, recorded 2026-10-16, YouTube uploaded captions)"
+  },
+  "Jensen Wong": {
+   "correct": "Jensen Huang (NVIDIA CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "Caption spelling of Huang ('NVIDIA, Jensen Wong… told us a few years ago').",
+   "first_seen": "2026-11-05 (Berkeley Engineering 2026 Kuh Lecture, Sanjay Mehrotra, recorded 2026-10-16, YouTube uploaded captions)"
+  },
+  "Perlagos": {
+   "correct": "Perlegos (George Perlegos, Atmel co-founder)",
+   "domain": "names",
+   "ci": true,
+   "rule": "Caption spelling.",
+   "first_seen": "2026-11-05 (Berkeley Engineering 2026 Kuh Lecture, Sanjay Mehrotra, recorded 2026-10-16, YouTube uploaded captions)"
+  },
+  "Coo Distinguished Lecture": {
+   "correct": "Kuh Distinguished Lecture (Ernest S. Kuh, UC Berkeley)",
+   "domain": "names",
+   "ci": true,
+   "rule": "Caption renders Kuh as 'Coo'/'coup'/'Cou'/'CU' in the Berkeley lecture-series name.",
+   "first_seen": "2026-11-05 (Berkeley Engineering 2026 Kuh Lecture, Sanjay Mehrotra, recorded 2026-10-16, YouTube uploaded captions)"
+  },
+  "coup lecture": {
+   "correct": "Kuh lecture (UC Berkeley)",
+   "domain": "names",
+   "ci": true,
+   "rule": "see 'Coo Distinguished Lecture'.",
+   "first_seen": "2026-11-05 (Berkeley Engineering 2026 Kuh Lecture, Sanjay Mehrotra, recorded 2026-10-16, YouTube uploaded captions)"
+  },
+  "Sujay King Lu": {
+   "correct": "Tsu-Jae King Liu (former Berkeley Engineering dean, NAE president)",
+   "domain": "names",
+   "ci": true,
+   "rule": "Caption spelling.",
+   "first_seen": "2026-11-05 (Berkeley Engineering 2026 Kuh Lecture, Sanjay Mehrotra, recorded 2026-10-16, YouTube uploaded captions)"
+  },
+  "Kee Haggy": {
+   "correct": "Keach Hagey (WSJ reporter)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of the WSJ interviewer introduced on stage.",
+   "first_seen": "2026-11-05 (WSJ Events, Greg Brockman at WSJ Tech 2026-11-05, YouTube ASR)"
+  },
+  "GPD56 Soul": {
+   "correct": "GPT-5.6 Sol",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR; see '5.6 soul'.",
+   "first_seen": "2026-11-05 (WSJ Events, Greg Brockman at WSJ Tech 2026-11-05, YouTube ASR)"
+  },
+  "ChachiT work": {
+   "correct": "ChatGPT Work",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of ChatGPT Work.",
+   "first_seen": "2026-11-05 (WSJ Events, Greg Brockman at WSJ Tech 2026-11-05, YouTube ASR)"
+  },
+  "codecs": {
+   "correct": "Codex (OpenAI)",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of Codex ('they're going to be using codecs'); not media codecs in an OpenAI context.",
+   "first_seen": "2026-11-05 (WSJ Events, Greg Brockman at WSJ Tech 2026-11-05, YouTube ASR)"
+  },
+  "open rates": {
+   "correct": "open weights",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR ('ban on open rates' = ban on open weights).",
+   "first_seen": "2026-11-05 (WSJ Events, Greg Brockman at WSJ Tech 2026-11-05, YouTube ASR)"
+  },
+  "trunch": {
+   "correct": "tranche",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR spelling.",
+   "first_seen": "2026-11-05 (WSJ Events, Greg Brockman at WSJ Tech 2026-11-05, YouTube ASR)"
+  },
+  "pro AAI": {
+   "correct": "pro-AI",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR ('a pro AAI super PAC').",
+   "first_seen": "2026-11-05 (WSJ Events, Greg Brockman at WSJ Tech 2026-11-05, YouTube ASR)"
+  },
+  "fishing email": {
+   "correct": "phishing email",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR homophone.",
+   "first_seen": "2026-11-05 (WSJ Events, Greg Brockman at WSJ Tech 2026-11-05, YouTube ASR)"
+  },
+  "code design": {
+   "correct": "co-design",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR ('core theme… is code design' = co-design) — context-dependent; do not replace literal 'code design'.",
+   "first_seen": "2026-11-05 (WSJ Events, Greg Brockman at WSJ Tech 2026-11-05, YouTube ASR)"
+  },
+  "Mewes": {
+   "correct": "Muse",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR — Meta Muse (AI app) — Wells Fargo GOOGL call 2026-10-29 / podcasts.",
+   "first_seen": "2026-11-05 run-inbox"
+  },
+  "TPV margins": {
+   "correct": "TPU margins",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR — Wells Fargo GOOGL call 2026-10-29.",
+   "first_seen": "2026-11-05 run-inbox"
+  },
+  "black balls": {
+   "correct": "Blackwells",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR — NVIDIA Blackwell GPUs (ASR).",
+   "first_seen": "2026-11-05 run-inbox"
+  },
+  "Agentech": {
+   "correct": "agentic",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR — ASR.",
+   "first_seen": "2026-11-05 run-inbox"
+  },
+  "DPUP": {
+   "correct": "Depop",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR — Depop (resale marketplace) — a16z Show 2026-11-04.",
+   "first_seen": "2026-11-05 run-inbox"
+  },
+  "Terrab": {
+   "correct": "Terafab",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR — Musk/SpaceX TeraFab — Wells Fargo INTC callback 2026-10-30.",
+   "first_seen": "2026-11-05 run-inbox"
+  },
+  "Biggs 8": {
+   "correct": "BiCS8",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR — Kioxia/SanDisk BiCS8 NAND node.",
+   "first_seen": "2026-11-05 run-inbox"
+  },
+  "ELFB 1": {
+   "correct": "LFAB1",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR — TI Lehi fab LFAB1 — UBS TXN callback 2026-10-22.",
+   "first_seen": "2026-11-05 run-inbox"
+  },
+  "KB cash": {
+   "correct": "KV cache",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR — inference KV cache — NAND demand context.",
+   "first_seen": "2026-11-05 run-inbox"
+  },
+  "high band with the flash": {
+   "correct": "high-bandwidth flash (HBF)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR — SanDisk HBF.",
+   "first_seen": "2026-11-05 run-inbox"
+  },
+  "Rao Torres": {
+   "correct": "Raúl Torrez",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR — New Mexico AG / governor candidate — PROBABLE, 2026-10-23 NM call.",
+   "first_seen": "2026-11-05 run-inbox"
+  },
+  "Secretary Kenny": {
+   "correct": "Secretary Kenney",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR — NM Environment Secretary James Kenney — PROBABLE, 2026-10-23 NM call.",
+   "first_seen": "2026-11-05 run-inbox"
+  },
+  "Grand Rapids": {
+   "correct": "Granite Rapids",
+   "domain": "terms",
+   "ci": false,
+   "rule": "ASR on Intel server-CPU context only (Granite Rapids Xeon).",
+   "keep_when": [
+    "Michigan",
+    "city"
+   ],
+   "first_seen": "2026-11-05 run-inbox"
   }
- }
+ },
+ "summary_traps": [
+  "The Notion AI summary inherits every transcript garble AND adds its own: it expanded 'MPO' to 'Module-Pluggable Optics' (2026-09-28), moved a guidance year (fiscal 2025 vs 2028, LITE 2026-09-18), invented a '<15% of industry TAM' sentence (2026-09-18), rendered 'funding short' as 'valuation short' (2026-09-18), hung Meta's $200-300bn figure on AppLovin (2026-09-22), credited the HOST's numbers to the guest (BofA/Bajarin 2026-09-24), and computed its own '~15% CAGR' (Scala 2026-09-24).",
+  "Speakers are unlabeled: questions (Capstone/other investors) and answers run together; the host's arithmetic assented with a 'yeah' is not the guest's number.",
+  "2026-10-02: Archera/Khanna call - the summary hangs the spoken commitment-growth marks on named clouds (Google 48.5%, AWS 38%, Azure 39.5%); the transcript speaks them as running rates (~45%->48.5% for one cloud, 36.5%->39.5% for another, consumption ~41%) with the cloud named in the surrounding sentence - map each figure to its cloud IN the transcript, never from the summary; the '300-400% mainframe migration volume' is ONE reseller PARTNER's volume (per Khanna), not Archera's total, and '$1 million minimum MAC/PPA' is spoken as a mid-quarter hyperscaler rule for GPU access. AVGO/Arcuri recap - the summary credits Arcuri's relayed statements to Broadcom management and adds 'Jalapeno', 'Sunfish v5', '440s and 430s' that grep does not find in the transcript.",
+  "2026-10-14 (GS Alec Phillips meeting): the summary wrote 'Michigan Senate race (Abdullah al-Saeed vs. Susan Collins-equivalent dynamic)' - conflating the Michigan (El-Sayed) and Maine (Collins) races - and 'expected to accelerate in 2025' for data-center deals pushed to January (next year = 2027). Check polling-error coefficients ('37 bp', '0.7') against the transcript before use.",
+  "2026-10-16: the Notion summary (a) retitled Micron's post-F4Q26 IR call 'Post-3Q FY26' (wrong fiscal quarter) and hung the reported '$33B free cash flow' on 'Fiscal Q1 27' (the transcript says 'the last quarter we reported' = F4Q26; FQ1'27 is only 'significantly stronger'); (b) wrote CXMT's 2025 capacity add as '$45K' - it is 45K wafers per month, not dollars; (c) fused an audience question ('$60 to $64 billion ... brokers see 2028 capex higher than $105') with the expert's conditional '$100 billion' arithmetic into one 'CapEx trajectory' bullet (BTGP TSMC expert).",
+  "2026-10-19: the Notion summary of the JPM TSMC replay wrote 'Amkor (EMA technology)' / 'V9 locked in with Amkor' - the transcript says only 'use EMA when TSMC go off in 27 and 28' and never names Amkor (fabricated entity). Lesson for the lane itself: grep transcripts case-insensitively before declaring a summary figure absent - 'Backlog where we look at Google and Amazon both at $500 billion' IS in the JPM Internet transcript (capitalised).",
+  "2026-10-19: the JPM Internet Zoom host introduced 'eBay, slide 36' while the content (Depop dilution, 2-year GMS stack, Vinted) is Etsy — a HOST slip the Notion summary copied; ticker confusion is a trap even when the transcript is right.",
+  "2026-10-22: (a) the Notion summary of the Wells Fargo TXN/LRCX recap wrote 'Lam's CEO Doug' - Doug Bettinger is Lam's CFO (CEO Tim Archer); it also presented a QUESTIONER's premise ('AI is contributing about 10% to their growth') as TI's statement; (b) the ASML callback summary turned the analyst's estimates into 'guidance' ('Gross margin guidance of 57%+', 'ASP guidance') and wrote 'likely 7-9 units' for High-NA 2028 where the transcript says 'high single digit'; (c) the META recap summary stated the analyst's guesses ('credit spreads tighten', 'raise within next week') as conclusions and dropped the unit on '$31-32 to $32-33' (2027 EPS, buy-side); (d) the StoneX Jain summary credited the HOST's '$50 billion per gigawatt' data-center cost to the discussion and extrapolated 'labs hire aggressively for AI-native chip design' from one job-postings remark; (e) the Jefferies Curtis summary credited the HOST's flow colour ('long-only selling and hedge fund shorting ~12 weeks', 'WFE $300B in 2028') to Blayne and wrote 'AEC/VCSEL-based' where the transcript says 'ALCs' (unresolved).",
+  "2026-10-26 UBS SemiBytes (Arcuri): the summary printed SMH \"closed Friday at $5.27\" - the transcript says \"5, uh, 5.27\" and the arithmetic (21x x $25.23 = ~$530) makes it ~$527; it also wrote \"IFS startup costs\" where the transcript says \"AT&A\" (= 18A)."
+ ]
 }

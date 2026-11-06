@@ -78,6 +78,8 @@ _Historical management framing; interpretation by Capstone, 2026-10-31, against 
 
 ## Intra-quarter — sell-side / relevant commentary
 
+**🆕 2026-11-05 — OpenAI says it has signed JPMorgan Chase (counterparty's claim, not a JPM disclosure).** OpenAI President Greg Brockman at WSJ Tech: *"one that's hot off the press has not been previously announced is that we just papered a partnership with JP Morgan Chase"*, under which JPM will use Codex [transcribed "codecs"] for software engineering, *"our cyber models to secure themselves"*, and the models for *"enterprise transformation knowledge work across the the company"* [00:12:34]–[00:13:16]. No value, seat count, term or exclusivity was given, and JPM has not confirmed it on this page's sources. Read: a tech-spend / AI-adoption datapoint for the operating story (expenses, technology budget), not an earnings input. Watch for a JPM-side confirmation and any efficiency framing at the next investor event. (Greg Brockman at WSJ Tech, 2026-11-05 — livestream, an OpenAI exec talking his book, not broker research; [transcript](../_podcasts/adhoc/2026-11-05%20-%20Watch%20Live%20OpenAI%20Co-Founder%20Greg%20Brockman%20at%20WSJ%20Tech%20WSJ.md))
+
 ### Live Outlook readout - recorded 2026-11-01
 
 The live review adds Jefferies / Adam Panzer's positive October 22 assessment of deposits, the FY2027 NII outlook and capital deployment to Barclays / Jason Goldberg's October 13 review of an unusual EPS miss. Barclays' October 6 preview and October 13 result note are separate forecast vintages. The apparent disagreement is about earnings conversion and capital use, not whether the deposit franchise is strong.
@@ -103,10 +105,12 @@ Credit and counterparty losses; interest-rate and securities-valuation exposure;
 - [Complete archive inventory and coverage notes](_dashboards/financials-sources.html#JPM): five-year SEC filing window, earnings releases, available calls and attributed commentary.
 - [Company-hosted Q3 2026 transcript PDF](../JPM/transcripts/originals/3q26-earnings-transcript.pdf); [searchable third-party transcript](../JPM/transcripts/JPM_Q3-2026-earnings_2026-10-13.md).
 - [Q3 earnings supplement, 2026-10-13](../JPM/earnings/2026-10-13_a3q26erfex992supplement.htm).
+- 🆕 **2026-11-05 (/run-inbox):** [Greg Brockman (OpenAI President) at WSJ Tech, 2026-11-05 — livestream, machine transcript](../_podcasts/adhoc/2026-11-05%20-%20Watch%20Live%20OpenAI%20Co-Founder%20Greg%20Brockman%20at%20WSJ%20Tech%20WSJ.md) — counterparty claim of an OpenAI × JPMorgan Chase partnership; no terms.
 - Broker notes are cached email extracts, sometimes truncated; they are not represented as complete linked research reports. No Bloomberg consensus was invented.
 
 ## Changelog
 
+- 2026-11-05 — run-inbox: Greg Brockman (OpenAI President) at WSJ Tech (2026-11-05) → 1 dated Intra-quarter paragraph (OpenAI says it "just papered" a JPMorgan Chase partnership: Codex, cyber models, enterprise knowledge work; unannounced, no terms), Sources. Superseded: none.
 - **2026-11-01 — Live Outlook review.** Added the live Barclays preview/result comparison and Jefferies capital-deployment perspective; prioritized NII conversion, capital allocation and fee cyclicality. Prior thesis, targets and historical guidance vintages were retained.
 - **2026-10-31 — Coverage initiated.** Established the Q3 2026 baseline and preliminary 2027 NII framework. Preserved Barclays' prior PT **$420** and revised **$425** (report 2026-10-13) and its old/new 2026 guidance vintages. No previous JPM wiki thesis existed.
 

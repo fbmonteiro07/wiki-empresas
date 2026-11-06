@@ -1,0 +1,50 @@
+# Reconciliation — /run-inbox 2026-11-05
+
+_This report checks each new quantitative datapoint from tonight's sources against three baselines: (1) prior wiki marks; (2) Capstone house models; (3) BBG consensus._
+
+- **BBG live is OFFLINE**: a `bdp` call returned nothing within 20s, so the Terminal or VPN is down. The BBG column uses the **on-disk snapshot `_wiki/_data/estimates.json`, asof 2026-11-05**. It is same-day, so it is a valid baseline. **Caveat:** for BKNG it is already a **post-print** snapshot, so its 1FQ (Q4-26E) may already include the 11-03 guide.
+- **House models:** the AWS block of "Modelo Amazon Pos 3Q26" (as quoted in the Capstone AWS cash-cost study) is the only house model tested tonight. There is none for BKNG, INTC, LRCX, TXN, UBER or SNDK.
+- **Private names** (OPENAI, ANTHROPIC, SpaceX compute) are checked against prior wiki marks only.
+- **Sources tonight:**
+  - BKNG 3Q26 print: prepared remarks, deck and 10-Q, 2026-11-03.
+  - Airbnb Q3 2026 letter (2026-11-05).
+  - Pershing Square Q3 2026 letter (2026-11-02).
+  - Capstone AWS cash-cost study (2026-10-30).
+  - Fox Investimentos AV/Uber tracker (2026-11-05).
+  - Wells Fargo Texas note (Revich, 11-04).
+  - FundaAI Texas note (11-04).
+  - Barclays DCD note (11-05).
+  - GS midterms preview (11-01).
+  - SemiAnalysis "Elon Is Doing It Again" (11-03) and "The Iron(wood) Throne" (11-05).
+  - Six call recordings: UBS TXN/LRCX 10-22, NM politics 10-23, UBS infra 10-23 (duplicate), Wells GOOGL 10-29, MS INTC/SNDK 10-30, Wells MPWR/INTC/SNDK 10-30.
+  - Eight podcasts.
+
+## DIVERGES (the alpha)
+
+| Name | New datapoint (source) | vs prior wiki | vs house | vs BBG (snapshot 11-05) | Read |
+|---|---|---|---|---|---|
+| **BKNG** | **4Q guide: room nights +1-3%, gross bookings +2-4% (cc +4-6%), adj. revenue +0-2%, adj. EBITDA ~flat.** FY26 reiterated at high single digits; the guide assumes the Middle East impact lasts to year-end, and management names "localized unrest in certain European cities" (prepared remarks / deck, 2026-11-03) | Page bars: Street 4Q nights **+6%**, BofA's "cut" case **+3-5%**, house **+3-5%** (≥5% the flip line). All ✗. Only JPM's implied ~+2% 4Q GBs (10-15) is ✓ | No model. The house Travel FUPs (11-02) said protests "never moved BKNG's numbers, only wars" → **✗ contested by management's own wording** | 1FQ Q4-26E revenue **$6,518m**, EBITDA **$2,219m**, EPS **$2.15** (post-print snapshot); the page's pre-print Street 4Q EPS was **$2.31** → about **−7%**, consistent with the guide flowing through. 2FY EPS **$12.21** vs BofA 2027E $12.23 (10-25) | **The 3Q beat (nights +6.7% vs +3-5% guide, EPS $4.66 vs $4.49) is overshadowed by the 4Q guide.** A reiterated FY after a 3Q beat is itself a 4Q cut. Europe unrest is now a management-acknowledged 4Q driver. |
+| **BKNG** | **$900m revenue reduction + $100m G&A accrual** for the FTC/Priceline matter; GAAP revenue $8,893m (−1%) vs adjusted $9,793m (10-Q 3Q26) | 🆕 not on the page before | — | Not in consensus fields (adjusted basis) | Accounting/legal, not operating, but the first nine-figure regulatory charge on the page. EU DSA investigation opened October 2026 (10-Q). |
+| **AMZN** | AWS CY27 cash cost/revenue lands at **32.7-34.8%** (margin **41.4-43.5%**), contracting "slowly" (Capstone internal AWS cash-cost study, 2026-10-30) | Page carried the AWS 3Q26 margin at 38.7% | **House model ("Modelo Amazon Pos 3Q26") types 30.0% cash cost → 46.2% CY27 AWS margin**, so the study says the model is **~3-5pp too high on margin, ~US$7-13bn of AWS EBIT** | No AWS segment field in the snapshot. Group CY2027 EBIT **$147.4bn** | **The house is contradicted by its own study.** Model bridge needed: cut CY27 AWS cash-cost contraction from 10.7pp to ~6-8pp, or document why the model stays. |
+| **AMZN** | AWS growth at **+37% / +30% / +19% for 2027-29** per the BBG table quoted by Pershing (as of 09-30); holder marks 26x NTM P/E, 24% 3-5yr EPS CAGR (Pershing Square Q3 letter, 2026-11-02 — holder talking its book) | Management: AWS "over 40%" in both 2027 and 2028 (page Sinal) | House CY27 AWS growth input **+48%** (per the AWS study) | Matches the Street AWS path Pershing quotes | The **house (+48%) sits well above both the Street (+37%) and management (">40%")** on CY27 AWS growth: a second house-model item next to the margin one. |
+| **INTC** | MS CY27 EPS **$2.00 → $2.40**, server **+60%** modelled (MS post-print call, 10-30); Wells Fargo CY27 EPS **$2.00**, CY28 **$3.28**, GM 43% / 46%, CY27 DCAI $39bn, Equal Weight (WF callback, 10-30) | MS $2.00 (07-24) is in the Changelog. The page notes both bracket a pre-print BBG **$2.11** | none | **CY2027 EPS now $1.78** (2FY $1.78), so the Street fell ~16% after the print while MS raised. MS is **+35%**, WF **+12%** vs consensus | **The consensus cut after the print is the story**: both calls are now above the Street. MS's +60% server vs Intel's ~30% server-CPU unit TAM is the widest assumption gap. |
+| **LRCX** | UBS CY27 revenue **~$42.5-43bn** vs **~$38-39bn implied** by Lam's own framing (UBS callback, 2026-10-22; analyst unnamed, likely Arcuri — UNCONFIRMED) | First UBS CY27 revenue mark on the page | none | CY2027 revenue **$38.8bn** → UBS **+10%** vs consensus; Lam-implied ≈ consensus | A Street-high-style call. It rests on WFE >$200bn walked up through 2027, plus Horiba MFC supply relief. |
+| **GOOG** | Wells (10-29 call Q&A): SpaceX capacity **~$1.65bn 4Q operating loss** ($2.8bn cost vs $1.1bn revenue), modelled to **2029**; search growth **8-9% in 1H27**; TPU margins 20-30% "certainly possible" | The Wells 11-01 written note went lower: **+4% 1Q27 Search** (reconciliation-2026-11-02). Flagged on the page, not moved | House has no quarterly Search or SpaceX-cost line | — | The call and the note disagree within one house, two days apart; the note (11-01) is the later mark. SpaceX cost duration (2029) is longer than MS/Barclays. |
+| **SNDK** | MS checks: SanDisk 4Q NAND price **~+10%** vs **~20%** at Micron/Hynix; FY ASP **+7% vs +15%** (MS call, 10-30) | MS quotes SanDisk's 2027 PC outlook as a "mid-single digit" decline; the WF callback has management at **"low single digits"** → MS misquote flagged | none | CY2027 EPS **$265.7** | A peer share/price-discipline question; MS prefers MU on the Dec-9 buyback start. |
+| **ai-datacenter-power / ORCL** | Texas governor-elect hold on DC approvals until the legislature acts; **Texas = 20-30% of the US pipeline**; named held projects include Stargate Abilene expansion (~1.2 GW of gensets/turbines) and Vantage Frontier at Shackelford (~2.6 GW) (Wells Fargo · Revich, 11-04). FundaAI keeps its 2027 delivery forecast unchanged (11-04) | Supersedes the pre-vote base cases (GS 11-01 expected the issue to fade; SemiAnalysis 11-01 had the TCEQ freeze as the "biggest single risk"). **Confirms** the SemiAnalysis risk call | — | ORCL CY27 consensus is not tested (no ORCL number in the note) | **2027 holds, 2028 slips** is now the consensus framing across four houses. ORCL's Abilene expansion is the first covered-name asset explicitly held. |
+| **SPCX** | SpaceX revised to **13 GW in 2027**; **3.6 GW under construction**, 9 GW identified by SemiAnalysis (SemiAnalysis, 11-03) | Page carried 10 GW for 2027 (SemiAnalysis, ~09) → **raised to 13 GW** (Changelog) | — | — (private compute arm) | Contract length conflict: SemiAnalysis "six months" vs the 10-Q "typically three years", logged unresolved. |
+| **CSCO** | Patel: FY27 "north of 70" (stated as gross margin context on the page), M&A "dialed down", supply constraint for 5-10 years (Product School, uploaded 11-04) | Adoption call moved from 30-50% in 6-9 months to **30-40% in 12-15 months** (ai-cybersecurity Changelog) | none | CSCO 2FY EPS $5.63 not affected | Patel pushed his own forecast out, so management's agentic-adoption timeline got longer. |
+
+## CONFIRMS (no action)
+
+| Name | Datapoint | Baseline | Result |
+|---|---|---|---|
+| **BKNG** | 3Q room nights **345m, +6.7%**; gross bookings **$54.5bn, +10%**; adj. revenue **$9,793m**; adj. EBITDA **$4,607m**; adj. EPS **$4.66** | Consensus ~339m / $52.6bn / $9.54bn / $4.49bn / $4.49 (page, BBG pre-print); house ~6-6.5% | Beat every 3Q bar. House nights estimate ✓ (slightly conservative). |
+| **TXN** | Q4 capex ≥$900m, mostly back-end; autos mid-teens; drop-through >90%; UBS 2028 FCF/share "16 and change" (UBS callback 10-22) | Page call notes; UBS "mid-teens in 28" (07-23) | ✓ confirms the call. FCF/share mark moved up modestly (Changelog). Three analyst figures that don't reconcile with the page are flagged, not adopted. |
+| **UBER** | Pershing: NTM P/E 16x, 3-5yr EPS CAGR 25%; Fox AV tracker: robotaxis ~0.5% of trips, Waymo 500k paid rides/week | Page | Holder marks; no Street estimate tested. UBER's 11-04 3Q print is **not yet on the page**: a gap for the next ingest. |
+| **MSFT / NFLX** | Pershing holder marks (MSFT forward P/E 19x → 25x) | Page Ackman May mark ~21x | Holder valuation only. |
+| **MU** | Mehrotra (Kuh Lecture, recorded 10-16): HBM wafers "20% or higher"; 2023 HBM market "$1-2bn" (off the cuff) | JPM $4,065mn (page) | Exec framing; JPM figure not overwritten. |
+| **hyperscaler-capex** | Pershing: top-4 capex ~$140bn → ~$740bn → >$1tn, ~$1.5tn total 2027 DC capex; Mehrotra: "trillion dollars" next year | Page capex path | ✓ directionally; baskets differ, so no series is chained. |
+| **OPENAI** | Brockman: JPMorgan Chase partnership "just papered" (Codex, cyber models), ~1,000 Linux vulnerabilities for ~$1M of compute; ChatGPT ads ~$1bn ARR | Page | 🆕 / ✅; no terms, no JPM confirmation. The Navier-Stokes cost (~$1M Brockman vs "$10 million-ish" Altman) is logged side by side. |
+| **CRWD** | Fiddler AI acquisition, Dreadnode intent to acquire (no terms); Red Tempest $21 vs $96 vs ~$62 | 09-02 deck −78% / −66% | ✓ reproduces the deck exactly. |
+| **GOOG / custom-asic-tpu** | SemiAnalysis Ironwood: TPUv7 ahead of MI355X on cost per token; Meta runs TPUv7 in production on SGLang-TorchTPU | Page TPU thesis | ✓ confirms; the Meta usage is new on META. |

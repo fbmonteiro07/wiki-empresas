@@ -1,4 +1,4 @@
-== SENTIMENT MONITOR · 2026-11-05 ==
+== SENTIMENT MONITOR · 2026-11-06 ==
 
 **Market mood.** CNN Fear & Greed is at **20 (extreme fear)** — down from 31 a week ago and 43 a month ago (fear).
 
