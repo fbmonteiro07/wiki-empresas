@@ -1,15 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-11-05 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-11-06 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (54)
+## 📅 Upcoming (50)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-11-05 | CRWD | 🆕 **2026-11-05 — SafeMind commercial timing and two pending deals (Fal.Con Europe keynote, 2026-11-03):** direct model access to Red Tempest and Blue Solano *"in Q4"* (Kurtz [00:34:46]); Blue Solano p |
-| 2026-11-05 | GOOG | 🆕 **2026-11-05 (/run-inbox) — TPU benchmark and permitting watch items:** (1) **SemiAnalysis's TPUv8i AgentX results**, *"which we will be benchmarking very soon"*, against Rubin NVL72; TPUv8 brings n |
-| 2026-11-05 | ORCL | 🆕 **2026-11-05 — the hearing date moves to DECEMBER (UNCONFIRMED insider, call recorded 2026-10-23):** a new NMED hearing officer has the air-permit hearing set for **Dec. 5**, with an opinion hoped f |
-| 2026-11-05 | TSLA | **🆕 2026-11-05 — ROBOTAXI SCALE CHECK FROM AN AV TRACKER: FORT WORTH BECAME THE 7th UNSUPERVISED CITY ON 11-02; 1,204 TESLA ROBOTAXIS REGISTERED IN TEXAS vs WAYMO'S 1,259; CYBERCAB DALLAS (NOV) AND TH |
 | 2026-11-09 | CME | Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract ends 2026-11-09 (Duffy said he "believe[s]" so; filed under a full 40.3 review), then the agency decides ([Duf |
 | 2026-11-09 | KKR | **2026-11-09 — Q3 results and call**, announced by KKR on 2026-09-29. Test fee activation, insurance earnings, K-Series flows and realization progress. [Company announcement](https://media.kkr.com/new |
 | 2026-11-09 | QCOM | **🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed** (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. **B |
@@ -61,24 +57,29 @@ _Generated 2026-11-05 · parsed from every page's 'Catalysts / what to watch'. D
 | 2029-12-08 | MU | 🆕 **2026-10-16 — the buyback now has a formula and a window, from Micron IR.** From **2026-12-09 through 2029-12-08** Micron may repurchase up to **trailing-12-month FCF − CHIPS proceeds received in t |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (3)
+## ⏰ Passed — need a post-mortem (0)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-11-03 | SMCI | **✅ RESOLVED (preliminary) 2026-10-20 — F1Q27 vs guide:** revenue **$18.5–19.5bn vs $14.5–15.5bn**, GM **12.0–12.5% vs 10.4–10.8%** (SMCI 8-K, 2026-10-20). Bull on delivery vs guide; GM sits well belo |
-| 2026-11-03 | INTC | 🆕 **2026-10-01: Susquehanna "The AI Arms Race" session (Christopher Rolland; AMD, INTC, MRVL, NVDA, AVGO, ARM, QCOM) and 2026-11-03: Intel dinner NDR with CFO and IR, London** (Susquehanna index 09-30 |
-| 2026-11-03 | APO | **2026-11-03 — Q3 results**, announced 2026-09-29. Test FRE growth, Athene inflows, reported versus normalized spreads and future fee recognition. [Company announcement](https://www.apollo.com/insight |
+| _none_ | | |
 
-## ✅ Resolved (383)
+## ✅ Resolved (390)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-11-05 | TSLA | neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-06): 11-05 is the source date of the Fox Investimentos AV tracker (Cabral, 2026-11-05) — Fort Worth 7th unsupervised city 11-02, 1,204 TX registrations vs Waymo 1,259 (Tesla North via Fox). Buy-side compilation, not a Tesla primary. The dated tests it lists (Cybercab Dallas 'November', NHTSA Cybercab probe response, '25-50% of the U.S.' by YE26) are still ahead. |
+| 2026-11-05 | ORCL | neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-06): 11-05 is the ingest date of an UNCONFIRMED insider call (recorded 10-23) moving the NMED air-permit hearing to Dec. 5 with a ruling hoped for ~Dec. 30-31. The real catalysts are Dec. 5 / ~Dec. 30 (and ERCOT's Dec. 10 audit filing, WFS 11-04); nothing resolved. |
+| 2026-11-05 | GOOG | neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-06): /run-inbox watch list — SemiAnalysis TPUv8i AgentX benchmarking 'very soon' ('The Iron(wood) Throne', 11-05), Texas TCEQ pause timing (SemiAnalysis Weekly Ep. 043, 11-04), Wells ~$1.65bn 4Q SpaceX-capacity operating loss (10-29 recap). Forward-looking; resolves at the benchmark release and the 4Q26 print (~early Feb 2027). |
+| 2026-11-05 | CRWD | neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-06): 11-05 is the ingest date of the Fal.Con Europe keynote (Kurtz / Richardson, 2026-11-03, company keynote). SafeMind direct model access 'in Q4', Fiddler AI acquisition and Dreadnode 'intent to acquire' are forward items; scored at the F3Q27 print ~2026-12-02 (pre-registered test T2). |
 | 2026-11-04 | TRU | neutral — Same FICO read-through, not a separate earnings print: FY2027 guidance withheld because mortgage pricing transition/agreements and market remain uncertain (FICO company release November 4). TRU royalty pass-through versus bureau data economics remain separate; policy outcome unresolved. [FICO release](https://investors.fico.com/news-releases/news-release-details/fico-announces-earnings-812-share-fourth-quarter-fiscal-2026) · [source record](analyst-evidence/2026-11-05-morning-source-checks.json). |
 | 2026-11-04 | EFX | neutral — FICO read-through event occurred, but pricing uncertainty did not resolve: FICO's November 4 company release explicitly withholds FY2027 guidance while bespoke mortgage agreements remain unfinished. Do not translate FICO royalty pass-through revenue into bureau profit or infer a new bi-merge rule. Formal 2027 contracts and EFX margin economics remain open. [FICO release](https://investors.fico.com/news-releases/news-release-details/fico-announces-earnings-812-share-fourth-quarter-fiscal-2026) · [source record](analyst-evidence/2026-11-05-morning-source-checks.json). |
+| 2026-11-03 | SMCI | neutral — UNRESOLVED (D+3, wiki-catalyst 2026-11-06): the F1Q27 full print/call (2026-11-03, 5pm ET) has NOT reached the corpus — newest SMCI primary on disk is the 10-20 8-K pre-announcement (rev $18.5-19.5bn vs $14.5-15.5bn guide; GM 12.0-12.5% vs 10.4-10.8%), no 11-03 8-K, transcript or desk relay in _inbox/_done or the analyst briefs. EPS, DSO, customer mix and the F2Q27 guide unscored → route to /run-inbox. |
+| 2026-11-03 | INTC | neutral — UNRESOLVED (D+3, wiki-catalyst 2026-11-06): the London dinner NDR with CFO and IR (Susquehanna index 09-30; UBS Ruple events calendar) has no readout in the corpus. Nearest data point is Arcuri's 11-04 AMD recap ('not rushing' to upgrade INTC on wafer allocation; UBS Neutral), which is not a readout of this meeting. |
 | 2026-11-03 | BKNG | bear won (on the guide; stock reaction not on disk) — 3Q26 beat every bar (room nights 345m, +6.7% vs +3-5% guide; adj. EPS $4.66 vs $4.49 cons), but the 4Q guide (room nights +1-3%, adj. EBITDA ~flat) came in below Street +6% and the house/BofA +3-5%, and management cited European-city unrest, contradicting the house 'only wars move BKNG' call; +$900m FTC revenue reduction in the 10-Q (BKNG prepared remarks / deck / 10-Q, 2026-11-03; run-inbox 2026-11-05). |
 | 2026-11-03 | BKNG | bear won (on the guide; stock reaction not on disk) — 3Q26 beat every bar (room nights 345m, +6.7% vs +3-5% guide; adj. EPS $4.66 vs $4.49 cons), but the 4Q guide (room nights +1-3%, adj. EBITDA ~flat) came in below Street +6% and the house/BofA +3-5%, and management cited European-city unrest, contradicting the house 'only wars move BKNG' call; +$900m FTC revenue reduction in the 10-Q (BKNG prepared remarks / deck / 10-Q, 2026-11-03; run-inbox 2026-11-05). |
+| 2026-11-03 | APO | neutral — UNRESOLVED (D+3, wiki-catalyst 2026-11-06): Q3 results (announced 2026-09-29) are not in the corpus — no release or transcript in APO/earnings or APO/transcripts, no desk relay. FRE growth, Athene inflows and normalized-vs-reported spread tests unscored → route to /run-inbox. |
 | 2026-11-02 | STX | neutral — UNRESOLVED (D+3, wiki-catalyst 2026-11-05): the MS-hosted STX CFO NDR in Boston/NYC (11-02/03; MS TMT desk · Wigg, 2026-09-29) has no readout in the corpus (no desk relay, no Notion note, no intra-quarter row after 10-30). The pricing-floor ('revenue/TB positive y/y through FY27') and LTA questions stay open; next dated item is the 11-17 class-action settlement hearing. |
 | 2026-11-02 | LITE | neutral — NOT A NEW EVENT for the print: this row is the F1Q27 release already scored bull won under LITE 2026-11-05 (released early 11-02: adj. EPS $4.57 vs BBG $4.214; Q2 guide $5.90-6.20). The same-day news is the definitive MRVL/LITE all-stock agreement (4.500 MRVL per LITE; ~$1,132/sh, 23.9% premium to 10-28 unaffected; close H1 CY2028; >$1bn cost synergies; joint release 11-02). It confirms Sur's 10-30 speculation and is on both the LITE and MRVL pages. New open item: stockholder/regulatory approval. |
 | 2026-11-02 | KIOXIA | neutral — UNRESOLVED (D+3, wiki-catalyst 2026-11-05): the BofA post-results 'doko shuzai' (BofA · Hirakawa, via BofA one-liners, 2026-10-01) is a follow-up to the FY3/27 2Q print, which is already scored under KIOXIA 2026-10-30. No BofA tour note or relay of the meeting is in the corpus. The dividend-policy and LTA-credibility (50% LTA coverage in 2028) debates stay open. |
