@@ -1,0 +1,520 @@
+{
+ "_doc": "HAND-EDIT. Campus rows the sources only give as a whole, dated at the first phase, are split by build_dc_delay.py into equal tranches on these dates. The ramp window is sourced where 'why' says so; the even split and the exact months are Capstone ESTIMATES. status_after_first overrides phase_status for tranches 2..n.",
+ "GA-EFFINGHAM-CAMELLIA-ALL": {
+  "dates": [
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06",
+   "2032-06"
+  ],
+  "why": "Georgia Power contract: ~3,200 MW delivered in phases 2028-2032 (announcement 2026-07-22)"
+ },
+ "MI-SALINETWP-STARGATEMI-ALL": {
+  "dates": [
+   "2026-12",
+   "2027-05",
+   "2027-09",
+   "2028-01"
+  ],
+  "why": "KBRA: staggered substantial completions Dec-2026 to Jan-2028"
+ },
+ "MO-KANSASCITY-GOOGLEMICA-ALL": {
+  "dates": [
+   "2027-11",
+   "2028-11"
+  ],
+  "why": "campus total dated at its first phase; Google's 18-24-month build per building",
+  "status_after_first": "not_started"
+ },
+ "MO-INDEPENDENCE-NEBIUS-ALL": {
+  "dates": [
+   "2027-03",
+   "2028-03",
+   "2029-03",
+   "2030-03"
+  ],
+  "why": "first phase 2027-03 (company); city: needs at least 800 MW, scalable to ~1.1 GW",
+  "status_after_first": "not_started"
+ },
+ "OK-STILLWATER-GOOGLEOGE-ALL": {
+  "dates": [
+   "2028-01",
+   "2029-01",
+   "2030-01",
+   "2031-01"
+  ],
+  "why": "Google-OG&E: ramp to 1 GW over ~5 years (to ~2031)"
+ },
+ "PA-SHIPPINGPORT-ALIGNED-PHOENIX": {
+  "dates": [
+   "2029-06",
+   "2029-12",
+   "2030-06"
+  ],
+  "why": "Baxtel: PIT-01 2029 (under construction), PIT-02 2029 (planned), PIT-03 2030 (planned)",
+  "status_after_first": "not_started"
+ },
+ "WY-CHEYENNE-PROJECTTEMBO-ALL": {
+  "dates": [
+   "2027-11",
+   "2028-11",
+   "2029-11",
+   "2030-11"
+  ],
+  "why": "first service 2027-11 (company); ramp runs to 2030 (west agent notes)",
+  "status_after_first": "not_started"
+ },
+ "TX-PECOS-KILBY-ALL": {
+  "dates": [
+   "2028-06",
+   "2029-01",
+   "2029-06"
+  ],
+  "why": "Wells Fargo 11-04 Exh. 3: first power targeted 2028, ERCOT queue blocks dated 2027-29 (2.67 GW is generation nameplate)"
+ },
+ "OH-JEFFERSONVILLE-AWSFAYETTE-P1": {
+  "dates": [
+   "2027-07",
+   "2028-01",
+   "2028-07",
+   "2029-01"
+  ],
+  "why": "AES Ohio LAS 2024-11-25 Phase-1 ramp (65->480 MW, Sep-26 to Sep-27) superseded by AES LAS 2026-09-21: no large DC operating, DAY zone 75 MW Jul-27 / ~410 MW Jul-28 / 1,820 MW Jul-29; re-dated ramp is a Capstone estimate",
+  "status_after_first": "under_construction"
+ },
+ "OH-PIKETON-PORTSPIKE-P1": {
+  "dates": [
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06",
+   "2032-06"
+  ],
+  "why": "SB Energy S-1/A 2026-09-21: 17 buildings x ~472 MW IT (8,024 MW), leases commence in stages early 2028 to 2032 (first-phase RFS 2028, final RFS 2032); even annual split is a Capstone estimate | shares: first 800 MW in 2028 per the company (OPENAI.md 2026-08-17; SemiAnalysis 2026-09-11), the rest even 2029-32 (double-check 2026-11-06)",
+  "status_after_first": "not_started",
+  "shares": [
+   0.09970089730807577,
+   0.22507477567298106,
+   0.22507477567298106,
+   0.22507477567298106,
+   0.22507477567298106
+  ]
+ },
+ "IN-NEWLEBANON-MERIDIAN-ALL": {
+  "dates": [
+   "2027-07",
+   "2027-11",
+   "2028-02"
+  ],
+  "why": "Fitch (relayed): first 65 MW hall Jul-2027; credit-workbook seed (unverified): lease commencements Aug-2027 to Feb-2028; even split is a Capstone estimate"
+ },
+ "IN-NWINDIANA-AWSNIPSCO-ALL": {
+  "dates": [
+   "2027-01",
+   "2028-06",
+   "2029-12",
+   "2031-06",
+   "2032-12"
+  ],
+  "why": "NIPSCO filing: service from 2027-01-01 rising to 2.4 GW by end-2032 (Apr-2026 amendment accelerated delivery, terms not public); even split is a Capstone estimate",
+  "status_after_first": "not_started"
+ },
+ "IN-LAPORTE-MICROSOFT-ALL": {
+  "dates": [
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06"
+  ],
+  "why": "NiSource 10-Q 2026-10-28: capacity commitment begins 2028, rises to 788 MW from 2031; even split is a Capstone estimate"
+ },
+ "MI-VANBURENTWP-GOOGLECANNOLI-ALL": {
+  "dates": [
+   "2027-12",
+   "2028-06",
+   "2028-12"
+  ],
+  "why": "MPSC 2026-10-01 citing DTE: service begins Dec-2027, maximum load Dec-2028; even split is a Capstone estimate"
+ },
+ "IL-JOLIET-JTC-ALL": {
+  "dates": [
+   "2027-12",
+   "2029-06",
+   "2030-12",
+   "2032-06",
+   "2033-12",
+   "2035-06"
+  ],
+  "why": "Datacentres.com 2026-05-08: initial capacity by late 2027, phased over a decade; even split is a Capstone estimate",
+  "status_after_first": "not_started"
+ },
+ "KY-HAWESVILLE-TERAWULF-JUSTIFIED": {
+  "dates": [
+   "2027-12",
+   "2028-03",
+   "2028-06"
+  ],
+  "why": "TeraWulf 8-K 2026-11-04 (Fluor EPC): phased RFS for three buildings from late 2027 through Q2-2028; even split is a Capstone estimate"
+ },
+ "GA-AUGUSTA-NIXONTECH-ALL": {
+  "dates": [
+   "2028-06",
+   "2029-06"
+  ],
+  "why": "Georgia DRI #4853: completion 'this phase: 2028, 2029; overall: 2029'"
+ },
+ "GA-OCILLA-ARROWHEAD-ALL": {
+  "dates": [
+   "2030-06",
+   "2031-06",
+   "2032-06",
+   "2033-06",
+   "2034-06"
+  ],
+  "why": "Georgia DRI #4689: this phase 2030, overall project 2034"
+ },
+ "GA-LITHIASPRINGS-DCBLOXATLWEST-AB": {
+  "dates": [
+   "2026-06",
+   "2027-06",
+   "2028-02"
+  ],
+  "why": "Baxtel: Building A first phase 2026 with expansions through 2027; Building B early 2028"
+ },
+ "GA-LAGRANGE-PEGASUS-ALL": {
+  "dates": [
+   "2026-12",
+   "2029-06"
+  ],
+  "why": "AJC 2026-04-23: first phase operational by end-2026; Georgia DRI #4797 (PRL2): subsequent phase complete 2029",
+  "status_after_first": "not_started"
+ },
+ "GA-ROME-MSFTHUFFAKER-ALL": {
+  "dates": [
+   "2029-06",
+   "2030-12",
+   "2032-06"
+  ],
+  "why": "Baxtel: planned 2029, expansions through 2032; Georgia DRI #4860: 3 buildings, overall completion 2032"
+ },
+ "AZ-AVONDALE-STACKPHX01-ALL": {
+  "dates": [
+   "2027-06",
+   "2028-06",
+   "2029-06"
+  ],
+  "why": "Baxtel: site planned 2027, expansions through 2029",
+  "status_after_first": "not_started"
+ },
+ "AZ-PHOENIX-STACKPHX02-ALL": {
+  "dates": [
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06",
+   "2032-06"
+  ],
+  "why": "Baxtel building years: PHX02A 2028, B 2029, C 2030, D 2031, E 2032",
+  "status_after_first": "not_started"
+ },
+ "AZ-MESA-NOVVA-ALL": {
+  "dates": [
+   "2027-06",
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06"
+  ],
+  "why": "Baxtel building years: Mesa 1 2027 ... Mesa 5 2031; Novva: 2 phases, 300 MW",
+  "status_after_first": "not_started"
+ },
+ "AZ-PHOENIX-MENLOMDPX1-ALL": {
+  "dates": [
+   "2027-06",
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06"
+  ],
+  "why": "Baxtel building years: MD-PX1 Bldg1 2027 ... Bldg5 2031",
+  "status_after_first": "not_started"
+ },
+ "AZ-MESA-NTTPACIFIC-ALL": {
+  "dates": [
+   "2028-11",
+   "2029-06",
+   "2030-06",
+   "2031-06",
+   "2032-06",
+   "2033-06",
+   "2034-06"
+  ],
+  "why": "Baxtel: first facility operational by Nov-2028; Pacific 2-7 planned 2029-2034"
+ },
+ "LA-ALEXANDRIA-DELTAFORGE1-ALL": {
+  "dates": [
+   "2027-04",
+   "2028-02"
+  ],
+  "why": "APLD 10-Q (2026-10-07): initial RFS 1H CY2027, full capacity early CY2028; two buildings"
+ },
+ "LA-HOLLYRIDGE-HYPERIONEVEST-EXP": {
+  "dates": [
+   "2030-06",
+   "2031-06"
+  ],
+  "why": "Entergy Q3-26 10-Q: 7 CCGTs serving the Evest/Meta load have estimated in-service dates in 2030 and 2031"
+ },
+ "MO-TROY-CLOVERLEAF-ALL": {
+  "dates": [
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06",
+   "2032-06",
+   "2033-06"
+  ],
+  "why": "Baxtel: site planned 2028 with expansions through 2033"
+ },
+ "TX-AMARILLO-MATADOR-TW1": {
+  "dates": [
+   "2028-01",
+   "2028-02"
+  ],
+  "why": "Fermi 10-Q: DH1-2 target 2028-01-01, DH3-4 2028-02-01 (network hall end-2027 to Q1-2028); even halves are a Capstone estimate"
+ },
+ "TX-PECOS-CORZ-AMD": {
+  "dates": [
+   "2027-06",
+   "2027-12",
+   "2028-06",
+   "2028-12"
+  ],
+  "why": "CORZ Q3-26 deck: Pecos initial delivery est. 1H-2027; full 530 MW AMD/neocloud program by end-2028; even split is a Capstone estimate",
+  "status_after_first": "under_construction"
+ },
+ "TX-GREENVILLE-CORZ-HUNT": {
+  "dates": [
+   "2028-06",
+   "2028-12"
+  ],
+  "why": "CORZ Q3-26 deck: Hunt initial delivery est. 1H-2028; full program by end-2028; even split is a Capstone estimate",
+  "status_after_first": "under_construction"
+ },
+ "TX-FORTSTOCKTON-GWRANCH-ALL": {
+  "dates": [
+   "2027-06",
+   "2028-06",
+   "2029-06",
+   "2030-06"
+  ],
+  "why": "Pacifico: power to customers 1H-2027, full 5 GW by 2030 (one source; another says 2031); generation nameplate; even split is a Capstone estimate",
+  "status_after_first": "not_started"
+ },
+ "TX-BOLING-AWSEAGLE-ALL": {
+  "dates": [
+   "2027-07",
+   "2027-07",
+   "2027-07",
+   "2028-02",
+   "2028-03",
+   "2028-03",
+   "2028-03",
+   "2028-03",
+   "2028-03",
+   "2028-03"
+  ],
+  "why": "TDLR construction-completion dates of the 10 Amazon Data Services buildings (A,C,D 2027-01-01; B 2027-08-01; E-K 2027-09-01); even split of the >75 MW peak is a Capstone estimate | TDLR completion dates in tranches [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] shifted +6m to energization (Epoch convention) at merge 2026-11-06"
+ },
+ "TX-HASKELL-GOOGLESOUTHHASKELL-ALL": {
+  "dates": [
+   "2027-10",
+   "2028-06",
+   "2028-09",
+   "2029-06",
+   "2029-06"
+  ],
+  "why": "TDLR completions THM1A 2027-04-16 and THM2A 2028-03-15; Baxtel years for the other three bldgs (2028, 2029, 2029); even split is a Capstone estimate | TDLR completion dates in tranches [1, 2] shifted +6m to energization (Epoch convention) at merge 2026-11-06",
+  "status_after_first": "under_construction"
+ },
+ "TX-PAMPA-GOOGLEMEITNER-ALL": {
+  "dates": [
+   "2028-05",
+   "2028-06",
+   "2028-10"
+  ],
+  "why": "TDLR completions of buildings 1A/2A/3A; even split is a Capstone estimate | TDLR completion dates in tranches [1, 2, 3] shifted +6m to energization (Epoch convention) at merge 2026-11-06"
+ },
+ "TX-WHITNEY-CYRUSONEDFW17-ALL": {
+  "dates": [
+   "2027-06",
+   "2027-07",
+   "2027-10",
+   "2027-10"
+  ],
+  "why": "TDLR shell completions DFW17 2026-12-31, DFW11 2027-01-01, DFW17B 2027-04-28, DFW17C 2027-04-30; even split is a Capstone estimate | TDLR completion dates in tranches [1, 2, 3, 4] shifted +6m to energization (Epoch convention) at merge 2026-11-06"
+ },
+ "TX-FAIRFIELD-CYRUSONEDFW20-PH1": {
+  "dates": [
+   "2027-09",
+   "2027-11",
+   "2028-02"
+  ],
+  "why": "TDLR completions DFW20A/B/C; even split is a Capstone estimate | TDLR completion dates in tranches [1, 2, 3] shifted +6m to energization (Epoch convention) at merge 2026-11-06"
+ },
+ "TX-HUTTO-SKYBOX-ALL": {
+  "dates": [
+   "2026-12",
+   "2026-12",
+   "2027-04",
+   "2029-04",
+   "2029-06",
+   "2030-06"
+  ],
+  "why": "TDLR completions for Bldgs 1-4 (B1 2026-06-30, B3 shell 2026-06-01, B2 fit-up 2026-10-15, B4 2028-10-30) and Baxtel years for Bldgs 5-6; even split is a Capstone estimate | TDLR completion dates in tranches [1, 2, 3, 4] shifted +6m to energization (Epoch convention) at merge 2026-11-06"
+ },
+ "TX-LANCASTER-SKYBOX-ALL": {
+  "dates": [
+   "2026-11",
+   "2027-10",
+   "2029-06"
+  ],
+  "why": "TDLR: Bldg 1 fit-out 2026-05-01 and D2B fit-out 2027-04-01; Baxtel: expansions through 2029; even thirds are a Capstone estimate | TDLR completion dates in tranches [1, 2] shifted +6m to energization (Epoch convention) at merge 2026-11-06"
+ },
+ "TX-LANCASTER-STACKDFW02-ALL": {
+  "dates": [
+   "2027-09",
+   "2029-06",
+   "2029-06",
+   "2029-06",
+   "2030-06",
+   "2030-06"
+  ],
+  "why": "TDLR completions DFW02A 2027-03-01 and DFW02B 2028-12-14; Baxtel years for C-F; even split by building is a Capstone estimate | TDLR completion dates in tranches [1, 2] shifted +6m to energization (Epoch convention) at merge 2026-11-06",
+  "status_after_first": "not_started"
+ },
+ "TX-REDOAK-DATABANK-PH1": {
+  "dates": [
+   "2027-06",
+   "2027-07",
+   "2027-09"
+  ],
+  "why": "TDLR tenant fit-out completions DFW9/DFW10/DFW11; even split is a Capstone estimate | TDLR completion dates in tranches [1, 2, 3] shifted +6m to energization (Epoch convention) at merge 2026-11-06"
+ },
+ "TX-REDOAK-DATABANK-PH2": {
+  "dates": [
+   "2028-04",
+   "2028-06",
+   "2030-01",
+   "2032-06",
+   "2033-06"
+  ],
+  "why": "TDLR completions DFW12 TFO 2027-10-30, DFW13 2027-12-31, DFW15 2029-07-31; Baxtel years for DFW14 (2032) and DFW16 (2033); even split is a Capstone estimate | TDLR completion dates in tranches [1, 2, 3] shifted +6m to energization (Epoch convention) at merge 2026-11-06",
+  "status_after_first": "not_started"
+ },
+ "TX-TEMPLE-ROWAN-ALL": {
+  "dates": [
+   "2027-06",
+   "2028-02",
+   "2029-06"
+  ],
+  "why": "first bldg online 2027 (Rowan); AUS02 TDLR completion 2027-08-27; AUS03 Baxtel 2029; even thirds are a Capstone estimate | TDLR completion dates in tranches [2] shifted +6m to energization (Epoch convention) at merge 2026-11-06"
+ },
+ "TX-FORTWORTH-EDGEDDFW02-ALL": {
+  "dates": [
+   "2028-06",
+   "2028-10"
+  ],
+  "why": "TDLR completions of the two Outpost buildings; even split is a Capstone estimate | TDLR completion dates in tranches [1, 2] shifted +6m to energization (Epoch convention) at merge 2026-11-06"
+ },
+ "TX-TURKEY-QTSHALL-ALL": {
+  "dates": [
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06",
+   "2032-06",
+   "2033-06",
+   "2034-06",
+   "2035-06"
+  ],
+  "why": "Baxtel: site planned for 2028 with expansions through 2035; even annual split is a Capstone estimate",
+  "status_after_first": "not_started"
+ },
+ "VA-LOUISA-AWSNECREEK-ALL": {
+  "dates": [
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06"
+  ],
+  "why": "Baxtel: first built 2028, expansions through 2030; WWBT 2026-07-28: construction 'slated to be completed in 2031'. Even split over 4 years is a Capstone estimate."
+ },
+ "VA-STAFFORD-STACKSTC-REST": {
+  "dates": [
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06",
+   "2032-06",
+   "2033-06",
+   "2034-06",
+   "2035-06",
+   "2036-06"
+  ],
+  "why": "Baxtel: STC first phase 2027 (B1 rowed separately), expansions through 2036. Start year 2028 and even annual split are Capstone estimates.",
+  "status_after_first": "not_started"
+ },
+ "VA-LOUISA-EDGECORESHANNONHILL-ALL": {
+  "dates": [
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06",
+   "2032-06",
+   "2033-06"
+  ],
+  "why": "Baxtel: 6 bldgs, first 2028, expansions through 2033 (tracker planning years). One building per year is a Capstone estimate.",
+  "status_after_first": "not_started"
+ },
+ "VA-STERLING-POWERHOUSEPACIFIC-ALL": {
+  "dates": [
+   "2026-08",
+   "2027-01",
+   "2027-05"
+  ],
+  "why": "PowerHouse page: Power Delivery Q3 2026, '265 MW capacity by January 2027', building delivery Q3 2026 - Q2 2027 (3 bldgs). Month placement is a Capstone estimate."
+ },
+ "NC-CHARLOTTE-POWERHOUSECLT-ALL": {
+  "dates": [
+   "2027-04",
+   "2027-10",
+   "2028-04",
+   "2028-10"
+  ],
+  "why": "PowerHouse page: Power Delivery Q2 2027 (Apr-27 substation per Jan-25 release), Construction/Delivery Q1 2026 - Q4 2028, up to 4 bldgs. Even split is a Capstone estimate."
+ },
+ "TX-CLAUDE-GOODNIGHT-B3B6": {
+  "dates": [
+   "2027-07",
+   "2027-08",
+   "2027-11",
+   "2028-01"
+  ],
+  "why": "TDLR completions B3 2027-01-29 (TABS2026003348), B4 2027-02-26 (TABS2026003350), B5 2027-05-28 (TABS2026010858), B6 2027-07-30, each +6m to energization (tx_b round 2; double-check 2026-11-06). Equal 200 MW per building follows Epoch's ~1,006 MW for 6 buildings."
+ },
+ "TX-VERNON-GOOGLERISE-ALL": {
+  "dates": [
+   "2028-09",
+   "2028-09",
+   "2029-06",
+   "2030-06",
+   "2031-06",
+   "2032-06",
+   "2033-06",
+   "2034-06"
+  ],
+  "why": "TDLR Rise 1A and 2A completion 2028-03-31 (+6m); Baxtel: expansions through 2034. The 850 MW full build-out (Cleanview) is split evenly over the two dated buildings and six annual expansions - building count not public, so the split is a Capstone estimate (one ramp policy for full-build-out MW, double-check 2026-11-06)"
+ }
+}

@@ -1,0 +1,846 @@
+{
+ "_doc": "Rules layer for build_dc_delay.py. HAND-EDIT. Every instrument carries source + date + a tag (HARD = statute/order/date on record; PARTIAL = sourced range, exact month ours; ESTIMATE = ours). PROVISIONAL until the 2026-11-06 rules research (raw/state_local_rules.md) is folded in.",
+ "as_of": "2026-11",
+ "built": "2026-11-06",
+ "provisional": false,
+ "basis": {
+  "to_it": {
+   "IT": 1.0,
+   "facility": 1.2,
+   "grid": 1.2,
+   "gen": 1.5,
+   "unknown": 1.2
+  },
+  "note": "MW are converted to IT-equivalent before any sum: facility (and utility/grid load requests) ÷1.2, on-site generation nameplate ÷1.5, unknown basis treated as facility.",
+  "tags": {
+   "facility": "PARTIAL — UBS CoreWeave initiation (themes/ai-datacenter-power.md, 2026-09-22 block): gross facility load 'can be 10-25% larger than IT Load'; Bernstein 2026-10-02: +19 IT-GW ≈ ~25 facility GW (×1.32). 1.2 sits inside 1.10-1.32.",
+   "grid": "ESTIMATE — utility load requests treated as facility load.",
+   "gen": "ESTIMATE — on-site generation is sized for redundancy (N+1) and derating; 1.5 = facility 1.2 × 1.25 redundancy.",
+   "unknown": "ESTIMATE — most press MW for campuses are power/facility figures; treated as facility."
+  }
+ },
+ "lead_months": {
+  "air_permit": 12,
+  "interconnection": 6,
+  "new_license": 18
+ },
+ "lead_tags": {
+  "air_permit": "PARTIAL — Capstone internal deck: ~12 months to build the on-site plant once the air permit issues (Stargate Abilene example).",
+  "interconnection": "ESTIMATE — months from a reopened large-load approval to energization for a phase whose shell is already being built.",
+  "new_license": "PARTIAL — Capstone internal deck: 18-month build ('prazo de obra 18 meses')."
+ },
+ "scenarios": {
+  "base": {
+   "label": "Base",
+   "blurb": "Pauses already in force run to their likely end (TX through the 2027 session, OR and NY to Jul-27); pledges and bills stay off. Unknown approvals count as missing only for phases not yet started.",
+   "unknown_exposed": {
+    "air_permit": [
+     "not_started"
+    ],
+    "interconnection": [
+     "not_started"
+    ],
+    "new_license": [
+     "not_started"
+    ]
+   },
+   "agreement_protects": true
+  },
+  "bear": {
+   "label": "Bear (post-election)",
+   "blurb": "The deck's case: winners' pledges become pauses (TX to the Sep-1 effective date, OH and GA 6 months, NM) and VA SB 843 passes. Unknown air-permit status counts as missing for phases not yet energized.",
+   "unknown_exposed": {
+    "air_permit": [
+     "not_started",
+     "under_construction"
+    ],
+    "interconnection": [
+     "not_started"
+    ],
+    "new_license": [
+     "not_started"
+    ]
+   },
+   "agreement_protects": true
+  },
+  "stress": {
+   "label": "Stress",
+   "blurb": "Every pause runs to its long end (TX Dec-27, OH/GA/NM ~12 months), NY's one-year bill is signed, local moratoria are renewed once. Unknown air-permit and interconnection status counts as missing for phases not yet energized. An ERCOT interconnection agreement no longer protects a phase (ERCOT: even Base Load still needs verification).",
+   "unknown_exposed": {
+    "air_permit": [
+     "not_started",
+     "under_construction"
+    ],
+    "interconnection": [
+     "not_started",
+     "under_construction"
+    ],
+    "new_license": [
+     "not_started"
+    ]
+   },
+   "agreement_protects": false
+  }
+ },
+ "governors": {
+  "TX": {
+   "gov_2026": "Greg Abbott",
+   "party_2026": "R",
+   "gov_2027": "Gina Hinojosa",
+   "party_2027": "D",
+   "flip": true,
+   "takes_office": "2027-01-19",
+   "dc_stance": "Pledged: 'When I am governor I will issue a moratorium — a ban — on all data center approvals until laws can be passed by the Legislature' (Oct-22 video); campaign: applies to 'any new permits'. Also: end sales-tax exemption, ban NDAs, union labour, household bill/water protections. Works with a Democratic House; Senate stays Republican (~19-12, per Luminix).",
+   "source": "https://kfoxtv.com/news/local/gina-hinojosa-won-the-governors-race-what-happens-to-texas-data-centers-now-11-04-2026 ; https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified) ; FundaAI 2026-11-04 (takes office Jan 19) via _wiki\\themes\\ai-datacenter-power.md",
+   "source_date": "2026-11-04"
+  },
+  "OH": {
+   "gov_2026": "Mike DeWine",
+   "party_2026": "R",
+   "gov_2027": "Amy Acton",
+   "party_2027": "D",
+   "flip": true,
+   "takes_office": "2027-01-11",
+   "dc_stance": "'Conditional moratorium' on NEW data centers: proceed only if developers meet conditions — 100% union labour, environmental standards, community-benefit agreements, cover all utility costs (statenews 2026-07-27, 4 named) + no NDAs, own energy (same article); Luminix 2026-11-05 lists six incl. incentive clawbacks and brownfield siting. No draft executive order published; Republicans kept both chambers.",
+   "source": "https://www.statenews.org/government-politics/2026-07-27/democrat-running-for-ohio-governor-calls-for-conditional-moratorium-on-new-data-centers ; https://www.useluminix.com/reports/industry-analysis/data-center-moratoriums-after-the-midterms (aggregator report, 2026-11-05; secondary) ; https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-05"
+  },
+  "GA": {
+   "gov_2026": "Brian Kemp",
+   "party_2026": "R",
+   "gov_2027": "Keisha Lance Bottoms",
+   "party_2027": "D",
+   "flip": true,
+   "takes_office": "2027-01",
+   "dc_stance": "Temporary statewide pause on state approvals for NEW data centers 'until consumer protections are established'; no end date, mechanism or exemptions stated (SemiAnalysis 11-01; WTVM 11-05). Luminix (secondary): length 'one month, six months, or longer'; not a permanent halt. PSC flipped to 3-2 Democratic.",
+   "source": "https://www.wtvm.com/2026/11/06/georgias-newly-flipped-utility-commission-targets-power-bills-shutoffs-data-centers/ ; relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-05"
+  },
+  "NV": {
+   "gov_2026": "Joe Lombardo",
+   "party_2026": "R",
+   "gov_2027": "Aaron Ford",
+   "party_2027": "D",
+   "flip": true,
+   "takes_office": "2027-01-04",
+   "dc_stance": "Pause on NEW data-center TAX ABATEMENTS until a GOED audit shows commitments are met; ban wasteful evaporative cooling; 'not one penny' of cost shift. No construction/permit moratorium pledged.",
+   "source": "https://www.fox5vegas.com/2026/08/19/ford-announces-intention-pause-tax-breaks-data-centers-if-elected-governor/ ; https://thenevadaindependent.com/article/nevada-governor-candidate-aaron-ford-pledges-to-pause-new-data-center-tax-breaks ; https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-06"
+  },
+  "IA": {
+   "gov_2026": "Kim Reynolds",
+   "party_2026": "R",
+   "gov_2027": "Rob Sand",
+   "party_2027": "D",
+   "flip": true,
+   "takes_office": "2027-01",
+   "dc_stance": "Stricter conditions, no pause (SemiAnalysis 11-01: 'stopped short of calling for a pause'); would end incentives and make DCs pay own costs. Opponent Lahn (R) backed a moratorium — he lost.",
+   "source": "relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-06"
+  },
+  "KS": {
+   "gov_2026": "Laura Kelly",
+   "party_2026": "D",
+   "gov_2027": "Cindy Holscher (leading, not called)",
+   "party_2027": "D",
+   "flip": false,
+   "takes_office": "2027-01-11",
+   "dc_stance": "Not researched (web-search budget exhausted). Kansas local ballot bans passed 11-03 (El Dorado, Emporia, Ottawa).",
+   "source": "https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-06"
+  },
+  "NM": {
+   "gov_2026": "Michelle Lujan Grisham",
+   "party_2026": "D",
+   "gov_2027": "Deb Haaland",
+   "party_2027": "D",
+   "flip": false,
+   "takes_office": "2027-01-01",
+   "dc_stance": "Day-one executive order: moratorium on NEW large-scale data-center projects until protections are in place and any necessary rulemaking is complete; 8-point plan (own renewables, closed-loop water, union labour, decommissioning bonds, clawbacks). Pre-election said 'I don't have the power to stop Project Jupiter'.",
+   "source": "https://nmpoliticalreport.com/2026/09/17/haaland-data-centers/ ; https://newsletter.cleanview.co/p/newly-elected-governors-could-pause ; https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-04"
+  },
+  "AZ": {
+   "gov_2026": "Katie Hobbs",
+   "party_2026": "D",
+   "gov_2027": "Katie Hobbs",
+   "party_2027": "D",
+   "flip": false,
+   "takes_office": null,
+   "dc_stance": "Against a statewide moratorium; three-year freeze on new DC tax-program applications already in law (Jul-2026 to Jun-2029); wants DCs to pay for water.",
+   "source": "relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-06"
+  },
+  "PA": {
+   "gov_2026": "Josh Shapiro",
+   "party_2026": "D",
+   "gov_2027": "Josh Shapiro",
+   "party_2027": "D",
+   "flip": false,
+   "takes_office": null,
+   "dc_stance": "Conditions, no moratorium: EO 2026-05 (Aug-18) GRID requirements + local approval before DEP permits for >25 MW; backs HB 2650. Garrity (R, pause while municipalities update rules) lost.",
+   "source": "relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-06"
+  },
+  "OR": {
+   "gov_2026": "Tina Kotek",
+   "party_2026": "D",
+   "gov_2027": "Tina Kotek",
+   "party_2027": "D",
+   "flip": false,
+   "takes_office": null,
+   "dc_stance": "Supports a statewide moratorium; DEQ air/water permit hold and state-land pause both to 2027-07-01; reforms in the 2027 session.",
+   "source": "relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; https://www.ballardspahr.com/insights/alerts-and-articles/2026/10/oregon-governor-pauses-deq-permits-for-new-and-expanded-data-centers ; https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-06"
+  },
+  "NY": {
+   "gov_2026": "Kathy Hochul",
+   "party_2026": "D",
+   "gov_2027": "Kathy Hochul",
+   "party_2027": "D",
+   "flip": false,
+   "takes_office": null,
+   "dc_stance": "EO 62 (2026-07-14) DEC permit pause for >=50 MW pending a GEIS ('up to a year'); declined to sign the legislature's 1-year >=20 MW RDCD Act (action due by end-Dec-2026; veto expected by law firms).",
+   "source": "E:\\research-sources\\emails\\semianalysis\\2026-09-15-datacenter-moratoriums-us-buildout.html ; https://www.dwt.com/blogs/energy--environmental-law-blog/2026/07/ny-data-center-permitting-pause-executive-order-62 ; https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-06"
+  },
+  "IL": {
+   "gov_2026": "JB Pritzker",
+   "party_2026": "D",
+   "gov_2027": "JB Pritzker",
+   "party_2027": "D",
+   "flip": false,
+   "takes_office": null,
+   "dc_stance": "No moratorium; stopped processing new sales-tax-exemption agreements from 2026-07-01; wants DCs to pay full energy/water cost.",
+   "source": "relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-06"
+  },
+  "OK": {
+   "gov_2026": "Kevin Stitt",
+   "party_2026": "R",
+   "gov_2027": "Mike Mazzei",
+   "party_2027": "R",
+   "flip": false,
+   "takes_office": "2027-01-11",
+   "dc_stance": "Open to DCs, opposes a pause, wants developers to pay their own way (SemiAnalysis 11-01). Munson (D, day-one moratorium) lost.",
+   "source": "relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-06"
+  },
+  "MI": {
+   "gov_2026": "Gretchen Whitmer",
+   "party_2026": "D",
+   "gov_2027": "Jocelyn Benson",
+   "party_2027": "D",
+   "flip": false,
+   "takes_office": "2027-01-01",
+   "dc_stance": "Not verified (web-search budget exhausted). Both 2026 US Senate candidates called for DC moratoriums (SemiAnalysis 11-01) — federal office, no power to enact.",
+   "source": "https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified) ; relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html",
+   "source_date": "2026-11-06"
+  },
+  "WI": {
+   "gov_2026": "Tony Evers",
+   "party_2026": "D",
+   "gov_2027": "David Crowley",
+   "party_2027": "D",
+   "flip": false,
+   "takes_office": "2027-01-04",
+   "dc_stance": "Not verified (web-search budget exhausted). Statewide moratorium bill SB1061/AB1099 died 2026-03-23 (tracker).",
+   "source": "https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-06"
+  },
+  "MN": {
+   "gov_2026": "Tim Walz",
+   "party_2026": "D",
+   "gov_2027": "Amy Klobuchar",
+   "party_2027": "D",
+   "flip": false,
+   "takes_office": "2027-01-04",
+   "dc_stance": "Not verified (web-search budget exhausted). Statewide permitting-moratorium bill SF4298/HF4888 died 2026-05 (tracker).",
+   "source": "https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-06"
+  },
+  "IN": {
+   "gov_2026": "Mike Braun",
+   "party_2026": "R",
+   "gov_2027": "Mike Braun",
+   "party_2027": "R",
+   "flip": false,
+   "takes_office": null,
+   "dc_stance": "No 2026 governor race. No state pause; restrictions are county/city level (~1/3 of counties by Jul-2026).",
+   "source": "relatórios bons\\2026_11_06_amigo_felipe_gw_atrasa_pausas_estaduais.html ; https://www.wfyi.org/statewide/2026-07-06/indiana-counties-data-center-moratoriums-bans-2026",
+   "source_date": "2026-11-06"
+  },
+  "VA": {
+   "gov_2026": "Abigail Spanberger",
+   "party_2026": "D",
+   "gov_2027": "Abigail Spanberger",
+   "party_2027": "D",
+   "flip": false,
+   "takes_office": null,
+   "dc_stance": "No 2026 governor race. Has not backed a statewide moratorium; EO 22 (2026-09-18) 'Data Center Accountability Framework' — conditions, no pause. The deck's quote ('é uma escolha local') was not found in a primary.",
+   "source": "https://www.gtlaw.com/de/insights/2026/9/virginia-executive-order-22-sets-new-requirements-for-data-center-development-and-ai-governance ; https://www.wtvr.com/news/local-news/richmond/state-senator-files-legislation-for-three-year-moratorium-on-new-data-centers",
+   "source_date": "2026-10-19"
+  },
+  "LA": {
+   "gov_2026": "Jeff Landry",
+   "party_2026": "R",
+   "gov_2027": "Jeff Landry",
+   "party_2027": "R",
+   "flip": false,
+   "takes_office": null,
+   "dc_stance": "No 2026 governor race. No state pause found; local pauses only (New Orleans).",
+   "source": "relatórios bons\\2026_11_06_amigo_felipe_gw_atrasa_pausas_estaduais.html ; Moratorium Nation local inventory (Michael J. Bommarito, CC-BY-4.0), https://mjbommar.github.io/moratorium-data-2026/data/moratorium_inventory.csv, cohort 2026-11-05",
+   "source_date": "2026-11-05"
+  },
+  "MO": {
+   "gov_2026": "Mike Kehoe",
+   "party_2026": "R",
+   "gov_2027": "Mike Kehoe",
+   "party_2027": "R",
+   "flip": false,
+   "takes_office": null,
+   "dc_stance": "No 2026 governor race; SemiAnalysis left MO out of its tiers ('large Republican majorities and supportive governors'). Local: St. Charles County/City.",
+   "source": "relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html",
+   "source_date": "2026-11-01"
+  },
+  "SC": {
+   "gov_2026": "Henry McMaster",
+   "party_2026": "R",
+   "gov_2027": "Alan Wilson",
+   "party_2027": "R",
+   "flip": false,
+   "takes_office": "2027-01",
+   "dc_stance": "Not researched (web-search budget exhausted); no state pause found in the tracker.",
+   "source": "https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-06"
+  },
+  "TN": {
+   "gov_2026": "Bill Lee",
+   "party_2026": "R",
+   "gov_2027": "Marsha Blackburn",
+   "party_2027": "R",
+   "flip": false,
+   "takes_office": "2027-01",
+   "dc_stance": "Not researched (web-search budget exhausted); local pauses only (Nashville to 2026-12-01; Memphis proposed).",
+   "source": "https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified) ; Moratorium Nation local inventory (Michael J. Bommarito, CC-BY-4.0), https://mjbommar.github.io/moratorium-data-2026/data/moratorium_inventory.csv, cohort 2026-11-05",
+   "source_date": "2026-11-06"
+  },
+  "AL": {
+   "gov_2026": "Kay Ivey",
+   "party_2026": "R",
+   "gov_2027": "Tommy Tuberville",
+   "party_2027": "R",
+   "flip": false,
+   "takes_office": "2027-01",
+   "dc_stance": "Not researched (web-search budget exhausted); AL 2026 law limited DC tax abatements (HB399), no pause.",
+   "source": "https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-06"
+  },
+  "FL": {
+   "gov_2026": "Ron DeSantis",
+   "party_2026": "R",
+   "gov_2027": "Byron Donalds",
+   "party_2027": "R",
+   "flip": false,
+   "takes_office": "2027-01",
+   "dc_stance": "'Less critical of data centers … did not support a statewide pause' (NewsNation/SciAm summaries 11-04/05).",
+   "source": "https://www.newsnationnow.com/politics/2026-midterm-elections/data-center-election-results/ ; https://en.wikipedia.org/wiki/2026_United_States_gubernatorial_elections (revision 1384082438, read 2026-11-06; results provisional/uncertified)",
+   "source_date": "2026-11-05"
+  }
+ },
+ "instruments": [
+  {
+   "id": "TX-TCEQ-PERMIT-FREEZE",
+   "state": "TX",
+   "label": "TX · TCEQ freeze on all DC permits",
+   "blocks": [
+    "air_permit",
+    "new_license"
+   ],
+   "start": "2026-09",
+   "end": {
+    "base": "2027-06",
+    "bear": "2027-09",
+    "stress": "2027-12"
+   },
+   "active": {
+    "base": true,
+    "bear": true,
+    "stress": true
+   },
+   "note": "Air (on-site generation, gensets) and water permits. Issued permits stand; the next power phase still needs approval.",
+   "tag": "start HARD (Abbott letter 2026-09-21) · end PARTIAL: base = session end May-31 (Wells Fargo 11-04 'through the 2027 session'; FundaAI 11-04 filed applications resume 1H27); bear = Sep-1 effective date; stress = special session (inferred)",
+   "source": "Abbott letter to TCEQ 2026-09-21 (Beveridge & Diamond alert https://www.bdlaw.com/publications/texas-pauses-all-environmental-permitting-for-data-centers/ ; DLA Piper 2026-09-25) ; relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; https://www.useluminix.com/reports/industry-analysis/data-center-moratoriums-after-the-midterms (aggregator report, 2026-11-05; secondary) ; _wiki\\themes\\ai-datacenter-power.md (11-05 block) (2026-11-05)"
+  },
+  {
+   "id": "TX-ERCOT-LL",
+   "state": "TX",
+   "label": "TX · ERCOT large-load audit (no new approvals)",
+   "blocks": [
+    "interconnection"
+   ],
+   "start": "2026-08",
+   "end": {
+    "base": "2027-06",
+    "bear": "2027-09",
+    "stress": "2027-12"
+   },
+   "active": {
+    "base": true,
+    "bear": true,
+    "stress": true
+   },
+   "note": "Batch Zero loads ≥75 MW cannot advance; the Dec-10 audit report 'does not by itself reopen permitting'. Energized loads unaffected. Applies to ERCOT loads only (not El Paso/WECC or SPP sites); Batch Zero threshold 75 MW tested on the campus total.",
+   "tag": "start HARD (Abbott directive 2026-08-03) · end PARTIAL (same logic as TCEQ)",
+   "source": "Abbott directive 2026-08-03 (DLA Piper alert 2026-09-25: https://www.dlapiper.com/en-us/insights/publications/2026/09/governor-abbott-expands-data-center-permitting-pause) ; E:\\research-sources\\emails\\semianalysis\\2026-09-15-datacenter-moratoriums-us-buildout.html ; relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; Wells Fargo / FundaAI 2026-11-04 via _wiki\\themes\\ai-datacenter-power.md (11-05 block) ; https://kfoxtv.com/news/local/gina-hinojosa-won-the-governors-race-what-happens-to-texas-data-centers-now-11-04-2026 (2026-11-04)",
+   "grid": "ERCOT",
+   "min_mw": 75
+  },
+  {
+   "id": "TX-HINOJOSA-MORATORIUM",
+   "state": "TX",
+   "label": "TX · Hinojosa ban on new DC approvals (pledged)",
+   "blocks": [
+    "new_license"
+   ],
+   "start": "2027-01",
+   "end": {
+    "base": "2027-09",
+    "bear": "2027-09",
+    "stress": "2027-12"
+   },
+   "active": {
+    "base": false,
+    "bear": true,
+    "stress": true
+   },
+   "note": "'a ban on all data center approvals until laws can be passed'; takes office 2027-01-19. Issued permits appear to stand.",
+   "tag": "pledge HARD (Oct-22 video, quoted 11-04) · window PARTIAL",
+   "source": "https://kfoxtv.com/news/local/gina-hinojosa-won-the-governors-race-what-happens-to-texas-data-centers-now-11-04-2026 (quotes Oct-22 video) ; https://www.nbcdfw.com/investigations/what-a-new-texas-governor-could-mean-for-data-centers/4101794/ ; relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html (2026-11-04)"
+  },
+  {
+   "id": "OH-ACTON-CONDITIONAL",
+   "state": "OH",
+   "label": "OH · Acton conditional moratorium (pledged; modelled as a hold)",
+   "blocks": [
+    "new_license"
+   ],
+   "start": "2027-01",
+   "end": {
+    "base": "2027-07",
+    "bear": "2027-07",
+    "stress": "2028-01"
+   },
+   "active": {
+    "base": false,
+    "bear": true,
+    "stress": true
+   },
+   "note": "Conditional: new DCs proceed only if they meet her conditions. The bear case follows the reference deck: no project meets them for 6 months. The rules research base case is no pause.",
+   "tag": "pledge HARD · window ESTIMATE: bear = deck's 6 months until the rule exists; stress = 12 months",
+   "source": "https://www.statenews.org/government-politics/2026-07-27/democrat-running-for-ohio-governor-calls-for-conditional-moratorium-on-new-data-centers ; relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; https://www.useluminix.com/reports/industry-analysis/data-center-moratoriums-after-the-midterms (aggregator report, 2026-11-05; secondary) ; relatórios bons\\2026_11_06_amigo_felipe_gw_atrasa_pausas_estaduais.html (2026-11-05)"
+  },
+  {
+   "id": "GA-BOTTOMS-PAUSE",
+   "state": "GA",
+   "label": "GA · Bottoms pause on state approvals for new DCs (pledged)",
+   "blocks": [
+    "new_license"
+   ],
+   "start": "2027-01",
+   "end": {
+    "base": "2027-07",
+    "bear": "2027-07",
+    "stress": "2028-01"
+   },
+   "active": {
+    "base": false,
+    "bear": true,
+    "stress": true
+   },
+   "note": "No mechanism, end date or exemptions stated; PSC-approved contracts (e.g. Project Camellia) the likeliest carve-out.",
+   "tag": "pledge HARD · window PARTIAL (rules research base Jul-27, stress Jan-28; the deck shows both 6 and 12 months)",
+   "source": "https://www.wtvm.com/2026/11/06/georgias-newly-flipped-utility-commission-targets-power-bills-shutoffs-data-centers/ ; relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; https://www.useluminix.com/reports/industry-analysis/data-center-moratoriums-after-the-midterms (aggregator report, 2026-11-05; secondary) ; relatórios bons\\2026_11_06_amigo_felipe_gw_atrasa_pausas_estaduais.html (2026-11-05)",
+   "exempt": {
+    "base": [
+     "GA-EFFINGHAM-CAMELLIA"
+    ],
+    "bear": [
+     "GA-EFFINGHAM-CAMELLIA"
+    ]
+   },
+   "exempt_why": "PSC-approved Georgia Power contract (Aug-2026): the likeliest carve-out per the rules research; not carved out in stress"
+  },
+  {
+   "id": "NM-HAALAND-EO",
+   "state": "NM",
+   "label": "NM · Haaland day-one moratorium on new large DCs (pledged)",
+   "blocks": [
+    "air_permit",
+    "new_license"
+   ],
+   "start": "2027-01",
+   "end": {
+    "base": "2027-09",
+    "bear": "2027-09",
+    "stress": "2028-01"
+   },
+   "active": {
+    "base": false,
+    "bear": true,
+    "stress": true
+   },
+   "note": "Takes office 2027-01-01; Project Jupiter's air permit ruling hoped for by Dec-30 (before she is sworn in). Modelled to hold pending NMED air permits too (Project Jupiter: hearing Dec-5, ruling hoped by Dec-30).",
+   "tag": "pledge HARD · window PARTIAL (laws effective 90 days after the ~Mar-20 adjournment; stress inferred)",
+   "source": "https://nmpoliticalreport.com/2026/09/17/haaland-data-centers/ ; https://newsletter.cleanview.co/p/newly-elected-governors-could-pause ; _wiki\\themes\\ai-datacenter-power.md (11-05 NM block) (2026-11-04)"
+  },
+  {
+   "id": "VA-SB843",
+   "state": "VA",
+   "label": "VA · SB 843 three-year moratorium on new DC approvals (bill)",
+   "blocks": [
+    "new_license"
+   ],
+   "start": "2027-07",
+   "end": {
+    "base": "2030-07",
+    "bear": "2030-07",
+    "stress": "2030-07"
+   },
+   "active": {
+    "base": false,
+    "bear": true,
+    "stress": true
+   },
+   "note": "Prefiled by Sen. Perry; would bar local and state approvals for NEW DCs 2027-07-01 → 2030-07-01; 'vested right' for projects in process under discussion. In the deck's bear case; the rules research rates it stress-only.",
+   "tag": "dates HARD (bill text as reported) · passage ESTIMATE",
+   "source": "https://www.wtvr.com/news/local-news/richmond/state-senator-files-legislation-for-three-year-moratorium-on-new-data-centers ; https://virginiamercury.com/2026/10/16/data-center-moratorium-bills-stack-up-ahead-of-virginia-legislative-session-in-january/ (search summary; page 403) ; https://legiscan.com/VA/research/SB843 (search summary) ; relatórios bons\\2026_11_06_amigo_felipe_gw_atrasa_pausas_estaduais.html (2026-10-19)"
+  },
+  {
+   "id": "OR-DEQ-HOLD",
+   "state": "OR",
+   "label": "OR · DEQ air/water permit hold for new or expanded DCs",
+   "blocks": [
+    "air_permit",
+    "new_license"
+   ],
+   "start": "2026-10",
+   "end": {
+    "base": "2027-07",
+    "bear": "2027-07",
+    "stress": "2027-12"
+   },
+   "active": {
+    "base": true,
+    "bear": true,
+    "stress": true
+   },
+   "note": "Kotek letter 2026-10-09; phased campuses and modifications are caught.",
+   "tag": "start/end HARD · stress inferred",
+   "source": "https://www.ballardspahr.com/insights/alerts-and-articles/2026/10/oregon-governor-pauses-deq-permits-for-new-and-expanded-data-centers ; https://www.opb.org/pdf/100926_GovernorLettertoDEQDataCenterPermitting_1791931532928.pdf ; relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html (2026-10-20)"
+  },
+  {
+   "id": "NY-EO62",
+   "state": "NY",
+   "label": "NY · EO 62 DEC permit pause (≥50 MW)",
+   "blocks": [
+    "air_permit",
+    "new_license"
+   ],
+   "min_mw": 50,
+   "start": "2026-07",
+   "end": {
+    "base": "2027-07",
+    "bear": "2027-07",
+    "stress": "2028-01"
+   },
+   "active": {
+    "base": true,
+    "bear": true,
+    "stress": true
+   },
+   "note": "Ends when the GEIS is final ('up to a year'); applications complete before 2026-07-14 exempt.",
+   "tag": "start HARD · end PARTIAL",
+   "source": "https://www.dwt.com/blogs/energy--environmental-law-blog/2026/07/ny-data-center-permitting-pause-executive-order-62 (search summary) ; E:\\research-sources\\emails\\semianalysis\\2026-09-15-datacenter-moratoriums-us-buildout.html ; Moratorium Nation state tracker (ny-eo62) (2026-11-05)"
+  },
+  {
+   "id": "NY-RDCD",
+   "state": "NY",
+   "label": "NY · RDCD Act one-year pause (≥20 MW, bill)",
+   "blocks": [
+    "new_license"
+   ],
+   "min_mw": 20,
+   "start": "2027-01",
+   "end": {
+    "base": "2028-01",
+    "bear": "2028-01",
+    "stress": "2028-01"
+   },
+   "active": {
+    "base": false,
+    "bear": false,
+    "stress": true
+   },
+   "note": "Passed both houses; Hochul expected to veto by end-Dec.",
+   "tag": "dates PARTIAL · signature ESTIMATE (stress only)",
+   "source": "E:\\research-sources\\emails\\semianalysis\\2026-09-15-datacenter-moratoriums-us-buildout.html ; https://www.davispolk.com/insights/client-update/new-york-state-enacts-data-center-moratorium (search summary) (2026-11-06)"
+  }
+ ],
+ "benchmarks": {
+  "aterio_census": {
+   "value": 83,
+   "source": "Aterio @ Goldman Sachs-hosted call, 2026-10-20 (relatórios bons/2026_10_20_aterio_gs_20_oct_2026.html)",
+   "caveat": "US GW under construction (~858 buildings), all completion dates; basis (IT vs facility) not stated. Data vendor, not broker."
+  },
+  "capstone_deck": {
+   "source": "Reference deck shared by Felipe on 2026-11-06 (Aterio base; Portuguese; author and affiliation to confirm — the corpus file is 2026_11_06_amigo_felipe_gw_atrasa_pausas_estaduais.html)",
+   "total": 139.5,
+   "states": {
+    "TX": 35.1,
+    "VA": 17.8,
+    "OH": 9.7,
+    "PA": 6.5,
+    "IN": 6.2,
+    "GA": 6.0,
+    "MO": 4.7,
+    "NV": 4.6,
+    "LA": 4.5,
+    "AZ": 3.8
+   },
+   "annual_base": {
+    "2026": 20.1,
+    "2027": 30.3,
+    "2028": 47.4,
+    "2029": 28.2,
+    "2030": 13.5
+   },
+   "annual_bear": {
+    "2026": 19.7,
+    "2027": 28.8,
+    "2028": 42.5,
+    "2029": 32.3,
+    "2030": 12.3
+   },
+   "waterfall": {
+    "energized": 6.9,
+    "no_pause": 53.4,
+    "protected": 42.8,
+    "ends_first": 20.0,
+    "delayed": 16.5,
+    "delayed_month_only": 3.9,
+    "delayed_year_shift": 12.6,
+    "to_2031": 3.8
+   },
+   "state_cards_2628": {
+    "TX": {
+     "gw": 22.1,
+     "energized": 1.4,
+     "protected": 9.0,
+     "ends_first": 2.5,
+     "delayed": 9.2,
+     "year_shift": 6.3
+    },
+    "OH": {
+     "gw": 7.5,
+     "energized": 0.6,
+     "protected": 5.0,
+     "ends_first": 0.2,
+     "delayed": 1.7,
+     "year_shift": 1.45
+    },
+    "GA": {
+     "gw": 4.9,
+     "energized": 0.3,
+     "protected": 4.4,
+     "ends_first": 0.0,
+     "delayed": 0.17,
+     "year_shift": 0.17
+    },
+    "VA": {
+     "gw": 13.5,
+     "energized": 1.6,
+     "protected": 11.9,
+     "ends_first": 0.0,
+     "delayed": 0.0,
+     "year_shift": 0.0
+    },
+    "PA": {
+     "gw": 3.8,
+     "energized": 0.03,
+     "no_pause": 3.8,
+     "delayed": 0.0
+    },
+    "IN": {
+     "gw": 3.7,
+     "energized": 0.3,
+     "no_pause": 2.7,
+     "protected": 0.7,
+     "delayed": 0.0
+    }
+   }
+  },
+  "flows_2027": [
+   {
+    "id": "semianalysis",
+    "who": "SemiAnalysis 33.8 GW (top-20 states)",
+    "value": 33.8,
+    "source": "SemiAnalysis, 'The Datacenter Backlash Goes Bipartisan', 2026-11-01",
+    "caveat": "Top-20 states only; basis unstated; ~3/4 already under construction."
+   },
+   {
+    "id": "jefferies",
+    "who": "Jefferies 18.0 IT-GW (North America)",
+    "value": 18.0,
+    "source": "Jefferies pipeline-to-online, 2026-10-09 (themes/ai-datacenter-power.md)",
+    "caveat": "IT-GW, North America, Jefferies' own probabilities on Aterio data — closest basis to ours."
+   },
+   {
+    "id": "bernstein",
+    "who": "Bernstein +19 IT-GW",
+    "value": 19.0,
+    "source": "Bernstein US DC capacity, 2026-10-02 (themes/ai-datacenter-power.md)",
+    "caveat": "IT-GW installed-base increment, US; ~25 facility GW."
+   }
+  ],
+  "fundaai_tx_2027": {
+   "lo": 2.0,
+   "hi": 3.0,
+   "source": "FundaAI, 'Texas Permitting Risks Rise After Midterm Elections', 2026-11-04",
+   "caveat": "IT-GW cut to 2027 deliverable supply if the freeze runs through most of 2027 (≈ the bear case); preliminary. Independent check: nothing in the registry or the scaled view is fitted to it (the fitted g that once used it was dropped 2026-11-06)."
+  },
+  "semianalysis_local": {
+   "share": 0.075,
+   "source": "SemiAnalysis 2026-11-01, restating its 2026-09-15 moratorium piece (~1.5 GW delayed of ~20 GW inside local restrictions)",
+   "caveat": "Pre-election; 'local restrictions' is broader than moratoria."
+  },
+  "wfs_tx_held": {
+   "value_gen": 3.0,
+   "source": "Wells Fargo (Revich et al.), 'Texas Policy Reset Adds Timing Risk to 20-30% of the Data Center Power Pipeline', 2026-11-04",
+   "caveat": "About 3 GW of its ~37 GW recip and CAT-turbine trackers sits on Texas projects 'now seemingly on hold' (generation nameplate). WFS: several entries undisclosed, so these are floors. Generation ÷1.5 to IT-eq is our basis factor."
+  }
+ },
+ "context": [
+  {
+   "id": "TX-TAX-EXEMPTION-REPEAL",
+   "state": "TX",
+   "type": "tax_incentive_freeze",
+   "status": "proposed",
+   "text": "Both Abbott (June-10 directive) and Hinojosa want the 2027 Legislature to end the data-center sales-tax exemption. Cost, not delay.",
+   "why_no_delay": "Would take effect with 2027 legislation (Sep-1 default). Raises cost (~7% on equipment where state sales tax applies — The Information 2026-08-02 via wiki); does not block approvals.",
+   "source": "relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; _wiki\\themes\\ai-datacenter-power.md",
+   "source_date": "2026-11-01"
+  },
+  {
+   "id": "VA-EO22-ACCOUNTABILITY",
+   "state": "VA",
+   "type": "conditions",
+   "status": "in_force",
+   "text": "No pause. EO 22 (signed 2026-09-18, effective immediately): bans state-agency NDAs on DC projects; >=25 MW DCs barred from VEDP Business Ready Sites, expedited permitting and similar discretionary programs; Eastern Virginia Groundwater Management Area designated a cooling-water scarcity area; DEQ to propose noise and backup-generation rules within 180 days; cost-allocation work with SCC/PJM (assign PJM backstop costs to causative DCs); by-right elimination / >25 MW local-approval requested from the 2027 General Assembly.",
+   "why_no_delay": "Standing conditions; loss of expedited permitting lengthens state reviews by an unquantified amount. DEQ rule proposals due ~Mar-2027 (180 days).",
+   "source": "https://www.gtlaw.com/de/insights/2026/9/virginia-executive-order-22-sets-new-requirements-for-data-center-development-and-ai-governance ; https://www.hklaw.com/en/insights/publications/2026/10/tracking-the-2027-va-bills-that-may-tighten-data-center-regs",
+   "source_date": "2026-10-19"
+  },
+  {
+   "id": "VA-HB1515-LOCAL-MORATORIUM",
+   "state": "VA",
+   "type": "license_moratorium",
+   "status": "bill_pending",
+   "text": "Temporary moratorium on local approvals of data centers until the earlier of fulfilment of pending DC interconnection requests or 2028-07-01.",
+   "why_no_delay": "Continued to 2027 in House Rules (2026-02-06). If passed in the 2027 session it would take effect Jul-1-2027 (Virginia default; inferred) and end by Jul-1-2028 at the latest. Same veto logic as SB 843 → not in base.",
+   "source": "Moratorium Nation state tracker (state_legislation.csv, id va-hb1515), https://mjbommar.github.io/moratorium-data-2026/data/state_legislation.csv",
+   "source_date": "2026-11-05"
+  },
+  {
+   "id": "OH-DC-TAX-EXEMPTION-PAUSE",
+   "state": "OH",
+   "type": "tax_incentive_freeze",
+   "status": "in_force",
+   "text": "DeWine paused NEW approvals/applications under the data-center sales-tax exemption (R.C. 122.175). Cost, not delay.",
+   "why_no_delay": "Runs until DeWine leaves office (Jan-2027) per Luminix; Acton inherits it and wants to reduce, not eliminate, incentives (SemiAnalysis 11-01). Statutory cut introduced 2026-11-05, not passed (Luminix).",
+   "source": "relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; https://www.useluminix.com/reports/industry-analysis/data-center-moratoriums-after-the-midterms (aggregator report, 2026-11-05; secondary)",
+   "source_date": "2026-11-05"
+  },
+  {
+   "id": "GA-PSC-DEM-MAJORITY",
+   "state": "GA",
+   "type": "conditions",
+   "status": "in_force",
+   "text": "New 3-2 Democratic PSC majority plans an 'affordability docket' reviewing DC cost allocation; independent review of Georgia Power's DC billing methodology already ordered. No pause on certification announced. Commissioner Hubbard: not his 'power or interest to stop data center expansion'.",
+   "why_no_delay": "Seating date of new commissioners not stated in the source (January 2027 inferred). Cost/terms, not a hold.",
+   "source": "https://www.wtvm.com/2026/11/06/georgias-newly-flipped-utility-commission-targets-power-bills-shutoffs-data-centers/ ; SemiAnalysis Ep. 043 show notes 2026-11-04 (podcast)",
+   "source_date": "2026-11-05"
+  },
+  {
+   "id": "PA-EO-2026-05-GRID",
+   "state": "PA",
+   "type": "conditions",
+   "status": "in_force",
+   "text": "Not a pause. For DCs >25 MW peak: DEP will not issue permits until GRID requirements are met (binding consent order) AND local approvals are obtained; without a consent order DEP waits for local + water approvals before even starting review and issues all permits together; DCs removed from PA Permit Fast Track; NDAs banned.",
+   "why_no_delay": "Standing regime (no expiry). SemiAnalysis does not count it as a pause ('a moratorium expires, whereas a conditional permitting regime does not'). Delay = time to obtain local approval + GRID consent; Shapiro re-elected so it persists.",
+   "source": "relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; E:\\research-sources\\emails\\semianalysis\\2026-09-15-datacenter-moratoriums-us-buildout.html ; https://powermag.com/shapiro-sets-binding-grid-requirements-in-pennsylvania-targets-data-center-power-costs (search summary)",
+   "source_date": "2026-11-01"
+  },
+  {
+   "id": "PA-HB2650-GRID-BILL",
+   "state": "PA",
+   "type": "conditions",
+   "status": "bill_pending",
+   "text": "Codifies GRID requirements (and could tighten tax benefits).",
+   "why_no_delay": "Passed House 134-68 on 2026-06-24; Republican Senate has not acted. The 2025-26 session ends 2026-11-30, so it dies unless passed in the lame duck (inferred from PA's two-year session rule) and must be reintroduced in 2027. HB2496 (municipal 180-day pause authority, passed House 201-1) and SB1345 (up to 18-month municipal moratoria) also pending.",
+   "source": "relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; Moratorium Nation state tracker (pa-hb2496, pa-sb1345)",
+   "source_date": "2026-11-05"
+  },
+  {
+   "id": "AZ-DC-TAX-PROGRAM-FREEZE",
+   "state": "AZ",
+   "type": "tax_incentive_freeze",
+   "status": "in_force",
+   "text": "Three-year moratorium on NEW applications/certifications to the state Computer Data Center tax-relief program (HB 4168 s.31, Laws 2026 ch.140). Does not pause construction, siting or local permitting.",
+   "why_no_delay": "Statutory window 2026-07-01 to 2029-06-30. Cost only.",
+   "source": "Moratorium Nation state tracker (az-hb4168-2026) ; relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html",
+   "source_date": "2026-11-05"
+  },
+  {
+   "id": "IL-DC-TAX-EXEMPTION-STOP",
+   "state": "IL",
+   "type": "tax_incentive_freeze",
+   "status": "in_force",
+   "text": "Stopped processing new data-center sales-tax-exemption agreements from 2026-07-01 (Pritzker June directive). Cost only.",
+   "why_no_delay": "Indefinite (Luminix).",
+   "source": "relatórios bons\\2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html ; https://www.useluminix.com/reports/industry-analysis/data-center-moratoriums-after-the-midterms (aggregator report, 2026-11-05; secondary)",
+   "source_date": "2026-11-05"
+  },
+  {
+   "id": "NV-FORD-TAX-ABATEMENT-PAUSE",
+   "state": "NV",
+   "type": "tax_incentive_freeze",
+   "status": "pledged",
+   "text": "Pledged pause on NEW data-center tax abatements until a GOED audit confirms commitments. No permit or construction pause.",
+   "why_no_delay": "Ford takes office Jan-2027; abatement pause open-ended ('not to say the breaks will never resume'). Cost only → Nevada should NOT carry a state permit pause (the deck outlines NV as a state-pause state).",
+   "source": "https://www.fox5vegas.com/2026/08/19/ford-announces-intention-pause-tax-breaks-data-centers-if-elected-governor/ ; https://thenevadaindependent.com/article/nevada-governor-candidate-aaron-ford-pledges-to-pause-new-data-center-tax-breaks",
+   "source_date": "2026-10-16"
+  },
+  {
+   "id": "OR-STATE-LAND-PAUSE",
+   "state": "OR",
+   "type": "license_moratorium",
+   "status": "in_force",
+   "text": "State agencies pause unapproved easements, rights-of-way, leases, land-use permits and sales/transfers of STATE-OWNED property for DC projects.",
+   "why_no_delay": "Directive 2026-09-08 runs through 2027-07-01 (SemiAnalysis 09-15). SemiAnalysis: no forecast impact (bites before site control).",
+   "source": "E:\\research-sources\\emails\\semianalysis\\2026-09-15-datacenter-moratoriums-us-buildout.html",
+   "source_date": "2026-09-15"
+  },
+  {
+   "id": "KY-EO-2026-494",
+   "state": "KY",
+   "type": "conditions",
+   "status": "in force",
+   "text": "Gov. Beshear's Executive Order 2026-494 (signed 2026-08-06): developers must file an energy plan with the Energy and Environment Cabinet showing ratepayers are protected; the state may deny permits on air or water grounds; no avoidance of state and local taxes. Siting stays local.",
+   "why_no_delay": "Conditions, not a moratorium (Beshear: the order 'doesn't say yes to any data center' but says no to those that fail the requirements). TeraWulf's Muskie site says it will comply (8-K 2026-10-05). Could slow a permit case by case; not modelled as a pause.",
+   "source": "https://www.kfvs12.com/2026/08/06/gov-beshear-signs-executive-order-increasing-requirements-data-center-developers-kentucky/ ; https://www.fox19.com/2026/08/07/we-have-go-further-kentucky-governor-signs-data-center-order-amid-mixed-reaction/ ; round2/midwest_notes.md",
+   "source_date": "2026-08-07"
+  }
+ ],
+ "rules_source": "raw/rules_research.json + raw/state_local_rules.md (rules research 2026-11-06; web-search budget ran out mid-task: MI/WI/MN/SC/TN/AL governors unverified)"
+}

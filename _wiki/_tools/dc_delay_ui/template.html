@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>DC Delay Risk</title>
+<style>
+:root{
+  color-scheme:light;
+  --page:#f4f3ef; --surface:#fcfcfb; --surface-2:#f0efec; --border:#e3e2dc; --grid:#e6e5e0;
+  --ink:#0b0b0b; --ink-2:#52514e; --ink-3:#7c7b76;
+  --c-energized:#6b6a65; --c-nopause:#b4b3ac; --c-protected:#2a78d6; --c-ends:#1baf7a; --c-delayed:#eb6834;
+  --c-base:#8a8984; --gov-d:#d6e6fa; --gov-r:#f7dbda; --gov-na:#ecebe6; --state-line:#ffffff; --pause-line:#0b0b0b;
+  --accent:#2a78d6; --chip-bg:#ecebe6;
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme:dark;
+    --page:#121211; --surface:#1a1a19; --surface-2:#232321; --border:#33332f; --grid:#2c2c29;
+    --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#8f8e86;
+    --c-energized:#8f8e86; --c-nopause:#55544f; --c-protected:#3987e5; --c-ends:#199e70; --c-delayed:#d95926;
+    --c-base:#77766f; --gov-d:#1f3350; --gov-r:#4a2828; --gov-na:#262624; --state-line:#121211; --pause-line:#f0efec;
+    --accent:#3987e5; --chip-bg:#2a2a27;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#121211; --surface:#1a1a19; --surface-2:#232321; --border:#33332f; --grid:#2c2c29;
+  --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#8f8e86;
+  --c-energized:#8f8e86; --c-nopause:#55544f; --c-protected:#3987e5; --c-ends:#199e70; --c-delayed:#d95926;
+  --c-base:#77766f; --gov-d:#1f3350; --gov-r:#4a2828; --gov-na:#262624; --state-line:#121211; --pause-line:#f0efec;
+  --accent:#3987e5; --chip-bg:#2a2a27;
+}
+*{box-sizing:border-box}
+body{margin:0;background:var(--page);color:var(--ink);font:14px/1.5 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--accent)}
+header{padding:22px 24px 8px;max-width:1320px;margin:0 auto}
+header h1{margin:0;font-size:24px;letter-spacing:-.01em}
+header .sub{color:var(--ink-2);margin:4px 0 0;font-size:13px}
+.warn{margin:10px 0 0;padding:8px 12px;border-radius:8px;background:var(--surface-2);border:1px solid var(--border);color:var(--ink-2);font-size:12.5px}
+main{max-width:1320px;margin:0 auto;padding:0 24px 40px}
+.bar{display:flex;flex-wrap:wrap;gap:10px 18px;align-items:center;margin:14px 0 6px;position:sticky;top:0;background:var(--page);padding:8px 0;z-index:5}
+.seg{display:inline-flex;border:1px solid var(--border);border-radius:8px;overflow:hidden;background:var(--surface)}
+.seg button{border:0;background:transparent;color:var(--ink-2);padding:6px 12px;font:inherit;font-size:13px;cursor:pointer}
+.seg button+button{border-left:1px solid var(--border)}
+.seg button[aria-pressed="true"]{background:var(--ink);color:var(--surface)}
+.bar .lbl{font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em}
+.blurb{font-size:12.5px;color:var(--ink-2);flex:1 1 320px}
+.theme-btn{margin-left:auto}
+.kpis{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:10px;margin:8px 0 16px}
+.kpi{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:10px 14px}
+.kpi .v{font-size:24px;font-weight:650;letter-spacing:-.01em}
+.kpi .k{font-size:12px;color:var(--ink-2)}
+.kpi .s{font-size:11.5px;color:var(--ink-3)}
+section{margin:22px 0}
+h2{font-size:19px;margin:0 0 4px;letter-spacing:-.01em}
+.lead{color:var(--ink-2);margin:0 0 12px;font-size:13.5px}
+.lead b{color:var(--ink)}
+.panel{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 16px;font-size:12px;color:var(--ink-2);margin:0 0 6px}
+.legend i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:5px;vertical-align:-1px}
+.legend i.sq{border-radius:2px}
+.legend i.dia{border-radius:1px;transform:rotate(45deg);width:8px;height:8px;background:var(--ink-2)}
+.legend i.out{background:transparent;border:2px solid var(--pause-line);border-radius:2px}
+#map svg{width:100%;height:auto;display:block;max-width:960px;margin:0 auto}
+.cards{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:12px}
+.card{background:var(--surface);border:1px solid var(--border);border-left:4px solid var(--c-nopause);border-radius:10px;padding:10px 12px;cursor:pointer}
+.card.sp{border-left-color:var(--c-delayed)}.card.lp{border-left-color:var(--ink-2)}
+.card[aria-pressed="true"]{outline:2px solid var(--accent)}
+.card h3{margin:0;font-size:14.5px}
+.card .t{font-size:11.5px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.03em}
+.card .l1{font-weight:600;margin:4px 0 2px}
+.card .l2{color:var(--ink-2);font-size:12.5px}
+.card .l3{margin-top:3px;font-size:12.5px}
+.card .l3 b{color:var(--c-delayed)}
+.two{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:14px}
+table{border-collapse:collapse;width:100%;font-size:12.5px}
+th{text-align:left;color:var(--ink-3);font-weight:600;font-size:11.5px;text-transform:uppercase;letter-spacing:.03em;padding:6px 8px;border-bottom:1px solid var(--border);white-space:nowrap}
+td{padding:6px 8px;border-bottom:1px solid var(--grid);vertical-align:top}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot td{font-weight:650;border-top:1px solid var(--border)}
+.pR{color:#c23b3a;font-weight:650}.pD{color:#2a6fc9;font-weight:650}
+:root[data-theme="dark"] .pR{color:#ef7a79}:root[data-theme="dark"] .pD{color:#6ea8ef}
+@media (prefers-color-scheme: dark){:root:where(:not([data-theme="light"])) .pR{color:#ef7a79}:root:where(:not([data-theme="light"])) .pD{color:#6ea8ef}}
+.rules h4{margin:12px 0 2px;font-size:13.5px}
+.rules ul{margin:2px 0 0 18px;padding:0}
+.rules li{margin:2px 0;font-size:12.5px;color:var(--ink-2)}
+.rules{max-height:900px;overflow:auto}
+.rules li b{color:var(--ink)}
+.chip{display:inline-block;border-radius:20px;padding:0 8px;font-size:11px;font-weight:600;background:var(--chip-bg);color:var(--ink-2);white-space:nowrap}
+.chip i{display:inline-block;width:8px;height:8px;border-radius:50%;margin-right:4px}
+.tag{display:inline-block;border-radius:4px;padding:0 5px;font-size:10.5px;font-weight:650;border:1px solid var(--border);color:var(--ink-2)}
+.chart svg{width:100%;height:auto;display:block;overflow:visible}
+.chart .ax{fill:var(--ink-3);font-size:11px}
+.chart .val{fill:var(--ink);font-size:12px;font-weight:650}
+.chart .vals{fill:var(--ink-2);font-size:11px}
+.chart .gl{stroke:var(--grid);stroke-width:1}
+.read{font-size:13px;color:var(--ink-2);margin-top:8px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin:0 0 8px}
+.filters select,.filters input{font:inherit;font-size:13px;padding:5px 8px;border:1px solid var(--border);border-radius:6px;background:var(--surface);color:var(--ink)}
+.tbl-wrap{max-height:640px;overflow:auto;border:1px solid var(--border);border-radius:10px;background:var(--surface)}
+.tbl-wrap th{position:sticky;top:0;background:var(--surface);cursor:pointer}
+.why{color:var(--ink-2);font-size:11.5px;max-width:340px}
+.src a{font-size:11.5px}
+#tip{position:fixed;pointer-events:none;z-index:50;background:var(--surface);color:var(--ink);border:1px solid var(--border);border-radius:8px;padding:8px 10px;font-size:12px;box-shadow:0 6px 24px rgba(0,0,0,.18);max-width:340px;display:none}
+#tip b{font-size:12.5px}
+#tip .m{color:var(--ink-2)}
+.flag{font-size:14px}
+.foot{font-size:12px;color:var(--ink-3);margin-top:24px}
+details summary{cursor:pointer;font-weight:600}
+@media (max-width:1000px){.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}}
+@media (max-width:620px){header,main{padding-left:16px;padding-right:16px}.cards{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}}
+</style>
+</head>
+<body>
+<header>
+  <h1>Where the data-center delay risk sits</h1>
+  <p class="sub" id="sub"></p>
+  <div class="warn" id="warn"></div>
+</header>
+<main>
+  <div class="bar">
+    <span class="lbl">Scenario</span><span class="seg" id="segScen"></span>
+    <span class="lbl">Universe</span><span class="seg" id="segUni"></span>
+    <span class="blurb" id="scenBlurb"></span>
+    <span class="seg theme-btn"><button id="themeBtn" aria-pressed="false" title="Toggle light/dark">◐ Theme</button></span>
+  </div>
+  <div class="warn" id="scaleNote" style="display:none;margin:0 0 10px"></div>
+  <div class="kpis" id="kpis"></div>
+
+  <section>
+    <h2>Where the delay risk sits</h2>
+    <p class="lead" id="mapLead"></p>
+    <div class="panel" id="map">
+      <div class="legend" id="mapLegend"></div>
+      <div id="mapSvg"></div>
+    </div>
+    <div class="cards" id="cards"></div>
+  </section>
+
+  <section class="two">
+    <div class="panel">
+      <h2>Top 10 states</h2>
+      <p class="lead" id="topLead"></p>
+      <table id="top10"></table>
+      <p class="read" id="topNote"></p>
+    </div>
+    <div class="panel rules">
+      <h2>State pauses and what the election changes</h2>
+      <p class="lead">What each instrument blocks, and its window in the selected scenario. Sources on every line.</p>
+      <div id="rulesText"></div>
+    </div>
+  </section>
+
+  <section>
+    <div class="panel">
+      <h2>By city</h2>
+      <p class="lead" id="cityLead"></p>
+      <div class="tbl-wrap" style="max-height:420px"><table id="cities"></table></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Delayed GW, and how much leaves the 2026-30 window</h2>
+    <p class="lead" id="flowLead"></p>
+    <div class="two">
+      <div class="panel chart"><h3 style="margin:0 0 2px;font-size:14px">From GW under construction to GW delayed</h3><div class="legend" id="wfNote"></div><div id="wf"></div></div>
+      <div class="panel chart"><h3 style="margin:0 0 2px;font-size:14px">Annual additions: base vs scenario</h3><div class="legend" id="annLegend"></div><div id="ann"></div></div>
+    </div>
+    <p class="read" id="flowRead"></p>
+  </section>
+
+  <section>
+    <h2>Projects</h2>
+    <p class="lead">Every registry phase with its bucket in the selected scenario. Click a state card or a map dot to filter; click a header to sort.</p>
+    <div class="filters">
+      <select id="fState"></select><select id="fBucket"></select>
+      <input id="fText" placeholder="Search campus, city, developer, tenant" size="34">
+      <span class="chip" id="fCount"></span>
+    </div>
+    <div class="tbl-wrap"><table id="ptable"></table></div>
+  </section>
+
+  <section>
+    <h2>Guardrails and coverage</h2>
+    <p class="lead">Each check compares the registry to an observable that was not used to build it. 🟢 within ±25%, 🟡 within ±50%, 🔴 outside. A red level check means the registry is incomplete: read the state mix and the delay shares, not the absolute GW.</p>
+    <div class="two">
+      <div class="panel"><table id="checks"></table></div>
+      <div class="panel"><table id="coverage"></table></div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Method and assumptions</h2>
+    <div class="panel" id="method"></div>
+  </section>
+  <p class="foot" id="foot"></p>
+</main>
+<div id="tip"></div>
+<script>
+const M = /*__DATA__*/null;
+const BK = ["energized","no_pause","protected","ends_first","delayed"];
+const BL = {energized:"Energized",no_pause:"No pause",protected:"Protected",ends_first:"Pause ends first",delayed:"Delayed",undated:"Undated"};
+const BLONG = {energized:"Already energized",no_pause:"Outside any state or local pause",protected:"Pause doesn't reach / approval in hand",ends_first:"Pause ends before the approval is needed",delayed:"At risk of delay"};
+const BV = {energized:"--c-energized",no_pause:"--c-nopause",protected:"--c-protected",ends_first:"--c-ends",delayed:"--c-delayed",undated:"--grid"};
+const YRS = [2026,2027,2028,2029,2030];
+let S = {scen: M.scenarios.bear ? "bear" : Object.keys(M.scenarios)[0], uni:"construction", st:"", bk:"", q:"", sort:"it", dir:-1};
+const $ = id => document.getElementById(id);
+const css = v => getComputedStyle(document.documentElement).getPropertyValue(v).trim();
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const f1 = x => x == null ? "–" : (Math.abs(x) < 0.095 && x !== 0 ? x.toFixed(2) : x.toFixed(1));
+const pct = x => x == null ? "–" : (x >= 0 ? "+" : "−") + Math.abs(x*100).toFixed(1) + "%";
+const A = () => M.aggs[S.scen][S.uni];
+const SN = st => M.stateNames[st] || st;
+const gov = st => (M.rules.governors || {})[st];
+const tip = $("tip");
+function showTip(e, h){ tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth, hh = tip.offsetHeight;
+  let x = e.clientX + 14, y = e.clientY + 14; if (x + w > innerWidth - 8) x = e.clientX - w - 14; if (y + hh > innerHeight - 8) y = e.clientY - hh - 14; tip.style.left = x + "px"; tip.style.top = y + "px"; }
+function hideTip(){ tip.style.display = "none"; }
+function activeInstruments(st){ return (M.rules.instruments || []).filter(i => i.state === st && i.active[S.scen]); }
+function activeLocals(st){ return (M.locals.moratoria || []).filter(l => l.state === st && l.active && l.active[S.scen]); }
+
+function seg(el, items, cur, on){ el.innerHTML = items.map(([k,l]) => `<button data-k="${k}" aria-pressed="${k===cur}">${esc(l)}</button>`).join("");
+  el.querySelectorAll("button").forEach(b => b.onclick = () => on(b.dataset.k)); }
+
+function header(){
+  const p = M.phases, srcs = new Set(); p.forEach(x => (x.src||"").split(";").forEach(s => s.trim() && srcs.add(s.trim())));
+  $("sub").innerHTML = `US data-center campuses, bottom-up by project phase · public-source registry: <b>${p.length}</b> phases on <b>${M.n_campuses}</b> campuses, ${srcs.size} distinct sources · as of ${esc(M.built || M.as_of)} · all GW are IT-equivalent (method below)`;
+  const pv = M.rules.provisional ? "Rules layer is PROVISIONAL. " : "";
+  $("warn").innerHTML = `${pv}The registry is built from public sources (company releases, utility and permit filings, press, the wiki corpus). It covers the large campuses, not every building, so absolute GW sit below vendor censuses: see Guardrails. The layout follows a reference deck built on Aterio data, shared on 2026-11-06 (author to confirm). Its figures appear here only as a benchmark and as the scaled view's targets.`;
+}
+
+function controls(){
+  seg($("segScen"), Object.entries(M.scenarios).map(([k,v]) => [k, v.label]), S.scen, k => { S.scen = k; render(); });
+  seg($("segUni"), [["construction","Registry: campuses under construction"],["pipeline","Registry + announced (high/medium)"],["scaled","Scaled to Aterio state totals"]], S.uni, k => { S.uni = k; render(); });
+  $("scenBlurb").textContent = M.scenarios[S.scen].blurb || "";
+  const sc = M.aggs[S.scen].scaled, rg = M.aggs[S.scen].construction; $("scaleNote").style.display = S.uni === "scaled" ? "block" : "none";
+  if (S.uni === "scaled") { const c = M.calib, ry = rg.annual_base, thin = (ry[2029] || 0) + (ry[2030] || 0);
+    const wmax = Math.max(...Object.entries(c.weights).filter(([k]) => /\|20(29|30)$/.test(k)).map(([,v]) => v));
+    $("scaleNote").innerHTML = `<b>Extrapolated view: "the GW the registry misses look like the GW it covers, in the same state and year".</b> Registry state × year cells are raked (iterative proportional fitting) to the reference deck's Aterio totals: state GW for its top 10 (${Object.entries(c.state_targets).filter(([k]) => k !== "_rest").map(([k,v]) => k + " " + v).join(", ")}; rest ${f1(c.state_targets._rest)}), base-case adds by year (${Object.entries(c.year_targets).map(([k,v]) => k + " " + v).join(" · ")}) and the deck's own 2026-28 state cards (${Object.entries(c.card_targets_2628 || {}).map(([k,v]) => k + " " + v).join(", ")})${Object.keys(c.moved_to_rest_2930 || {}).length ? "; the registry has no " + Object.keys(c.moved_to_rest_2930).join("/") + " phases dated 2029-30, so that state's 2029-30 remainder (" + Object.entries(c.moved_to_rest_2930).map(([k,v]) => k + " " + v).join(", ") + " GW) is carried by the rest-of-US group" : ""}. Each cell keeps its own bucket mix and slips. Nothing is fitted to a delay figure, so the Texas checks below stay independent. <b>Read 2029-30 as directional:</b> the registry holds only ${f1(thin)} GW dated 2029-30 against the deck's ${f1((c.year_targets[2029]||0) + (c.year_targets[2030]||0))} GW, so those years carry weights up to ~${Math.round(wmax)}× and rest on a handful of phases. The 2026-11-06 double-check found this headline moves 3-5 GW on small registry changes: treat it as a range, not a validation of the deck. Registry delayed GW in this scenario: <b>${f1(rg.wf.delayed)}</b>, the floor if the missing GW were unexposed. Units follow the deck (basis not stated). Map dots, the city table and the project table show registry phases.`; }
+}
+
+function kpis(){
+  const a = A(), wf = a.wf;
+  const tiles = [
+    [f1(a.total), "GW dated 2026-30", S.uni === "scaled" ? `extrapolated from ${a.n} registry phases` : `${a.n} phases in universe`],
+    [f1(wf.energized), "GW already energized", "since Jan-2026"],
+    [f1(wf.delayed), "GW at risk of delay", S.uni === "scaled" ? `registry floor ${f1(M.aggs[S.scen].construction.wf.delayed)} · ${(wf.delayed/a.total*100).toFixed(1)}% of total` : a.total ? (wf.delayed/a.total*100).toFixed(1) + "% of universe" : ""],
+    [f1(a.delayed_year_shift), "GW shift calendar year", f1(a.delayed_month_only) + " GW only shift months"],
+    [f1(a.to_2031), "GW pushed to 2031+", "leave the 2026-30 window"]];
+  $("kpis").innerHTML = tiles.map(([v,k,s]) => `<div class="kpi"><div class="v">${v}</div><div class="k">${k}</div><div class="s">${esc(s)}</div></div>`).join("");
+}
+
+function campusDots(){
+  const by = {};
+  M.phases.forEach(p => { if (!p.xy) return; if (S.uni === "pipeline" ? !p.u : p.u !== "construction") return;
+    const k = p.st + "|" + p.campus; const r = p.res[S.scen];
+    (by[k] = by[k] || {st:p.st, campus:p.campus, city:p.city, xy:p.xy, it:0, b:{}, phases:[], worst:"energized"}).it += p.it;
+    by[k].b[r.b] = (by[k].b[r.b] || 0) + p.it; by[k].phases.push(p);
+    if (BK.indexOf(r.b) > BK.indexOf(by[k].worst)) by[k].worst = r.b; });
+  return Object.values(by).sort((a,b) => b.it - a.it);
+}
+
+function map(){
+  const a = A(), tot = a.total || 1;
+  const st = a.states;
+  const pauseStates = new Set((M.rules.instruments||[]).filter(i => i.active[S.scen]).map(i => i.state));
+  let svg = `<svg viewBox="0 0 975 610" role="img" aria-label="US map of data-center campuses by delay bucket">`;
+  for (const [s, g] of Object.entries(M.map)) {
+    const gv = gov(s), fill = gv ? (gv.party_2027 === "D" ? "var(--gov-d)" : gv.party_2027 === "R" ? "var(--gov-r)" : "var(--gov-na)") : "var(--gov-na)";
+    svg += `<path d="${g.d}" fill="${fill}" stroke="var(--state-line)" stroke-width="0.8" data-st="${s}" class="stp"/>`;
+  }
+  for (const s of pauseStates) if (M.map[s]) svg += `<path d="${M.map[s].d}" fill="none" stroke="var(--pause-line)" stroke-width="2.2" stroke-linejoin="round" pointer-events="none"/>`;
+  for (const [s, g] of Object.entries(M.map)) { const v = st[s]; if (!v || v.gw_2630 / tot < 0.01) continue;
+    const gv = gov(s); const flip = gv && gv.flip ? " " + gv.party_2026 + "→" + gv.party_2027 : "";
+    svg += `<text x="${g.cx}" y="${g.cy - 4}" text-anchor="middle" style="font:600 10px sans-serif;fill:var(--ink-2)" pointer-events="none">${s}</text>`;
+    svg += `<text x="${g.cx}" y="${g.cy + 7}" text-anchor="middle" style="font:10px sans-serif;fill:var(--ink-3)" pointer-events="none">${Math.round(v.gw_2630/tot*100)}%${flip}</text>`; }
+  for (const L of (M.locals.moratoria || [])) { if (!L.xy || !(L.active && L.active[S.scen])) continue;
+    const [x,y] = L.xy; svg += `<rect x="${x-3.5}" y="${y-3.5}" width="7" height="7" transform="rotate(45 ${x} ${y})" fill="var(--ink-2)" stroke="var(--surface)" stroke-width="1" class="lm" data-id="${esc(L.id)}"/>`; }
+  const dots = campusDots();
+  dots.forEach((d, i) => { const r = 2.6 + Math.sqrt(d.it) * 0.22; const col = (d.worst === "energized" || d.worst === "no_pause") ? "var(--c-nopause)" : `var(${BV[d.worst]})`;
+    svg += `<circle cx="${d.xy[0]}" cy="${d.xy[1]}" r="${r.toFixed(1)}" fill="${col}" stroke="var(--surface)" stroke-width="1.4" class="dot" data-i="${i}" style="cursor:pointer"/>`; });
+  svg += `</svg>`;
+  $("mapSvg").innerHTML = svg;
+  $("mapLegend").innerHTML = `<span><i class="sq" style="background:var(--gov-d)"></i>Democratic governor from Jan-27</span><span><i class="sq" style="background:var(--gov-r)"></i>Republican governor</span><span><i class="sq" style="background:var(--gov-na)"></i>no data</span><span><i class="out"></i>State pause in scenario</span>` +
+    `<span><i style="background:var(--c-nopause)"></i>No pause / energized</span><span><i style="background:var(--c-protected)"></i>Protected</span><span><i style="background:var(--c-ends)"></i>Pause ends first</span><span><i style="background:var(--c-delayed)"></i>At risk</span><span><i class="dia"></i>Local moratorium</span><span style="color:var(--ink-3)">Dot = campus, area ∝ IT-eq MW, colour = its worst phase · label = state share of universe GW (→ = governor party change)</span>`;
+  const svgEl = $("mapSvg").querySelector("svg");
+  svgEl.querySelectorAll(".dot").forEach(c => { const d = dots[+c.dataset.i];
+    c.onmousemove = e => showTip(e, `<b>${esc(d.campus)}</b><div class="m">${esc(d.city)}, ${d.st} · ${d.phases.length} phase${d.phases.length>1?"s":""} · ${Math.round(d.it)} MW IT-eq</div>` +
+      BK.filter(b => d.b[b]).map(b => `<div><span class="chip"><i style="background:var(${BV[b]})"></i>${BL[b]}</span> ${Math.round(d.b[b])} MW</div>`).join("") +
+      (d.phases.find(p => p.res[S.scen].b === "delayed") ? `<div class="m" style="margin-top:4px">${esc(d.phases.find(p => p.res[S.scen].b === "delayed").res[S.scen].r)}</div>` : ""));
+    c.onmouseleave = hideTip; c.onclick = () => { S.st = d.st; S.q = d.campus; $("fText").value = d.campus; table(); $("ptable").scrollIntoView({behavior:"smooth", block:"start"}); }; });
+  svgEl.querySelectorAll(".lm").forEach(c => { const L = (M.locals.moratoria||[]).find(x => x.id === c.dataset.id);
+    c.onmousemove = e => showTip(e, `<b>${esc(L.jurisdiction)}, ${L.state}</b><div class="m">${esc(L.type || "moratorium")} · ${esc(L.start)} → ${esc(L.end[S.scen])}</div><div class="m">${esc(L.scope || "")}</div>`); c.onmouseleave = hideTip; });
+  svgEl.querySelectorAll(".stp").forEach(p => { const s = p.dataset.st; p.onmousemove = e => { const v = st[s]; const gv = gov(s);
+    showTip(e, `<b>${SN(s)}</b><div class="m">${v ? f1(v.gw_2630) + " GW dated 2026-30 · " + f1(v.b2630.delayed) + " GW delayed" : "no registry phases in universe"}</div>${gv ? `<div class="m">Governor 2027: ${esc(gv.gov_2027 || "")} (${gv.party_2027 || "?"})${gv.flip ? " · flipped" : ""}</div>` : ""}`); }; p.onmouseleave = hideTip; });
+  const tx = st.TX; const lead = [];
+  const ranked = Object.entries(st).sort((a,b) => b[1].b2628.delayed - a[1].b2628.delayed).filter(([,v]) => v.b2628.delayed > 0.005);
+  $("mapLead").innerHTML = ranked.length ? `<b>${ranked.slice(0,3).map(([s,v]) => `${SN(s)} ${f1(v.b2628.delayed)} GW`).join(" · ")}</b> of 2026-28 GW are at risk in this scenario; everything else is energized, outside any pause, or already holds the approval the pause blocks. GW dated 2026-28, ${M.scenarios[S.scen].label.toLowerCase()} scenario.` : `No 2026-28 GW is delayed in this scenario.`;
+}
+
+function cards(){
+  const a = A(), st = a.states;
+  const list = Object.entries(st).map(([s,v]) => ({s, v, sp: activeInstruments(s).length > 0, lp: activeLocals(s).length > 0}))
+    .sort((x,y) => (y.sp - x.sp) || (y.v.b2628.delayed - x.v.b2628.delayed) || (y.v.gw_2628 - x.v.gw_2628)).slice(0, 9)
+    .sort((x,y) => y.v.gw_2628 - x.v.gw_2628);
+  $("cards").innerHTML = list.map(({s,v,sp,lp}) => { const b = v.b2628, g = v.gw_2628 || 0; const prot = g ? (1 - b.delayed / g) : 1;
+    const kind = sp ? "state pause in scenario" : lp ? "local moratoria only" : "no state pause";
+    return `<div class="card ${sp ? "sp" : lp ? "lp" : ""}" data-st="${s}" aria-pressed="${S.st === s}"><div class="t">${kind}</div><h3>${SN(s)}</h3>
+      <div class="l1">${f1(g)} GW in 2026-28: ${Math.round(prot*100)}% protected</div>
+      <div class="l2">${f1(b.energized)} energized · ${f1(b.no_pause)} outside pause · ${f1(b.protected)} approval in hand · ${f1(b.ends_first)} pause ends first</div>
+      <div class="l3">${b.delayed > 0.005 ? `<b>${f1(b.delayed)} GW delayed</b> (${f1(v.yshift_2628)} shift year)` : "0 delayed"}${v.to_2031 > 0.005 ? ` · ${f1(v.to_2031)} GW of 2029-30 to 2031+` : ""}</div></div>`; }).join("");
+  $("cards").querySelectorAll(".card").forEach(c => c.onclick = () => { S.st = S.st === c.dataset.st ? "" : c.dataset.st; S.q = ""; $("fText").value = ""; cards(); table(); });
+}
+
+function top10(){
+  const a = A(), tot = a.total || 1; const rows = Object.entries(a.states).sort((x,y) => y[1].gw_2630 - x[1].gw_2630).slice(0,10);
+  let cum = 0, sum = 0;
+  let h = `<tr><th>#</th><th>State</th><th class="n">GW</th><th class="n">Share</th><th class="n">Cum.</th><th>Governor</th><th class="n">Delayed</th></tr>`;
+  rows.forEach(([s,v], i) => { cum += v.gw_2630; sum += v.gw_2630; const g = gov(s);
+    const gs = g ? (g.flip ? `<span class="p${g.party_2026}">${g.party_2026}</span> ⇄ <span class="p${g.party_2027}">${g.party_2027}</span>` : `<span class="p${g.party_2027}">${g.party_2027}</span>`) : "–";
+    h += `<tr><td>${i+1}</td><td>${SN(s)}${activeInstruments(s).length ? ' <span class="tag">pause</span>' : ""}</td><td class="n">${f1(v.gw_2630)}</td><td class="n">${(v.gw_2630/tot*100).toFixed(1)}%</td><td class="n">${Math.round(cum/tot*100)}%</td><td>${gs}</td><td class="n">${f1(v.b2630.delayed)}</td></tr>`; });
+  h += `<tr class="tot"><td></td><td>Top 10</td><td class="n">${f1(sum)}</td><td class="n">${Math.round(sum/tot*100)}%</td><td></td><td></td><td></td></tr>`;
+  $("top10").innerHTML = h;
+  $("topLead").textContent = `IT-eq GW dated 2026-30 in the registry (${f1(a.total)} GW in the selected universe).`;
+  const flips = Object.entries(M.rules.governors || {}).filter(([,g]) => g.flip).map(([s,g]) => `${SN(s)} (${g.party_2026}→${g.party_2027})`);
+  $("topNote").innerHTML = (flips.length ? `⇄ = governor's party changed in the 2026-11-03 election (takes office Jan-2027): ${esc(flips.join(", "))}. ` : "") + `"pause" = a state instrument is active in this scenario.`;
+}
+
+const clip = (t, n) => { t = String(t || ""); return t.length > n ? `<span title="${esc(t)}">${esc(t.slice(0, n).replace(/\s+\S*$/, ""))}…</span>` : esc(t); };
+const srcOne = t => { const a = String(t || "").split(/\s;\s|;\s(?=https?:|relat|_wiki|E:)/)[0].trim(); const short = a.replace(/^https?:\/\/(www\.)?/, "").replace(/\\/g, "/").split("/").slice(0, 2).join("/"); return `<span title="${esc(t)}" style="color:var(--ink-3)">[${esc(short.slice(0, 48))}]</span>`; };
+function rulesText(){
+  const byState = {}; (M.rules.instruments || []).forEach(i => (byState[i.state] = byState[i.state] || []).push(i));
+  (M.rules.context || []).forEach(c => { (byState[c.state] = byState[c.state] || []); });
+  Object.entries(M.rules.governors || {}).forEach(([s,g]) => { if (g.flip) byState[s] = byState[s] || []; });
+  const order = Object.keys(byState).sort((x,y) => ((A().states[y]||{}).gw_2630||0) - ((A().states[x]||{}).gw_2630||0)).slice(0, 14);
+  $("rulesText").innerHTML = order.map(s => { const g = gov(s); const ins = byState[s].filter(i => i.state === s); const locs = (M.locals.moratoria||[]).filter(l => l.state === s && (l.ban || (l.end.stress || "") >= M.as_of));
+    const ctx = (M.rules.context || []).filter(c => c.state === s);
+    return `<h4>${SN(s)}${g ? ` · <span class="p${g.party_2027}">${esc(g.gov_2027 || "")} (${g.party_2027})</span>${g.flip ? ` replaces <span class="p${g.party_2026}">${esc(g.gov_2026||"")} (${g.party_2026})</span>` : ""}` : ""}</h4><ul>` +
+      (g && g.dc_stance ? `<li>${clip(g.dc_stance, 230)} ${srcOne(g.source)} <span style="color:var(--ink-3)">${esc(g.source_date || "")}</span></li>` : "") +
+      ins.map(i => `<li><b>${esc(i.label)}</b> — blocks ${esc(Array.isArray(i.blocks) ? i.blocks.join(" + ") : i.blocks)}; ${i.active[S.scen] ? `<b>${esc(typeof i.start === "object" ? i.start[S.scen] : i.start)} → ${esc(i.end[S.scen])}</b> in this scenario` : "not active in this scenario"}. ${clip(i.note || "", 200)} <span class="tag" title="${esc(i.tag || "")}">${esc((i.tag || "").split(" · ")[0].slice(0, 40))}</span> ${srcOne(i.source)}</li>`).join("") +
+      ctx.map(c => `<li><span class="tag">no delay</span> ${clip(c.text, 170)} ${srcOne(c.source)} <span style="color:var(--ink-3)">${esc(c.status)}, ${esc(c.source_date)}</span></li>`).join("") +
+      (locs.length ? `<li><b>Local:</b> ${locs.map(l => `${esc(l.jurisdiction)} (${l.ban ? "ballot ban " + esc(l.start) : esc(l.start) + "→" + esc(l.end[S.scen])})`).join("; ")}</li>` : "") + `</ul>`; }).join("") || "<p>No instruments loaded.</p>";
+}
+
+function cities(){
+  const by = {};
+  M.phases.forEach(p => { if (S.uni === "pipeline" ? !p.u : p.u !== "construction") return; const r = p.res[S.scen]; const k = p.st + "|" + p.city;
+    const c = (by[k] = by[k] || {st:p.st, city:p.city, county:p.county, camp:new Set(), gw:0, del:0, ys:0, b:{}, ten:new Set()});
+    c.camp.add(p.campus); c.gw += p.it/1000; c.b[r.b] = (c.b[r.b]||0) + p.it/1000; if (p.ten) c.ten.add(p.ten);
+    if (r.b === "delayed") { c.del += p.it/1000; if (r.n.slice(0,4) !== p.cod.slice(0,4)) c.ys += p.it/1000; } });
+  const rows = Object.values(by).sort((a,b) => b.gw - a.gw); const tot = rows.reduce((t,c) => t + c.gw, 0);
+  $("cityLead").textContent = `${rows.length} cities/towns host the registry's ${S.uni === "pipeline" ? "under-construction and announced" : "under-construction"} campuses; the top 10 hold ${Math.round(rows.slice(0,10).reduce((t,c) => t + c.gw, 0)/(tot||1)*100)}% of the GW. Registry GW (IT-eq), not scaled. Click a row to filter the project table.`;
+  $("cities").innerHTML = `<tr><th>#</th><th>City</th><th>State</th><th class="n">Campuses</th><th>Tenants</th><th class="n">GW 2026-30</th><th>Mix</th><th class="n">Delayed</th><th class="n">Shift year</th></tr>` +
+    rows.slice(0, 40).map((c,i) => `<tr data-st="${c.st}" data-city="${esc(c.city)}" style="cursor:pointer"><td>${i+1}</td><td><b>${esc(c.city)}</b>${c.county ? `<div style="color:var(--ink-3)">${esc(c.county)}</div>` : ""}</td><td>${c.st}</td><td class="n">${c.camp.size}</td><td style="color:var(--ink-2)">${esc([...c.ten].slice(0,3).join(", "))}</td><td class="n">${f1(c.gw)}</td>` +
+      `<td><svg width="120" height="10" aria-hidden="true">${(() => { let x = 0; return BK.filter(b => c.b[b]).map(b => { const w = Math.max(c.b[b]/c.gw*120 - 1.5, 1); const r = `<rect x="${x}" y="0" width="${w}" height="10" rx="2" fill="var(${BV[b]})"><title>${BL[b]} ${f1(c.b[b])} GW</title></rect>`; x += w + 2; return r; }).join(""); })()}</svg></td>` +
+      `<td class="n">${c.del > 0.0005 ? f1(c.del) : ""}</td><td class="n">${c.ys > 0.0005 ? f1(c.ys) : ""}</td></tr>`).join("");
+  $("cities").querySelectorAll("tr[data-st]").forEach(tr => tr.onclick = () => { S.st = tr.dataset.st; S.q = tr.dataset.city; $("fText").value = tr.dataset.city; cards(); table(); $("ptable").scrollIntoView({behavior:"smooth", block:"start"}); });
+}
+
+function waterfall(){
+  const a = A(), wf = a.wf, W = 560, H = 300, padL = 36, padB = 46, padT = 22, top = Math.max(a.total, 1);
+  const steps = [["Under construction", a.total, 0, "--c-base", true], ["Energized", wf.energized, a.total - wf.energized, BV.energized],
+    ["Outside pause", wf.no_pause, a.total - wf.energized - wf.no_pause, BV.no_pause],
+    ["Protected", wf.protected, a.total - wf.energized - wf.no_pause - wf.protected, BV.protected],
+    ["Pause ends first", wf.ends_first, wf.delayed, BV.ends_first], ["At risk", wf.delayed, 0, BV.delayed, true]];
+  const n = steps.length, bw = (W - padL - 10) / n * 0.62, gap = (W - padL - 10) / n;
+  const y = v => padT + (H - padT - padB) * (1 - v / top);
+  let s = `<svg viewBox="0 0 ${W} ${H}">`;
+  const tick = niceTicks(top); tick.forEach(t => s += `<line class="gl" x1="${padL}" x2="${W-6}" y1="${y(t)}" y2="${y(t)}"/><text class="ax" x="${padL-6}" y="${y(t)+4}" text-anchor="end">${t}</text>`);
+  steps.forEach(([lbl, v, base, col, full], i) => { const x = padL + i*gap + (gap-bw)/2; const y0 = y(base + v), y1 = y(base); const h = Math.max(y1 - y0, v > 0 ? 1.5 : 0);
+    s += `<rect x="${x}" y="${y1 - h}" width="${bw}" height="${h}" rx="3" fill="var(${col})" class="wfb" data-i="${i}"/>`;
+    s += `<text class="val" x="${x + bw/2}" y="${y1 - h - 6}" text-anchor="middle">${full ? f1(v) : v < 0.005 ? "0" : "−" + f1(v)}</text>`;
+    const words = lbl.split(" "); s += `<text class="ax" x="${x + bw/2}" y="${H - padB + 16}" text-anchor="middle">${esc(words.slice(0,2).join(" "))}</text>` + (words.length > 2 ? `<text class="ax" x="${x + bw/2}" y="${H - padB + 29}" text-anchor="middle">${esc(words.slice(2).join(" "))}</text>` : "");
+    if (i < n - 1) { const nx = padL + (i+1)*gap + (gap-bw)/2; const ly = i === 0 ? y(a.total) : y(base); s += `<line x1="${x+bw}" x2="${nx}" y1="${ly}" y2="${ly}" stroke="var(--ink-3)" stroke-dasharray="2 3" stroke-width="1"/>`; } });
+  s += `</svg>`; $("wf").innerHTML = s;
+  $("wfNote").innerHTML = `<span style="color:var(--ink-3)">IT-eq GW dated 2026-30 · build time 18 months · ${S.uni === "pipeline" ? "+ high/medium announced campuses" : S.uni === "scaled" ? "scaled to Aterio state totals (deck basis)" : "campuses under construction"}</span>`;
+  $("wf").querySelectorAll(".wfb").forEach(r => { const i = +r.dataset.i; const k = ["", "energized","no_pause","protected","ends_first","delayed"][i];
+    r.onmousemove = e => showTip(e, i === 0 ? `<b>${f1(a.total)} GW</b><div class="m">IT-eq GW dated 2026-30 in the universe</div>` : `<b>${BLONG[k]}</b><div class="m">${f1(wf[k])} GW · ${(wf[k]/a.total*100).toFixed(1)}% of universe</div>`); r.onmouseleave = hideTip; });
+}
+
+function niceTicks(max){ const raw = max / 4; const p = Math.pow(10, Math.floor(Math.log10(raw))); const st = [1,2,2.5,5,10].map(m => m*p).find(m => m >= raw) || p*10; const t = []; for (let v = 0; v <= max + 1e-9; v += st) t.push(+v.toFixed(6)); return t; }
+
+function annual(){
+  const a = A(), W = 560, H = 300, padL = 36, padB = 34, padT = 34; const ys = [...YRS, 2031];
+  const mx = Math.max(...ys.map(y => Math.max(a.annual_base[y] || 0, a.annual_scen[y] || 0)), 1);
+  const y = v => padT + (H - padT - padB) * (1 - v / mx); const gw = (W - padL - 8) / ys.length, bw = gw * 0.32;
+  let s = `<svg viewBox="0 0 ${W} ${H}">`; niceTicks(mx).forEach(t => s += `<line class="gl" x1="${padL}" x2="${W-6}" y1="${y(t)}" y2="${y(t)}"/><text class="ax" x="${padL-6}" y="${y(t)+4}" text-anchor="end">${t}</text>`);
+  ys.forEach((yr, i) => { const b = a.annual_base[yr] || 0, c = a.annual_scen[yr] || 0; const x0 = padL + i*gw + gw*0.16, x1 = x0 + bw + 2;
+    s += `<rect x="${x0}" y="${y(b)}" width="${bw}" height="${Math.max(y(0)-y(b), b>0?1:0)}" rx="3" fill="var(--c-base)" class="ab" data-y="${yr}"/>`;
+    s += `<rect x="${x1}" y="${y(c)}" width="${bw}" height="${Math.max(y(0)-y(c), c>0?1:0)}" rx="3" fill="var(--c-delayed)" class="ab" data-y="${yr}"/>`;
+    if (b > 0) s += `<text class="vals" x="${x0 + bw/2}" y="${y(b) - 5}" text-anchor="middle">${f1(b)}</text>`;
+    if (c > 0 || b > 0) { const d = b ? c/b - 1 : null; s += `<text class="val" x="${x1 + bw/2}" y="${y(c) - (Math.abs(d||0) > 0.0005 ? 17 : 5)}" text-anchor="middle">${f1(c)}</text>` + (b && Math.abs(d) > 0.0005 ? `<text class="vals" x="${x1 + bw/2}" y="${y(c) - 5}" text-anchor="middle">${pct(d)}</text>` : ""); }
+    s += `<text class="ax" x="${padL + i*gw + gw/2}" y="${H - padB + 16}" text-anchor="middle">${yr === 2031 ? "2031+" : yr}</text>`; });
+  s += `</svg>`; $("ann").innerHTML = s;
+  $("annLegend").innerHTML = `<span><i class="sq" style="background:var(--c-base)"></i>Base (registry schedule)</span><span><i class="sq" style="background:var(--c-delayed)"></i>With the scenario's delays</span>`;
+  $("ann").querySelectorAll(".ab").forEach(r => { const yr = +r.dataset.y; r.onmousemove = e => showTip(e, `<b>${yr === 2031 ? "2031+" : yr}</b><div>Base ${f1(a.annual_base[yr])} GW</div><div>Scenario ${f1(a.annual_scen[yr])} GW${a.annual_base[yr] ? " (" + pct(a.annual_scen[yr]/a.annual_base[yr]-1) + ")" : ""}</div>`); r.onmouseleave = hideTip; });
+  const parts = YRS.map(y => `${y} ${pct(a.pct[y])}`).join(", ");
+  $("flowLead").innerHTML = `<b>${M.scenarios[S.scen].label}: ${parts}.</b> Of ${f1(a.wf.delayed)} GW at risk, ${f1(a.delayed_month_only)} GW only change month and ${f1(a.delayed_year_shift)} GW change year; ${f1(a.to_2031)} GW leave the 2026-30 window.`;
+  const sum26 = YRS.reduce((t,y) => t + (a.annual_base[y]||0), 0), sum26s = YRS.reduce((t,y) => t + (a.annual_scen[y]||0), 0);
+  const ex = M.phases.filter(p => p.u && (S.uni === "pipeline" || p.u === "construction") && p.res[S.scen].b === "delayed").sort((x,y) => y.it - x.it)[0];
+  $("flowRead").innerHTML = `<b>Reading:</b> of ${f1(a.total)} GW dated 2026-30, ${f1(a.wf.delayed)} GW wait on an approval that a pause holds. What slips out of one year lands in the next, so 2026-30 falls from ${f1(sum26)} to ${f1(sum26s)} GW only by what moves to 2031+.` +
+    (ex ? ` Example: ${esc(ex.campus)} · ${esc(ex.phase)} (${esc(ex.city)}, ${ex.st}), ${Math.round(ex.it)} MW IT-eq, ${esc(ex.cod)} → ${esc(ex.res[S.scen].n)}: ${esc(ex.res[S.scen].r)}.` : "");
+}
+
+function table(){
+  const sts = [...new Set(M.phases.map(p => p.st))].sort();
+  $("fState").innerHTML = `<option value="">All states</option>` + sts.map(s => `<option value="${s}" ${S.st===s?"selected":""}>${SN(s)}</option>`).join("");
+  $("fBucket").innerHTML = `<option value="">All buckets</option>` + BK.map(b => `<option value="${b}" ${S.bk===b?"selected":""}>${BL[b]}</option>`).join("") + `<option value="__out" ${S.bk==="__out"?"selected":""}>Outside universe</option>`;
+  const q = S.q.toLowerCase();
+  let rows = M.phases.filter(p => (!S.st || p.st === S.st) && (S.bk === "__out" ? !(S.uni === "pipeline" ? p.u : p.u === "construction") : (S.uni === "pipeline" ? p.u : p.u === "construction") && (!S.bk || p.res[S.scen].b === S.bk)) &&
+    (!q || [p.campus, p.city, p.dev, p.ten, p.county, p.phase].join(" ").toLowerCase().includes(q)));
+  const key = {it: p => p.it, cod: p => p.cod, d: p => p.res[S.scen].d, st: p => p.st + p.campus, campus: p => p.campus}[S.sort] || (p => p.it);
+  rows.sort((x,y) => { const a = key(x), b = key(y); return (a > b ? 1 : a < b ? -1 : 0) * S.dir; });
+  $("fCount").textContent = `${rows.length} phases · ${f1(rows.reduce((t,p) => t + p.it, 0)/1000)} GW IT-eq`;
+  const head = [["campus","Campus · phase"],["st","Location"],["","Developer / tenant"],["","MW reported"],["it","MW IT-eq"],["cod","Base"],["","Scenario"],["d","Δ m"],["","Bucket"],["","Why"],["","Source"]];
+  let h = `<tr>${head.map(([k,l]) => `<th ${k?`data-k="${k}"`:""} class="${["it","d"].includes(k) || l.startsWith("MW") ? "n":""}">${l}${S.sort===k ? (S.dir>0?" ▲":" ▼") : ""}</th>`).join("")}</tr>`;
+  rows.slice(0, 600).forEach(p => { const r = p.res[S.scen]; const src = (p.src||"").split(";").map(s => s.trim()).filter(Boolean);
+    h += `<tr><td><b>${esc(p.campus)}</b><div style="color:var(--ink-3)">${esc(p.phase)} · ${esc(p.ps.replace("_"," "))}${p.lk ? " · " + esc(p.lk) : ""}</div></td><td>${esc(p.city)}${p.county ? ", " + esc(p.county) : ""}<div style="color:var(--ink-3)">${p.st}</div></td>` +
+      `<td>${esc(p.dev)}${p.ten ? `<div style="color:var(--ink-3)">${esc(p.ten)}</div>` : ""}</td><td class="n">${Math.round(p.mw)} <span class="tag">${esc(p.basis)}</span></td><td class="n">${Math.round(p.it)}</td>` +
+      `<td class="n">${esc(p.cod)}${p.codsrc ? `<div style="color:var(--ink-3)">${esc(p.codsrc)}</div>` : ""}</td><td class="n">${esc(r.n)}</td><td class="n">${r.d ? "+" + r.d : ""}</td>` +
+      `<td><span class="chip"><i style="background:var(${BV[r.b]})"></i>${BL[r.b]}</span></td><td class="why">${esc(r.r)}${p.notes ? `<div style="color:var(--ink-3)">${esc(p.notes)}</div>` : ""}</td>` +
+      `<td class="src">${src.slice(0,3).map((s,i) => /^https?:/.test(s) ? `<a href="${esc(s)}" target="_blank" rel="noopener">[${i+1}]</a>` : `<span title="${esc(s)}" class="tag">corpus</span>`).join(" ")}<div style="color:var(--ink-3)">${esc(p.sd)}</div></td></tr>`; });
+  if (rows.length > 600) h += `<tr><td colspan="11" style="color:var(--ink-3)">Showing 600 of ${rows.length}; narrow the filters.</td></tr>`;
+  $("ptable").innerHTML = h;
+  $("ptable").querySelectorAll("th[data-k]").forEach(th => th.onclick = () => { const k = th.dataset.k; S.dir = S.sort === k ? -S.dir : -1; S.sort = k; table(); });
+}
+
+function checks(){
+  $("checks").innerHTML = `<tr><th></th><th>Check</th><th class="n">Model</th><th class="n">Anchor</th><th class="n">×</th></tr>` + M.checks.map(c =>
+    `<tr><td class="flag">${c.flag}</td><td>${esc(c.check)} <span class="tag">${esc(c.kind)}</span><div style="color:var(--ink-3);font-size:11.5px">${esc(c.source)} — ${esc(c.caveat)}</div></td><td class="n">${c.model ?? "–"}</td><td class="n">${esc(c.anchor)}</td><td class="n">${c.ratio ?? "–"}</td></tr>`).join("") +
+    `<tr><td colspan="5" style="color:var(--ink-3);font-size:11.5px">Checks run on the bear scenario. Basis: the registry is IT-equivalent, while the Aterio census and the reference deck state no basis. A ratio ~1.2 below them is what a facility-basis anchor alone would produce.</td></tr>`;
+  const deck = M.rules.benchmarks.capstone_deck.states; const a = M.aggs[S.scen].construction;
+  const sts = [...new Set([...Object.keys(deck), ...Object.entries(a.states).sort((x,y) => y[1].gw_2630 - x[1].gw_2630).slice(0,14).map(x => x[0])])];
+  const rep = {}; M.phases.forEach(p => { if (p.u === "construction") rep[p.st] = (rep[p.st]||0) + p.mw/1000; });
+  $("coverage").innerHTML = `<tr><th>State</th><th class="n">Registry IT-eq</th><th class="n">Registry as reported</th><th class="n">Deck (Aterio)</th><th class="n">Coverage</th></tr>` +
+    sts.map(s => { const r = (a.states[s]||{}).gw_2630 || 0, d = deck[s]; const cov = d ? r / d : null; const fl = cov == null ? "" : cov >= 0.75 ? "🟢" : cov >= 0.5 ? "🟡" : "🔴";
+      return `<tr><td>${SN(s)}</td><td class="n">${f1(r)}</td><td class="n">${f1(rep[s]||0)}</td><td class="n">${d ? f1(d) : "–"}</td><td class="n">${cov == null ? "–" : fl + " " + Math.round(cov*100) + "%"}</td></tr>`; }).join("") +
+    `<tr class="tot"><td>US</td><td class="n">${f1(a.total)}</td><td class="n">${f1(Object.values(rep).reduce((t,v)=>t+v,0))}</td><td class="n">${f1(M.rules.benchmarks.capstone_deck.total)}</td><td class="n">${Math.round(a.total/M.rules.benchmarks.capstone_deck.total*100)}%</td></tr>` +
+    `<tr><td colspan="5" style="color:var(--ink-3);font-size:11.5px">Universe = campuses under construction, phases dated 2026-30. Deck = reference deck shared 2026-11-06, Aterio base (author to confirm), top-10 states only.</td></tr>`;
+}
+
+function method(){
+  const r = M.rules; const bt = r.basis.tags || {}, lt = r.lead_tags || {};
+  const sc = Object.entries(M.scenarios).map(([k,v]) => `<li><b>${esc(v.label)}</b> — ${esc(v.blurb)} Unknown approvals counted as missing: ${Object.entries(v.unknown_exposed).map(([kk,vv]) => `${kk}: ${vv.join("/") || "never"}`).join("; ")}.</li>`).join("");
+  const deck = r.benchmarks.capstone_deck, a = M.aggs.bear ? M.aggs.bear.construction : A();
+  $("method").innerHTML = `<h4 style="margin:0 0 4px">Buckets (per phase, per scenario)</h4><ol style="margin:0 0 8px 18px;padding:0;font-size:13px;color:var(--ink-2)">
+    <li><b>Energized</b>: phase energized, or its schedule date is before ${esc(M.as_of)}.</li>
+    <li><b>Outside pause</b>: no state instrument active in the scenario and no local moratorium covers the site.</li>
+    <li><b>Protected</b>: a pause exists but the phase needs no approval it blocks (e.g. a grid-only phase under an air-permit freeze), or already holds it.</li>
+    <li><b>Pause ends first</b>: the pause binds but ends before the approval is needed. Need date = base date − lead time.</li>
+    <li><b>Delayed</b>: pause end after the need date → new date = pause end + lead time (latest across binding pauses).</li></ol>
+    <p style="font-size:13px;color:var(--ink-2);margin:0 0 6px">Unknown approval status is never guessed in the registry. If the need date is before the pause started, the schedule implies the approval is in hand. Otherwise each scenario says which phase stages count an unknown as missing:</p><ul style="font-size:13px;color:var(--ink-2);margin:0 0 8px 18px;padding:0">${sc}</ul>
+    <h4 style="margin:10px 0 4px">Attribution</h4><p style="font-size:13px;color:var(--ink-2);margin:0 0 6px">A pause delays an approval from the later of its need date and the pause start, to the pause end. A phase needed after the pause began lands at pause end + lead time; one whose approval was already due slips by the pause's length. Phases already holding the approval, or needing none the pause blocks, are protected.</p>
+    <h4 style="margin:10px 0 4px">Scaled view</h4><p style="font-size:13px;color:var(--ink-2);margin:0 0 6px">No fitted constant. Registry GW are cut into state × base-year cells and raked to the reference deck's state totals (top 10 + rest), its yearly base-case adds and its 2026-28 state cards (TX, VA, OH, GA, PA, IN). The scaled view therefore matches the deck's levels and timing by construction, and its delay shares are the registry's own, cell by cell. Two biases cut opposite ways. The registry over-samples large on-site-gas campuses with pending permits (more exposed than the gap). In Texas, the known gaps (Fermi, Hubbard, Poolside, Cipher) are also on-site gas or unstarted, so they are not obviously less exposed. Rows in Aterio's low tier (announcement only) are left out of every view. An earlier version fitted an "exposed share of the gap" to FundaAI's Texas figure; the 2026-11-06 skeptic review showed that anchor could not identify it, and it was dropped.</p>
+    <h4 style="margin:10px 0 4px">Lead times</h4><table><tr><th>Approval</th><th class="n">Months</th><th>Tag / source</th></tr>${Object.entries(r.lead_months).map(([k,v]) => `<tr><td>${k}</td><td class="n">${v}</td><td>${esc(lt[k] || "")}</td></tr>`).join("")}</table>
+    <h4 style="margin:10px 0 4px">One basis: IT-equivalent</h4><table><tr><th>Reported basis</th><th class="n">÷</th><th>Tag / source</th></tr>${Object.entries(r.basis.to_it).map(([k,v]) => `<tr><td>${k}</td><td class="n">${v}</td><td>${esc(bt[k] || "source basis")}</td></tr>`).join("")}</table>
+    <h4 style="margin:10px 0 4px">Against the reference deck (bear, campuses under construction)</h4>
+    <table><tr><th></th><th class="n">This model</th><th class="n">Deck (Aterio)</th></tr>${["energized","no_pause","protected","ends_first","delayed"].map(k => `<tr><td>${BLONG[k]}</td><td class="n">${f1(a.wf[k])}</td><td class="n">${f1(deck.waterfall[k])}</td></tr>`).join("")}
+    <tr><td>Delayed, change year</td><td class="n">${f1(a.delayed_year_shift)}</td><td class="n">${f1(deck.waterfall.delayed_year_shift)}</td></tr><tr><td>Pushed to 2031+</td><td class="n">${f1(a.to_2031)}</td><td class="n">${f1(deck.waterfall.to_2031)}</td></tr>
+    <tr class="tot"><td>Total under construction 2026-30</td><td class="n">${f1(a.total)}</td><td class="n">${f1(deck.total)}</td></tr></table>
+    <p style="font-size:12px;color:var(--ink-3)">The deck's basis is not stated, and it covers every building Aterio tracks; this registry covers the large public campuses. Compare shares, not levels.</p>
+    <h4 style="margin:10px 0 4px">Files</h4><p style="font-size:12.5px;color:var(--ink-2);margin:0">Registry <code>_wiki/_data/dc_projects/projects.csv</code> (merged from <code>raw/*.csv</code>; schema in <code>SCHEMA.md</code>; hand fixes in <code>overrides.csv</code>) · rules <code>state_rules.json</code> + <code>local_moratoria.json</code> · engine <code>_wiki/_tools/build_dc_delay.py</code> · output <code>model_output.json</code>. ${M.problems.length} schema warnings in <code>validation.txt</code>.</p>`;
+  $("foot").textContent = `Built ${M.built || ""} by build_dc_delay.py · data: public sources per row · state geometry: us-atlas 3.0.1 (Albers USA).`;
+}
+
+let render = function(){ controls(); kpis(); map(); cards(); top10(); rulesText(); cities(); waterfall(); annual(); table(); checks(); method(); }
+$("fState").onchange = e => { S.st = e.target.value; cards(); table(); };
+$("fBucket").onchange = e => { S.bk = e.target.value; table(); };
+$("fText").oninput = e => { S.q = e.target.value; table(); };
+$("themeBtn").onclick = () => { const r = document.documentElement; const dark = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; r.dataset.theme = dark ? "light" : "dark"; try { localStorage.setItem("dcdr-theme", r.dataset.theme); } catch(e) {} };
+try { const t = localStorage.getItem("dcdr-theme"); if (t) document.documentElement.dataset.theme = t; } catch(e) {}
+(() => { const h = decodeURIComponent(location.hash.slice(1)).split("/"); if (M.scenarios[h[0]]) S.scen = h[0]; if (["construction","pipeline","scaled"].includes(h[1])) S.uni = h[1]; })();
+const _render = render; render = function(){ _render(); try { history.replaceState(null, "", "#" + S.scen + "/" + S.uni); } catch(e) {} };
+header(); render();
+</script>
+</body>
+</html>

@@ -1,0 +1,124 @@
+{
+ "_doc": "HAND-EDIT. Applied by build_dc_delay.py after merging raw/*.csv + overrides.csv, before ramps.json. date_shift puts every row on ONE date basis (energization); set_fields corrects a field for all rows with an id prefix. Each entry says why.",
+ "date_shift": [
+  {
+   "prefix": "TX-ABILENE-FRONTIER-",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention; puts the Abilene expansion building on the reference deck Mar-28)"
+  },
+  {
+   "prefix": "TX-CLAUDE-GOODNIGHT-",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention; puts the Abilene expansion building on the reference deck Mar-28)"
+  },
+  {
+   "prefix": "TX-ABILENE-CRUSOEEXP-",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention; puts the Abilene expansion building on the reference deck Mar-28)"
+  },
+  {
+   "prefix": "TX-CHILDRESS-CRUSOE-",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention; puts the Abilene expansion building on the reference deck Mar-28)"
+  },
+  {
+   "prefix": "TX-DENTON-CORZ-B8",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention; puts the Abilene expansion building on the reference deck Mar-28)"
+  },
+  {
+   "prefix": "TX-SANANTONIO-VANTAGETX1-",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention; puts the Abilene expansion building on the reference deck Mar-28)"
+  },
+  {
+   "prefix": "TX-HUBBARD-NEXUS-HB1",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-HUBBARD-NEXUS-HB2",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-CASTROVILLE-MSFTSAT89-B1",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-VERNON-GOOGLERISE-ALL",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-WHITNEY-CYRUSONEDFW10-B1",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-CASTROVILLE-CYRUSONESAT14-A",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-GARLAND-PRIMEDFW02-B2",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-WILMER-QTSDFW2-DC3",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-FORTWORTH-CORAVEL-HICKSFIELD",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-WESTLAKE-POWERHOUSE-B1",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-GARLAND-DLRDFW45-B1",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-CEDARCREEK-EDGECONNEX-AUS01",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-CEDARCREEK-EDGECONNEX-AUS11AUS12",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-REDOAK-GOOGLE-B2",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-CAMERON-MILAM-B1",
+   "months": 6,
+   "why": "TDLR construction-completion date -> energization (+6m, Epoch AI convention); round 2 2026-11-06"
+  },
+  {
+   "prefix": "TX-CORSICANA-RIOT-",
+   "months": 3,
+   "why": "Riot's dates are powered-pad delivery; the tenant installs modular IT afterwards (Riot 10-Q 2026-11-04). +3m to energization is a Capstone estimate (double-check 2026-11-06)"
+  }
+ ],
+ "set_fields": [
+  {
+   "prefix": "TX-ABILENE-FRONTIER-",
+   "fields": {
+    "mw_basis": "IT"
+   },
+   "why": "Epoch AI gives 140 MW IT per building (double-check 2026-11-06)"
+  }
+ ]
+}

@@ -1,0 +1,80 @@
+{
+ "_doc": "midwest lane round 2 (2026-11-06). Same format as ramps.json. Even splits and exact months are Capstone ESTIMATES unless 'why' says sourced.",
+ "OH-JEFFERSONVILLE-AWSFAYETTE-P1": {
+  "dates": [
+   "2027-07",
+   "2028-01",
+   "2028-07",
+   "2029-01"
+  ],
+  "why": "AES Ohio LAS 2024-11-25 Phase-1 ramp (65->480 MW, Sep-26 to Sep-27) superseded by AES LAS 2026-09-21: no large DC operating, DAY zone 75 MW Jul-27 / ~410 MW Jul-28 / 1,820 MW Jul-29; re-dated ramp is a Capstone estimate",
+  "status_after_first": "under_construction"
+ },
+ "OH-PIKETON-PORTSPIKE-P1": {
+  "dates": [
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06",
+   "2032-06"
+  ],
+  "why": "SB Energy S-1/A 2026-09-21: 17 buildings x ~472 MW IT (8,024 MW), leases commence in stages early 2028 to 2032 (first-phase RFS 2028, final RFS 2032); even annual split is a Capstone estimate",
+  "status_after_first": "not_started"
+ },
+ "IN-NEWLEBANON-MERIDIAN-ALL": {
+  "dates": [
+   "2027-07",
+   "2027-11",
+   "2028-02"
+  ],
+  "why": "Fitch (relayed): first 65 MW hall Jul-2027; credit-workbook seed (unverified): lease commencements Aug-2027 to Feb-2028; even split is a Capstone estimate"
+ },
+ "IN-NWINDIANA-AWSNIPSCO-ALL": {
+  "dates": [
+   "2027-01",
+   "2028-06",
+   "2029-12",
+   "2031-06",
+   "2032-12"
+  ],
+  "why": "NIPSCO filing: service from 2027-01-01 rising to 2.4 GW by end-2032 (Apr-2026 amendment accelerated delivery, terms not public); even split is a Capstone estimate",
+  "status_after_first": "not_started"
+ },
+ "IN-LAPORTE-MICROSOFT-ALL": {
+  "dates": [
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06"
+  ],
+  "why": "NiSource 10-Q 2026-10-28: capacity commitment begins 2028, rises to 788 MW from 2031; even split is a Capstone estimate"
+ },
+ "MI-VANBURENTWP-GOOGLECANNOLI-ALL": {
+  "dates": [
+   "2027-12",
+   "2028-06",
+   "2028-12"
+  ],
+  "why": "MPSC 2026-10-01 citing DTE: service begins Dec-2027, maximum load Dec-2028; even split is a Capstone estimate"
+ },
+ "IL-JOLIET-JTC-ALL": {
+  "dates": [
+   "2027-12",
+   "2029-06",
+   "2030-12",
+   "2032-06",
+   "2033-12",
+   "2035-06"
+  ],
+  "why": "Datacentres.com 2026-05-08: initial capacity by late 2027, phased over a decade; even split is a Capstone estimate",
+  "status_after_first": "not_started"
+ },
+ "KY-HAWESVILLE-TERAWULF-JUSTIFIED": {
+  "dates": [
+   "2027-12",
+   "2028-03",
+   "2028-06"
+  ],
+  "why": "TeraWulf 8-K 2026-11-04 (Fluor EPC): phased RFS for three buildings from late 2027 through Q2-2028; even split is a Capstone estimate"
+ }
+}

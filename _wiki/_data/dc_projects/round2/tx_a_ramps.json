@@ -1,0 +1,38 @@
+{
+ "_doc": "tx_a lane ramps (ramps.json format). Window sourced where why says so; even split and exact months are Capstone ESTIMATES.",
+ "TX-AMARILLO-MATADOR-TW1": {
+  "dates": [
+   "2028-01",
+   "2028-02"
+  ],
+  "why": "Fermi 10-Q: DH1-2 target 2028-01-01, DH3-4 2028-02-01 (network hall end-2027 to Q1-2028); even halves are a Capstone estimate"
+ },
+ "TX-PECOS-CORZ-AMD": {
+  "dates": [
+   "2027-06",
+   "2027-12",
+   "2028-06",
+   "2028-12"
+  ],
+  "why": "CORZ Q3-26 deck: Pecos initial delivery est. 1H-2027; full 530 MW AMD/neocloud program by end-2028; even split is a Capstone estimate",
+  "status_after_first": "under_construction"
+ },
+ "TX-GREENVILLE-CORZ-HUNT": {
+  "dates": [
+   "2028-06",
+   "2028-12"
+  ],
+  "why": "CORZ Q3-26 deck: Hunt initial delivery est. 1H-2028; full program by end-2028; even split is a Capstone estimate",
+  "status_after_first": "under_construction"
+ },
+ "TX-FORTSTOCKTON-GWRANCH-ALL": {
+  "dates": [
+   "2027-06",
+   "2028-06",
+   "2029-06",
+   "2030-06"
+  ],
+  "why": "Pacifico: power to customers 1H-2027, full 5 GW by 2030 (one source; another says 2031); generation nameplate; even split is a Capstone estimate",
+  "status_after_first": "not_started"
+ }
+}

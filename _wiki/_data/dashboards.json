@@ -190,6 +190,8 @@
      "desc": "Chips · capex · receita · payback of 1 GW — replica of the Oficiais dashboard, regenerated from the newest AI Model workbook (label-driven anchors)."},
     {"href": "como_flui_capacidade.html", "title": "Como flui a capacidade da indústria?", "cadence": "ondemand", "routine": "build_ai_dashboards.py from the newest AI Model (manual)", "topic": "AI capex & funding",
      "desc": "Designer → cloud → cliente → uso final: how the industry's capacity flows, regenerated from the newest AI Model workbook."},
+    {"href": "dc-delay-risk.html", "title": "DC delay risk — permit pauses, bottom-up", "cadence": "ondemand", "routine": "build_dc_delay.py (registry _data/dc_projects/raw/*.csv + state_rules.json)", "topic": "AI capex & funding",
+     "desc": "US data-center campuses by project phase and city: which GW sit inside post-election state and local permit pauses, waterfall from under construction to delayed, annual adds base vs scenario 2026-30."},
     {"href": "gw-per-player.html", "title": "GW per player", "cadence": "ondemand", "routine": "hand-curated", "topic": "AI capex & funding",
      "desc": "Highest GW estimate per player, all sources cited, SemiAnalysis highlighted."},
     {"href": "token-fabric.html", "title": "Token fabric", "cadence": "ondemand", "routine": "hand-curated", "topic": "Tokens & compute",

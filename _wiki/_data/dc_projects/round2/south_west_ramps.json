@@ -1,0 +1,123 @@
+{
+ "_doc": "south_west lane (round 2). Same format as ramps.json: equal tranches on these dates; status_after_first overrides phase_status for tranches 2..n. Windows are sourced as stated in 'why'; even splits and exact months are Capstone estimates.",
+ "GA-AUGUSTA-NIXONTECH-ALL": {
+  "dates": [
+   "2028-06",
+   "2029-06"
+  ],
+  "why": "Georgia DRI #4853: completion 'this phase: 2028, 2029; overall: 2029'"
+ },
+ "GA-OCILLA-ARROWHEAD-ALL": {
+  "dates": [
+   "2030-06",
+   "2031-06",
+   "2032-06",
+   "2033-06",
+   "2034-06"
+  ],
+  "why": "Georgia DRI #4689: this phase 2030, overall project 2034"
+ },
+ "GA-LITHIASPRINGS-DCBLOXATLWEST-AB": {
+  "dates": [
+   "2026-06",
+   "2027-06",
+   "2028-02"
+  ],
+  "why": "Baxtel: Building A first phase 2026 with expansions through 2027; Building B early 2028"
+ },
+ "GA-LAGRANGE-PEGASUS-ALL": {
+  "dates": [
+   "2026-12",
+   "2029-06"
+  ],
+  "why": "AJC 2026-04-23: first phase operational by end-2026; Georgia DRI #4797 (PRL2): subsequent phase complete 2029",
+  "status_after_first": "not_started"
+ },
+ "GA-ROME-MSFTHUFFAKER-ALL": {
+  "dates": [
+   "2029-06",
+   "2030-12",
+   "2032-06"
+  ],
+  "why": "Baxtel: planned 2029, expansions through 2032; Georgia DRI #4860: 3 buildings, overall completion 2032"
+ },
+ "AZ-AVONDALE-STACKPHX01-ALL": {
+  "dates": [
+   "2027-06",
+   "2028-06",
+   "2029-06"
+  ],
+  "why": "Baxtel: site planned 2027, expansions through 2029",
+  "status_after_first": "not_started"
+ },
+ "AZ-PHOENIX-STACKPHX02-ALL": {
+  "dates": [
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06",
+   "2032-06"
+  ],
+  "why": "Baxtel building years: PHX02A 2028, B 2029, C 2030, D 2031, E 2032",
+  "status_after_first": "not_started"
+ },
+ "AZ-MESA-NOVVA-ALL": {
+  "dates": [
+   "2027-06",
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06"
+  ],
+  "why": "Baxtel building years: Mesa 1 2027 ... Mesa 5 2031; Novva: 2 phases, 300 MW",
+  "status_after_first": "not_started"
+ },
+ "AZ-PHOENIX-MENLOMDPX1-ALL": {
+  "dates": [
+   "2027-06",
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06"
+  ],
+  "why": "Baxtel building years: MD-PX1 Bldg1 2027 ... Bldg5 2031",
+  "status_after_first": "not_started"
+ },
+ "AZ-MESA-NTTPACIFIC-ALL": {
+  "dates": [
+   "2028-11",
+   "2029-06",
+   "2030-06",
+   "2031-06",
+   "2032-06",
+   "2033-06",
+   "2034-06"
+  ],
+  "why": "Baxtel: first facility operational by Nov-2028; Pacific 2-7 planned 2029-2034"
+ },
+ "LA-ALEXANDRIA-DELTAFORGE1-ALL": {
+  "dates": [
+   "2027-04",
+   "2028-02"
+  ],
+  "why": "APLD 10-Q (2026-10-07): initial RFS 1H CY2027, full capacity early CY2028; two buildings"
+ },
+ "LA-HOLLYRIDGE-HYPERIONEVEST-EXP": {
+  "dates": [
+   "2030-06",
+   "2031-06"
+  ],
+  "why": "Entergy Q3-26 10-Q: 7 CCGTs serving the Evest/Meta load have estimated in-service dates in 2030 and 2031"
+ },
+ "MO-TROY-CLOVERLEAF-ALL": {
+  "dates": [
+   "2028-06",
+   "2029-06",
+   "2030-06",
+   "2031-06",
+   "2032-06",
+   "2033-06"
+  ],
+  "why": "Baxtel: site planned 2028 with expansions through 2033"
+ }
+}
