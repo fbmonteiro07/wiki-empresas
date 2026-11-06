@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-11-05",
+ "_updated": "2026-11-06",
  "terms": {
   "Hixle AI": {
    "correct": "Higgsfield (AI video startup)",
@@ -7159,6 +7159,74 @@
     "city"
    ],
    "first_seen": "2026-11-05 run-inbox"
+  },
+  "Iron": {
+   "correct": "IREN (IREN Limited, NASDAQ: IREN)",
+   "domain": "names",
+   "ci": false,
+   "rule": "ASR of the ticker/company IREN (said 'I-ren'); 10 hits in the BTG IREN websession, e.g. 'director of Investor Relations at Iron'. Only flag in neocloud/AI-infra context.",
+   "keep_when": [
+    "Iron Mountain",
+    "iron ore",
+    "[Ss]teel",
+    "Iron Dome",
+    "Iron Man",
+    "IRM"
+   ],
+   "first_seen": "2026-09-22 BTG Pactual Global Access websession with IREN IR (machine transcript, relatórios bons/2026_09_22_btgp_global_access_websession_with_iren_christophe.html); caught 2026-11-06 building _wiki/IREN.md"
+  },
+  "Sailor": {
+   "correct": "Sailer (Christopher Sailer, IREN Investor Relations Director, per the BTG invite)",
+   "domain": "names",
+   "ci": false,
+   "rule": "ASR spelling of IREN's IR director; the BTGP invite reads 'Christopher Sailer, Investor Relations Director'.",
+   "keep_when": [
+    "[Ss]ailor [Mm]oon",
+    "sailors?\b(?!.*IREN)"
+   ],
+   "first_seen": "2026-09-22 BTG Pactual Global Access websession with IREN IR (machine transcript, relatórios bons/2026_09_22_btgp_global_access_websession_with_iren_christophe.html); caught 2026-11-06 building _wiki/IREN.md"
+  },
+  "Marantus": {
+   "correct": "Mirantis (cloud-infrastructure software company acquired by IREN, Aug-2026)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Mirantis (k0rdent AI).",
+   "first_seen": "2026-09-22 BTG Pactual Global Access websession with IREN IR (machine transcript, relatórios bons/2026_09_22_btgp_global_access_websession_with_iren_christophe.html); caught 2026-11-06 building _wiki/IREN.md"
+  },
+  "Morantus": {
+   "correct": "Mirantis (cloud-infrastructure software company acquired by IREN, Aug-2026)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Mirantis.",
+   "first_seen": "2026-09-22 BTG Pactual Global Access websession with IREN IR (machine transcript, relatórios bons/2026_09_22_btgp_global_access_websession_with_iren_christophe.html); caught 2026-11-06 building _wiki/IREN.md"
+  },
+  "Morantis": {
+   "correct": "Mirantis (cloud-infrastructure software company acquired by IREN, Aug-2026)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Mirantis.",
+   "first_seen": "2026-06-18 Cantor CoreWeave/datacenter call (_equity_calls/Overall/2026-06-18_Cantor_CoreWeave-datacenter.md); caught 2026-11-06 building _wiki/IREN.md"
+  },
+  "Hercot": {
+   "correct": "ERCOT (Electric Reliability Council of Texas)",
+   "domain": "acronyms",
+   "ci": true,
+   "rule": "ASR of ERCOT (e.g. 'Hercot Batch Zero').",
+   "first_seen": "2026-09-22 BTG Pactual Global Access websession with IREN IR (machine transcript, relatórios bons/2026_09_22_btgp_global_access_websession_with_iren_christophe.html); caught 2026-11-06 building _wiki/IREN.md"
+  },
+  "Via Ruben": {
+   "correct": "Vera Rubin (NVIDIA VR200 / VR NVL72 generation)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Vera Rubin.",
+   "first_seen": "2026-09-22 BTG Pactual Global Access websession with IREN IR (machine transcript, relatórios bons/2026_09_22_btgp_global_access_websession_with_iren_christophe.html); caught 2026-11-06 building _wiki/IREN.md"
+  },
+  "Chuldris": {
+   "correct": "Childress (IREN's Texas campus, Horizons 1-6)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Childress, TX.",
+   "first_seen": "2026-06-18 Cantor CoreWeave/datacenter call (_equity_calls/Overall/2026-06-18_Cantor_CoreWeave-datacenter.md); caught 2026-11-06 building _wiki/IREN.md"
   }
  },
  "summary_traps": [
