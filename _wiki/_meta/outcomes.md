@@ -8,6 +8,7 @@ Format (ticker + the catalyst date, then the verdict):
 
 Add lines here after each catalyst resolves. Newest first.
 
+- SMCI 2026-11-06 — neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-07): 11-06 is the 10-Q filing that settled the Wolfe share-count watch item, already scored inside the SMCI 2026-11-03 line (reported non-GAAP diluted 764.4m vs 761m guided; as-converted ~895m incl. 4.3125m mandatory convertible preferred x 30.304, Capstone arithmetic on 10-Q terms). No separate catalyst; nothing further to score until the F2Q27 print.
 - META 2026-11-04 — neutral — Common-option watch resolved: all 6m additional common shares exercised into forwards; no current cash settlement implied. Preferred option remains unverified. [Meta 8-K November 5](https://www.sec.gov/Archives/edgar/data/1326801/000119312526450074/d166273d8k.htm).
 
 - NET 2026-11-05 — bull won — Revenue/forward-guide test only: company release November 5 reports Q3 revenue $782.5m and Q4 guide $845-846m; JPM / Chatterjee, Patel and Nishi November 6 quotes pre-print consensus $742m/$799m. Non-GAAP GM 72.4% and FCF margin 10% vs 13% a year ago keep the cash-conversion test open. No inference that new Act IV revenue is already material. [Primary](https://www.cloudflare.com/press/press-releases/2026/cloudflare-announces-third-quarter-2026-financial-results/) · [source record](analyst-evidence/2026-11-06-morning-source-checks.json).

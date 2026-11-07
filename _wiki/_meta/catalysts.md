@@ -1,12 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-11-06 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-11-07 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (52)
+## 📅 Upcoming (51)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-11-06 | SMCI | **✅ SETTLED 2026-11-06 (10-Q) — see `## Current state`: reported non-GAAP diluted 764.4m vs 761m guided (F2Q ~769m); as-converted ~895m including 4.3125m mandatory convertible preferred × 30.304 = ~13 |
 | 2026-11-09 | CME | Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract ends 2026-11-09 (Duffy said he "believe[s]" so; filed under a full 40.3 review), then the agency decides ([Duf |
 | 2026-11-09 | KKR | **2026-11-09 — Q3 results and call**, announced by KKR on 2026-09-29. Test fee activation, insurance earnings, K-Series flows and realization progress. [Company announcement](https://media.kkr.com/new |
 | 2026-11-09 | QCOM | **🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed** (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. **B |
@@ -67,10 +66,11 @@ _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_me
 |---|---|---|
 | _none_ | | |
 
-## ✅ Resolved (391)
+## ✅ Resolved (392)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-11-06 | SMCI | neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-07): 11-06 is the 10-Q filing that settled the Wolfe share-count watch item, already scored inside the SMCI 2026-11-03 line (reported non-GAAP diluted 764.4m vs 761m guided; as-converted ~895m incl. 4.3125m mandatory convertible preferred x 30.304, Capstone arithmetic on 10-Q terms). No separate catalyst; nothing further to score until the F2Q27 print. |
 | 2026-11-05 | TSLA | neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-06): 11-05 is the source date of the Fox Investimentos AV tracker (Cabral, 2026-11-05) — Fort Worth 7th unsupervised city 11-02, 1,204 TX registrations vs Waymo 1,259 (Tesla North via Fox). Buy-side compilation, not a Tesla primary. The dated tests it lists (Cybercab Dallas 'November', NHTSA Cybercab probe response, '25-50% of the U.S.' by YE26) are still ahead. |
 | 2026-11-05 | ORCL | neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-06): 11-05 is the ingest date of an UNCONFIRMED insider call (recorded 10-23) moving the NMED air-permit hearing to Dec. 5 with a ruling hoped for ~Dec. 30-31. The real catalysts are Dec. 5 / ~Dec. 30 (and ERCOT's Dec. 10 audit filing, WFS 11-04); nothing resolved. |
 | 2026-11-05 | GOOG | neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-06): /run-inbox watch list — SemiAnalysis TPUv8i AgentX benchmarking 'very soon' ('The Iron(wood) Throne', 11-05), Texas TCEQ pause timing (SemiAnalysis Weekly Ep. 043, 11-04), Wells ~$1.65bn 4Q SpaceX-capacity operating loss (10-29 recap). Forward-looking; resolves at the benchmark release and the 4Q26 print (~early Feb 2027). |
