@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-11-06 · 40 active signals · latest reconciliation: reconciliation-2026-11-05-inbox.md._
+_Generated 2026-11-06 · 40 active signals · latest reconciliation: reconciliation-2026-11-06-inbox.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 

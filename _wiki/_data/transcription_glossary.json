@@ -5881,11 +5881,39 @@
    "first_seen": "2026-10-29 (The Builders w/ Walter Isaacson, Mustafa Suleyman, taped 2026-10-12, YouTube ASR)"
   },
   "Emma the microphone of AI": {
-   "correct": "humanist AI (code of conduct) - probable, UNCONFIRMED",
+   "correct": "Microsoft AI (code of conduct) - resolved 2026-11-06",
    "domain": "products",
    "ci": true,
-   "rule": "'The Emma the microphone of AI code of conduct' most plausibly = the humanist AI code of conduct (Microsoft AI / MAI); quote with [transcribed ...] and UNCONFIRMED.",
+   "rule": "'The Emma the microphone of AI code of conduct' most plausibly = the humanist AI code of conduct (Microsoft AI / MAI); quote with [transcribed ...] and UNCONFIRMED. RESOLVED 2026-11-06: the 92NY re-upload of the same 10-12 event (posted 2026-11-04) reads the same audience question as 'the Microsoft AI code of conduct' - so 'Emma the microphone of AI' = 'the Microsoft AI', not 'humanist AI' (same document either way: the MAI code of conduct).",
    "first_seen": "2026-10-29 (The Builders w/ Walter Isaacson, Mustafa Suleyman, taped 2026-10-12, YouTube ASR)"
+  },
+  "Dalai Lama Day": {
+   "correct": "Dario Amodei (Anthropic CEO) - probable, UNCONFIRMED",
+   "domain": "names",
+   "ci": true,
+   "rule": "'the Anthropic, the Dalai Lama Day and Daniel and Amanda Askell' = Dario Amodei, Daniela [Amodei] and Amanda Askell; the same sentence in the 10-29 upload's ASR reads 'the Dario Amodei and Daniel'. Quote with [transcribed ...] and UNCONFIRMED.",
+   "first_seen": "2026-11-06 (92NY re-upload of The Builders w/ Walter Isaacson, Mustafa Suleyman, taped 2026-10-12, posted 2026-11-04, YouTube ASR)"
+  },
+  "Jacob Coxen": {
+   "correct": "Jacob Coxon (ex-OpenAI/Anthropic pretraining researcher who resigned)",
+   "domain": "names",
+   "ci": true,
+   "rule": "'your Jacob Coxen moment' = Jacob Coxon; spelling variant of the 'Jacob Cox' garble.",
+   "first_seen": "2026-11-06 (92NY re-upload of The Builders w/ Walter Isaacson, Mustafa Suleyman, taped 2026-10-12, posted 2026-11-04, YouTube ASR)"
+  },
+  "in the Tropic": {
+   "correct": "in Anthropic",
+   "domain": "names",
+   "ci": true,
+   "rule": "'Not just in the Tropic but elsewhere in Silicon Valley' = Anthropic (cultish-fervor remark).",
+   "first_seen": "2026-11-06 (92NY re-upload of The Builders w/ Walter Isaacson, Mustafa Suleyman, taped 2026-10-12, posted 2026-11-04, YouTube ASR)"
+  },
+  "Minister Gay": {
+   "correct": "UNRESOLVED (host's reference to a long Suleyman blog post/essay)",
+   "domain": "names",
+   "ci": true,
+   "rule": "'You did a blog post on Minister Gay. Like a thousand pages.' - referent not identifiable from context; never quote as a name or title.",
+   "first_seen": "2026-11-06 (92NY re-upload of The Builders w/ Walter Isaacson, Mustafa Suleyman, taped 2026-10-12, posted 2026-11-04, YouTube ASR)"
   },
   "computer flops": {
    "correct": "compute flops",
@@ -7269,6 +7297,343 @@
    "ci": true,
    "rule": "ASR of the law firm's name.",
    "first_seen": "2026-11-06 Jefferies JEF Access Texas Power & Utility (_equity_calls/Overall/2026-11-06_Jefferies_Texas-power-DC-moratorium-post-election-Hinojosa-WBK-DuBois-Sashkin-Dumoulin-Smith.md)"
+  },
+  "Corsa Canana": {
+   "correct": "Corsicana (Riot Platforms campus, Navarro County, TX)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of Corsicana; same episode also renders it Corsana, Corsacana, Corsy Kana, Cory Khan, Cory Carer, Corsakana, Corsa Cana, Corana, Corso, Coro and \"course of Canada\".",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "Corsana": {
+   "correct": "Corsicana (Riot Platforms campus, TX)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of Corsicana.",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "Corsacana": {
+   "correct": "Corsicana (Riot Platforms campus, TX)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of Corsicana.",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "Corsy Kana": {
+   "correct": "Corsicana (Riot Platforms campus, TX)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of Corsicana.",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "Cory Khan": {
+   "correct": "Corsicana (Riot Platforms campus, TX)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of Corsicana.",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "Cory Carer": {
+   "correct": "Corsicana (Riot Platforms campus, TX)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of Corsicana.",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "Corsakana": {
+   "correct": "Corsicana (Riot Platforms campus, TX)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of Corsicana.",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "course of Canada": {
+   "correct": "Corsicana (Riot Platforms campus, TX)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of Corsicana (\"going to the course of Canada\").",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "Jason Lass": {
+   "correct": "Jason Les (Riot Platforms CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR in the host intro; rendered correctly as Jason Les a few seconds later.",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "GGC Berlin": {
+   "correct": "GTC Berlin (NVIDIA GPU Technology Conference, Oct-2026)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of GTC Berlin (\"at GGC Berlin a couple weeks ago, Nvidia is announcing their pod\").",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "Rock deal": {
+   "correct": "Rockdale (Riot Platforms campus, TX)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR split of Rockdale (\"the 191 megawatt data center at Rock deal with a frontier lab\").",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "any for solutions": {
+   "correct": "E4A Solutions (Riot engineering subsidiary) — UNCONFIRMED",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR next to ESS Metron (\"ESS metron's been a any for solutions or other subsidiary\"); likely E4A Solutions, Riot's engineering arm — confirm in a Riot filing before writing to a page.",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "AS6": {
+   "correct": "ASICs (bitcoin-mining machines)",
+   "domain": "acronyms",
+   "rule": "ASR (\"impact the value of uh AS6 or hash rate\").",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "hodddle": {
+   "correct": "HODL (bitcoin treasury holdings)",
+   "domain": "other",
+   "ci": true,
+   "rule": "ASR of HODL.",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "McNoney": {
+   "correct": "McNallie Money (YouTube channel)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of the channel name in its own intro.",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "skinnish": {
+   "correct": "skittishness",
+   "domain": "other",
+   "ci": true,
+   "rule": "ASR (\"there's always skinnish around this being an AI bubble\").",
+   "first_seen": "2026-11-06 (McNallie Money / Power Analysis paid interview, Riot Platforms CEO Jason Les on Q3-26 + Corsicana lease, 2026-11-04, YouTube ASR)"
+  },
+  "Dennis Hades": {
+   "correct": "Demis Hassabis (Google DeepMind co-founder; chair per the 2026-08 reorg)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Demis Hassabis in the stage introduction.",
+   "first_seen": "2026-11-06 (Masters of Scale Summit '26, Demis Hassabis with Reid Hoffman, 2026-11-05, YouTube ASR)"
+  },
+  "Reed Hoffman": {
+   "correct": "Reid Hoffman (LinkedIn co-founder, Greylock partner)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR spelling of Reid Hoffman.",
+   "first_seen": "2026-11-06 (Masters of Scale Summit '26, Demis Hassabis with Reid Hoffman, 2026-11-05, YouTube ASR)"
+  },
+  "Asimoff": {
+   "correct": "Asimov (Isaac Asimov, Three Laws of Robotics)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of Asimov.",
+   "first_seen": "2026-11-06 (Masters of Scale Summit '26, Demis Hassabis with Reid Hoffman, 2026-11-05, YouTube ASR)"
+  },
+  "courageability": {
+   "correct": "corrigibility (AI-safety term: a system accepts correction/shutdown)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of corrigibility.",
+   "first_seen": "2026-11-06 (Masters of Scale Summit '26, Demis Hassabis with Reid Hoffman, 2026-11-05, YouTube ASR)"
+  },
+  "self valition": {
+   "correct": "self-volition",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of self-volition (also 'selfition').",
+   "first_seen": "2026-11-06 (Masters of Scale Summit '26, Demis Hassabis with Reid Hoffman, 2026-11-05, YouTube ASR)"
+  },
+  "selfition": {
+   "correct": "self-volition",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of self-volition.",
+   "first_seen": "2026-11-06 (Masters of Scale Summit '26, Demis Hassabis with Reid Hoffman, 2026-11-05, YouTube ASR)"
+  },
+  "adne": {
+   "correct": "ADME (absorption, distribution, metabolism, excretion — drug properties)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR of ADME in drug-discovery talk.",
+   "first_seen": "2026-11-06 (Masters of Scale Summit '26, Demis Hassabis with Reid Hoffman, 2026-11-05, YouTube ASR)"
+  },
+  "Alph Go": {
+   "correct": "AlphaGo",
+   "domain": "products",
+   "ci": true,
+   "rule": "ASR of AlphaGo.",
+   "first_seen": "2026-11-06 (Masters of Scale Summit '26, Demis Hassabis with Reid Hoffman, 2026-11-05, YouTube ASR)"
+  },
+  "leaprogging": {
+   "correct": "leapfrogging",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR typo of leapfrogging.",
+   "first_seen": "2026-11-06 (Masters of Scale Summit '26, Demis Hassabis with Reid Hoffman, 2026-11-05, YouTube ASR)"
+  },
+  "Samman": {
+   "correct": "Sam Altman (OpenAI CEO)",
+   "domain": "names",
+   "rule": "ASR merge of 'Sam Altman' ('Welcome on the shows for Samman'). See 'Sam Alman'.",
+   "first_seen": "2026-11-06 (Raj Shamani FO583 Sam Altman interview, published 2026-11-03, YouTube ASR)"
+  },
+  "open eye": {
+   "correct": "OpenAI",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of OpenAI ('not having equity and open eye').",
+   "first_seen": "2026-11-06 (Raj Shamani FO583 Sam Altman interview, published 2026-11-03, YouTube ASR)"
+  },
+  "Chachi PT": {
+   "correct": "ChatGPT",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR of ChatGPT ('the kind of internal Chachi PT prototype'). See 'Chacht', 'chatbt'.",
+   "first_seen": "2026-11-06 (Raj Shamani FO583 Sam Altman interview, published 2026-11-03, YouTube ASR)"
+  },
+  "smi": {
+   "correct": "SMI (superhuman machine intelligence)",
+   "domain": "acronyms",
+   "rule": "ASR lower-case of SMI, Altman's 2015 'machine intelligence' essay term ('an essay which was in the beginning about smi').",
+   "first_seen": "2026-11-06 (Raj Shamani FO583 Sam Altman interview, published 2026-11-03, YouTube ASR)"
+  },
+  "Ilia": {
+   "correct": "Ilya Sutskever (OpenAI co-founder; SSI)",
+   "domain": "names",
+   "rule": "ASR spelling in a list of OpenAI departures ('Mina left, Ilia left, Dario started something else').",
+   "first_seen": "2026-11-06 (Raj Shamani FO583 Sam Altman interview, published 2026-11-03, YouTube ASR)"
+  },
+  "Mina left": {
+   "correct": "Mira [Murati] left (by context; likely, not certain)",
+   "domain": "names",
+   "rule": "ASR of Mira Murati in a list of OpenAI departures next to Ilya and Dario. Do not confuse with 'Mina Alarabi' (Mina Al-Oraibi, The National).",
+   "first_seen": "2026-11-06 (Raj Shamani FO583 Sam Altman interview, published 2026-11-03, YouTube ASR)"
+  },
+  "Dennis has been doing it": {
+   "correct": "Demis [Hassabis] has been doing it",
+   "domain": "names",
+   "rule": "ASR of Demis Hassabis ('I guess Dennis has been doing it longer than me'). See 'Dennis Habis'.",
+   "first_seen": "2026-11-06 (Raj Shamani FO583 Sam Altman interview, published 2026-11-03, YouTube ASR)"
+  },
+  "touch users": {
+   "correct": "UNRESOLVED user metric (do not convert to WAU/DAU)",
+   "domain": "units",
+   "ci": true,
+   "rule": "Altman: 'India is like our biggest market in the world by touch users'. Metric word garbled; quote as said.",
+   "first_seen": "2026-11-06 (Raj Shamani FO583 Sam Altman interview, published 2026-11-03, YouTube ASR)"
+  },
+  "hyperskillers": {
+   "correct": "hyperscalers",
+   "domain": "terms",
+   "ci": true,
+   "rule": "'hyperskillers' = hyperscalers. Write the correct term; quote as hyperscalers [transcribed \"hyperskillers\"] on first use.",
+   "first_seen": "JPM Hyperscalers Joint Equity & Credit call, Notion transcript 2026-11-04"
+  },
+  "Samek": {
+   "correct": "Samik (Chatterjee, J.P. Morgan)",
+   "domain": "names",
+   "ci": true,
+   "rule": "'Samek' = Samik (Chatterjee, J.P. Morgan). Write the correct term; quote as Samik [transcribed \"Samek\"] on first use.",
+   "first_seen": "JPM call 2026-11-04 Notion transcript"
+  },
+  "Samick": {
+   "correct": "Samik (Chatterjee, J.P. Morgan)",
+   "domain": "names",
+   "ci": true,
+   "rule": "'Samick' = Samik (Chatterjee, J.P. Morgan). Write the correct term; quote as Samik [transcribed \"Samick\"] on first use.",
+   "first_seen": "JPM call 2026-11-04 Notion transcript"
+  },
+  "Erica Speer": {
+   "correct": "Erica Spear (J.P. Morgan credit)",
+   "domain": "names",
+   "ci": true,
+   "rule": "'Erica Speer' = Erica Spear (J.P. Morgan credit). Write the correct term; quote as Erica Spear [transcribed \"Erica Speer\"] on first use.",
+   "first_seen": "JPM call 2026-11-04 Notion transcript; spelling per JPM's own 07-07 credit note"
+  },
+  "Ariba Bermell": {
+   "correct": "Areebah Bharmal (KTAB reporter)",
+   "domain": "names",
+   "ci": true,
+   "rule": "'Ariba Bermell' = Areebah Bharmal (KTAB reporter). Write the correct term; quote as Areebah Bharmal [transcribed \"Ariba Bermell\"] on first use.",
+   "first_seen": "KTAB Big Country Politics 2026-10-31, YouTube ASR"
+  },
+  "Rig Star": {
+   "correct": "STAAR (Texas state test)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "'Rig Star' = STAAR (Texas state test). Write the correct term; quote as STAAR [transcribed \"Rig Star\"] on first use.",
+   "first_seen": "KTAB Big Country Politics 2026-10-31 [00:18:45], YouTube ASR"
+  },
+  "Corana": {
+   "correct": "Corsicana (Riot Platforms site, TX)",
+   "domain": "names",
+   "ci": true,
+   "rule": "'Corana' = Corsicana (Riot Platforms site, TX). Write the correct term; quote as Corsicana [transcribed \"Corana\"] on first use.",
+   "first_seen": "McNallie Money Riot CEO Q&A 2026-11-04 [00:11:00], YouTube ASR"
+  },
+  "customary prepayments": {
+   "correct": "customer prepayments",
+   "domain": "terms",
+   "ci": true,
+   "rule": "'customary prepayments' = customer prepayments. Write the correct term; quote as customer prepayments [transcribed \"customary prepayments\"] on first use.",
+   "first_seen": "IREN Q1 FY27 call, Bloomberg transcript 2026-11-05"
+  },
+  "XCC": {
+   "correct": "SEC (Samsung Electronics)",
+   "domain": "names",
+   "ci": true,
+   "rule": "'XCC' = SEC (Samsung Electronics). Write the correct term; quote as SEC [transcribed \"XCC\"] on first use.",
+   "first_seen": "NH Investment & Securities Korea strategy call 2026-11-04 Notion transcript; never SEMCO"
+  },
+  "Leno Industrial": {
+   "correct": "LEENO Industrial",
+   "domain": "names",
+   "ci": true,
+   "rule": "'Leno Industrial' = LEENO Industrial. Write the correct term; quote as LEENO Industrial [transcribed \"Leno Industrial\"] on first use.",
+   "first_seen": "NH Korea call 2026-11-04"
+  },
+  "Simtek": {
+   "correct": "Simmtech",
+   "domain": "names",
+   "ci": true,
+   "rule": "'Simtek' = Simmtech. Write the correct term; quote as Simmtech [transcribed \"Simtek\"] on first use.",
+   "first_seen": "NH Korea call 2026-11-04"
+  },
+  "EZO Pethasis": {
+   "correct": "ISU Petasys",
+   "domain": "names",
+   "ci": true,
+   "rule": "'EZO Pethasis' = ISU Petasys. Write the correct term; quote as ISU Petasys [transcribed \"EZO Pethasis\"] on first use.",
+   "first_seen": "NH Korea call 2026-11-04"
+  },
+  "Hesong DS": {
+   "correct": "Haesung DS",
+   "domain": "names",
+   "ci": true,
+   "rule": "'Hesong DS' = Haesung DS. Write the correct term; quote as Haesung DS [transcribed \"Hesong DS\"] on first use.",
+   "first_seen": "NH Korea call 2026-11-04"
+  },
+  "LX Electric": {
+   "correct": "LS Electric",
+   "domain": "names",
+   "ci": true,
+   "rule": "'LX Electric' = LS Electric. Write the correct term; quote as LS Electric [transcribed \"LX Electric\"] on first use.",
+   "first_seen": "NH Korea call 2026-11-04"
+  },
+  "Udi Financial": {
+   "correct": "Woori Financial",
+   "domain": "names",
+   "ci": true,
+   "rule": "'Udi Financial' = Woori Financial. Write the correct term; quote as Woori Financial [transcribed \"Udi Financial\"] on first use.",
+   "first_seen": "NH Korea call 2026-11-04"
+  },
+  "megawws": {
+   "correct": "megawatts",
+   "domain": "units",
+   "ci": true,
+   "rule": "'megawws' = megawatts (MW). Quote as megawatts [transcribed \"megawws\"].",
+   "first_seen": "McNallie Money Riot CEO Q&A 2026-11-04, YouTube ASR"
   }
  },
  "summary_traps": [

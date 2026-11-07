@@ -96,6 +96,17 @@ Sources: [Jefferies / Panzer + Thind, 2026-09-02](../SPGI/commentary/2026-09-02_
 
 [Archived Jefferies discussion](../SPGI/commentary/2026-09-02_JEF-AM-FIG-PICKS-PANZ-9-2-26-----SPGI-Bull-vs-Bear-AFRM-T-3-LifeCos---Suneet-1-Liners_56552606.md). This is a dated opinion, not evidence that a disposal has occurred. Additional company-specific notes are in the source inventory; no verified live consensus or Capstone valuation model is implied.
 
+### 🆕 2026-11-06 (/run-inbox) — Barclays rolls to 2028e: OW, PT $553 → $572; 2027 ratings growth cut to 7.6% from 11.9%, index growth raised on the Cboe renewal
+
+_Source: Barclays · Manav Patnaik / Wahid Amin / Ronan Kennedy / Brandon Cohen, "SPGI/MCO/MSCI — 2027e another healthy issuance year, just not as good as 2026e; SPGI > MCO; MSCI OW too", 2026-11-02 (research; prices as of 2026-10-30) — [source](../relat%C3%B3rios%20bons/Delayed_SPGIMCOMSCI_2027e_another_healthy_issuance_year_just_not_as_good_as_2026e_SPGI_MCO_MSCI_OW_too_SPGIMCOMSCI_2027e.html). First Barclays mark on this page, so nothing is superseded._
+
+| Date | Source | Theme | Bias | What was said |
+|---|---|---|---|---|
+| 11-02 | Barclays · Manav Patnaik et al. (research) | valuation / guidance | bull | **OW, PT $553 → $572** (~25x FY28E adj. EPS from a SOTP; prior PT ~26.5x FY27E) vs $466.55 (10-30). **Adj. EPS 2027E/2028E $20.40 / $22.95 (from $20.85 / $23.39); FY26E $17.74 unchanged.** 2027E Ratings revenue growth **7.6% (from 11.9%)**: transaction 9.4% (from 17.5%), non-transaction 5.5% (unchanged), Corporate 8.8% (from 16.4%), Structured Finance 5.1%, PPIF/Government 8.0%. Index revenue growth raised to **10.9% / 7.5% in 2027/2028 (from 8.9% / 5.9%)** on the 25-year Cboe extension, which management said adds a "couple of points" in 2027. SOTP multiples: Ratings 28.5x, Indices 30.0x, Market Intelligence 16.4x (17.5x ex-KDP, which is "up for review"), Energy 20.6x (Platts ~27.5x), blended 25.0x vs 23.7x NTM today. Prefers SPGI to MCO on diversification, and calls the CapIQ/Data strategic review a potential catalyst ("the big AI overhang on the shares") that also lets SPGI raise debt for buybacks. Upside $642 / downside $330. |
+
+- **Vs consensus:** Barclays' 2027E adj. EPS of $20.40 is ~1% above the BBG CY2027E $20.13 in the snapshot above (asof 2026-11-06; house arithmetic, CY vs FY basis identical for a December year-end). Its 2026E $17.74 sits inside the company's $17.70–17.95 guide.
+- **The issuance mechanism behind the cut** (same note): Barclays' credit teams see 2027 issuance tracking "~+LSD" vs 2026e's "M-HSD+" step-up; refinancing drives more of HY/loans, M&A/LBO moderates, and "a growing portion of AI financing could occur outside traditionally rated bond channels". Detail and the issuance table are on [themes/financials](themes/financials.md). This matches the page's existing point that issuance volume is not a sufficient ratings model (Q3: billed issuance +8%, transaction revenue +1%).
+
 ## Catalysts / open questions
 
 - Strategic-review updates: transaction perimeter, buyer appetite, tax and separation costs, retained data rights, and use of proceeds. No completion date assumed.
@@ -112,10 +123,13 @@ Track conflicts and regulation in ratings, benchmark licensing concentration, da
 
 **Filing availability at 2026-10-31:** latest archived 10-Q covers 2026-09-30, filed [2026-10-28](../SPGI/SPGI_10-Q_2026-10-28_0000064040-26-000058.html); latest 10-K covers 2025-12-31, filed [2026-02-11](../SPGI/SPGI_10-K_2026-02-11_0000064040-26-000013.html). Earnings announced after these reporting dates are sourced to the separately archived release/call.
 
+- Barclays · Patnaik / Amin / Kennedy / Cohen, "SPGI/MCO/MSCI — 2027e another healthy issuance year, just not as good as 2026e", 2026-11-02 — [report](../relat%C3%B3rios%20bons/Delayed_SPGIMCOMSCI_2027e_another_healthy_issuance_year_just_not_as_good_as_2026e_SPGI_MCO_MSCI_OW_too_SPGIMCOMSCI_2027e.html)
+
 [Complete local inventory and review scope](_dashboards/financials-sources.html#SPGI): SEC filings, earnings exhibits, quarterly transcripts and attributed cached commentary. Numbers above are sourced to the October company release; MarketBeat/Quartr call text is a third-party transcription. The archive is broader than the passages analytically reviewed for this initiation.
 
 ## Changelog
 
+- 2026-11-06 — run-inbox: Barclays · Patnaik et al. (2026-11-02) → Intra-quarter block + row: OW, PT $553 → $572 (roll to 25x FY28E), 2027E/28E adj. EPS $20.40/$22.95 (from $20.85/$23.39), 2027E Ratings growth 7.6% (from 11.9%), index growth 10.9%/7.5% (from 8.9%/5.9%) on the Cboe extension. Barclays' prior PT and estimates were never on this page, so nothing moved here under the thesis-drift rule.
 - **2026-11-01 — Live Outlook review.** Added Capital IQ bull/bear split, AI exposure by business layer and the October MI-versus-Ratings check; sales and formal research views remain distinct. Prior thesis, targets and historical guidance vintages were retained.
 - **2026-10-31 — Coverage initiated.** Latest operating evidence: Q3 2026 release/call dated 2026-10-27 and 10-Q filed 2026-10-28. Financials section added.
 - **2026-10-27 — Guidance vintage retained.** FY2026 revenue growth increased from 5.9–7.9% to 7.4–8.4%; organic constant-currency growth from 6–8% to 7.5–8.5%; adjusted EPS from $17.50–17.75 to $17.70–17.95. Company Q3 release.
