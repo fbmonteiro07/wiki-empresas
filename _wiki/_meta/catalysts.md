@@ -1,6 +1,6 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-11-07 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-11-08 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
 ## 📅 Upcoming (51)
 
@@ -66,7 +66,7 @@ _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_me
 |---|---|---|
 | _none_ | | |
 
-## ✅ Resolved (392)
+## ✅ Resolved (391)
 
 | Date | Ticker | Verdict |
 |---|---|---|
@@ -461,4 +461,3 @@ _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_me
 | 2026-05-28 | MU | neutral — monitoring bullet (EUV/tool availability as 2028 supply governor), not a dated event; structural watch stands — JPM: ASML ~90 tools end-CY27 insufficient vs Samsung/Hynix ~20-25 each. |
 | 2026-05-20 | NVDA | bull won — Q1 FY27 beat: $82B rev +85% y/y, DC $75B +92%, GM mid-70s held; guided Q2 $91B ±2%; stock -3% on hyperscaler-vs-ACIE growth-mix optics, fundamentals cleared the bar. |
 | 2026-05-18 | LITE | neutral — NDX-100 inclusion effective (replaced CSGP); flow event only — the thesis remains EML supply/demand imbalance >30% + OCS backlog >$400M into 2027. |
-| 2026-05-11 | CEG | neutral — timing note, not an event (Q2 FY26 call lands ~Aug-2026); Calpine lockup 2026-06-30 passed with $5B buyback flexibility in place. |
