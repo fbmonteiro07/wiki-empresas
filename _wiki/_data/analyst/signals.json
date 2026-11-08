@@ -1,17 +1,17 @@
 {
-  "asof": "2026-11-06",
-  "latest_reconciliation": "reconciliation-2026-11-06-inbox.md",
+  "asof": "2026-11-07",
+  "latest_reconciliation": "reconciliation-2026-11-07-inbox.md",
   "book": {
     "asof": "2026-07-01",
     "seed": true,
     "positions": 8
   },
   "stats": {
-    "signals": 40,
-    "active": 40,
+    "signals": 38,
+    "active": 38,
     "high": 1,
-    "belief_changes": 1,
-    "focus_names": 30
+    "belief_changes": 0,
+    "focus_names": 29
   },
   "focus": [
     {
@@ -40,20 +40,6 @@
       "why": [
         "NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…",
         "NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).…"
-      ]
-    },
-    {
-      "ticker": "SMCI",
-      "focus_score": 64,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Systems & neoclouds",
-      "thesis": "Fastest NVIDIA rack integrator + DLC leader; thin assembly margin + governance overhang (Hold).",
-      "next_catalyst": "2026-11-06",
-      "why": [
-        "SMCI — derived thesis/debate state changed since the prior daily snapshot",
-        "SMCI — 2026-11-06: SETTLED 2026-11-06 (10-Q) — see Current state: reported non-GAAP diluted 764.4m vs 761m…"
       ]
     },
     {
@@ -418,7 +404,7 @@
   "signals": [
     {
       "id": "esti-8a702c5380c3",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-06",
       "type": "model_check",
       "priority": "high",
@@ -506,67 +492,8 @@
       "hidden": false
     },
     {
-      "id": "beli-99649e5d6d53",
-      "asof": "2026-11-06",
-      "source_date": "2026-11-06",
-      "type": "narrative_shift",
-      "priority": "medium",
-      "score": 62,
-      "title": "SMCI — derived thesis/debate state changed since the prior daily snapshot",
-      "tickers": [
-        "SMCI"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "high",
-      "why_now": "print ingest, F1Q27 (release + call 2026-11-03 AMC; 10-Q 2026-11-06). Sources archived: 8-K + EX-99.1 (acc 0001375365-26-000026), call transcript SMCI/transcripts/SMCIQ1-FY27-earnings2026-11-03.md (Yahoo/Quartr via Chrome); 10-Q (acc 0001375365-26-000027) was already on disk. Every datapoint was re-read in the primaries (content double-check). One source-tag check: the final questioner is Brenden Rogers, on for George Notter (Wolfe Research), per his own self-introduction, matching the Quartr tag. Added: a dated…",
-      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
-      "action": "Re-grade the SMCI thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
-      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "rack integration",
-          "from": "SMCI",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "rack integration",
-          "from": "SMCI",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "SMCI",
-          "in_book": true
-        },
-        {
-          "ticker": "DELL",
-          "relation": "competitor",
-          "detail": "AI servers",
-          "from": "SMCI",
-          "in_book": false
-        }
-      ],
-      "source": "SMCI page Changelog 2026-11-06",
-      "evidence_paths": [
-        "SMCI.md"
-      ],
-      "evidence_anchor": "print ingest, F1Q27 (release + call 2026-11-03 AMC; 10-Q 2026-11-06). Sources archived: 8-K + EX-99.1 (acc 0001375365-26-000026), call transcript SMCI/transcripts/SMCIQ1-FY27-earnings2026-11-03.md (Yahoo/Quartr via Chrome); 10-Q (acc 0001375365-26-000027) was already on disk. Every datapoint was re-read in the primaries (content double-check). One source-tag check: the final questioner is Brenden Rogers, on for George Notter (Wolfe Research), per his own self-introduction, matching the Quartr tag. Added: a dated…",
-      "origin": "belief_diff",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-4dea9544cec3",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-17",
       "event_date": "2026-11-17",
       "type": "catalyst",
@@ -650,7 +577,7 @@
     },
     {
       "id": "cata-c76406c38a7d",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-12",
       "event_date": "2026-11-12",
       "type": "catalyst",
@@ -682,7 +609,7 @@
     },
     {
       "id": "esti-4246a23edb3c",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-06",
       "type": "model_check",
       "priority": "medium",
@@ -761,9 +688,9 @@
       "hidden": false
     },
     {
-      "id": "data-01d053320726",
-      "asof": "2026-11-06",
-      "source_date": "2026-11-06",
+      "id": "data-b8b0db7b95bf",
+      "asof": "2026-11-07",
+      "source_date": "2026-11-07",
       "type": "data_gap",
       "priority": "medium",
       "score": 54,
@@ -780,7 +707,7 @@
       "action": "Run the merge-safe Bloomberg estimate fetch for NOK, then rebuild the snapshot and Analyst Inbox.",
       "falsifier": "A valid, current estimate record already exists under a different Bloomberg identifier.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-11-06",
+      "source": "Wiki remediation worklist 2026-11-07",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -791,9 +718,9 @@
       "hidden": false
     },
     {
-      "id": "data-5ef27306e524",
-      "asof": "2026-11-06",
-      "source_date": "2026-11-06",
+      "id": "data-d9b0a9174330",
+      "asof": "2026-11-07",
+      "source_date": "2026-11-07",
       "type": "data_gap",
       "priority": "medium",
       "score": 54,
@@ -810,7 +737,7 @@
       "action": "Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox.",
       "falsifier": "A valid, current estimate record already exists under a different Bloomberg identifier.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-11-06",
+      "source": "Wiki remediation worklist 2026-11-07",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -822,7 +749,7 @@
     },
     {
       "id": "esti-aa7f9f2c7f8d",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-06",
       "type": "model_check",
       "priority": "medium",
@@ -902,7 +829,7 @@
     },
     {
       "id": "cata-cc6e54e27c15",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-18",
       "event_date": "2026-11-18",
       "type": "catalyst",
@@ -986,7 +913,7 @@
     },
     {
       "id": "cata-c9f20420ff39",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-17",
       "event_date": "2026-11-17",
       "type": "catalyst",
@@ -1070,7 +997,7 @@
     },
     {
       "id": "cata-abf09cd99a69",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-23",
       "event_date": "2026-11-23",
       "type": "catalyst",
@@ -1154,7 +1081,7 @@
     },
     {
       "id": "esti-f3b9feaacb62",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-06",
       "type": "model_check",
       "priority": "medium",
@@ -1241,7 +1168,7 @@
     },
     {
       "id": "esti-06d43205aba7",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-06",
       "type": "model_check",
       "priority": "medium",
@@ -1321,7 +1248,7 @@
     },
     {
       "id": "cata-30cf21294c0d",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-10",
       "event_date": "2026-11-10",
       "type": "catalyst",
@@ -1360,70 +1287,9 @@
       "hidden": false
     },
     {
-      "id": "cata-ad3ee85d90fd",
-      "asof": "2026-11-06",
-      "source_date": "2026-11-06",
-      "event_date": "2026-11-06",
-      "type": "catalyst",
-      "priority": "medium",
-      "score": 49,
-      "title": "SMCI — 2026-11-06: SETTLED 2026-11-06 (10-Q) — see Current state: reported non-GAAP diluted 764.4m vs 761m…",
-      "tickers": [
-        "SMCI"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "immediate",
-      "confidence": "medium",
-      "why_now": "✅ SETTLED 2026-11-06 (10-Q) — see Current state: reported non-GAAP diluted 764.4m vs 761m guided (F2Q ~769m); as-converted ~895m including 4.3125m mandatory convertible preferred × 30.304 = ~13",
-      "belief_update": "A dated event can resolve or reframe an open debate.",
-      "action": "Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event.",
-      "falsifier": "The event passes without addressing the identified debate or without a measurable expectation gap.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "rack integration",
-          "from": "SMCI",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "rack integration",
-          "from": "SMCI",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "supplier",
-          "detail": "GPUs",
-          "from": "SMCI",
-          "in_book": true
-        },
-        {
-          "ticker": "DELL",
-          "relation": "competitor",
-          "detail": "AI servers",
-          "from": "SMCI",
-          "in_book": false
-        }
-      ],
-      "source": "SMCI page catalyst ledger; underlying source/date retained in the catalyst text",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "SMCI.md"
-      ],
-      "evidence_anchor": "✅ SETTLED 2026-11-06 (10-Q) — see Current state: reported non-GAAP diluted 764.4m vs 761m guided (F2Q ~769m); as-converted ~895m including 4.3125m mandatory convertible preferred × 30.304 = ~13",
-      "origin": "catalyst_calendar",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "data-590a9b103a3e",
-      "asof": "2026-11-06",
-      "source_date": "2026-11-06",
+      "id": "data-a5b9123cb2eb",
+      "asof": "2026-11-07",
+      "source_date": "2026-11-07",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1440,7 +1306,7 @@
       "action": "Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-11-06",
+      "source": "Wiki remediation worklist 2026-11-07",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1451,9 +1317,9 @@
       "hidden": false
     },
     {
-      "id": "data-eb2d22dbe58a",
-      "asof": "2026-11-06",
-      "source_date": "2026-11-06",
+      "id": "data-4d1d6d3701a4",
+      "asof": "2026-11-07",
+      "source_date": "2026-11-07",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1470,7 +1336,7 @@
       "action": "Fetch the latest NSCALE earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-11-06",
+      "source": "Wiki remediation worklist 2026-11-07",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1481,9 +1347,9 @@
       "hidden": false
     },
     {
-      "id": "data-866da2b0fd40",
-      "asof": "2026-11-06",
-      "source_date": "2026-11-06",
+      "id": "data-52abc5fd370a",
+      "asof": "2026-11-07",
+      "source_date": "2026-11-07",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1500,7 +1366,7 @@
       "action": "Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-11-06",
+      "source": "Wiki remediation worklist 2026-11-07",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1511,9 +1377,9 @@
       "hidden": false
     },
     {
-      "id": "data-0fccada6b664",
-      "asof": "2026-11-06",
-      "source_date": "2026-11-06",
+      "id": "data-7d7a6bade3b5",
+      "asof": "2026-11-07",
+      "source_date": "2026-11-07",
       "type": "data_gap",
       "priority": "watch",
       "score": 43,
@@ -1530,7 +1396,7 @@
       "action": "Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild.",
       "falsifier": "The company has not held a relevant earnings call or publishes no transcript.",
       "readthrough": [],
-      "source": "Wiki remediation worklist 2026-11-06",
+      "source": "Wiki remediation worklist 2026-11-07",
       "evidence_paths": [
         "_meta/worklist.json"
       ],
@@ -1542,7 +1408,7 @@
     },
     {
       "id": "cata-371c25e13de4",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-09",
       "event_date": "2026-11-09",
       "type": "catalyst",
@@ -1596,7 +1462,7 @@
     },
     {
       "id": "cata-c030b28ed093",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-12",
       "event_date": "2026-11-12",
       "type": "catalyst",
@@ -1678,7 +1544,7 @@
     },
     {
       "id": "cata-ce699c62b4f0",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-10",
       "event_date": "2026-11-10",
       "type": "catalyst",
@@ -1718,7 +1584,7 @@
     },
     {
       "id": "cata-988851afc62a",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-09",
       "event_date": "2026-11-09",
       "type": "catalyst",
@@ -1765,7 +1631,7 @@
     },
     {
       "id": "cata-172f6636a635",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-09",
       "event_date": "2026-11-09",
       "type": "catalyst",
@@ -1826,7 +1692,7 @@
     },
     {
       "id": "cata-c04ffb1de278",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-09",
       "event_date": "2026-11-09",
       "type": "catalyst",
@@ -1894,7 +1760,7 @@
     },
     {
       "id": "cata-3bf0cdb9597e",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-12-09",
       "event_date": "2026-12-09",
       "type": "catalyst",
@@ -1976,7 +1842,7 @@
     },
     {
       "id": "cata-eb7d5753b962",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-16",
       "event_date": "2026-11-16",
       "type": "catalyst",
@@ -2058,7 +1924,7 @@
     },
     {
       "id": "cata-24ddbb80b88e",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-23",
       "event_date": "2026-11-23",
       "type": "catalyst",
@@ -2105,7 +1971,7 @@
     },
     {
       "id": "cata-2c7b4a6f3c93",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-18",
       "event_date": "2026-11-18",
       "type": "catalyst",
@@ -2145,7 +2011,7 @@
     },
     {
       "id": "cata-09405b3ca0ba",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-21",
       "event_date": "2026-11-21",
       "type": "catalyst",
@@ -2227,7 +2093,7 @@
     },
     {
       "id": "cata-30156bc5bf33",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-11-17",
       "event_date": "2026-11-17",
       "type": "catalyst",
@@ -2295,7 +2161,7 @@
     },
     {
       "id": "cata-2b12c0b4f748",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-12-07",
       "event_date": "2026-12-07",
       "type": "catalyst",
@@ -2349,7 +2215,7 @@
     },
     {
       "id": "cata-01a4718ff5c9",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-12-02",
       "event_date": "2026-12-02",
       "type": "catalyst",
@@ -2389,7 +2255,7 @@
     },
     {
       "id": "cata-15610c481120",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-12-01",
       "event_date": "2026-12-01",
       "type": "catalyst",
@@ -2443,7 +2309,7 @@
     },
     {
       "id": "cata-f6a6ff099d51",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-12-06",
       "event_date": "2026-12-06",
       "type": "catalyst",
@@ -2504,7 +2370,7 @@
     },
     {
       "id": "cata-96e4952b1d44",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-12-18",
       "event_date": "2026-12-18",
       "type": "catalyst",
@@ -2565,7 +2431,7 @@
     },
     {
       "id": "cata-d8982d59e764",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-12-09",
       "event_date": "2026-12-09",
       "type": "catalyst",
@@ -2597,7 +2463,7 @@
     },
     {
       "id": "cata-44020bbb6eda",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-12-02",
       "event_date": "2026-12-02",
       "type": "catalyst",
@@ -2651,7 +2517,7 @@
     },
     {
       "id": "cata-9be1559dff6d",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-12-18",
       "event_date": "2026-12-18",
       "type": "catalyst",
@@ -2683,7 +2549,7 @@
     },
     {
       "id": "cata-80aa37628032",
-      "asof": "2026-11-06",
+      "asof": "2026-11-07",
       "source_date": "2026-12-17",
       "event_date": "2026-12-17",
       "type": "catalyst",

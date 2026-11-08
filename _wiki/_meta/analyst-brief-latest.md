@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-11-06 · 40 active signals · latest reconciliation: reconciliation-2026-11-06-inbox.md._
+_Generated 2026-11-07 · 38 active signals · latest reconciliation: reconciliation-2026-11-07-inbox.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -10,16 +10,16 @@ _Generated 2026-11-06 · 40 active signals · latest reconciliation: reconciliat
 |---:|---|---|---:|---|
 | 1 | **GOOG** | seed | 2 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2026-11-18: post-print watch items from the callbacks: (1) 4Q Cloud margin, where Sandler expects the… |
 | 2 | **NVDA** | seed | 2 | NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…; NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).… |
-| 3 | **SMCI** | — | 2 | SMCI — derived thesis/debate state changed since the prior daily snapshot; SMCI — 2026-11-06: SETTLED 2026-11-06 (10-Q) — see Current state: reported non-GAAP diluted 764.4m vs 761m… |
-| 4 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
-| 5 | **SPCX** | — | 1 | SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.… |
-| 6 | **MSFT** | seed | 1 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE. |
-| 7 | **CRWV** | — | 2 | CRWV — 2027 EPS house view is 19% below consensus; CRWV — 2026 EPS house view is 17% below consensus |
-| 8 | **NOK** | — | 2 | NOK — Bloomberg consensus missing; NOK — latest earnings transcript absent |
-| 9 | **COHR** | — | 2 | COHR — 2027 EPS house view is 15% below consensus; COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk… |
-| 10 | **LITE** | — | 1 | LITE — 2026 EPS house view is 16% below consensus |
-| 11 | **FLEX** | — | 1 | FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail… |
-| 12 | **POET** | — | 1 | POET — latest earnings transcript absent |
+| 3 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
+| 4 | **SPCX** | — | 1 | SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.… |
+| 5 | **MSFT** | seed | 1 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE. |
+| 6 | **CRWV** | — | 2 | CRWV — 2027 EPS house view is 19% below consensus; CRWV — 2026 EPS house view is 17% below consensus |
+| 7 | **NOK** | — | 2 | NOK — Bloomberg consensus missing; NOK — latest earnings transcript absent |
+| 8 | **COHR** | — | 2 | COHR — 2027 EPS house view is 15% below consensus; COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk… |
+| 9 | **LITE** | — | 1 | LITE — 2026 EPS house view is 16% below consensus |
+| 10 | **FLEX** | — | 1 | FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail… |
+| 11 | **POET** | — | 1 | POET — latest earnings transcript absent |
+| 12 | **SMTC** | — | 1 | SMTC — latest earnings transcript absent |
 
 ## Highest-priority ideas
 
@@ -36,20 +36,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-11-06.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-8a702c5380c3
 
-### 2. 🟡 SMCI — derived thesis/debate state changed since the prior daily snapshot
-
-_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
-
-- **Tickers:** SMCI
-- **Why now:** print ingest, F1Q27 (release + call 2026-11-03 AMC; 10-Q 2026-11-06). Sources archived: 8-K + EX-99.1 (acc 0001375365-26-000026), call transcript SMCI/transcripts/SMCIQ1-FY27-earnings2026-11-03.md (Yahoo/Quartr via Chrome); 10-Q (acc 0001375365-26-000027) was already on disk. Every datapoint was re-read in the primaries (content double-check). One source-tag check: the final questioner is Brenden Rogers, on for George Notter (Wolfe Research), per his own self-introduction, matching the Quartr tag. Added: a dated…
-- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
-- **Action:** Re-grade the SMCI thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
-- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
-- **Read-through:** AMZN (customer: rack integration); MSFT (customer: rack integration); NVDA (supplier: GPUs); DELL (competitor: AI servers)
-- **Attribution:** SMCI page Changelog 2026-11-06.
-- **Evidence:** [SMCI.md](../SMCI.md) · signal beli-99649e5d6d53
-
-### 3. 🟡 CRWV — 2027 EPS house view is 19% below consensus
+### 2. 🟡 CRWV — 2027 EPS house view is 19% below consensus
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -62,7 +49,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model — P:\Felipe Monteiro\US Equities\Modelos oficiais\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-06.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-4246a23edb3c
 
-### 4. 🟡 CRWV — 2026 EPS house view is 17% below consensus
+### 3. 🟡 CRWV — 2026 EPS house view is 17% below consensus
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -75,7 +62,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model — P:\Felipe Monteiro\US Equities\Modelos oficiais\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-06.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-aa7f9f2c7f8d
 
-### 5. 🟡 COHR — 2027 EPS house view is 15% below consensus
+### 4. 🟡 COHR — 2027 EPS house view is 15% below consensus
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -88,7 +75,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone initiation of coverage, 2026-09-01 (Felipe Monteiro) — NEUTRAL, 12-month PT $285 (25x CY27E EPS). Model: session scratchpad cohr · Bloomberg consensus 2026-11-06.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-f3b9feaacb62
 
-### 6. 🟡 LITE — 2026 EPS house view is 16% below consensus
+### 5. 🟡 LITE — 2026 EPS house view is 16% below consensus
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -105,7 +92,6 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 - **SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…** — 🆕🔴🔴 2026-11-12 — OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset. OpenAI's own post: "We're ending our partnership with Cursor following its acquisit _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c76406c38a7d)
 - **FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail…** — 🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands. Flex said "more strategy details will be shared at an Innovation Day event on November 10, 2026 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-30cf21294c0d)
-- **SMCI — 2026-11-06: SETTLED 2026-11-06 (10-Q) — see Current state: reported non-GAAP diluted 764.4m vs 761m…** — ✅ SETTLED 2026-11-06 (10-Q) — see Current state: reported non-GAAP diluted 764.4m vs 761m guided (F2Q ~769m); as-converted ~895m including 4.3125m mandatory convertible preferred × 30.304 = ~13 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-ad3ee85d90fd)
 - **CME — 2026-11-09: Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract…** — Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract ends 2026-11-09 (Duffy said he "believe[s]" so; filed under a full 40.3 review), then the agency decides ([Duf _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-371c25e13de4)
 - **COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk…** — 🆕 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk · Jeffrey Favuzza, 2026-09-28, corporate-access list). _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c030b28ed093)
 - **IFX — 2026-11-10: FYQ4 print + FY27 guide (Jefferies · Janardan Menon, 2026-09-30, via sales relays).…** — 🆕 2026-11-10 — FYQ4 print + FY27 guide (Jefferies · Janardan Menon, 2026-09-30, via sales relays). Jefferies expects FYQ4 revenue €4.71bn / segment margin 23.7%; FY27 revenue ~€20bn (+22%), segmen _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-ce699c62b4f0)
@@ -115,12 +101,12 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 ## Research hygiene
 
-- **NOK — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NOK, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-11-06._ (data-01d053320726)
-- **NSCALE — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-11-06._ (data-5ef27306e524)
-- **NOK — latest earnings transcript absent** — Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-06._ (data-590a9b103a3e)
-- **NSCALE — latest earnings transcript absent** — Fetch the latest NSCALE earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-06._ (data-eb2d22dbe58a)
-- **POET — latest earnings transcript absent** — Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-06._ (data-866da2b0fd40)
-- **SMTC — latest earnings transcript absent** — Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-06._ (data-0fccada6b664)
+- **NOK — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NOK, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-11-07._ (data-b8b0db7b95bf)
+- **NSCALE — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-11-07._ (data-d9b0a9174330)
+- **NOK — latest earnings transcript absent** — Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-07._ (data-a5b9123cb2eb)
+- **NSCALE — latest earnings transcript absent** — Fetch the latest NSCALE earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-07._ (data-4d1d6d3701a4)
+- **POET — latest earnings transcript absent** — Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-07._ (data-52abc5fd370a)
+- **SMTC — latest earnings transcript absent** — Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-07._ (data-7d7a6bade3b5)
 
 ## Feedback loop
 

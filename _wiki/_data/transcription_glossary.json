@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-11-06",
+ "_updated": "2026-11-07",
  "terms": {
   "Hixle AI": {
    "correct": "Higgsfield (AI video startup)",
@@ -7634,6 +7634,264 @@
    "ci": true,
    "rule": "'megawws' = megawatts (MW). Quote as megawatts [transcribed \"megawws\"].",
    "first_seen": "McNallie Money Riot CEO Q&A 2026-11-04, YouTube ASR"
+  },
+  "Jetuin": {
+   "correct": "Jeetu (Jeetu Patel, Cisco President & CPO)",
+   "domain": "names",
+   "rule": "Name ASR of Jeetu (\"Just welcome Jetuin\").",
+   "first_seen": "2026-11-07 (IIT Bay Area Leadership Conference 2026, Jeetu Patel keynote, YouTube ASR)"
+  },
+  "JTO": {
+   "correct": "Jeetu (Jeetu Patel, Cisco President & CPO)",
+   "domain": "names",
+   "rule": "Name ASR of Jeetu (\"talk about pages and pages about JTO\"). Flag only in Cisco/Patel context.",
+   "first_seen": "2026-11-07 (IIT Bay Area Leadership Conference 2026, Jeetu Patel keynote, YouTube ASR)"
+  },
+  "everyone knows J2": {
+   "correct": "everyone knows Jeetu (Jeetu Patel, Cisco)",
+   "domain": "names",
+   "ci": true,
+   "rule": "Phrase key: ASR of Jeetu as J2 in an intro.",
+   "first_seen": "2026-11-07 (IIT Bay Area Leadership Conference 2026, Jeetu Patel keynote, YouTube ASR)"
+  },
+  "well, G2": {
+   "correct": "well, Jeetu (Jeetu Patel, Cisco)",
+   "domain": "names",
+   "ci": true,
+   "rule": "Phrase key: ASR of Jeetu as G2 inside a quoted agent reply; G2 the software-review company is a real name, so only this phrase is flagged.",
+   "first_seen": "2026-11-07 (IIT Bay Area Leadership Conference 2026, Jeetu Patel keynote, YouTube ASR)"
+  },
+  "Thank you Ju": {
+   "correct": "Thank you Jeetu",
+   "domain": "names",
+   "ci": true,
+   "rule": "Phrase key: ASR truncates Jeetu to Ju.",
+   "first_seen": "2026-11-07 (IIT Bay Area Leadership Conference 2026, Jeetu Patel keynote, YouTube ASR)"
+  },
+  "Praine": {
+   "correct": "Pravin (Pravin Vayalamkuzhi, IIT Bay Area Alumni Association VP)",
+   "domain": "names",
+   "rule": "Name ASR of Pravin.",
+   "first_seen": "2026-11-07 (IIT Bay Area Leadership Conference 2026, Jeetu Patel keynote, YouTube ASR)"
+  },
+  "OpenCL": {
+   "correct": "OpenClaw (open-source personal agent run on a Mac Mini)",
+   "domain": "products",
+   "keep_when": [
+    "Khronos",
+    "CUDA",
+    "kernel",
+    "SYCL",
+    "ROCm",
+    "Vulkan",
+    "OpenGL",
+    "GPGPU"
+   ],
+   "rule": "Captions render OpenClaw as OpenCL in an agent context (\"start using OpenCL like you had to go out and buy a Mac Mini\"). Real OpenCL (Khronos GPU compute API) is legitimate in semis contexts.",
+   "first_seen": "2026-11-07 (IIT Bay Area Leadership Conference 2026, Jeetu Patel keynote, YouTube ASR)"
+  },
+  "in your sock": {
+   "correct": "in your SOC (security operations center)",
+   "domain": "acronyms",
+   "ci": true,
+   "rule": "Phrase key: ASR of SOC as sock in a security context.",
+   "first_seen": "2026-11-07 (IIT Bay Area Leadership Conference 2026, Jeetu Patel keynote, YouTube ASR)"
+  },
+  "going ary": {
+   "correct": "going awry",
+   "domain": "words",
+   "ci": true,
+   "rule": "ASR of awry.",
+   "first_seen": "2026-11-07 (IIT Bay Area Leadership Conference 2026, Jeetu Patel keynote, YouTube ASR)"
+  },
+  "third party accessor": {
+   "correct": "third-party assessor",
+   "domain": "words",
+   "ci": true,
+   "rule": "Phrase key: ASR of assessor in an AI-safety context (Amodei proposal, per the host).",
+   "first_seen": "2026-11-07 (IIT Bay Area Leadership Conference 2026, Jeetu Patel keynote, YouTube ASR)"
+  },
+  "new friend of abundance": {
+   "correct": "New Frontiers of Abundance (session title)",
+   "domain": "words",
+   "ci": true,
+   "rule": "ASR of the IITBAA 2026 session title \"Scaling Intelligence: Trust, Agents & New Frontiers of Abundance\".",
+   "first_seen": "2026-11-07 (IIT Bay Area Leadership Conference 2026, Jeetu Patel keynote, YouTube ASR)"
+  },
+  "token conception": {
+   "correct": "token consumption",
+   "domain": "words",
+   "ci": true,
+   "rule": "ASR of consumption.",
+   "first_seen": "2026-11-07 (IIT Bay Area Leadership Conference 2026, Jeetu Patel keynote, YouTube ASR)"
+  },
+  "go out and base things": {
+   "correct": "go out and pace things",
+   "domain": "words",
+   "ci": true,
+   "rule": "ASR of pace (AI-development pacing question).",
+   "first_seen": "2026-11-07 (IIT Bay Area Leadership Conference 2026, Jeetu Patel keynote, YouTube ASR)"
+  },
+  "genetic AI": {
+   "correct": "agentic AI",
+   "domain": "terms",
+   "ci": true,
+   "keep_when": [
+    "genetic algorithm",
+    "genetic(?:s)? (?:data|testing|engineering)"
+   ],
+   "rule": "YouTube ASR of 'agentic AI' ('moving to the genetic AI at the edge'; 'in the genetic AI and influence, CPU is huge demand').",
+   "first_seen": "2026-11-07 (Deep Tech Week SF, Lip-Bu Tan x Michael Marks fireside recorded 2026-06-23, YouTube ASR)"
+  },
+  "a gentle AI": {
+   "correct": "agentic AI",
+   "domain": "terms",
+   "ci": true,
+   "rule": "YouTube ASR of 'agentic AI' ('I strongly believe a gentle AI going to be the future').",
+   "first_seen": "2026-11-07 (Deep Tech Week SF, Lip-Bu Tan x Michael Marks fireside recorded 2026-06-23, YouTube ASR)"
+  },
+  "AI and influence": {
+   "correct": "AI and inference",
+   "domain": "terms",
+   "ci": true,
+   "rule": "YouTube ASR of 'inference' after 'agentic AI' ('in the genetic AI and influence, CPU is huge demand'). Keyed on the phrase because 'influence' alone is a normal word.",
+   "first_seen": "2026-11-07 (Deep Tech Week SF, Lip-Bu Tan x Michael Marks fireside recorded 2026-06-23, YouTube ASR)"
+  },
+  "Shoji Lee": {
+   "correct": "Seok-Hee Lee (ex-SK hynix CEO; Intel EVP, hired 2026-06)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR: 'I hire my good friend Shoji Lee. Uh he used to run SK Hynix.' INTC.md / Q3-26 call spell Seok-Hee Lee.",
+   "first_seen": "2026-11-07 (Deep Tech Week SF, Lip-Bu Tan x Michael Marks fireside recorded 2026-06-23, YouTube ASR)"
+  },
+  "Sanjay Perumal": {
+   "correct": "Sanjay Mehrotra (Micron CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR in Marks's question ('our good friend Sanjay Perumal is over a trillion... in the memory business'); the same speaker says 'Sanjay Mehrotra' correctly later.",
+   "first_seen": "2026-11-07 (Deep Tech Week SF, Lip-Bu Tan x Michael Marks fireside recorded 2026-06-23, YouTube ASR)"
+  },
+  "Sela shot": {
+   "correct": "Celestial AI (photonic fabric startup acquired by Marvell)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR: 'now Sela shot that I sold it to Marvell'.",
+   "first_seen": "2026-11-07 (Deep Tech Week SF, Lip-Bu Tan x Michael Marks fireside recorded 2026-06-23, YouTube ASR)"
+  },
+  "Dust Photonic": {
+   "correct": "DustPhotonics (silicon-photonics startup acquired by Credo)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR: 'the Dust Photonic I just sold to Credo'.",
+   "first_seen": "2026-11-07 (Deep Tech Week SF, Lip-Bu Tan x Michael Marks fireside recorded 2026-06-23, YouTube ASR)"
+  },
+  "lift Bhutan": {
+   "correct": "Lip-Bu Tan (Intel CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of the sign-off 'Let's lift Bhutan' = 'Lip-Bu Tan'.",
+   "first_seen": "2026-11-07 (Deep Tech Week SF, Lip-Bu Tan x Michael Marks fireside recorded 2026-06-23, YouTube ASR)"
+  },
+  "Lippo": {
+   "correct": "Lip-Bu (Tan, Intel CEO)",
+   "domain": "names",
+   "ci": false,
+   "keep_when": [
+    "Lippo (?:Group|Karawaci|Malls|Bank)"
+   ],
+   "rule": "YouTube ASR of 'Lip-Bu' in quoted customer dialogue ('Lippo, I don't know what you do with them').",
+   "first_seen": "2026-11-07 (Deep Tech Week SF, Lip-Bu Tan x Michael Marks fireside recorded 2026-06-23, YouTube ASR)"
+  },
+  "Henosa": {
+   "correct": "Hinojosa (Gina Hinojosa, Texas Governor-elect)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR ('Gina uh Henosa'); see 'Hinohosa', 'Ha Josea', 'Rienosa'.",
+   "first_seen": "2026-11-07 (All-In 'Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze', 2026-11-07, YouTube ASR)"
+  },
+  "Gina Hosa": {
+   "correct": "Gina Hinojosa (Texas Governor-elect)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR drops the first syllable.",
+   "first_seen": "2026-11-07 (All-In 'Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze', 2026-11-07, YouTube ASR)"
+  },
+  "Inosa": {
+   "correct": "Hinojosa (Gina Hinojosa, Texas Governor-elect)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR in Texas data-center moratorium talk.",
+   "first_seen": "2026-11-07 (All-In 'Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze', 2026-11-07, YouTube ASR)"
+  },
+  "Coochis County": {
+   "correct": "Cochise County (Arizona)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of the county where SpaceX pitched a data-center site.",
+   "first_seen": "2026-11-07 (All-In 'Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze', 2026-11-07, YouTube ASR)"
+  },
+  "Cruso": {
+   "correct": "Crusoe (data-center developer)",
+   "domain": "names",
+   "ci": false,
+   "rule": "YouTube ASR drops the final 'e'.",
+   "first_seen": "2026-11-07 (All-In 'Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze', 2026-11-07, YouTube ASR)"
+  },
+  "car island": {
+   "correct": "Kharg Island (Iran oil terminal)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR in Iran-war talk ('some strike, pickaxe mountain, car island').",
+   "first_seen": "2026-11-07 (All-In 'Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze', 2026-11-07, YouTube ASR)"
+  },
+  "straight of war moves": {
+   "correct": "Strait of Hormuz",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR in Brent/Iran-war talk.",
+   "first_seen": "2026-11-07 (All-In 'Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze', 2026-11-07, YouTube ASR)"
+  },
+  "threesat": {
+   "correct": "3-SAT (Boolean satisfiability)",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR in Exponential Time Hypothesis talk; also 'threes problem'.",
+   "first_seen": "2026-11-07 (All-In 'Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze', 2026-11-07, YouTube ASR)"
+  },
+  "neighbor Stokes": {
+   "correct": "Navier-Stokes",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR spelling; see 'Navia Stokes', 'Davier Stokes'.",
+   "first_seen": "2026-11-07 (All-In 'Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze', 2026-11-07, YouTube ASR)"
+  },
+  "polomial": {
+   "correct": "polynomial",
+   "domain": "units",
+   "ci": true,
+   "rule": "ASR in P vs NP talk.",
+   "first_seen": "2026-11-07 (All-In 'Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze', 2026-11-07, YouTube ASR)"
+  },
+  "Brad Gerser": {
+   "correct": "Brad Gerstner (Altimeter)",
+   "domain": "people",
+   "ci": true,
+   "rule": "YouTube ASR.",
+   "first_seen": "2026-11-07 (All-In 'Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze', 2026-11-07, YouTube ASR)"
+  },
+  "Shane Copelan": {
+   "correct": "Shayne Coplan (Polymarket CEO)",
+   "domain": "people",
+   "ci": true,
+   "rule": "YouTube ASR.",
+   "first_seen": "2026-11-07 (All-In 'Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze', 2026-11-07, YouTube ASR)"
+  },
+  "Bren crude": {
+   "correct": "Brent crude",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR drops the final 't'.",
+   "first_seen": "2026-11-07 (All-In 'Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze', 2026-11-07, YouTube ASR)"
   }
  },
  "summary_traps": [

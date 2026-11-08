@@ -1,6 +1,6 @@
 # Source-coverage audit
 
-_Generated 2026-11-06 · 116 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
+_Generated 2026-11-07 · 116 public-company pages · flags inputs that exist on disk but the page never read. Rebuild: `py _wiki/_tools/build_coverage.py`._
 
 **23 pages flagged** (severity > 0), worst first.
 
@@ -21,7 +21,7 @@ _Generated 2026-11-06 · 116 public-company pages · flags inputs that exist on 
 | 3.0 | BESI | 29943 | 54 | 3129.3 | 2026-07-23 | ✗ | 0/0 | 0/0 | latest transcript 2026-07-23 unread |
 | 2.0 | AGX | 4022 | 15 | 146.6 | 2026-06-04 | ✓ | 0/0 | 1/1 | latest 10-Q 2026-09-02 unread (no same-qtr transcript either) |
 | 2.0 | NVTS | 13519 | 39 | 483.1 | 2026-07-27 | ✓ | 0/0 | 0/0 | latest 10-Q 2026-11-03 unread (no same-qtr transcript either) |
-| 2.0 | CSCO | 33953 | 75 | 497.6 | 2026-08-12 | ✓ | 4/2 | 2/17 | latest 10-Q 2026-05-19 unread (no same-qtr transcript either) |
+| 2.0 | CSCO | 34775 | 76 | 509.4 | 2026-08-12 | ✓ | 4/2 | 2/17 | latest 10-Q 2026-05-19 unread (no same-qtr transcript either) |
 | 2.0 | UBER | 33506 | 93 | 519.3 | 2026-08-05 | ✓ | 5/3 | 2/2 | latest 10-Q 2026-11-04 unread (no same-qtr transcript either) |
 | 2.0 | AAOI | 26727 | 58 | 575.0 | 2026-08-06 | ✓ | 1/0 | 3/3 | latest 10-Q 2026-11-05 unread (no same-qtr transcript either) |
 | 2.0 | ANET | 38210 | 67 | 782.1 | 2026-08-04 | ✓ | 6/2 | 0/3 | latest 10-Q 2026-11-04 unread (no same-qtr transcript either) |
