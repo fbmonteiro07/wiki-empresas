@@ -5,10 +5,21 @@
 Coverage: MSFT, GOOG, META, AMZN, NVDA, AVGO, TSM, ASML (US listings).
   - Blended-forward P/E (BEST_PE_RATIO), weekly since 2025-07-01
   - PX_LAST weekly since 2025-07-01
-  - BEST_SALES for CY2026/2027/2028 (1CY/2CY/3CY overrides), weekly since 2025-12-01
-    MSFT is June-fiscal: calendar years are built from four quarterly BEst estimates
-    (same roll convention as build_hyperscaler_revisions.py).
-  - Basis checks: bdp nCY vs nFY per name so fiscal-offset names are labeled honestly.
+  - BEST_SALES for CY2026/2027/2028 with ABSOLUTE calendar overrides 2026BC/2027BC/
+    2028BC for all 8 names, weekly since 2025-12-01. The latest point is the bdp
+    snapshot (folds in reported actuals); history is bdh.
+  - Basis checks per name/year: <yr>BC vs relative nCY vs anchored nFY, and the
+    snapshot-vs-last-history gap.
+
+Why absolute overrides (verified 2026-11-09): relative nCY/nFQ in a historical
+request resolve against TODAY's period for every past date, and for non-Dec FYE
+names bdh nCY falls back to the fiscal year (MSFT bdh 1CY = 1FY $395bn vs bdp 1CY
+$356bn; AVGO bdh 1CY = 1FY $105.9bn vs bdp 1CY $123.7bn). The pre-2026-11-09
+builder therefore stitched fiscal-year history to a calendarized last point for
+AVGO, and its MSFT nFQ roll table shifted pre-roll history (and lost CY2026 after
+the July roll). <yr>BC == 1CY/2CY/3CY to the cent for the Dec-FYE names, equals
+the sum of the four fixed MSFT fiscal quarters at every weekly point, and is a
+true day-prorated calendarization for NVDA (Jan FY) and AVGO (Oct FY).
 
 Output (feature-script compliant): _wiki/_data/ai_rerating_2026.json
 Run: py _wiki/_tools/build_ai_rerating.py
@@ -51,15 +62,7 @@ NAMES = {
     "ASML": "ASML US Equity",
 }
 BBG_TO_TK = {v: k for k, v in NAMES.items()}
-SALES_DIRECT = [t for t in NAMES if t != "MSFT"]
-CY_OVERRIDES = {2026: "1CY", 2027: "2CY", 2028: "3CY"}
-
-# Same convention as build_hyperscaler_revisions.py (cutover day after report).
-MSFT_ROLLS = [
-    {"effective": dt.date(2026, 1, 29), "cy26_start_fq": 1, "cy27_start_fq": 5, "cy28_start_fq": 9},
-    {"effective": dt.date(2026, 4, 30), "cy26_start_fq": 0, "cy27_start_fq": 4, "cy28_start_fq": 8},
-    {"effective": dt.date(2026, 7, 30), "cy26_start_fq": -1, "cy27_start_fq": 3, "cy28_start_fq": 7},
-]
+CY_OVERRIDES = {2026: "2026BC", 2027: "2027BC", 2028: "2028BC"}
 
 
 def finite(v: Any) -> float | None:
@@ -122,14 +125,6 @@ def series_value(rows: list[tuple[str, float]], target: dt.date, max_stale_days:
     return v
 
 
-def msft_start_fq(year: int, date: dt.date) -> int:
-    start = {2026: 2, 2027: 6, 2028: 10}[year]
-    for roll in MSFT_ROLLS:
-        if date >= roll["effective"]:
-            start = roll[f"cy{year - 2000}_start_fq"]
-    return start
-
-
 def weekly_dates(start: dt.date) -> list[dt.date]:
     dates = [d.date() for d in pd.date_range(start, ASOF_DATE, freq="W-FRI")]
     if ASOF_DATE not in dates:
@@ -149,62 +144,57 @@ def main() -> None:
     pe_now = snap_map(pe_snap_df, "BEST_PE_RATIO")
     px_now = snap_map(pe_snap_df, "PX_LAST")
 
-    # ---- BEST_SALES: direct CY names, weekly per override year ----
-    direct_bbg = [NAMES[t] for t in SALES_DIRECT]
+    # ---- BEST_SALES: absolute calendar years for every name ----
     sales_hist: dict[int, dict[str, list[tuple[str, float]]]] = {}
     sales_now: dict[int, dict[str, float]] = {}
-    fy_now: dict[int, dict[str, float]] = {}
+    ncy_now: dict[int, dict[str, float]] = {}
     for year, ov in CY_OVERRIDES.items():
-        hist = bbg_call(bdh, direct_bbg, ["BEST_SALES"], SALES_START.strftime("%Y%m%d"), ASOF,
+        hist = bbg_call(bdh, all_bbg, ["BEST_SALES"], SALES_START.strftime("%Y%m%d"), ASOF,
                         periodicitySelection="WEEKLY", BEST_FPERIOD_OVERRIDE=ov)
         sales_hist[year] = rows_by_key(hist, "BEST_SALES")
-        snap = bbg_call(bdp, direct_bbg, ["BEST_SALES"], BEST_FPERIOD_OVERRIDE=ov)
+        snap = bbg_call(bdp, all_bbg, ["BEST_SALES"], BEST_FPERIOD_OVERRIDE=ov)
         sales_now[year] = snap_map(snap, "BEST_SALES")
-        fy = bbg_call(bdp, direct_bbg, ["BEST_SALES"], BEST_FPERIOD_OVERRIDE=f"{year - 2025}FY")
-        fy_now[year] = snap_map(fy, "BEST_SALES")
+        n_cy = year - ASOF_DATE.year + 1
+        if n_cy >= 1:
+            rel = bbg_call(bdp, all_bbg, ["BEST_SALES"], BEST_FPERIOD_OVERRIDE=f"{n_cy}CY")
+            ncy_now[year] = snap_map(rel, "BEST_SALES")
+        else:
+            ncy_now[year] = {}
 
-    # ---- MSFT quarterly sales for calendarization ----
-    msft_bbg = [NAMES["MSFT"]]
-    msft_q_hist: dict[int, list[tuple[str, float]]] = {}
-    msft_q_now: dict[int, float | None] = {}
-    for fq in range(1, 14):
-        hist = bbg_call(bdh, msft_bbg, ["BEST_SALES"], SALES_START.strftime("%Y%m%d"), ASOF,
-                        periodicitySelection="WEEKLY", BEST_FPERIOD_OVERRIDE=f"{fq}FQ")
-        msft_q_hist[fq] = rows_by_key(hist, "BEST_SALES").get("MSFT", [])
-        snap = bbg_call(bdp, msft_bbg, ["BEST_SALES"], BEST_FPERIOD_OVERRIDE=f"{fq}FQ")
-        msft_q_now[fq] = snap_map(snap, "BEST_SALES").get("MSFT")
-
-    # MSFT CY25 actual-ish base: sum of FQ that are now reported is not available via
-    # BEst history once reported; use bdp on -2FQ..? Keep it simple: CY26 estimate from
-    # quarters (Q3FY26+Q4FY26 actuals fold into BEst history until replaced). For growth
-    # rates we only need CY26E/27E/28E consistently built the same way.
-    def msft_cy(year: int, date: dt.date | None) -> float | None:
-        start = msft_start_fq(year, date or ASOF_DATE)
-        if start < 1:
-            return None
-        vals = []
-        for fq in range(start, start + 4):
-            v = msft_q_now.get(fq) if date is None else series_value(msft_q_hist.get(fq, []), date)
-            vals.append(v)
-        return sum(vals) if all(v is not None for v in vals) else None
+    # Fiscal-year cross-check, anchored on the period 1FY points at today. A fiscal
+    # year is mapped to the calendar year holding most of its months.
+    fy1_end: dict[str, dt.date] = {}
+    anchor = bbg_call(bdp, all_bbg, ["BEST_PERIOD_END_DATE"], BEST_FPERIOD_OVERRIDE="1FY")
+    for _, row in anchor.iterrows():
+        tk = BBG_TO_TK.get(str(row.get("ticker")))
+        try:
+            fy1_end[tk] = dt.date.fromisoformat(str(row.get("value"))[:10])
+        except ValueError:
+            continue
+    fy_now: dict[tuple[str, int], tuple[str, float | None]] = {}
+    for tk, end in fy1_end.items():
+        fy1_cy = end.year if end.month >= 7 else end.year - 1
+        for year in CY_OVERRIDES:
+            n_fy = year - fy1_cy + 1
+            if n_fy < 1:
+                continue
+            fy = bbg_call(bdp, [NAMES[tk]], ["BEST_SALES"], BEST_FPERIOD_OVERRIDE=f"{n_fy}FY")
+            fy_now[(tk, year)] = (f"{n_fy}FY", snap_map(fy, "BEST_SALES").get(tk))
 
     # ---- assemble weekly history ----
     dates = weekly_dates(SALES_START)
     sales_records: list[dict[str, Any]] = []
+    last_hist: dict[tuple[str, int], float | None] = {}
     for date in dates:
-        for year in CY_OVERRIDES:
+        for year, ov in CY_OVERRIDES.items():
             for tk in NAMES:
-                if tk == "MSFT":
-                    val = msft_cy(year, date)
-                    basis = "calendarized from BEst fiscal quarters"
-                else:
-                    val = series_value(sales_hist[year].get(tk, []), date)
-                    basis = CY_OVERRIDES[year]
+                val = series_value(sales_hist[year].get(tk, []), date)
+                basis = ov
                 if date == ASOF_DATE:
-                    if tk == "MSFT":
-                        val = msft_cy(year, None) or val
-                    else:
-                        val = sales_now[year].get(tk, val)
+                    last_hist[(tk, year)] = val
+                    if tk in sales_now[year]:
+                        val = sales_now[year][tk]
+                        basis = f"{ov} snapshot (reported actuals folded in)"
                 sales_records.append({
                     "date": date.isoformat(), "ticker": tk, "year": year,
                     "sales_mm": round(val, 1) if val is not None else None, "basis": basis,
@@ -219,18 +209,25 @@ def main() -> None:
         for d, v in px_rows.get(tk, []):
             px_records.append({"date": d, "ticker": tk, "px": round(v, 3)})
 
-    # ---- CY vs FY alignment check (fiscal-offset names flagged, not fixed) ----
+    # ---- basis checks ----
     checks = []
     for year in CY_OVERRIDES:
-        for tk in SALES_DIRECT:
-            cy = sales_now[year].get(tk)
-            fy = fy_now[year].get(tk)
-            diff = abs(cy / fy - 1.0) if cy is not None and fy not in (None, 0) else None
+        for tk in NAMES:
+            bc = sales_now[year].get(tk)
+            ncy = ncy_now[year].get(tk)
+            fy_label, fy = fy_now.get((tk, year), (None, None))
+            hist_last = last_hist.get((tk, year))
+            ratio = lambda a, c: round(a / c - 1.0, 4) if a is not None and c not in (None, 0) else None
             checks.append({
                 "ticker": tk, "year": year,
-                "cy_snapshot_mm": cy, "fy_snapshot_mm": fy,
-                "cy_vs_fy_diff": round(diff, 4) if diff is not None else None,
-                "note": "large diff expected for NVDA (Jan FY) and AVGO (Oct FY): nCY is true calendar-year consensus",
+                "bc_snapshot_mm": bc, "ncy_snapshot_mm": ncy,
+                "fy_label": fy_label, "fy_snapshot_mm": fy,
+                "bc_vs_ncy_diff": ratio(bc, ncy), "bc_vs_fy_diff": ratio(bc, fy),
+                "last_history_mm": hist_last, "snapshot_vs_history_diff": ratio(bc, hist_last),
+                "note": ("Dec-FYE names: BC == nCY == FY. NVDA nCY = fiscal year (ends Jan, ~1-month offset); "
+                         "AVGO/MSFT nCY differ from BC (and fall back to FY in bdh history). "
+                         "snapshot_vs_history_diff: bdp folds reported actuals into a part-reported year, "
+                         "bdh history keeps the pre-print consensus for reported quarters."),
             })
 
     payload = {
@@ -239,7 +236,7 @@ def main() -> None:
             "built_at": dt.datetime.now().astimezone().isoformat(timespec="seconds"),
             "source": "Bloomberg BEst consensus via Capstone wrapper / local Desktop API fallback",
             "pe_field": "BEST_PE_RATIO (blended forward)",
-            "sales_field": "BEST_SALES with 1CY/2CY/3CY calendar overrides; MSFT calendarized from fiscal quarters",
+            "sales_field": "BEST_SALES with absolute calendar overrides 2026BC/2027BC/2028BC for all names (Bloomberg day-prorated quarter calendarization); history = bdh weekly, latest point = bdp snapshot",
             "pe_history_start": PE_START.isoformat(),
             "sales_history_start": SALES_START.isoformat(),
             "sales_units": "millions, listing currency (growth rates currency-invariant)",
