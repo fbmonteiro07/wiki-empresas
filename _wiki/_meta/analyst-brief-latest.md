@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-11-07 · 38 active signals · latest reconciliation: reconciliation-2026-11-07-inbox.md._
+_Generated 2026-11-08 · 38 active signals · latest reconciliation: reconciliation-2026-11-08-inbox.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -16,10 +16,10 @@ _Generated 2026-11-07 · 38 active signals · latest reconciliation: reconciliat
 | 6 | **CRWV** | — | 2 | CRWV — 2027 EPS house view is 19% below consensus; CRWV — 2026 EPS house view is 17% below consensus |
 | 7 | **NOK** | — | 2 | NOK — Bloomberg consensus missing; NOK — latest earnings transcript absent |
 | 8 | **COHR** | — | 2 | COHR — 2027 EPS house view is 15% below consensus; COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk… |
-| 9 | **LITE** | — | 1 | LITE — 2026 EPS house view is 16% below consensus |
-| 10 | **FLEX** | — | 1 | FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail… |
-| 11 | **POET** | — | 1 | POET — latest earnings transcript absent |
-| 12 | **SMTC** | — | 1 | SMTC — latest earnings transcript absent |
+| 9 | **CME** | — | 2 | CME — 2026-11-09: Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract…; CME — 2026-12-07: CME Securities Clearing launch on 2026-12-07, ahead of the SEC Treasury clearing mandate… |
+| 10 | **LITE** | — | 1 | LITE — 2026 EPS house view is 16% below consensus |
+| 11 | **FLEX** | — | 1 | FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail… |
+| 12 | **KKR** | — | 1 | KKR — 2026-11-09: Q3 results and call, announced by KKR on 2026-09-29. Test fee activation, insurance… |
 
 ## Highest-priority ideas
 
@@ -91,22 +91,22 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 ## Catalysts requiring preparation
 
 - **SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…** — 🆕🔴🔴 2026-11-12 — OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset. OpenAI's own post: "We're ending our partnership with Cursor following its acquisit _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c76406c38a7d)
-- **FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail…** — 🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands. Flex said "more strategy details will be shared at an Innovation Day event on November 10, 2026 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-30cf21294c0d)
 - **CME — 2026-11-09: Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract…** — Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract ends 2026-11-09 (Duffy said he "believe[s]" so; filed under a full 40.3 review), then the agency decides ([Duf _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-371c25e13de4)
-- **COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk…** — 🆕 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk · Jeffrey Favuzza, 2026-09-28, corporate-access list). _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c030b28ed093)
-- **IFX — 2026-11-10: FYQ4 print + FY27 guide (Jefferies · Janardan Menon, 2026-09-30, via sales relays).…** — 🆕 2026-11-10 — FYQ4 print + FY27 guide (Jefferies · Janardan Menon, 2026-09-30, via sales relays). Jefferies expects FYQ4 revenue €4.71bn / segment margin 23.7%; FY27 revenue ~€20bn (+22%), segmen _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-ce699c62b4f0)
+- **FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail…** — 🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands. Flex said "more strategy details will be shared at an Innovation Day event on November 10, 2026 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-30cf21294c0d)
 - **KKR — 2026-11-09: Q3 results and call, announced by KKR on 2026-09-29. Test fee activation, insurance…** — 2026-11-09 — Q3 results and call, announced by KKR on 2026-09-29. Test fee activation, insurance earnings, K-Series flows and realization progress. [Company announcement](https://media.kkr.com/new _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-988851afc62a)
 - **QCOM — 2026-11-09: APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not…** — 🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. B _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-172f6636a635)
 - **SNDK — 2026-11-09: 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional…** — 🆕 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional shares after the close, then split-adjusted trading (8-K Item 8.01, 2026-10-29). ➤ From 11-20, BBG cons _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c04ffb1de278)
+- **COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk…** — 🆕 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk · Jeffrey Favuzza, 2026-09-28, corporate-access list). _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c030b28ed093)
+- **IFX — 2026-11-10: FYQ4 print + FY27 guide (Jefferies · Janardan Menon, 2026-09-30, via sales relays).…** — 🆕 2026-11-10 — FYQ4 print + FY27 guide (Jefferies · Janardan Menon, 2026-09-30, via sales relays). Jefferies expects FYQ4 revenue €4.71bn / segment margin 23.7%; FY27 revenue ~€20bn (+22%), segmen _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-ce699c62b4f0)
 
 ## Research hygiene
 
-- **NOK — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NOK, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-11-07._ (data-b8b0db7b95bf)
-- **NSCALE — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-11-07._ (data-d9b0a9174330)
-- **NOK — latest earnings transcript absent** — Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-07._ (data-a5b9123cb2eb)
-- **NSCALE — latest earnings transcript absent** — Fetch the latest NSCALE earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-07._ (data-4d1d6d3701a4)
-- **POET — latest earnings transcript absent** — Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-07._ (data-52abc5fd370a)
-- **SMTC — latest earnings transcript absent** — Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-07._ (data-7d7a6bade3b5)
+- **NOK — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NOK, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-11-08._ (data-9e328d81f1ef)
+- **NSCALE — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-11-08._ (data-3235be55bc12)
+- **NOK — latest earnings transcript absent** — Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-08._ (data-dbb86aa80dae)
+- **NSCALE — latest earnings transcript absent** — Fetch the latest NSCALE earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-08._ (data-1b45d580f554)
+- **POET — latest earnings transcript absent** — Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-08._ (data-ba8be41fef57)
+- **SMTC — latest earnings transcript absent** — Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-08._ (data-972f42f6b7f0)
 
 ## Feedback loop
 

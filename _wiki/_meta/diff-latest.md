@@ -1,9 +1,10 @@
 # What changed — last 7 days
 
-_Generated 2026-11-07 (since 2026-10-31) · rolls up every page's `## Changelog` + the ingest run log. ⭐ = rating/PT move. Rebuild: `py _wiki/_tools/build_diff.py [days]`._
+_Generated 2026-11-08 (since 2026-11-01) · rolls up every page's `## Changelog` + the ingest run log. ⭐ = rating/PT move. Rebuild: `py _wiki/_tools/build_diff.py [days]`._
 
 | Date | Ticker | Change |
 |---|---|---|
+| 2026-11-08 | PANW | run-inbox: Arora on the David Senra podcast (posted 2026-11-08, recorded ~10-20/21) → 1 Full-log row (11-08), 1 dated Sinal update (Demand ✓ held as a CEO revenue claim; Frontier ⚠ held; Identity no change + M&A process) + Síntese line, Sources. Nothing superseded. The endpoint-economics figures are logged as a third version ($25/yr, 150 MB/day) next to 09-10 and 10-21, not averaged. The summary's "20-40 MB vs 150 MB" divergence was wrong: on 10-21 the 20-40 MB was the model payload, not the traffic. |
 | 2026-11-07 | SPCX | run-inbox: 1 Q4-window Full-log row — Chamath's SpaceX→Anthropic 90-day re-pricing scenario (host game theory; non-cancelable periods to Jan./Mar. 2027 noted), SpaceX filed as a hyperscaler, the 6 GW Cochise County AZ pitch as described from a video (unverified, kept out of the ~13 GW ladder), Calacanis's on-air SpaceX share-buying disclosure; Sources line (podcast, All-In). |
 | 2026-11-07 | OPENAI | run-inbox: 1 Intra-quarter row (end of the Full log) — Chamath's labs-as-renters freeze read (Gemini-first compute routing, "60 to 90day loop"), Calacanis on Musk–Altman acrimony, the Polymarket 71% line NOT carried as an OpenAI mark, Friedberg's ETH/3-SAT paper claim (unverified; P=NP gloss flagged); Sources line (podcast, All-In). |
 | 2026-11-07 | INTC | run-inbox: Lip-Bu Tan Deep Tech Week fireside (recorded 2026-06-23, uploaded 11-07) — 1 Intra-quarter bullet (CPU demand, memory "pet project" + Seok-Hee Lee in memory context, EMIB-T → glass → diamond ladder, spin-in/acquire posture, SambaNova chairmanship/F round) + 1 Sources line. Nothing superseded (podcast, Deep Tech Week). |
@@ -172,26 +173,6 @@ _Generated 2026-11-07 (since 2026-10-31) · rolls up every page's `## Changelog`
 | 2026-11-01 | BX | Live Outlook review.** Added the Jefferies bull/bear framework and fee-recognition test; preserved the BCRED source conflict and existing AI financing IDs. Prior thesis, targets and historical guidance vintages were retained. |
 | 2026-11-01 | APO | Live Outlook review.** Added the private-credit opposing cases and actual-versus-normalized SRE tests; verified the October preliminary income disclosure and retained Big Sky draw timing. Prior thesis, targets and historical guidance vintages were retained. |
 | 2026-11-01 | ANTHROPIC | Funding sensitivity requested by Felipe:** added a dated $100bn incremental-net-raise scenario and reproducible source/audit files. Preserved all prior commitment values and histories. Rebased FUNDA's $60bn assumed IPO by +$40bn; distinguished June commitment stock, cash after lease principal, and approximate stress endpoints. No current total, completed raise, cancellation or catalyst resolution inferred. Existing SpaceX ID re-reviewed; scope and replacement-cost limitations added to compute timeline. |
-| 2026-10-31 | ⭐ VST | Helix primary-source backfill.** Superseded catalyst text: **Helix Digital Infrastructure ($10B w/ KKR/NVDA/KIA)** — emerging theme per MS (briefing, 2026-06-12); watch for formal disclosure. Primary June 11 launch now verified; September 28/29 Samsung commitment corroborated by company releases in the deal timeline. Existing MS valuation opinions remain dated broker estimates; no PT or power forecast changed. |
-| 2026-10-31 | V | Coverage initiated.** Latest earnings are Q4 FY2026 / year ended 2026-09-30, released 2026-10-27. Calendar/fiscal basis recorded explicitly. |
-| 2026-10-31 | SPGI | Coverage initiated.** Latest operating evidence: Q3 2026 release/call dated 2026-10-27 and 10-Q filed 2026-10-28. Financials section added. |
-| 2026-10-31 | ⭐ SAMSUNG | Helix historical backfill:** added the primary-source cross-reference and stable financing ID; existing broker/press history retained, no rating/PT or capacity forecast changed. |
-| 2026-10-31 | ⭐ NVDA | Helix historical backfill:** added the primary-source cross-reference and stable financing ID; existing broker/press history retained, no rating/PT or capacity forecast changed. |
-| 2026-10-31 | MCO | Coverage initiated.** Latest evidence: Q3 2026 release, call and 10-Q dated 2026-10-21. Financials section added. |
-| 2026-10-31 | MA | Coverage initiated.** Latest operating evidence: Q3 release, call and 10-Q dated 2026-10-29. |
-| 2026-10-31 | KKR | Helix historical backfill:** June founding commitment and September Samsung increment added with company sources; July operating confirmation uses the same stable deal ID. |
-| 2026-10-31 | KKR | Coverage initiated.** Latest reported quarter Q2 2026; Q3 remains a scheduled November event. |
-| 2026-10-31 | KKR | Transcript metadata corrected.** MarketBeat's Q4 2025 URL used 2026-02-27; KKR's company-hosted transcript dates the call **2026-02-05**. Original source URL retained, local date corrected. |
-| 2026-10-31 | ⭐ JPM | Coverage initiated.** Established the Q3 2026 baseline and preliminary 2027 NII framework. Preserved Barclays' prior PT **$420** and revised **$425** (report 2026-10-13) and its old/new 2026 guidance vintages. No previous JPM wiki thesis existed. |
-| 2026-10-31 | HOOD | Coverage initiated.** Q3 2026 release/call dated 2026-10-27 and 10-Q filed 2026-10-28. |
-| 2026-10-31 | ⭐ GS | Coverage initiated.** Established Q3 2026 reported earnings and the financing/management-fee durability debate. Barclays' **Overweight / $1,245** view is preserved at its 2026-10-13 vintage, not presented as a live quote or Capstone target. |
-| 2026-10-31 | COIN | Coverage initiated.** Latest operating evidence: Q3 presentation, Q&A and 10-Q dated 2026-10-29. |
-| 2026-10-31 | COIN | Metric boundaries recorded.** S&S share uses net revenue; prediction-market run rate is not subscription ARR; customer assets, corporate cash and investment marks remain separate. |
-| 2026-10-31 | BX | Coverage initiated.** Q3 2026 operating evidence dated 2026-10-22; Jefferies sales bull/bear commentary dated 2026-10-23. Existing AI-deal history linked without duplicating commitments. |
-| 2026-10-31 | BX | Source conflict preserved.** BCRED Q3 net outflows are $1.4bn in the company call; Jefferies' 2026-10-23 desk note refers to $1.8bn. No common definition was established, so the company basis is used and the alternate figure remains attributed. |
-| 2026-10-31 | APO | Compute-deal reconciliation:** August 4 Big Sky draw/fee timing appended to BX-GOOG-AVGO-2026; no additional commitment inferred and later Crux/North Star terms preserved. |
-| 2026-10-31 | APO | Coverage initiated.** Latest reported quarter Q2 2026; Q3 remains a scheduled November event. Apollo mapped to ticker APO. |
-| 2026-10-31 | APO | Historical reporting boundary preserved.** Pre-combination Apollo Asset Management filings retained separately; not represented as consolidated Apollo–Athene results. |
 
 ## Ingest runs in window (0)
 

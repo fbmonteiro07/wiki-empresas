@@ -1,0 +1,607 @@
+{
+ "date": "2026-11-08",
+ "status": "complete",
+ "generated_at": "2026-11-08T10:06:41-03:00",
+ "mail_window": {
+  "channel": "outlook-com",
+  "from_utc": "2026-11-07T11:07:22Z",
+  "to_utc": "2026-11-08T13:06:41Z",
+  "newest_received_utc": "2026-11-08T12:45:44Z",
+  "screened": 78,
+  "read": 22
+ },
+ "headline": "Weekend wrap: desks say the AI flush is late-stage (retail puke, PB net at summer lows) but nobody is re-grossing yet, and the one live rotation is long hyperscalers, short neoclouds and picks-and-shovels.",
+ "market_read": "Weekend desk wraps agree the post-midterm week was a de-leveraging event in AI rather than a regime change, but they split on timing. UBS (Ruple, 7 Nov) has PB net exposure to AI winners back at summer-unwind/Liberation Day lows and SOX puts being monetised; Vanda (Liu, 7 Nov) calls Thursday the largest retail puke in its dataset, which historically marks a drawdown's final stage; JPM's Schlegel (via See, 8 Nov) says HF semis selling hit 4z yet the TPM flow trigger for capitulation has not fired, and JPM's Silver (8 Nov) doubts HFs re-gross before Christmas. Inside AI the flow is a rotation, not an exit: UBS's TMT desk saw hyperscalers bought with neocloud supply, Bernstein's desk (Doran) saw neoclouds, semis and hardware sold with short-sale tickets rising, and GS's Pasquariello (7 Nov) reads the week as 'arguably better for the hyperscalers, but worse most everywhere else'. A fresh Friday negative is MSFT winding down its Oracle capacity deal (Bloomberg via UBS), with ORCL CDS wider.",
+ "up": [
+  {
+   "ticker": "MSFT",
+   "signal": "emerging narrative",
+   "why": "UBS's TMT desk (Ruple, 7 Nov) names buying hyperscalers funded by neocloud sales as the week's biggest flow; Bernstein's spec sales (Seidman, 7 Nov) carries MSFT as a 'safety' idea (Azure +600bp vs a 300bp bogey, FCF-positive FY27) and reports investors do not see it as a funding-flow headwind; stepping back from risky DC projects and the Oracle rental deal reads as capex discipline. Monitor: no MSFT analog band or Bloomberg-X move in monitor.json (through 6 Nov), so this is desk evidence only. 1-5 days: the rotation can persist while semis stay under systematic supply into Monday. 2-4 weeks: depends on whether 'less buildout = better hyperscaler FCF' holds as the narrative.",
+   "conviction": "medium",
+   "confirm": "Hyperscalers outperform SOX on Monday-Tuesday; more desks report long-only buying of MSFT/AMZN.",
+   "weaken": "A broad AI bid returns and money rotates back into semis; or MSFT capex guide-downs get read as weak demand rather than discipline.",
+   "evidence": [
+    "obs-2026-11-08-02",
+    "obs-2026-11-08-12"
+   ]
+  },
+  {
+   "ticker": "AMZN",
+   "signal": "emerging narrative",
+   "why": "Bernstein's spec sales (7 Nov): AWS +39% with 40%+ seen in 2027/28 driving EPS revisions, Alexa for Shopping easing the horizontal-agent overhang, re:Invent as a catalyst; UBS's desk has hyperscalers bought; JPM Asia (Hariharan, 8 Nov) says Alchip guides Trainium3 revenue >100% in 2027. Offsetting: Bernstein research has AMZN the most exposed to restrictive states (already logged 7 Nov). Monitor: no AMZN analog or Bloomberg-X move (through 6 Nov). 1-5 days: rotation beneficiary; 2-4 weeks: re:Invent (early Dec) is the named catalyst.",
+   "conviction": "medium",
+   "confirm": "re:Invent agent/Trainium news; Texas or other states' rules spare under-construction capacity.",
+   "weaken": "State permitting rules hit AWS's planned sites, or agentic-commerce fears return.",
+   "evidence": [
+    "obs-2026-11-08-03",
+    "obs-2026-11-08-14",
+    "obs-2026-11-08-25"
+   ]
+  },
+  {
+   "ticker": "GOOG",
+   "signal": "neglected, improving",
+   "why": "Bloomberg-X attention is falling (dz -2.05, 7-day avg 698 vs 888 over 28 days) while the stock is +2.3% over 7 days, and Bernstein's spec sales (7 Nov) says the market sees AI in Search as 'when, not if' at a low-to-mid 20x multiple; also in UBS's hyperscaler bid. Monitor: HOT 42 and BULL 46.6, both in the 40-60 band; in GOOG's own history the HOT 40-60 band was followed by a +1.4% median 5-session move (67.5% up, n=40) and +0.2% over 10 sessions. 2-4 weeks: Search monetisation evidence is still the gate.",
+   "conviction": "low",
+   "confirm": "Attention stays quiet while price holds above the pre-midterm level.",
+   "weaken": "Another Search-share scare or a GCP capacity delay in restrictive states.",
+   "evidence": [
+    "obs-2026-11-08-13"
+   ]
+  },
+  {
+   "ticker": "ASML",
+   "signal": "neglected, improving",
+   "why": "JPM's Euro TMT specialist (Silver, 8 Nov) calls ASML, ASM International and Nokia increasingly compelling on valuation with attractive 2027 growth, and expects investors to come back once positioning is flushed; Jefferies Europe (via Beavington, 7 Nov) says an ASML visit showed strong demand. Divergence: the same Jefferies team says it is too early to bottom-fish semis, and Bernstein's desk flags WFE expectations as too hot. Monitor: no ASML analog band or Bloomberg-X move. 1-5 days: no catalyst; 2-4 weeks: AMAT (Thu) and ONTO (Mon) CY27 commentary set the WFE tone.",
+   "conviction": "low",
+   "confirm": "AMAT guides CY27 WFE up strongly and semicap holds while SOX retests.",
+   "weaken": "AMAT/ONTO cautious on CY27, or DDR5 spot weakness spreads to memory capex.",
+   "evidence": [
+    "obs-2026-11-08-24",
+    "obs-2026-11-08-23"
+   ]
+  }
+ ],
+ "down": [
+  {
+   "ticker": "ORCL",
+   "signal": "weakening sentiment",
+   "why": "Friday's headline that MSFT is winding down its deal to rent AI capacity from Oracle (Bloomberg, via UBS's Ruple, 7 Nov): ORCL can re-let it, possibly at higher prices, but its dependence on the AI labs rises and ORCL CDS widened, after a week in which the ledger already had ORCL's ~$20bn bond+equity raise weighing (Rothschild desk, 3 Nov). Monitor: no ORCL analog band or Bloomberg-X move (through 6 Nov, before the headline). 1-5 days: credit-led; 2-4 weeks: whether the capacity is re-contracted.",
+   "conviction": "medium",
+   "confirm": "ORCL CDS keeps widening (check AI_Credit_Live), or another hyperscaler steps back from OCI.",
+   "weaken": "Oracle announces the capacity re-let to a lab at better pricing.",
+   "evidence": [
+    "obs-2026-11-08-01"
+   ]
+  },
+  {
+   "ticker": "CRWV",
+   "signal": "weakening sentiment",
+   "why": "Three sources point the same way: UBS's TMT desk saw neoclouds sold to fund hyperscaler buys, Bernstein's desk (Doran) saw neoclouds sold on Thursday with short-sale tickets rising, and Vanda (7 Nov) says neocloud credit spreads keep widening. CRWV reports next week. Monitor: HOT 36.8 and BULL 33.8 (20-40 band); in CRWV's own short history the HOT 20-40 band saw a +11.9% median 5-session move but -4.7% over 10 sessions (n=5, too small to lean on). 1-5 days: print-driven; 2-4 weeks: funding/credit is the swing factor.",
+   "conviction": "medium",
+   "confirm": "Print shows backlog slippage or financing on worse terms; spreads widen further.",
+   "weaken": "Contracted-through-2027 capacity (Bernstein, 6 Nov) and a clean print trigger short covering.",
+   "evidence": [
+    "obs-2026-11-08-04",
+    "obs-2026-11-08-11",
+    "obs-2026-11-08-26"
+   ]
+  },
+  {
+   "ticker": "NBIS",
+   "signal": "weakening sentiment",
+   "why": "Part of the same neocloud supply UBS's desk (7 Nov) saw funding hyperscaler buys; NBIS also reports next week. Monitor: no NBIS analog band or Bloomberg-X move. Lower conviction than CRWV: one desk source only.",
+   "conviction": "low",
+   "confirm": "Desks report further neocloud selling into the print.",
+   "weaken": "Print shows capacity additions on schedule outside restrictive states.",
+   "evidence": [
+    "obs-2026-11-08-05"
+   ]
+  },
+  {
+   "ticker": "LITE",
+   "signal": "weakening sentiment",
+   "why": "UBS's desk (7 Nov) reads LITE's willingness to sell to MRVL as a peak-cycle signal and a sentiment overhang, with both stocks lower; divergent view: Jefferies' NDR (logged 7 Nov, repeated in the Saturday daily) says scale-in production targets moved to 2028-29 and reiterates BUY on both. MRVL monitor: HOT 72.3 (60-80 band, n=2, not usable). 1-5 days: deal-spread trading; 2-4 weeks: whether optical scale-in timing gets confirmed by customers.",
+   "conviction": "low",
+   "confirm": "Spread widens further or holders vote against.",
+   "weaken": "A customer confirms 2028 optical scale-in volumes.",
+   "evidence": [
+    "obs-2026-11-08-06",
+    "obs-2026-11-08-07"
+   ]
+  },
+  {
+   "ticker": "DDOG",
+   "signal": "weakening sentiment",
+   "why": "UBS's desk (7 Nov) lists DDOG among software names that missed or guided lower. Monitor: Bloomberg-X attention spiked (dz +2.28, 7-day avg 43 vs 8 over 28 days) as the stock fell 23.5% in 7 days; HOT 79.6 (60-80 band) was followed in DDOG's own history by a -3.0% median 5-session move (40% up, n=10). This is attention on a falling stock, not crowding.",
+   "conviction": "low",
+   "confirm": "Attention stays high while price fails to bounce with the tape.",
+   "weaken": "Software rallies as the 'AI losers' relief trade JPM's Silver describes.",
+   "evidence": [
+    "obs-2026-11-08-08"
+   ]
+  }
+ ],
+ "themes": [
+  {
+   "title": "Rotation inside AI: hyperscalers bought, picks-and-shovels and neoclouds sold",
+   "text": "UBS's TMT desk (Ruple, 7 Nov) and Bernstein's desk (Doran via Seidman, 7 Nov) describe the same flow from both sides: buying hyperscalers, selling neoclouds, semis and hardware, with short-sale tickets rising. GS's Pasquariello (7 Nov, desk commentary) frames the new fact set as better for the hyperscalers and worse for the rest of the AI infrastructure complex, with less upside convexity in picks-and-shovels. The read-across: a slower buildout is being treated as FCF-positive for the spenders and negative for the suppliers.",
+   "evidence": [
+    "obs-2026-11-08-02",
+    "obs-2026-11-08-04",
+    "obs-2026-11-08-11",
+    "obs-2026-11-08-12"
+   ]
+  },
+  {
+   "title": "Washout or capitulation? Desks disagree on timing",
+   "text": "Late-stage camp: Vanda (Liu, 7 Nov) says Thursday's retail selling was the largest in its dataset and such episodes nearly always mark a drawdown's final stage, with CTA selling near complete; UBS (7 Nov) has PB net AI exposure at summer lows. Not-yet camp: JPM's Schlegel (via See, 8 Nov) says positioning reset but the TPM flow trigger for capitulation has not fired; JPM's Silver (8 Nov) expects HFs to run low gross into year-end; Jefferies Europe (7 Nov) says it is too early to bottom-fish semis while Jefferies US says build a holiday shopping list. Weighting: these are desk and flow-strategy views, not rated research.",
+   "evidence": [
+    "obs-2026-11-08-21",
+    "obs-2026-11-08-24",
+    "obs-2026-11-08-20"
+   ]
+  },
+  {
+   "title": "SemiAnalysis in Inner Mongolia: the China contrast to the Texas backlash",
+   "text": "SemiAnalysis (Tan, Ontiveros, Laoban, Patel, 7 Nov; preview read) visited Envision's Galaxy campus in Ulanqab, planned for up to 800 MW of IT capacity, whose first 120 MW phase was delivered within a year at about a fifth of US cost, with a 5 MW hall running SST-native 800V DC. It contrasts China's accelerating build with Texas's anti-datacenter sentiment. 800V is a separate debate; these MW are IT capacity at one campus and should not be mixed with US facility-GW figures. No universe-company observation logged.",
+   "evidence": []
+  },
+  {
+   "title": "WFE: desk says too hot, research says beat/raise",
+   "text": "Bernstein's spec sales (7 Nov) lists 'WFE expectations running too hot' among the negative themes of the cycle, while Jefferies' US team (via Beavington, 7 Nov) expects AMAT to beat/raise with revenue guided HSD+ vs consensus +5%, and peers point to 30%+ WFE growth next year. AMAT (Thu) and ONTO (Mon) are the tests.",
+   "evidence": [
+    "obs-2026-11-08-18",
+    "obs-2026-11-08-20"
+   ]
+  }
+ ],
+ "observations": [
+  {
+   "id": "obs-2026-11-08-01",
+   "date": "2026-11-07T16:07:28Z",
+   "ticker": "ORCL",
+   "firm": "UBS",
+   "author": "Robert Ruple",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "UBS's tech sales desk flags the Friday headline that MSFT is winding down its deal to rent AI capacity from Oracle; ORCL could re-let the capacity, possibly at higher prices, but its reliance on the AI labs rises and ORCL CDS has widened, putting the debt back in focus.",
+   "excerpt": "Arguably ORCL could reassign that capacity to someone else at potentially higher prices, but it does increase the reliance and OCI share with the AI labs and ORCL CDS spreads have widened a bit putting the debt back in focus.",
+   "subject": "UBS: Tech Musings – Weekly Sentiment & Positioning",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08B0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-02",
+   "date": "2026-11-07T16:07:28Z",
+   "ticker": "MSFT",
+   "firm": "UBS",
+   "author": "Robert Ruple",
+   "role": "Specialist sales",
+   "kind": "Positioning / flows",
+   "tone": "Positive",
+   "position": "Interest rising",
+   "summary": "UBS's TMT desk says the biggest theme of the week was clients buying the hyperscalers and funding it by selling neocloud names, citing HOLT's view that the group is cheap with market-implied growth below consensus.",
+   "excerpt": "The biggest theme on our TMT desk this week: we saw was the buying of hyperscalers funded by Neo Cloud supply.",
+   "subject": "UBS: Tech Musings – Weekly Sentiment & Positioning",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08B0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-03",
+   "date": "2026-11-07T16:07:28Z",
+   "ticker": "AMZN",
+   "firm": "UBS",
+   "author": "Robert Ruple",
+   "role": "Specialist sales",
+   "kind": "Positioning / flows",
+   "tone": "Positive",
+   "position": "Interest rising",
+   "summary": "Same UBS desk flow: hyperscalers (AMZN among them) were bought this week, funded by neocloud sales.",
+   "excerpt": "The biggest theme on our TMT desk this week: we saw was the buying of hyperscalers funded by Neo Cloud supply.",
+   "subject": "UBS: Tech Musings – Weekly Sentiment & Positioning",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08B0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-04",
+   "date": "2026-11-07T16:07:28Z",
+   "ticker": "CRWV",
+   "firm": "UBS",
+   "author": "Robert Ruple",
+   "role": "Specialist sales",
+   "kind": "Positioning / flows",
+   "tone": "Negative",
+   "position": "Fading conviction",
+   "summary": "UBS's desk saw neocloud names supplied (sold) to fund hyperscaler buying; CRWV and NBIS both report next week.",
+   "excerpt": "The biggest theme on our TMT desk this week: we saw was the buying of hyperscalers funded by Neo Cloud supply.",
+   "subject": "UBS: Tech Musings – Weekly Sentiment & Positioning",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08B0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-05",
+   "date": "2026-11-07T16:07:28Z",
+   "ticker": "NBIS",
+   "firm": "UBS",
+   "author": "Robert Ruple",
+   "role": "Specialist sales",
+   "kind": "Positioning / flows",
+   "tone": "Negative",
+   "position": "Fading conviction",
+   "summary": "UBS's desk saw neocloud names sold to fund hyperscaler buys; NBIS is on next week's earnings list.",
+   "excerpt": "The biggest theme on our TMT desk this week: we saw was the buying of hyperscalers funded by Neo Cloud supply.",
+   "subject": "UBS: Tech Musings – Weekly Sentiment & Positioning",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08B0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-06",
+   "date": "2026-11-07T16:07:28Z",
+   "ticker": "LITE",
+   "firm": "UBS",
+   "author": "Robert Ruple",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "UBS's desk says the MRVL-LITE all-stock deal met mixed reactions with both stocks down, and LITE's willingness to sell raises questions about peak-cycle tightness, adding a sentiment overhang.",
+   "excerpt": "LITE’s willingness to sell despite potentially strong growth through 2030 is raising questions about peak-cycle tightness and the durability of the AI infrastructure cycle, adding another sentiment overhang to an already pressured trade",
+   "subject": "UBS: Tech Musings – Weekly Sentiment & Positioning",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08B0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-07",
+   "date": "2026-11-07T16:07:28Z",
+   "ticker": "MRVL",
+   "firm": "UBS",
+   "author": "Robert Ruple",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Mixed",
+   "position": "Not stated",
+   "summary": "UBS's desk notes MRVL frames the LITE deal as accelerating scale-up/scale-in, with a bull case ~14% accretive to CY28 EPS (~$15 pro forma), but the deal was received with mixed reactions and both stocks traded down.",
+   "excerpt": "the bull case potentially ~14% accretive to C2028 EPS and pushing pro-forma MRVL EPS toward ~$15",
+   "subject": "UBS: Tech Musings – Weekly Sentiment & Positioning",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08B0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-08",
+   "date": "2026-11-07T16:07:28Z",
+   "ticker": "DDOG",
+   "firm": "UBS",
+   "author": "Robert Ruple",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "UBS's desk lists DDOG among software names that missed or guided lower in another tough week for software, while AMD, ANET, NET and SMCI posted beats/raises.",
+   "excerpt": "another tough week for several software companies with more than a handful missing the mark or guiding lower (TEAM, DDOG, DT, HUBS, FIVN, BL, WK, FSLY, & FRSH)",
+   "subject": "UBS: Tech Musings – Weekly Sentiment & Positioning",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08B0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-09",
+   "date": "2026-11-07T16:07:28Z",
+   "ticker": "ANET",
+   "firm": "UBS",
+   "author": "Robert Ruple",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "UBS's desk counts ANET among the solid beat/raise prints of the week, evidence that idiosyncratic fundamentals still matter in the sell-off.",
+   "excerpt": "Companies like AMD, ANET, FROG, RPD, NET & SMCI all posted solid beats/raises",
+   "subject": "UBS: Tech Musings – Weekly Sentiment & Positioning",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08B0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-10",
+   "date": "2026-11-07T16:07:28Z",
+   "ticker": "QCOM",
+   "firm": "UBS",
+   "author": "Robert Ruple",
+   "role": "Specialist sales",
+   "kind": "Research relay",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "Relaying Arcuri's CEVA preview, UBS's desk says checks show Chinese OEMs moving low-tier 4G/5G designs to UNISOC to cut BOM costs, a share risk for QCOM and MediaTek; QCOM's print was also listed among the week's underwhelming semis.",
+   "excerpt": "Our checks suggest Chinese OEMs are increasingly evaluating/moving designs toward UNISOC as they look to manage BOM costs, potentially creating share opportunities versus MediaTek and Qualcomm across the lower tier of both 4G and 5G models.",
+   "subject": "UBS: Tech Musings – Weekly Sentiment & Positioning",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08B0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-11",
+   "date": "2026-11-07T16:08:14Z",
+   "ticker": "CRWV",
+   "firm": "Bernstein",
+   "author": "Justin Doran (via Tyler Seidman)",
+   "role": "Desk",
+   "kind": "Positioning / flows",
+   "tone": "Negative",
+   "position": "Fading conviction",
+   "summary": "Bernstein's desk (Doran) saw investors cut crowded AI leadership and sell semis, hardware, quantum and neoclouds on Thursday, with short-sale tickets rising and generalist money rotating into financials, healthcare and e-commerce.",
+   "excerpt": "Thursday we saw selling semis, hardware, quantum, neoclouds. The number of SS tickets increased over the past few days.",
+   "subject": "Bernstein Tech: AI’s Rocky {Balboa} quarter (= +), +20 spec sales ideas for 4Q, Desk flow color, Bernstein Research data center trajectory",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08C0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-12",
+   "date": "2026-11-07T16:08:14Z",
+   "ticker": "MSFT",
+   "firm": "Bernstein",
+   "author": "Tyler Seidman",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Bernstein's spec-sales 'safety' idea: Azure accelerated 600bp (bogey 300bp), the guide implies further acceleration and MSFT stays FCF-positive in FY27; most investors he speaks with do not see MSFT as a funding-flow headwind.",
+   "excerpt": "Most I speak with don’t believe MSFT will be a source of funding flow headwinds, particularly given the copilot beat and guide calling for growth to accelerate in 2Q27.",
+   "subject": "Bernstein Tech: AI’s Rocky {Balboa} quarter (= +), +20 spec sales ideas for 4Q, Desk flow color, Bernstein Research data center trajectory",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08C0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-13",
+   "date": "2026-11-07T16:08:14Z",
+   "ticker": "GOOG",
+   "firm": "Bernstein",
+   "author": "Tyler Seidman",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Bernstein's spec sales says the Search deceleration is a monetisation-timing problem, not an engagement one; the market's vibe is 'when, not if' AI flows into Search, and a low-to-mid 20x multiple still feels right.",
+   "excerpt": "The general vibe I get from the market right now on Search is that it’s a matter of when not if AI tailwinds begin to flow through here. A low to mid 20x multiple still feels right for GOOGL.",
+   "subject": "Bernstein Tech: AI’s Rocky {Balboa} quarter (= +), +20 spec sales ideas for 4Q, Desk flow color, Bernstein Research data center trajectory",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08C0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-14",
+   "date": "2026-11-07T16:08:14Z",
+   "ticker": "AMZN",
+   "firm": "Bernstein",
+   "author": "Tyler Seidman",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Bernstein's spec sales says AWS at 39% (and 40%+ in 2027/28) is driving EPS revisions, Alexa for Shopping eases the horizontal-agent overhang, and re:Invent should be a catalyst; a re-rating to mid-20x if that overhang fades.",
+   "excerpt": "If the horizontal agent overhang dissipates over the next few weeks, look for the multiple to re-rate back to the mid-20x range.",
+   "subject": "Bernstein Tech: AI’s Rocky {Balboa} quarter (= +), +20 spec sales ideas for 4Q, Desk flow color, Bernstein Research data center trajectory",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08C0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-15",
+   "date": "2026-11-07T16:08:14Z",
+   "ticker": "V",
+   "firm": "Bernstein",
+   "author": "Tyler Seidman",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Bernstein's spec sales says feedback on V stays positive on execution and agentic positioning after a print the market read with a positive skew (FY27 revenue +LDD).",
+   "excerpt": "Feedback on the stock remains positive around both execution and increasingly agentic positioning.",
+   "subject": "Bernstein Tech: AI’s Rocky {Balboa} quarter (= +), +20 spec sales ideas for 4Q, Desk flow color, Bernstein Research data center trajectory",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08C0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-16",
+   "date": "2026-11-07T16:08:14Z",
+   "ticker": "MA",
+   "firm": "Bernstein",
+   "author": "Tyler Seidman",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Bernstein's spec sales keeps MA in the safety bucket after a 3Q beat (revenue +14%, VAS +19%), while flagging the debate on a high-20s to 30x multiple.",
+   "excerpt": "secular tailwinds with VAS and solid earnings execution keeps this stock in the safety bucket exiting the year.",
+   "subject": "Bernstein Tech: AI’s Rocky {Balboa} quarter (= +), +20 spec sales ideas for 4Q, Desk flow color, Bernstein Research data center trajectory",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08C0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-17",
+   "date": "2026-11-07T16:08:14Z",
+   "ticker": "SPOT",
+   "firm": "Bernstein",
+   "author": "Tyler Seidman",
+   "role": "Specialist sales",
+   "kind": "Investor feedback",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Bernstein's spec sales says SPOT feedback since 3Q is largely positive on the catalyst path into year-end, with margin levers and buyback capacity.",
+   "excerpt": "feedback continues to be largely positive on the catalyst path into year-end + effective management execution into 2027.",
+   "subject": "Bernstein Tech: AI’s Rocky {Balboa} quarter (= +), +20 spec sales ideas for 4Q, Desk flow color, Bernstein Research data center trajectory",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08C0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-18",
+   "date": "2026-11-07T16:08:14Z",
+   "ticker": "AMAT",
+   "firm": "Bernstein",
+   "author": "Tyler Seidman",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "Bernstein's spec sales lists 'WFE expectations running too hot' (and HDD competition) among the negative subsector themes of this earnings cycle.",
+   "excerpt": "Negative subsector themes from this EPS cycle: HDD competition, WFE expectations running too hot, circular financing deals, funding flow events",
+   "subject": "Bernstein Tech: AI’s Rocky {Balboa} quarter (= +), +20 spec sales ideas for 4Q, Desk flow color, Bernstein Research data center trajectory",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08C0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-19",
+   "date": "2026-11-07T16:08:14Z",
+   "ticker": "STX",
+   "firm": "Bernstein",
+   "author": "Tyler Seidman",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "Bernstein's spec sales lists HDD competition among the negative subsector themes of this earnings cycle.",
+   "excerpt": "Negative subsector themes from this EPS cycle: HDD competition, WFE expectations running too hot",
+   "subject": "Bernstein Tech: AI’s Rocky {Balboa} quarter (= +), +20 spec sales ideas for 4Q, Desk flow color, Bernstein Research data center trajectory",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD08C0000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-20",
+   "date": "2026-11-07T13:27:07Z",
+   "ticker": "AMAT",
+   "firm": "Jefferies",
+   "author": "William Beavington",
+   "role": "Specialist sales",
+   "kind": "Research relay",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Jefferies' semis daily relays the US team's AMAT preview: another beat/raise with revenue guided HSD+ vs consensus +5%, focus on a concrete CY27 outlook as peers point to 30%+ WFE growth (print Thursday).",
+   "excerpt": "We look for another beat/raise, with revenue guided HSD+ vs. Consensus estimates for +5% on continued strength in leading-edge F/L and DRAM.",
+   "subject": "Global SEMIS Daily - Saturday - |1| What You Might Have Missed (US) |2| What You Might Have Missed (Europe) |3| Texas Data Centers |4| IFX - What Do We Expect? |5| IFX Auto Division Conf Call - 7th Dec 2026 - 2.30pm GMT / 9:30 ET",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD0820000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-21",
+   "date": "2026-11-07T13:27:07Z",
+   "ticker": "IFX",
+   "firm": "Jefferies",
+   "author": "William Beavington",
+   "role": "Specialist sales",
+   "kind": "Research relay",
+   "tone": "Mixed",
+   "position": "Not stated",
+   "summary": "Jefferies' European semis team calls the market's DC concern broadly justified and says it is too early to bottom-fish semis, but keeps a relative preference for IFX, Nokia, ams OSRAM and Aixtron.",
+   "excerpt": "Cyclically, we believe it is too early to bottom fish on semiconductor stocks. - We have a relative preference for IFX, Nokia, ams OSRAM and Aixtron in our coverage.",
+   "subject": "Global SEMIS Daily - Saturday - |1| What You Might Have Missed (US) |2| What You Might Have Missed (Europe) |3| Texas Data Centers |4| IFX - What Do We Expect? |5| IFX Auto Division Conf Call - 7th Dec 2026 - 2.30pm GMT / 9:30 ET",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD0820000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-22",
+   "date": "2026-11-07T13:27:07Z",
+   "ticker": "AIXA",
+   "firm": "Jefferies",
+   "author": "William Beavington",
+   "role": "Specialist sales",
+   "kind": "Research relay",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Jefferies' European team says its visits to ASML and Aixtron showed demand remains strong; AIXA is among its relative preferences.",
+   "excerpt": "Our visits to ASML and Aixtron revealed that demand remains strong, with ASML increasing its use of AI to increase capacity.",
+   "subject": "Global SEMIS Daily - Saturday - |1| What You Might Have Missed (US) |2| What You Might Have Missed (Europe) |3| Texas Data Centers |4| IFX - What Do We Expect? |5| IFX Auto Division Conf Call - 7th Dec 2026 - 2.30pm GMT / 9:30 ET",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD0820000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-23",
+   "date": "2026-11-07T13:27:07Z",
+   "ticker": "ASML",
+   "firm": "Jefferies",
+   "author": "William Beavington",
+   "role": "Specialist sales",
+   "kind": "Research relay",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "Same Jefferies Europe note: an ASML visit showed demand remains strong and ASML is using AI to increase capacity.",
+   "excerpt": "Our visits to ASML and Aixtron revealed that demand remains strong, with ASML increasing its use of AI to increase capacity.",
+   "subject": "Global SEMIS Daily - Saturday - |1| What You Might Have Missed (US) |2| What You Might Have Missed (Europe) |3| Texas Data Centers |4| IFX - What Do We Expect? |5| IFX Auto Division Conf Call - 7th Dec 2026 - 2.30pm GMT / 9:30 ET",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD0820000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-24",
+   "date": "2026-11-08T07:25:40Z",
+   "ticker": "ASML",
+   "firm": "JPMorgan",
+   "author": "Scott Silver",
+   "role": "Specialist sales",
+   "kind": "Desk opinion",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "JPM's Euro TMT specialist sees ASML, ASM International and Nokia as increasingly compelling on valuation with attractive 2027 growth; investors are questioning 2028+, and he expects them to return once positioning is flushed, but HFs are unlikely to re-gross before Christmas.",
+   "excerpt": "Across semis, I still believe there are some increasingly compelling opportunities, particularly ASM International, Nokia and ASML. These are names where valuations are becoming difficult to ignore and where the growth trajectory through 2027 remains highly attractive.",
+   "subject": "JPM | Silver Linings Euro TMT Weekly - Top Talking Points",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A9A3AB300000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-25",
+   "date": "2026-11-08T10:01:38Z",
+   "ticker": "AMZN",
+   "firm": "JPMorgan",
+   "author": "Gokul Hariharan",
+   "role": "Research",
+   "kind": "Management claim",
+   "tone": "Positive",
+   "position": "Not stated",
+   "summary": "JPM's Asia research (Hariharan, OW Alchip) says Alchip now guides Trainium3 revenue to grow >100% in 2027 on higher wafer/CoWoS allocation, with Trn4 near tape-out for a 4Q27 ramp at higher ASPs and allocation.",
+   "excerpt": "Alchip is now expecting stronger growth in Trn3, with revenues growing >100% in 2027 due to securing higher wafer and CoWoS allocation and stronger Trn3 demand.",
+   "subject": "Alchip Technologies: Stronger AWS ramp; second Fabless customer addition and optionality with GOOG; Stay OW",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A9A3AB350000",
+   "forwarded_by": null
+  },
+  {
+   "id": "obs-2026-11-08-26",
+   "date": "2026-11-07T13:28:00Z",
+   "ticker": "CRWV",
+   "firm": "Vanda Research",
+   "author": "Shekhar Kumar, Jens Nordvig et al.",
+   "role": "PB / flows",
+   "kind": "Positioning / flows",
+   "tone": "Negative",
+   "position": "Not stated",
+   "summary": "Vanda's weekly says credit spreads keep widening among the more leveraged AI players, particularly neoclouds, while hyperscaler bond issuance surged over the past two weeks.",
+   "excerpt": "credit spreads continue to widen among more leveraged AI players, particularly neoclouds",
+   "subject": "FW: Flows & Facts: Blue tsunami rocks the AI moat",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A84AD0830000",
+   "forwarded_by": "Rodrigo Nascimento (Capstone)"
+  },
+  {
+   "id": "obs-2026-11-08-27",
+   "date": "2026-11-08T02:27:31Z",
+   "ticker": "IREN",
+   "firm": "Gaetano (Substack)",
+   "author": "Gaetano",
+   "role": "Independent author",
+   "kind": "Desk opinion",
+   "tone": "Mixed",
+   "position": "Not stated",
+   "summary": "Independent author Gaetano's (paywalled, preview only) data-center backlash piece flags IREN's real delivery progress and customer funding alongside timing changes and contractual obligations.",
+   "excerpt": "IREN. Real delivery progress and customer funding, alongside timing changes and contractual obligations.",
+   "subject": "The Data Center Backlash Is Here. What Happens Next?",
+   "source_id": "00000000B631393D2F642040B19B70F93F8427620700C1A4BC1B9694F44D9FADFEFCFB028EAC00000000010C0000C1A4BC1B9694F44D9FADFEFCFB028EAC0005A9A3AB2A0000",
+   "forwarded_by": null
+  }
+ ],
+ "coverage_gaps": [
+  "No DAMNANG mail arrived in the window; SemiAnalysis's China Stargate piece was a preview only.",
+  "Several primary notes were read only as sales summaries or links: GS Pasquariello/George Lee AI podcast (link only), UBS Grinacoff derivatives note, UBS HOLT hyperscaler note, JPM Schlegel HF positioning, Bernstein DC research links.",
+  "Bodies are capped at 12k characters: UBS's earnings previews, Bernstein's 'beaten-up' spec-sales ideas and the GS floor note were cut off.",
+  "Gaetano's DC-backlash piece is paywalled (TL;DR only).",
+  "Weekend window: no Monday-open positioning yet; the systematic supply UBS expects into Monday is not observable."
+ ],
+ "source_notes": [
+  "Channel: Outlook desktop COM (desk_mail_collect.ps1); inbox lag 0.3 h; 78 messages screened, 56 bodies retrieved, ~22 read for this review.",
+  "Mail window 2026-11-07T11:07Z (prior to_utc minus 2 h) to now; newest received 2026-11-08T12:45Z.",
+  "Not re-logged as new claims: Jefferies' MRVL/LITE NDR (already logged 7 Nov), Bernstein Research's 27 GW at-risk sizing (logged 7 Nov), and Culpium's Jensen Huang piece (read 7 Nov).",
+  "Macro-only items (GS Pasquariello 'markets / macro', JPM See House View, Vanda, GS Crook floor note) feed the market read and themes; they carry no company-specific observations. Vanda notes were forwarded by Rodrigo Nascimento (Capstone).",
+  "Editorial weighting: desk/specialist voices (no ratings, no PTs) are weighted as positioning colour; the one rated-research item (JPM Hariharan on Alchip) is labelled Research. Gaetano is an independent author. Bloomberg-X and analog figures are taken from monitor.json (through 2026-11-06), not recomputed."
+ ]
+}
