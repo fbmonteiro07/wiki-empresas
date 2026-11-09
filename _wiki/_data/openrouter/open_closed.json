@@ -1,8 +1,8 @@
 {
- "generated": "2026-11-08T23:17:59",
+ "generated": "2026-11-09T08:05:06",
  "source": "https://openrouter.ai/rankings",
- "chart_file": "_data/openrouter/raw/2026-11-02/model_chart.json",
- "chart_asof": "2026-11-02 10:37 UTC",
+ "chart_file": "_data/openrouter/raw/2026-11-09/model_chart.json",
+ "chart_asof": "2026-11-09 10:19 UTC",
  "method": {
   "totals": "OpenRouter calendar-week chart feed (top-9 models + Others); complete weeks only",
   "split_full": "trailing-7-day rank_week snapshots (every model); Monday snapshot d covers chart week d-7; offset_days flags Tuesday captures",
@@ -10,23 +10,6 @@
   "classification": "open-weight = Hugging Face link on the OpenRouter listing (hugging_face_id / hf_slug); proprietary = listed without one; unattributed = stealth previews (stealth/*, openrouter/*-alpha) and routers; unlisted models fall back to or_build.LAB author capture + gpt-oss/gemma/llama/phi/mistral overrides"
  },
  "weeks": [
-  {
-   "x": "2025-11-03",
-   "total": 5828207285497.0,
-   "top9": {
-    "open": 337514431030.0,
-    "closed": 3224165102925.0,
-    "unattributed": 2266527751542.0,
-    "stealth": 0.0,
-    "others": 2266527751542.0
-   },
-   "share": {
-    "open": 0.05791050566610355,
-    "closed": 0.5532001428549156,
-    "unattributed": 0.3888893514789809
-   },
-   "basis": "top9"
-  },
   {
    "x": "2025-11-10",
    "total": 5927714421614.0,
@@ -908,16 +891,16 @@
     "others": 53522124129984.0
    },
    "full": {
-    "open": 0.5272599616862657,
-    "closed": 0.23963890695553416,
+    "open": 0.527268058279004,
+    "closed": 0.23963081036279577,
     "unattributed": 0.23310113135820024
    },
    "full_tokens": 165855908206024.0,
    "snapshot": "2026-10-05",
    "offset_days": 0,
    "share": {
-    "open": 0.5272599616862657,
-    "closed": 0.23963890695553416,
+    "open": 0.527268058279004,
+    "closed": 0.23963081036279577,
     "unattributed": 0.23310113135820024
    },
    "basis": "full"
@@ -933,16 +916,16 @@
     "others": 66173540545806.0
    },
    "full": {
-    "open": 0.7044188906204816,
-    "closed": 0.2711585964679391,
+    "open": 0.7048798836474254,
+    "closed": 0.27069760344099525,
     "unattributed": 0.024422512911579333
    },
    "full_tokens": 171842498417318.0,
    "snapshot": "2026-10-12",
    "offset_days": 0,
    "share": {
-    "open": 0.7044188906204816,
-    "closed": 0.2711585964679391,
+    "open": 0.7048798836474254,
+    "closed": 0.27069760344099525,
     "unattributed": 0.024422512911579333
    },
    "basis": "full"
@@ -958,16 +941,16 @@
     "others": 67468271267061.0
    },
    "full": {
-    "open": 0.7213806542538123,
-    "closed": 0.27861934281850337,
+    "open": 0.7226387769624981,
+    "closed": 0.2773612201098175,
     "unattributed": 2.9276843528869576e-09
    },
    "full_tokens": 164043982243650.0,
    "snapshot": "2026-10-19",
    "offset_days": 0,
    "share": {
-    "open": 0.7213806542538123,
-    "closed": 0.27861934281850337,
+    "open": 0.7226387769624981,
+    "closed": 0.2773612201098175,
     "unattributed": 2.9276843528869576e-09
    },
    "basis": "full"
@@ -983,16 +966,16 @@
     "others": 72053202018421.0
    },
    "full": {
-    "open": 0.7271674378536027,
-    "closed": 0.2728325605167645,
+    "open": 0.7315462234316996,
+    "closed": 0.26845377493866773,
     "unattributed": 1.6296327065522878e-09
    },
    "full_tokens": 188039304051712.0,
    "snapshot": "2026-10-26",
    "offset_days": 0,
    "share": {
-    "open": 0.7271674378536027,
-    "closed": 0.2728325605167645,
+    "open": 0.7315462234316996,
+    "closed": 0.26845377493866773,
     "unattributed": 1.6296327065522878e-09
    },
    "basis": "full"
@@ -1008,49 +991,73 @@
     "others": 73403069810112.0
    },
    "full": {
-    "open": 0.706658528305559,
-    "closed": 0.29334100713204175,
-    "unattributed": 4.645623992570142e-07
+    "open": 0.720299937028992,
+    "closed": 0.2797000627826027,
+    "unattributed": 1.8840530973228335e-10
    },
    "full_tokens": 193593270018919.0,
    "snapshot": "2026-11-02",
    "offset_days": 0,
    "share": {
-    "open": 0.706658528305559,
-    "closed": 0.29334100713204175,
-    "unattributed": 4.645623992570142e-07
+    "open": 0.720299937028992,
+    "closed": 0.2797000627826027,
+    "unattributed": 1.8840530973228335e-10
+   },
+   "basis": "full"
+  },
+  {
+   "x": "2026-11-02",
+   "total": 209517413463749.0,
+   "top9": {
+    "open": 116259006608528.0,
+    "closed": 13978636360366.0,
+    "unattributed": 79279770494855.0,
+    "stealth": 0.0,
+    "others": 79279770494855.0
+   },
+   "full": {
+    "open": 0.7405139327039963,
+    "closed": 0.23912821622499478,
+    "unattributed": 0.020357851071008914
+   },
+   "full_tokens": 209517413463749.0,
+   "snapshot": "2026-11-09",
+   "offset_days": 0,
+   "share": {
+    "open": 0.7405139327039963,
+    "closed": 0.23912821622499478,
+    "unattributed": 0.020357851071008914
    },
    "basis": "full"
   }
  ],
  "latest_full": {
-  "x": "2026-10-26",
-  "snapshot": "2026-11-02",
+  "x": "2026-11-02",
+  "snapshot": "2026-11-09",
   "offset_days": 0,
-  "total": 193593270018919.0,
-  "open": 0.706658528305559,
-  "closed": 0.29334100713204175,
-  "unattributed": 4.645623992570142e-07
+  "total": 209517413463749.0,
+  "open": 0.7405139327039963,
+  "closed": 0.23912821622499478,
+  "unattributed": 0.020357851071008914
  },
  "first_week": {
-  "x": "2025-11-03",
-  "total": 5828207285497.0,
-  "open": 0.05791050566610355,
-  "closed": 0.5532001428549156,
-  "unattributed": 0.3888893514789809,
+  "x": "2025-11-10",
+  "total": 5927714421614.0,
+  "open": 0.039080570317846716,
+  "closed": 0.5300925842497707,
+  "unattributed": 0.4308268454323826,
   "basis": "top9"
  },
  "last_week": {
-  "x": "2026-10-26",
-  "total": 193593270018919.0,
+  "x": "2026-11-02",
+  "total": 209517413463749.0,
   "basis": "full"
  },
  "traffic_multiple": {
-  "vs_week": "2025-11-03",
-  "x": 33.21660684592661
+  "vs_week": "2025-11-10",
+  "x": 35.34539597585768
  },
  "named_model_class": {
-  "anthropic/claude-4-sonnet-20250522": "closed",
   "anthropic/claude-4.5-opus-20251124": "closed",
   "anthropic/claude-4.5-sonnet-20250929": "closed",
   "anthropic/claude-4.6-opus-20260205": "closed",
@@ -1078,13 +1085,13 @@
   "minimax/minimax-m2.1": "open",
   "minimax/minimax-m2.5-20260211": "open",
   "minimax/minimax-m2.7-20260318": "open",
-  "minimax/minimax-m2:free": "open",
   "minimax/minimax-m3-20260531": "open",
   "minimax/minimax-m3-20260531:free": "open",
   "minimax/minimax-m3.1-flash-20261019": "open",
   "minimax/minimax-m3.1-flash-20261019:free": "open",
   "moonshotai/kimi-k2.5-0127": "open",
   "moonshotai/kimi-k2.6-20260420": "open",
+  "moonshotai/kimi-k3.1-pro-20261023": "open",
   "nvidia/nemotron-3-super-120b-a12b-20230311:free": "open",
   "nvidia/nemotron-3-ultra-550b-a55b-20260604:free": "open",
   "openai/gpt-5.6-luna-20260709": "closed",
@@ -1106,6 +1113,7 @@
   "tencent/hy3-20260706:free": "open",
   "tencent/hy3-preview-20260421": "open",
   "tencent/hy3-preview-20260421:free": "open",
+  "tencent/hy4-20261104": "open",
   "tencent/hy4-preview-20260827": "open",
   "x-ai/grok-4-fast": "closed",
   "x-ai/grok-4.1-fast": "closed",
@@ -1123,5 +1131,5 @@
   "z-ai/glm-5.3-flash-20260826": "open"
  },
  "n_weeks": 52,
- "n_full_weeks": 16
+ "n_full_weeks": 17
 }
