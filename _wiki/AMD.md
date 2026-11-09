@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AMD` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\AMD.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-06 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-09 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $51.4bn | $96.9bn |
 | Gross profit | $28.5bn | $53.3bn |
 | Gross margin | 55.5% | 55.0% |
-| EBITDA | $15.3bn | $34.3bn |
-| EPS | $7.79 | $17.61 |
+| EBITDA | $15.3bn | $34.4bn |
+| EPS | $7.79 | $17.62 |
 | Capex | $1.8bn | $2.8bn |
-| OCF (≈EBITDA) | $15.3bn | $34.3bn |
+| OCF (≈EBITDA) | $15.3bn | $34.4bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

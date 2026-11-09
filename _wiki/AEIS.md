@@ -3,17 +3,17 @@
 _Wiki · generated 2026-07-02 · sources: 9 broker reports ingested 2026-07-02 (HTML copies in `relatórios bons\`) — no filings/transcripts on disk yet. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-06 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-09 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $2.4bn | $3.3bn |
-| Gross profit | $997m | $1.4bn |
+| Gross profit | $999m | $1.4bn |
 | Gross margin | 41.1% | 42.7% |
-| EBITDA | $585m | $905m |
+| EBITDA | $585m | $910m |
 | EPS | $11.13 | $17.72 |
-| Capex | $176m | $190m |
-| OCF (≈EBITDA) | $585m | $905m |
+| Capex | $177m | $194m |
+| OCF (≈EBITDA) | $585m | $910m |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

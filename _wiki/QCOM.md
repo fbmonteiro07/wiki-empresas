@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\QCOM` (10-K FY25, 10-Q Q2 FY26, transcripts) · `_briefings` roll-up. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-06 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-09 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -13,7 +13,7 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\QCOM` (10-K FY25, 10-Q
 | Gross profit | $22.2bn | $24.8bn |
 | Gross margin | 54.0% | 52.5% |
 | EBITDA | $13.2bn | $14.3bn |
-| EPS | $9.18 | $10.26 |
+| EPS | $9.14 | $10.17 |
 | Capex | $1.8bn | $2.5bn |
 | OCF (≈EBITDA) | $13.2bn | $14.3bn |
 

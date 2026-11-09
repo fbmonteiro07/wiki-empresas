@@ -3,7 +3,7 @@
 _Wiki · created 2026-10-31 · research cutoff 2026-10-31 · email review 2026-11-01 · [Financials](themes/financials.md) · [Company index](00_INDEX.md). Source archive: [COIN](_dashboards/financials-sources.html#COIN)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-06 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-09 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -11,7 +11,7 @@ _Wiki · created 2026-10-31 · research cutoff 2026-10-31 · email review 2026-1
 | Gross profit | $4.6bn | $5.4bn |
 | Gross margin | 85.8% | 84.2% |
 | EBITDA | $1.3bn | $2.2bn |
-| EPS | $0.07 | $2.71 |
+| EPS | $0.06 | $2.71 |
 | Capex | $41m | $49m |
 | OCF (≈EBITDA) | $1.3bn | $2.2bn |
 

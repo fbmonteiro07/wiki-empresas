@@ -3,7 +3,7 @@
 _Wiki · generated 2026-11-06 · sources: `E:\Wiki Felipe empresas\IREN`: 10-K FY25 + FY26, 10-Qs Nov-25 → Nov-26, 20-F/A, Q4 FY26 and Q1 FY27 8-K press releases, and the [Q1 FY27 call transcript](../IREN/transcripts/IREN_Q1-FY27-earnings_2026-11-05.md). Also BBG consensus (pulled 2026-11-06, pre-revision), and corpus mentions on [[NBIS]], [[CRWV]], [[MSFT]], [[NVDA]], [[PWR]] and [ai-compute-deals](themes/ai-compute-deals.md). Fiscal year ends **30 June**: Q1 FY27 = the Sep-26 quarter. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-06 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-09 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
