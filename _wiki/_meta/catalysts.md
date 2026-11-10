@@ -52,24 +52,24 @@ _Generated 2026-11-10 · parsed from every page's 'Catalysts / what to watch'. D
 | 2029-12-08 | MU | 🆕 **2026-10-16 — the buyback now has a formula and a window, from Micron IR.** From **2026-12-09 through 2029-12-08** Micron may repurchase up to **trailing-12-month FCF − CHIPS proceeds received in t |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (7)
+## ⏰ Passed — need a post-mortem (4)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-11-09 | SNDK | 🆕 **2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split:** record date, issue of seven additional shares after the close, then split-adjusted trading (8-K Item 8.01, 2026-10-29). ➤ From 11-20, BBG cons |
 | 2026-11-09 | QCOM | 🆕 **2026-11-09: Bernstein Qualcomm HQ visit with CEO, CFO and Head of Data Center** (Bernstein · Tyler Seidman events list, 09-29/09-30); 2026-10-01 Susquehanna "The AI Arms Race" session lists QCOM a |
 | 2026-11-09 | QCOM | 🆕 **2026-11-09: Bernstein QCOM HQ visit** (Bernstein TMT sales · Tyler Seidman, event notice, 2026-09-28). |
 | 2026-11-09 | QCOM | **🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed** (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. **B |
-| 2026-11-09 | META | 🆕 **2026-11-09 — the go-to-market is taking shape (The Information · Jyoti Mann, "Meta Plans Sales Team, Consulting Partnerships to Win Over Big Companies", 2026-11-09 — journalism, not broker researc |
 | 2026-11-09 | KKR | **2026-11-09 — Q3 results and call**, announced by KKR on 2026-09-29. Test fee activation, insurance earnings, K-Series flows and realization progress. [Company announcement](https://media.kkr.com/new |
-| 2026-11-09 | CME | Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract ends 2026-11-09 (Duffy said he "believe[s]" so; filed under a full 40.3 review), then the agency decides ([Duf |
 
-## ✅ Resolved (391)
+## ✅ Resolved (394)
 
 | Date | Ticker | Verdict |
 |---|---|---|
+| 2026-11-09 | SNDK | neutral — MECHANICAL (wiki-catalyst 2026-11-10): 11-09 is only the record date of the 8-for-1 forward split (8-K Item 8.01, 2026-10-29). No thesis content. The dates that matter are still ahead: seven additional shares issued after the close 2026-11-19, split-adjusted trading 2026-11-20 — from then BBG consensus/PTs/snapshot are ÷8 while the page's per-share figures are pre-split. |
+| 2026-11-09 | META | neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-10): 11-09 is the source date of The Information (Jyoti Mann) piece on Meta's SMB sales organisation and consulting/SI partnerships for Muse Code / business agents — journalism, not a company primary. The tests it sets (first named enterprise SI deal; an Enterprise Platform revenue line) score at the Q4 call (~late Jan 2027). |
+| 2026-11-09 | CME | neutral — DATE MARKER, NOT A VERDICT EVENT (wiki-catalyst 2026-11-10): 11-09 is the end of the CFTC comment period on the Silicon Data H100-rental-index contract as Duffy 'believe[d]' it on the Q3 call (2026-10-21; full 40.3 review). Nothing in the corpus on comments filed, an extension or a decision. The scoreable event is the CFTC decision (undated) and then first-trade volume; nothing resolved. |
 | 2026-11-06 | SMCI | neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-07): 11-06 is the 10-Q filing that settled the Wolfe share-count watch item, already scored inside the SMCI 2026-11-03 line (reported non-GAAP diluted 764.4m vs 761m guided; as-converted ~895m incl. 4.3125m mandatory convertible preferred x 30.304, Capstone arithmetic on 10-Q terms). No separate catalyst; nothing further to score until the F2Q27 print. |
 | 2026-11-05 | TSLA | neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-06): 11-05 is the source date of the Fox Investimentos AV tracker (Cabral, 2026-11-05) — Fort Worth 7th unsupervised city 11-02, 1,204 TX registrations vs Waymo 1,259 (Tesla North via Fox). Buy-side compilation, not a Tesla primary. The dated tests it lists (Cybercab Dallas 'November', NHTSA Cybercab probe response, '25-50% of the U.S.' by YE26) are still ahead. |
 | 2026-11-05 | ORCL | neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-06): 11-05 is the ingest date of an UNCONFIRMED insider call (recorded 10-23) moving the NMED air-permit hearing to Dec. 5 with a ruling hoped for ~Dec. 30-31. The real catalysts are Dec. 5 / ~Dec. 30 (and ERCOT's Dec. 10 audit filing, WFS 11-04); nothing resolved. |
