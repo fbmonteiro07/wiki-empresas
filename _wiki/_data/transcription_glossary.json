@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-11-09",
+ "_updated": "2026-11-10",
  "terms": {
   "Hixle AI": {
    "correct": "Higgsfield (AI video startup)",
@@ -8032,6 +8032,89 @@
    "ci": true,
    "rule": "Probable ASR of Michael Hurlston; keep UNCONFIRMED until a second source confirms.",
    "first_seen": "2026-11-09 (CASPA 2026 CEO Summit fireside, Intel CEO Lip-Bu Tan, YouTube ASR)"
+  },
+  "Jasse": {
+   "correct": "Jassy (Andy Jassy, Amazon CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR ('Andy Jasse on the earnings call').",
+   "first_seen": "2026-11-10 (Sources / Alex Heath, Matt Garman (AWS CEO) episode, YouTube ASR)"
+  },
+  "Cororeweave": {
+   "correct": "CoreWeave",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR in a neocloud/debt-markets question.",
+   "first_seen": "2026-11-10 (Sources / Alex Heath, Matt Garman (AWS CEO) episode, YouTube ASR)"
+  },
+  "Curo": {
+   "correct": "Kiro (AWS agentic IDE)",
+   "domain": "names",
+   "ci": false,
+   "rule": "YouTube ASR in the AWS app list ('Connect… Quick… Curo').",
+   "first_seen": "2026-11-10 (Sources / Alex Heath, Matt Garman (AWS CEO) episode, YouTube ASR)"
+  },
+  "B 10": {
+   "correct": "Baseten (inference provider)",
+   "domain": "names",
+   "ci": false,
+   "keep_when": [
+    "B 10 ?(chip|GPU|Blackwell)"
+   ],
+   "rule": "YouTube ASR in a list of inference providers ('B 10 fireworks modal foul').",
+   "first_seen": "2026-11-10 (Sources / Alex Heath, Matt Garman (AWS CEO) episode, YouTube ASR)"
+  },
+  "base 10": {
+   "correct": "Baseten (inference provider)",
+   "domain": "names",
+   "ci": true,
+   "keep_when": [
+    "\b(log|number|numeral|digit|decimal)\b"
+   ],
+   "rule": "YouTube ASR ('fireworks or base 10 optimizing an open weights model').",
+   "first_seen": "2026-11-10 (Sources / Alex Heath, Matt Garman (AWS CEO) episode, YouTube ASR)"
+  },
+  "modal foul": {
+   "correct": "Modal, fal (inference providers)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of fal.ai after Modal; match only the pair, 'foul' alone is an ordinary word.",
+   "first_seen": "2026-11-10 (Sources / Alex Heath, Matt Garman (AWS CEO) episode, YouTube ASR)"
+  },
+  "lin fireworks": {
+   "correct": "Lin [Qiao] of Fireworks AI (CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR ('I think it's lin fireworks'): the speaker names Fireworks' CEO by first name.",
+   "first_seen": "2026-11-10 (Sources / Alex Heath, Matt Garman (AWS CEO) episode, YouTube ASR)"
+  },
+  "duct DB": {
+   "correct": "DuckDB",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR; Amazon acquired DuckLabs (DuckDB) per the Q3'26 release.",
+   "first_seen": "2026-11-10 (Sources / Alex Heath, Matt Garman (AWS CEO) episode, YouTube ASR)"
+  },
+  "IM access analyzer": {
+   "correct": "IAM Access Analyzer (AWS)",
+   "domain": "acronyms",
+   "ci": true,
+   "rule": "YouTube ASR drops the A in IAM ('an IM permissions model… IM access analyzer').",
+   "first_seen": "2026-11-10 (Sources / Alex Heath, Matt Garman (AWS CEO) episode, YouTube ASR)"
+  },
+  "IM permissions": {
+   "correct": "IAM permissions (AWS)",
+   "domain": "acronyms",
+   "ci": true,
+   "rule": "see 'IM access analyzer'.",
+   "first_seen": "2026-11-10 (Sources / Alex Heath, Matt Garman (AWS CEO) episode, YouTube ASR)"
+  },
+  "neuros symbolic": {
+   "correct": "neurosymbolic (AI)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "YouTube ASR.",
+   "first_seen": "2026-11-10 (Sources / Alex Heath, Matt Garman (AWS CEO) episode, YouTube ASR)"
   }
  },
  "summary_traps": [
