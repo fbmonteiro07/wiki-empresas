@@ -1,0 +1,922 @@
+{
+ "_doc": "Hand-reviewed registry -> Aterio campus matches for aterio_registry_xchk.py. Key = 'ST|registry campus' exactly as in projects.csv; aterio = Aterio campus keys (ATERIO_DATA_CENTER_CAMPUS_UID, else the building UID); [] = reviewed, no match. Campuses not listed are auto-matched (shown as 'auto' on the page). A renamed registry campus drops out of this map and is re-matched automatically.",
+ "reviewed": "2026-11-09 (Aterio export 2026-08-31)",
+ "map": {
+  "AL|Applied Digital Brookwood campus (likely Delta Forge 2)": {
+   "aterio": [],
+   "note": "No Applied Digital / Brookwood / Tuscaloosa building in the 08-31 census."
+  },
+  "AL|Nebius AI factory (Oxmoor Valley, Lakeshore Pkwy)": {
+   "aterio": [
+    "a09a6de0-008d-11f1-988e-bfa48f5d69e6"
+   ],
+   "note": ""
+  },
+  "AZ|Compass El Mirage PHX-II (El Mirage Rd & Peoria Ave)": {
+   "aterio": [],
+   "note": "Aterio's Compass Phoenix campus is in Goodyear (active); nothing for PHX-II at El Mirage."
+  },
+  "AZ|EdgeCore Mesa campus (PH01) - expansion": {
+   "aterio": [
+    "2e2f4cbd-0adc-4ebc-b475-b8e850bdcbdb"
+   ],
+   "note": ""
+  },
+  "AZ|Novva Mesa campus (Project Borealis)": {
+   "aterio": [
+    "12fbd8dc-c552-4a62-832d-0b2a3768960d"
+   ],
+   "note": ""
+  },
+  "GA|Google Project Pegasus (411 Pegasus Pkwy)": {
+   "aterio": [
+    "0c47b340-3db0-11f1-a15d-61bf903176d0"
+   ],
+   "note": ""
+  },
+  "GA|Kingston Technology Hub (Thor Equities)": {
+   "aterio": [],
+   "note": "Georgia DRI #4835 was filed 2026-09-04, after the 08-31 export. Aterio's Project Springbank (Kingston, withdrawn) is an earlier filing and is not assumed to be this site."
+  },
+  "GA|Microsoft Rome campus 'ATL80' / Project Firecracker (0 Huffaker Rd)": {
+   "aterio": [
+    "6e1e4796-f172-49b0-b465-b4955b269d7a"
+   ],
+   "note": "Aterio 'Georgia 4, Microsoft Campus', Rome, Floyd County."
+  },
+  "GA|Nixon Technology Center (3G Investments, Four H Club Rd)": {
+   "aterio": [],
+   "note": "Georgia DRI #4853 is dated 2026-10-12, after the 08-31 export."
+  },
+  "GA|Northern Data Maysville": {
+   "aterio": [
+    "511b5f51-a2fd-11f1-88d3-232a07781ef7"
+   ],
+   "note": "Aterio names the Maysville campus 'RUM GROUP' (180 MW, announced). That supports the registry's own duplicate hypothesis with the 'Rum Group Georgia (Anthropic)' row."
+  },
+  "GA|OpenAI Project Camellia (Savannah Gateway Industrial Hub)": {
+   "aterio": [
+    "d43f6e70-85f3-11f1-8bdc-6372ff939d86"
+   ],
+   "note": ""
+  },
+  "GA|Project Arrowhead (Premier Data Center Development, Irwin County)": {
+   "aterio": [
+    "d2a89480-3754-11f1-80ad-e5a129f435fc"
+   ],
+   "note": ""
+  },
+  "GA|Rum Group Georgia data center (Anthropic compute deal)": {
+   "aterio": [],
+   "note": "Site not named in the source. Aterio's RUM GROUP campus in Maysville (180 MW) is matched to 'Northern Data Maysville' instead: the two registry rows may be one site (see that note)."
+  },
+  "IL|Joliet Technology Center (PowerHouse Data Centers / Hillwood), Bernhard & Rowell near Chicagoland Speedway": {
+   "aterio": [
+    "63834150-a2fc-11f0-b9e7-81c8bccd1bb9"
+   ],
+   "note": ""
+  },
+  "IN|AWS northern Indiana campuses (NIPSCO / NIPSCO GenCo ADS Contract)": {
+   "aterio": [
+    "a09619e0-0b31-11f0-aba1-4d96a40f0602",
+    "de1c34e0-5f57-11f1-8f0b-e9307062dc34"
+   ],
+   "note": "Aterio Hobart (Lake County) + Project Orion (Jasper County), both AWS in NIPSCO territory."
+  },
+  "KS|Red Wolf DCD hyperscale campus (near Kansas Speedway)": {
+   "aterio": [
+    "e218d780-140b-11f0-9f12-b71b57199b4d"
+   ],
+   "note": "Same name; Aterio 600 MW announced, provider not disclosed."
+  },
+  "LA|Applied Digital Delta Forge 1": {
+   "aterio": [
+    "6215a370-f7b2-11f0-a6be-d547b59275de"
+   ],
+   "note": ""
+  },
+  "LA|Meta Hyperion (Richland Parish)": {
+   "aterio": [
+    "88a54779-fac4-47fc-bcc5-9b95d690df4b"
+   ],
+   "note": ""
+  },
+  "MI|Google 'Project Cannoli' (Van Buren Twp, north of I-94 between Haggerty Rd and I-275)": {
+   "aterio": [
+    "3454c430-dc45-11f0-968d-f1555feac6d3"
+   ],
+   "note": ""
+  },
+  "MN|Scannell Monticello Data Center (spec site)": {
+   "aterio": [
+    "a2756fc0-b37b-11f0-9eab-ad25dd22327e"
+   ],
+   "note": ""
+  },
+  "MO|Cloverleaf Troy Campus (Cloverleaf Infrastructure)": {
+   "aterio": [],
+   "note": "No Cloverleaf / Troy / Lincoln County building in the census."
+  },
+  "MO|Google Project Mica (Northland)": {
+   "aterio": [
+    "3990127c-b7f2-47d8-94a1-a2a20c800752"
+   ],
+   "note": "Aterio 'Kansas City 2, Google Campus' (buildings named Project Mica, Clay County)."
+  },
+  "MO|Google Project Spade (New Florence)": {
+   "aterio": [
+    "62251780-549e-11f1-8e2c-277190063719"
+   ],
+   "note": ""
+  },
+  "MO|TerraWatt Midtown / Armory data center (Famous-Barr building)": {
+   "aterio": [
+    "4bafc850-98b1-11f0-b71a-ef1fdc4e377b"
+   ],
+   "note": ""
+  },
+  "ND|Fighting Pike Data Center (Critical Data House)": {
+   "aterio": [
+    "50b64a20-0c31-11f0-a4cc-3379ec6a5624"
+   ],
+   "note": ""
+  },
+  "NE|Gage County data center (Google/Tenaska, proposed)": {
+   "aterio": [],
+   "note": "No Gage County / Tenaska site in the census."
+  },
+  "NJ|Nebius / DataOne Vineland (S Lincoln Ave)": {
+   "aterio": [
+    "3fac91f6-ffd1-482b-a8a8-32b8bc15f038"
+   ],
+   "note": ""
+  },
+  "NV|Fleet/Tract SV RNO (South Valley, TRIC; name mapping inferred)": {
+   "aterio": [
+    "2bc3dc3f-cb28-4946-ab32-0a456e898c1f"
+   ],
+   "note": "2026-11-09: = Aterio 'South Valley Technology Park' (KOLO 2026-05-20, Baxtel: 200 MW IT, 144 MW temporary gas plant, NVIDIA link all match). The registry rows only Building 1; Aterio's buildings 2-5 (920 MW facility, announced, 2028-12..2029-12) are not added. Which bond funds which Tract site (KOLO/Aterio: $4.6bn PR RNO; registry: $3.8bn SV RNO) is unresolved."
+  },
+  "NV|PowerHouse Reno (TRIC)": {
+   "aterio": [
+    "aa343ef6-2080-420f-af8a-e5d283cb0af6"
+   ],
+   "note": ""
+  },
+  "NY|Blockfusion Niagara Falls (North East Data LLC, 5380 Frontier Ave)": {
+   "aterio": [],
+   "note": "No Blockfusion / North East Data building in the census (Aterio's Niagara Digital Campus is Urbacon's)."
+  },
+  "NY|Riverview Innovation & Technology Campus (ex-Tonawanda Coke, River Rd)": {
+   "aterio": [
+    "8af34f70-172b-11f1-9095-1d096bbcdd34"
+   ],
+   "note": ""
+  },
+  "OH|OpenAI Stargate Lordstown (SoftBank; ex-Foxconn/Lordstown Motors plant)": {
+   "aterio": [
+    "ec90e1f0-9965-11f0-a09c-85d25eb02b33"
+   ],
+   "note": ""
+  },
+  "OK|Google OG&E-served campuses (Stillwater + 2 Muskogee County sites)": {
+   "aterio": [
+    "98128230-05d8-11f0-84dd-dbf3bb7d8b16",
+    "3f95da20-cbe5-11f0-8fee-db2a3ffd9a7f",
+    "c916a530-cbe1-11f0-8fee-db2a3ffd9a7f"
+   ],
+   "note": "Stillwater + Council Hill + Summit (the two Muskogee County campuses)."
+  },
+  "PA|Nebius Highridge (Highridge Business Park, Butler Twp)": {
+   "aterio": [
+    "677af560-8469-11f1-a316-25ac603e026d"
+   ],
+   "note": ""
+  },
+  "SD|Sioux Falls hyperscale data center (Gemini Data Center SD)": {
+   "aterio": [
+    "bdd31490-2219-11f1-9702-d948b8e758a3"
+   ],
+   "note": "Aterio 'Sioux Falls Technology Park', 500 MW announced, provider not disclosed."
+  },
+  "TN|xAI/SpaceX Colossus II - Memphis (Tulane Rd)": {
+   "aterio": [
+    "f7121910-17f9-11f1-8b43-1f60c5667965"
+   ],
+   "note": "Aterio 'xAI Colossus 2 Campus' in Memphis (it also holds the Minihard building)."
+  },
+  "TN|xAI/SpaceX MiniHard": {
+   "aterio": [
+    "f7121910-17f9-11f1-8b43-1f60c5667965"
+   ],
+   "note": "The Minihard building sits in Aterio's Memphis 'xAI Colossus 2 Campus'."
+  },
+  "TX|Cipher Stingray": {
+   "aterio": [
+    "76e8f661-9048-11f1-bc05-cdfa278e71d1"
+   ],
+   "note": ""
+  },
+  "TX|CloudBurst San Marcos Gigacenter": {
+   "aterio": [
+    "4d548ef0-c4b4-11f0-8788-73e4b7266320"
+   ],
+   "note": "Aterio 'CloudBurst Texas Flagship' (New Braunfels, Comal County, 1.2 GW)."
+  },
+  "TX|Core Scientific Pecos": {
+   "aterio": [
+    "bd6c5b70-1be2-11f1-8ffc-f936f747af90"
+   ],
+   "note": ""
+  },
+  "TX|CyrusOne Bosque County (Thad Hill Energy Center powered land)": {
+   "aterio": [
+    "a6c73a90-6e57-11f0-9eac-5beef9d53518"
+   ],
+   "note": ""
+  },
+  "TX|Data City Texas (Energy Abundance)": {
+   "aterio": [
+    "37e642f0-08dc-11f0-9548-433c80f3235c"
+   ],
+   "note": "Aterio 'Data City', Laredo."
+  },
+  "TX|Edged Fort Worth DFW02 (Veale Ranch / Project Outpost)": {
+   "aterio": [
+    "d32c8540-6263-11f0-954a-ddab5469f3f9"
+   ],
+   "note": ""
+  },
+  "TX|Fermi America Project Matador": {
+   "aterio": [
+    "da3a3e80-5373-11f0-856b-bd065fb7a39b"
+   ],
+   "note": ""
+  },
+  "TX|Galaxy Helios": {
+   "aterio": [
+    "721b3000-d61f-11f0-a063-fddc71ee64ea",
+    "d8018ce1-91e3-11f1-8e58-cdd2e3a12795",
+    "19dd2391-91e4-11f1-974c-5d028f9d14c9"
+   ],
+   "note": "Aterio splits Dickens County into Helios, Helios III and Helios IV; III and IV are dated 2031 and later."
+  },
+  "TX|Google Meitner Energy Center (Intersect; Project Pumpkin)": {
+   "aterio": [
+    "7cc3a3e0-02d2-11f1-950c-49d672afb0db"
+   ],
+   "note": ""
+  },
+  "TX|Google South Haskell (THM campus, ex-Musselman Tech)": {
+   "aterio": [
+    "ddd9ad90-c3db-11f0-b936-0771c343ce3d"
+   ],
+   "note": "Aterio South Haskell County campus (building THM1A, Lueders, Jones County). The auto-match had picked North Haskell (closer to the registry city centroid); North Haskell is a separate Google campus the registry does not carry."
+  },
+  "TX|Google Wilbarger County (Project Rise, AES co-located)": {
+   "aterio": [
+    "a088be00-11cd-11f1-9cef-4340a6ebe049"
+   ],
+   "note": ""
+  },
+  "TX|Meta El Paso (Sopaipilla JV: BlackRock GIP/HPS 80% / Meta 20%)": {
+   "aterio": [
+    "67caab70-aa01-11f0-9be9-0d27cc6e315a"
+   ],
+   "note": ""
+  },
+  "TX|Nscale Ward County (Ionic Digital site)": {
+   "aterio": [
+    "8fbb13d0-43e5-11f1-b154-4f0d5ef015ae"
+   ],
+   "note": "Probable: Aterio's Ionic Digital campus is 'Cedarvale AI Campus' in Pecos (Reeves County); Nscale names Ward County. Aterio's Ward County entry (West Texas HPC, Circe Energy) is a different developer."
+  },
+  "TX|Pacifico Energy GW Ranch": {
+   "aterio": [
+    "29cae850-8dc6-11f0-81c2-13e336d01528"
+   ],
+   "note": "Aterio 'GW Ranch Project' (Pecos County, 5.0 GW) lists the provider as Amazon AWS."
+  },
+  "TX|Prime DFW02 (Garland)": {
+   "aterio": [],
+   "note": "No Prime building in Garland in the census."
+  },
+  "TX|Prime DFW04 (Benbrook / west Fort Worth)": {
+   "aterio": [],
+   "note": "No Prime building in Benbrook / west Fort Worth in the census."
+  },
+  "TX|Project Kilby (Chevron Energy Forge One / Microsoft)": {
+   "aterio": [
+    "69fe8890-d0a7-11f0-a35b-4ffe7c653579"
+   ],
+   "note": ""
+  },
+  "TX|Stargate Milam County (SB Energy)": {
+   "aterio": [
+    "89f595e0-31aa-11f0-9944-cb8742655d39"
+   ],
+   "note": ""
+  },
+  "TX|Texas Critical Data Centers (New Era Energy & Digital)": {
+   "aterio": [
+    "7cf78f90-2ddc-11f1-b100-bd9583ddf1cf"
+   ],
+   "note": ""
+  },
+  "TX|Vantage Frontier (Stargate Shackelford)": {
+   "aterio": [
+    "6e36a680-6bea-11f0-bd27-b1d39a0cf4bc"
+   ],
+   "note": ""
+  },
+  "VA|Chirisa Technology Park CTP-02 / CTP-03 (PowerHouse)": {
+   "aterio": [
+    "b7c0148e-bff3-4ba4-ad36-e30bd8b2edfb"
+   ],
+   "note": "Aterio 'CTP Campus, Richmond' (buildings CTP-02/CTP-03)."
+  },
+  "VA|EdgeCore Louisa (Shannon Hill Regional Business Park)": {
+   "aterio": [
+    "aa7f76d0-51eb-11f0-bee1-49f53bb58db1"
+   ],
+   "note": ""
+  },
+  "VA|PowerHouse / Chirisa Technology Parks Chesterfield": {
+   "aterio": [
+    "33c40757-11e8-40db-abac-27f012285af9"
+   ],
+   "note": "Aterio 'Digital Drive Campus' (Power House & Chirisa, Chester)."
+  },
+  "VA|Village Place Technology Park": {
+   "aterio": [
+    "9d4da2e7-a600-454c-83a8-876d68e9839f"
+   ],
+   "note": ""
+  },
+  "WY|Google Project Tembo (fka Project Jade, Crusoe/Tallgrass)": {
+   "aterio": [
+    "aa21c980-6970-11f0-a75c-afb79714b776"
+   ],
+   "note": ""
+  },
+  "VA|NTT Gainesville (VA)": {
+   "aterio": [
+    "88139409-f319-4020-8412-722289d55883"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "VA|Google Project Peanut (Chester, Bermuda Hundred Rd)": {
+   "aterio": [
+    "bb8d6a30-89d2-11f0-939a-dddb2b101045"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "VA|AWS EDS North / Renaissance Park (Herndon, IAD500-503)": {
+   "aterio": [
+    "a4a34623-b709-4315-8a0a-db3007a2c957"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "VA|AWS Willard (Chantilly)": {
+   "aterio": [
+    "5fece619-bae0-4983-a026-5bd36135c7da"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "VA|CloudHQ Manassas MDC Campus (Harry J Parrish Blvd)": {
+   "aterio": [
+    "5228ed41-fe30-42e1-82df-ccb79ed8c0ec"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "MD|Rowan Bauxite (Quantum Frederick, ex-Alcoa Eastalco)": {
+   "aterio": [
+    "5727efe0-5203-11f0-a146-2fdca8ed8a6a",
+    "a4ea44b0-51f1-11f0-a146-2fdca8ed8a6a",
+    "b02ed920-5210-11f0-a146-2fdca8ed8a6a"
+   ],
+   "note": "2026-11-09: Aterio Bauxite I, II and III. Bauxite I (4 bldgs, 231 MW facility) is not rowed: Quinbrook says it was delivered late-25, while Aterio (85-95% built, activation 2026-09..2027-03) and Baxtel (1B-1D operational 2026) likely track AWS fit-out. Aterio dates Bauxite III 2027-06/2027-09/2028-06 vs the registry's single 2027-03 row."
+  },
+  "VA|AWS Wellington (Bristow / Gainesville)": {
+   "aterio": [
+    "c8fdbddd-bf4b-45d3-bdcb-7c2fe8072476"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "VA|Meta Henrico (Project Tropical, Portugee Rd)": {
+   "aterio": [
+    "5a2f216f-f59f-437a-8595-f52e1e3887d5"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "VA|DataBank Culpeper (IAD5/IAD6, Germanna Hwy)": {
+   "aterio": [
+    "f345c448-db79-409a-8d11-625cfe41a037"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "VA|AWS Light Speed Plaza / Ladbrook Dr (Dulles)": {
+   "aterio": [
+    "1e369080-ae04-11f0-80bc-892c90d36165"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "VA|AWS Dean Drive (Manassas)": {
+   "aterio": [
+    "8ca9bc5b-09b1-4c5d-9791-d371dc640c22"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "VA|AWS John Mosby / Reeds Farm (Stone Ridge)": {
+   "aterio": [
+    "d7ca5353-03b0-427f-a57e-ddcb337df386"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "TX|Matrix Data Center Campus (MSB Global), Sulphur Springs": {
+   "aterio": [
+    "c9072250-5c37-11f0-982c-a335c717b3fd"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "TX|EdgeConneX Austin (Cedar Creek) - first campus": {
+   "aterio": [
+    "204677f0-f314-11f0-a3b0-41ba743a0637"
+   ],
+   "note": "2026-11-09: Aterio 'Austin, EdgeConnex Campus' (AUS02; same TDLR TABS2025023484, 96 MW, 2026-12). The earlier auto-match to 'Campus 3' (1751 FM 20) was wrong. Aterio's AUS01/03/04 (240 MW facility, 'Construction') are left out on purpose (registry notes)."
+  },
+  "TX|AWS Horizon Junction (Floyd County)": {
+   "aterio": [
+    "08221a61-91ef-11f1-bfc8-6725744e084a"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "TX|IREN Sweetwater 2": {
+   "aterio": [
+    "d6f58cd0-ba97-11f0-b907-43c33fd259b0"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "TX|Aligned Project Caprock (Abernathy)": {
+   "aterio": [
+    "eea079a0-3448-11f1-a8af-3fcd7bb87ad5"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "LA|STACK / AWS North Caddo (Blanchard, State Line Rd)": {
+   "aterio": [
+    "17b978a0-1121-11f1-bd56-cb0dbcb2d028"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "TX|Tesla Cortex 2 (Giga Texas)": {
+   "aterio": [
+    "a4b06e00-65e8-11f1-9d03-3586af901cf0",
+    "a29ffa20-dba7-11f0-b761-bd3e306bc6c1"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check. Aterio carries Cortex 2.0 phase 1 and phase 2 as two campus-less buildings."
+  },
+  "OK|Meta Project Anthem (Tulsa)": {
+   "aterio": [
+    "5a951290-3fcd-11f0-b3a0-4df125309851"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "TX|PowerHouse Irving (Las Colinas)": {
+   "aterio": [
+    "8ca5919c-bd65-481d-b787-777f3f5fdb6e"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "AR|Google West Memphis (Project Pyramid)": {
+   "aterio": [
+    "4e60a900-4034-11f0-9c7c-d3fabbeef7f4"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "TX|PowerHouse / Provident Grand Prairie (Midlothian)": {
+   "aterio": [
+    "519d2455-d4d8-4144-8cd9-324687e87246"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "IL|CloudHQ ORD Mount Prospect (ex-United HQ)": {
+   "aterio": [
+    "81ece619-f52a-48be-b304-7d9acb1d66ba"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "OH|EdgeConneX New Albany (Johnstown; Innovation Campus Way + Clover Valley Rd)": {
+   "aterio": [
+    "2d1684a0-b388-11f0-a5a1-37f7131375af"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "NY|Stream U.S. Data Centers at STAMP (Town of Alabama)": {
+   "aterio": [
+    "6d0b79e0-1be7-11f1-84dc-a97297b11041",
+    "da787a00-1be7-11f1-b8fb-a7f2a7c11747"
+   ],
+   "note": "2026-11-09: + 'North Campus Science, Technology & Advanced Manufacturing Park (STAMP)' (same site, found in the Aterio-only review)."
+  },
+  "MO|Crusoe Warrenton (MO)": {
+   "aterio": [
+    "02b44920-0c2c-11f1-9dd1-9d38a9cf7109"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "OH|Meta Piqua": {
+   "aterio": [
+    "95169df0-ba9b-11f0-b907-43c33fd259b0"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "PA|PowerHouse PAX-1 Carlisle (Middlesex Twp)": {
+   "aterio": [
+    "bf2cfdf3-a80a-4b31-b04c-6e8c9aa12f67"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "WI|Microsoft Fairwater Wisconsin": {
+   "aterio": [
+    "1b13063d-c120-4af0-8204-003afd018a98",
+    "71a4b843-85d8-4b62-b6a4-4b56f8e62f8d"
+   ],
+   "note": "2026-11-09: + 'Wisconsin 2, Microsoft Campus' (same site, found in the Aterio-only review)."
+  },
+  "KS|Beale De Soto (Project Pilot)": {
+   "aterio": [
+    "76552fb0-81ea-11f0-8fcb-7fd09c2d8bc7"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "OH|AWS Beech West (North Beech Corridor West, Johnstown)": {
+   "aterio": [
+    "f79d4ed0-2e02-11f1-8512-a9a8a4db3fe8"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "OH|Cologix Johnstown (COL7/COL8)": {
+   "aterio": [
+    "1b3aea39-6a8f-4062-ab60-4e62cefa2eaf"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "IL|Equinix Minooka (CH8+)": {
+   "aterio": [
+    "47e92b50-132f-11f1-9fc2-f95508053c61"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "OH|5C CMH01 Springfield (OH)": {
+   "aterio": [
+    "9cef7090-d546-11f0-a3aa-3b201b9c9e6f"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "IN|Google Project Maize (Michigan City)": {
+   "aterio": [
+    "686924c0-b9ac-11f0-8834-49e56e21a1f8"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "OH|Aligned Conesville (Coshocton County)": {
+   "aterio": [
+    "c41d81f0-4bb4-11f0-9478-d73c3c466a79"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "IL|TA Realty Elk Grove Village (ORD01)": {
+   "aterio": [
+    "c91b3240-c01e-11f0-b065-cdc13b88d9cb"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "OH|AWS Hilliard (Cosgray Rd / 4186 Scioto Darby Creek Rd campus)": {
+   "aterio": [
+    "65652c5d-eba2-4c8f-ac75-1693c7fedf22"
+   ],
+   "note": "2026-11-09: Aterio 'Hilliard 3' (4186 Scioto Darby Creek Rd, where OPSB case 25-0649 sites the fuel cells); the auto-match to 'Hilliard 2' (Cosgray Rd, all active pre-2026) was wrong. Aterio's three buildings under construction (~181 MW facility) are not rowed: the registry row is the 72.9 MW fuel-cell plant that bridges them (gen basis), so adding them would double-count."
+  },
+  "OH|Vantage OH2 Millersport": {
+   "aterio": [
+    "f0818580-40af-11f0-8038-d131f1a7812a"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "IL|T5 @ Chicago IV (Grayslake)": {
+   "aterio": [
+    "fd10a8f1-4c87-4c30-a4d8-20ceeaa6c33a"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "IN|Google Morgan County (Monrovia)": {
+   "aterio": [
+    "75becf3a-9690-4224-8f0c-eccddda0803b"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "GA|Hampton Technology Park (Lower Woolsey Rd)": {
+   "aterio": [
+    "7559a8d0-0c3b-11f1-b852-4dfefc036f1f"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "GA|AWS Covington (Newton County)": {
+   "aterio": [
+    "1b1c9360-dc74-11f0-a31b-09d3eedfd0cd"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "NC|Microsoft Stover North (Hickory Lincolnton Hwy, Newton)": {
+   "aterio": [
+    "b8df3388-c0ef-4897-9ab8-5f930a851dc4"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "NC|Microsoft Boyd Farm (Old Maiden Rd, Maiden)": {
+   "aterio": [
+    "e922734e-a2c7-4913-a490-6c4542f8ee95"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "GA|CleanSpark Sandersville (HPC conversion)": {
+   "aterio": [
+    "c72bc000-0838-11f1-8112-9583db0b4bd1"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "GA|Microsoft Palmetto ('Georgia 2', Williams Rd)": {
+   "aterio": [
+    "afe17911-a72b-40ca-832a-f547e0539b5f"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "NC|Microsoft Lyle Creek (NC-16, Conover)": {
+   "aterio": [
+    "c687c714-fda2-4aab-936a-1b1dba519fd7"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "GA|T5@Atlanta III (AWS ATL068-071, Trae Ln)": {
+   "aterio": [
+    "07464201-78b5-4674-996e-08e18b8c062c"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "GA|STACK ATL02 (AWS, 808 Factory Shoals Rd)": {
+   "aterio": [
+    "6dfa5a00-47bd-11f0-8b63-db8017dca738"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "SC|Google Winding Woods / Project Evergreen (St. George)": {
+   "aterio": [
+    "1aec17ad-b648-48b9-ae12-eca64235f36e"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "SC|Google Pine Hill / Project Dawson (Ridgeville)": {
+   "aterio": [
+    "28e3d701-980d-43ed-9e47-4aa732125696"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "GA|Equinix xScale AT10x campus (Hampton)": {
+   "aterio": [
+    "0fa651b0-7652-11f1-9b74-af59c5f798d5"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "UT|Joule Delta Campus (Joule Capital Partners)": {
+   "aterio": [
+    "db969f40-74a6-11f0-b2e3-493822b64309"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "NV|AWS Sparks / Switch Bighorn (TRIC, 3800 Peru Dr)": {
+   "aterio": [
+    "80ddec20-06b9-11f1-9b1d-c9d167b53caf"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "OR|AWS Boardman - Airport West (Far-West)": {
+   "aterio": [
+    "da8d76b0-1be9-11f1-a5d9-0182000628e2"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "AZ|Microsoft Goodyear (3785 N Citrus Rd)": {
+   "aterio": [
+    "8f4650c0-e621-4ab5-ac92-435b2b9c45b6"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "UT|Meta Eagle Mountain (south expansion)": {
+   "aterio": [
+    "6318d4ee-88bc-4dd4-9c9f-f77560a6520b"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "AZ|AWS Mesa (10464 E Pecos Rd)": {
+   "aterio": [
+    "67056bad-e205-4c7e-8f8e-3cb3cf5ea0e9"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "AZ|QTS Phoenix 3 Glendale (Camelback Rd / Cotton Ln)": {
+   "aterio": [
+    "fcd0ad6d-9384-4feb-8e8c-7d7f04e526db"
+   ],
+   "note": "ATERIO ADD 2026-11-09: added from the census (raw/xchk_aterio_r6.csv) after a public-source check."
+  },
+  "TX|EdgeConneX Austin (Cedar Creek) - second campus (6682 FM 535)": {
+   "aterio": [
+    "53ff7351-9803-11f1-a2e2-cbdcbb7bcf96"
+   ],
+   "note": "2026-11-09: Aterio 'Austin, EdgeConnex Campus 2'. The earlier auto-match to 'Campus 3' was wrong; Campus 3 is now Aterio-only."
+  }
+ },
+ "verdicts": {
+  "TX|Pacifico Energy GW Ranch": {
+   "status": "fixed",
+   "t": "Amazon owns the data centers (Baxtel 2026-08-10: site bought from Pacifico, permits for three buildings; Aterio notes from the construction permits, start 2026-07-15). Tranche 1 -> under_construction, developer/tenant -> Amazon, likelihood high (overrides.csv).",
+   "date": "2026-11-09"
+  },
+  "ND|Fighting Pike Data Center (Critical Data House)": {
+   "status": "fixed",
+   "t": "Old row dated all 455 MW to Aug-2026, so the engine read it as energized. Split into phase 1 (130 MW, 2027-12, under construction per Baxtel) and phases 2-3 (325 MW, 2029-12 / 2030-06, Aterio estimates), raw/xchk_aterio_r5.csv.",
+   "date": "2026-11-09"
+  },
+  "TX|Crusoe/Lancium Childress": {
+   "status": "not_adopted",
+   "t": "Construction began Jul-2026 and two buildings were under construction by 2026-10-02 (Baxtel); TDLR registrations Sep-2026. Aterio's 08-31 'announced' predates that.",
+   "date": "2026-11-09"
+  },
+  "VA|STACK NVA02 (9590 Hornbaker Rd)": {
+   "status": "not_adopted",
+   "t": "Aterio's two withdrawn buildings are the Bristow expansion Prince William County rejected (NVA02K/L, a separate site per Baxtel). On Hornbaker/Linton Hall Aterio has F/G Delayed and H/I/J under construction (end user AWS); the registry rows stand.",
+   "date": "2026-11-09"
+  },
+  "IN|Microsoft La Porte (Radius Industrial Park)": {
+   "status": "not_adopted",
+   "t": "Microsoft's local blog (Jul-2026): only grading so far, crews 'prepare the site for future vertical building construction'. Aterio counts site work as construction; the registry keeps not_started until vertical build.",
+   "date": "2026-11-09"
+  },
+  "IN|Meridian Arc (Fluidstack / Next Frontier JV), New Lebanon": {
+   "status": "not_adopted",
+   "t": "$5.7bn senior secured notes (Apr-2026) fund two buildings under construction (credit-workbook dossier 2026-10-16). Aterio's 'announced' lags.",
+   "date": "2026-11-09"
+  },
+  "PA|Aligned Project Phoenix (Shippingport Industrial Park; ex-Bruce Mansfield)": {
+   "status": "explained",
+   "t": "Groundbreaking 2026-09-10, after the 08-31 export.",
+   "date": "2026-11-09"
+  },
+  "KY|TeraWulf 'Justified' campus (Hawesville)": {
+   "status": "explained",
+   "t": "Fluor EPC award in the 2026-11-04 8-K; the build started after the 08-31 export.",
+   "date": "2026-11-09"
+  },
+  "OH|OpenAI Stargate Lordstown (SoftBank; ex-Foxconn/Lordstown Motors plant)": {
+   "status": "not_adopted",
+   "t": "Epoch imagery (2026-07-30) shows construction with the roof mostly on (already logged 11-09). Aterio carries no MW for the site.",
+   "date": "2026-11-09"
+  },
+  "TX|Core Scientific Hunt County": {
+   "status": "not_adopted",
+   "t": "CORZ Q3-26 deck (company): AMD site, initial delivery 1H-2028; Aterio still lists it as announced.",
+   "date": "2026-11-09"
+  },
+  "VA|PowerHouse Arcola": {
+   "status": "not_adopted",
+   "t": "Company page: construction since Q4-2024, power delivery Q3-2027. Aterio dates it 2029-09 as announced.",
+   "date": "2026-11-09"
+  },
+  "TX|CyrusOne Castroville SAT14": {
+   "status": "not_adopted",
+   "t": "TDLR registration TABS2026025457 (completion 2027-06). Aterio carries one announced building with no MW.",
+   "date": "2026-11-09"
+  },
+  "AZ|Project Blue (Beale Infrastructure / Humphrey's Peak LLC)": {
+   "status": "open",
+   "t": "Registry rests on 'construction began spring 2026'; Aterio lists ten announced buildings. Needs a dated construction source.",
+   "date": "2026-11-09"
+  },
+  "AR|AVAIO Digital Leo (Pulaski County)": {
+   "status": "open",
+   "t": "Registry status comes from a tracker only (Arkansas Business page blocked); Aterio lists seven announced buildings.",
+   "date": "2026-11-09"
+  },
+  "VA|ODATA Virginia Hyperscale Campus": {
+   "status": "open",
+   "t": "Registry status from the MTJP tracker only, no date; Aterio has one announced building with no MW.",
+   "date": "2026-11-09"
+  },
+  "VA|STACK Loudoun Digital Campus II": {
+   "status": "open",
+   "t": "Registry status from the MTJP tracker only, no date; Aterio has two announced buildings (2029-06).",
+   "date": "2026-11-09"
+  },
+  "GA|Northern Data Maysville": {
+   "status": "open",
+   "t": "Registry status from a tracker only; Aterio: RUM GROUP, 180 MW announced, dated 2028-12. Also the likely duplicate of the Rum Group (Anthropic) row.",
+   "date": "2026-11-09"
+  },
+  "ND|Teton Digital Project Trinity": {
+   "status": "open",
+   "t": "Registry dates it 2026-12 under construction; Aterio announced, 2027-09.",
+   "date": "2026-11-09"
+  },
+  "AZ|Novva Mesa campus (Project Borealis)": {
+   "status": "open",
+   "t": "Registry tranche 1 under construction (Baxtel building years); Aterio five announced buildings from 2028-09.",
+   "date": "2026-11-09"
+  },
+  "IN|AWS northern Indiana campuses (NIPSCO / NIPSCO GenCo ADS Contract)": {
+   "status": "open",
+   "t": "Aterio: three Hobart buildings under construction (186 MW IT-eq). Registry tranches are NIPSCO service dates, all not_started.",
+   "date": "2026-11-09"
+  },
+  "PA|Nebius Highridge (Highridge Business Park, Butler Twp)": {
+   "status": "open",
+   "t": "Aterio: one building under construction; registry status 'not reported' since the May-2026 land close.",
+   "date": "2026-11-09"
+  },
+  "NE|Google Omaha (NW Omaha)": {
+   "status": "open",
+   "t": "Aterio: one building under construction, consistent with Epoch's projected foundation start (May-2026) for B4; registry B4 not_started.",
+   "date": "2026-11-09"
+  },
+  "WY|Meta Cheyenne (Project Cosmo, High Plains Business Park)": {
+   "status": "open",
+   "t": "Aterio shows all four buildings under construction (none active); the registry has B1-B2 energized on an Epoch estimate.",
+   "date": "2026-11-09"
+  },
+  "AZ|EdgeCore Mesa campus (PH01) - expansion": {
+   "status": "open",
+   "t": "Aterio: one building under construction on the Mesa campus; registry expansion not_started.",
+   "date": "2026-11-09"
+  },
+  "PA|PowerHouse PAX-1 Carlisle (Middlesex Twp)": {
+   "status": "not_adopted",
+   "t": "Added 2026-11-09 as 'announced' (raw/xchk_aterio_r6.csv): Aterio's 'construction' is site work only and public sources say planned; Middlesex Twp postponed the Phase 1 final land-development vote 2026-08-19 (agent read of public record). The registry waits for vertical build, as at Microsoft La Porte.",
+   "date": "2026-11-09"
+  },
+  "IL|T5 @ Chicago IV (Grayslake)": {
+   "status": "not_adopted",
+   "t": "Added 2026-11-09 as 'announced' (raw/xchk_aterio_r6.csv): Aterio's 'construction' is site work only and public sources say the first building could rise in 2027 (Patch 2025-10-15); Aterio itself notes grading since Jul-2025 with little progress.",
+   "date": "2026-11-09"
+  },
+  "OH|Meta Piqua": {
+   "status": "not_adopted",
+   "t": "Added 2026-11-09 as 'announced' (raw/xchk_aterio_r6.csv): Aterio's 'construction' is site work only and public sources say planned, first building 2029 (Baxtel); only farm-building demolition May-Jul 2026. A charter amendment banning large data centers goes to Piqua voters 2027-02-02.",
+   "date": "2026-11-09"
+  },
+  "VA|Meta Henrico (Project Tropical, Portugee Rd)": {
+   "status": "not_adopted",
+   "t": "Added 2026-11-09 as 'announced' (raw/xchk_aterio_r6.csv): Aterio's 'construction' is site work only and public sources say both buildings planned (Baxtel); Aterio shows clearing Apr-26 and grading Jul-26.",
+   "date": "2026-11-09"
+  },
+  "UT|Joule Delta Campus (Joule Capital Partners)": {
+   "status": "explained",
+   "t": "Added 2026-11-09 with Aterio's Delayed buildings as not_started, likelihood low (outside the model's universe): groundbreaking 2025-11 (ABC4), but the Kern River gas lateral still needs 9-11 months to build (Millard County minutes 2026-05-19) and air permits were still being sought in Aug-2026.",
+   "date": "2026-11-09"
+  },
+  "TX|Matrix Data Center Campus (MSB Global), Sulphur Springs": {
+   "status": "explained",
+   "t": "Added 2026-11-09 as announced, likelihood low (outside the model's universe): no construction; Sulphur Springs is replacing developer MSB Global (KLTV 2026-06-02).",
+   "date": "2026-11-09"
+  },
+  "VA|AWS Wellington (Bristow / Gainesville)": {
+   "status": "explained",
+   "t": "Added 2026-11-09; Aterio's Delayed buildings carried as not_started: the on-site substation waits on Dominion's 230kV line (spring 2027, per Aterio). Baxtel calls two buildings operational in 2025 - unresolved.",
+   "date": "2026-11-09"
+  },
+  "NC|Microsoft Stover North (Hickory Lincolnton Hwy, Newton)": {
+   "status": "explained",
+   "t": "Added 2026-11-09. Aterio's Delayed tag (Microsoft's 2025 Catawba pause) looks stale: Microsoft's own site pages show foundations/steel or building work in May-Sep 2026. Later buildings kept not_started on a campus under construction.",
+   "date": "2026-11-09"
+  },
+  "NC|Microsoft Boyd Farm (Old Maiden Rd, Maiden)": {
+   "status": "explained",
+   "t": "Added 2026-11-09. Aterio's Delayed tag (Microsoft's 2025 Catawba pause) looks stale: Microsoft's own site pages show foundations/steel or building work in May-Sep 2026. Later buildings kept not_started on a campus under construction.",
+   "date": "2026-11-09"
+  },
+  "NC|Microsoft Lyle Creek (NC-16, Conover)": {
+   "status": "explained",
+   "t": "Added 2026-11-09. Aterio's Delayed tag (Microsoft's 2025 Catawba pause) looks stale: Microsoft's own site pages show foundations/steel or building work in May-Sep 2026. Later buildings kept not_started on a campus under construction.",
+   "date": "2026-11-09"
+  }
+ },
+ "_doc_verdicts": "verdicts: per registry campus, the outcome of checking a flagged contradiction against primary sources. fixed = registry changed (overrides / raw file named); not_adopted = registry kept, evidence given; explained = timing (after the export) or definitions; open = not yet checked.",
+ "holds": {
+  "7f542350-af8f-11f0-8dee-07b8798c5737": {
+   "name": "Project Horizon",
+   "st": "TX",
+   "t": "Distinct from 'TX|Pacifico Energy GW Ranch' (Longfellow Ranch, 568 acres, ~60 km SE of Aterio's GW Ranch on TX-18; Aterio maps GW Ranch to 29cae850). But public evidence contradicts Aterio's Construction/High for buildings 1-2: the anchor tenant and funding collapsed (Apr-2026), Poolside pulled its announcement post (Aterio 07-14), and Aterio itself sees no work after initial clearing. 8 in-window buildings (1,000 MW facility, 2029-03..2030-12) not rowed.",
+   "date": "2026-11-09"
+  }
+ },
+ "_doc_holds": "holds: Aterio-only campuses reviewed 2026-11-09 and NOT added (no public confirmation, or public evidence contradicts Aterio)."
+}

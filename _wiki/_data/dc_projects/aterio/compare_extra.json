@@ -1,0 +1,19 @@
+{
+ "_doc": [
+  "Hand-edited rows for the 'Aterio vs the rest of our base' panel on the Aterio deck tab (build_dc_delay.py aterio_compare()).",
+  "Only figures that live as text in the wiki go here; everything else is read from the structured files (state_rules.json benchmarks, independent/, broker/, model_output, aterio/).",
+  "Row: group (y2026 | y2027 | y2028 | uc | tx | delay), who, date, stated (as the source words it), basis (facility | IT | n/s), val or lo/hi (GW), what (universe and window), src (wiki path)."
+ ],
+ "rows": [
+  {"group": "y2026", "who": "Jefferies (Dumoulin-Smith et al., SynMax satellite tracking)", "date": "2026-09-25", "stated": "16-18 GW (raised from 14-16)", "basis": "facility", "lo": 16, "hi": 18,
+   "what": "US gross GW deployed in 2026, tracked by satellite; framed as a practical upper bound", "src": "themes/ai-datacenter-power.md (Jefferies 'Data Center Delivery Plot Twists', 09-25)"},
+  {"group": "y2027", "who": "Jefferies (Dumoulin-Smith et al., SynMax satellite tracking)", "date": "2026-09-25", "stated": "'low-20s' GW", "basis": "facility", "lo": 20, "hi": 23,
+   "what": "US gross GW deployed in 2027, practical upper bound; 'low-20s' plotted as 20-23", "src": "themes/ai-datacenter-power.md (Jefferies 'Data Center Delivery Plot Twists', 09-25)"},
+  {"group": "y2026", "who": "Jefferies Real Estate", "date": "2026-09-25", "stated": "10.3 IT GW", "basis": "IT", "val": 10.3,
+   "what": "North America incremental data-center supply in 2026", "src": "themes/ai-datacenter-power.md (Jefferies 'Data Center Delivery Plot Twists', 09-25)"},
+  {"group": "y2027", "who": "Jefferies Real Estate", "date": "2026-09-25", "stated": "12.1 IT GW", "basis": "IT", "val": 12.1,
+   "what": "North America incremental data-center supply in 2027", "src": "themes/ai-datacenter-power.md (Jefferies 'Data Center Delivery Plot Twists', 09-25)"},
+  {"group": "y2028", "who": "Jefferies Real Estate", "date": "2026-09-25", "stated": "13.1 IT GW", "basis": "IT", "val": 13.1,
+   "what": "North America incremental data-center supply in 2028", "src": "themes/ai-datacenter-power.md (Jefferies 'Data Center Delivery Plot Twists', 09-25)"}
+ ]
+}

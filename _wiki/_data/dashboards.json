@@ -28,7 +28,7 @@
   "themes": {
     "_doc": "Thematic groups across cadences. members = wiki hrefs or hub:<clone path>. A member leaves its cadence section (keeping its cadence badge, date and stale rule) and is listed under its theme. Temático renders as section 01, right after Home base.",
     "title": "Temático",
-    "kicker": "memória · optics · semicap · sentimento · AI setorial · financials",
+    "kicker": "memória · optics · semicap · sentimento · AI setorial · DC build out · financials",
     "blurb": "One subject gathered across refresh rhythms. A card here keeps its cadence badge and stale rule; it just lives with its theme instead of in the daily / weekly / explainer lists.",
     "groups": [
       {"id": "memoria", "title": "Memória",
@@ -46,6 +46,9 @@
       {"id": "ai-setorial", "title": "AI Setorial",
        "blurb": "The AI sector read from outside the company filings: Ramp's enterprise alt-data (adoption vs Census, vendor penetration, model mix, spend per employee, share of business spend, the token sample with the price-vs-volume split) and the AI credit & funding monitor (hyperscaler / neocloud / lab issuance, spreads, CDS and the daily alerts lane).",
        "members": ["ramp-ai-index.html", "credit-monitor.html", "credit-live.html"]},
+      {"id": "dc-buildout", "title": "DC Build out",
+       "blurb": "The US data-center build-out bottom-up: the Aterio census explorer (building-level export as of 2026-08-31 — stage GW, activation timeline vs Aterio's own forecast, slippage, state map, providers / tenants / financiers, grid and behind-the-meter power, campus-deduplicated cost, searchable building list) and the DC delay-risk monitor (phase × city registry, post-election permit pauses, base vs scenario adds 2026-30, weekly 'What moved'). Facility GW unless marked; IT-eq = ÷1.15.",
+       "members": ["aterio-dc.html", "aterio-hyperscalers.html", "dc-delay-risk.html"]},
       {"id": "financials", "title": "Financials",
        "blurb": "The 20-name Financials coverage, one dashboard per debate on the theme page: Exchange volumes (CME / ICE / Cboe / Nasdaq monthly ADV, OCC options share, revenue per contract, growth vs VIX/OVX, consensus) and AI infrastructure financing (Blackstone / KKR / Apollo / BlackRock / Blue Owl deals keyed to the compute-deal timeline, their project-bond marks from the official AI-credit workbook, what each manager says), plus the source catalog behind every page.",
        "members": ["fin-exchanges.html", "fin-ai-financing.html", "financials-sources.html"]}
@@ -53,8 +56,8 @@
   },
   "home": {
     "title": "Home base",
-    "kicker": "comp sheet · equity panels · modelos · the wiki itself",
-    "blurb": "The pages the day starts from: the Capstone comp sheet and its P/E + EPS-revision panels, the Capstone models against the Street, and the research wiki itself. Everything below either feeds these or is derived from them.",
+    "kicker": "comp sheet · equity panels · modelos · DC delay risk · the wiki itself",
+    "blurb": "The pages the day starts from: the Capstone comp sheet and its P/E + EPS-revision panels, the Capstone models against the Street, the US data-center delay-risk monitor, and the research wiki itself. Everything below either feeds these or is derived from them.",
     "cards": [
       {"href": "/dashboards/comp-sheet/", "stat": "hub:comp-sheet/index.html", "title": "Comp sheet", "cadence": "daily", "surface": "hub", "topic": "Comp sheet",
        "routine": "09:45 CompDashboard rotina (update_highlights.bat → build_dashboard.py → Capstone-Wiki)",
@@ -67,7 +70,10 @@
        "desc": "Capstone Equity Panels: Bloomberg BEst P/E and EPS-revision panels for the coverage, six tabs, dated with the comp-sheet build. Index BEst works, ETF wrappers do not."},
       {"href": "/dashboards/modelos-capstone/#NVDA", "stat": "hub:modelos-capstone/index.html", "title": "Modelos Capstone — vs Street (opens at NVDA)", "cadence": "ondemand", "surface": "hub", "topic": "Models",
        "routine": "on demand: py P:/Felipe Monteiro/US Equities/Comp Dashboard/build_modelos.py --validate, then --render-img --publish (Excel COM + BBG terminal); re-verify the per-model row map against each summary sheet first",
-       "desc": "Thirteen Capstone official models against Bloomberg consensus: modelos · valuation · tese per name (models re-extracted 2026-10-20; CRWV added from the Template DCF family, TER/ADVANTEST configured but switched off; COHR = initiation 2026-09-01 house table; CY-basis names vs calendarised <yr>BC consensus; ASML in USD). The deep link lands on the NVDA block."}
+       "desc": "Thirteen Capstone official models against Bloomberg consensus: modelos · valuation · tese per name (models re-extracted 2026-10-20; CRWV added from the Template DCF family, TER/ADVANTEST configured but switched off; COHR = initiation 2026-09-01 house table; CY-basis names vs calendarised <yr>BC consensus; ASML in USD). The deep link lands on the NVDA block."},
+      {"href": "dc-delay-risk.html", "stat": "wiki:_dashboards/dc-delay-risk.html", "title": "DC delay risk — permit pauses, bottom-up", "cadence": "weekly", "topic": "AI capex & funding",
+       "routine": "Claude task dc-projects-monitor, Fri 15:00 (dc_monitor.py poll/apply → build_dc_delay.py --checkpoint)",
+       "desc": "US data-center campuses by phase and city: the GW inside post-election state and local permit pauses, under construction → delayed waterfall, annual adds base vs scenario 2026-30 and the weekly 'What moved'. Bernstein 11-06 tab: pipeline status by player and region (Aterio base). SemiAnalysis 11-01 tab: 2028 by state (IT GW) vs our registry, exposure after the election. Daniel rsch tab: Daniel's states × companies build matrix (183 projects, 11-05). Aterio census tab: the registry against the 08-31 Aterio export (campus matches, contradictions with verdicts, coverage by state, sites missing on either side). Aterio deck tab: the 3-slide Aterio deck (additions by state and likelihood, delay, scenarios; 08-31 census) with pptx/pdf downloads, plus Aterio set beside the registry, the reference deck, SemiAnalysis, Bernstein, Jefferies and FundaAI on one IT-eq axis. Also listed under Weekly."}
     ]
   },
   "hub": {
@@ -191,7 +197,11 @@
     {"href": "como_flui_capacidade.html", "title": "Como flui a capacidade da indústria?", "cadence": "ondemand", "routine": "build_ai_dashboards.py from the newest AI Model (manual)", "topic": "AI capex & funding",
      "desc": "Designer → cloud → cliente → uso final: how the industry's capacity flows, regenerated from the newest AI Model workbook."},
     {"href": "dc-delay-risk.html", "title": "DC delay risk — permit pauses, bottom-up", "cadence": "weekly", "routine": "Claude task dc-projects-monitor, Fri 15:00 (dc_monitor.py poll/apply → build_dc_delay.py --checkpoint)", "topic": "AI capex & funding",
-     "desc": "US data-center campuses by project phase and city: which GW sit inside post-election state and local permit pauses, waterfall from under construction to delayed, annual adds base vs scenario 2026-30, weekly 'What moved'. Tab: Bernstein 11-06 post-midterm pipeline status by player and region (Aterio base) vs our registry."},
+     "desc": "US data-center campuses by project phase and city: which GW sit inside post-election state and local permit pauses, waterfall from under construction to delayed, annual adds base vs scenario 2026-30, weekly 'What moved'. Tabs: Bernstein 11-06 post-midterm pipeline status by player and region (Aterio base) vs our registry; SemiAnalysis 11-01 2028 adds by state (IT GW), post-election exposure and the registry rows that cite it; Daniel rsch: Daniel's states × companies build matrix (183 projects, 11-05), embedded as received. Aterio census tab: the registry against the 08-31 Aterio export (campus matches, contradictions with verdicts, coverage by state, sites missing on either side). Aterio deck tab: the 3-slide Aterio deck (additions by state and likelihood, delay, scenarios; 08-31 census) with pptx/pdf downloads, plus Aterio set beside the registry, the reference deck, SemiAnalysis, Bernstein, Jefferies and FundaAI on one IT-eq axis."},
+    {"href": "aterio-hyperscalers.html", "title": "DC build by company — search any company + the four hyperscalers (Aterio)", "cadence": "ondemand", "routine": "py _wiki/_tools/build_aterio_hyperscalers.py when a new Aterio export lands in P:\\Felipe Monteiro\\Aterio", "topic": "AI capex & funding",
+     "desc": "Company search over Aterio's census (08-31): type any of ~1,000 companies (operator, tenant, backer, financier, power/equipment partner, utility, behind-the-meter generation; wiki names bundle their aliases) and get GW IT-eq by stage and likelihood, house view 2026-30 by year, campus map, states, who it works with, every campus (CSV, registry match) and its BTM generation. Type a state (or US) for its total, the growth path to end-2030 under the house rules (cumulative capacity by year end, adds per year by stage, ×multiple), who builds it, counties, tenants/financiers/utilities and what the rules leave out. Below: where Amazon, Google, Meta and Microsoft build — campus maps, self-built vs leased, house view by year (house rules of 2026-11-09), states, campus list and Bernstein's 11-06 player table as the cross-check."},
+    {"href": "aterio-dc.html", "title": "Aterio US data-center census — explorer", "cadence": "ondemand", "routine": "py _wiki/_tools/build_aterio_dashboard.py when a new Aterio export lands in P:\\Felipe Monteiro\\Aterio", "topic": "AI capex & funding",
+     "desc": "Everything in the Aterio export (building-level census as of 2026-08-31, 20 monthly snapshots, event log, weekly report, behind-the-meter generation): stage GW, activation timeline vs Aterio's own forecast, census growth vs backfill, stage transitions and date slippage, state map, providers / tenants / financiers, grid and BTM power, campus-deduplicated cost, risk ledger, field guide and a searchable building explorer. Facility GW; IT-eq = ÷1.15."},
     {"href": "gw-per-player.html", "title": "GW per player", "cadence": "ondemand", "routine": "hand-curated", "topic": "AI capex & funding",
      "desc": "Highest GW estimate per player, all sources cited, SemiAnalysis highlighted."},
     {"href": "token-fabric.html", "title": "Token fabric", "cadence": "ondemand", "routine": "hand-curated", "topic": "Tokens & compute",

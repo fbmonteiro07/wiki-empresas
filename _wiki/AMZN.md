@@ -406,6 +406,13 @@ _Q3 FY26 · Oct 29, 2026 → open · sell-side / expert calls / reports since th
 
 **🆕 Sinal update 2026-11-06 (/run-inbox — J.P. Morgan joint equity & credit call, Erica Spear, 2026-11-04):** ✓ confirma on **Capex / FCF / funding**: JPM credit keeps Amazon Overweight and sees it as *"full steam ahead"* into 2027; the fully drawn ~$18bn term loan ($17.5bn per the 10-Q) and $98bn of 2026 bonds across currencies show access is not the constraint. The open item is size: another $50-60bn of USD pre-funding in 2027 (JPM credit) vs MS's $120-130bn across instruments by end-2027. **Síntese do quarter — UPDATE 2026-11-06:** funding remains a sizing question, not an access question; Amazon is the one name JPM credit still sees as able to issue again in 2026.
 
+**🆕 Sinal update 2026-11-09 (/run-inbox — UBS "Midterm Election Impact on AI Build-Outs", 2026-11-08):** neutral on **AWS growth / demand**. UBS's project list puts the single largest Amazon site, GW Ranch / Fort Stockton (TX, 5,000 MW), in the not-started column, so it is directly exposed to the Texas Governor-elect's promised moratorium on new permits. UBS says this hits 2028+ capacity, not 2027. No Signal cell changes. **Síntese do quarter — UPDATE 2026-11-09:** after Bernstein (59% of the pipeline in restrictive/hostile states), UBS adds a site-level view: ~58% of Amazon's ten largest listed projects by MW are not yet started (DERIVED).
+
+**🆕 2026-11-09 (/run-inbox) — UBS POST-MIDTERM DC CHECKS: AMAZON HAS THE LARGEST NOT-STARTED MW OF THE FIVE LISTS UBS PUBLISHES. GW RANCH / FORT STOCKTON (TX, 5 GW) AND HOMER CITY (PA, 4.4 GW) BOTH SIT IN THE NOT-STARTED COLUMN.**
+_Source: UBS · Karl Keirstead / Benjamin Schiff / Chris Giuditta, "Midterm Election Impact on AI Build-Outs – What the Data Center Eco-System is Saying", 2026-11-08 (AI Research; 15+ industry checks at DCD Connect Virginia; UBS's AMZN analyst is not an author and no AMZN rating or PT is in the note) ([Source](../relat%C3%B3rios%20bons/ued55480.html))._
+- **UBS Figure 3, large Amazon projects (proposed power, MW; company disclosures, local reporting, public permits; read from the page image):** GW Ranch / Amazon Fort Stockton TX **5,000 (not started)** · Homer City Energy Campus PA **4,400 (not started)** · Northeast Creek / North Creek VA 3,000 ✓ · New Carlisle / Project Rainier IN 2,250 ✓ · Birchwood / King George VA **2,175 (not started)** · Project Green / New Florence MO 1,275 ✓ · Boardman / Threemile Exascale OR **1,000 (not started)** · Project Atlas / Canton Mega Site MS 1,000 ✓ · Salem Township / Susquehanna PA 960 ✓ · Mattameade / Orrock VA 770 ✓. DERIVED: **21,830 MW** listed, **9,255 MW started** and **12,575 MW (~58%) not started**. Texas is 5,000 MW (~23%), all of it not started.
+- **UBS's frame:** *"the likes of Microsoft and Amazon are unlikely to get a free ride, but the larger hyperscalers appear to be far better-suited to navigate this new political environment"*. The checks expect new builds to route to friendlier states, with Louisiana, West Virginia and Missouri named. UBS also says AWS's lower-than-expected growth was not caused by capacity go-live delays (*"we suspect that other factors are at play"*).
+
 **🆕 2026-11-06 (/run-inbox) — BERNSTEIN POST-MIDTERM DC NOTE: AWS HAS THE MOST EXPOSED PIPELINE OF THE HYPERSCALERS (59% OF UNDER-CONSTRUCTION + ANNOUNCED IN RESTRICTIVE/HOSTILE STATES); THE NOV 10 ST. CLAIR TOWNSHIP HEARING DECIDES AWS TRENTON (OHIO).**
 _Source: Bernstein · Madison Rezaei / Chad Dillard / Sunaina Ocalan / Varun Govindaraj / Daniel Zhu / Gautam Chhugani / Mark L. Moerdler / Mark Shmulik / Nancy Wu / Alexander Feitler, "US Data Centers: Unpacking the midterm results - a new balance of power, the same power imbalance?", 2026-11-06 (35pp, thematic; data base = Aterio, Bernstein analysis and estimates) ([Source](../relat%C3%B3rios%20bons/BERN_262934_1.html)). GW content only._
 - **National pipeline (Exhibit 15, GW; chart values read from the PDF vector bars, ±~1% of axis; Aterio nameplate, facility vs IT basis not stated):** active 12.1, under construction 16.7, announced 3.7 friendly / 1.8 mostly friendly / 3.2 cautious / 7.0 restrictive / 29.5 hostile (~73.9 GW in total). Exhibit 18: **59%** of AWS's under-construction + announced capacity sits in restrictive/hostile states, the highest of the hyperscalers (Microsoft 32%, Google 29%, Meta 16%, Oracle 0%).
@@ -801,8 +808,78 @@ _Source: AMZN earnings calls (dates above); management commentary, paraphrased. 
 - 🆕 **2026-08-19 — Nomura (Frank Fan / Donnie Teng), "Unitree Robotics — Initiating coverage on China's embodied-AI leader"** (688836.SS, Buy, TP CNY370): **read-through only, but it is a REGULATORY item on the marketplace rather than a demand item, which is why it is worth a line.** Amazon is named as one of Unitree's online sales channels — *"a hybrid direct-plus-distributor, online- plus-offline go-to-market model, selling through platforms such as Tmall, **Amazon (AMZN US, Not rated)**, and **[[SHOP]]ify (SHOP US, Not rated)**"* — with the **Amazon and Shopify channels together ~10.72% of Unitree's 2025 revenue.** 🔴 **The part that generalises beyond one seller: Nomura flags a rule change under which "online marketplaces must **'VERIFY', not merely display**, authorization status" (cited as **§2.804(c)(2)**), alongside a cut in a per-entry allowance "from 4,000 to 40 units" and a requirement that "certification applicants file **HBOM/SBOM** naming components" (§2.911(d)(9)-(11)). Nomura's own framing: *"directly relevant to the Amazon and Shopify channels, according to the company"*, and *"**Structural, not cyclical**: risks on compliance costs, BOM disclosure, and client adoption."*** ➤ **Read as a compliance-burden vector for the 3P marketplace: shifting the marketplace from *displaying* a seller's authorization to *verifying* it moves liability and process cost onto Amazon, and it applies to a whole category of radio-equipped imported hardware, not just humanoids. Sized at "Medium" impact by Nomura for its own name; NOT sized for AMZN.** ⚠️ **Single-source, from a Chinese A-share initiation, not a regulatory or AMZN-specific note; AMZN is "Not rated" by Nomura here. The rule citations are as printed in the note and have not been verified against the primary regulatory text — do not build on the section numbers without checking them.** Theme: [humanoids-robotics](themes/humanoids-robotics.md). [Source](../relat%C3%B3rios%20bons/Unitree_Robotics_-_Initiating_coverage_on_Chinas_embodied-AI_leader.html)
 - **2026-06-23 — JPM (Doug Anmuth / Bryan Smilek), "Amazon.com: Prime Deep Dive Suggests 10x Value Potential":** OW, Dec-26 PT $330 (~32x 2027E GAAP EPS $10.38), AMZN a Best Idea / Analyst Focus List. Unbundled Prime worth ~$1,440/yr vs $139 US cost (~10x); 370M+ global subs ending 2026 (~139M US / ~231M Int'l); ~$7B–$8B Prime Day revenue shift into 2Q26; $20 US price hike ≈ ~$3B annualized net sales, now seen slipping to 2027. Folded into Debate/thesis and Current state above.
 
+## DC construction pipeline — Aterio census (2026-08-31)
+<!-- aterio-census:begin asof=2026-08-31 · generated by _tools/build_aterio_company.py into _data/aterio/company_blocks/AMZN.md; refresh = rerun the script and paste the new block between these markers (agent edit + Changelog line), never by script -->
+_Source: Aterio US data-center census, licensed export as of 2026-08-31 (internal use; `P:\Felipe Monteiro\Aterio`). Reference page: [US DC construction pipeline — Aterio census](themes/aterio-dc-census.md) · explorer: [aterio-dc.html](_dashboards/aterio-dc.html). MW = facility power per building (published, else Aterio's estimate); IT-eq ≈ facility ÷ 1.15. Likelihood = Aterio's execution tier: High = power negotiated, land secured, financing lined up or capex committed on earnings calls (>80% materialise); Medium ~50-60%; Low = announced with no power or financing signal (<40%); a high tier does not mean the date holds (Aterio team on a Goldman Sachs call, 2026-10-20). Activation dates are mostly Aterio's own estimates. Roles come from Aterio's fields (operator, end users, backers, financing, partners) and are not checked one by one. "In registry" = the campus is in Capstone's DC delay-risk registry ([dc-delay-risk](_dashboards/dc-delay-risk.html))._
+
+| Role in the census | Buildings | Active | Under construction | Delayed | Planned (all dates) | Withdrawn / cancelled | 2026-30 not yet active: High · Medium · Low |
+|---|---|---|---|---|---|---|---|
+| Operator / self-build | 839 on 157 campuses | 10,164 | 10,084 | 287 | 31,154 | 3,062 | 28,554 · 3,399 · 86 |
+| Named end user (someone else's building) | 201 on 38 campuses | 566 | 4,866 | 224 | 8,244 | – | 9,570 · 2,442 · 644 |
+
+_MW, facility basis. A building can count under several companies (operator, tenant, financier), so never add these rows across pages._
+
+**Capstone house view, 2026-30 (GW IT-eq)**: facility MW ÷ 1.15 (Aterio's own facility/IT median); counts what switched on since Jan-2026, under construction, delayed and planned rated High, dated 2026-30 by Aterio; drops campuses rated Low with no named end user (house rules of 2026-11-09). This is the figure to quote; the other tables in this section stay on Aterio's own basis (facility MW, every likelihood tier).
+
+| Role in the census | House view | 2026 | 2027 | 2028 | 2029 | 2030 | Switched on · building · delayed · planned High | Aterio's dating, no filter |
+|---|---|---|---|---|---|---|---|---|
+| Operator / self-build | **25.9** | 2.88 | 4.49 | 7.67 | 7.02 | 3.84 | 0.83 · 8.77 · 0.25 · 16.1 | 28.7 |
+| Named end user (someone else's building) | **8.58** | 1.15 | 3.22 | 2.57 | 1.41 | 0.23 | 0.26 · 4.23 · 0.19 · 3.90 | 11.3 |
+
+_GW IT-eq, same rules and code as the US house view on the reference page (`_tools/aterio_core.py`, rules in `_data/aterio/treatment.json`). A building counts for every company with a role on it, so never add rows across roles or pages._
+
+**When it switches on — operator / self-build** (MW facility, by Aterio activation year; not yet active only)
+
+| | 2026 | 2027 | 2028 | 2029 | 2030 | 2031+ | undated |
+|---|---|---|---|---|---|---|---|
+| Under construction | 2,361 | 3,977 | 3,366 | 380 | – | – | – |
+| Delayed | – | 287 | – | – | – | – | – |
+| Planned · High | – | 903 | 5,450 | 7,698 | 4,419 | 7,729 | – |
+| Planned · Medium | – | 221 | 483 | 1,314 | 1,093 | 1,678 | 80 |
+| Planned · Low | – | 86 | – | – | – | – | – |
+
+_Already switched on in 2026: 951 MW._
+
+**Campuses with 2026-30 activity — operator / self-build** (top 10 of 95)
+
+| Campus | State | Buildings | Under constr. MW | Delayed MW | Planned MW | Likelihood (not yet active) | Activation | In registry |
+|---|---|---|---|---|---|---|---|---|
+| GW Ranch Project (Fort Stockton) | TX | 3 UC · 22 planned | 600 | – | 1,600 | High | 2028-06 → 2030-12 | ✓ |
+| Energy Way Industrial Park Campus (Rockingham) | NC | 4 UC · 17 planned | 288 | – | 1,224 | High | 2027-09 → 2029-12 | ✓ |
+| The Homer City Energy Campus | PA | 8 UC · 17 planned | 968 | – | 484 | High | 2028-09 → 2030-12 | ✓ |
+| St. Joseph, AWS Campus - Project Rainier (New Carlisle) | IN | 14 active · 8 UC · 8 planned | 533 | – | 520 | High | 2026-09 → 2029-03 (Aterio est.) | ✓ |
+| New Florence, AWS Campus | MO | 2 UC · 15 planned | 142 | – | 1,065 | High | 2028-09 → 2029-09 | – |
+| Hobart Data Center Campus | IN | 3 UC · 23 planned | 214 | – | 957 | High | 2027-12 → 2030-12 | ✓ |
+| Beech West, AWS Campus (Johnstown) | OH | 3 UC · 15 planned | 234 | – | 858 | High | 2027-03 → 2030-12 (Aterio est.) | ✓ |
+| Sparks, AWS Campus | NV | 5 UC · 4 planned | 595 | – | 476 | High | 2026-12 → 2028-12 (Aterio est.) | ✓ |
+| Wallula Gap Business Park Campus (Burbank) | WA | 1 UC · 15 planned | 66 | – | 989 | High 20% · Medium 80% | 2029-06 → 2030-12 (Aterio est.) | – |
+| Ridgeline, AWS Campus (Ridgeland) | MS | 5 UC · 9 planned | 330 | – | 644 | High | 2026-12 → 2028-03 (Aterio est.) | ✓ |
+
+**Campuses with 2026-30 activity — named end user (someone else's building)** (top 6 of 35)
+
+| Campus | State | Operator | Buildings | Under constr. MW | Delayed MW | Planned MW | Likelihood (not yet active) | Activation | In registry |
+|---|---|---|---|---|---|---|---|---|---|
+| Alpha Digital Campus | TX | PowerBridge | 26 planned | – | – | 1,859 | Medium | 2028-12 → 2030-12 | – |
+| Pennsylvania, Power House Campus (Carlisle) | PA | Power House Data Centers | 3 UC · 16 planned | 258 | – | 1,542 | High | 2028-06 → 2029-12 (Aterio est.) | ✓ |
+| Keystone TC Data Center Campus (Morrisville) | PA | NorthPoint Development | 8 UC · 3 planned | 699 | – | 217 | High | 2026-12 → 2027-12 (Aterio est.) | ✓ |
+| Spring Valley Technology Park (Leesburg) | VA | Active Infrastructure | 12 planned | – | – | 644 | Low | 2028-12 → 2030-12 (Aterio est.) | – |
+| Stafford Technology Campus | VA | STACK Infrastructure | 2 UC · 17 planned | 116 | – | 522 | High | 2027-08 → 2030-06 (Aterio est.) | ✓ |
+| Culpeper Tech Zone, Copper Ridge | VA | STACK Infrastructure | 8 planned | – | – | 600 | High | 2029-03 → 2030-06 (Aterio est.) | – |
+
+_Buildings with no MW in the census: 28 (counted in buildings, not in MW)._
+
+**Behind-the-meter power for data centers — customer** (Aterio BTM inventory: 5 phases on 2 projects; MW = generation **nameplate**, a different basis from the data-center MW above — never add them): announcement 10,204 · site preparation 73.
+
+| Project | State | Technology | Phases | Nameplate MW | Customers | Activation |
+|---|---|---|---|---|---|---|
+| GW Ranch Energy Center | TX | Simple Cycle | 4 announcement | 10,204 | Amazon AWS | 2028-12 → 2031-12 |
+| Scioto Darby Creek Road Fuel Cell System | OH | Fuell Cell | 1 site preparation | 73 | Amazon AWS | 2027-09 |
+
+<!-- aterio-census:end -->
+
 ## Sources
 
+- 🆕 **2026-11-09 (/run-inbox):** [UBS · Karl Keirstead / Benjamin Schiff / Chris Giuditta — "Midterm Election Impact on AI Build-Outs – What the Data Center Eco-System is Saying" (2026-11-08)](../relat%C3%B3rios%20bons/ued55480.html). Figure 3 Amazon project list.
 - 🆕 **2026-11-06 (/run-inbox):** [Erica Spear (J.P. Morgan IG credit) with Samik Chatterjee / "Doug" (likely Anmuth — UNCONFIRMED) @ J.P. Morgan "Hyperscalers Joint Equity & Credit Discussion" (2026-11-04) — Capstone notes (Notion transcript)](../relat%C3%B3rios%20bons/20261104_-_JPMorgan_-_Hyperscalers_Joint_Equity_Credit_Discussion_-_Chatterjee_Spear_Anmuth_-_Notion_transcript.html) — credit OW on Amazon reiterated; $62bn USD / 2 deals + $36bn non-USD YTD; $18bn term loan fully drawn; 2027 $50-60bn USD pre-funding question.
 - 🆕 **2026-11-06 (/run-inbox):** [Bernstein · Madison Rezaei / Chad Dillard / Sunaina Ocalan / Varun Govindaraj / Daniel Zhu / Gautam Chhugani / Mark L. Moerdler / Mark Shmulik / Nancy Wu / Alexander Feitler — "US Data Centers: Unpacking the midterm results - a new balance of power, the same power imbalance?" (2026-11-06, 35pp)](../relat%C3%B3rios%20bons/BERN_262934_1.html) — thematic, Aterio base; GW content only. Exhibits 9/13/15/18 (AWS pipeline by state stance; Ohio and Texas MW) and the Trenton / St. Clair Township Nov 10 catalyst.
 - 🆕 **2026-11-05 (/run-inbox):** [Capstone internal, "AWS: o cash cost deveria expandir ou contrair?" (2026-10-30, 4pp, Portuguese)](../relat%C3%B3rios%20bons/AWS_Cash_Costs_Estudo_2026-10-30.html) — derived house study (8 AlphaSense/Tegus expert calls from 5 experts, the 3Q26 call, "Modelo Amazon Pos 3Q26" tab Model AMZN L182-L210): CY27 AWS cash cost 32.7-34.8% and margin 41.4-43.5% vs the house model's 30.0% / 46.2%, which is a house-model reconciliation item.
@@ -942,6 +1019,9 @@ _Source: AMZN earnings calls (dates above); management commentary, paraphrased. 
 ## Changelog
 
 
+- 2026-11-09 — run-inbox: UBS "Midterm Election Impact on AI Build-Outs" (Keirstead / Schiff / Giuditta, 2026-11-08) → 1 dated block in the live Q3 FY26 intra-quarter window (Figure 3 project list: 21,830 MW, 12,575 MW not started DERIVED; GW Ranch TX 5 GW not started), 1 Sinal update + Síntese clause, 1 Sources line. The live window has no log table (it uses dated blocks), so no table row. Nothing superseded.
+- 2026-11-09 — added the "DC construction pipeline — Aterio census" section (Aterio US census export 2026-08-31, licensed; facility MW): operator 839 buildings, 10,084 MW under construction, 2026-30 not yet active High/Medium/Low 28,554/3,399/86 MW; named end user 201 buildings, 4,866 MW under construction, 2026-30 not yet active High/Medium/Low 9,570/2,442/644 MW; BTM cust 5 generation phases. Reference: [themes/aterio-dc-census.md](themes/aterio-dc-census.md). Nothing superseded.
+- 2026-11-09 — Aterio census section refreshed: added the Capstone house-view table (GW IT-eq, 2026-30; Aterio census as of 2026-08-31, Capstone treatment: facility ÷ 1.15, switched on since Jan-2026 + under construction + delayed + planned High, Low-likelihood campuses with no tenant dropped; house rules of 2026-11-09): operator 25.9 GW; named end user 8.58 GW. Facility figures in the section are unchanged (same export); nothing superseded.
 - 2026-11-06 — run-inbox: J.P. Morgan "Hyperscalers Joint Equity & Credit Discussion" (Erica Spear, credit; 2026-11-04, Notion transcript) → 1 intra-quarter block (Q3 FY26 window; that window has no Full-log table yet, so no row), 1 Sinal update, 1 Sources line. Nothing superseded: JPM credit Overweight on Amazon is unchanged from the 07-20 call.
 - 2026-11-06 — verification (transcription QA): 11-06 Curtis Sinal update: the LITE capacity line is relayed from the mid-September bus tour, not the CEO roadshow.
 - 2026-11-06 — ingest (Notion, 2026-11-06_Jefferies_Semis-update-call-tape-flows-MRVL-LITE-roadshow-MCHP-semicap-PI-Curtis-Favuzza.md): 1 Sinal update before Management commentary (Curtis: Amazon took Lumentum's remaining laser capacity, his inference; XPU-attached optical scale-up; Trainium 2 'awful' vs Trainium 3 better). Superseded: none.

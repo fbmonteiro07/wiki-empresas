@@ -82,6 +82,37 @@ def cons_line(tk):
             f"eps {fmt_n(p.get('eps'),2)} · CY27 rev {fmt_n(p7.get('rev'),0)}m eps {fmt_n(p7.get('eps'),2)}")
 
 
+_ATERIO = None
+_AT_ROLE = {"operator": "operator", "tenant": "tenant", "backer": "backer", "fin": "financier", "partner": "power/equipment partner", "utility": "utility"}
+
+
+def aterio_line(tk):
+    """One line from _data/aterio/company_exposure.json (Aterio DC census; facility MW; likelihood = Aterio's tier)."""
+    global _ATERIO
+    if _ATERIO is None:
+        try:
+            _ATERIO = json.load(open(DATA / "aterio" / "company_exposure.json", encoding="utf-8"))
+        except Exception:
+            _ATERIO = {}
+    rec = (_ATERIO.get("tickers") or {}).get(tk)
+    if not rec:
+        return ""
+    bits, house = [], []
+    for r, x in rec.get("roles", {}).items():
+        w = x["win_tier"]
+        bits.append(f"{_AT_ROLE.get(r, r)}: UC {x['mw']['uc'] / 1000:.1f} GW, 2026-30 not yet active High/Med/Low "
+                    f"{w['High'] / 1000:.1f}/{w['Medium'] / 1000:.1f}/{w['Low'] / 1000:.1f} GW")
+        h = (x.get("house") or {}).get("it_gw")
+        if h:
+            house.append(f"{_AT_ROLE.get(r, r)} {h:.1f}" if h >= 10 else f"{_AT_ROLE.get(r, r)} {h:.2f}")
+    if rec.get("btm"):
+        bits.append("BTM generation " + "/".join(k.split("_")[1] for k in rec["btm"]))
+    # the figure to quote: Capstone house view (IT-eq, house rules in _data/aterio/treatment.json), per role
+    hv = (f" | Capstone house view 2026-30 (GW IT-eq, ÷{_ATERIO.get('fac_it', '')}; never add roles): " + " · ".join(house)) if house else ""
+    return (f"Aterio DC census ({_ATERIO.get('asof', '')}, facility): " + " · ".join(bits) + hv
+            + " — page section + themes/aterio-dc-census.md")
+
+
 def ticker_card(tk, id2n, adj, lines):
     n = id2n[tk]
     lines.append(f"### {tk} — {n.get('sector','')}".rstrip(" —"))
@@ -121,6 +152,9 @@ def ticker_card(tk, id2n, adj, lines):
     for a in assums[:3]:
         an = id2n[a]
         lines.append(f"Debate [{an['label']}] canonical: {an.get('canonical','')[:220]}")
+    al = aterio_line(tk)
+    if al:
+        lines.append(al)
     d = n.get("docs") or {}
     if d:
         lines.append("Docs on disk: " + " · ".join(f"{k} {v}" for k, v in sorted(d.items())))

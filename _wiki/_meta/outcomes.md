@@ -8,6 +8,8 @@ Format (ticker + the catalyst date, then the verdict):
 
 Add lines here after each catalyst resolves. Newest first.
 
+- DDOG 2026-11-05 — neutral — FOLLOW-UP recorded November 9: the scheduled CEO/CFO meeting now has JPM / Samik Chatterjee, Jaiden Patel and Mashu Nishi's November 6 investor-call recap, superseding Friday morning's missing-readout status. Management-relayed 2027 largest-customer forecast includes minimum commitments only until current contract expiry and no renewal until signed; not evidence of churn or guaranteed renewal. Core demand commentary is constructive, but renewal price/usage economics remain open. JPM's ~$47m beat versus $1.14bn midpoint conflicts with company Q3 $1.197bn revenue and August 6 guide $1.135-1.145bn; do not allocate beat dollars from its 60/40 split until corrected. [Source record](analyst-evidence/2026-11-09-morning-source-checks.json).
+
 - SMCI 2026-11-06 — neutral — NOT A NEW EVENT (wiki-catalyst 2026-11-07): 11-06 is the 10-Q filing that settled the Wolfe share-count watch item, already scored inside the SMCI 2026-11-03 line (reported non-GAAP diluted 764.4m vs 761m guided; as-converted ~895m incl. 4.3125m mandatory convertible preferred x 30.304, Capstone arithmetic on 10-Q terms). No separate catalyst; nothing further to score until the F2Q27 print.
 - META 2026-11-04 — neutral — Common-option watch resolved: all 6m additional common shares exercised into forwards; no current cash settlement implied. Preferred option remains unverified. [Meta 8-K November 5](https://www.sec.gov/Archives/edgar/data/1326801/000119312526450074/d166273d8k.htm).
 

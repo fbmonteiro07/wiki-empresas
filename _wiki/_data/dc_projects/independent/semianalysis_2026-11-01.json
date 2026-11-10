@@ -1,0 +1,122 @@
+{
+ "_doc": [
+  "SemiAnalysis subset for the dc-delay-risk dashboard (tab 'SemiAnalysis'). Hand-built 2026-11-09 from the primary text and charts of four SemiAnalysis pieces; read by build_dc_delay.py (independent_views), which adds the registry comparison per state and the registry rows that cite SemiAnalysis.",
+  "SemiAnalysis is independent research (a continuous newsletter source), not a broker: no ratings, no price targets. GW content only (Felipe, 2026-11-06).",
+  "Basis: datacenter IT capacity. The 2026-09-15 piece states it ('+38GW of Datacenter IT capacity delivered in the US in 2027'); the 11-01 piece does not restate it. Never mix with facility, generation-nameplate or Aterio campus GW.",
+  "Tags per value: 'sa' = printed by SemiAnalysis (text, table or map); 'derived' = Capstone arithmetic on SemiAnalysis's printed values (formula in 'how'); 'range' = bounds implied by SemiAnalysis's table order and tiers. Most state values in the 11-01 charts are locked for non-subscribers."
+ ],
+ "source": {
+  "author": "SemiAnalysis",
+  "kind": "Independent research (newsletter), not a broker",
+  "analysts": "Maya Barkin, Wayne Ma, Reyk Knuhtsen, Jeremie Eliahou Ontiveros, Dylan Patel",
+  "title": "The Datacenter Backlash Goes Bipartisan: Next Week's Midterms and the 2028 Buildout",
+  "date": "2026-11-01",
+  "file": "relatórios bons/2026_11_01_ENC_The_Datacenter_Backlash_Goes_Bipartisan_Next_Weeks_Midterms_and_the_2028_Buildout_email.html",
+  "model": "SemiAnalysis Datacenter Industry Model (6,000+ facilities tracked through property records, permits, power-usage data, FOIA requests and satellite imagery; 400+ local moratorium instruments across 17 states)",
+  "basis": "IT capacity (stated 2026-09-15)",
+  "pieces": [
+   {"id": "0915", "date": "2026-09-15", "title": "Everyone Says Datacenter Moratoriums Are Killing the US Buildout. We disagree", "analysts": "Maya Barkin, Reyk Knuhtsen, Jeremie Eliahou Ontiveros, Dylan Patel", "file": "E:/research-sources/emails/semianalysis/2026-09-15-datacenter-moratoriums-us-buildout.html"},
+   {"id": "0910", "date": "2026-09-10", "title": "What is So Hard About Behind-The-Meter Power For Datacenters? Part 1", "file": "E:/research-sources/emails/semianalysis/2026-09-10-behind-the-meter-power-datacenters-part-1.html"},
+   {"id": "0911", "date": "2026-09-11", "title": "Nvidia backstop universe: heads I win", "file": "E:/research-sources/emails/semianalysis/2026-09-11-nvidia-backstop-universe-heads-i-win.html"},
+   {"id": "1018", "date": "2026-10-18", "title": "Datacenters 2027: The Year of Acceleration, +50GW in a Single Year", "analysts": "Jeremie Eliahou Ontiveros, Reyk Knuhtsen, Dylan Patel", "note": "posted Oct-18, archived 10-19; the 11-01 piece calls it 'our Oct. 16 article'", "file": "E:/research-sources/emails/semianalysis/2026-10-19-datacenters-2027-year-of-acceleration-50gw.html"},
+   {"id": "1101", "date": "2026-11-01", "title": "The Datacenter Backlash Goes Bipartisan: Next Week's Midterms and the 2028 Buildout", "file": "E:/research-sources/emails/semianalysis/2026-11-01-datacenter-backlash-bipartisan-midterms.html"},
+   {"id": "1103", "date": "2026-11-03", "title": "SpaceX: the world's biggest AI cloud", "file": "E:/research-sources/emails/semianalysis/2026-11-03-spacex-worlds-biggest-ai-cloud.html"}
+  ]
+ },
+ "national": [
+  {"id": "us2027", "label": "US IT capacity added in 2027", "gw": 38, "tag": "sa", "src": "0915", "detail": "22 GW under vertical construction; 16 GW 'planned', mostly financed and doing siteworks. More than double 2026."},
+  {"id": "top20_2027", "label": "2027 adds due across the top-20 states", "gw": 33.8, "tag": "sa", "src": "1101", "detail": "Roughly three-quarters already under construction: 'largely locked in'."},
+  {"id": "global2027", "label": "Global capacity added in 2027", "gw": 50, "tag": "sa", "src": "1018", "detail": ">24 GW across 40 campuses in an advanced stage of construction for 2027 delivery; ex-US gains share in 2028."},
+  {"id": "us2028", "label": "US net additions in 2028", "gw": 62.2, "tag": "sa", "src": "1101", "detail": "Most not yet under construction. Texas adds close to 30% of it."},
+  {"id": "top13_2028", "label": "2028 adds in the 13 largest states (ex VA, MS)", "gw": 43.5, "tag": "sa", "src": "1101", "detail": "70% of the US; 93% planned (not under construction); 10 of the 13 elected a governor on Nov 3."},
+  {"id": "planned13", "label": "Of which not yet under construction", "gw": 40.5, "tag": "derived", "how": "43.5 x 93%", "src": "1101"},
+  {"id": "oversupply2028", "label": "Datacenter oversupply vs chip supply by end-2028 (risk)", "gw": 10, "tag": "sa", "src": "1018", "detail": "Accelerator Model chip supply vs bottom-up DC count; memory (HBM) and N3 logic are the binding constraints."}
+ ],
+ "exposure": {
+  "_note": "Planned (not-started) 2028 capacity in states where a candidate backed a statewide pause, as of 2026-10-30 race ratings. SemiAnalysis: 'exposed to policy changes, not an estimate of delayed capacity'.",
+  "sweep_gw": 30.3, "sweep_states": ["TX", "OH", "GA", "OK", "PA", "OR", "IA"], "sweep_src": "1101 map: pause candidate wins every race",
+  "conditions_only_gw": 5.7, "conditions_only_states": ["OH", "OR"], "conditions_only_src": "1101 map: pause candidates lose every contested race; OH and OR have pause backers on both sides",
+  "candidates": "Nine of the 20 nominees want a pause on new construction, 11 want conditions; split about even by party (1101)."
+ },
+ "pre_election_delay": {
+  "_note": "Measured delay before the election (0915): capacity whose delivery date actually moves, project by project.",
+  "total_gw": 2.3,
+  "local": {"inside_gw": 20, "delayed_gw": 1.525, "share": 0.076, "projects": "An AWS campus in Ohio, a powered-land developer campus in Pennsylvania (NorthPoint, near Scranton), a site in Colorado", "why_so_little": "County moratoria stop at city lines; they freeze new applications rather than revoke approvals; short ones expire before 2028+ projects need the approval; other gates (litigation, equipment) already bind. ~80% of live restrictions contain no modelled planned capacity."},
+  "ny": {"exposed_gw": 1.4, "delayed_gw": 0.8, "instrument": "EO 62 (2026-07-14): pause on discretionary DEC permits for new DCs >= 50 MW until a GEIS is done (up to Jul-2027); all affected capacity is 2028-or-later delivery."},
+  "tx": {"delay_months_max": 4, "detail": "ERCOT audit (Aug-3 directive): base-load projects face at most ~4 months of administrative delay; 17 facilities (6.6 GW) that cleared every other ERCOT gate are working through the audit to energize; Batch Zero backlog ~205 GW across 326 applicants; the Studied-Load study (was Sep-2 to Apr-9-2027) is paused and will miss Apr-9. Off-grid projects fall outside it. Written before the Sep-21 TCEQ freeze, which the 11-01 piece says closed the on-site-power escape route."},
+  "btm_orders_gw": 75, "btm_note": "Firm behind-the-meter equipment orders counted in the 0910 piece, more bound for Texas than any other state."
+ },
+ "states": [
+  {"st": "TX", "adds": 18.0, "adds_tag": "sa", "planned": 16.7, "planned_tag": "sa", "planned_pct": 0.93, "tier": 1, "sens": "Further tightening under either outcome", "pause": "Gina Hinojosa (D): until laws pass, est. to Sep-1-2027", "conditions": "Greg Abbott (R)", "winner": "Gina Hinojosa (D)", "winner_pause": true, "note": "41.3% of the 13-state total. A prolonged TCEQ freeze is SemiAnalysis's biggest single risk to its forecast: a freeze through the 2027 session runs ~8 months from Sept, ~1 year if it waits for new rules, i.e. 5-9 months longer than a December restart."},
+  {"st": "OH", "adds": 5.1, "adds_tag": "sa", "planned": 4.8, "planned_tag": "sa", "tier": 1, "sens": "Further tightening under either outcome", "pause": "Amy Acton (D): conditional, lifts per project as conditions are met; Vivek Ramaswamy (R): 6-12 months est.", "conditions": "", "winner": "Amy Acton (D)", "winner_pause": true, "note": "By 2028 AWS's largest state outside Virginia and Meta's largest anywhere (leased + self-built). Acton inherits DeWine's May freeze on new sales-tax exemption approvals."},
+  {"st": "GA", "adds": null, "planned": 3.2, "planned_tag": "sa", "tier": 1, "sens": "Further tightening under either outcome", "pause": "Keisha Lance Bottoms (D): no end given, ~6 months est.", "conditions": "Rick Jackson (R)", "winner": "Keisha Lance Bottoms (D)", "winner_pause": true, "note": "OpenAI Project Camellia (Effingham County): 3.2 GW power commitment delivered 2028-2032; OpenAI pays Georgia Power's infrastructure, up to 1 GW curtailable, closed-loop cooling. Two PSC seats on the ballot."},
+  {"st": "IN", "adds": null, "planned_lo": 2.4, "planned_hi": 3.2, "planned_tag": "range", "tier": 1, "sens": "Limited direct state-election sensitivity", "pause": "", "conditions": "", "winner": "no 2026 governor race", "winner_pause": false, "note": "Large Republican majorities, supportive governor."},
+  {"st": "AZ", "adds": 2.6, "adds_tag": "sa", "planned": 2.4, "planned_tag": "derived", "how": "2.6 x 91% not yet under construction", "tier": 1, "sens": "Further tightening under either outcome", "pause": "", "conditions": "Katie Hobbs (D), Andy Biggs (R)", "winner": "Katie Hobbs (D)", "winner_pause": false, "note": "Microsoft's largest state after Virginia. Three-year freeze on new sales-tax exemption applications since June; both candidates want the incentive gone and water paid for."},
+  {"st": "OK", "adds": 2.1, "adds_tag": "sa", "planned": 2.0, "planned_tag": "derived", "how": "2.1 x 94% not started", "tier": 2, "sens": "Statewide pause proposed by the underdog", "pause": "Cyndi Munson (D): until guidelines are set, ~10 months est.", "conditions": "Mike Mazzei (R)", "winner": "Mike Mazzei (R)", "winner_pause": false, "note": "Almost entirely a 2028 story. Large-load rates are set by the elected, Republican Corporation Commission."},
+  {"st": "PA", "adds": 2.4, "adds_tag": "sa", "planned": 1.8, "planned_tag": "sa", "tier": 2, "sens": "Further tightening depends on the midterm outcome", "pause": "Stacy Garrity (R): 'however long it takes', 6-12 months est.", "conditions": "Josh Shapiro (D)", "winner": "Josh Shapiro (D)", "winner_pause": false, "note": "From-nothing market: +3.3 GW 2026-28 on a base under 0.5 GW. AWS is ~44% of the 2.4 GW of 2028 adds (~1.05 GW, Capstone arithmetic), including the Anthropic campus next to the Susquehanna nuclear plant; the rest is neoclouds and converted miners. EO 2026-05 (GRID) conditions; HB 2650 passed the House 134-68."},
+  {"st": "MO", "adds": null, "planned_lo": 1.5, "planned_hi": 1.8, "planned_tag": "range", "tier": 2, "sens": "Limited direct state-election sensitivity", "pause": "", "conditions": "", "winner": "no 2026 governor race", "winner_pause": false, "note": "Large Republican majorities, supportive governor."},
+  {"st": "IL", "adds": null, "planned_lo": 0.9, "planned_hi": 1.5, "planned_tag": "range", "tier": 3, "sens": "Further tightening under either outcome", "pause": "", "conditions": "JB Pritzker (D), Darren Bailey (R)", "winner": "JB Pritzker (D)", "winner_pause": false, "note": "New sales-tax exemption agreements stopped from Jul-1; DCs to pay full energy and water cost."},
+  {"st": "WY", "adds": null, "planned_lo": 0.9, "planned_hi": 1.5, "planned_tag": "range", "tier": 3, "sens": "Limited direct state-election sensitivity", "pause": "", "conditions": "Eric Barlow (R), Ken Casner (D, no position found)", "winner": "not verified", "winner_pause": false, "note": "Likely to keep Republican control of both branches (SemiAnalysis)."},
+  {"st": "WV", "adds": null, "planned_lo": 0.9, "planned_hi": 1.5, "planned_tag": "range", "tier": 3, "sens": "Limited direct state-election sensitivity", "pause": "", "conditions": "", "winner": "no 2026 governor race", "winner_pause": false, "note": "Governor and Republican legislature aligned on DC development."},
+  {"st": "OR", "adds": null, "planned": 0.9, "planned_tag": "sa", "tier": 3, "sens": "Further tightening under either outcome", "pause": "Tina Kotek (D): to Jul-1-2027 (declared); Christine Drazan (R): est. same", "conditions": "", "winner": "Tina Kotek (D)", "winner_pause": true, "note": "Oct-9 directive holds DEQ air and water-discharge permits for new or expanded DCs to Jul-1-2027, on top of the Sep state-land pause."},
+  {"st": "IA", "adds": null, "planned": 0.9, "planned_tag": "derived", "how": "30.3 sweep - TX 16.7 - OH 4.8 - GA 3.2 - OR 0.9 - PA 1.8 - OK 2.0 = ~0.9 (rounding +/-0.15); the table order also caps it at OR's 0.9", "tier": 3, "sens": "Further tightening under either outcome", "pause": "Zach Lahn (R): until a regulatory framework, ~6 months est.", "conditions": "Rob Sand (D)", "winner": "Rob Sand (D)", "winner_pause": false, "note": "Google Council Bluffs; Linn County (Google, QTS) fights over the Morgan Valley gas plant."}
+ ],
+ "state_ranges_note": "Locked states (IN, MO, IL, WY, WV): bounds read from SemiAnalysis's 13-state table, which lists OK (2.1 GW adds) above PA (2.4 GW adds), so it is sorted by planned (unstarted) GW, and from the tiers (Tier 1 > 2 GW, Tier 2 1.5-2 GW, Tier 3 < 1.5 GW of unstarted 2028 capacity). Their sum is ~7.9 GW (40.5 planned - 32.6 printed or derived), inside the 6.6-9.5 GW the bounds allow.",
+ "winners_src": "Governors-elect from state_rules.json (governors block; results provisional/uncertified, sources dated 2026-11-04 to 11-06). Candidate classification (pause vs conditions only) is SemiAnalysis's own (1101, 'Bi-Partisan Positions' table), taken at face value.",
+ "players": [
+  {"player": "Microsoft", "tk": "MSFT", "items": ["Arizona is its largest state after Virginia (1101).", "More than 5 GW of behind-the-meter nameplate signed in 2026 YTD, of which 2.7 GW with Chevron and well over 2 GW through turnkey leases with developers such as Crusoe (0910).", "Project Kilby: Chevron's 2.67 GW off-grid plant serves a ~2 GW Microsoft campus in the Permian; fully islanded, so outside the ERCOT audit (0915)."]},
+  {"player": "Amazon AWS", "tk": "AMZN", "items": ["Ohio becomes its largest state outside Virginia by 2028 (1101).", "~44% of Pennsylvania's 2.4 GW of 2028 adds, including the Anthropic campus at Susquehanna (1101).", "One of the three projects SemiAnalysis found delayed by a local moratorium is an AWS campus in Ohio (0915)."]},
+  {"player": "Meta", "tk": "META", "items": ["Ohio becomes its largest state anywhere by 2028, leased plus self-built (1101)."]},
+  {"player": "OpenAI", "tk": "", "items": ["Shackelford County, TX (Vantage Frontier): flagship off-grid 1.4 GW IT campus on 500+ 4.25 MW Jenbacher J624 engines (0910).", "Project Camellia, GA: 3.2 GW power commitment 2028-2032 (1101)."]},
+  {"player": "Google", "tk": "GOOGL", "items": ["Goodnight, TX (built by Crusoe): buildings rising while its major generation permit is pending at TCEQ (1101)."]},
+  {"player": "Oracle", "tk": "ORCL", "items": ["Closed ~4.5 GW of datacenter IT capacity across three sites between Aug and Oct 2025, the start of GW-scale leasing (1018)."]},
+  {"player": "Hyperscaler leasing (MSFT, META, AWS, ORCL)", "tk": "", "items": ["~15 GW of third-party capacity leased in 2026, more than 35 GW by 2028; ~39 GW by 2028 including Google, against Nvidia's 1.5 GW (0911).", "Slightly under $1tn of binding, non-cancellable leases signed in 2026 YTD; a GW-scale pre-lease is typically 15-20 years at $30-50bn TCV per GW (1018)."]}
+ ],
+ "projects": [
+  {"name": "Vantage Frontier (Shackelford County, TX)", "sa": "1.4 GW IT, off-grid on Jenbacher engines (0910). Under construction; VoltaGrid's major air-permit application for the ABI-1 plant is still pending, initial generation separately authorized: the exposed work is the added generation (1101).", "match": "TX-ABILENE-FRONTIER"},
+  {"name": "Goodnight (Crusoe for Google, TX)", "sa": "Under construction while its major generation application is pending at TCEQ; if the hold outlasts the power phase's buffer, servers arrive before the power (1101).", "match": "TX-CLAUDE-GOODNIGHT"},
+  {"name": "Project Kilby (Chevron / Microsoft, Pecos, TX)", "sa": "2.67 GW off-grid plant serving a ~2 GW Microsoft campus; outside the ERCOT audit (0915).", "match": "TX-PECOS-KILBY"},
+  {"name": "OpenAI Project Camellia (Effingham County, GA)", "sa": "3.2 GW power commitment 2028-2032; a broad pause could hit its remaining approvals, a short 2027 pause may land before it needs them (1101).", "match": "GA-EFFINGHAM-CAMELLIA"},
+  {"name": "AWS Susquehanna (Salem Twp, PA)", "sa": "The campus AWS is building for Anthropic next to the Susquehanna nuclear plant counts in Pennsylvania's 2028 adds (1101).", "match": "PA-BERWICK-AWSSUSQ"},
+  {"name": "xAI / SpaceX Southaven (MS)", "sa": "The plant can legally run 2.7 GW nameplate now but only 1.24 GW by Jul-2027 under the binding requirement signed 2026-07-30 (1103).", "match": "MS-SOUTHAVEN"},
+  {"name": "NorthPoint campus near Scranton (Hazle Twp, PA)", "sa": "The rare binding local moratorium: township resolution (Jun-2026) before NorthPoint filed for its special exception; first buildings were due Q4-2026; entitlement slips into 2027 (0915).", "match": "", "why_not": "Not rowed: no public MW for Project Hazelnut (15 buildings, ~1,280 acres); the Hazle Twp pause is in local_moratoria.json"},
+  {"name": "Stream U.S. Data Centers at STAMP (Genesee County, NY), ~340 MW", "sa": "The only project with DEC applications pending when EO 62 took effect; frozen, ~6 months of delay at most (0915).", "match": "NY-ALABAMA-STREAMSTAMP"},
+  {"name": "Urbacon (Niagara Falls, NY), 135 MW", "sa": "State permitting is its next step; ~6 months of delay (0915).", "match": "NY-NIAGARAFALLS-URBACON"},
+  {"name": "Blockfusion (Niagara Falls, NY), 300 MW", "sa": "Preliminary agreement with an AI customer; construction not before late 2029; ~8-10 months of delay (0915). The company now dates CoreWeave's first 25 MW to Feb-2028.", "match": "NY-NIAGARAFALLS-BLOCKFUSION"},
+  {"name": "TeraWulf Cayuga (Lansing, near Ithaca, NY), 300-400 MW", "sa": "Former coal-plant site in early local review; construction slated Q1-2028; not delayed by the EO (0915).", "match": "NY-LANSING-TERAWULFCAYUGA"},
+  {"name": "Riverview (Tonawanda, near Buffalo, NY), 200 MW", "sa": "Shelved by the developer after local opposition; the EO is not the binding constraint (0915).", "match": "NY-TONAWANDA-RIVERVIEW"},
+  {"name": "AWS campus (Ohio) and a Colorado site", "sa": "Two of the three projects delayed by local moratoria; names behind the paywall (0915).", "match": ""}
+ ],
+ "capstone_read": {
+  "contradicts": [
+   {"t": "Texas went the other way from SemiAnalysis's base path.", "d": "On 10-30 race ratings SemiAnalysis had Abbott (conditions only) favoured and a restart around ERCOT's Dec-10 report as the base path. Hinojosa won (provisional), so its 'biggest single risk' is now the live case: approvals frozen through the Jan-12 to May-31 2027 session, est. to Sep-1-2027. Our bear scenario already runs Texas to Sep-1."},
+   {"t": "Texas 2028: SemiAnalysis's forecast vs Bernstein's credible pipeline.", "d": "SemiAnalysis forecasts 18.0 GW of Texas adds in 2028, 16.7 GW of it not started. Bernstein (11-06, Aterio data) has 18 GW of not-started Texas pipeline targeting 2028 but only ~5 GW credible. Same headline size, very different conviction; bases also differ (IT vs Aterio nameplate)."},
+   {"t": "SemiAnalysis's 2028 is far bigger than our registry and the reference deck.", "d": "US 2028: 62.2 GW (SemiAnalysis, IT) vs 47.4 GW in the deck's Aterio base (basis unstated) and {REG2028} GW of dated 2028 phases in our registry. The registry has nothing dated 2028 in PA, IL or IA and little in OK, OH and GA: it misses most of the unstarted 2028 capacity SemiAnalysis models (coverage column in the table)."}
+  ],
+  "new": [
+   {"t": "Post-election exposure, from SemiAnalysis's own map values.", "d": "Governors-elect who back a pause won in TX, OH, GA and OR: 16.7 + 4.8 + 3.2 + 0.9 = 25.6 GW of SemiAnalysis's planned 2028 capacity (Capstone arithmetic), 84% of its 30.3 GW sweep case and 4.5x its 5.7 GW conditions-only floor. Exposed, not delayed."},
+   {"t": "State tiers and candidate pause lengths.", "d": "Tier 1 (> 2 GW unstarted): TX, OH, GA, AZ (+IN, low sensitivity); Tier 2: PA, OK (+MO); Tier 3: IL, OR, IA (+WY, WV). Pause-length estimates: TX to Sep-1-2027, OH 6-12 months, GA ~6, OK ~10, PA 6-12, OR to Jul-1-2027, IA ~6."},
+   {"t": "Measured pre-election delay: ~2.3 GW.", "d": "1.525 GW of ~20 GW inside local restrictions (7.6%) plus 0.8 of 1.4 GW exposed to New York's EO 62. The five EO-62 projects were added to the registry on 2026-11-09 (raw/ne_semianalysis_r3.csv); NorthPoint Hazle was not, for lack of a public MW figure."},
+   {"t": "A 2028 oversupply risk.", "d": "SemiAnalysis sees ~10 GW of datacenter capacity without chips by end-2028 (HBM and N3 logic bind), which would slow new leases and orders from late 2027."}
+  ],
+  "consistent": [
+   {"t": "Exposed is not delayed.", "d": "SemiAnalysis's test (does the project still need the approval, and does the hold outlast its schedule buffer?) is the same split as our waterfall: protected, pause ends first, delayed."},
+   {"t": "Project sizes match the registry.", "d": "Frontier 1.4 GW IT = 10 x 140 MW in the registry; Camellia 3.2 GW = 5 x 640 MW grid tranches from 2028-06; Kilby 2.67 GW of generation for a ~2 GW campus implies generation / load ~1.34, against the 1.5 we use to convert generator nameplate (we carry Kilby at ~1.8 GW IT-eq)."},
+   {"t": "Local moratoria rarely bind.", "d": "SemiAnalysis's 7.6% delayed share of in-boundary capacity is already the anchor of our 'delay-local' guardrail."}
+  ],
+  "caveats": [
+   "SemiAnalysis's state values are mostly paywalled; ranges for IN, MO, IL, WY and WV are read from table order and tiers, not printed.",
+   "The exposure scenarios count planned 2028 GW in a state, not delayed GW. SemiAnalysis says a December Texas restart would not justify cutting 2027-28; a longer hold needs a fresh project-level test.",
+   "Election results are provisional; candidate positions are SemiAnalysis's reading, taken at face value."
+  ]
+ },
+ "catalysts": [
+  {"date": "2026-12-10", "what": "ERCOT files its audit report (target, not a fixed deadline); PUCT review Dec-17. Does not by itself reopen permitting.", "src": "0915, 1101"},
+  {"date": "2027-01-12 → 05-31", "what": "Texas regular legislative session: the window Hinojosa's 'pause until laws pass' depends on.", "src": "1101"},
+  {"date": "2027-01-19", "what": "Hinojosa takes office in Texas (state_rules.json, FundaAI 11-04).", "src": "rules"},
+  {"date": "2027-02-01 → 05-28", "what": "Oklahoma regular session (rules window; Munson's pause is off the table after Mazzei's win).", "src": "1101"},
+  {"date": "2027-04-09", "what": "Original end of ERCOT's Batch Zero study for Studied Load; ERCOT says it will miss it, no new date filed.", "src": "0915"},
+  {"date": "2027-07-01", "what": "Oregon's DEQ permit hold and state-land pause end; New York's EO 62 pause runs up to Jul-2027.", "src": "0915, 1101"},
+  {"date": "Lame duck, 2026", "what": "S. 5653 (Bipartisan American Affordability and Jobs Act): permitting reform plus DCs paying their transmission costs. Mostly economics, not capacity.", "src": "1101"}
+ ]
+}

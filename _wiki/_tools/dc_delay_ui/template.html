@@ -13,6 +13,7 @@
   --c-base:#8a8984; --gov-d:#d6e6fa; --gov-r:#f7dbda; --gov-na:#ecebe6; --state-line:#ffffff; --pause-line:#0b0b0b;
   --accent:#2a78d6; --chip-bg:#ecebe6;
   --s-active:#6b6a65; --s-uc:#2a78d6; --s-ann:#a9c7ec; --s-fr:#f7dcc6; --s-mf:#f0b48c; --s-ca:#e2864f; --s-re:#c95a24; --s-ho:#8f3510;
+  --lk-hi:#6a4fc7; --lk-med:#9c88e3; --lk-low:#c9bdf1; --cmp-other:#a3a29b;
 }
 @media (prefers-color-scheme: dark){
   :root:where(:not([data-theme="light"])){
@@ -23,6 +24,7 @@
     --c-base:#77766f; --gov-d:#1f3350; --gov-r:#4a2828; --gov-na:#262624; --state-line:#121211; --pause-line:#f0efec;
     --accent:#3987e5; --chip-bg:#2a2a27;
     --s-active:#8f8e86; --s-uc:#3987e5; --s-ann:#2d4a6e; --s-fr:#4d3324; --s-mf:#7a4526; --s-ca:#a85a2a; --s-re:#d8702f; --s-ho:#f59a62;
+    --lk-hi:#b3a3f8; --lk-med:#7d68d2; --lk-low:#47398a; --cmp-other:#6b6a65;
   }
 }
 :root[data-theme="dark"]{
@@ -33,6 +35,7 @@
   --c-base:#77766f; --gov-d:#1f3350; --gov-r:#4a2828; --gov-na:#262624; --state-line:#121211; --pause-line:#f0efec;
   --accent:#3987e5; --chip-bg:#2a2a27;
   --s-active:#8f8e86; --s-uc:#3987e5; --s-ann:#2d4a6e; --s-fr:#4d3324; --s-mf:#7a4526; --s-ca:#a85a2a; --s-re:#d8702f; --s-ho:#f59a62;
+    --lk-hi:#b3a3f8; --lk-med:#7d68d2; --lk-low:#47398a; --cmp-other:#6b6a65;
 }
 *{box-sizing:border-box}
 body{margin:0;background:var(--page);color:var(--ink);font:14px/1.5 -apple-system,"Segoe UI",Roboto,Arial,sans-serif}
@@ -124,6 +127,80 @@ details summary{cursor:pointer;font-weight:600}
 .read-col li{margin:0 0 8px;font-size:12.5px;color:var(--ink-2)}
 .read-col li b{color:var(--ink);display:block;margin-bottom:1px}
 .legend i.sw{border-radius:2px}
+.pb{display:flex;flex-direction:column;gap:3px;min-width:150px}
+.pb div{height:8px;border-radius:0 4px 4px 0;min-width:1px}
+.pb .rg{background:transparent;border:1.5px dashed var(--c-base);border-left:0}
+.pb .row{display:flex;height:8px;background:none;border-radius:0}
+.pb .row div{height:8px}
+.kpis.k4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.kpi .v small{font-size:13px;font-weight:600;color:var(--ink-2)}
+.ptag{display:inline-block;font-size:10px;font-weight:650;border-radius:3px;padding:0 4px;margin-left:4px;vertical-align:1px;border:1px solid var(--border);color:var(--ink-3)}
+.ptag.d{border-style:dashed}
+.players{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+.players ul{margin:4px 0 0;padding:0 0 0 16px}
+.players li{font-size:12.5px;color:var(--ink-2);margin:0 0 5px}
+.sbar{display:flex;height:22px;border-radius:0 4px 4px 0;overflow:hidden}
+.sbar span{display:flex;align-items:center;justify-content:center;font-size:11px;font-weight:650;color:#fff;overflow:hidden;white-space:nowrap}
+.sbar span+span{border-left:2px solid var(--surface)}
+.drill{position:fixed;inset:0;z-index:40;background:rgba(0,0,0,.45);display:flex;align-items:flex-start;justify-content:center;padding:24px 16px;overflow:auto}
+.drill[hidden]{display:none}
+.drill-box{background:var(--surface);color:var(--ink);border:1px solid var(--border);border-radius:14px;max-width:1500px;width:100%;box-shadow:0 12px 48px rgba(0,0,0,.3)}
+.drill-h{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;padding:16px 18px;border-bottom:1px solid var(--border);position:sticky;top:0;background:var(--surface);border-radius:14px 14px 0 0;z-index:2}
+.drill-h h2{margin:0}
+.drill-h button{font:inherit;border:1px solid var(--border);background:var(--surface-2);color:var(--ink);border-radius:8px;padding:6px 12px;cursor:pointer}
+.drill-b{padding:12px 18px 18px}
+.pm{display:inline-block;border-radius:4px;padding:0 5px;font-size:11px;font-weight:600;white-space:nowrap;margin:1px 2px 1px 0;border:1px solid var(--border)}
+.pm.ok{background:color-mix(in srgb,var(--c-ends) 18%,transparent)}
+.pm.need{background:color-mix(in srgb,var(--c-delayed) 22%,transparent)}
+.pm.unk{color:var(--ink-3)}
+.miss{font-size:12px;min-width:280px;max-width:340px}
+#drTable{min-width:1380px}
+#drTable td:nth-child(2){min-width:220px}
+.miss b{color:var(--c-delayed)}
+#sw .sb{cursor:pointer}
+.slide{background:var(--surface);border:1px solid var(--border);border-radius:14px;padding:18px 20px 16px}
+.slide .sh{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:0 0 4px}
+.slide .sn{display:inline-flex;align-items:center;justify-content:center;width:26px;height:26px;border-radius:50%;background:var(--ink);color:var(--surface);font-weight:700;font-size:13px;flex:none}
+.slide .sh h2{margin:0}
+.slide .sk{color:var(--ink-3);font-size:13px}
+.slide .lede{font-size:14px;color:var(--ink-2);margin:6px 0 14px;max-width:1150px}
+.slide .lede b{color:var(--ink)}
+.sgrid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(0,1fr);gap:22px}
+.sgrid3{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.sgrid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px 20px}
+.ct{font-weight:650;font-size:13.5px;margin:0}
+.cs{font-size:12px;color:var(--ink-3);margin:0 0 8px}
+.tiles{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-bottom:14px}
+.tiles .kpi .v{font-size:22px}
+.reading{margin-top:14px;padding:10px 14px;border-radius:10px;background:var(--surface-2);border-left:4px solid var(--ink);font-size:13px;color:var(--ink-2)}
+.reading b{color:var(--ink)}
+.rcard{border:1px solid var(--border);border-left:4px solid var(--lk-hi);border-radius:10px;padding:8px 12px;margin-top:12px;font-size:12.5px;color:var(--ink-2)}
+.rcard h4{margin:0 0 4px;font-size:13px;color:var(--ink)}
+.rcard p{margin:0 0 4px}
+.rcard b{color:var(--ink)}
+.dkfoot{font-size:11.5px;color:var(--ink-3);margin-top:10px}
+.stk{display:flex;height:16px;border-radius:0 4px 4px 0;overflow:hidden;min-width:2px}
+.stk span{display:block;height:100%;min-width:1px}
+.stk span+span{border-left:2px solid var(--surface)}
+.hbar{display:flex;align-items:center;gap:6px}
+.hbar>div{height:14px;border-radius:0 4px 4px 0;min-width:2px}
+.hbar b{font-size:12px;font-variant-numeric:tabular-nums}
+td.lo{color:var(--c-delayed);font-weight:650}
+.dl a{display:inline-block;margin:2px 8px 2px 0;font-size:12.5px;padding:3px 10px;border:1px solid var(--border);border-radius:20px;background:var(--surface);text-decoration:none}
+.cmpq{margin-top:18px}
+.cmpq h3{margin:0 0 2px;font-size:15px}
+.cmpq .tbl-wrap{max-height:none}
+#dk5 table td{vertical-align:middle}
+.strip svg{display:block;width:100%;height:26px;overflow:visible}
+tr.at td:first-child b{color:var(--lk-hi)}
+tr.cap td{background:color-mix(in srgb,var(--lk-hi) 10%,transparent)}
+.rules4{margin:0;padding:0 0 0 18px;font-size:12.5px;color:var(--ink-2)}
+.rules4 li{margin:0 0 4px}
+.rules4 b{color:var(--ink)}
+.bchip{display:inline-block;font-size:10.5px;font-weight:650;border-radius:3px;padding:0 5px;border:1px solid var(--border);color:var(--ink-2);white-space:nowrap}
+.bchip.ns{border-style:dashed;color:var(--ink-3)}
+@media (max-width:1000px){.sgrid,.sgrid3,.sgrid2{grid-template-columns:1fr}}
+@media (max-width:1000px){.players{grid-template-columns:1fr}.kpis.k4{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media (max-width:1000px){.read-grid{grid-template-columns:1fr}.kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}}
 @media (max-width:620px){header,main{padding-left:16px;padding-right:16px}.cards{grid-template-columns:1fr}.kpis{grid-template-columns:1fr 1fr}}
 </style>
@@ -167,6 +244,14 @@ details summary{cursor:pointer;font-weight:600}
       <p class="lead">What each instrument blocks, and its window in the selected scenario. Sources on every line.</p>
       <div id="rulesText"></div>
     </div>
+  </section>
+
+  <section>
+    <h2>GW added by state</h2>
+    <p class="lead" id="swLead"></p>
+    <div class="filters"><span class="lbl" id="swBaseLbl" style="font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em">Base</span><span class="seg" id="swBase"></span><span class="lbl" style="font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em;margin-left:8px">Window</span><span class="seg" id="swWin"></span><span id="swAtWrap" hidden><span class="lbl" style="font-size:12px;color:var(--ink-3);text-transform:uppercase;letter-spacing:.04em;margin:0 8px">Aterio stages</span><span class="seg" id="swAt"></span></span></div>
+    <div class="panel chart"><div class="legend" id="swLegend"></div><div id="sw"></div></div>
+    <p class="read" id="swRead"></p>
   </section>
 
   <section>
@@ -254,9 +339,98 @@ details summary{cursor:pointer;font-weight:600}
       <div class="tbl-wrap" style="max-height:none"><table id="bCat"></table></div>
     </section>
   </div>
+  <div id="tabSA" hidden>
+    <div class="warn" id="sSrc" style="margin-top:14px"></div>
+    <div class="kpis k4" id="sKpis" style="margin-top:14px"></div>
+    <section>
+      <h2>What is new, and what contradicts us</h2>
+      <p class="lead">Capstone read of SemiAnalysis against our registry, the rules file, Bernstein's 11-06 note and the reference deck. Our arithmetic is labelled as such.</p>
+      <div class="read-grid" id="sRead"></div>
+    </section>
+    <section>
+      <h2>2028 by state: SemiAnalysis vs our registry</h2>
+      <p class="lead" id="sStLead"></p>
+      <div class="legend" id="sStLegend"></div>
+      <div class="tbl-wrap" style="max-height:none"><table class="btbl" id="sState"></table></div>
+      <p class="read" id="sStNote"></p>
+    </section>
+    <section>
+      <h2>Planned 2028 GW exposed to a statewide pause</h2>
+      <p class="lead" id="sScenLead"></p>
+      <div class="legend" id="sScenLegend"></div>
+      <div class="panel" id="sScen"></div>
+    </section>
+    <section>
+      <h2>By company</h2>
+      <p class="lead">Company-level statements in the same pieces. SemiAnalysis's per-company GW tables are behind its paywall.</p>
+      <div class="players" id="sPlayers"></div>
+    </section>
+    <section>
+      <h2>Projects SemiAnalysis names, and what our registry holds</h2>
+      <div class="tbl-wrap" style="max-height:none"><table id="sProj"></table></div>
+    </section>
+    <section>
+      <h2>Registry rows that cite SemiAnalysis</h2>
+      <p class="lead" id="sSubLead"></p>
+      <div class="tbl-wrap" style="max-height:520px"><table id="sSub"></table></div>
+    </section>
+    <section>
+      <h2>Catalysts SemiAnalysis flags</h2>
+      <div class="tbl-wrap" style="max-height:none"><table id="sCat"></table></div>
+    </section>
+  </div>
+  <div id="tabTeam" hidden>
+    <div class="warn" id="tSrc" style="margin-top:14px"></div>
+    <section id="tX" hidden>
+      <h2>Cross-check against our registry</h2>
+      <p class="lead" id="tXLead"></p>
+      <div class="kpis k4" id="tXKpis"></div>
+      <div class="read-grid" id="tXRead"></div>
+      <details style="margin-top:14px"><summary id="tXOnlyDSum"></summary><p class="lead" style="margin-top:6px">Site-level projects in Daniel's matrix with no campus in our registry, largest headline MW first. Candidates to research and add. MW as Daniel states them (mixed units).</p><div class="tbl-wrap" style="max-height:520px"><table id="tXOnlyD"></table></div></details>
+      <details style="margin-top:10px"><summary id="tXOnlyRSum"></summary><p class="lead" style="margin-top:6px">Registry campuses dated 2026-30 (not Aterio-low) that no project in Daniel's matrix maps to, largest IT-eq first. His matrix is organised by end user, so colocation without a named tenant mostly sits here by design.</p><div class="tbl-wrap" style="max-height:520px"><table id="tXOnlyR"></table></div></details>
+      <details style="margin-top:10px"><summary id="tXMatchSum"></summary><p class="lead" style="margin-top:6px">Each matched project beside the registry campuses it maps to. Daniel's MW are headline figures (often a whole programme or full build); ours are dated phases, as reported and in IT-eq. A gap in MW alone is not a contradiction: read the status columns.</p><div class="tbl-wrap" style="max-height:620px"><table id="tXMatch"></table></div></details>
+    </section>
+    <h2 style="margin-top:22px">Daniel's page</h2>
+    <iframe id="tFrame" title="Team research page" sandbox="allow-scripts allow-popups allow-popups-to-escape-sandbox" style="display:block;width:100%;height:calc(100vh - 120px);min-height:640px;margin-top:12px;border:1px solid var(--border);border-radius:12px;background:var(--surface)"></iframe>
+  </div>
+  <div id="tabAterio" hidden>
+    <div class="warn" id="aSrc" style="margin-top:14px"></div>
+    <div class="kpis k4" id="aKpis" style="margin-top:14px"></div>
+    <section>
+      <h2>Contradictions, and what checking them found</h2>
+      <p class="lead" id="aFlagLead"></p>
+      <div class="legend" id="aFlagLegend"></div>
+      <div class="tbl-wrap" style="max-height:640px"><table id="aFlags"></table></div>
+    </section>
+    <section>
+      <h2>Coverage by state: Aterio under construction vs the registry</h2>
+      <p class="lead" id="aStLead"></p>
+      <div class="tbl-wrap" style="max-height:none"><table class="btbl" id="aState"></table></div>
+    </section>
+    <section>
+      <h2>What the registry is missing, and what Aterio is missing</h2>
+      <details open style="margin-top:6px"><summary id="aOnlySum"></summary><p class="lead" style="margin-top:6px">Aterio campuses with buildings under construction or delayed, activation 2026-30, that no registry campus maps to, largest first. Sites checked against public sources and not added are marked <i>held</i>, with the reason.</p><div class="tbl-wrap" style="max-height:520px"><table id="aOnly"></table></div></details>
+      <details style="margin-top:10px"><summary id="aRegSum"></summary><p class="lead" style="margin-top:6px">Registry campuses with no Aterio match, with the reviewer's reason. Several post-date the 08-31 export.</p><div class="tbl-wrap" style="max-height:520px"><table id="aReg"></table></div></details>
+      <details style="margin-top:10px"><summary id="aAllSum"></summary><p class="lead" style="margin-top:6px">Every matched group, registry phases beside Aterio buildings. MW are IT-eq on both sides (registry ÷1.2 or ÷1.5 by basis, Aterio facility ÷1.15), window 2026-30.</p><div class="tbl-wrap" style="max-height:620px"><table id="aAll"></table></div></details>
+    </section>
+  </div>
+  <div id="tabDeck" hidden>
+    <div class="warn" id="dkSrc" style="margin-top:14px"></div>
+    <section class="slide" id="dk1"></section>
+    <section class="slide" id="dk2"></section>
+    <section class="slide" id="dk3"></section>
+    <section class="slide" id="dk4"></section>
+    <section class="slide" id="dk5"></section>
+  </div>
   <p class="foot" id="foot"></p>
 </main>
 <div id="tip"></div>
+<div id="drill" class="drill" hidden role="dialog" aria-modal="true" aria-labelledby="drTitle">
+  <div class="drill-box">
+    <div class="drill-h"><div><h2 id="drTitle"></h2><p class="lead" id="drLead" style="margin:4px 0 0"></p></div><button type="button" id="drClose">Close</button></div>
+    <div class="drill-b"><div class="legend" id="drLegend"></div><div class="tbl-wrap" style="max-height:none"><table id="drTable"></table></div><p class="read" id="drNote"></p></div>
+  </div>
+</div>
 <script>
 const M = /*__DATA__*/null;
 const BK = ["energized","no_pause","protected","ends_first","delayed"];
@@ -287,7 +461,7 @@ function header(){
   const p = M.phases, srcs = new Set(); p.forEach(x => (x.src||"").split(";").forEach(s => s.trim() && srcs.add(s.trim())));
   $("sub").innerHTML = `US data-center campuses, bottom-up by project phase · public-source registry: <b>${p.length}</b> phases on <b>${M.n_campuses}</b> campuses, ${srcs.size} distinct sources · as of ${esc(M.built || M.as_of)} · all GW are IT-equivalent (method below)`;
   const pv = M.rules.provisional ? "Rules layer is PROVISIONAL. " : "";
-  $("warn").innerHTML = `${pv}The registry is built from public sources (company releases, utility and permit filings, press, the wiki corpus). It covers the large campuses, not every building, so absolute GW sit below vendor censuses: see Guardrails. The layout follows a reference deck built on Aterio data, shared on 2026-11-06 (author to confirm). Its figures appear here only as a benchmark and as the scaled view's targets.`;
+  $("warn").innerHTML = `${pv}The registry is built from public sources (company releases, utility and permit filings, press, the wiki corpus). Since 2026-11-09 it also carries the larger campuses that only the Aterio census had (as of 2026-08-31), each checked against at least one public source (see the Aterio tab). It covers the large campuses, not every building, so absolute GW sit below vendor censuses: see Guardrails. The layout follows a reference deck built on Aterio data, shared on 2026-11-06 (author to confirm). Its figures appear here only as a benchmark and as the scaled view's targets.`;
 }
 
 function controls(){
@@ -297,7 +471,7 @@ function controls(){
   const sc = M.aggs[S.scen].scaled, rg = M.aggs[S.scen].construction; $("scaleNote").style.display = S.uni === "scaled" ? "block" : "none";
   if (S.uni === "scaled") { const c = M.calib, ry = rg.annual_base, thin = (ry[2029] || 0) + (ry[2030] || 0);
     const wmax = Math.max(...Object.entries(c.weights).filter(([k]) => /\|20(29|30)$/.test(k)).map(([,v]) => v));
-    $("scaleNote").innerHTML = `<b>Extrapolated view: "the GW the registry misses look like the GW it covers, in the same state and year".</b> Registry state × year cells are raked (iterative proportional fitting) to the reference deck's Aterio totals: state GW for its top 10 (${Object.entries(c.state_targets).filter(([k]) => k !== "_rest").map(([k,v]) => k + " " + v).join(", ")}; rest ${f1(c.state_targets._rest)}), base-case adds by year (${Object.entries(c.year_targets).map(([k,v]) => k + " " + v).join(" · ")}) and the deck's own 2026-28 state cards (${Object.entries(c.card_targets_2628 || {}).map(([k,v]) => k + " " + v).join(", ")})${Object.keys(c.moved_to_rest_2930 || {}).length ? "; the registry has no " + Object.keys(c.moved_to_rest_2930).join("/") + " phases dated 2029-30, so that state's 2029-30 remainder (" + Object.entries(c.moved_to_rest_2930).map(([k,v]) => k + " " + v).join(", ") + " GW) is carried by the rest-of-US group" : ""}. Each cell keeps its own bucket mix and slips. Nothing is fitted to a delay figure, so the Texas checks below stay independent. <b>Read 2029-30 as directional:</b> the registry holds only ${f1(thin)} GW dated 2029-30 against the deck's ${f1((c.year_targets[2029]||0) + (c.year_targets[2030]||0))} GW, so those years carry weights up to ~${Math.round(wmax)}× and rest on a handful of phases. The 2026-11-06 double-check found this headline moves 3-5 GW on small registry changes: treat it as a range, not a validation of the deck. Registry delayed GW in this scenario: <b>${f1(rg.wf.delayed)}</b>, the floor if the missing GW were unexposed. Units follow the deck (basis not stated). Map dots, the city table and the project table show registry phases.`; }
+    $("scaleNote").innerHTML = `<b>Extrapolated view: "the GW the registry misses look like the GW it covers, in the same state and year".</b> Registry state × year cells are raked (iterative proportional fitting) to the reference deck's Aterio totals${c.fac_it && c.fac_it !== 1 ? `, first put on the registry's basis: the deck's ${c.deck_total} GW is facility power at campus level, and ÷ ${c.fac_it} (Aterio's own facility/IT median) it is <b>${f1(c.target_total)} GW IT-eq</b>. Targets, IT-eq` : ""}: state GW for its top 10 (${Object.entries(c.state_targets).filter(([k]) => k !== "_rest").sort((x, y) => y[1] - x[1]).map(([k,v]) => k + " " + f1(v)).join(", ")}; rest ${f1(c.state_targets._rest)}), base-case adds by year (${Object.entries(c.year_targets).map(([k,v]) => k + " " + f1(v)).join(" · ")}) and the deck's own 2026-28 state cards (${Object.entries(c.card_targets_2628 || {}).map(([k,v]) => k + " " + f1(v)).join(", ")})${Object.keys(c.moved_to_rest_2930 || {}).length ? "; the registry has no " + Object.keys(c.moved_to_rest_2930).join("/") + " phases dated 2029-30, so that state's 2029-30 remainder (" + Object.entries(c.moved_to_rest_2930).map(([k,v]) => k + " " + v).join(", ") + " GW) is carried by the rest-of-US group" : ""}. Each cell keeps its own bucket mix and slips. Nothing is fitted to a delay figure, so the Texas checks below stay independent. <b>Read 2029-30 as directional:</b> the registry holds only ${f1(thin)} GW dated 2029-30 against the deck's ${f1((c.year_targets[2029]||0) + (c.year_targets[2030]||0))} GW, so those years carry weights up to ~${Math.round(wmax)}× and rest on a handful of phases. The 2026-11-06 double-check found this headline moves 3-5 GW on small registry changes: treat it as a range, not a validation of the deck. Registry delayed GW in this scenario: <b>${f1(rg.wf.delayed)}</b>, the floor if the missing GW were unexposed. ${c.fac_it && c.fac_it !== 1 ? "Every figure in this view is IT-eq, like the registry. Until 2026-11-09 the deck's totals were used as stated and this view ran about " + Math.round((c.fac_it - 1) * 100) + "% high." : "Units follow the deck (basis not stated)."} Map dots, the city table and the project table show registry phases.`; }
 }
 
 function kpis(){
@@ -353,7 +527,7 @@ function map(){
   svgEl.querySelectorAll(".lm").forEach(c => { const L = (M.locals.moratoria||[]).find(x => x.id === c.dataset.id);
     c.onmousemove = e => showTip(e, `<b>${esc(L.jurisdiction)}, ${L.state}</b><div class="m">${esc(L.type || "moratorium")} · ${esc(L.start)} → ${esc(L.end[S.scen])}</div><div class="m">${esc(L.scope || "")}</div>`); c.onmouseleave = hideTip; });
   svgEl.querySelectorAll(".stp").forEach(p => { const s = p.dataset.st; p.onmousemove = e => { const v = st[s]; const gv = gov(s);
-    showTip(e, `<b>${SN(s)}</b><div class="m">${v ? f1(v.gw_2630) + " GW dated 2026-30 · " + f1(v.b2630.delayed) + " GW delayed" : "no registry phases in universe"}</div>${gv ? `<div class="m">Governor 2027: ${esc(gv.gov_2027 || "")} (${gv.party_2027 || "?"})${gv.flip ? " · flipped" : ""}</div>` : ""}`); }; p.onmouseleave = hideTip; });
+    showTip(e, `<b>${SN(s)}</b><div class="m">${v ? f1(v.gw_2630) + " GW dated 2026-30 · " + f1(v.b2630.delayed) + " GW delayed" : "no registry phases in universe"}</div>${gv ? `<div class="m">Governor 2027: ${esc(gv.gov_2027 || "")} (${gv.party_2027 || "?"})${gv.flip ? " · flipped" : ""}</div>` : ""}${v ? `<div class="m">Double-click for the 20 largest projects</div>` : ""}`); }; p.onmouseleave = hideTip; if (st[s]) { p.style.cursor = "pointer"; p.ondblclick = () => drill(s); } });
   const tx = st.TX; const lead = [];
   const ranked = Object.entries(st).sort((a,b) => b[1].b2628.delayed - a[1].b2628.delayed).filter(([,v]) => v.b2628.delayed > 0.005);
   $("mapLead").innerHTML = ranked.length ? `<b>${ranked.slice(0,3).map(([s,v]) => `${SN(s)} ${f1(v.b2628.delayed)} GW`).join(" · ")}</b> of 2026-28 GW are at risk in this scenario; everything else is energized, outside any pause, or already holds the approval the pause blocks. GW dated 2026-28, ${M.scenarios[S.scen].label.toLowerCase()} scenario.` : `No 2026-28 GW is delayed in this scenario.`;
@@ -370,7 +544,7 @@ function cards(){
       <div class="l1">${f1(g)} GW in 2026-28: ${Math.round(prot*100)}% protected</div>
       <div class="l2">${f1(b.energized)} energized · ${f1(b.no_pause)} outside pause · ${f1(b.protected)} approval in hand · ${f1(b.ends_first)} pause ends first</div>
       <div class="l3">${b.delayed > 0.005 ? `<b>${f1(b.delayed)} GW delayed</b> (${f1(v.yshift_2628)} shift year)` : "0 delayed"}${v.to_2031 > 0.005 ? ` · ${f1(v.to_2031)} GW of 2029-30 to 2031+` : ""}</div></div>`; }).join("");
-  $("cards").querySelectorAll(".card").forEach(c => c.onclick = () => { S.st = S.st === c.dataset.st ? "" : c.dataset.st; S.q = ""; $("fText").value = ""; cards(); table(); });
+  $("cards").querySelectorAll(".card").forEach(c => { c.onclick = () => { S.st = S.st === c.dataset.st ? "" : c.dataset.st; S.q = ""; $("fText").value = ""; cards(); table(); }; c.ondblclick = () => drill(c.dataset.st); c.title = "Click to filter · double-click for the 20 largest projects"; });
 }
 
 function top10(){
@@ -434,10 +608,232 @@ function waterfall(){
     const words = lbl.split(" "); s += `<text class="ax" x="${x + bw/2}" y="${H - padB + 16}" text-anchor="middle">${esc(words.slice(0,2).join(" "))}</text>` + (words.length > 2 ? `<text class="ax" x="${x + bw/2}" y="${H - padB + 29}" text-anchor="middle">${esc(words.slice(2).join(" "))}</text>` : "");
     if (i < n - 1) { const nx = padL + (i+1)*gap + (gap-bw)/2; const ly = i === 0 ? y(a.total) : y(base); s += `<line x1="${x+bw}" x2="${nx}" y1="${ly}" y2="${ly}" stroke="var(--ink-3)" stroke-dasharray="2 3" stroke-width="1"/>`; } });
   s += `</svg>`; $("wf").innerHTML = s;
-  $("wfNote").innerHTML = `<span style="color:var(--ink-3)">IT-eq GW dated 2026-30 · build time 18 months · ${S.uni === "pipeline" ? "+ high/medium announced campuses" : S.uni === "scaled" ? "scaled to Aterio state totals (deck basis)" : "campuses under construction"}</span>`;
+  $("wfNote").innerHTML = `<span style="color:var(--ink-3)">IT-eq GW dated 2026-30 · build time 18 months · ${S.uni === "pipeline" ? "+ high/medium announced campuses" : S.uni === "scaled" ? (M.calib.fac_it && M.calib.fac_it !== 1 ? "scaled to Aterio state totals (deck ÷ " + M.calib.fac_it + ")" : "scaled to Aterio state totals (deck basis)") : "campuses under construction"}</span>`;
   $("wf").querySelectorAll(".wfb").forEach(r => { const i = +r.dataset.i; const k = ["", "energized","no_pause","protected","ends_first","delayed"][i];
     r.onmousemove = e => showTip(e, i === 0 ? `<b>${f1(a.total)} GW</b><div class="m">IT-eq GW dated 2026-30 in the universe</div>` : `<b>${BLONG[k]}</b><div class="m">${f1(wf[k])} GW · ${(wf[k]/a.total*100).toFixed(1)}% of universe</div>`); r.onmouseleave = hideTip; });
 }
+
+/* ---------------------------------------------------------------- GW added by state (waterfall) + state drilldown */
+let SW = {win: "2026-30", base: "registry", at: "all"};
+const winLabel = () => SW.win === "2026-30" ? "2026-30" : SW.win;
+/* Aterio base: the census under the house rules (aterio_capstone_view.py -> M.aterioDeck.capstone.campuses, MW IT-eq by
+   activation year x stage). Stages stack in order of firmness; no pause scenario is applied to Aterio's dates. */
+const CV = (M.aterioDeck || {}).capstone || null;
+const ATB = ["online", "building", "delayed", "announced"];
+const ATL = {online: "Went live in the window", building: "Under construction", delayed: "Delayed", announced: "Announced / land bank, rated High"};
+const ATS = {online: "went live", building: "under constr.", delayed: "delayed", announced: "announced High"};
+const ATF = {online: "var(--c-energized)", building: "var(--accent)", delayed: "var(--c-delayed)", announced: "var(--accent)"};
+const ATO = {announced: 0.35};
+const atBk = () => SW.at === "uc" ? ["building", "delayed"] : ATB;
+function atVals(c){
+  const ys = SW.win === "2026-30" ? YRS : [+SW.win], o = {t: 0};
+  ATB.forEach(b => o[b] = 0);
+  ys.forEach(y => { const v = c.y[y] || {}; ATB.forEach(b => o[b] += (v[b] || 0) / 1000); });
+  atBk().forEach(b => o.t += o[b]);
+  return o;
+}
+let ATREG = null;
+function atReg(){   // Aterio campus key -> registry campuses it maps to (aterio_registry_xchk.py groups)
+  if (ATREG) return ATREG; ATREG = {};
+  ((M.aterio || {}).groups || []).forEach(g => { if (!g.reg || !g.at) return;
+    (g.at.keys || []).forEach(k => { const o = (ATREG[k] = ATREG[k] || {names: [], verdict: null}); o.names.push(...(g.reg.campuses || [])); if (g.verdict) o.verdict = g.verdict; }); });
+  return ATREG;
+}
+const regBase = st => swVals(((M.aggs[S.scen] || {}).construction || {states: {}}).states[st] || {}).b;   // registry, campuses under construction, base schedule
+const inWin = cod => { const y = +String(cod || "").slice(0, 4); return SW.win === "2026-30" ? (y >= 2026 && y <= 2030) : y === +SW.win; };
+function swVals(v){
+  const ys = SW.win === "2026-30" ? YRS : [+SW.win];
+  return {b: ys.reduce((t, y) => t + ((v.ab || {})[y] || 0), 0), sc: ys.reduce((t, y) => t + ((v.as || {})[y] || 0), 0)};
+}
+function stateWaterfall(){
+  const hasAt = !!(CV && (CV.campuses || []).length);
+  if (!hasAt) SW.base = "registry";
+  $("swBaseLbl").hidden = $("swBase").hidden = !hasAt;
+  if (hasAt) seg($("swBase"), [["registry", "Capstone registry"], ["aterio", `Aterio census (${CV.asof})`]], SW.base, k => { SW.base = k; stateWaterfall(); });
+  seg($("swWin"), [["2026-30", "2026-30"]].concat(YRS.map(y => [String(y), String(y)])), SW.win, k => { SW.win = k; stateWaterfall(); });
+  $("swAtWrap").hidden = SW.base !== "aterio";
+  if (SW.base === "aterio") return stateWaterfallAterio();
+  const a = A();
+  const rows = Object.entries(a.states).map(([st, v]) => ({st, ...swVals(v)})).filter(r => r.b > 0.0005 || r.sc > 0.0005).sort((x, y) => y.b - x.b || y.sc - x.sc);
+  const N = 14, top = rows.slice(0, N), rest = rows.slice(N);
+  const steps = top.concat(rest.length ? [{st: "", other: rest.length, b: rest.reduce((t, r) => t + r.b, 0), sc: rest.reduce((t, r) => t + r.sc, 0)}] : []);
+  const totB = steps.reduce((t, r) => t + r.b, 0), totS = steps.reduce((t, r) => t + r.sc, 0);
+  let cum = 0, ymax = Math.max(totB, totS, 0.1);
+  steps.forEach(r => { r.c0 = cum; ymax = Math.max(ymax, cum + Math.max(r.b, r.sc)); cum += r.sc; });
+  const W = 1100, H = 340, padL = 42, padB = 44, padT = 26, n = steps.length + 1, gap = (W - padL - 10) / n, bw = Math.min(gap * 0.64, 54);
+  const y = v => padT + (H - padT - padB) * (1 - v / ymax);
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Waterfall of GW added by state, ${winLabel()}">`;
+  niceTicks(ymax).forEach(t => s += `<line class="gl" x1="${padL}" x2="${W - 6}" y1="${y(t)}" y2="${y(t)}"/><text class="ax" x="${padL - 6}" y="${y(t) + 4}" text-anchor="end">${t}</text>`);
+  steps.forEach((r, i) => {
+    const x = padL + i * gap + (gap - bw) / 2, lo = Math.min(r.b, r.sc), hi = Math.max(r.b, r.sc);
+    const solidTop = y(r.c0 + lo), solidH = Math.max(y(r.c0) - solidTop, lo > 0 ? 1.5 : 0);
+    s += `<g class="sb" data-i="${i}">`;
+    s += `<rect x="${x}" y="${y(r.c0) - solidH}" width="${bw}" height="${solidH}" rx="3" fill="var(--accent)"/>`;
+    if (r.b - r.sc > 0.0005) s += `<rect x="${x + 0.75}" y="${y(r.c0 + r.b)}" width="${bw - 1.5}" height="${Math.max(y(r.c0 + r.sc) - y(r.c0 + r.b) - 2, 1)}" rx="3" fill="none" stroke="var(--c-delayed)" stroke-width="1.5" stroke-dasharray="4 3"/>`;
+    if (r.sc - r.b > 0.0005) s += `<rect x="${x}" y="${y(r.c0 + r.sc)}" width="${bw}" height="${Math.max(y(r.c0 + r.b) - y(r.c0 + r.sc) - 2, 1)}" rx="3" fill="var(--c-delayed)" opacity=".5"/>`;
+    s += `<rect x="${x - (gap - bw) / 2}" y="${padT}" width="${gap}" height="${H - padT - padB}" fill="transparent"/></g>`;
+    const d = r.sc - r.b;
+    s += `<text class="val" x="${x + bw / 2}" y="${y(r.c0 + hi) - (Math.abs(d) > 0.005 ? 17 : 6)}" text-anchor="middle">${f1(r.sc)}</text>`;
+    if (Math.abs(d) > 0.005) s += `<text class="vals" x="${x + bw / 2}" y="${y(r.c0 + hi) - 5}" text-anchor="middle" style="fill:var(--c-delayed)">${d > 0 ? "+" : "−"}${f1(Math.abs(d))}</text>`;
+    s += `<text class="ax" x="${x + bw / 2}" y="${H - padB + 15}" text-anchor="middle" style="font-weight:600">${r.st || "Other"}</text>`;
+    s += `<text class="ax" x="${x + bw / 2}" y="${H - padB + 28}" text-anchor="middle">${totS ? Math.round(r.sc / totS * 100) + "%" : ""}</text>`;
+    const nx = padL + (i + 1) * gap + (gap - bw) / 2;
+    s += `<line x1="${x + bw}" x2="${nx}" y1="${y(r.c0 + r.sc)}" y2="${y(r.c0 + r.sc)}" stroke="var(--ink-3)" stroke-dasharray="2 3" stroke-width="1"/>`;
+  });
+  const xt = padL + steps.length * gap + (gap - bw) / 2;
+  s += `<rect x="${xt}" y="${y(totS)}" width="${bw}" height="${Math.max(y(0) - y(totS), 1)}" rx="3" fill="var(--c-energized)" class="swt"/>`;
+  if (Math.abs(totB - totS) > 0.005) s += `<line x1="${xt - 4}" x2="${xt + bw + 4}" y1="${y(totB)}" y2="${y(totB)}" stroke="var(--c-delayed)" stroke-width="2" stroke-dasharray="4 3"/><text class="vals" x="${xt + bw + 6}" y="${y(totB) + 4}" style="fill:var(--c-delayed)">base ${f1(totB)}</text>`;
+  s += `<text class="val" x="${xt + bw / 2}" y="${y(Math.max(totS, totB)) - 6}" text-anchor="middle">${f1(totS)}</text><text class="ax" x="${xt + bw / 2}" y="${H - padB + 15}" text-anchor="middle" style="font-weight:600">US</text><text class="ax" x="${xt + bw / 2}" y="${H - padB + 28}" text-anchor="middle">total</text>`;
+  s += `</svg>`;
+  $("sw").innerHTML = s;
+  $("swLegend").innerHTML = `<span><i class="sq" style="background:var(--accent)"></i>GW added in ${winLabel()}, ${esc(M.scenarios[S.scen].label.toLowerCase())}</span><span><i class="sq" style="background:transparent;border:1.5px dashed var(--c-delayed)"></i>Base GW the pauses push out of the window</span>` + (SW.win === "2026-30" ? "" : `<span><i class="sq" style="background:var(--c-delayed);opacity:.5"></i>Arrives late from an earlier year</span>`) + `<span><i class="sq" style="background:var(--c-energized)"></i>US total (dashed line = base schedule)</span>`;
+  const uni = S.uni === "pipeline" ? "under-construction + high/medium announced campuses" : S.uni === "scaled" ? (M.calib.fac_it && M.calib.fac_it !== 1 ? "raked to the deck's Aterio state totals, IT-eq (deck ÷ " + M.calib.fac_it + ")" : "raked to the deck's Aterio state totals (deck basis, unstated)") : "campuses under construction";
+  $("swLead").innerHTML = `IT-eq GW each state adds in <b>${winLabel()}</b>, largest on the base schedule first, ${uni}. Each step is what lands in the window in the selected scenario; the last bar is the US total. <b>Click</b> a step to filter the cards and the project table; <b>double-click</b> it (or a state on the map, or a state card) for that state's 20 largest projects, their permits and their share of the state's additions.`;
+  const t3 = steps.filter(r => r.st).slice(0, 3);
+  $("swRead").innerHTML = totS ? `<b>${t3.map(r => `${SN(r.st)} ${f1(r.sc)} GW (${Math.round(r.sc / totS * 100)}%)`).join(" · ")}</b> of ${f1(totS)} GW added in ${winLabel()} in this scenario` + (Math.abs(totB - totS) > 0.005 ? `, against ${f1(totB)} GW on the base schedule (${pct(totS / totB - 1)}).` : ", the same as the base schedule.") + (S.uni === "scaled" ? (M.calib.fac_it && M.calib.fac_it !== 1 ? " Raked view: state totals are the deck's facility GW ÷ " + M.calib.fac_it + " (IT-eq), not the registry's own." : " Raked view: state totals are the deck's (basis unstated), not registry IT-eq.") : "") : "No GW dated in this window.";
+  const svgEl = $("sw").querySelector("svg");
+  svgEl.querySelectorAll(".sb").forEach(g => { const r = steps[+g.dataset.i];
+    g.onmousemove = e => showTip(e, `<b>${r.st ? SN(r.st) : `Other ${r.other} states`}</b><div>${esc(M.scenarios[S.scen].label)}: <b>${f1(r.sc)} GW</b> in ${winLabel()}</div><div class="m">Base schedule ${f1(r.b)} GW${Math.abs(r.sc - r.b) > 0.005 ? ` · ${r.sc < r.b ? "pushed out" : "arrives late"} ${f1(Math.abs(r.sc - r.b))} GW` : ""} · ${totS ? (r.sc / totS * 100).toFixed(1) : 0}% of the US</div>${r.st ? `<div class="m">Double-click for the 20 largest projects</div>` : ""}`);
+    g.onmouseleave = hideTip;
+    if (r.st) { g.onclick = () => { S.st = S.st === r.st ? "" : r.st; S.q = ""; $("fText").value = ""; cards(); table(); }; g.ondblclick = () => drill(r.st); } });
+}
+
+function stateWaterfallAterio(){
+  seg($("swAt"), [["all", "House rules (all stages)"], ["uc", "Under construction + delayed"]], SW.at, k => { SW.at = k; stateWaterfall(); });
+  const bk = atBk(), by = {};
+  CV.campuses.forEach(c => { const v = atVals(c); if (v.t <= 0) return;
+    const s = (by[c.st] = by[c.st] || {st: c.st, t: 0, n: 0}); ATB.forEach(b => s[b] = (s[b] || 0) + v[b]); s.t += v.t; s.n++; });
+  const rows = Object.values(by).sort((x, y) => y.t - x.t);
+  const N = 14, top = rows.slice(0, N), rest = rows.slice(N);
+  const steps = top.concat(rest.length ? [ATB.reduce((o, b) => (o[b] = rest.reduce((t, r) => t + r[b], 0), o), {st: "", other: rest.length, t: rest.reduce((t, r) => t + r.t, 0)})] : []);
+  const tot = steps.reduce((t, r) => t + r.t, 0), totB = {};
+  ATB.forEach(b => totB[b] = steps.reduce((t, r) => t + r[b], 0));
+  let cum = 0; steps.forEach(r => { r.c0 = cum; cum += r.t; });
+  const ymax = Math.max(tot, 0.1);
+  const W = 1100, H = 340, padL = 42, padB = 44, padT = 26, n = steps.length + 1, gap = (W - padL - 10) / n, bw = Math.min(gap * 0.64, 54);
+  const y = v => padT + (H - padT - padB) * (1 - v / ymax);
+  const stack = (x, base, r) => { let acc = 0, h = "";   // stage segments bottom-up, 2px surface gap between fills
+    bk.forEach(b => { const v = r[b]; if (v <= 0.0005) return; const y0 = y(base + acc), y1 = y(base + acc + v), hh = y0 - y1;
+      h += `<rect x="${x}" y="${y1}" width="${bw}" height="${Math.max(hh - (hh > 3 ? 2 : 0), 1)}" rx="3" fill="${ATF[b]}"${ATO[b] ? ` opacity="${ATO[b]}"` : ""}/>`; acc += v; });
+    return h; };
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Waterfall of GW added by state in the Aterio census, ${winLabel()}">`;
+  niceTicks(ymax).forEach(t => s += `<line class="gl" x1="${padL}" x2="${W - 6}" y1="${y(t)}" y2="${y(t)}"/><text class="ax" x="${padL - 6}" y="${y(t) + 4}" text-anchor="end">${t}</text>`);
+  steps.forEach((r, i) => {
+    const x = padL + i * gap + (gap - bw) / 2;
+    s += `<g class="sb" data-i="${i}">` + stack(x, r.c0, r) + `<rect x="${x - (gap - bw) / 2}" y="${padT}" width="${gap}" height="${H - padT - padB}" fill="transparent"/></g>`;
+    s += `<text class="val" x="${x + bw / 2}" y="${y(r.c0 + r.t) - 6}" text-anchor="middle">${f1(r.t)}</text>`;
+    s += `<text class="ax" x="${x + bw / 2}" y="${H - padB + 15}" text-anchor="middle" style="font-weight:600">${r.st || "Other"}</text>`;
+    s += `<text class="ax" x="${x + bw / 2}" y="${H - padB + 28}" text-anchor="middle">${tot ? Math.round(r.t / tot * 100) + "%" : ""}</text>`;
+    const nx = padL + (i + 1) * gap + (gap - bw) / 2;
+    s += `<line x1="${x + bw}" x2="${nx}" y1="${y(r.c0 + r.t)}" y2="${y(r.c0 + r.t)}" stroke="var(--ink-3)" stroke-dasharray="2 3" stroke-width="1"/>`;
+  });
+  const xt = padL + steps.length * gap + (gap - bw) / 2;
+  s += `<g class="swt">` + stack(xt, 0, totB) + `</g>`;
+  s += `<text class="val" x="${xt + bw / 2}" y="${y(tot) - 6}" text-anchor="middle">${f1(tot)}</text><text class="ax" x="${xt + bw / 2}" y="${H - padB + 15}" text-anchor="middle" style="font-weight:600">US</text><text class="ax" x="${xt + bw / 2}" y="${H - padB + 28}" text-anchor="middle">total</text></svg>`;
+  $("sw").innerHTML = s;
+  $("swLegend").innerHTML = bk.map(b => `<span><i class="sq" style="background:${ATF[b]};${ATO[b] ? `opacity:${ATO[b]}` : ""}"></i>${ATL[b]}</span>`).join("") + `<span style="color:var(--ink-3)">Aterio census ${esc(CV.asof)}, Capstone treatment · IT-eq = facility ÷ ${CV.fac_it} · no pause scenario</span>`;
+  const uni = SW.at === "uc" ? "buildings under construction or delayed only (the like-for-like cut against the registry)" : "buildings that went live in the window, under construction, delayed, and announcements / land bank rated High";
+  $("swLead").innerHTML = `IT-eq GW each state adds in <b>${winLabel()}</b> in the <b>Aterio census</b> (export as of ${esc(CV.asof)}), under the house rules: facility MW ÷ ${CV.fac_it} (Aterio's own facility/IT median), Aterio's activation dates as published with no delay haircut and no pause scenario, ${uni}; campuses rated Low with no named end user are dropped. Stages stack from firmest (bottom) up. <b>Click</b> a step to filter the cards and the project table; <b>double-click</b> it for that state's 20 largest Aterio campuses and whether the registry carries them.`;
+  const t3 = steps.filter(r => r.st).slice(0, 3);
+  const regT = Object.keys(((M.aggs[S.scen] || {}).construction || {states: {}}).states).reduce((t, st) => t + regBase(st), 0);
+  const uc = totB.building + totB.delayed;
+  let rd = tot ? `<b>${t3.map(r => `${SN(r.st)} ${f1(r.t)} GW (${Math.round(r.t / tot * 100)}%)`).join(" · ")}</b> of ${f1(tot)} GW IT-eq in Aterio's ${winLabel()}` : "No Aterio GW dated in this window.";
+  if (tot) rd += `. Under construction + delayed: <b>${f1(uc)} GW</b>, against <b>${f1(regT)} GW</b> in the Capstone registry (campuses under construction, base schedule, facility ÷ 1.2)` +
+    (SW.at === "all" ? `; announced High adds ${f1(totB.announced)} GW and buildings that already went live ${f1(totB.online)} GW` : "") + ".";
+  const sn = CV.sens || {};
+  if (tot && SW.at === "all" && SW.win === "2026-30" && sn.fac_it) rd += ` On MW-weighted facility/IT ratios the US total would be ${f1(sn.fac_it.total_weighted_excl_eq1)}-${f1(sn.fac_it.total_weighted)} GW instead of ${f1(CV.us.it)}.`;
+  if (SW.win !== "2026-30" && (CV.vintages || []).length) rd += ` Dates are the soft part — the same rules on earlier exports gave ${SW.win}: ${CV.vintages.map(v => `${esc(v.asof.slice(0, 7))} ${f1((v.by_year || {})[SW.win])}`).join(" · ")} GW (all stages).`;
+  $("swRead").innerHTML = rd;
+  $("sw").querySelector("svg").querySelectorAll(".sb").forEach(g => { const r = steps[+g.dataset.i];
+    g.onmousemove = e => showTip(e, `<b>${r.st ? SN(r.st) : `Other ${r.other} states`}</b><div>Aterio, Capstone treatment: <b>${f1(r.t)} GW</b> in ${winLabel()}</div>` +
+      bk.filter(b => r[b] > 0.0005).map(b => `<div class="m">${ATL[b]}: ${f1(r[b])} GW</div>`).join("") +
+      (r.st ? `<div class="m">Capstone registry, under construction (base): ${f1(regBase(r.st))} GW</div><div class="m">Double-click for the 20 largest Aterio campuses</div>` : ""));
+    g.onmouseleave = hideTip;
+    if (r.st) { g.onclick = () => { S.st = S.st === r.st ? "" : r.st; S.q = ""; $("fText").value = ""; cards(); table(); }; g.ondblclick = () => drillAterio(r.st); } });
+}
+
+function drillAterio(st){
+  const bk = atBk(), RG = atReg();
+  const cs = CV.campuses.filter(c => c.st === st).map(c => ({...c, v: atVals(c)})).filter(c => c.v.t > 0).sort((a, b) => b.v.t - a.v.t);
+  const tot = cs.reduce((t, c) => t + c.v.t, 0), top = cs.slice(0, 20), onReg = cs.filter(c => RG[c.k]).reduce((t, c) => t + c.v.t, 0);
+  let cum = 0;
+  const rowsH = top.map((c, i) => {
+    cum += c.v.t; const rg = RG[c.k];
+    let x = 0; const bar = bk.filter(b => c.v[b] > 0.0005).map(b => { const w = Math.max(c.v[b] / c.v.t * 90 - 1.5, 1);
+      const r = `<rect x="${x}" y="0" width="${w}" height="10" rx="2" fill="${ATF[b]}"${ATO[b] ? ` opacity="${ATO[b]}"` : ""}><title>${ATL[b]} ${Math.round(c.v[b] * 1000)} MW</title></rect>`; x += w + 2; return r; }).join("");
+    const mix = bk.filter(b => c.v[b] > 0.0005).map(b => `${ATS[b]} ${Math.round(c.v[b] * 1000).toLocaleString("en-US")}`).join(" · ");
+    const regH = rg ? `<span class="pm ok">in registry</span><div class="why">${esc([...new Set(rg.names)].slice(0, 2).join("; "))}</div>${rg.verdict ? `<div class="why" title="${esc(rg.verdict.t || "")}">cross-check: ${esc((rg.verdict.status || "").replace("_", " "))}</div>` : ""}`
+      : `<span class="pm unk">Aterio only</span>`;
+    return `<tr><td class="n">${i + 1}</td><td><b>${esc(c.n)}</b><div class="why">${esc(c.p)}${c.u ? " · " + esc(c.u) : ""} · ${esc(c.c)}${c.co ? ", " + esc(c.co) : ""}</div></td>` +
+      `<td class="n"><b>${f1(c.v.t)}</b></td><td class="n">${(c.v.t / (tot || 1) * 100).toFixed(1)}%</td><td class="n">${Math.round(cum / (tot || 1) * 100)}%</td>` +
+      `<td><svg width="90" height="10" aria-hidden="true">${bar}</svg><div class="why">${esc(mix)} MW</div></td>` +
+      `<td>${esc(c.d[0])}${c.d[1] && c.d[1] !== c.d[0] ? " → " + esc(c.d[1]) : ""}<div class="why">${c.nb} building${c.nb === 1 ? "" : "s"}</div></td><td>${esc(c.lk || "–")}</td><td>${regH}</td></tr>`;
+  });
+  $("drTitle").textContent = `${SN(st)}: the ${top.length} largest Aterio campuses, ${winLabel()}`;
+  const rest = cs.slice(20), restT = rest.reduce((t, c) => t + c.v.t, 0);
+  $("drLead").innerHTML = `${cs.length} campuses add <b>${f1(tot)} GW</b> IT-eq in ${SN(st)} in ${winLabel()} in the Aterio census (${esc(CV.asof)}, house rules, ${SW.at === "uc" ? "under construction + delayed" : "all stages"}). These ${top.length} are <b>${Math.round(cum / (tot || 1) * 100)}%</b> of it${rest.length ? `; the other ${rest.length} add ${f1(restT)} GW` : ""}. <b>${f1(onReg)} GW</b> (${Math.round(onReg / (tot || 1) * 100)}%) sit on campuses the Capstone registry carries; the registry has ${f1(regBase(st))} GW under construction here (base schedule).`;
+  $("drLegend").innerHTML = bk.map(b => `<span><i class="sq" style="background:${ATF[b]};${ATO[b] ? `opacity:${ATO[b]}` : ""}"></i>${ATL[b]}</span>`).join("") + `<span><span class="pm ok">in registry</span> mapped to a registry campus</span><span><span class="pm unk">Aterio only</span> not in the registry</span>`;
+  $("drTable").innerHTML = `<tr><th class="n">#</th><th>Campus</th><th class="n">GW IT-eq</th><th class="n">Share of ${st}</th><th class="n">Cum.</th><th>Stage mix (MW IT-eq)</th><th>Aterio activation dates</th><th>Likelihood</th><th>Capstone registry</th></tr>` + rowsH.join("");
+  $("drNote").innerHTML = `Source: Aterio data-center census, export ${esc(CV.inventory || CV.asof)}, house rules in <code>_data/aterio/treatment.json</code> (built by <code>aterio_capstone_view.py</code>). MW = Aterio's selected power capacity (facility) ÷ ${CV.fac_it}. Dates = the first and last activation date of the campus's kept buildings across 2026-30, as Aterio publishes them. Registry mapping = the hand-reviewed map in <code>_data/dc_projects/aterio/registry_map.json</code> plus auto-matches (same state, ≤30 km, name/developer score); “cross-check” shows the review verdict where one exists (hover for the note). Aterio-only campuses with ≥150 MW under construction were checked and rowed on 2026-11-09; the rest are smaller or only announced.`;
+  $("drill").hidden = false; $("drClose").focus();
+}
+
+const PM_OK = new Set(["issued", "energized", "agreement", "approved"]), PM_NEED = new Set(["pending", "not_filed", "study", "denied"]);
+const pmChip = (st, mw) => `<span class="pm ${PM_OK.has(st) ? "ok" : PM_NEED.has(st) ? "need" : "unk"}">${esc(st.replace("_", " "))}${mw != null ? " " + Math.round(mw).toLocaleString("en-US") : ""}</span>`;
+function drill(st){
+  const uniF = p => S.uni === "pipeline" ? !!p.u : p.u === "construction";
+  const ph = M.phases.filter(p => p.st === st && uniF(p) && p.cod && inWin(p.cod));
+  const tot = ph.reduce((t, p) => t + p.it, 0);
+  const by = {};
+  ph.forEach(p => { const c = (by[p.campus] = by[p.campus] || {campus: p.campus, dev: p.dev, ten: p.ten, city: p.city, county: p.county, it: 0, ps: []}); c.it += p.it; c.ps.push(p); });
+  const all = Object.values(by).sort((x, y) => y.it - x.it), top = all.slice(0, 20);
+  const isTX = st === "TX", AIR = isTX ? "TCEQ air permit" : "state air permit", IC = isTX ? "ERCOT large-load interconnection" : "grid interconnection";
+  const mix = (ps, f) => { const m = {}; ps.forEach(p => { const k = f(p); if (k) m[k] = (m[k] || 0) + p.it; }); return m; };
+  let cum = 0;
+  const R = M.permitResearch || {};
+  const rowsH = top.map((c, i) => {
+    cum += c.it; const ps = c.ps, share = c.it / (tot || 1);
+    const air = mix(ps, p => (p.pw === "btm_gas" || p.pw === "hybrid" || p.air === "pending" || p.air === "not_filed") ? (p.air || "unknown") : "n/a");
+    const ic = mix(ps, p => p.pw === "btm_gas" ? "n/a (off-grid)" : (p.ic || "unknown"));
+    const loc = mix(ps, p => p.loc || "unknown");
+    const stat = mix(ps, p => p.ps || "unknown");
+    const cods = ps.map(p => p.cod).sort();
+    const miss = [];
+    Object.entries(air).forEach(([k, v]) => { if (k === "pending") miss.push(`${AIR} pending (${Math.round(v)} MW)`); else if (k === "not_filed") miss.push(`${AIR} not filed (${Math.round(v)} MW)`); else if (k === "unknown") miss.push(`${AIR}: status unknown (${Math.round(v)} MW on-site generation)`); });
+    Object.entries(ic).forEach(([k, v]) => { if (k === "study") miss.push(`${IC} still in study (${Math.round(v)} MW)`); else if (k === "unknown") miss.push(`${IC}: status unknown (${Math.round(v)} MW)`); });
+    Object.entries(loc).forEach(([k, v]) => { if (k === "pending" || k === "denied") miss.push(`${isTX ? "TCEQ construction approval (stormwater/water)" : st === "NY" ? "state (DEC) permit" : "local approval"} ${k} (${Math.round(v)} MW)`); });
+    const lm = [...new Set(ps.map(p => p.lm || "").filter(Boolean))];
+    if (lm.length) miss.push(`inside a local moratorium`);
+    const del = ps.filter(p => p.res[S.scen].b === "delayed"), delMW = del.reduce((t, p) => t + p.it, 0);
+    const lastNew = del.map(p => p.res[S.scen].n).sort().pop();
+    const bm = mix(ps, p => p.res[S.scen].b);
+    const rs = R[st + "|" + c.campus];
+    const missH = rs ? `<div><b>${esc(rs.missing_summary || "")}</b>${rs.confidence ? ` <span class="tag" title="research confidence">${esc(rs.confidence)}</span>` : ""}</div>` +
+      ((rs.interconnection || {}).batch_zero ? `<div>Batch Zero: <b style="color:var(--ink)">${esc(rs.interconnection.batch_zero.replace("_", " "))}</b></div>` : "") +
+      ((rs.other_gates || []).length ? `<div style="color:var(--ink-2)">Other gates: ${rs.other_gates.map(g => esc(g.item + (g.status ? " (" + g.status + ")" : ""))).join("; ")}</div>` : "") +
+      `<div style="color:var(--ink-3);margin-top:2px">Registry flags: ${miss.length ? esc(miss.join("; ")) : "none"}</div>`
+      : (miss.length ? miss.map(m => `<div>• ${esc(m)}</div>`).join("") : `<span style="color:var(--ink-3)">nothing missing on record</span>`);
+    const srcs = rs ? [...new Set([].concat((rs.air_permit || {}).src || [], (rs.interconnection || {}).src || [], (rs.local || {}).src || [], ((rs.construction || {}).src) || []))].slice(0, 4) : [];
+    return `<tr><td class="n">${i + 1}</td><td><b>${esc(c.campus)}</b><div class="why">${esc(c.dev)}${c.ten ? " · " + esc(c.ten) : ""} · ${esc(c.city)}${c.county ? ", " + esc(c.county) : ""}</div>${rs ? `<div class="why" title="${esc((rs.construction || {}).detail || "")}">✓ permits checked ${esc(rs.researched || "")}${srcs.length ? " · " + srcs.map((u, j) => `<a href="${esc(u)}" target="_blank" rel="noopener">src${j + 1}</a>`).join(" ") : ""}</div>` : ""}</td>` +
+      `<td class="n"><b>${f1(c.it / 1000)}</b></td><td class="n">${(share * 100).toFixed(1)}%</td><td class="n">${Math.round(cum / (tot || 1) * 100)}%</td>` +
+      `<td>${Object.entries(stat).map(([k, v]) => pmChip(k === "under_construction" ? "under constr." : k === "not_started" ? "not started" : k, v)).join("")}<div class="why">${esc(cods[0])}${cods.length > 1 && cods[cods.length - 1] !== cods[0] ? " → " + esc(cods[cods.length - 1]) : ""} · ${esc([...new Set(ps.map(p => p.pw || "?"))].join("/").replace("btm_gas", "on-site gas"))}</div></td>` +
+      `<td>${Object.entries(air).map(([k, v]) => pmChip(k, v)).join("")}</td><td>${Object.entries(ic).map(([k, v]) => pmChip(k, v)).join("")}</td><td>${Object.entries(loc).map(([k, v]) => pmChip(k, v)).join("")}${lm.length ? `<div class="why">${esc(lm.join("; "))}</div>` : ""}</td>` +
+      `<td class="miss">${missH}</td>` +
+      `<td><svg width="90" height="10" aria-hidden="true">${(() => { let x = 0; return BK.filter(b => bm[b]).map(b => { const w = Math.max(bm[b] / c.it * 90 - 1.5, 1); const r = `<rect x="${x}" y="0" width="${w}" height="10" rx="2" fill="var(${BV[b]})"><title>${BL[b]} ${Math.round(bm[b])} MW</title></rect>`; x += w + 2; return r; }).join(""); })()}</svg>` +
+      `<div class="why">${delMW ? `<b style="color:var(--c-delayed)">${Math.round(delMW).toLocaleString("en-US")} MW delayed</b> → ${esc(lastNew || "")}` : "not delayed"}</div></td></tr>`;
+  });
+  $("drTitle").textContent = `${SN(st)}: the ${top.length} largest projects, ${winLabel()}`;
+  const rest = all.slice(20), restIT = rest.reduce((t, c) => t + c.it, 0);
+  $("drLead").innerHTML = `${all.length} campuses add <b>${f1(tot / 1000)} GW</b> IT-eq in ${SN(st)} in ${winLabel()} (${S.uni === "pipeline" ? "under construction + high/medium announced" : "campuses under construction"}, registry, base schedule). These ${top.length} are <b>${Math.round(cum / (tot || 1) * 100)}%</b> of it${rest.length ? `; the other ${rest.length} add ${f1(restIT / 1000)} GW` : ""}. Scenario column: ${esc(M.scenarios[S.scen].label)}.`;
+  $("drLegend").innerHTML = `<span><span class="pm ok">in hand</span> issued / energized / agreement / approved</span><span><span class="pm need">missing</span> pending / not filed / in study / denied</span><span><span class="pm unk">unknown</span> not on record</span><span style="color:var(--ink-3)">Numbers in chips = MW IT-eq of the campus's phases in that status</span>`;
+  $("drTable").innerHTML = `<tr><th class="n">#</th><th>Project</th><th class="n">GW IT-eq</th><th class="n">Share of ${st}</th><th class="n">Cum.</th><th>Build status · dates · power</th><th>${isTX ? "TCEQ air (on-site gen.)" : "Air permit"}</th><th>${isTX ? "ERCOT interconnection" : "Interconnection"}</th><th>${isTX ? "TCEQ construction (stormwater/water)" : st === "NY" ? "Local / DEC permit" : "Local approval"}</th><th>What is missing</th><th>${esc(M.scenarios[S.scen].label)}</th></tr>` + rowsH.join("");
+  const ck = top.filter(c => R[st + "|" + c.campus]).length;
+  $("drNote").innerHTML = `Permit cells come from the registry (<code>projects.csv</code> + overrides). ${ck ? `<b>${ck} of these ${top.length}</b> were checked against TCEQ, ERCOT, company and press sources on ${esc(Object.values(R).find(r => r.state === st)?.researched || "")} (✓; the bold line in “What is missing” is that research, the grey line the registry's own flags).` : "No dedicated permit research for this state yet; “What is missing” is derived from the registry fields."} Air permits matter only for on-site generation (grid-only sites need none beyond backup generators). ${isTX ? "In Texas the approvals column records state construction approvals (TCEQ construction stormwater / water), which the TCEQ freeze and the pledged Hinojosa ban would hold; counties do not zone, so county abatements appear only in the research notes. “Unknown” = not verified, not flagged as missing." : "“Unknown” local approval is not flagged as missing."} Share = the campus's IT-eq GW dated in the window ÷ the state's registry total in the same window.`;
+  $("drill").hidden = false; $("drClose").focus();
+}
+$("drClose").onclick = () => { $("drill").hidden = true; };
+$("drill").addEventListener("click", e => { if (e.target.id === "drill") $("drill").hidden = true; });
+document.addEventListener("keydown", e => { if (e.key === "Escape" && !$("drill").hidden) $("drill").hidden = true; });
 
 function niceTicks(max){ const raw = max / 4; const p = Math.pow(10, Math.floor(Math.log10(raw))); const st = [1,2,2.5,5,10].map(m => m*p).find(m => m >= raw) || p*10; const t = []; for (let v = 0; v <= max + 1e-9; v += st) t.push(+v.toFixed(6)); return t; }
 
@@ -508,6 +904,7 @@ function moved(){
     const ch = d.changed.slice().sort((a, b) => b.it - a.it);
     const asof = d.as_of && d.as_of[0] !== d.as_of[1] ? ` · as-of month ${esc(d.as_of[0])} → ${esc(d.as_of[1])}` : "";
     let h = `<details ${open ? "open" : ""} style="margin:0 0 10px"><summary style="cursor:pointer;font-weight:600;font-size:13.5px">${esc(title)}: delayed GW ${dl(t.construction)} registry · ${dl(t.scaled)} scaled · ${nw.length} new phase${nw.length === 1 ? "" : "s"} (${gw(nw)} GW) · ${dr.length} dropped (${gw(dr)} GW) · ${ch.length} changed · ${mv.length} bucket or date moves${asof}</summary>`;
+    h += (d.notes || []).map(n => `<p style="margin:6px 0 4px;font-size:12.5px;color:var(--ink-2)"><b>Read this first:</b> ${esc(n)}</p>`).join("");
     if (mv.length) h += `<h4 style="margin:8px 0 4px;font-size:13px">Bucket or date moves · ${esc(M.scenarios[sc].label)}</h4>` + tbl([["Campus · phase"], ["St"], ["MW IT-eq", 1], ["Before"], ["Now"]],
       mv.slice(0, 80).map(m => `<tr><td><b>${esc(m.campus)}</b><div style="color:var(--ink-3)">${esc(m.phase)}</div></td><td>${m.st}</td><td class="n">${Math.round(m.it)}</td><td>${esc(bk(m.from))}</td><td>${esc(bk(m.to))}</td></tr>`));
     if (nw.length) h += `<h4 style="margin:8px 0 4px;font-size:13px">New phases</h4>` + tbl([["Campus · phase"], ["Location"], ["MW IT-eq", 1], ["Base date"], ["Now (scenario)"], ["Source"]],
@@ -523,21 +920,23 @@ function moved(){
 function checks(){
   $("checks").innerHTML = `<tr><th></th><th>Check</th><th class="n">Model</th><th class="n">Anchor</th><th class="n">×</th></tr>` + M.checks.map(c =>
     `<tr><td class="flag">${c.flag}</td><td>${esc(c.check)} <span class="tag">${esc(c.kind)}</span><div style="color:var(--ink-3);font-size:11.5px">${esc(c.source)} — ${esc(c.caveat)}</div></td><td class="n">${c.model ?? "–"}</td><td class="n">${esc(c.anchor)}</td><td class="n">${c.ratio ?? "–"}</td></tr>`).join("") +
-    `<tr><td colspan="5" style="color:var(--ink-3);font-size:11.5px">Checks run on the bear scenario. Basis: the registry is IT-equivalent, while the Aterio census and the reference deck state no basis. A ratio ~1.2 below them is what a facility-basis anchor alone would produce.</td></tr>`;
+    `<tr><td colspan="5" style="color:var(--ink-3);font-size:11.5px">Checks run on the bear scenario. Basis: the registry is IT-equivalent. ${M.calib.fac_it && M.calib.fac_it !== 1 ? `The reference deck states no basis; the Aterio census reproduces its total as facility power at campus level, so since 2026-11-09 it is divided by Aterio's facility/IT median (${M.calib.fac_it}) before any comparison. The Aterio figure from the Goldman Sachs call states no basis and is used as stated: if it is facility power as well, that check's ratio reads about ${Math.round((1 - 1 / M.calib.fac_it) * 100)}% low.` : `The Aterio census and the reference deck state no basis. A ratio ~1.2 below them is what a facility-basis anchor alone would produce.`}</td></tr>`;
+  const dk = M.calib.fac_it || 1;   // the deck's figures are facility GW: shown ÷ dk so they sit on the registry's basis
   const deck = M.rules.benchmarks.capstone_deck.states; const a = M.aggs[S.scen].construction;
   const sts = [...new Set([...Object.keys(deck), ...Object.entries(a.states).sort((x,y) => y[1].gw_2630 - x[1].gw_2630).slice(0,14).map(x => x[0])])];
   const rep = {}; M.phases.forEach(p => { if (p.u === "construction") rep[p.st] = (rep[p.st]||0) + p.mw/1000; });
-  $("coverage").innerHTML = `<tr><th>State</th><th class="n">Registry IT-eq</th><th class="n">Registry as reported</th><th class="n">Deck (Aterio)</th><th class="n">Coverage</th></tr>` +
-    sts.map(s => { const r = (a.states[s]||{}).gw_2630 || 0, d = deck[s]; const cov = d ? r / d : null; const fl = cov == null ? "" : cov >= 0.75 ? "🟢" : cov >= 0.5 ? "🟡" : "🔴";
+  $("coverage").innerHTML = `<tr><th>State</th><th class="n">Registry IT-eq</th><th class="n">Registry as reported</th><th class="n">Deck (Aterio)${dk !== 1 ? ", IT-eq" : ""}</th><th class="n">Coverage</th></tr>` +
+    sts.map(s => { const r = (a.states[s]||{}).gw_2630 || 0, d = deck[s] ? deck[s] / dk : null; const cov = d ? r / d : null; const fl = cov == null ? "" : cov >= 0.75 ? "🟢" : cov >= 0.5 ? "🟡" : "🔴";
       return `<tr><td>${SN(s)}</td><td class="n">${f1(r)}</td><td class="n">${f1(rep[s]||0)}</td><td class="n">${d ? f1(d) : "–"}</td><td class="n">${cov == null ? "–" : fl + " " + Math.round(cov*100) + "%"}</td></tr>`; }).join("") +
-    `<tr class="tot"><td>US</td><td class="n">${f1(a.total)}</td><td class="n">${f1(Object.values(rep).reduce((t,v)=>t+v,0))}</td><td class="n">${f1(M.rules.benchmarks.capstone_deck.total)}</td><td class="n">${Math.round(a.total/M.rules.benchmarks.capstone_deck.total*100)}%</td></tr>` +
-    `<tr><td colspan="5" style="color:var(--ink-3);font-size:11.5px">Universe = campuses under construction, phases dated 2026-30. Deck = reference deck shared 2026-11-06, Aterio base (author to confirm), top-10 states only.</td></tr>`;
+    `<tr class="tot"><td>US</td><td class="n">${f1(a.total)}</td><td class="n">${f1(Object.values(rep).reduce((t,v)=>t+v,0))}</td><td class="n">${f1(M.rules.benchmarks.capstone_deck.total / dk)}</td><td class="n">${Math.round(a.total/(M.rules.benchmarks.capstone_deck.total / dk)*100)}%</td></tr>` +
+    `<tr><td colspan="5" style="color:var(--ink-3);font-size:11.5px">Universe = campuses under construction, phases dated 2026-30. Deck = reference deck shared 2026-11-06, Aterio base (author to confirm), top-10 states only.${dk !== 1 ? ` Deck figures are its facility GW ÷ ${dk} (Aterio's facility/IT median); as stated the US total is ${M.rules.benchmarks.capstone_deck.total} GW.` : ""}</td></tr>`;
 }
 
 function method(){
   const r = M.rules; const bt = r.basis.tags || {}, lt = r.lead_tags || {};
   const sc = Object.entries(M.scenarios).map(([k,v]) => `<li><b>${esc(v.label)}</b> — ${esc(v.blurb)} Unknown approvals counted as missing: ${Object.entries(v.unknown_exposed).map(([kk,vv]) => `${kk}: ${vv.join("/") || "never"}`).join("; ")}.</li>`).join("");
   const deck = r.benchmarks.capstone_deck, a = M.aggs.bear ? M.aggs.bear.construction : A();
+  const dk = M.calib.fac_it || 1;   // deck figures are facility GW: shown ÷ dk (IT-eq) beside the model
   $("method").innerHTML = `<h4 style="margin:0 0 4px">Buckets (per phase, per scenario)</h4><ol style="margin:0 0 8px 18px;padding:0;font-size:13px;color:var(--ink-2)">
     <li><b>Energized</b>: phase energized, or its schedule date is before ${esc(M.as_of)}.</li>
     <li><b>Outside pause</b>: no state instrument active in the scenario and no local moratorium covers the site.</li>
@@ -546,14 +945,14 @@ function method(){
     <li><b>Delayed</b>: pause end after the need date → new date = pause end + lead time (latest across binding pauses).</li></ol>
     <p style="font-size:13px;color:var(--ink-2);margin:0 0 6px">Unknown approval status is never guessed in the registry. If the need date is before the pause started, the schedule implies the approval is in hand. Otherwise each scenario says which phase stages count an unknown as missing:</p><ul style="font-size:13px;color:var(--ink-2);margin:0 0 8px 18px;padding:0">${sc}</ul>
     <h4 style="margin:10px 0 4px">Attribution</h4><p style="font-size:13px;color:var(--ink-2);margin:0 0 6px">A pause delays an approval from the later of its need date and the pause start, to the pause end. A phase needed after the pause began lands at pause end + lead time; one whose approval was already due slips by the pause's length. Phases already holding the approval, or needing none the pause blocks, are protected.</p>
-    <h4 style="margin:10px 0 4px">Scaled view</h4><p style="font-size:13px;color:var(--ink-2);margin:0 0 6px">No fitted constant. Registry GW are cut into state × base-year cells and raked to the reference deck's state totals (top 10 + rest), its yearly base-case adds and its 2026-28 state cards (TX, VA, OH, GA, PA, IN). The scaled view therefore matches the deck's levels and timing by construction, and its delay shares are the registry's own, cell by cell. Two biases cut opposite ways. The registry over-samples large on-site-gas campuses with pending permits (more exposed than the gap). In Texas, the known gaps (Fermi, Hubbard, Poolside, Cipher) are also on-site gas or unstarted, so they are not obviously less exposed. Rows in Aterio's low tier (announcement only) are left out of every view. An earlier version fitted an "exposed share of the gap" to FundaAI's Texas figure; the 2026-11-06 skeptic review showed that anchor could not identify it, and it was dropped.</p>
+    <h4 style="margin:10px 0 4px">Scaled view</h4><p style="font-size:13px;color:var(--ink-2);margin:0 0 6px">No fitted constant. Registry GW are cut into state × base-year cells and raked to the reference deck's state totals (top 10 + rest), its yearly base-case adds and its 2026-28 state cards (TX, VA, OH, GA, PA, IN).${dk !== 1 ? ` The deck states no basis. The Aterio census reproduces its ${deck.total} GW as facility power at campus level, so every target is divided by Aterio's own facility/IT median (${dk}) before the fit and the scaled view totals ${f1(M.calib.target_total)} GW IT-eq. Until 2026-11-09 the targets were used as stated and the view ran about ${Math.round((dk - 1) * 100)}% high.` : ""} The scaled view therefore matches the deck's levels and timing by construction, and its delay shares are the registry's own, cell by cell. Two biases cut opposite ways. The registry over-samples large on-site-gas campuses with pending permits (more exposed than the gap). In Texas, the known gaps (Fermi, Hubbard, Poolside, Cipher) are also on-site gas or unstarted, so they are not obviously less exposed. Rows in Aterio's low tier (announcement only) are left out of every view. An earlier version fitted an "exposed share of the gap" to FundaAI's Texas figure; the 2026-11-06 skeptic review showed that anchor could not identify it, and it was dropped.</p>
     <h4 style="margin:10px 0 4px">Lead times</h4><table><tr><th>Approval</th><th class="n">Months</th><th>Tag / source</th></tr>${Object.entries(r.lead_months).map(([k,v]) => `<tr><td>${k}</td><td class="n">${v}</td><td>${esc(lt[k] || "")}</td></tr>`).join("")}</table>
     <h4 style="margin:10px 0 4px">One basis: IT-equivalent</h4><table><tr><th>Reported basis</th><th class="n">÷</th><th>Tag / source</th></tr>${Object.entries(r.basis.to_it).map(([k,v]) => `<tr><td>${k}</td><td class="n">${v}</td><td>${esc(bt[k] || "source basis")}</td></tr>`).join("")}</table>
     <h4 style="margin:10px 0 4px">Against the reference deck (bear, campuses under construction)</h4>
-    <table><tr><th></th><th class="n">This model</th><th class="n">Deck (Aterio)</th></tr>${["energized","no_pause","protected","ends_first","delayed"].map(k => `<tr><td>${BLONG[k]}</td><td class="n">${f1(a.wf[k])}</td><td class="n">${f1(deck.waterfall[k])}</td></tr>`).join("")}
-    <tr><td>Delayed, change year</td><td class="n">${f1(a.delayed_year_shift)}</td><td class="n">${f1(deck.waterfall.delayed_year_shift)}</td></tr><tr><td>Pushed to 2031+</td><td class="n">${f1(a.to_2031)}</td><td class="n">${f1(deck.waterfall.to_2031)}</td></tr>
-    <tr class="tot"><td>Total under construction 2026-30</td><td class="n">${f1(a.total)}</td><td class="n">${f1(deck.total)}</td></tr></table>
-    <p style="font-size:12px;color:var(--ink-3)">The deck's basis is not stated, and it covers every building Aterio tracks; this registry covers the large public campuses. Compare shares, not levels.</p>
+    <table><tr><th></th><th class="n">This model</th><th class="n">Deck (Aterio)${dk !== 1 ? ", IT-eq (÷" + dk + ")" : ""}</th></tr>${["energized","no_pause","protected","ends_first","delayed"].map(k => `<tr><td>${BLONG[k]}</td><td class="n">${f1(a.wf[k])}</td><td class="n">${f1(deck.waterfall[k] / dk)}</td></tr>`).join("")}
+    <tr><td>Delayed, change year</td><td class="n">${f1(a.delayed_year_shift)}</td><td class="n">${f1(deck.waterfall.delayed_year_shift / dk)}</td></tr><tr><td>Pushed to 2031+</td><td class="n">${f1(a.to_2031)}</td><td class="n">${f1(deck.waterfall.to_2031 / dk)}</td></tr>
+    <tr class="tot"><td>Total under construction 2026-30</td><td class="n">${f1(a.total)}</td><td class="n">${f1(deck.total / dk)}</td></tr></table>
+    <p style="font-size:12px;color:var(--ink-3)">${dk !== 1 ? `The deck states no basis; the Aterio census reproduces it as facility power, so its column is shown ÷ ${dk}.` : `The deck's basis is not stated.`} It counts every building on a campus that has one under construction in Aterio's census; this registry covers the campuses with public sources. Compare shares before levels.</p>
     <h4 style="margin:10px 0 4px">Files</h4><p style="font-size:12.5px;color:var(--ink-2);margin:0">Registry <code>_wiki/_data/dc_projects/projects.csv</code> (merged from <code>raw/*.csv</code>; schema in <code>SCHEMA.md</code>; hand fixes in <code>overrides.csv</code>) · rules <code>state_rules.json</code> + <code>local_moratoria.json</code> · engine <code>_wiki/_tools/build_dc_delay.py</code> · output <code>model_output.json</code> · weekly monitor <code>_wiki/_tools/dc_monitor.py</code> (leads in <code>monitor/runs/&lt;date&gt;/leads.md</code>, config <code>monitor/config.json</code>) · change log <code>history/changelog.jsonl</code>. ${M.problems.length} schema warnings in <code>validation.txt</code>.</p>`;
   $("foot").textContent = `Built ${M.built || ""} by build_dc_delay.py · data: public sources per row · state geometry: us-atlas 3.0.1 (Albers USA).`;
 }
@@ -634,27 +1033,369 @@ function bern(){
   // catalysts
   $("bCat").innerHTML = `<tr><th>Date</th><th>Event (Bernstein)</th><th>In our model</th></tr>` + BD.catalysts.map(c => `<tr><td class="n" style="text-align:left">${esc(c.date)}</td><td>${esc(c.what)}</td><td style="color:var(--ink-2)">${esc(c.model || "–")}</td></tr>`).join("");
 }
+/* ---------------------------------------------------------------- SemiAnalysis tab (independent research) */
+const SD = (M.independent || []).find(d => /semianalysis/i.test(d.source.author)) || (M.independent || [])[0];
+function sa(){
+  if (!SD) { $("sSrc").textContent = "No file under _data/dc_projects/independent/."; return; }
+  const s = SD.source, R = SD.capstone_read || {}, RU = SD.registry_us, REG = SD.registry || {};
+  const N = Object.fromEntries(SD.national.map(x => [x.id, x]));
+  const tag = t => t === "sa" ? `<span class="ptag" title="Printed by SemiAnalysis">SA</span>` : t === "derived" ? `<span class="ptag d" title="Capstone arithmetic on SemiAnalysis's printed values">calc</span>` : t === "range" ? `<span class="ptag d" title="Bounds implied by SemiAnalysis's table order and tiers">range</span>` : "";
+  const fill = t => String(t).replace("{REG2028}", f1(RU.pipeline[2028]));
+  $("sSrc").innerHTML = `<b>SemiAnalysis · ${esc(s.analysts)} — “${esc(s.title)}”, ${esc(s.date)}</b> (<a href="../../${esc(s.file).replace(/ /g, "%20")}" target="_blank" rel="noopener">piece</a>), with the earlier pieces it builds on. ${esc(s.kind)}: no ratings or price targets. Model: ${esc(s.model)}. <b>Basis: datacenter IT capacity</b> (stated in the 09-15 piece), the same basis as our IT-eq GW; Bernstein and the reference deck count Aterio nameplate. Tags: ${tag("sa")} printed by SemiAnalysis · ${tag("derived")} Capstone arithmetic on its values · ${tag("range")} bounds from its table order and tiers. Piece codes: ` +
+    s.pieces.map(p => `<b>${esc(p.id)}</b> = “${esc(p.title)}” (${esc(p.date)})`).join(" · ") + `.`;
+  const ex = SD.exposure, post = SD.states.filter(x => x.winner_pause).reduce((t, x) => t + (x.planned || 0), 0), pd = SD.pre_election_delay;
+  const kpi = (k, v, sub) => `<div class="kpi"><div class="k">${k}</div><div class="v">${v}</div><div class="s">${sub}</div></div>`;
+  $("sKpis").innerHTML =
+    kpi(`US net additions, 2028 ${tag("sa")}`, `${N.us2028.gw} GW`, `13 largest states ${N.top13_2028.gw} GW, 93% not started · our registry ${f1(RU.pipeline[2028])} · deck (Aterio, raked${M.calib.fac_it && M.calib.fac_it !== 1 ? ", IT-eq" : ""}) ${f1(RU.scaled[2028])}`) +
+    kpi(`US IT capacity added, 2027 ${tag("sa")}`, `+${N.us2027.gw} GW`, `22 GW under vertical construction (09-15) · our registry ${f1(RU.pipeline[2027])} · deck (Aterio, raked${M.calib.fac_it && M.calib.fac_it !== 1 ? ", IT-eq" : ""}) ${f1(RU.scaled[2027])}`) +
+    kpi(`Exposed after the election ${tag("derived")}`, `${f1(post)} GW <small>of ${ex.sweep_gw}</small>`, `Planned 2028 GW where the governor-elect backs a pause (${SD.states.filter(x => x.winner_pause).map(x => x.st).join(", ")}), vs SemiAnalysis's ${ex.sweep_gw} GW sweep and ${ex.conditions_only_gw} GW floor. Exposed, not delayed.`) +
+    kpi(`Measured delay before the election ${tag("sa")}`, `${pd.total_gw} GW`, `${pd.local.delayed_gw} GW of ~${pd.local.inside_gw} GW inside local restrictions + ${pd.ny.delayed_gw} of ${pd.ny.exposed_gw} GW under New York's EO 62 (09-15)`);
+  const col = (h, items) => `<div class="panel read-col"><h4>${h}</h4><ul>${(items || []).map(x => `<li><b>${esc(x.t)}</b>${esc(fill(x.d))}</li>`).join("")}</ul></div>`;
+  $("sRead").innerHTML = col("Contradicts our model or other sources", R.contradicts) + col("New to the wiki and the registry", R.new) + col("Consistent", (R.consistent || []).concat((R.caveats || []).map(c => ({t: "Caveat", d: c}))));
+  // by state
+  const VSA = "--c-base", VRG = "--accent";
+  const mid = x => x.planned != null ? x.planned : (x.planned_lo + x.planned_hi) / 2;
+  const mx = Math.max(...SD.states.map(x => Math.max(x.planned_hi || x.planned || 0, (REG[x.st] || {}).unstarted || 0)));
+  $("sStLead").innerHTML = `The 13 states SemiAnalysis tracks (Virginia and Mississippi excluded: no state election in November), in its table order. Bars: SemiAnalysis's planned (not-started) 2028 GW vs the not-started 2028 phases in our registry, both IT GW. <b>Coverage</b> = registry ÷ SemiAnalysis; low coverage means the registry is missing 2028 capacity SemiAnalysis models. Hover a governor for the candidates' positions.`;
+  $("sStLegend").innerHTML = `<span><i class="sw" style="background:var(${VSA})"></i>SemiAnalysis: planned 2028 (dashed = range)</span><span><i class="sw" style="background:var(${VRG})"></i>Our registry: not started, dated 2028</span>`;
+  const w = v => Math.max(0.4, v / mx * 100);
+  const tot = {adds: 0, pl: 0, ra: 0, ru: 0, ob: 0, os: 0};
+  const sc0 = Object.keys(M.scenarios);
+  $("sState").innerHTML = `<tr><th>State</th><th class="n">SA adds '28</th><th class="n">SA not started</th><th>Tier</th><th>Governor-elect</th><th>Not started, 2028 (GW)</th><th class="n">Registry adds '28</th><th class="n">Registry not started</th><th class="n">Slips past '28: bear / stress</th><th class="n">Coverage</th></tr>` +
+    SD.states.map(x => { const r = REG[x.st] || {unstarted: 0, pipeline: 0, out: {}}; const m = mid(x);
+      tot.pl += m; tot.ra += r.pipeline || 0; tot.ru += r.unstarted || 0; tot.ob += (r.out.bear || 0); tot.os += (r.out.stress || 0);
+      const pl = x.planned != null ? `${f1(x.planned)}${tag(x.planned_tag)}` : `${f1(x.planned_lo)}–${f1(x.planned_hi)}${tag("range")}`;
+      const bars = `<div class="pb">` + (x.planned != null ? `<div style="width:${w(x.planned)}%;background:var(${VSA})" data-t="SemiAnalysis ${SN(x.st)}: <b>${f1(x.planned)} GW</b> planned 2028${x.how ? " (" + esc(x.how) + ")" : ""}"></div>`
+        : `<div class="row" data-t="SemiAnalysis ${SN(x.st)}: <b>${f1(x.planned_lo)}–${f1(x.planned_hi)} GW</b> planned 2028 (range from table order and tier)"><div style="width:${w(x.planned_lo)}%;background:var(${VSA})"></div><div class="rg" style="width:${w(x.planned_hi) - w(x.planned_lo)}%"></div></div>`) +
+        `<div style="width:${w(r.unstarted || 0)}%;background:var(${VRG})" data-t="Registry ${SN(x.st)}: <b>${f1(r.unstarted || 0)} GW</b> not started, dated 2028 (${r.n || 0} phases dated 2028)"></div></div>`;
+      const g = x.winner_pause ? `<span class="chip" title=""><i style="background:var(--c-delayed)"></i>pause</span>` : /race|verified/.test(x.winner) ? "" : `<span class="chip"><i style="background:var(--c-nopause)"></i>conditions</span>`;
+      const party = (x.winner.match(/\((D|R)\)/) || [])[1];
+      const tipG = `<b>${esc(SN(x.st))}</b><br>Pause: ${esc(x.pause || "–")}<br>Conditions only: ${esc(x.conditions || "–")}<br><span class='m'>${esc(x.sens)}</span>`;
+      const cov = m ? (r.unstarted || 0) / m : null;
+      if (x.adds != null) tot.adds += x.adds;
+      return `<tr><td data-t="<b>${esc(SN(x.st))}</b><br>${esc(x.note)}"><b>${esc(SN(x.st))}</b> <span style="color:var(--ink-3)">ⓘ</span></td><td class="n">${x.adds != null ? f1(x.adds) + tag(x.adds_tag) : "🔒"}</td><td class="n">${pl}</td><td class="n" style="text-align:center">${x.tier}</td>` +
+        `<td data-t="${esc(tipG)}"><span class="${party === "D" ? "pD" : party === "R" ? "pR" : ""}">${esc(x.winner)}</span> ${g}</td><td class="hbc" style="width:24%">${bars}</td>` +
+        `<td class="n">${f1(r.pipeline || 0)}</td><td class="n">${f1(r.unstarted || 0)}</td><td class="n">${f1(r.out.bear || 0)} / ${f1(r.out.stress || 0)}</td>` +
+        `<td class="n">${cov == null ? "–" : Math.round(cov * 100) + "%" + (x.planned == null ? "*" : "")}</td></tr>`; }).join("") +
+    `<tr class="tot"><td>13 states</td><td class="n">${N.top13_2028.gw}${tag("sa")}</td><td class="n">${f1(N.planned13.gw)}${tag("derived")}</td><td></td><td></td><td></td><td class="n">${f1(tot.ra)}</td><td class="n">${f1(tot.ru)}</td><td class="n">${f1(tot.ob)} / ${f1(tot.os)}</td><td class="n">${Math.round(tot.ru / N.planned13.gw * 100)}%</td></tr>`;
+  $("sStNote").innerHTML = `${esc(SD.state_ranges_note)} * Coverage against the middle of the range. ${esc(SD.winners_src)} Registry columns: phases dated 2028 in the pipeline universe (campuses under construction plus high/medium-likelihood announced campuses), IT-eq GW, base dates; “slips past '28” = phases whose scenario date moves into 2029 or later (${sc0.map(k => esc(M.scenarios[k].label)).join(" / ")} defined on the Delay model tab). 🔒 = behind SemiAnalysis's paywall.` +
+    `<details style="margin-top:8px"><summary>State notes (SemiAnalysis, 11-01)</summary><ul style="margin:6px 0 0 18px;padding:0">${SD.states.map(x => `<li style="margin:0 0 4px"><b>${esc(SN(x.st))}</b>: ${esc(x.note)}${x.how ? ` <span style="color:var(--ink-3)">[calc: ${esc(x.how)}]</span>` : ""}</li>`).join("")}</ul></details>`;
+  // exposure scenarios
+  const SP = Object.fromEntries(SD.states.map(x => [x.st, x]));
+  const rowsS = [
+    ["Conditions only: pause candidates lose every contested race", ex.conditions_only_gw, ex.conditions_only_states, "sa"],
+    ["After the election: governors-elect", post, SD.states.filter(x => x.winner_pause).map(x => x.st), "derived"],
+    ["Sweep: pause candidates win every race", ex.sweep_gw, ex.sweep_states, "sa"]];
+  $("sScenLead").innerHTML = `${esc(ex._note)} ${esc(ex.candidates)} The middle bar applies the results in our rules file to SemiAnalysis's state values.`;
+  $("sScenLegend").innerHTML = `<span><i class="sw" style="background:var(--c-delayed)"></i>Governor-elect backs a pause</span><span><i class="sw" style="background:var(--c-nopause)"></i>Governor-elect: conditions only</span>`;
+  $("sScen").innerHTML = `<table class="btbl">` + rowsS.map(([lab, total, sts, t]) => {
+    const parts = sts.map(k => [k, SP[k].planned || 0, SP[k].winner_pause]);
+    return `<tr><td style="width:250px">${esc(lab)} ${tag(t)}</td><td class="hbc" style="width:auto"><div class="sbar" style="width:${total / ex.sweep_gw * 100}%">` +
+      parts.map(([k, v, p]) => `<span style="width:${v / parts.reduce((a, b) => a + b[1], 0) * 100}%;background:var(${p ? "--c-delayed" : "--c-nopause"});${p ? "" : "color:var(--ink)"}" data-t="${esc(SN(k))}: <b>${f1(v)} GW</b> planned 2028 · governor-elect ${esc(SP[k].winner)}">${v / total > 0.06 ? k : ""}</span>`).join("") +
+      `</div></td><td class="n" style="width:70px"><b>${f1(total)} GW</b></td></tr>`; }).join("") + `</table>`;
+  // players
+  $("sPlayers").innerHTML = SD.players.map(p => `<div class="panel"><b>${esc(p.player)}</b>${p.tk ? ` <span class="tag">${esc(p.tk)}</span>` : ""}<ul>${p.items.map(i => `<li>${esc(i)}</li>`).join("")}</ul></div>`).join("");
+  // projects
+  $("sProj").innerHTML = `<tr><th>Project</th><th>SemiAnalysis</th><th>Our registry</th></tr>` + SD.projects.map(p => { const r = p.reg;
+    const reg = r ? `${r.n} phase${r.n > 1 ? "s" : ""} · <b>${r.it.toLocaleString("en-US")} MW IT-eq</b> (${r.mw.toLocaleString("en-US")} MW ${esc(r.bases.join("/"))}) · ` +
+      ["energized","under_construction","not_started"].filter(k => r.ps[k]).map(k => `${k.replace("_", " ")} ${r.ps[k].toLocaleString("en-US")}`).join(", ") +
+      ` · dated ${esc(r.cod[0] || "–")}${r.cod.length > 1 ? " → " + esc(r.cod[r.cod.length - 1]) : ""}` + (r.bear_delayed ? ` · <span style="color:var(--c-delayed);font-weight:650">${r.bear_delayed.toLocaleString("en-US")} MW delayed in bear</span>` : ` · nothing delayed in bear`)
+      : `<span style="color:var(--ink-3)">${esc(p.why_not || "not in the registry")}</span>`;
+    return `<tr><td><b>${esc(p.name)}</b></td><td style="color:var(--ink-2);max-width:460px">${esc(p.sa)}</td><td style="max-width:360px">${reg}</td></tr>`; }).join("");
+  // registry subset
+  const sub = SD.registry_subset.slice().sort((a, b) => (a.st + a.campus + a.cod).localeCompare(b.st + b.campus + b.cod));
+  const camp = new Set(sub.map(x => x.st + x.campus)).size, git = sub.reduce((t, x) => t + x.it, 0) / 1000;
+  $("sSubLead").innerHTML = `<b>${sub.length} registry phases</b> on ${camp} campuses (${f1(git)} GW IT-eq, all dates) cite SemiAnalysis in their notes or source column. Bucket and new date in the bear scenario. The excerpt is the registry note around the citation.`;
+  $("sSub").innerHTML = `<tr><th>State</th><th>Campus · phase</th><th class="n">MW</th><th>Status</th><th class="n">Date</th><th>Bear</th><th>What the row takes from SemiAnalysis</th></tr>` +
+    sub.map(x => { const b = x.res.bear || x.res[sc0[0]]; return `<tr><td>${esc(x.st)}</td><td><b>${esc(x.campus)}</b><div class="why">${esc(x.phase)}${x.u ? "" : " · outside the 2026-30 universe"}</div></td><td class="n">${Math.round(x.mw).toLocaleString("en-US")} <span class="tag">${esc(x.basis)}</span></td><td>${esc((x.ps || "–").replace("_", " "))}</td><td class="n">${esc(x.cod)}</td>` +
+      `<td><span class="chip"><i style="background:var(${BV[b[0]] || "--grid"})"></i>${esc(BL[b[0]] || b[0])}</span>${b[0] === "delayed" ? ` → ${esc(b[1])}` : ""}</td><td class="why" style="max-width:420px">${esc(x.snip)}</td></tr>`; }).join("");
+  $("sCat").innerHTML = `<tr><th>Date</th><th>Event</th><th>Piece</th></tr>` + SD.catalysts.map(c => `<tr><td class="n" style="text-align:left">${esc(c.date)}</td><td>${esc(c.what)}</td><td style="color:var(--ink-3)">${esc(c.src)}</td></tr>`).join("");
+}
+/* ---------------------------------------------------------------- team tab (a teammate's standalone page, unchanged) */
+const TM = (M.team || [])[0];
+const curTheme = () => { const r = document.documentElement; return r.dataset.theme || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light"); };
+let tLoaded = "";
+function team(){
+  if (!TM) { $("tSrc").textContent = "No file under _data/dc_projects/team/."; return; }
+  $("tSrc").innerHTML = `<b>${esc(TM.author)} — “${esc(TM.title)}”, as of ${esc(TM.asof)}</b> (received ${esc(TM.received)}; stored unchanged as <code>${esc(TM._file)}</code>). ${esc(TM.summary)} Shown as received; not an input to the delay model.` +
+    `<ul style="margin:6px 0 0 18px;padding:0">${(TM.caveats || []).map(c => `<li>${esc(c)}</li>`).join("")}</ul>`;
+  teamX();
+  const th = curTheme();
+  if (tLoaded !== th) { $("tFrame").srcdoc = TM.html.replace(/<html([^>]*)>/i, (m, a) => `<html${a.replace(/\sdata-theme="[^"]*"/, "")} data-theme="${th}">`); tLoaded = th; }
+}
+function teamX(){
+  const X = TM.xchk;
+  if (!X || X.error) { $("tX").hidden = true; return; }
+  $("tX").hidden = false;
+  const fmw = v => v == null ? "n/d" : v >= 1000 ? (v / 1000).toFixed(v >= 10000 ? 0 : 1) + " GW" : Math.round(v).toLocaleString("en-US") + " MW";
+  const site = X.matched.length + X.only_daniel.length, dMW = X.only_daniel.reduce((t, p) => t + (p.mw || 0), 0), dMWn = X.only_daniel.filter(p => p.mw).length;
+  const rIT = X.only_registry.reduce((t, r) => t + r.it, 0), F = X.findings || {};
+  $("tXLead").innerHTML = `Hand-reviewed ${esc(X.reviewed)}: each of Daniel's ${X.n_projects} projects (matrix as of ${esc(X.asof)}) mapped to the registry campuses it covers, in the same state (<code>team/daniel_registry_map.json</code>). ${X.other.portfolio} company-level rows with no site and ${X.other.excluded} he excludes are left out. The lists below recompute on every build from the current registry; the reads are Capstone's, to verify before any registry edit.` +
+    (X.stale.length ? ` <b>Map points at ${X.stale.length} registry campus name(s) that no longer exist:</b> ${esc(X.stale.join("; "))}.` : "") +
+    (X.other.unmapped ? ` <b>${X.other.unmapped} project(s) are new since the review and unmapped</b> (listed as Daniel-only).` : "");
+  const kpi = (k, v, s) => `<div class="kpi"><div class="k">${k}</div><div class="v">${v}</div><div class="s">${s}</div></div>`;
+  $("tXKpis").innerHTML =
+    kpi("Matched to our registry", `${X.matched.length} <small>of ${site}</small>`, `site-level projects; ${f1(X.matched.reduce((t, p) => t + p.reg_it_u, 0) / 1000)} GW IT-eq of registry phases dated 2026-30 behind them`) +
+    kpi("In Daniel's matrix only", `${X.only_daniel.length}`, `${dMWn} with a MW figure, ${fmw(dMW)} headline (mixed units); the rest n/d`) +
+    kpi("In our registry only", `${X.only_registry.length}`, `campuses, ${f1(rIT / 1000)} GW IT-eq dated 2026-30 (not Aterio-low)`) +
+    kpi("Contradictions checked", `${(F.contradicts || []).length}`, (F.contradicts || []).some(x => x.status) ? `${(F.contradicts || []).filter(x => x.status === "fixed").length} fixed in the registry, ${(F.contradicts || []).filter(x => x.status && x.status !== "fixed").length} not adopted after checking sources` : `dates or status where Daniel and the registry disagree`);
+  const stc = s => s === "fixed" ? `<span class="chip"><i style="background:var(--c-ends)"></i>fixed</span>` : s ? `<span class="chip"><i style="background:var(--c-nopause)"></i>${esc(s)}</span>` : "";
+  const col = (h, items) => `<div class="panel read-col"><h4>${h}</h4><ul>${(items || []).map(x => `<li><b>${esc(x.t)} ${stc(x.status)}</b>${esc(x.d)}${x.ids ? ` <span class="tag" title="registry id prefix">${esc(x.ids)}</span>` : ""}${x.resolution ? `<div style="margin-top:3px;color:var(--ink)">→ ${esc(x.resolution)}</div>` : ""}</li>`).join("")}</ul></div>`;
+  $("tXRead").innerHTML = col("Contradicts the registry" + (F.contradicts && F.contradicts.some(x => x.status) ? " — checked 2026-11-09" : ""), F.contradicts) + col("New to the registry", F.new) + col("Consistent", F.consistent);
+  const link = s => s ? `<a href="${esc(s)}" target="_blank" rel="noopener">source</a>` : `<span style="color:var(--ink-3)">KB / trackers</span>`;
+  $("tXOnlyDSum").textContent = `In Daniel's matrix only: ${X.only_daniel.length} projects`;
+  $("tXOnlyD").innerHTML = `<tr><th>State</th><th>End user</th><th>Project</th><th class="n">Headline MW</th><th>MW detail</th><th>Status</th><th>Conf.</th><th>Source</th></tr>` +
+    X.only_daniel.map(p => `<tr><td>${esc(p.st)}</td><td>${esc(p.col)}</td><td><b>${esc(p.n)}</b>${p.unreviewed ? ' <span class="tag">new, unreviewed</span>' : ""}${p.partners ? `<div class="why">${esc(p.partners)}</div>` : ""}</td><td class="n">${fmw(p.mw)}</td><td class="why">${esc(p.m)}</td><td class="why">${esc(p.t)}</td><td>${esc(p.conf)}</td><td>${link(p.src)}</td></tr>`).join("");
+  $("tXOnlyRSum").textContent = `In our registry only: ${X.only_registry.length} campuses, ${f1(rIT / 1000)} GW IT-eq`;
+  $("tXOnlyR").innerHTML = `<tr><th>State</th><th>Campus</th><th>Developer</th><th>Tenant</th><th class="n">IT-eq MW</th><th class="n">Dated</th></tr>` +
+    X.only_registry.map(r => `<tr><td>${esc(r.st)}</td><td><b>${esc(r.campus)}</b></td><td class="why">${esc(r.dev)}</td><td class="why">${esc(r.ten || "–")}</td><td class="n">${r.it.toLocaleString("en-US")}</td><td class="n">${esc(r.cod[0] || "–")}${r.cod[1] && r.cod[1] !== r.cod[0] ? " → " + esc(r.cod[1]) : ""}</td></tr>`).join("");
+  const m = X.matched.slice().sort((a, b) => (a.st + a.col).localeCompare(b.st + b.col));
+  $("tXMatchSum").textContent = `Matched: ${X.matched.length} projects`;
+  $("tXMatch").innerHTML = `<tr><th>State</th><th>End user</th><th>Daniel: project</th><th class="n">Daniel MW</th><th>Daniel: status</th><th>Registry campus(es)</th><th class="n">Reg. MW / IT-eq</th><th class="n">Reg. dated</th><th class="n">Bear delayed</th></tr>` +
+    m.map(p => `<tr><td>${esc(p.st)}</td><td>${esc(p.col)}</td><td><b>${esc(p.n)}</b><div class="why">${esc(p.m)}</div></td><td class="n">${fmw(p.mw)}</td><td class="why">${esc(p.t)}</td><td class="why">${p.reg.map(esc).join("<br>")}</td><td class="n">${p.reg_mw.toLocaleString("en-US")} / ${p.reg_it.toLocaleString("en-US")}</td><td class="n">${esc(p.reg_cod[0] || "–")}${p.reg_cod[1] && p.reg_cod[1] !== p.reg_cod[0] ? " → " + esc(p.reg_cod[1]) : ""}</td><td class="n">${p.reg_bear ? p.reg_bear.toLocaleString("en-US") : "–"}</td></tr>`).join("");
+}
+$("themeBtn").addEventListener("click", () => { if (S.tab === "team") team(); });
+
+/* ---------------------------------------------------------------- Aterio census tab (registry vs the vendor census) */
+const AX = M.aterio;
+function aterio(){
+  if (!AX) return;
+  const g1 = v => (v / 1000).toFixed(1), mw = v => Math.round(v).toLocaleString("en-US");
+  const T = AX.totals, VC = AX.verdict_counts || {};
+  $("aSrc").innerHTML = `<b>Aterio data-center census, export as of ${esc(AX.asof)}</b> (<code>${esc(AX.inventory)}</code>, licensed, internal use) against this registry. Each registry campus is mapped to the Aterio campus(es) on the same site: ${AX.n_reviewed} by hand (<code>aterio/registry_map.json</code>, reviewed ${esc(AX.map_reviewed)}), ${AX.n_auto} automatically (same state, ≤30 km, name and developer agree). <b>Bases:</b> registry IT-eq as everywhere on this page; Aterio facility power ÷${AX.fac_it} (its own facility/IT median). Window ${AX.window.join(" to ")}. Aterio counts by <b>building</b> from satellite reads and permits, so it can lag a press release or lead a company statement; a flag is a question, and the verdict column says how it was answered.` +
+    (AX.live === false ? ` <b>Shown from the last saved run</b> (export not reachable: ${esc(AX.stale_reason || "")}).` : "") +
+    (AX.stale_map && AX.stale_map.length ? ` <b>Map entries point at Aterio keys missing from this export:</b> ${esc(AX.stale_map.join("; "))}.` : "");
+  const kpi = (k, v, s) => `<div class="kpi"><div class="k">${k}</div><div class="v">${v}</div><div class="s">${s}</div></div>`;
+  $("aKpis").innerHTML =
+    kpi("Registry campuses found in Aterio", `${AX.n_reg_matched} <small>of ${AX.n_reg}</small>`, `${AX.n_reg - AX.n_reg_matched} not in the census (${g1(T.reg_only_it * 1000)} GW IT-eq); several post-date the export`) +
+    kpi("Aterio under construction 2026-30", `${f1(T.at_uc)} GW`, `IT-eq, buildings under construction or delayed. ${f1(T.at_uc_matched)} GW of it sits on campuses the registry has (${Math.round(T.at_uc_matched / T.at_uc * 100)}%)`) +
+    kpi("Aterio-only, under construction", `${f1(T.at_only_uc)} GW`, `${AX.n_at_only} Aterio campuses building now that the registry does not carry. Registry under construction: ${f1(T.reg_uc)} GW`) +
+    kpi("Contradictions checked", `${(VC.fixed || 0) + (VC.not_adopted || 0) + (VC.explained || 0)} <small>of ${(VC.fixed || 0) + (VC.not_adopted || 0) + (VC.explained || 0) + (VC.open || 0)}</small>`, `${VC.fixed || 0} fixed in the registry, ${VC.not_adopted || 0} not adopted (public sources disagree with Aterio), ${VC.explained || 0} explained (timing or stale tags), ${VC.open || 0} open`);
+  const FL = {withdrawn: "Aterio: withdrawn", reg_ahead: "Registry building, Aterio announced", aterio_ahead: "Aterio building, registry not started", aterio_done: "Aterio: all active", delayed: "Aterio: delayed", later: "Aterio dates later", earlier: "Aterio dates earlier", size: "Size differs"};
+  const VS = {fixed: ["fixed", "var(--c-ends)"], not_adopted: ["not adopted", "var(--c-nopause)"], explained: ["explained", "var(--c-protected)"], open: ["open", "var(--c-delayed)"]};
+  const vchip = v => v ? `<span class="chip"><i style="background:${VS[v.status][1]}"></i>${VS[v.status][0]}</span>` : `<span class="chip"><i style="background:var(--c-delayed)"></i>open</span>`;
+  const fc = AX.flag_counts || {};
+  $("aFlagLead").innerHTML = `Groups with a stage or withdrawal contradiction first (${Object.entries(FL).filter(([k]) => fc[k]).map(([k, l]) => `${esc(l)} ${fc[k]}`).join(" · ")}). Date gaps under ${AX.rules.date_flag_m} months and size ratios inside ${AX.rules.size_band.join("–")}× are not flagged. Date and size flags alone are listed in the full table below, not here.`;
+  $("aFlagLegend").innerHTML = Object.entries(VS).map(([k, [l, c]]) => `<span><i style="background:${c}"></i>${l}</span>`).join("");
+  const main = AX.groups.filter(g => g.verdict || g.flags.some(f => ["withdrawn", "reg_ahead", "aterio_ahead", "aterio_done", "delayed"].includes(f.k)))
+    .sort((a, b) => ((b.verdict && b.verdict.status === "fixed") - (a.verdict && a.verdict.status === "fixed")) || (b.sev - a.sev) || ((b.reg.it + b.at.it_win) - (a.reg.it + a.at.it_win)));
+  $("aFlags").innerHTML = `<tr><th>State</th><th>Registry campus</th><th>Aterio campus</th><th>What disagrees</th><th>Verdict</th></tr>` +
+    main.map(g => `<tr><td>${esc(g.st)}</td><td><b>${g.reg.campuses.map(esc).join("<br>")}</b><div class="why">${mw(g.reg.it)} MW IT-eq · UC ${mw(g.reg.it_uc)} · not started ${mw(g.reg.it_ns)}${g.reg.cod_first ? " · from " + esc(g.reg.cod_first) : ""}</div></td><td>${g.at.names.map(esc).join("<br>")}<div class="why">${esc(g.at.prov.join(", "))} · ${g.at.n} bldg(s)</div></td><td class="why">${g.flags.map(f => `<div><span class="tag">${esc(FL[f.k] || f.k)}</span> ${esc(f.t)}</div>`).join("")}</td><td style="min-width:220px">${vchip(g.verdict)}${g.verdict ? `<div class="why" style="margin-top:3px">${esc(g.verdict.t)}</div>` : ""}</td></tr>`).join("");
+  $("aStLead").innerHTML = `Aterio under construction or delayed (IT-eq GW, activation 2026-30) per state, the part of it on campuses the registry carries, and the registry's own under-construction GW. Coverage = matched ÷ Aterio. Low coverage = Aterio sees construction the registry has not rowed. Registry GW can exceed Aterio's where the registry counts a phase as building that Aterio still lists as announced. "Aterio high-likelihood announced" is the next wave.`;
+  const sts = AX.states.filter(s => s.at_uc >= 0.05 || s.reg_uc >= 0.05);
+  const mx = Math.max(...sts.map(s => Math.max(s.at_uc, s.reg_uc)), 0.1);
+  $("aState").innerHTML = `<tr><th>State</th><th class="hbc">Aterio UC (matched part darker) vs registry UC</th><th class="n">Aterio UC</th><th class="n">matched</th><th class="n">Coverage</th><th class="n">Registry UC</th><th class="n">Registry all 26-30</th><th class="n">Aterio high-lik. announced</th></tr>` +
+    sts.map(s => `<tr><td>${esc(SN(s.st))}</td><td class="hbc"><div class="row" data-t="${esc(SN(s.st))}: Aterio ${f1(s.at_uc)} GW under construction, ${f1(s.at_uc_matched)} GW on registry campuses · registry ${f1(s.reg_uc)} GW under construction" style="display:flex;flex-direction:column;gap:3px"><div style="display:flex;height:9px"><div style="width:${s.at_uc_matched / mx * 100}%;background:var(--c-protected);border-radius:3px 0 0 3px"></div><div style="width:${(s.at_uc - s.at_uc_matched) / mx * 100}%;background:var(--c-protected);opacity:.4;border-radius:0 3px 3px 0"></div></div><div style="height:9px;width:${s.reg_uc / mx * 100}%;background:var(--c-base);border-radius:3px"></div></div></td><td class="n">${f1(s.at_uc)}</td><td class="n">${f1(s.at_uc_matched)}</td><td class="n">${s.at_uc > 0 ? Math.round(s.at_uc_matched / s.at_uc * 100) + "%" : "–"}</td><td class="n">${f1(s.reg_uc)}</td><td class="n">${f1(s.reg_all)}</td><td class="n">${f1(s.at_ann_hi)}</td></tr>`).join("") +
+    `<tr><td><b>US</b></td><td class="why">Upper bar: Aterio (solid = on registry campuses). Lower bar: registry.</td><td class="n"><b>${f1(T.at_uc)}</b></td><td class="n"><b>${f1(T.at_uc_matched)}</b></td><td class="n"><b>${Math.round(T.at_uc_matched / T.at_uc * 100)}%</b></td><td class="n"><b>${f1(T.reg_uc)}</b></td><td class="n"><b>${f1(T.reg_all)}</b></td><td class="n"><b>${f1(T.at_ann_hi)}</b></td></tr>`;
+  $("aOnlySum").textContent = `In Aterio only, under construction: ${AX.n_at_only} campuses, ${f1(T.at_only_uc)} GW IT-eq (top ${AX.at_only.length} listed)${AX.n_held ? `; ${AX.n_held} checked and held (${f1(AX.it_held)} GW)` : ""}`;
+  $("aOnly").innerHTML = `<tr><th>State</th><th>Aterio campus</th><th>Provider</th><th>Tenants (Aterio)</th><th>Where</th><th class="n">UC MW</th><th class="n">Delayed MW</th><th class="n">Announced MW</th><th class="n">First UC date</th><th>Review</th></tr>` +
+    AX.at_only.map(x => `<tr><td>${esc(x.st)}</td><td><b>${esc(x.name)}</b></td><td class="why">${esc(x.prov)}</td><td class="why">${esc(x.users || "–")}</td><td class="why">${esc([x.city, x.county].filter(Boolean).join(", "))}</td><td class="n">${mw(x.it_uc)}</td><td class="n">${mw(x.it_delayed)}</td><td class="n">${mw(x.it_ann)}</td><td class="n">${esc(x.uc_first || "–")}</td><td class="why">${x.hold ? "<b>held</b>: " + esc(x.hold) : "–"}</td></tr>`).join("");
+  $("aRegSum").textContent = `In the registry only: ${AX.reg_only.length} campuses, ${f1(T.reg_only_it)} GW IT-eq`;
+  $("aReg").innerHTML = `<tr><th>State</th><th>Registry campus</th><th>Developer</th><th class="n">IT-eq MW</th><th class="n">First date</th><th>Why no match</th></tr>` +
+    AX.reg_only.map(x => `<tr><td>${esc(x.st)}</td><td><b>${esc(x.campus)}</b></td><td class="why">${esc(x.dev)}</td><td class="n">${mw(x.it)}</td><td class="n">${esc(x.cod_first || "–")}</td><td class="why">${esc(x.note || (x.how === "unmatched" ? "no candidate within 30 km" : ""))}</td></tr>`).join("");
+  $("aAllSum").textContent = `All matched groups: ${AX.groups.length}`;
+  $("aAll").innerHTML = `<tr><th>State</th><th>Registry campus</th><th>Aterio campus</th><th>Match</th><th class="n">Reg. IT-eq</th><th class="n">Reg. UC</th><th class="n">Aterio 26-30</th><th class="n">Aterio UC</th><th class="n">Aterio active</th><th class="n">Reg. first</th><th class="n">Aterio first</th><th>Flags</th></tr>` +
+    AX.groups.slice().sort((a, b) => (a.st + a.reg.campuses[0]).localeCompare(b.st + b.reg.campuses[0])).map(g => `<tr><td>${esc(g.st)}</td><td>${g.reg.campuses.map(esc).join("<br>")}</td><td class="why">${g.at.names.map(esc).join("<br>")}</td><td>${g.how.map(h => `<span class="tag">${esc(h)}</span>`).join(" ")}</td><td class="n">${mw(g.reg.it)}</td><td class="n">${mw(g.reg.it_uc)}</td><td class="n">${mw(g.at.it_win)}</td><td class="n">${mw(g.at.it_uc)}</td><td class="n">${mw(g.at.it_active)}</td><td class="n">${esc(g.reg.cod_first || "–")}</td><td class="n">${esc(g.at.uc_first || g.at.pipe_first || "–")}</td><td class="why">${g.flags.map(f => esc(FL[f.k] || f.k)).join(", ")}</td></tr>`).join("");
+}
+/* ---------------------------------------------------------------- Aterio deck tab (the 3-slide deck + Aterio vs the rest of our base) */
+const DK = M.aterioDeck;
+function deck(){
+  if (!DK || deck.done) return; deck.done = true;
+  const rhe = v => { const f = Math.floor(v), d = v - f; return d > 0.5 + 1e-9 ? f + 1 : d < 0.5 - 1e-9 ? f : (f % 2 === 0 ? f : f + 1); };  // half-even, as the deck's Python
+  const n1 = v => v == null ? "–" : v.toFixed(1), n0 = v => v == null ? "–" : rhe(v).toLocaleString("en-US"), pc = v => rhe(v * 100) + "%";
+  const rtop = (x, y, w, h, r) => { r = Math.max(0, Math.min(r, w / 2, h)); return `M${x},${y + h}V${y + r}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h}Z`; };
+  const US = DK.US, ST = DK.states, REST = DK.rest, BY = DK.us_by_year, YRS = ["2026", "2027", "2028", "2029", "2030"];
+  const yt = y => Object.values(BY[y]).reduce((a, b) => a + b, 0), ya = y => (BY[y].ann_High || 0) + (BY[y].ann_Medium || 0) + (BY[y].ann_Low || 0);
+  const kpi = (k, v, s, col) => `<div class="kpi"><div class="k">${k}</div><div class="v"${col ? ` style="color:${col}"` : ""}>${v}</div><div class="s">${s}</div></div>`;
+  const head = (no, t, sub) => `<div class="sh"><span class="sn">${no}</span><h2>${t}</h2><span class="sk">${sub}</span></div>`;
+  const reading = t => `<div class="reading"><b>Reading:</b> ${t}</div>`;
+  const FI = (DK.compare && DK.compare.fac_it) || (M.fac_it || {}).k;   // the build's one facility/IT ratio, never a literal
+  const dl = (DK.downloads || []).map(f => `<a href="aterio-deck/${encodeURIComponent(f)}" download>${/_PT\./.test(f) ? "Portuguese" : "English"} · ${f.split(".").pop()}</a>`).join("");
+  $("dkSrc").innerHTML = `<b>Aterio data-center census</b> (inventory as of ${esc(DK.asof)}; weekly report with the ${esc(DK.forecast_asof)} forecast), licensed, internal use; Capstone calculations. <b>GW = facility power</b> (SELECTED_POWER_CAPACITY_MW), counted per building: not IT load (Aterio's own facility/IT median ≈ ${FI}) and not the reference deck's campus-level cut. The data predates the Texas TCEQ freeze (21-Sep) and the 3-Nov election. Same content as the 3-slide deck of 2026-11-09` + (dl ? `, downloadable: <span class="dl">${dl}</span>` : ".") + ` Panel 4 applies our house rules for this data; panel 5 sets Aterio beside every other source this page holds.`;
+
+  /* 1 · additions by state and likelihood */
+  const SEG = [["uc", "Under construction", "var(--s-uc)"], ["act", "Online in 2026", "var(--s-active)"], ["del", "Delayed", "var(--c-delayed)"], ["ann_High", "Announced · high", "var(--lk-hi)"], ["ann_Medium", "Announced · medium", "var(--lk-med)"], ["ann_Low", "Announced · low", "var(--lk-low)"]];
+  const rows = ST.concat([Object.assign({st: "", name: `Other ${DK.n_states_rest} states`}, REST)]);
+  const mx = Math.max(...rows.map(r => r.total));
+  const top5 = ST.slice(0, 5).reduce((a, x) => a + x.total, 0) / US.total;
+  const stRows = rows.map(r => { const nm = r.st ? SN(r.st) : r.name;
+    const bar = `<div class="stk" style="width:${r.total / mx * 100}%">` + SEG.map(([k, l, c]) => r[k] > 0 ? `<span style="width:${r[k] / r.total * 100}%;background:${c}" data-t="<b>${esc(nm)}</b> · ${l}: <b>${n1(r[k])} GW</b> (${pc(r[k] / r.total)} of ${n1(r.total)})"></span>` : "").join("") + `</div>`;
+    return `<tr><td>${esc(nm)}</td><td class="hbc">${bar}</td><td class="n"><b>${n1(r.total)}</b></td><td class="n">${n1(r.uc)}</td><td class="n">${pc(r.high_all / r.total)}</td></tr>`; }).join("");
+  const ann = US.ann_High + US.ann_Medium + US.ann_Low, y2627 = yt("2026") + yt("2027");
+  const yrRows = YRS.map(y => `<tr><td>${y}</td><td class="n">${n1(yt(y))}</td><td class="n">${n1(BY[y].uc || 0)}</td><td class="n">${n1(ya(y))}</td><td class="n">${pc(ya(y) / yt(y))}</td></tr>`).join("") +
+    `<tr class="tot"><td>2026-30</td><td class="n">${n1(US.total)}</td><td class="n">${n1(US.uc)}</td><td class="n">${n1(ann)}</td><td class="n">${pc(ann / US.total)}</td></tr>`;
+  $("dk1").innerHTML = head(1, "GW additions by state in Aterio's census", "2026-30, by stage and likelihood") +
+    `<p class="lede"><b>Aterio has ${n0(US.total)} GW with an activation date in 2026-30 in the US; ${n0(US.high_all)} GW (${pc(US.high_all / US.total)}) is high likelihood.</b> Only ${n1(US.uc)} GW (${pc(US.uc / US.total)}) is under construction; the rest is announced. Texas alone has ${n0(ST[0].total)} GW (${pc(ST[0].total / US.total)}); the top five states, ${pc(top5)}.</p>` +
+    `<div class="sgrid"><div><p class="ct">GW with an activation date in 2026-30, by state</p><p class="cs">14 largest states + ${DK.n_states_rest} others · facility GW · announced split by Aterio's likelihood · hover a segment for its GW</p>` +
+    `<div class="legend">${SEG.map(([k, l, c]) => `<span><i class="sw" style="background:${c}"></i>${l}</span>`).join("")}</div>` +
+    `<table class="btbl"><tr><th>State</th><th class="hbc"></th><th class="n">Total</th><th class="n">Building</th><th class="n">High lik.</th></tr>${stRows}<tr class="tot"><td>US</td><td></td><td class="n">${n1(US.total)}</td><td class="n">${n1(US.uc)}</td><td class="n">${pc(US.high_all / US.total)}</td></tr></table></div>` +
+    `<div><div class="tiles">${kpi("Additions 2026-30", n0(US.total) + " GW", "facility · stated activation date")}${kpi("High likelihood", n0(US.high_all) + " GW", pc(US.high_all / US.total) + " of total · construction is ~99% high", "var(--lk-hi)")}${kpi("Under construction", n1(US.uc) + " GW", `${pc(US.uc / US.total)} · medium + low: ${n0(US.ann_Medium + US.ann_Low)} GW`)}${kpi("Texas", n0(ST[0].total) + " GW", `${pc(ST[0].high_all / ST[0].total)} high · ${n1(ST[0].uc)} GW building`)}</div>` +
+    `<p class="ct">By activation year</p><p class="cs">facility GW, US</p><table><tr><th>Year</th><th class="n">Adds</th><th class="n">Building</th><th class="n">Announced</th><th class="n">% announced</th></tr>${yrRows}</table>` +
+    `<p class="dkfoot">Additions = live buildings (excl. cancelled/withdrawn) with an activation date in 2026-30; 'online in 2026' = active buildings activated in 2026. Likelihood is set per campus by Aterio; its definition (GS-hosted call, 20-Oct-26): high &gt;80% materialise, medium ~50-60%, low &lt;40%.</p></div></div>` +
+    reading(`Aterio's curve is everything with a date, not a forecast. 2026-27 (${n1(y2627)} GW) is ${pc(1 - ya("2027") / y2627)} under construction or already online; 2028 (${n0(yt("2028"))} GW) and 2029 (${n0(yt("2029"))} GW) are ${pc(ya("2028") / yt("2028"))} and ${pc(ya("2029") / yt("2029"))} announced. Medium + low likelihood adds up to ${n0(US.ann_Medium + US.ann_Low)} GW: that is where the scenarios in panel 3 cut.`);
+
+  /* 2 · delay */
+  const dt = DK.delayed_top, keys = Object.keys(dt).filter(k => dt[k] >= 0.3).slice(0, 5), drest = DK.delayed_us - keys.reduce((a, k) => a + dt[k], 0);
+  const dItems = keys.map(k => [SN(k), dt[k]]).concat([["Others", drest]]), dmx = Math.max(...dItems.map(x => x[1]));
+  const bl = DK.delayed_by_like, L = DK.lag, H25 = DK.history_uc["2025-08-31"], H26 = DK.history_uc["2026-02-28"], due = H25.due;
+  const lagSt = ST.filter(x => x.lag_both >= 1).sort((a, b) => b.lag_later - a.lag_later).slice(0, 6);
+  const BLB = {"Pulled in": "Earlier", "Unchanged": "Same", "1-3 mo": "1-3m", "4-6 mo": "4-6m", "7-12 mo": "7-12m", "13-24 mo": "13-24m", ">24 mo": ">24m"};
+  const bins = H25.bins, bmx = Math.max(...bins.map(b => b.gw)), W2 = 380, H2 = 200, bw = (W2 - 8) / bins.length;
+  const y2 = v => H2 - 22 - v / bmx * (H2 - 22 - 20);
+  const svg2 = `<svg viewBox="0 0 ${W2} ${H2}" role="img" aria-label="Where the date of Aug-25 construction moved by Aug-26"><line class="gl" x1="0" x2="${W2}" y1="${H2 - 22}" y2="${H2 - 22}"/>` +
+    bins.map((b, i) => { const x = 4 + i * bw + 4, w = bw - 8, y = y2(b.gw), h = H2 - 22 - y, same = b.label === "Pulled in" || b.label === "Unchanged";
+      return `<path d="${rtop(x, y, w, h, 4)}" fill="${same ? "var(--c-nopause)" : "var(--s-ca)"}" data-t="${BLB[b.label]}: <b>${n1(b.gw)} GW</b> of the ${n1(H25.gw)} GW building on 31-Aug-25"/><text class="vals" x="${x + w / 2}" y="${y - 5}" text-anchor="middle">${n1(b.gw)}</text><text class="ax" x="${x + w / 2}" y="${H2 - 6}" text-anchor="middle">${BLB[b.label]}</text>`; }).join("") + `</svg>`;
+  $("dk2").innerHTML = head(2, "Delay: what Aterio already flags", "delayed stage, dates and track record") +
+    `<p class="lede"><b>Aterio publishes no 'GW delayed' number; delay shows up in three places:</b> ${n1(DK.delayed_us)} GW flagged as delayed, its own dates a median ${n0(L.med_lag_m_later)} months after the public source on ${pc(L.share_later)} of comparable MW, and a track record where ${pc(H25.share_later)} of what was under construction a year ago had its date pushed out (median ${n0(H25.median)} months).</p>` +
+    `<div class="sgrid3"><div><p class="ct">① 'Delayed' stage: ${n1(DK.delayed_us)} GW</p><p class="cs">facility GW by state (all dates)</p>` +
+    dItems.map(([nm, v]) => `<div style="display:grid;grid-template-columns:110px 1fr;gap:8px;align-items:center;margin:6px 0"><span style="font-size:12.5px">${esc(nm)}</span><div class="hbar"><div style="width:${v / dmx * 80}%;background:var(--c-delayed)" data-t="${esc(nm)}: <b>${n1(v)} GW</b> in Aterio's 'delayed' stage"></div><b>${n1(v)}</b></div></div>`).join("") +
+    `<div class="rcard" style="border-left-color:var(--c-delayed)"><h4>Who is delayed</h4><p><b>Low likelihood: ${n1(bl.Low || 0)} GW</b>; high ${n1(bl.High || 0)}; medium ${n1(bl.Medium || 0)}. Mostly weak projects, not large builds stalled.</p><p>Texas has ${n1(dt.TX || 0)} GW (${pc((dt.TX || 0) / DK.delayed_us)}), before the TCEQ freeze (21-Sep) reached the data.</p></div></div>` +
+    `<div><p class="ct">② Aterio's date vs the public date</p><p class="cs">pipeline with both dates: ${n1(L.gw_both)} GW</p><div class="tiles">${kpi("Aterio later", n1(L.gw_later) + " GW", pc(L.share_later) + " of comparable · >1 month", "var(--c-delayed)")}${kpi("Median lag", n0(L.med_lag_m_later) + " months", "MW-weighted · " + n1(L.gw_earlier) + " GW earlier")}</div>` +
+    `<table><tr><th>State</th><th class="n">Both dates</th><th class="n">Aterio later</th><th class="n">%</th></tr>${lagSt.map(x => `<tr><td>${esc(SN(x.st))}</td><td class="n">${n1(x.lag_both)}</td><td class="n">${n1(x.lag_later)}</td><td class="n">${pc(x.lag_later / x.lag_both)}</td></tr>`).join("")}<tr class="tot"><td>US</td><td class="n">${n1(L.gw_both)}</td><td class="n">${n1(L.gw_later)}</td><td class="n">${pc(L.share_later)}</td></tr></table>` +
+    `<p class="dkfoot">Under construction: ${n1(L.uc_gw_later)} of ${n1(L.uc_gw_both)} GW with Aterio's date later. The activation date Aterio publishes is its own estimate in ${pc(DK.act_date_equals.aterio)} of buildings that carry both (only ${pc(DK.act_date_equals.public)} match the public source), so panel 1 already carries this delay.</p></div>` +
+    `<div><p class="ct">③ Track record: Aug-25 construction</p><p class="cs">${n1(H25.gw)} GW building on 31-Aug-25 · how far its date moved by 31-Aug-26</p><div class="chart">${svg2}</div>` +
+    `<div class="rcard" style="border-left-color:var(--s-ca)"><h4>${pc(H25.share_later)} pushed out, median ${n0(H25.median)} months</h4><p>Of what was due by 31-Aug-26 (${n1(due.gw)} GW), <b>only ${n1(due.now.active)} GW went live</b>; ${n1(due.now.uc)} GW is still building.</p><p>Over 6 months (Feb-26 construction): ${pc(H26.share_later)} pushed out, median ${n0(H26.median)} months. Part of it is Aterio re-estimating its own dates.</p></div></div></div>` +
+    reading(`what is flagged as delayed is small and low likelihood; the relevant delay is already inside Aterio's dates (${n0(L.med_lag_m_later)} months after the public source), and even so the track record shows construction slipping ~${n0(H25.median)} months a year. The data is as of 31-Aug: the post-election pauses are not in it yet.`);
+
+  /* 3 · scenarios */
+  const SC = DK.us_scen_cum, SAD = DK.us_scen_add_2630, inc = (y, k) => SC[y][k] - SC[String(+y - 1)][k];
+  const SCN = [["opt", "Optimistic", "var(--s-ann)"], ["base", "Baseline", "var(--s-uc)"], ["cons", "Conservative", "var(--s-ca)"]];
+  const smx = Math.max(...YRS.flatMap(y => SCN.map(([k]) => inc(y, k)))), W3 = 600, H3 = 250, gw3 = (W3 - 10) / YRS.length, b3 = (gw3 - 28) / 3;
+  const y3 = v => H3 - 22 - v / smx * (H3 - 22 - 20);
+  const svg3 = `<svg viewBox="0 0 ${W3} ${H3}" role="img" aria-label="GW added per year in Aterio's three scenarios"><line class="gl" x1="0" x2="${W3}" y1="${H3 - 22}" y2="${H3 - 22}"/>` +
+    YRS.map((yy, i) => SCN.map(([k, l, c], j) => { const v = inc(yy, k), x = 5 + i * gw3 + 14 + j * (b3 + 2), y = y3(v), h = H3 - 22 - y;
+      return `<path d="${rtop(x, y, b3 - 2, h, 4)}" fill="${c}" data-t="${yy} · ${l}: <b>${n1(v)} GW</b> added"/><text class="vals" x="${x + (b3 - 2) / 2}" y="${y - 5}" text-anchor="middle"${k === "base" ? ' style="fill:var(--ink);font-weight:650"' : ""}>${n0(v)}</text>`; }).join("") +
+      `<text class="ax" x="${5 + i * gw3 + gw3 / 2}" y="${H3 - 6}" text-anchor="middle">${yy}</text>`).join("") + `</svg>`;
+  const rc = DK.recon["2030"], gap = SAD.opt - SAD.cons;
+  const oth = k => SAD[k] - ST.slice(0, 12).reduce((a, x) => a + x["sc_" + k], 0);
+  const scRow = (nm, o, b, c, cls) => `<tr${cls ? ` class="${cls}"` : ""}><td>${nm}</td><td class="n">${n1(o)}</td><td class="n"><b>${n1(b)}</b></td><td class="n">${n1(c)}</td><td class="n${o && c / o < 0.55 ? " lo" : ""}">${o ? pc(c / o) : "–"}</td></tr>`;
+  const tx = ST[0], ny = ST.find(x => x.st === "NY");
+  $("dk3").innerHTML = head(3, "Aterio's scenarios", "optimistic, baseline and conservative, by state") +
+    `<p class="lede"><b>In Aterio's own forecast, 2026-30 runs from ${n0(SAD.opt)} GW (optimistic) to ${n0(SAD.cons)} GW (conservative); baseline ${n0(SAD.base)} GW.</b> The ${n0(gap)} GW gap sits almost entirely in 2028-30: 2026 is identical in all three and 2027 varies by ${n1(inc("2027", "opt") - inc("2027", "cons"))} GW.</p>` +
+    `<div class="sgrid"><div><p class="ct">GW added per year, three scenarios</p><p class="cs">US · facility GW · sum 2026-30: ${n0(SAD.opt)} / ${n0(SAD.base)} / ${n0(SAD.cons)}</p>` +
+    `<div class="legend">${SCN.map(([k, l, c]) => `<span><i class="sw" style="background:${c}"></i>${l}</span>`).join("")}</div><div class="chart">${svg3}</div>` +
+    `<div class="rcard" style="border-left-color:var(--s-uc)"><h4>What each scenario contains (Capstone read)</h4><p><b>Optimistic ≈ the whole live pipeline at stated dates</b> (2030 cumulative: ${n0(rc.opt)} vs ${n0(rc.all_live)} GW rebuilt). <b>Conservative ≈ online + building + high likelihood</b> (${n0(rc.cons)} vs ${n0(rc.act_uc_high)}). <b>Baseline sits between</b>, consistent with medium and low weighted near their stated probabilities. Aterio does not document the method.</p></div></div>` +
+    `<div><p class="ct">Additions 2026-30 by state, by scenario</p><p class="cs">facility GW · ordered as in panel 1 · conservative under 55% of optimistic in orange</p>` +
+    `<table><tr><th>State</th><th class="n">Optimistic</th><th class="n">Baseline</th><th class="n">Conservative</th><th class="n">Cons./Opt.</th></tr>` +
+    ST.slice(0, 12).map(x => scRow(esc(SN(x.st)), x.sc_opt, x.sc_base, x.sc_cons)).join("") + scRow(`Other ${DK.n_states_rest + 2} states`, oth("opt"), oth("base"), oth("cons")) + scRow("US", SAD.opt, SAD.base, SAD.cons, "tot") + `</table>` +
+    `<p class="dkfoot">Scenarios = cumulative activation forecast in the weekly report ('Evo State' sheet, ${esc(DK.forecast_asof)}); additions 2026-30 = cumulative 2030 − 2025.</p></div></div>` +
+    reading(`the conservative case cuts ${pc(1 - SAD.cons / SAD.opt)} from the optimistic one. Texas goes from ${n0(tx.sc_opt)} to ${n0(tx.sc_cons)} GW; ` + (ny ? `New York nearly vanishes (${n1(ny.sc_opt)} → ${n1(ny.sc_cons)} GW), because its pipeline is medium/low likelihood. ` : "") + `The scenarios date from ${esc(DK.forecast_asof)}: they do not include the Texas pauses (TCEQ, 21-Sep) or the 3-Nov election.`);
+
+  /* 4 · Capstone treatment of the census (house rules, _data/aterio/treatment.json) */
+  const CV = DK.capstone;
+  if (!CV) { $("dk4").hidden = true; } else {
+    const cy = CV.us.by_year, ry = CV.raw.by_year, pace = CV.guard.pace_online_it, rmv = CV.removed, abl = rmv.announced_by_likelihood || {};
+    const san = Object.fromEntries(((SD && SD.national) || []).map(x => [x.id, x.gw]));
+    const yrs4 = Object.keys(pace).filter(y => +y < CV.window[0]).sort().concat(YRS);
+    const B4 = [["online", "Went live in 2026", "var(--s-active)"], ["building", "Under construction", "var(--s-uc)"], ["delayed", "Delayed", "var(--c-delayed)"], ["announced", "Announced · high likelihood", "var(--lk-hi)"]];
+    const vmax = Math.max(...YRS.map(y => ry[y].total), ...Object.values(pace)) * 1.04;
+    const W4 = 660, H4 = 300, base = H4 - 24, top4 = 40, cw4 = (W4 - 10) / yrs4.length, bw4 = cw4 * 0.56;
+    const ys4 = v => base - v / vmax * (base - top4);
+    let bars = `<line class="gl" x1="0" x2="${W4}" y1="${base}" y2="${base}"/>`;
+    yrs4.forEach((y, i) => { const x = 5 + i * cw4 + (cw4 - bw4) / 2;
+      if (+y < CV.window[0]) { const v = pace[y];
+        bars += `<path d="${rtop(x, ys4(v), bw4, base - ys4(v), 4)}" fill="var(--c-nopause)" data-t="${y}: <b>${n1(v)} GW</b> IT-eq went live (Aterio's record of active buildings)"/><text class="vals" x="${x + bw4 / 2}" y="${ys4(v) - 5}" text-anchor="middle">${n1(v)}</text>`;
+      } else { const c = cy[y], rv = ry[y].total, hi = Math.max(rv, c.total);
+        if (rv > c.total + 0.05) bars += `<rect x="${x - 3}" y="${ys4(rv)}" width="${bw4 + 6}" height="${base - ys4(rv)}" rx="4" fill="none" stroke="var(--ink-3)" stroke-dasharray="4 3" stroke-width="1.2" data-t="${y}: Aterio dates <b>${n1(rv)} GW</b> IT-eq to the year with no filter; the house rules keep ${n1(c.total)}"/>`;
+        const segs = B4.filter(([k]) => c[k] > 0.005); let acc = 0;
+        segs.forEach(([k, l, col], j) => { const ya = ys4(acc + c[k]), yb = ys4(acc), last = j === segs.length - 1;
+          const tt = `data-t="${y} · ${l}: <b>${n1(c[k])} GW</b> IT-eq (house view ${n1(c.total)})"`;
+          bars += last ? `<path d="${rtop(x, ya, bw4, yb - ya, 4)}" fill="${col}" ${tt}/>` : `<rect x="${x}" y="${ya + 1}" width="${bw4}" height="${Math.max(0, yb - ya - 1)}" fill="${col}" ${tt}/>`;
+          acc += c[k]; });
+        bars += `<text class="val" x="${x + bw4 / 2}" y="${ys4(hi) - 5}" text-anchor="middle">${n1(c.total)}</text>` + (rv > c.total + 0.05 ? `<text class="ax" x="${x + bw4 / 2}" y="${ys4(hi) - 19}" text-anchor="middle">of ${n0(rv)}</text>` : "");
+      }
+      bars += `<text class="ax" x="${5 + i * cw4 + cw4 / 2}" y="${H4 - 6}" text-anchor="middle">${y}${+y === CV.window[0] ? "*" : ""}</text>`; });
+    const svg4 = `<svg viewBox="0 0 ${W4} ${H4}" role="img" aria-label="GW IT-eq per year: what went live 2022-25, then the house view of Aterio 2026-30">${bars}</svg>`;
+    const sts4 = CV.states.slice(0, 12), rest4 = CV.states.slice(12);
+    const sum4 = (arr, k) => arr.reduce((a, x) => a + x[k], 0);
+    const R4 = (nm, x, cls) => `<tr${cls ? ` class="${cls}"` : ""}><td>${nm}</td><td class="n"><b>${n1(x.it)}</b></td><td class="n">${n1(x.building)}</td><td class="n">${n1(x.announced)}</td><td class="n">${n1(x.online)}</td><td class="n">${n1(x.raw_it)}</td><td class="n">${x.raw_it ? pc(x.it / x.raw_it) : "–"}</td></tr>`;
+    const restRow = {it: sum4(rest4, "it"), building: sum4(rest4, "building"), announced: sum4(rest4, "announced"), online: sum4(rest4, "online"), raw_it: CV.raw.it - sum4(sts4, "raw_it")};
+    const usRow = {it: CV.us.it, building: CV.us.buckets.building + CV.us.buckets.delayed, announced: CV.us.buckets.announced, online: CV.us.buckets.online, raw_it: CV.raw.it};
+    const removed = CV.raw.it - CV.us.it;
+    const SS = CV.sens || {fac_it: {}}, FI4 = SS.fac_it || {}, ML = SS.mixed_likelihood || {}, MM = SS.missing_mw || {}, TN = SS.tenant || {};
+    const sRow = (lab, v, note, cls) => `<tr${cls ? ` class="${cls}"` : ""}><td>${lab}</td><td class="n"><b>${n1(v)}</b></td><td class="n">${v === CV.us.it ? "–" : (v > CV.us.it ? "+" : "−") + n1(Math.abs(v - CV.us.it))}</td><td class="why">${note}</td></tr>`;
+    const sensT = `<table><tr><th>Choice</th><th class="n">2026-30, GW IT-eq</th><th class="n">vs house view</th><th>Why it matters</th></tr>` +
+      sRow(`<b>House view</b>: facility ÷ ${CV.fac_it} (median, as decided)`, CV.us.it, `${(FI4.n_eq1 || 0).toLocaleString("en-US")} of the ${(FI4.n || 0).toLocaleString("en-US")} buildings with both fields report IT = facility (ratio exactly 1.000), which pulls the median down`, "cap") +
+      (FI4.total_weighted ? sRow(`MW-weighted ratio (${FI4.weighted})`, FI4.total_weighted, "The consistent statistic when the factor is applied to a sum of MW") : "") +
+      (FI4.total_weighted_excl_eq1 ? sRow(`Weighted, without the 1.000 rows (${FI4.weighted_excl_eq1})`, FI4.total_weighted_excl_eq1, "If those rows are placeholders, IT-eq is ~9% lower") : "") +
+      (ML.campuses ? sRow(`Mixed-likelihood campuses read at their highest rating`, ML.total_campus_highest, `${ML.campuses} campuses (${n1(ML.raw_it)} GW dated 2026-30) carry different ratings on different buildings; the view reads each building's own`) +
+                     sRow(`… read at their lowest rating`, ML.total_campus_lowest, "") : "") +
+      (MM.rows ? sRow(`${MM.rows} buildings with no MW, filled from campus or stage medians`, CV.us.it + MM.fill_it, `Counted as zero in the view (${Object.entries(MM.by_bucket || {}).map(([b, c]) => `${c} ${b}`).join(", ")}); the fill is an estimate, mostly 2029-30`) : "") +
+      (TN.total_if_ann_high_needs_tenant ? sRow(`Announced-High also needs a named tenant (not chosen)`, TN.total_if_ann_high_needs_tenant, `${pc(TN.ann_high_no_user_it / TN.ann_high_it)} of announced-High GW names no end user; the biggest single lever`) : "") + `</table>`;
+    const VT = CV.vintages || [];
+    const vT = VT.length > 1 ? `<table><tr><th>Aterio export</th>${YRS.map(y => `<th class="n">${y}</th>`).join("")}<th class="n">2026-30</th><th class="n" style="white-space:normal">2025 live, as seen</th></tr>` +
+      VT.map((v, i) => `<tr${i === VT.length - 1 ? ' class="tot"' : ""}><td>${esc(v.asof)}</td>${YRS.map(y => `<td class="n"${y === "2027" ? ' style="font-weight:650"' : ""}>${n1(v.by_year[y])}</td>`).join("")}<td class="n">${n1(v.it)}</td><td class="n">${n1((v.act_seen || {})["2025"])}</td></tr>`).join("") + `</table>` : "";
+    const decEnd = SS.dec_end_dated_it || {};
+    const firm4 = `<div class="cmpq"><h3>How firm is it</h3><p class="cs">What moves the total, and how the same rules read on Aterio's earlier exports (an independent recheck of 2026-11-09 recomputed every number here and found these levers)</p>` +
+      `<div class="sgrid" style="grid-template-columns:minmax(0,1.15fr) minmax(0,1fr)"><div class="tbl-wrap">${sensT}</div><div>${vT ? `<div class="tbl-wrap">${vT}</div>` : ""}` +
+      `<p class="dkfoot">Each export re-dates its pipeline: capacity leaves the near years and piles into later ones, so a peak year mostly marks where slipping capacity sits today. The total also grows with each export as Aterio logs new announcements (${n0(VT.length ? VT[0].it : CV.us.it)} GW in ${esc(VT.length ? VT[0].asof : CV.asof)} → ${n0(CV.us.it)} now). Realised years are revised up later as Aterio adds buildings it missed (last column). ` +
+      `Dated to the last two days of a year (one day late = next year): ${YRS.map(y => `${y} ${n1(decEnd[y])}`).join(" · ")} GW. ` +
+      `${pc(TN.kept_no_tenant_on_campus_it / CV.us.it)} of the house view (${n0(TN.kept_no_tenant_on_campus_it)} GW) has no tenant named anywhere on its campus, including ${n1(TN.building_no_tenant_on_campus_it)} GW being built.</p></div></div></div>`;
+    $("dk4").innerHTML = head(4, "Our house view of the census", `house rules decided ${esc(CV.rules.decided)} · GW IT-eq`) +
+      `<p class="lede"><b>Under our rules Aterio's 2026-30 is ${n0(CV.us.it)} GW IT-eq (${n0(CV.us.fac)} GW facility), ${pc(CV.us.it / CV.raw.it)} of the ${n0(CV.raw.it)} GW IT-eq it dates to the window; ${n0(SS.fac_it.total_weighted_excl_eq1)}-${n0(CV.us.it)} GW depending on the facility/IT statistic.</b> By year: ${YRS.map(y => `${y} ${n1(cy[y].total)}`).join(" · ")}. The rules remove the medium and low announced tail; they keep Aterio's dates.</p>` +
+      (CV.live === false ? `<div class="warn">Shown from the last saved run (export not reachable: ${esc(CV.stale_reason || "")}).</div>` : "") +
+      `<div class="sgrid"><div><p class="ct">GW IT-eq per year: what went live, then the house view</p><p class="cs">2022-25 = Aterio's record of buildings that went live · 2026-30 = house view (number), inside everything Aterio dates to the year (dashed, "of …") · *2026 includes the ${n1(cy[YRS[0]].online)} GW already live</p>` +
+      `<div class="legend"><span><i class="sw" style="background:var(--c-nopause)"></i>Went live (history)</span>${B4.map(([k, l, c]) => `<span><i class="sw" style="background:${c}"></i>${l}</span>`).join("")}<span><i class="out" style="border-style:dashed;border-color:var(--ink-3)"></i>Aterio, no filter (includes what went live)</span></div><div class="chart">${svg4}</div></div>` +
+      `<div><div class="tiles">${kpi("House view 2026-30", n0(CV.us.it) + " GW", `IT-eq · ${n0(CV.us.fac)} GW facility · ${CV.n_campuses.toLocaleString("en-US")} campuses`, "var(--lk-hi)")}${kpi("Removed by the rules", n0(removed) + " GW", `announced medium ${n0(abl.Medium || 0)} · low ${n0(abl.Low || 0)} · delayed, low &amp; no tenant ${n1(rmv.low_no_tenant_built)}`)}${kpi("2027 vs SemiAnalysis", n1(cy["2027"].total) + " GW", `SemiAnalysis +${san.us2027 ?? "–"} GW IT (09-15)`)}${kpi("2028 vs SemiAnalysis", n1(cy["2028"].total) + " GW", `SemiAnalysis ${san.us2028 ?? "–"} GW IT (11-01)`)}</div>` +
+      `<p class="ct">The house rules</p><ol class="rules4"><li><b>Headline in IT-eq:</b> facility ÷ ${CV.fac_it} (Aterio's own median on ${CV.fac_it_n.toLocaleString("en-US")} buildings with both fields).</li><li><b>Counts:</b> what went live in the window, under construction, delayed, and announced projects rated <b>high</b> likelihood.</li><li><b>Dates:</b> Aterio's activation date as published.</li><li><b>Drops:</b> campuses rated low likelihood with no named tenant, in any stage.</li><li><b>No tenant needed</b> otherwise. The public-source registry stays independent; Aterio is its cross-check.</li></ol>` +
+      `<p class="dkfoot">Rules in <code>_data/aterio/treatment.json</code>; numbers recomputed from the newest export on every build (<code>aterio_capstone_view.py</code>). ${n0(rmv.after_window)} GW IT-eq in these stages is dated after ${CV.window[1]}; ${n1(rmv.undated_pipeline)} GW has no date.</p></div></div>` +
+      `<div class="sgrid2" style="margin-top:14px">${((DK.compare && DK.compare.cap_reads) || []).map(r => `<div class="rcard" style="margin-top:0"><h4>${esc(r.h)}</h4><p>${esc(r.t)}</p></div>`).join("")}</div>` +
+      firm4 +
+      `<div class="cmpq"><h3>By state</h3><p class="cs">12 largest under the house rules · GW IT-eq · kept = house view ÷ everything Aterio dates to 2026-30</p><div class="tbl-wrap"><table><tr><th>State</th><th class="n">House view</th><th class="n">Building + delayed</th><th class="n">Announced high</th><th class="n">Went live 2026</th><th class="n">Aterio, no filter</th><th class="n">Kept</th></tr>` +
+      sts4.map(x => R4(esc(SN(x.st)), x)).join("") + R4(`Other ${rest4.length} states`, restRow) + R4("US", usRow, "tot") + `</table></div></div>` +
+      `<details style="margin-top:12px"><summary>Largest campuses the rules remove (top ${rmv.top.length}, GW IT-eq dated 2026-30)</summary><div class="tbl-wrap" style="max-height:520px;margin-top:8px"><table><tr><th>Campus</th><th>State</th><th>Provider</th><th>Stages</th><th>Likelihood</th><th class="n">IT-eq GW</th><th>Why out</th></tr>` +
+      rmv.top.map(x => `<tr><td><b>${esc(x.campus)}</b></td><td>${esc(x.st)}</td><td class="why">${esc(x.prov)}</td><td class="why">${esc(x.stages)}</td><td>${esc(x.like)}</td><td class="n">${n1(x.it)}</td><td class="why">${esc(x.why)}</td></tr>`).join("") + `</table></div></details>`;
+  }
+
+  /* 5 · Aterio vs the rest of our base */
+  const C = DK.compare;
+  if (!C) { $("dk5").hidden = true; return; }
+  const KIND = {aterio: "Aterio", registry: "Capstone registry", ref: "Reference deck", broker: "Broker", indep: "Independent"};
+  const SW = 300;
+  const strip = (r, mxv) => { const x = v => 6 + v / mxv * (SW - 12), col = r.kind === "aterio" ? "var(--lk-hi)" : "var(--cmp-other)";
+    let s = `<line x1="6" x2="${SW - 6}" y1="13" y2="13" stroke="var(--grid)" stroke-width="1"/>`;
+    if (r.it_lo != null && r.it_hi != null) s += `<line x1="${x(r.it_lo)}" x2="${x(r.it_hi)}" y1="13" y2="13" stroke="${col}" stroke-width="6" stroke-linecap="round" opacity=".5"/>`;
+    if (r.it != null) s += r.basis === "n/s" ? `<circle cx="${x(r.it)}" cy="13" r="5" fill="var(--surface)" stroke="${col}" stroke-width="2"/>` : `<circle cx="${x(r.it)}" cy="13" r="5.5" fill="${col}" stroke="var(--surface)" stroke-width="2"/>`;
+    return `<svg width="${SW}" height="26" viewBox="0 0 ${SW} 26">${s}</svg>`; };
+  const bchip = r => r.basis === "facility" ? `<span class="bchip">facility ÷${C.fac_it}</span>` : r.basis === "IT" ? `<span class="bchip">IT</span>` : `<span class="bchip ns">not stated</span>`;
+  const itCell = r => r.basis === "n/s" ? "–" : r.it != null ? n1(r.it) + (r.it_lo != null ? `<div class="why">${n1(r.it_lo)}–${n1(r.it_hi)}</div>` : "") : r.it_lo != null ? `${n1(r.it_lo)}–${n1(r.it_hi)}` : "–";
+  const grp = g => { const mxv = Math.max(...g.rows.map(r => Math.max(r.it_hi ?? 0, r.it ?? 0))) * 1.04;
+    return `<div class="cmpq"><h3>${esc(g.q)}</h3><p class="cs">${g.kind === "flow" ? "Flow: GW added in the year" : g.kind === "stock" ? "Stock: GW standing at each source's date" : "Mixed measures: read the last column before comparing two rows"} · axis 0–${n0(mxv)} GW IT-eq</p>` +
+      `<div class="tbl-wrap"><table><tr><th>Source</th><th>As stated</th><th>Basis</th><th class="n">IT-eq GW</th><th class="strip"></th><th>What it counts</th></tr>` +
+      g.rows.map(r => `<tr${r.kind === "aterio" ? ` class="at${r.cap ? " cap" : ""}"` : ""} data-t="<b>${esc(r.who)}</b> (${esc(r.date)})<br>${esc(r.stated)} · ${r.basis === "n/s" ? "basis not stated, plotted as stated" : r.basis === "facility" ? "facility ÷" + C.fac_it + " = " + (r.it != null ? n1(r.it) : n1(r.it_lo) + "–" + n1(r.it_hi)) + " GW IT-eq" : "IT basis"}"><td><b>${esc(r.who)}</b><div class="why">${KIND[r.kind] || ""} · ${esc(r.date)}</div></td><td class="n" style="text-align:left">${esc(r.stated)}</td><td>${bchip(r)}</td><td class="n">${itCell(r)}</td><td class="strip">${strip(r, mxv)}</td><td class="why">${esc(r.what)}</td></tr>`).join("") + `</table></div></div>`; };
+  $("dk5").innerHTML = head(5, "Aterio vs the rest of our base", "the same question, every source, on one GW basis") +
+    `<p class="lede"><b>Each source answers on its own basis.</b> Facility figures go on IT-eq with Aterio's own facility/IT median (÷${C.fac_it}) so every row shares an axis. The universe (building vs campus, US vs North America, one year vs all dates) is never converted away: it is in the last column. Registry, reference deck and benchmark rows are read from this page's own data on every rebuild.</p>` +
+    `<div class="sgrid2">${C.reads.map(r => `<div class="rcard" style="margin-top:0"><h4>${esc(r.h)}</h4><p>${esc(r.t)}</p></div>`).join("")}</div>` +
+    (C.flags && C.flags.length ? `<div class="warn" style="margin-top:12px">${C.flags.map(esc).join("<br>")}</div>` : "") +
+    `<div class="legend" style="margin-top:14px"><span><i style="background:var(--lk-hi)"></i>Aterio</span><span><i style="background:var(--cmp-other)"></i>Every other source</span><span><i class="sq" style="background:var(--cmp-other);opacity:.5;width:18px;height:6px;border-radius:3px"></i>Range (low–high)</span><span><i class="out" style="border-radius:50%;border-color:var(--cmp-other)"></i>Basis not stated: plotted as stated</span></div>` +
+    C.groups.map(grp).join("");
+}
 document.addEventListener("mousemove", e => { const t = e.target.closest && e.target.closest("[data-t]"); if (t) showTip(e, t.dataset.t); else if (tip.style.display === "block" && !e.target.closest("svg")) hideTip(); });
 function tabs(){
-  seg($("segTab"), [["model","Delay model"],["bern", BD ? `Bernstein ${BD.source.date.slice(5)} · pipeline by player & region` : "Broker view"]], S.tab, k => { S.tab = k; show(); });
+  seg($("segTab"), [["model","Delay model"],["bern", BD ? `Bernstein ${BD.source.date.slice(5)} · pipeline by player & region` : "Broker view"]].concat(SD ? [["sa", `SemiAnalysis ${SD.source.date.slice(5)} · 2028 by state`]] : []).concat(TM ? [["team", TM.tab]] : []).concat(AX ? [["aterio", `Aterio census ${AX.asof.slice(5)} · cross-check`]] : []).concat(DK ? [["deck", "Aterio deck · additions, delay, scenarios"]] : []), S.tab, k => { S.tab = k; show(); });
 }
+const TAB_HASH = {bern: "bernstein", sa: "semianalysis", team: (TM && TM.id) || "team", aterio: "aterio", deck: "aterio-deck"}, HASH_TAB = {bernstein: "bern", semianalysis: "sa", [(TM && TM.id) || "team"]: "team", aterio: "aterio", "aterio-deck": "deck"};
 function show(){
-  $("tabModel").hidden = S.tab !== "model"; $("tabBern").hidden = S.tab !== "bern"; tabs();
+  $("tabModel").hidden = S.tab !== "model"; $("tabBern").hidden = S.tab !== "bern"; $("tabSA").hidden = S.tab !== "sa"; $("tabTeam").hidden = S.tab !== "team"; $("tabAterio").hidden = S.tab !== "aterio"; $("tabDeck").hidden = S.tab !== "deck"; tabs();
+  if (S.tab === "deck") deck();
   if (S.tab === "bern") bern();
-  try { history.replaceState(null, "", "#" + (S.tab === "bern" ? "bernstein" : S.scen + "/" + S.uni)); } catch(e) {}
+  if (S.tab === "sa") sa();
+  if (S.tab === "team") team();
+  if (S.tab === "aterio") aterio();
+  try { history.replaceState(null, "", "#" + (TAB_HASH[S.tab] || S.scen + "/" + S.uni)); } catch(e) {}
 }
 
-let render = function(){ controls(); kpis(); map(); cards(); top10(); rulesText(); cities(); waterfall(); annual(); table(); moved(); checks(); method(); }
+let render = function(){ controls(); kpis(); map(); cards(); top10(); rulesText(); stateWaterfall(); cities(); waterfall(); annual(); table(); moved(); checks(); method(); }
 $("fState").onchange = e => { S.st = e.target.value; cards(); table(); };
 $("fBucket").onchange = e => { S.bk = e.target.value; table(); };
 $("fText").oninput = e => { S.q = e.target.value; table(); };
 $("themeBtn").onclick = () => { const r = document.documentElement; const dark = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; r.dataset.theme = dark ? "light" : "dark"; try { localStorage.setItem("dcdr-theme", r.dataset.theme); } catch(e) {} };
 try { const t = localStorage.getItem("dcdr-theme"); if (t) document.documentElement.dataset.theme = t; } catch(e) {}
 S.tab = "model";
-(() => { const h = decodeURIComponent(location.hash.slice(1)).split("/"); if (h[0] === "bernstein") S.tab = "bern"; if (M.scenarios[h[0]]) S.scen = h[0]; if (["construction","pipeline","scaled"].includes(h[1])) S.uni = h[1]; })();
+(() => { const h = decodeURIComponent(location.hash.slice(1)).split("/"); if (HASH_TAB[h[0]]) S.tab = HASH_TAB[h[0]]; if (M.scenarios[h[0]]) S.scen = h[0]; if (["construction","pipeline","scaled"].includes(h[1])) S.uni = h[1]; })();
 const _render = render; render = function(){ _render(); if (S.tab === "model") { try { history.replaceState(null, "", "#" + S.scen + "/" + S.uni); } catch(e) {} } };
 header(); render(); show();
-addEventListener("hashchange", () => { const h = decodeURIComponent(location.hash.slice(1)).split("/"); const t = h[0] === "bernstein" ? "bern" : "model"; if (t !== S.tab) { S.tab = t; show(); } });
+addEventListener("hashchange", () => { const h = decodeURIComponent(location.hash.slice(1)).split("/"); const t = HASH_TAB[h[0]] || "model"; if (t !== S.tab) { S.tab = t; show(); } });
 </script>
 </body>
 </html>

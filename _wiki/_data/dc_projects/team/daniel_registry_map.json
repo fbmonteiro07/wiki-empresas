@@ -1,0 +1,1057 @@
+{
+ "_doc": [
+  "Cross-check of Daniel's build matrix (team/daniel_dc_matrix_2026-11-05.html) against our registry. Hand-reviewed 2026-11-09: 'map' keys are 'state|company column|Daniel project name' -> registry campus names (exact, same state). kind: site | portfolio (company-level contract, no site) | excluded (Daniel's own exclusion).",
+  "build_dc_delay.py (team_views) reads this file, re-parses Daniel's data from the HTML and computes matched / Daniel-only / registry-only lists; 'findings' are the hand-written reads, each a claim to verify before any registry edit.",
+  "MW are not comparable one-to-one: Daniel's are headline figures in mixed units, often whole programmes or full build-outs; ours are dated phases in IT-eq. A MW gap alone is not a contradiction."
+ ],
+ "reviewed": "2026-11-09",
+ "matrix_asof": "2026-11-05",
+ "findings": {
+  "contradicts": [
+   {
+    "t": "Nscale / Ionic Barstow (TX)",
+    "d": "Daniel: ~200-240 MW IT live in Q3-26 (~104k GB300) for Microsoft, and Microsoft declined the option on the 700 MW phase 2 (FT, ~Nov-5). Registry: only the 466 MW gross expansion, not started, 2027-11; no energized 2026 phase.",
+    "ids": "TX-MONAHANS-",
+    "status": "fixed",
+    "resolution": "Verified (Nscale release 2026-10-01: site live; FT/Reuters 2026-11-04/05: option declined, ~500 MW per Nscale vs 700 MW in the 2025 plan). Added TX-MONAHANS-NSCALE-BASE, 200 MW IT energized 2026-09; the unleased 377 MW row stays, annotated. Timeline ID MSFT-NSCALE-TX-202510."
+   },
+   {
+    "t": "Project Jupiter (NM)",
+    "d": "Daniel: Oracle force-majeure notice Sep-26, air-permit hearing Dec 7, target 2028. Registry: 550 MW dated May-27 (GS's FY27 split) and 1,650 MW May-28.",
+    "ids": "NM-SANTATERESA-JUPITER",
+    "status": "fixed",
+    "resolution": "Verified (TechCrunch/Bloomberg 2026-09-24: 2028 target; gas pipeline slipped to 2027-02-01; fuel-cell air permit pending). First 550 MW moved 2027-05 → 2028-06, remaining 1,650 MW 2028-05 → 2028-12 (Epoch end-2028; Bernstein late CY28). Judgment against GS's 25% in FY27."
+   },
+   {
+    "t": "Stargate Lordstown (OH)",
+    "d": "Daniel: no large construction seen Apr-26, the town banned future DCs, Mar-27 at risk. Registry: 300 MW facility under construction, 2027-03.",
+    "ids": "OH-LORDSTOWN-STARGATE",
+    "status": "not adopted",
+    "resolution": "Epoch (updated 2026-08-25) shows active construction with the roof mostly on (2026-07-30) and keeps Mar-2027; the village ban became a 180-day moratorium to ~Jul-2026. Registry kept; note added."
+   },
+   {
+    "t": "Nebius Vineland (NJ)",
+    "d": "Daniel: all tranches delivered by Aug-26 (per Nebius). Registry: 250 MW still under construction to 2026-12.",
+    "ids": "NJ-VINELAND-NEBIUS",
+    "status": "not adopted",
+    "resolution": "Nebius said all tranches due TO DATE were delivered and expects the rest on schedule (Q2 call 2026-08-12); Epoch saw ~50 MW IT operating (2026-08-24). Registry kept at 2026-12; note added."
+   },
+   {
+    "t": "Core Scientific Dalton (GA)",
+    "d": "Daniel: ~175 MW of a 590 MW CoreWeave contract by early-27, plus ~120 MW AMD-backed Phase 3 through 2028. Registry: 28 MW energized Feb-26 and a 145 MW phase with no date.",
+    "ids": "GA-DALTON-COREWEAVEDALTON",
+    "status": "fixed",
+    "resolution": "Verified (Q4-25 call, 2026-03-02): Phase 2 is 145 MW, full delivery early 2027 → dated 2027-03 (was undated); Phase 3 ~120 MW, initial delivery 2027 → new row GA-DALTON-COREWEAVEDALTON-P3 (tenant uncommitted; AMD per Daniel, unverified)."
+   },
+   {
+    "t": "Stargate Milam (TX)",
+    "d": "Daniel: first building by Oct-26, full Q4-28. Registry: 2027-04 (TDLR completion + 6 months, our convention) and 2028-06.",
+    "ids": "TX-CAMERON-MILAM",
+    "status": "not adopted",
+    "resolution": "No source shows a building energized in Oct-26; trackers expect service in 2027 (construction from Oct-25, roofing Mar-26). Daniel's date reads as the TDLR completion date, which our convention shifts +6 months. Registry kept."
+   },
+   {
+    "t": "Meta Aiken (SC)",
+    "d": "Daniel: spring 2027, Meta's own date. Registry: building 2 at Epoch's Nov-26 estimate, with the conflict noted.",
+    "ids": "SC-TRENTON-METAAIKEN",
+    "status": "fixed",
+    "resolution": "Meta's own target (operational spring 2027) replaces Epoch's unobserved Nov-26 assumption for building 2: 2026-11 → 2027-04."
+   }
+  ],
+  "new": [
+   {
+    "t": "Microsoft self-builds the registry lacks",
+    "d": "Licking County, OH (869 MW, 17 buildings); Catawba County, NC (~720-810 MW) and Person County, NC (1.5 GW, single tracker); Goodyear + El Mirage, AZ (~456 MW); Cheyenne, WY; Boydton, VA; Kenosha, WI; Kent County, MI; West Des Moines / Woodward, IA; Hoffman Estates, IL; Becker, MN. Most without a MW figure."
+   },
+   {
+    "t": "Miner and developer sites with MW",
+    "d": "MARA Matagorda, TX (1 GW grid by Oct-27, 2 GW by Apr-28); Fluidstack Cameron County, TX (up to 1.5 GW); IREN Kiowa, OK (1.6 GW power); TeraWulf Chesapeake, MD (up to 1 GW); MARA Hannibal, OH (600 MW); Bitdeer Ohio (870 MW); Cipher Ulysses, OH (200 MW)."
+   },
+   {
+    "t": "Hyperscaler campuses outside the registry",
+    "d": "Meta Stanton Springs, GA (424 MW, 384 of it already live) and CleanSpark Sandersville, GA (175 MW IT); AWS Butts / Douglas / Covington, GA (~890 MW); Google West Memphis, AR (~400 MW); Meta via CleanSpark Sealy + Brazoria, TX (~885 MW); AWS NW Louisiana (3 campuses, n/d)."
+   },
+   {
+    "t": "Tenant reads",
+    "d": "xAI's Colossus 1 (Memphis) is 100% leased to Anthropic May-26 to May-29 (CNBC 2026-05-06; energized before 2026, so outside the registry window); Riot Rockdale's 191 MW AI-lab lease sits under Anthropic in both."
+   }
+  ],
+  "consistent": [
+   {
+    "t": "Large AI campuses agree",
+    "d": "Frontier 1.4 GW IT, Kilby 2.67 GW of generation, Camellia 3.2 GW, Hut 8 Beacon Point 704 MW IT, Riot Corsicana 910 MW IT, Riot Rockdale 96 MW Dec-27 + 95 MW Jun-28, Nscale Monarch 1.37 GW IT, Meta Bowling Green 422 MW, TeraWulf Justified 401 MW IT and Muskie 1 GW: same MW and dates in both."
+   },
+   {
+    "t": "Registry-only capacity",
+    "d": "Mostly colocation without a named end user (QTS, STACK, Rowan, Prime, PowerHouse, CloudHQ, EdgeCore), plus AI-linked campuses he does not carry: Aligned Project Phoenix, PA (1.7 GW IT-eq dated 2029-30), Joliet Technology Center, IL (0.75 GW), Meridian Arc, IN (Fluidstack, 0.43 GW), Google's Wilbarger County 'Project Rise', TX (0.35 GW dated 2028-30) and the Rum Group site in Georgia (Anthropic, 0.1 GW). IT-eq of phases dated 2026-30. Daniel's matrix is organised by end user, so these sit outside it by design."
+   }
+  ]
+ },
+ "map": {
+  "TX|msft|Crusoe Abilene expansion (Taylor)": {
+   "kind": "site",
+   "registry": [
+    "Crusoe Abilene expansion (Microsoft)"
+   ]
+  },
+  "TX|msft|Project Kilby / 'Pecos' (Reeves)": {
+   "kind": "site",
+   "registry": [
+    "Project Kilby (Chevron Energy Forge One / Microsoft)"
+   ]
+  },
+  "TX|msft|IREN Childress": {
+   "kind": "site",
+   "registry": [
+    "IREN Childress"
+   ]
+  },
+  "TX|msft|Nscale / Ionic Digital, Barstow (Ward)": {
+   "kind": "site",
+   "registry": [
+    "Nscale Ward County (Ionic Digital site)"
+   ]
+  },
+  "TX|msft|San Antonio / Castroville (Bexar, Medina)": {
+   "kind": "site",
+   "registry": [
+    "Microsoft SAT89/90 (Castroville Hwy 90 campus)"
+   ]
+  },
+  "TX|aws|GW Ranch, Pecos Co. (bought from Pacifico)": {
+   "kind": "site",
+   "registry": [
+    "Pacifico Energy GW Ranch"
+   ]
+  },
+  "TX|aws|Cipher Black Pearl (Winkler)": {
+   "kind": "site",
+   "registry": [
+    "Cipher Black Pearl"
+   ]
+  },
+  "TX|aws|Cipher Stingray (Andrews)": {
+   "kind": "site",
+   "registry": [
+    "Cipher Stingray"
+   ]
+  },
+  "TX|aws|Project Eagle, Boling (Wharton)": {
+   "kind": "site",
+   "registry": [
+    "AWS Project Eagle (Wharton County)"
+   ]
+  },
+  "TX|aws|Self-builds: Round Rock, San Antonio, Bastrop Cedar Creek land bank (1,300 ac)": {
+   "kind": "site",
+   "registry": []
+  },
+  "TX|goog|Goodnight / Llano (Armstrong)": {
+   "kind": "site",
+   "registry": [
+    "Goodnight (Crusoe for Google)"
+   ]
+  },
+  "TX|goog|Haskell (two sites)": {
+   "kind": "site",
+   "registry": [
+    "Google South Haskell (THM campus, ex-Musselman Tech)"
+   ]
+  },
+  "TX|goog|Meitner (Gray/Roberts)": {
+   "kind": "site",
+   "registry": [
+    "Google Meitner Energy Center (Intersect; Project Pumpkin)"
+   ]
+  },
+  "TX|meta|El Paso": {
+   "kind": "site",
+   "registry": [
+    "Meta El Paso (Sopaipilla JV: BlackRock GIP/HPS 80% / Meta 20%)"
+   ]
+  },
+  "TX|meta|Temple (Bell) + Fort Worth legacy": {
+   "kind": "site",
+   "registry": [
+    "Meta Temple"
+   ]
+  },
+  "TX|meta|Crusoe Childress (lease)": {
+   "kind": "site",
+   "registry": [
+    "Crusoe/Lancium Childress"
+   ]
+  },
+  "TX|meta|CleanSpark Sealy (Austin Co.) + Brazoria": {
+   "kind": "site",
+   "registry": []
+  },
+  "TX|oai|Stargate Abilene (Taylor)": {
+   "kind": "site",
+   "registry": [
+    "Stargate Abilene (Crusoe/Lancium)"
+   ]
+  },
+  "TX|oai|Stargate Frontier (Shackelford)": {
+   "kind": "site",
+   "registry": [
+    "Vantage Frontier (Stargate Shackelford)"
+   ]
+  },
+  "TX|oai|Stargate Milam": {
+   "kind": "site",
+   "registry": [
+    "Stargate Milam County (SB Energy)"
+   ]
+  },
+  "TX|anth|Nexus Hubbard (Hill)": {
+   "kind": "site",
+   "registry": [
+    "Nexus Hubbard (Nexus Data Centers)"
+   ]
+  },
+  "TX|anth|Riot Rockdale (Milam): Frontier AI Lab lease": {
+   "kind": "site",
+   "registry": [
+    "Riot Rockdale"
+   ]
+  },
+  "TX|anth|Hut 8 Beacon Point (Nueces)": {
+   "kind": "site",
+   "registry": [
+    "Hut 8 Beacon Point"
+   ]
+  },
+  "TX|anth|Project Longhorn, Cedar Creek (Bastrop): in talks, not signed": {
+   "kind": "site",
+   "registry": []
+  },
+  "TX|xai|Starbase data center (Cameron), 444 ac": {
+   "kind": "site",
+   "registry": []
+  },
+  "TX|xai|Other TX scouting (Austin, Bastrop, Conroe); Terafab (Grimes) excluded as chip fab": {
+   "kind": "site",
+   "registry": []
+  },
+  "TX|crwv|Galaxy Helios I (Dickens)": {
+   "kind": "site",
+   "registry": [
+    "Galaxy Helios"
+   ]
+  },
+  "TX|crwv|Core Scientific Denton + Austin": {
+   "kind": "site",
+   "registry": [
+    "Core Scientific Denton (CoreWeave)"
+   ]
+  },
+  "TX|crwv|EdgeConneX Cedar Creek Bldg 1 (Bastrop); Flexential Plano": {
+   "kind": "site",
+   "registry": [
+    "EdgeConneX Austin (Cedar Creek) - first campus"
+   ]
+  },
+  "TX|neo|Fluidstack Cameron Co. campus (near Rio Hondo)": {
+   "kind": "site",
+   "registry": []
+  },
+  "TX|neo|Cipher Barber Lake (Mitchell)": {
+   "kind": "site",
+   "registry": [
+    "Cipher Barber Lake"
+   ]
+  },
+  "TX|neo|Abernathy (Hale)": {
+   "kind": "site",
+   "registry": [
+    "Abernathy (Flash Compute / FS CS I)"
+   ]
+  },
+  "TX|neo|Lambda DFW-04 (Aligned)": {
+   "kind": "site",
+   "registry": []
+  },
+  "TX|host|Riot Corsicana (Navarro): whole campus": {
+   "kind": "site",
+   "registry": [
+    "Riot Corsicana"
+   ]
+  },
+  "TX|host|Riot Rockdale: AMD": {
+   "kind": "site",
+   "registry": [
+    "Riot Rockdale"
+   ]
+  },
+  "TX|host|IREN Sweetwater 1+2 (Nolan)": {
+   "kind": "site",
+   "registry": [
+    "IREN Sweetwater 1"
+   ]
+  },
+  "TX|host|Galaxy Helios II + pipeline (Helios III/IV, Merlin, Selene, Caspian)": {
+   "kind": "site",
+   "registry": [
+    "Galaxy Helios"
+   ]
+  },
+  "TX|host|Core Scientific Pecos (Reeves) + Hunt Co.": {
+   "kind": "site",
+   "registry": [
+    "Core Scientific Pecos",
+    "Core Scientific Hunt County"
+   ]
+  },
+  "TX|host|MARA Matagorda (with Starwood)": {
+   "kind": "site",
+   "registry": []
+  },
+  "TX|host|Cipher Colchis JV (W. Texas), Horizon, Mikeska": {
+   "kind": "site",
+   "registry": [
+    "Cipher Colchis"
+   ]
+  },
+  "TX|host|Fermi Matador (Carson)": {
+   "kind": "site",
+   "registry": [
+    "Fermi America Project Matador"
+   ]
+  },
+  "TX|host|Circe East Monahans (Ward)": {
+   "kind": "site",
+   "registry": []
+  },
+  "TX|host|Poolside Horizon (Pecos)": {
+   "kind": "site",
+   "registry": []
+  },
+  "TX|host|Bitdeer Rockdale; Hut 8 Salt Creek buy; Soluna/APLD Dorothy 3A": {
+   "kind": "site",
+   "registry": []
+  },
+  "TX|host|Colo: CyrusOne (Bosque, Fort Worth, Freestone), Skybox Hutto": {
+   "kind": "site",
+   "registry": [
+    "CyrusOne Bosque County (Thad Hill Energy Center powered land)",
+    "CyrusOne Freestone County (Freestone Energy Center)"
+   ]
+  },
+  "OH|msft|Licking Co. (Heath, Hebron, New Albany)": {
+   "kind": "site",
+   "registry": []
+  },
+  "OH|aws|New Albany, Beech Rd, Jeffersonville, Dublin/Hilliard/Jerome": {
+   "kind": "site",
+   "registry": [
+    "AWS New Albany (Miller Rd NW; three sub-campuses)",
+    "AWS Fayette County / Jeffersonville (Midwest Mega Commerce Center, Jefferson Twp)",
+    "AWS Hilliard (Cosgray Rd / 4186 Scioto Darby Creek Rd campus)"
+   ]
+  },
+  "OH|aws|Wilmington (Clinton); Sunbury (Delaware Co., 1,200 ac)": {
+   "kind": "site",
+   "registry": []
+  },
+  "OH|goog|Columbus, New Albany, Lancaster, Lima": {
+   "kind": "site",
+   "registry": [
+    "Google Columbus (S High St)"
+   ]
+  },
+  "OH|goog|Franklin Furnace (Scioto Co.)": {
+   "kind": "site",
+   "registry": []
+  },
+  "OH|meta|Prometheus (Licking) incl. QTS/Vantage leases": {
+   "kind": "site",
+   "registry": [
+    "Meta Prometheus (New Albany; 6-campus constellation)",
+    "Meta Prometheus (New Albany) - Vantage-owned building"
+   ]
+  },
+  "OH|meta|Bowling Green (Wood)": {
+   "kind": "site",
+   "registry": [
+    "Meta Bowling Green (Middleton Twp, Wood County)"
+   ]
+  },
+  "OH|meta|Piqua (Miami Co.)": {
+   "kind": "site",
+   "registry": []
+  },
+  "OH|oai|Stargate Lordstown (Trumbull)": {
+   "kind": "site",
+   "registry": [
+    "OpenAI Stargate Lordstown (SoftBank; ex-Foxconn/Lordstown Motors plant)"
+   ]
+  },
+  "OH|neo|5C / Crusoe Springfield (Clark)": {
+   "kind": "site",
+   "registry": []
+  },
+  "OH|host|SB Energy PORTS (Piketon)": {
+   "kind": "site",
+   "registry": [
+    "PORTS-Pike / PORTS Technology Campus (SB Energy; ex-DOE Portsmouth GDP)"
+   ]
+  },
+  "OH|host|MARA Hannibal + Long Ridge (Monroe)": {
+   "kind": "site",
+   "registry": []
+  },
+  "OH|host|Cipher Ulysses (Morgan Co.)": {
+   "kind": "site",
+   "registry": []
+  },
+  "OH|host|Bitdeer Clarington, Weathersfield, Massillon": {
+   "kind": "site",
+   "registry": []
+  },
+  "OH|host|Colo: QTS, Vantage OH1/OH2, EdgeConneX, Cologix, Aligned": {
+   "kind": "site",
+   "registry": []
+  },
+  "GA|msft|Fairwater Atlanta (Fayette), Union City, Rome, Douglasville, Palmetto, Tyrone": {
+   "kind": "site",
+   "registry": [
+    "QTS Fayetteville / Microsoft Fairwater Atlanta",
+    "Microsoft Union City campus (EdgeConneX ATL11-ATL13, Stonewall Tell Rd)",
+    "Microsoft Rome campus 'ATL80' / Project Firecracker (0 Huffaker Rd)"
+   ]
+  },
+  "GA|aws|Butts, Douglas, Covington; STACK ATL02B": {
+   "kind": "site",
+   "registry": []
+  },
+  "GA|goog|Douglas + LaGrange (Troup)": {
+   "kind": "site",
+   "registry": [
+    "Google Project Pegasus (411 Pegasus Pkwy)"
+   ]
+  },
+  "GA|meta|Stanton Springs (Newton)": {
+   "kind": "site",
+   "registry": []
+  },
+  "GA|meta|CleanSpark Sandersville (Washington Co.)": {
+   "kind": "site",
+   "registry": []
+  },
+  "GA|oai|Project Camellia (Effingham)": {
+   "kind": "site",
+   "registry": [
+    "OpenAI Project Camellia (Savannah Gateway Industrial Hub)"
+   ]
+  },
+  "GA|xai|QTS Atlanta": {
+   "kind": "site",
+   "registry": []
+  },
+  "GA|crwv|Core Scientific Dalton (Whitfield); Flexential Douglasville": {
+   "kind": "site",
+   "registry": [
+    "Core Scientific Dalton (CoreWeave)"
+   ]
+  },
+  "GA|host|Core Scientific Dalton Phase 3 (AMD-backed)": {
+   "kind": "site",
+   "registry": [
+    "Core Scientific Dalton (CoreWeave)"
+   ]
+  },
+  "GA|host|Colo: DC BLOX, Edged, T5, Equinix Hampton, Prologis Sail, Bunkhouse, Springbank, DataBank; Cango 50 MW": {
+   "kind": "site",
+   "registry": [
+    "DC BLOX Atlanta West (ATL1, 1701 North River Rd)",
+    "Edged Atlanta campus (Tilford Yard, Thomas St NW)",
+    "Project Eisenhower (Augusta)"
+   ]
+  },
+  "LA|aws|NW Louisiana: 3 campuses (Caddo, Bossier, Shreveport)": {
+   "kind": "site",
+   "registry": []
+  },
+  "LA|meta|Hyperion (Richland Parish)": {
+   "kind": "site",
+   "registry": [
+    "Meta Hyperion (Richland Parish)",
+    "Meta Hyperion expansion / Evest LLC second north-Louisiana data center (Richland Parish)"
+   ]
+  },
+  "LA|anth|Hut 8 River Bend (West Feliciana)": {
+   "kind": "site",
+   "registry": [
+    "Hut 8 River Bend (West Feliciana Parish)"
+   ]
+  },
+  "LA|xai|'Starbase Louisiana' (Vermilion): launch site for orbital DC satellites": {
+   "kind": "excluded",
+   "why": "Daniel marks it excluded: a launch site, not a ground data center"
+  },
+  "LA|host|Applied Digital Delta Forge 1 (Rapides)": {
+   "kind": "site",
+   "registry": [
+    "Applied Digital Delta Forge 1"
+   ]
+  },
+  "WI|msft|Fairwater 1 & 2 + expansion, Mount Pleasant (Racine)": {
+   "kind": "site",
+   "registry": [
+    "Microsoft Fairwater Wisconsin"
+   ]
+  },
+  "WI|msft|Kenosha (240 ac); Caledonia cancelled Oct-25": {
+   "kind": "site",
+   "registry": []
+  },
+  "WI|meta|Beaver Dam (Dodge)": {
+   "kind": "site",
+   "registry": [
+    "Meta Beaver Dam"
+   ]
+  },
+  "WI|oai|Lighthouse, Port Washington (Ozaukee)": {
+   "kind": "site",
+   "registry": [
+    "Lighthouse / Stargate Port Washington (Vantage)"
+   ]
+  },
+  "MI|msft|Gaines Twp, Lowell Twp (Kent); Dorr Twp (Allegan)": {
+   "kind": "site",
+   "registry": []
+  },
+  "MI|goog|Van Buren Twp (Wayne)": {
+   "kind": "site",
+   "registry": [
+    "Google 'Project Cannoli' (Van Buren Twp, north of I-94 between Haggerty Rd and I-275)"
+   ]
+  },
+  "MI|oai|'The Barn', Saline Twp (Washtenaw)": {
+   "kind": "site",
+   "registry": [
+    "Stargate Michigan / The Barn (Project Mitten), Saline Twp"
+   ]
+  },
+  "NM|meta|Los Lunas (Valencia)": {
+   "kind": "site",
+   "registry": [
+    "Meta Los Lunas"
+   ]
+  },
+  "NM|oai|Project Jupiter (Doña Ana)": {
+   "kind": "site",
+   "registry": [
+    "Project Jupiter / Stargate New Mexico (STACK, BorderPlex)"
+   ]
+  },
+  "IN|msft|La Porte (17 bldgs by 2029) + Granger (St Joseph)": {
+   "kind": "site",
+   "registry": [
+    "Microsoft La Porte (Radius Industrial Park)"
+   ]
+  },
+  "IN|anth|AWS Project Rainier, New Carlisle (St Joseph)": {
+   "kind": "site",
+   "registry": [
+    "AWS Project Rainier (New Carlisle)"
+   ]
+  },
+  "IN|aws|Northern Indiana phase 2 (sites not named)": {
+   "kind": "site",
+   "registry": [
+    "AWS northern Indiana campuses (NIPSCO / NIPSCO GenCo ADS Contract)"
+   ]
+  },
+  "IN|goog|Project Zodiac, Fort Wayne (Allen)": {
+   "kind": "site",
+   "registry": [
+    "Google Fort Wayne (Project Zodiac; Adams Center Rd)"
+   ]
+  },
+  "IN|meta|Lebanon (Boone) + Jeffersonville (Clark)": {
+   "kind": "site",
+   "registry": [
+    "Meta Lebanon (LEAP district, Boone County)",
+    "Meta Jeffersonville"
+   ]
+  },
+  "IN|crwv|Digital Crossroads, Hammond (Lake)": {
+   "kind": "site",
+   "registry": []
+  },
+  "PA|anth|AWS Susquehanna 'Cumulus' (Luzerne)": {
+   "kind": "site",
+   "registry": [
+    "AWS Susquehanna / Berwick (Salem Twp; ex-Talen Cumulus campus)"
+   ]
+  },
+  "PA|aws|Falls Twp, Keystone Trade Center (Bucks)": {
+   "kind": "site",
+   "registry": [
+    "AWS Keystone Trade Center (Falls Twp; NorthPoint redevelopment of ex-US Steel site)"
+   ]
+  },
+  "PA|goog|No named site ($25bn PJM pledge; Brookfield hydro)": {
+   "kind": "site",
+   "registry": []
+  },
+  "PA|crwv|Lancaster (with Chirisa)": {
+   "kind": "site",
+   "registry": [
+    "CoreWeave Lancaster (Greenfield Rd; ex-printing sites)"
+   ]
+  },
+  "PA|neo|Nebius Highridge (Schuylkill)": {
+   "kind": "site",
+   "registry": [
+    "Nebius Highridge (Highridge Business Park, Butler Twp)"
+   ]
+  },
+  "PA|host|Keel (ex-Bitfarms): Panther Creek, Sharon, Scrubgrass": {
+   "kind": "site",
+   "registry": []
+  },
+  "VA|msft|Boydton expansion (Mecklenburg); Prince William MNZ07/MNZ01; Loudoun Stone Ridge": {
+   "kind": "site",
+   "registry": []
+  },
+  "VA|aws|Louisa (2 campuses); Mattermeade/Orrock (Caroline, Spotsylvania); Birchwood; Warrenton": {
+   "kind": "site",
+   "registry": [
+    "AWS Mattameade (Mattermeade/Orrock) Tech Campus",
+    "AWS Lake Anna Tech Campus",
+    "AWS Northeast Creek Tech Campus (Louisa campus 2)"
+   ]
+  },
+  "VA|goog|Chesterfield (3 campuses), Botetourt, Loudoun/PW expansions": {
+   "kind": "site",
+   "registry": [
+    "Google Arcola (42575 Arcola Blvd)",
+    "Google Bristow (13001 Rollins Ford Rd)"
+   ]
+  },
+  "VA|meta|Henrico": {
+   "kind": "site",
+   "registry": []
+  },
+  "VA|crwv|Chester (Chesterfield) with Chirisa": {
+   "kind": "site",
+   "registry": [
+    "Chirisa Technology Park CTP-02 / CTP-03 (PowerHouse)"
+   ]
+  },
+  "NC|msft|Catawba Co. (Lyle Creek, Boyd Farm, Stover North)": {
+   "kind": "site",
+   "registry": []
+  },
+  "NC|msft|Person County Mega Park": {
+   "kind": "site",
+   "registry": []
+  },
+  "NC|aws|Energy Way, Richmond Co.": {
+   "kind": "site",
+   "registry": [
+    "AWS Blue Marlin (Energy Way Industrial Park)"
+   ]
+  },
+  "NC|goog|Lenoir expansion (Caldwell)": {
+   "kind": "site",
+   "registry": []
+  },
+  "NC|meta|Forest City (Rutherford)": {
+   "kind": "site",
+   "registry": []
+  },
+  "NC|crwv|Core Scientific Marble (Cherokee)": {
+   "kind": "site",
+   "registry": [
+    "Core Scientific Marble (CoreWeave)"
+   ]
+  },
+  "NC|neo|Nscale Madison (Rockingham)": {
+   "kind": "site",
+   "registry": []
+  },
+  "SC|goog|Berkeley Co. expansion + Dorchester Co.": {
+   "kind": "site",
+   "registry": []
+  },
+  "SC|meta|Aiken Co. (Graniteville)": {
+   "kind": "site",
+   "registry": [
+    "Meta Aiken (Sage Mill Industrial Park)"
+   ]
+  },
+  "SC|neo|Nebius at AIB, Spartanburg": {
+   "kind": "site",
+   "registry": []
+  },
+  "MS|aws|Madison Co. (+$11bn expansion), Vicksburg, Clinton": {
+   "kind": "site",
+   "registry": [
+    "AWS Madison Mega Site (Nissan Pkwy & Hwy 22)",
+    "AWS Ridgeland (1626 County Line Rd)"
+   ]
+  },
+  "MS|xai|MACROHARDRR 'Colossus 3', Southaven (DeSoto) + MZX gas plant": {
+   "kind": "site",
+   "registry": [
+    "xAI/SpaceX Colossus II - Southaven (MACROHARDRR)"
+   ]
+  },
+  "TN|goog|Clarksville (Montgomery)": {
+   "kind": "site",
+   "registry": []
+  },
+  "TN|meta|Gallatin (Sumner)": {
+   "kind": "site",
+   "registry": [
+    "Meta Gallatin"
+   ]
+  },
+  "TN|xai|Colossus 1, South Memphis (100% leased to Anthropic May-26–May-29)": {
+   "kind": "site",
+   "registry": []
+  },
+  "TN|xai|Colossus 2 'Macrohard' + 'Minihard', Whitehaven (Memphis)": {
+   "kind": "site",
+   "registry": [
+    "xAI/SpaceX Colossus II - Memphis (Tulane Rd)",
+    "xAI/SpaceX MiniHard"
+   ]
+  },
+  "TN|host|Bitdeer Knoxville AI site": {
+   "kind": "site",
+   "registry": []
+  },
+  "AL|goog|Bridgeport (Widows Creek, Jackson Co.)": {
+   "kind": "site",
+   "registry": []
+  },
+  "AL|meta|Montgomery + Huntsville": {
+   "kind": "site",
+   "registry": [
+    "Meta Huntsville (5400 Prosperity Dr NW, Toney)",
+    "Meta Montgomery (Co Rd 42)"
+   ]
+  },
+  "AL|neo|Lambda Red Clay (Lowndes); Nebius Birmingham": {
+   "kind": "site",
+   "registry": [
+    "Nebius AI factory (Oxmoor Valley, Lakeshore Pkwy)"
+   ]
+  },
+  "AL|host|Applied Digital Delta Forge 2 (Tuscaloosa); CORZ Auburn": {
+   "kind": "site",
+   "registry": [
+    "Applied Digital Brookwood campus (likely Delta Forge 2)"
+   ]
+  },
+  "KY|anth|TeraWulf Justified Data, Hawesville (Hancock)": {
+   "kind": "site",
+   "registry": [
+    "TeraWulf 'Justified' campus (Hawesville)"
+   ]
+  },
+  "KY|host|TeraWulf Muskie (Grayson, Carter Co.)": {
+   "kind": "site",
+   "registry": [
+    "TeraWulf Muskie Data Campus (EastPark Industrial Park)"
+   ]
+  },
+  "OK|goog|Stillwater (Payne) + Pryor (Mayes)": {
+   "kind": "site",
+   "registry": [
+    "Google OG&E-served campuses (Stillwater + 2 Muskogee County sites)",
+    "Google Pryor (North) / MidAmerica Industrial Park"
+   ]
+  },
+  "OK|meta|Tulsa (Fair Oaks)": {
+   "kind": "site",
+   "registry": []
+  },
+  "OK|crwv|Core Scientific Muskogee": {
+   "kind": "site",
+   "registry": [
+    "Core Scientific Muskogee (CoreWeave)"
+   ]
+  },
+  "OK|neo|Lambda MidAmerica Ind. Park (Mayes)": {
+   "kind": "site",
+   "registry": []
+  },
+  "OK|host|IREN 'Kiowa' (Woods Co.); CORZ Muskogee AMD + Polaris DS": {
+   "kind": "site",
+   "registry": [
+    "Core Scientific Muskogee (CoreWeave)"
+   ]
+  },
+  "MO|aws|Montgomery Co. campus": {
+   "kind": "site",
+   "registry": []
+  },
+  "MO|goog|New Florence (Montgomery Co.); KC Project Mica; KC Rocky Branch Creek": {
+   "kind": "site",
+   "registry": [
+    "Google Project Spade (New Florence)",
+    "Google Project Mica (Northland)"
+   ]
+  },
+  "MO|meta|Kansas City (Golden Plains) + Crusoe Warrenton (lease)": {
+   "kind": "site",
+   "registry": []
+  },
+  "MO|neo|Nebius Independence (Jackson Co.); Lambda KC; Crusoe 'fifth campus'": {
+   "kind": "site",
+   "registry": [
+    "Nebius Independence AI factory"
+   ]
+  },
+  "IA|msft|West Des Moines; Woodward (Dallas Co., 600 ac)": {
+   "kind": "site",
+   "registry": []
+  },
+  "IA|goog|Council Bluffs; Cedar Rapids Big Cedar; Palo/Duane Arnold": {
+   "kind": "site",
+   "registry": [
+    "Google Cedar Rapids (Big Cedar Industrial Center)",
+    "Google Council Bluffs (East)"
+   ]
+  },
+  "IA|meta|QTS Cedar Rapids (lease) + Altoona + Davenport": {
+   "kind": "site",
+   "registry": [
+    "QTS Cedar Rapids"
+   ]
+  },
+  "NE|goog|Papillion, Omaha, Lincoln; SE Nebraska Tenaska proposal": {
+   "kind": "site",
+   "registry": [
+    "Gage County data center (Google/Tenaska, proposed)",
+    "Google Lincoln",
+    "Google Omaha (NW Omaha)"
+   ]
+  },
+  "NE|meta|Sarpy Co.": {
+   "kind": "site",
+   "registry": [
+    "Meta Sarpy (Springfield site)"
+   ]
+  },
+  "NE|host|MARA central Nebraska": {
+   "kind": "site",
+   "registry": []
+  },
+  "MN|msft|Becker (Sherburne)": {
+   "kind": "site",
+   "registry": []
+  },
+  "MN|aws|Becker (paused 2025 over tax-break changes)": {
+   "kind": "site",
+   "registry": []
+  },
+  "MN|goog|Pine Island + Hermantown": {
+   "kind": "site",
+   "registry": []
+  },
+  "MN|meta|Rosemount (Dakota)": {
+   "kind": "site",
+   "registry": [
+    "Meta Rosemount"
+   ]
+  },
+  "ND|crwv|Applied Digital Polaris Forge 1, Ellendale": {
+   "kind": "site",
+   "registry": [
+    "Polaris Forge 1 (Applied Digital)"
+   ]
+  },
+  "ND|host|Applied Digital Polaris Forge 2 (Harwood) + 3 (Center)": {
+   "kind": "site",
+   "registry": [
+    "Polaris Forge 2 (Applied Digital)",
+    "Polaris Forge 3 (Applied Digital)"
+   ]
+  },
+  "WY|msft|Cheyenne (~3,200 ac)": {
+   "kind": "site",
+   "registry": []
+  },
+  "WY|goog|Project Tembo (ex-Crusoe/Tallgrass 'Jade'), Cheyenne": {
+   "kind": "site",
+   "registry": [
+    "Google Project Tembo (fka Project Jade, Crusoe/Tallgrass)"
+   ]
+  },
+  "WY|meta|Cheyenne (High Plains)": {
+   "kind": "site",
+   "registry": [
+    "Meta Cheyenne (Project Cosmo, High Plains Business Park)"
+   ]
+  },
+  "WY|crwv|Related Digital Cheyenne": {
+   "kind": "site",
+   "registry": [
+    "Related Digital Cheyenne (CoreWeave)"
+   ]
+  },
+  "AZ|msft|Goodyear + El Mirage": {
+   "kind": "site",
+   "registry": []
+  },
+  "AZ|aws|Mesa (Pecos Rd, Elliot Rd); Project Blue (Pima), reported user": {
+   "kind": "site",
+   "registry": [
+    "Project Blue (Beale Infrastructure / Humphrey's Peak LLC)"
+   ]
+  },
+  "AZ|goog|Mesa": {
+   "kind": "site",
+   "registry": [
+    "Google Mesa (Elliot & Sossaman Rd)"
+   ]
+  },
+  "AZ|meta|Mesa": {
+   "kind": "site",
+   "registry": []
+  },
+  "NV|goog|Henderson + Storey Co.": {
+   "kind": "site",
+   "registry": [
+    "Google Storey County (TRIC)"
+   ]
+  },
+  "NV|crwv|Switch LAS1": {
+   "kind": "site",
+   "registry": []
+  },
+  "UT|meta|Eagle Mountain phase 4": {
+   "kind": "site",
+   "registry": []
+  },
+  "OR|aws|Morrow Co. (Boardman), Hermiston, Arlington": {
+   "kind": "site",
+   "registry": [
+    "AWS Boardman - Airport (PDX-154)",
+    "AWS Boardman - Lewis & Clark (PDX-01)",
+    "AWS Hermiston - E Penney (PDX-138)",
+    "AWS Umatilla - Powerline (PDX-194)"
+   ]
+  },
+  "OR|goog|The Dalles + Cascade Locks": {
+   "kind": "site",
+   "registry": [
+    "Google The Dalles"
+   ]
+  },
+  "OR|meta|Prineville (Crook)": {
+   "kind": "site",
+   "registry": []
+  },
+  "OR|crwv|Flexential Hillsboro 4": {
+   "kind": "site",
+   "registry": []
+  },
+  "WA|msft|Quincy / Malaga / Wenatchee": {
+   "kind": "site",
+   "registry": [
+    "Microsoft East Wenatchee",
+    "Microsoft Malaga"
+   ]
+  },
+  "WA|aws|Port of Walla Walla (16 bldgs)": {
+   "kind": "site",
+   "registry": []
+  },
+  "WA|host|Bitdeer Wenatchee; Keel Moses Lake": {
+   "kind": "site",
+   "registry": []
+  },
+  "NY|neo|TeraWulf Lake Mariner (Niagara)": {
+   "kind": "site",
+   "registry": [
+    "TeraWulf Lake Mariner (Barker)"
+   ]
+  },
+  "NY|crwv|Blockfusion Niagara Falls": {
+   "kind": "site",
+   "registry": [
+    "Blockfusion Niagara Falls (North East Data LLC, 5380 Frontier Ave)"
+   ]
+  },
+  "NY|host|TeraWulf Lake Hawkeye (Tompkins)": {
+   "kind": "site",
+   "registry": [
+    "TeraWulf Cayuga (ex-Cayuga coal plant, Lansing)"
+   ]
+  },
+  "NJ|msft|Nebius Vineland (Cumberland)": {
+   "kind": "site",
+   "registry": [
+    "Nebius / DataOne Vineland (S Lincoln Ave)"
+   ]
+  },
+  "NJ|crwv|Kenilworth (ex-Merck) + Weehawken LGA1": {
+   "kind": "site",
+   "registry": []
+  },
+  "MD|aws|Quantum Frederick (US-East extension); Calvert Cliffs withdrawn Aug-26": {
+   "kind": "site",
+   "registry": []
+  },
+  "MD|host|TeraWulf Chesapeake (Morgantown, Charles Co.)": {
+   "kind": "site",
+   "registry": []
+  },
+  "WV|anth|Nscale Monarch (Mason Co.), off-grid gas": {
+   "kind": "site",
+   "registry": [
+    "Monarch Compute Campus (Nscale / AIPCorp)"
+   ]
+  },
+  "WV|goog|Buffalo (Putnam Co.)": {
+   "kind": "site",
+   "registry": []
+  },
+  "IL|msft|Hoffman Estates + Elk Grove": {
+   "kind": "site",
+   "registry": []
+  },
+  "IL|meta|DeKalb": {
+   "kind": "site",
+   "registry": []
+  },
+  "IL|crwv|ORD1 Elk Grove expansion": {
+   "kind": "site",
+   "registry": []
+  },
+  "AR|goog|West Memphis (Crittenden)": {
+   "kind": "site",
+   "registry": []
+  },
+  "MULTI|msft|Leases not yet commenced": {
+   "kind": "portfolio"
+  },
+  "MULTI|meta|CoreWeave + Nebius capacity contracts": {
+   "kind": "portfolio"
+  },
+  "MULTI|oai|Oracle lease commitments (all OpenAI campuses)": {
+   "kind": "portfolio"
+  },
+  "MULTI|anth|Google TPUs, Broadcom, Azure, AWS beyond Rainier": {
+   "kind": "portfolio"
+  },
+  "MULTI|crwv|Portfolio": {
+   "kind": "portfolio"
+  },
+  "MULTI|neo|Nebius portfolio": {
+   "kind": "portfolio"
+  },
+  "MULTI|goog|NextEra co-developed campuses; Intersect pipeline; Kairos/Elementl nuclear": {
+   "kind": "portfolio"
+  }
+ },
+ "resolved": "2026-11-09: 4 fixed in the registry (overrides.csv + raw/xchk_daniel_r4.csv), 3 checked and not adopted (notes added where the row could take one)."
+}

@@ -1,0 +1,841 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hyperscaler DC Build</title>
+<style>
+/*__FONT__*/
+:root{
+  color-scheme:light;
+  --plane:#f4f6f9; --surf:#fff; --surf2:#f7f9fb; --ink:#192b40; --ink2:#536478; --muted:#66788a; --grid:#e7edf3; --border:#dfe6ee;
+  --accent:#147d71; --link:#2f6fbf; --shadow:0 3px 16px #20334a08;
+  --st-fill:#e4e9ef; --st-line:#ffffff; --st-hl:#ccd6e1;
+  --g-base:#c3cdd8; --g-op:#6c7d8f; --g-uc:#3778c9; --g-dl:#d0703a; --g-aH:#6a4fc7; --g-aM:#9c88e3; --g-aL:#cbbff2;
+  --c-amzn:#d08a2a; --c-goog:#1f9a7a; --c-meta:#5b6ee0; --c-msft:#c0507e;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    color-scheme:dark;
+    --plane:#111c29; --surf:#182636; --surf2:#1c2c3e; --ink:#e6edf5; --ink2:#b3c0cf; --muted:#94a7bc; --grid:#293a4d; --border:#304258;
+    --accent:#70cfbe; --link:#7fb0ee; --shadow:none;
+    --st-fill:#22344a; --st-line:#111c29; --st-hl:#36506d;
+    --g-base:#4d6075; --g-op:#94a7bc; --g-uc:#72a6ea; --g-dl:#e58a52; --g-aH:#b3a3f8; --g-aM:#7d68d2; --g-aL:#4a3d8f;
+    --c-amzn:#e6a74e; --c-goog:#4fc3a1; --c-meta:#8b9cf5; --c-msft:#e183a8;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --plane:#111c29; --surf:#182636; --surf2:#1c2c3e; --ink:#e6edf5; --ink2:#b3c0cf; --muted:#94a7bc; --grid:#293a4d; --border:#304258;
+  --accent:#70cfbe; --link:#7fb0ee; --shadow:none;
+  --st-fill:#22344a; --st-line:#111c29; --st-hl:#36506d;
+  --g-base:#4d6075; --g-op:#94a7bc; --g-uc:#72a6ea; --g-dl:#e58a52; --g-aH:#b3a3f8; --g-aM:#7d68d2; --g-aL:#4a3d8f;
+  --c-amzn:#e6a74e; --c-goog:#4fc3a1; --c-meta:#8b9cf5; --c-msft:#e183a8;
+}
+*{box-sizing:border-box}
+[hidden]{display:none!important}
+body{margin:0;background:var(--plane);color:var(--ink);font:14px/1.55 "OR Jakarta","Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--link);text-underline-offset:3px}
+button,input{font:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px}
+.skip{position:fixed;left:250px;top:-100px;z-index:100;background:var(--surf);color:var(--ink);padding:10px 16px;border-radius:6px}
+.skip:focus{top:12px}
+/* shell: same look as the dashboards hub (navy sidebar, white top bar) */
+.side{position:fixed;inset:0 auto 0 0;width:232px;background:#11263b;color:#e9eff6;display:flex;flex-direction:column;padding:26px 14px 18px;z-index:60;overflow:auto}
+.brand{display:flex;align-items:center;gap:11px;padding:0 10px 24px;color:#fff;text-decoration:none;font-size:13px;font-weight:750;letter-spacing:1.8px;line-height:1.35}
+.brand-mark{display:grid;place-items:center;width:32px;height:36px;border:1px solid #4b7b87;border-radius:7px;color:#8ed3c3;font-size:21px;font-weight:500;flex:none}
+.brand small{display:block;font-size:7px;letter-spacing:1.1px;color:#a3b6c9;margin-top:4px}
+.ng{margin:0 0 18px}
+.ng>p{margin:0 10px 6px;color:#8ca6bd;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;white-space:nowrap}
+.nav a{display:flex;align-items:center;gap:9px;padding:7px 10px;margin:1px 0;color:#b9c9d8;border-radius:6px;text-decoration:none;font-size:12px;line-height:1.35}
+.nav a:hover{background:#ffffff0d;color:#fff}
+.nav a[aria-current=page]{background:#244557;color:#fff;box-shadow:inset 3px 0 #77cbb8}
+.nav .nv{margin-left:auto;font-size:10.5px;color:#8ca6bd;font-variant-numeric:tabular-nums;white-space:nowrap}
+.nav a[aria-current=page] .nv{color:#bfe6dc}
+.nav .nd{width:7px;height:7px;border-radius:50%;flex:none}
+.side-foot{margin-top:auto;border-top:1px solid #ffffff16;padding:14px 10px 0;font-size:10px;color:#c1d1df;line-height:1.65}
+.side-foot b{color:#fff;font-weight:600}
+.side-foot a{display:block;margin-top:8px;color:#a9bfd1;text-decoration:none}
+.side-foot a:hover{color:#fff}
+.dot-live{width:6px;height:6px;background:#7bc6b3;display:inline-block;border-radius:50%;margin-right:7px}
+.work{margin-left:232px;min-width:0}
+.top{position:sticky;top:0;z-index:45;display:flex;align-items:center;gap:24px;min-height:82px;padding:14px 36px;background:var(--surf);border-bottom:1px solid var(--border)}
+.top .crumb{color:var(--muted);font-size:9px;letter-spacing:1.5px;font-weight:650;margin:0 0 2px;text-transform:uppercase}
+.top h1{margin:0;font-size:19px;letter-spacing:-.4px;font-weight:650;line-height:1.35;white-space:nowrap}
+.srch{position:relative;flex:1;max-width:520px;margin-left:auto}
+.srch input{width:100%;font-size:13.5px;padding:10px 14px 10px 38px;border:1px solid var(--border);border-radius:9px;background:var(--plane);color:var(--ink)}
+.srch input:focus{outline:2px solid var(--accent);outline-offset:1px;background:var(--surf)}
+.srch svg{position:absolute;left:13px;top:50%;transform:translateY(-50%);width:15px;height:15px;color:var(--muted);pointer-events:none}
+.dd{position:absolute;left:0;right:0;top:calc(100% + 6px);background:var(--surf);border:1px solid var(--border);border-radius:10px;box-shadow:0 12px 32px #10223826;z-index:30;max-height:460px;overflow:auto}
+.dd .it{display:grid;grid-template-columns:1fr auto;gap:0 12px;padding:9px 14px;cursor:pointer;border-bottom:1px solid var(--grid)}
+.dd .it:last-child{border-bottom:0}
+.dd .it[aria-selected="true"],.dd .it:hover{background:var(--surf2)}
+.dd .it b{font-weight:650}
+.dd .it .gw{font-variant-numeric:tabular-nums;color:var(--ink2);font-size:12px;text-align:right}
+.dd .it .r{grid-column:1/-1;font-size:11px;color:var(--muted)}
+.dd .none{padding:12px 14px;color:var(--muted);font-size:12.5px}
+.top-act{display:flex;align-items:center;gap:18px}
+.asof{font-size:10px;color:var(--muted);text-align:right;white-space:nowrap}
+.asof b{display:block;font-size:12px;font-weight:600;color:var(--ink2);font-variant-numeric:tabular-nums}
+.theme{display:grid;place-items:center;width:36px;height:36px;background:var(--plane);border:1px solid var(--border);border-radius:8px;color:var(--ink2);cursor:pointer;flex:none}
+.theme svg{width:16px;height:16px}
+main{max-width:1440px;margin:0 auto;padding:30px 36px 70px;outline:none}
+/* view furniture */
+.vhead{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:10px 32px;margin:0 0 18px}
+.kick{font-size:9.5px;letter-spacing:1.5px;text-transform:uppercase;font-weight:750;color:var(--accent);margin:0 0 6px}
+.vhead h2{margin:0;font-size:28px;font-weight:650;letter-spacing:-.8px;line-height:1.2}
+.vhead h2 small{font-size:14px;color:var(--muted);font-weight:600;letter-spacing:0;margin-left:10px}
+.vsub{margin:6px 0 0;color:var(--ink2);font-size:12.5px}
+.vright{max-width:540px;font-size:12px;color:var(--ink2);line-height:1.65}
+.toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px 12px;margin:0 0 16px}
+.toolbar .btn{margin-left:auto}
+.lbl{font-size:10px;font-weight:650;letter-spacing:.6px;text-transform:uppercase;color:var(--muted)}
+.seg{display:inline-flex;flex-wrap:wrap;background:var(--plane);border:1px solid var(--border);border-radius:8px;padding:3px;gap:2px}
+.seg button{border:0;background:transparent;color:var(--muted);padding:4px 12px;font-size:12px;border-radius:5px;cursor:pointer;line-height:1.5}
+.seg button:hover{color:var(--ink)}
+.seg button[aria-pressed=true]{background:var(--surf);color:var(--accent);font-weight:650;box-shadow:0 1px 4px #00000018}
+.btn{border:1px solid var(--border);background:var(--surf);color:var(--ink2);border-radius:7px;padding:5px 12px;font-size:12px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.btn:hover{color:var(--ink);border-color:var(--muted)}
+.btn svg{width:13px;height:13px}
+.story{background:var(--surf);border:1px solid var(--border);border-left:3px solid var(--accent);border-radius:0;padding:14px 18px;font-size:13px;line-height:1.8;color:var(--ink2);margin:0 0 16px}
+.story b{color:var(--ink)}
+.kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(165px,1fr));gap:12px;margin:0 0 16px}
+.kpi{background:var(--surf);border:1px solid var(--border);border-radius:10px;padding:15px 18px;box-shadow:var(--shadow);min-width:0}
+.kpi .kl{display:block;font-size:10px;font-weight:650;letter-spacing:.55px;text-transform:uppercase;color:var(--muted)}
+.kpi strong{display:block;font-size:26px;line-height:1.25;letter-spacing:-.8px;font-weight:650;margin:7px 0 4px;font-variant-numeric:tabular-nums}
+.kpi strong small{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:0;margin-left:4px}
+.kpi>small{display:block;font-size:11px;color:var(--muted);line-height:1.55}
+.kpi.lead{border-color:color-mix(in srgb,var(--accent) 50%,var(--border));background:color-mix(in srgb,var(--accent) 6%,var(--surf))}
+.kpi.lead .kl{color:var(--accent)}
+.panel{background:var(--surf);border:1px solid var(--border);border-radius:12px;padding:20px 22px;box-shadow:var(--shadow);margin:0 0 16px;min-width:0}
+.panel h3{margin:0;font-size:15px;font-weight:650;letter-spacing:-.2px}
+.ph{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-start;gap:8px 16px}
+.cs{font-size:11.5px;color:var(--muted);margin:3px 0 12px;line-height:1.6}
+.grid2{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}
+.legend{display:flex;flex-wrap:wrap;gap:5px 14px;font-size:11px;color:var(--ink2);margin:0 0 8px}
+.legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
+.legend i.c{border-radius:50%}
+.legend i.dash{background:transparent;border:1.5px dashed var(--muted)}
+/* the four */
+.cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 16px}
+.hcard{display:block;background:var(--surf);border:1px solid var(--border);border-radius:10px;padding:16px 18px 14px;color:inherit;text-decoration:none;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:border-color .15s}
+.hcard::before{content:"";position:absolute;inset:0 0 auto 0;height:3px;background:var(--cc)}
+.hcard:hover{border-color:var(--cc)}
+.hc-top{display:flex;justify-content:space-between;align-items:baseline}
+.hc-name{font-size:15px;font-weight:650}
+.hc-tick{font-size:10.5px;color:var(--muted);font-weight:650;letter-spacing:.6px}
+.hc-k{font-size:10px;font-weight:650;letter-spacing:.55px;text-transform:uppercase;color:var(--muted);margin-top:10px}
+.hc-v{font-size:30px;font-weight:650;letter-spacing:-1px;line-height:1.2;font-variant-numeric:tabular-nums}
+.hc-v small{font-size:12px;color:var(--muted);font-weight:600;letter-spacing:0;margin-left:4px}
+.mini{display:flex;height:8px;border-radius:4px;overflow:hidden;margin:10px 0 2px;background:var(--grid)}
+.mini span{height:100%;min-width:1px}
+.mini span+span{border-left:2px solid var(--surf)}
+.hcard dl{display:grid;grid-template-columns:1fr auto;gap:3px 10px;margin:10px 0 0;font-size:12px}
+.hcard dt{color:var(--ink2)}
+.hcard dd{margin:0;text-align:right;font-weight:600;font-variant-numeric:tabular-nums}
+.hc-go{display:block;margin-top:12px;padding-top:10px;border-top:1px solid var(--grid);font-size:11.5px;color:var(--link);font-weight:600}
+.stk{display:flex;height:22px;border-radius:0 4px 4px 0;overflow:hidden;min-width:2px}
+.stk span{display:block;height:100%;min-width:1px}
+.stk span+span{border-left:2px solid var(--surf)}
+.crow{display:grid;grid-template-columns:110px 1fr 70px;gap:10px;align-items:center;margin:9px 0}
+.crow .nm{font-weight:650;display:flex;align-items:center;gap:7px}
+.crow .tv{font-variant-numeric:tabular-nums;font-weight:650;text-align:right}
+.nd{width:8px;height:8px;border-radius:50%;display:inline-block;flex:none}
+.mult{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.mult h4{margin:0;font-size:13px;display:flex;align-items:center;gap:7px}
+.mult .cs{margin:0 0 4px}
+.chart svg{width:100%;height:auto;display:block;overflow:visible}
+.chart .ax{fill:var(--muted);font-size:11px}
+.chart .val{fill:var(--ink);font-size:12px;font-weight:650}
+.chart .gl{stroke:var(--grid);stroke-width:1}
+.map svg{width:100%;height:auto;display:block}
+.stp{fill:var(--st-fill);stroke:var(--st-line);stroke-width:1}
+.stp.hl{fill:var(--st-hl);stroke:var(--muted)}
+.map circle{stroke:var(--surf);stroke-width:1.1;fill-opacity:.82}
+.map .cs{margin:8px 0 0}
+/* tables */
+table{border-collapse:collapse;width:100%;font-size:12px}
+th{text-align:left;color:var(--muted);font-weight:650;font-size:10px;text-transform:uppercase;letter-spacing:.4px;padding:9px 8px;border-bottom:1px solid var(--border);white-space:nowrap;position:sticky;top:0;background:var(--surf2);z-index:1}
+td{padding:7px 8px;border-bottom:1px solid var(--grid);vertical-align:top}
+tr:hover>td{background:var(--surf2)}
+td.n,th.n{text-align:right;font-variant-numeric:tabular-nums;white-space:nowrap}
+tr.tot>td{font-weight:650;border-top:1px solid var(--border);border-bottom:0;background:transparent}
+.tscroll{overflow-x:auto}
+.tscroll th{white-space:normal;vertical-align:bottom;line-height:1.3}
+.tscroll th,.tscroll td{padding-left:6px;padding-right:6px}
+.tscroll td:first-child{min-width:118px}
+.tbl-wrap{max-height:560px;overflow:auto;border:1px solid var(--border);border-radius:10px}
+.tbl-wrap td:first-child{min-width:170px}
+.why{color:var(--muted);font-size:11px}
+.db{position:relative}
+.db i{position:absolute;right:4px;top:4px;bottom:4px;background:var(--accent);opacity:.16;border-radius:3px}
+.db span{position:relative}
+.tag{display:inline-block;border-radius:4px;padding:0 6px;font-size:10px;font-weight:650;border:1px solid var(--border);color:var(--ink2);white-space:nowrap;background:var(--surf2)}
+.filters{display:flex;flex-wrap:wrap;gap:8px 12px;align-items:center;margin:0 0 10px}
+.filters input{font-size:12.5px;padding:6px 10px;border:1px solid var(--border);border-radius:7px;background:var(--plane);color:var(--ink);min-width:240px}
+.tabbar{display:flex;gap:2px;border-bottom:1px solid var(--border);margin:-6px 0 14px;overflow-x:auto}
+.tabbar button{border:0;background:transparent;color:var(--muted);padding:9px 14px;font-size:12.5px;font-weight:650;cursor:pointer;border-bottom:2px solid transparent;margin-bottom:-1px;white-space:nowrap}
+.tabbar button:hover{color:var(--ink)}
+.tabbar button[aria-selected=true]{color:var(--ink);border-bottom-color:var(--accent)}
+.cpl{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:14px 24px;font-size:12.5px}
+.cpl ol{margin:4px 0 0;padding-left:18px}
+.cpl li{margin:2px 0}
+.cpl .lb{font-size:10px;font-weight:650;color:var(--muted);text-transform:uppercase;letter-spacing:.5px}
+a.ent{cursor:pointer;text-decoration:none}
+a.ent:hover{text-decoration:underline}
+details.note{background:var(--surf);border:1px solid var(--border);border-radius:8px;padding:12px 16px;font-size:12px;color:var(--ink2);line-height:1.75}
+details.note summary{cursor:pointer;font-weight:650}
+details.note p{margin:8px 0 0}
+.mdl{display:grid;grid-template-columns:190px 1fr;gap:12px 24px;font-size:13px;line-height:1.7;margin:6px 0 0}
+.mdl dt{font-weight:650}
+.mdl dd{margin:0;color:var(--ink2)}
+.xlink{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px 20px;text-decoration:none;color:inherit}
+.xlink:hover h3{color:var(--link)}
+.xlink .go{font-size:12px;font-weight:650;color:var(--link)}
+.foot{font-size:11px;color:var(--muted);line-height:1.8;margin:0}
+#tip{position:fixed;pointer-events:none;z-index:80;background:var(--surf);color:var(--ink);border:1px solid var(--border);border-radius:8px;padding:9px 11px;font-size:12px;line-height:1.55;box-shadow:0 10px 30px #10223830;max-width:340px;display:none}
+@media (min-width:1021px) and (max-width:1300px){.side{width:204px;padding-left:10px;padding-right:10px}.work{margin-left:204px}main{padding:26px 22px 60px}.top{padding:12px 22px;gap:16px}.asof{display:none}.cards{grid-template-columns:repeat(2,minmax(0,1fr))}.mult{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:1020px){
+  .side{position:sticky;top:0;inset:auto;width:auto;height:48px;padding:0 12px;display:block;overflow-x:auto;overflow-y:hidden;scrollbar-width:none}
+  .side::-webkit-scrollbar{display:none}
+  .brand,.side-foot,.ng>p,.nav .nv{display:none}
+  .nav{display:flex;width:max-content;height:100%;align-items:center;gap:2px}
+  .ng{display:contents}
+  .nav a{white-space:nowrap;padding:6px 10px;margin:0}
+  .nav a[aria-current=page]{box-shadow:inset 0 -2px #77cbb8}
+  .work{margin-left:0}
+  .top{position:relative;flex-wrap:wrap;padding:14px 18px;gap:12px}
+  .srch{order:3;flex-basis:100%;max-width:none;margin:0}
+  .top-act{margin-left:auto}
+  .grid2{grid-template-columns:1fr}
+  .cards,.mult{grid-template-columns:repeat(2,minmax(0,1fr))}
+  main{padding:22px 18px 56px}
+  .skip{left:16px}
+}
+@media (max-width:620px){
+  main{padding:18px 16px 48px}
+  .top{padding:12px 16px}
+  .top h1{font-size:16px;white-space:normal}
+  .top>div:first-child{flex:1;min-width:0}
+  .top .crumb{white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+  .asof{display:none}
+  .cards{grid-template-columns:1fr}
+  .kpis{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+  .kpi{padding:12px 14px}
+  .kpi strong{font-size:21px}
+  .vhead h2{font-size:23px}
+  .panel{padding:16px 14px}
+  .crow{grid-template-columns:84px 1fr 52px}
+  .mdl{grid-template-columns:1fr;gap:2px 0}
+  .mdl dd{margin-bottom:10px}
+  .filters input{min-width:0;flex:1}
+  .toolbar .btn{margin-left:0}
+}
+@media print{.side,.srch,.theme,.skip{display:none}.work{margin:0}.top{position:static}.panel,.hcard,.kpi{box-shadow:none;break-inside:avoid}.tbl-wrap{max-height:none}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main">Skip to the dashboard</a>
+<aside class="side">
+  <a class="brand" href="index.html" aria-label="Capstone research dashboards"><span class="brand-mark" aria-hidden="true">C</span><span>CAPSTONE<small>RESEARCH INTELLIGENCE</small></span></a>
+  <nav class="nav" id="nav" aria-label="Views"></nav>
+  <div class="side-foot" id="sideFoot"></div>
+</aside>
+<div class="work">
+  <header class="top">
+    <div><p class="crumb" id="crumb">Research / DC build-out</p><h1>Who is building US data centers</h1></div>
+    <div class="srch">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="7"/><path d="m20 20-3.5-3.5"/></svg>
+      <input id="coQ" type="search" autocomplete="off" spellcheck="false" placeholder="Search any company or state: OpenAI, Crusoe, ORCL, Texas, US…" aria-label="Search a company or a state in the Aterio census" role="combobox" aria-expanded="false" aria-controls="coList" aria-autocomplete="list">
+      <div id="coList" class="dd" role="listbox" hidden></div>
+    </div>
+    <div class="top-act">
+      <span class="asof">Aterio census <b id="asof"></b></span>
+      <button type="button" class="theme" id="themeBtn" aria-label="Switch theme"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" aria-hidden="true"><path d="M20.5 13A8.5 8.5 0 0 1 11 3.5 8.5 8.5 0 1 0 20.5 13Z"/></svg></button>
+    </div>
+  </header>
+  <main id="main" tabindex="-1"><div id="view"></div></main>
+</div>
+<div id="tip"></div>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="usmap" viewBox="0 0 975 610"><g id="usPaths"></g></symbol></defs></svg>
+<script>
+const M = /*__DATA__*/null;
+const $ = id => document.getElementById(id);
+const esc = s => String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const f1 = v => v == null ? "–" : (Math.abs(v) < 0.095 && v !== 0 ? v.toFixed(2) : v.toFixed(1));
+const f0 = v => v == null ? "–" : Math.round(v).toLocaleString("en-US");
+const pc = v => Math.round(v * 100) + "%";
+const sum = a => a.reduce((x, y) => x + y, 0);
+const SN = st => M.stateNames[st] || st;
+const C = M.companies, YRS = []; for (let y = M.window[0]; y <= M.window[1]; y++) YRS.push(String(y));
+const G = [["op", "Operating", "var(--g-op)"], ["uc", "Under construction", "var(--g-uc)"], ["dl", "Delayed", "var(--g-dl)"], ["aH", "Announced · high", "var(--g-aH)"], ["aM", "Announced · medium", "var(--g-aM)"], ["aL", "Announced · low", "var(--g-aL)"]];
+const HB = [["op", "Went live in 2026", "var(--g-op)"], ["uc", "Under construction", "var(--g-uc)"], ["dl", "Delayed", "var(--g-dl)"], ["aH", "Announced · high", "var(--g-aH)"]];
+const S = {role: "both", metric: "house", co: C[0].id, q: "", mapCo: "all"};
+const tip = $("tip");
+function showTip(e, h){ tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth, hh = tip.offsetHeight; let x = e.clientX + 14, y = e.clientY + 14; if (x + w > innerWidth - 8) x = e.clientX - w - 14; if (y + hh > innerHeight - 8) y = e.clientY - hh - 14; tip.style.left = x + "px"; tip.style.top = y + "px"; }
+document.addEventListener("mousemove", e => { const t = e.target.closest && e.target.closest("[data-t]"); if (t) showTip(e, t.dataset.t); else tip.style.display = "none"; });
+function seg(el, items, cur, on){ el.innerHTML = items.map(([k, l]) => `<button type="button" data-k="${k}" aria-pressed="${k === cur}">${esc(l)}</button>`).join(""); el.onclick = e => { const b = e.target.closest("button"); if (b) on(b.dataset.k); }; }
+const roles = () => S.role === "both" ? ["self", "leased"] : [S.role];
+const roleTxt = () => S.role === "both" ? "self-built + leased" : S.role === "self" ? "self-built" : "leased";
+const tot = (c, g) => roles().reduce((a, r) => a + (c.tot[r][g] || 0), 0);
+const campOk = cp => S.role === "both" || cp.role === S.role;
+const cv = cp => S.metric === "house" ? cp.house : S.metric === "pipe" ? cp.uc + cp.dl + cp.aH + cp.aM + cp.aL : cp.op + cp.uc + cp.dl + cp.aH + cp.aM + cp.aL;
+const METRIC = {house: "house view 2026-30", pipe: "pipeline, any likelihood or date", all: "operating + pipeline"};
+const rtop = (x, y, w, h, r) => { r = Math.max(0, Math.min(r, w / 2, h)); return `M${x},${y + h}V${y + r}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h}Z`; };
+const houseOf = c => S.role === "both" ? c.house : S.role === "self" ? c.house_self : c.house_leased;
+const houseBy = (c, g) => YRS.reduce((a, y) => a + roles().reduce((b, r) => b + (c.house_by[y][r][g] || 0), 0), 0);
+function status(cp){ const parts = [["op", cp.op], ["uc", cp.uc + cp.dl], ["aH", cp.aH], ["aML", cp.aM + cp.aL]]; return parts.sort((a, b) => b[1] - a[1])[0][0]; }
+const STC = {op: ["Mostly operating", "var(--g-op)"], uc: ["Mostly being built", "var(--g-uc)"], aH: ["Mostly announced · high", "var(--g-aH)"], aML: ["Mostly announced · medium/low", "var(--g-aL)"]};
+const ICON_DL = `<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 4v11m0 0-4-4m4 4 4-4M5 20h14"/></svg>`;
+
+/* ------------------------------------------------------------------ lookup engine: every company and state in the census */
+const LU = M.lookup, FK = M.fac_it, Y0 = M.window[0], Y1 = M.window[1];
+const RL = {op: ["Operator / self-build", "operator"], ten: ["Tenant (named end user)", "tenant"], bk: ["Backer of the developer", "backer"],
+  fin: ["Project financing", "financier"], pt: ["Power, equipment or construction partner", "partner"], ut: ["Serving utility", "utility"]};
+const BRL = {dev: "developer", eq: "equipment / construction", fin: "financing", cust: "customer"};
+const CPL = [["op", "Operators / landlords"], ["ten", "Tenants (end users)"], ["bk", "Backers of the developer"], ["fin", "Financiers"], ["pt", "Power, equipment, construction"], ["ut", "Utilities"]];
+const ENT = LU.cos.map(c => ({n: c.n, t: c.t || "", w: c.w || "", al: c.al || "", r: c.r, b: c.b || {}, own: new Set(c.own), kind: c.w ? "wiki" : "group"}));
+const R0 = ENT.length;
+LU.ents.forEach(([n, t, w], i) => ENT.push({n, t: t || "", w: w || "", al: "", r: {}, b: {}, own: new Set([i]), kind: "raw"}));
+const addTo = (o, k, j) => { (o[k] = o[k] || []).push(j); };
+LU.bld.forEach((b, j) => { const p = b[6];
+  if (p != null) addTo(ENT[R0 + p].r, "op", j);
+  new Set(b[7]).forEach(i => { if (i !== p) addTo(ENT[R0 + i].r, "ten", j); });
+  [[8, "bk"], [9, "fin"], [10, "pt"]].forEach(([x, k]) => new Set(b[x]).forEach(i => addTo(ENT[R0 + i].r, k, j)));
+  if (b[11] != null) addTo(ENT[R0 + b[11]].r, "ut", j); });
+LU.btm.forEach((b, j) => [["dev", 9], ["eq", 10], ["fin", 11], ["cust", 12]].forEach(([k, x]) => new Set(b[x]).forEach(i => addTo(ENT[R0 + i].b, k, j))));
+const coveredBy = {};
+ENT.forEach((e, ix) => { if (e.kind !== "raw") e.own.forEach(i => { (coveredBy[i] = coveredBy[i] || []).push(ix); });
+  const s = new Set(); Object.values(e.r).forEach(a => a.forEach(j => s.add(j)));
+  e.nb = s.size; e.mw = [...s].reduce((a, j) => a + (LU.bld[j][1] !== 6 ? (LU.bld[j][2] || 0) : 0), 0) / FK;
+  e.nbtm = new Set(Object.values(e.b).flat()).size; });
+// a raw name whose buildings (and BTM phases) all sit inside a wiki/group entry that stands for it is left out of the
+// search: the entry shows the same buildings, and its role filter splits them
+const allJ = o => new Set(Object.values(o).flat());
+ENT.forEach((e, ix) => { if (e.kind !== "raw") return;
+  e.dup = (coveredBy[ix - R0] || []).some(x => { const cb = allJ(ENT[x].r), cbt = allJ(ENT[x].b);
+    return [...allJ(e.r)].every(j => cb.has(j)) && [...allJ(e.b)].every(j => cbt.has(j)); }); });
+const FOUR = new Set(["AMZN", "GOOG", "META", "MSFT"]), PLACEHOLDER = /not disclosed|undisclosed|unknown|confidential/i;
+// a raw name that a wiki/group entry fully covers opens that entry when clicked
+const tgt = i => ENT[R0 + i].dup ? ((coveredBy[i] || [])[0] ?? R0 + i) : R0 + i;
+// states, and the whole US, are searchable too
+const STX = {};
+LU.bld.forEach(b => { const st = LU.camps[b[0]][1] || "", v = (b[2] || 0) / FK;
+  for (const k of [st, "US"]) { const x = STX[k] = STX[k] || {n: 0, mw: 0, house: 0}; x.n++; if (b[1] !== 6) x.mw += v; if (b[5] & 1) x.house += v; } });
+Object.keys(STX).filter(s => s && s !== "US").sort((a, b) => SN(a).localeCompare(SN(b))).concat(["US"]).forEach(st =>
+  ENT.push({n: st === "US" ? "United States (all states)" : SN(st), t: st, st, w: "", al: st === "US" ? "usa united states america eua total all national" : "",
+    r: {}, b: {}, own: new Set(), kind: "state", nb: STX[st].n, mw: STX[st].mw, house: STX[st].house, nbtm: 0}));
+const gq = v => v >= 999.5 ? (v / 1000).toFixed(1) + " GW" : v >= 0.5 ? Math.round(v) + " MW" : v > 0 ? "<1 MW" : "–";
+const gw = v => v >= 95 ? (v / 1000).toFixed(1) : v >= 0.5 ? "<0.1" : "–";   // MW IT-eq -> GW, for the compact tables
+const gqv = v => { const s = gq(v), m = s.match(/^(.+) (GW|MW)$/); return m ? `${esc(m[1])}<small>${m[2]}</small>` : esc(s); };
+const ymS = a => a ? `${Math.floor(a / 100)}-${String(a % 100).padStart(2, "0")}` : "";
+const rxEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+const rolesTxt = e => [...Object.keys(e.r).map(k => `${RL[k][1]} ${new Set(e.r[k]).size}`), ...Object.keys(e.b).map(k => `BTM ${BRL[k]} ${new Set(e.b[k]).size}`)].join(" · ");
+const kindTag = e => e.kind === "wiki" ? `<span class="tag">wiki · ${esc(e.w)}</span>` : e.kind === "group" ? `<span class="tag">all names · ${esc(e.t)}</span>`
+  : e.kind === "state" ? `<span class="tag">${e.t === "US" ? "all states" : "state · " + esc(e.t)}</span>` : (e.t ? `<span class="tag">${esc(e.t)}</span>` : "");
+const LS = {e: null, st: null, role: null, hi: 0, hits: []};
+const FOURI = Object.fromEntries(C.map(c => [c.id, ENT.findIndex(e => e.kind === "wiki" && e.t === c.tick)]));
+const coHash = i => "#co=" + encodeURIComponent(ENT[i].n);
+
+function findCo(q){
+  q = q.trim().toLowerCase(); if (!q) return [];
+  const wb = new RegExp("(^|[^a-z0-9])" + rxEsc(q)), hits = [];
+  ENT.forEach((e, i) => { if (e.dup) return; const n = e.n.toLowerCase(), ts = e.t.toLowerCase().split("/").filter(Boolean), al = e.al.toLowerCase(); let s = 0;
+    if (ts.includes(q) || e.w.toLowerCase() === q) s = 100; else if (n === q) s = 95; else if (n.startsWith(q)) s = 80;
+    else if (wb.test(n)) s = 65; else if (al && wb.test(al)) s = 60; else if (n.includes(q)) s = 40; else if (al.includes(q)) s = 35;
+    if (s) hits.push([s + (e.kind === "wiki" ? 12 : e.kind === "state" ? 10 : e.kind === "group" ? 6 : 0) + Math.min(12, Math.log10(1 + e.mw) * 3), i]); });
+  return hits.sort((a, b) => b[0] - a[0]).slice(0, 14).map(h => h[1]);
+}
+function closeDrop(){ $("coList").hidden = true; $("coQ").setAttribute("aria-expanded", "false"); }
+function drop(){
+  const box = $("coList"), inp = $("coQ"), q = inp.value;
+  LS.hits = findCo(q); LS.hi = 0;
+  if (!q.trim()) { closeDrop(); return; }
+  box.innerHTML = LS.hits.length ? LS.hits.map((i, k) => { const e = ENT[i];
+    return `<div class="it" role="option" id="co-opt-${k}" data-e="${i}" aria-selected="${k === 0}"><span><b>${esc(e.n)}</b> ${kindTag(e)}</span><span class="gw">${e.nb ? gq(e.mw) + " IT-eq" : e.nbtm + " BTM phases"}</span><span class="r">${esc(e.kind === "state" ? `${e.nb.toLocaleString("en-US")} buildings · house view ${Y0}-${Y1} ${gq(e.house)}` : rolesTxt(e))}</span></div>`; }).join("")
+    : `<div class="none">No company or state in the census matches “${esc(q)}”. Aterio writes names its own way: try a shorter part of the name.</div>`;
+  box.hidden = false; inp.setAttribute("aria-expanded", "true");
+}
+function moveHi(d){ if (!LS.hits.length) return; LS.hi = (LS.hi + d + LS.hits.length) % LS.hits.length;
+  $("coList").querySelectorAll(".it").forEach((el, k) => el.setAttribute("aria-selected", k === LS.hi));
+  const el = $("co-opt-" + LS.hi); if (el) el.scrollIntoView({block: "nearest"}); }
+const go = h => { if (location.hash === h) route(); else location.hash = h; };
+function openEnt(i){ const e = ENT[i]; if (e.kind === "state") go("#st=" + e.st); else go(coHash(i)); }
+function openSt(st){ go("#st=" + st); }
+function pick(i){ closeDrop(); $("coQ").value = ""; $("coQ").blur(); openEnt(i); }
+
+function coAgg(e, role){
+  const keys = Array.isArray(role) ? role.filter(k => e.r[k]) : role === "all" ? Object.keys(e.r) : [role], R = new Map();
+  keys.forEach(k => (e.r[k] || []).forEach(j => { let s = R.get(j); if (!s) R.set(j, s = new Set()); s.add(k); }));
+  return aggCore(R, e.own);
+}
+// R: building index -> the roles it is counted under; own: raw names left out of the counterparties
+function aggCore(R, own){
+  const z = () => [0, 0, 0, 0, 0, 0, 0];
+  const A = {g: z(), house: 0, hy: {}, raw: {}, after: 0, undated: 0, n: R.size, nomw: 0, camps: new Map(), st: {}, cp: {},
+    base: 0, prov: new Map(), cty: new Map(), out: {aM: 0, aL: 0, rule: 0}};
+  YRS.forEach(y => { A.hy[y] = [0, 0, 0, 0]; A.raw[y] = 0; });
+  CPL.forEach(([k]) => { A.cp[k] = new Map(); });
+  R.forEach((rs, j) => {
+    const b = LU.bld[j], [c, g, mw, act, lk, fl] = b, v = (mw || 0) / FK, y = act ? String(Math.floor(act / 100)) : "", inW = !!y && +y >= Y0 && +y <= Y1;
+    if (mw == null) A.nomw++;
+    A.g[g] += v;
+    if (fl & 1) { A.house += v; if (inW && g <= 3) A.hy[y][g] += v; }
+    if ((fl & 2) && inW) A.raw[y] += v;
+    if (g >= 1 && g <= 5) { if (y && +y > Y1) A.after += v; else if (!y) A.undated += v; }
+    let cp = A.camps.get(c);
+    if (!cp) { const k = LU.camps[c]; A.camps.set(c, cp = {c, name: k[0], st: k[1], city: k[2], county: k[3], x: k[4], y: k[5], reg: k[6], cost: k[7],
+      g: z(), house: 0, n: 0, nomw: 0, roles: new Set(), acts: [], like: new Set(), ai: false, btm: false, prov: new Set(), users: new Set()}); }
+    cp.n++; cp.g[g] += v; if (fl & 1) cp.house += v; if (mw == null) cp.nomw++;
+    rs.forEach(k => cp.roles.add(k));
+    if (g >= 1 && g <= 5 && act) cp.acts.push(act);
+    if (lk && g !== 0) cp.like.add(lk);
+    if (fl & 4) cp.ai = true; if (fl & 8) cp.btm = true;
+    if (b[6] != null) cp.prov.add(b[6]); b[7].forEach(i => cp.users.add(i));
+    const s = A.st[cp.st] = A.st[cp.st] || {g: z(), house: 0}; s.g[g] += v; if (fl & 1) s.house += v;
+    // growth bookkeeping: base = operating before the window; what the house rules leave out of the dated pipeline
+    if (g === 0 && !((fl & 1) && inW)) A.base += v;
+    if (inW && (fl & 2) && !(fl & 1)) { if (g === 4) A.out.aM += v; else if (g === 5) A.out.aL += v; else A.out.rule += v; }
+    if (g !== 6) {
+      const pk = b[6] ?? -1, pr = A.prov.get(pk) || {g: z(), house: 0, n: 0}; pr.g[g] += v; pr.n++; if (fl & 1) pr.house += v; A.prov.set(pk, pr);
+      const ck = cp.st + "|" + (cp.county || ""), ct = A.cty.get(ck) || {st: cp.st, county: cp.county, g: z(), house: 0, n: 0}; ct.g[g] += v; ct.n++; if (fl & 1) ct.house += v; A.cty.set(ck, ct);
+    }
+    if (g !== 6) { const cpa = (k, i) => { if (i == null || own.has(i)) return; const o = A.cp[k].get(i) || [0, 0, 0]; o[0] += v; o[1]++; if (fl & 1) o[2] += v; A.cp[k].set(i, o); };
+      cpa("op", b[6]); new Set(b[7]).forEach(i => cpa("ten", i)); new Set(b[8]).forEach(i => cpa("bk", i)); new Set(b[9]).forEach(i => cpa("fin", i));
+      new Set(b[10]).forEach(i => cpa("pt", i)); cpa("ut", b[11]); }
+  });
+  A.list = [...A.camps.values()].map(cp => ({...cp, op: cp.g[0], uc: cp.g[1], dl: cp.g[2], aH: cp.g[3], aM: cp.g[4], aL: cp.g[5], wd: cp.g[6],
+    tot: cp.g.slice(0, 6).reduce((a, x) => a + x, 0)})).sort((a, b) => b.tot - a.tot || b.wd - a.wd || b.n - a.n);
+  return A;
+}
+function stAgg(st){ const R = new Map(), none = new Set(); LU.bld.forEach((b, j) => { if (st === "US" || LU.camps[b[0]][1] === st) R.set(j, none); }); return aggCore(R, new Set()); }
+
+/* ------------------------------------------------------------------ chart and table builders (any company or state) */
+function coYears(A){
+  const tt = y => A.hy[y].reduce((a, b) => a + b, 0), mx = Math.max(...YRS.map(y => Math.max(tt(y), A.raw[y])), 0.001) * 1.08;
+  const W = 520, H = 244, base = H - 34, top = 24, cw = (W - 6) / YRS.length, bw = cw * 0.55, ys = v => base - v / mx * (base - top);
+  let s = `<line class="gl" x1="0" x2="${W}" y1="${base}" y2="${base}"/>`;
+  YRS.forEach((y, i) => { const x = 3 + i * cw + (cw - bw) / 2, t = tt(y), rv = A.raw[y]; let acc = 0;
+    if (rv > t + 0.5) s += `<rect x="${x - 2}" y="${ys(rv)}" width="${bw + 4}" height="${base - ys(rv)}" rx="3" fill="none" stroke="var(--muted)" stroke-dasharray="3 3" data-t="${y}: Aterio dates <b>${gq(rv)}</b> IT-eq to the year before the house rules; house view ${gq(t)}"/>`;
+    const segs = HB.map((d, gi) => [d, A.hy[y][gi]]).filter(([, v]) => v > 0.05);
+    segs.forEach(([[g, l, col], v], k) => { const ya = ys(acc + v), yb = ys(acc), tt_ = `data-t="${y} · ${l}: <b>${gq(v)}</b> IT-eq (house view ${gq(t)})"`;
+      s += k === segs.length - 1 ? `<path d="${rtop(x, ya, bw, yb - ya, 3)}" fill="${col}" ${tt_}/>` : `<rect x="${x}" y="${ya + 1}" width="${bw}" height="${Math.max(0, yb - ya - 1)}" fill="${col}" ${tt_}/>`; acc += v; });
+    s += `<text class="val" x="${x + bw / 2}" y="${ys(Math.max(t, rv)) - 5}" text-anchor="middle">${t > 0.05 ? gq(t) : "–"}</text><text class="ax" x="${x + bw / 2}" y="${H - 19}" text-anchor="middle">${y}</text>`; });
+  return `<div class="legend">${HB.map(([, l, c]) => `<span><i style="background:${c}"></i>${l}</span>`).join("")}<span><i class="dash"></i>Everything Aterio dates to the year</span></div>` +
+    `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="House view by year">${s}</svg></div>`;
+}
+function cumChart(A){
+  const B = [["Operating before " + Y0, "var(--g-base)"], ["Went live in " + Y0, "var(--g-op)"], ["Under construction", "var(--g-uc)"], ["Delayed", "var(--g-dl)"], ["Announced · high", "var(--g-aH)"]];
+  const cols = [{y: String(Y0 - 1), v: [A.base, 0, 0, 0, 0], raw: A.base}], acc = [0, 0, 0, 0];
+  let accRaw = 0;
+  YRS.forEach(y => { A.hy[y].forEach((v, g) => { acc[g] += v; }); accRaw += A.raw[y]; cols.push({y, v: [A.base, ...acc], raw: A.base + accRaw}); });
+  const mx = Math.max(...cols.map(c => Math.max(sum(c.v), c.raw)), 0.001) * 1.08;
+  const W = 520, H = 244, base = H - 34, top = 24, cw = (W - 6) / cols.length, bw = cw * 0.58, ys = v => base - v / mx * (base - top);
+  let s = `<line class="gl" x1="0" x2="${W}" y1="${base}" y2="${base}"/>`;
+  cols.forEach((c, i) => { const x = 3 + i * cw + (cw - bw) / 2, t = sum(c.v); let a = 0;
+    if (c.raw > t + 0.5) s += `<rect x="${x - 2}" y="${ys(c.raw)}" width="${bw + 4}" height="${base - ys(c.raw)}" rx="3" fill="none" stroke="var(--muted)" stroke-dasharray="3 3" data-t="End-${c.y}: <b>${gq(c.raw)}</b> if everything Aterio dates to ${Y0}-${c.y} lands on time, any likelihood (house view ${gq(t)})"/>`;
+    const segs = B.map((d, k) => [d, c.v[k]]).filter(([, v]) => v > 0.05);
+    segs.forEach(([[l, col], v], k) => { const ya = ys(a + v), yb = ys(a), tt = `data-t="End-${c.y} · ${l}: <b>${gq(v)}</b> (total ${gq(t)})"`;
+      s += k === segs.length - 1 ? `<path d="${rtop(x, ya, bw, yb - ya, 3)}" fill="${col}" ${tt}/>` : `<rect x="${x}" y="${ya + 1}" width="${bw}" height="${Math.max(0, yb - ya - 1)}" fill="${col}" ${tt}/>`; a += v; });
+    s += `<text class="val" x="${x + bw / 2}" y="${ys(Math.max(t, c.raw)) - 5}" text-anchor="middle">${t > 0.05 ? gq(t) : "–"}</text>` +
+      `<text class="ax" x="${x + bw / 2}" y="${H - 19}" text-anchor="middle">${c.y}</text>` +
+      (i && A.base > 0.5 ? `<text class="ax" x="${x + bw / 2}" y="${H - 4}" text-anchor="middle">×${(t / A.base).toFixed(1)}</text>` : ""); });
+  return `<div class="legend">${B.map(([l, c]) => `<span><i style="background:${c}"></i>${l}</span>`).join("")}<span><i class="dash"></i>Everything Aterio dates, any likelihood</span></div>` +
+    `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cumulative capacity by year end">${s}</svg></div>`;
+}
+const stcLegend = () => `<div class="legend">${Object.values(STC).map(([l, c]) => `<span><i class="c" style="background:${c}"></i>${l}</span>`).join("")}</div>`;
+function coMap(list){
+  const pts = list.filter(cp => cp.x != null && cp.tot > 0.05), mx = Math.max(...pts.map(p => p.tot), 0.1), off = list.filter(cp => cp.x == null && cp.tot > 0.05).length;
+  return stcLegend() + `<div class="map"><svg viewBox="0 0 975 610" role="img" aria-label="Campus map"><use href="#usmap"/>` +
+    pts.map(cp => `<circle cx="${cp.x}" cy="${cp.y}" r="${(3 + Math.sqrt(cp.tot / mx) * 24).toFixed(1)}" fill="${STC[status(cp)][1]}" data-t="<b>${esc(cp.name)}</b> · ${esc(cp.city ? cp.city + ", " : "")}${esc(cp.st)}<br>Operating ${gq(cp.op)} · building ${gq(cp.uc)} · delayed ${gq(cp.dl)}<br>Announced high / med / low ${gq(cp.aH)} / ${gq(cp.aM)} / ${gq(cp.aL)}<br>House view 2026-30: <b>${gq(cp.house)}</b>"/>`).join("") +
+    `</svg><p class="cs">${pts.length} campuses (circle area = operating + pipeline, largest ${gq(mx)})${off ? `; ${off} outside the lower 48 or without coordinates` : ""}.</p></div>`;
+}
+function stMap(A, st){
+  if (st === "US" || !M.map[st]) return coMap(A.list);
+  return stcLegend() + `<div class="map"><svg id="stZoom" viewBox="0 0 975 610" role="img" aria-label="${esc(SN(st))} campus map">` +
+    Object.entries(M.map).map(([s, p]) => `<path class="stp${s === st ? " hl" : ""}" d="${p.d}" vector-effect="non-scaling-stroke"><title>${esc(SN(s))}</title></path>`).join("") +
+    `<g id="stDots"></g></svg><p class="cs" id="stCap"></p></div>`;
+}
+function fitStMap(A, st){
+  const svg = $("stZoom"); if (!svg) return;
+  let bb; try { bb = svg.querySelector("path.hl").getBBox(); } catch (_) { return; }
+  let w = bb.width * 1.12, h = bb.height * 1.12; const cx = bb.x + bb.width / 2, cy = bb.y + bb.height / 2;
+  if (w < h * 1.6) w = h * 1.6; else h = w / 1.6;
+  svg.setAttribute("viewBox", `${(cx - w / 2).toFixed(1)} ${(cy - h / 2).toFixed(1)} ${w.toFixed(1)} ${h.toFixed(1)}`);
+  const k = w / 975, pts = A.list.filter(cp => cp.x != null && cp.tot > 0.05).sort((a, b) => b.tot - a.tot), mx = Math.max(...pts.map(p => p.tot), 0.1);
+  $("stDots").innerHTML = pts.map(cp => `<circle cx="${cp.x}" cy="${cp.y}" r="${((3 + Math.sqrt(cp.tot / mx) * 22) * k).toFixed(2)}" fill="${STC[status(cp)][1]}" vector-effect="non-scaling-stroke" data-t="<b>${esc(cp.name)}</b> · ${esc([cp.city, cp.county].filter(Boolean).join(", "))}<br>Operator: ${esc([...cp.prov].map(i => ENT[R0 + i].n).join(", ") || "–")}<br>Operating ${gq(cp.op)} · building ${gq(cp.uc)} · delayed ${gq(cp.dl)}<br>Announced high / med / low ${gq(cp.aH)} / ${gq(cp.aM)} / ${gq(cp.aL)}<br>House view ${Y0}-${Y1}: <b>${gq(cp.house)}</b>"/>`).join("");
+  $("stCap").textContent = `${pts.length} campuses (circle area = operating + pipeline, largest ${gq(mx)}).`;
+}
+function coCounter(A){
+  const blocks = CPL.map(([k, lab]) => { const m = [...A.cp[k].entries()].sort((a, b) => b[1][0] - a[1][0] || b[1][1] - a[1][1]); if (!m.length) return "";
+    return `<div><div class="lb">${lab}</div><ol>${m.slice(0, 6).map(([i, [v, n]]) => `<li><a class="ent" href="#" data-e="${tgt(i)}">${esc(ENT[R0 + i].n)}</a> <span class="why">${gq(v)} · ${n} bldg${n > 1 ? "s" : ""}</span></li>`).join("")}</ol>${m.length > 6 ? `<div class="why">+ ${m.length - 6} more</div>` : ""}</div>`; }).filter(Boolean);
+  return blocks.length ? `<div class="cpl">${blocks.join("")}</div>` : `<p class="why">No other company named on these buildings.</p>`;
+}
+function coStates(A){
+  const rows = Object.entries(A.st).map(([st, s]) => ({st, ...s, t: s.g.slice(0, 6).reduce((a, x) => a + x, 0)})).filter(r => r.t > 0.05).sort((a, b) => b.house - a.house || b.t - a.t);
+  if (!rows.length) return `<p class="why">No MW recorded.</p>`;
+  const top = rows.slice(0, 15), rest = rows.slice(15), c = v => `<td class="n">${gw(v)}</td>`;
+  const R = (lab, rs) => `<tr><td>${lab}</td>${c(sum(rs.map(r => r.g[0])))}${c(sum(rs.map(r => r.g[1] + r.g[2])))}${c(sum(rs.map(r => r.g[3])))}${c(sum(rs.map(r => r.g[4] + r.g[5])))}<td class="n"><b>${gw(sum(rs.map(r => r.house)))}</b></td></tr>`;
+  return `<table><tr><th>State</th><th class="n">Operating</th><th class="n">Building + delayed</th><th class="n">Ann. high</th><th class="n">Ann. med/low</th><th class="n">House ${Y0}-${String(Y1).slice(2)}</th></tr>` +
+    top.map(r => R(`<a class="ent" href="#" data-st="${r.st}" title="Open the state view">${esc(SN(r.st))}</a>`, [r])).join("") +
+    (rest.length ? R(`<span class="why">Other ${rest.length} states</span>`, rest) : "") + `</table>`;
+}
+const LKN = ["", "High", "Medium", "Low"];
+function campRange(cp){ if (!cp.acts.length) return "–"; const a = Math.min(...cp.acts), b = Math.max(...cp.acts); return a === b ? ymS(a) : `${ymS(a)} → ${ymS(b)}`; }
+function coCamps(e, A, noRole){
+  const L2 = A.list, rows = L2.slice(0, 300);
+  const names = s => [...s].filter(i => !e.own.has(i)).map(i => ENT[R0 + i].n);
+  return `<table><tr><th>Campus</th><th>Where</th>${noRole ? "" : "<th>Its role</th>"}<th>Operator</th><th>Tenants</th><th class="n">Operating</th><th class="n">Building</th><th class="n">Delayed</th><th class="n">Ann. high</th><th class="n">Ann. med</th><th class="n">Ann. low</th><th class="n">House ${Y0}-${String(Y1).slice(2)}</th><th class="n">Activation</th><th>Likelihood</th><th>In registry</th><th class="n">Campus cost</th><th>Flags</th></tr>` +
+    rows.map(cp => `<tr><td><b>${esc(cp.name)}</b><div class="why">${cp.n} bldg${cp.n > 1 ? "s" : ""}${cp.nomw ? ` · ${cp.nomw} without MW` : ""}${cp.wd > 0.05 ? ` · withdrawn ${gq(cp.wd)}` : ""}</div></td>` +
+      `<td class="why">${esc([cp.city, cp.county].filter(Boolean).join(", "))}${cp.city || cp.county ? ", " : ""}${esc(cp.st)}</td>` +
+      (noRole ? "" : `<td>${[...cp.roles].map(k => `<span class="tag">${RL[k][1]}</span>`).join(" ")}</td>`) +
+      `<td class="why">${esc(cp.roles.has("op") ? "itself" : names(cp.prov).join(", ") || "–")}</td><td class="why">${esc(names(cp.users).join(", ") || (cp.roles.has("ten") ? "itself" : "–"))}</td>` +
+      ["op", "uc", "dl", "aH", "aM", "aL"].map(g => `<td class="n">${cp[g] > 0.05 ? gq(cp[g]) : "–"}</td>`).join("") +
+      `<td class="n"><b>${cp.house > 0.05 ? gq(cp.house) : "–"}</b></td><td class="n">${campRange(cp)}</td>` +
+      `<td>${esc([...cp.like].sort().map(x => LKN[x]).join("/") || "–")}</td><td class="why">${cp.reg ? "✓ " + esc(cp.reg) : "–"}</td>` +
+      `<td class="n">${cp.cost != null ? "$" + (cp.cost >= 10 ? cp.cost.toFixed(0) : cp.cost.toFixed(1)) + "bn" : "–"}</td>` +
+      `<td>${cp.ai ? '<span class="tag">AI</span> ' : ""}${cp.btm ? '<span class="tag">on-site power</span>' : ""}</td></tr>`).join("") + `</table>` +
+    (L2.length > 300 ? `<p class="why" style="padding:8px">Showing the largest 300 of ${L2.length} campuses; the CSV has all of them.</p>` : "");
+}
+function coCsv(e, A){
+  const q = v => { v = String(v ?? ""); return /[",\n]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v; };
+  const names = s => [...s].filter(i => !e.own.has(i)).map(i => ENT[R0 + i].n).join("; ");
+  const head = ["selection", "campus", "city", "county", "state", "roles", "operator", "tenants", "buildings", "operating_mw_it", "building_mw_it", "delayed_mw_it", "ann_high_mw_it", "ann_med_mw_it", "ann_low_mw_it", "withdrawn_mw_it", "house_2026_30_mw_it", "activation_first", "activation_last", "likelihood", "in_registry", "campus_cost_usd_bn"];
+  const rows = A.list.map(cp => [e.n, cp.name, cp.city, cp.county, cp.st, [...cp.roles].map(k => RL[k][1]).join("; "), cp.roles.has("op") ? "itself" : names(cp.prov), names(cp.users), cp.n,
+    ...["op", "uc", "dl", "aH", "aM", "aL", "wd", "house"].map(g => cp[g].toFixed(1)), cp.acts.length ? ymS(Math.min(...cp.acts)) : "", cp.acts.length ? ymS(Math.max(...cp.acts)) : "",
+    [...cp.like].sort().map(x => LKN[x]).join("/"), cp.reg, cp.cost ?? ""]);
+  const blob = new Blob(["﻿" + [head, ...rows].map(r => r.map(q).join(",")).join("\n")], {type: "text/csv;charset=utf-8"});
+  const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `aterio_${e.n.replace(/[^A-Za-z0-9]+/g, "_")}_${M.asof}.csv`; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
+}
+function coBtm(e){
+  const R = new Map(); Object.entries(e.b).forEach(([k, a]) => a.forEach(j => { let s = R.get(j); if (!s) R.set(j, s = new Set()); s.add(k); }));
+  if (!R.size) return "";
+  const rows = [...R.entries()].map(([j, rs]) => ({b: LU.btm[j], rs})).sort((a, b) => (b.b[5] || 0) - (a.b[5] || 0));
+  const bySt = {}; rows.forEach(({b}) => { const s = LU.btmStages[b[4]]; bySt[s] = (bySt[s] || 0) + (b[5] || 0); });
+  const nm = ids => ids.filter(i => !e.own.has(i)).map(i => ENT[R0 + i].n).join(", ");
+  return `<p class="cs">Aterio's behind-the-meter inventory: nameplate MW of on-site generation phases. A different basis from data-center MW, so never added to the numbers above. ${Object.entries(bySt).map(([s, v]) => `${esc(s)} ${f0(v)} MW`).join(" · ")}.</p>` +
+    `<div class="tbl-wrap" style="max-height:440px"><table><tr><th>Project · phase</th><th>Where</th><th>Its role</th><th>Stage</th><th class="n">Nameplate MW</th><th>Technology · fuel</th><th class="n">Activation</th><th>Developer</th><th>Customers</th></tr>` +
+    rows.map(({b, rs}) => `<tr><td><b>${esc(b[0])}</b><div class="why">${esc(b[1])}</div></td><td class="why">${esc([b[3], b[2]].filter(Boolean).join(", "))}</td><td>${[...rs].map(k => `<span class="tag">${BRL[k]}</span>`).join(" ")}</td>` +
+      `<td>${esc(LU.btmStages[b[4]])}</td><td class="n">${b[5] != null ? f0(b[5]) : "–"}</td><td class="why">${esc([b[6], b[7]].filter(Boolean).join(" · "))}</td><td class="n">${ymS(b[8]) || "–"}</td>` +
+      `<td class="why">${esc(nm(b[9]) || (rs.has("dev") ? "itself" : "–"))}</td><td class="why">${esc(nm(b[12]) || (rs.has("cust") ? "itself" : "–"))}</td></tr>`).join("") + `</table></div>`;
+}
+function stStory(A, nm, st, U){
+  const went = sum(YRS.map(y => A.hy[y][0])), uc = sum(YRS.map(y => A.hy[y][1])), dl = sum(YRS.map(y => A.hy[y][2])), aH = sum(YRS.map(y => A.hy[y][3])), end = A.base + A.house;
+  const peak = YRS.reduce((b, y) => sum(A.hy[y]) > sum(A.hy[b]) ? y : b, YRS[0]);
+  const anon = ([k]) => k < 0 || PLACEHOLDER.test(ENT[R0 + k].n);
+  const ops = [...A.prov.entries()].filter(([k, p]) => !anon([k]) && p.house > 0.05).sort((a, b) => b[1].house - a[1].house).slice(0, 3);
+  const unnamed = sum([...A.prov.entries()].filter(anon).map(([, p]) => p.house));
+  let t = `<b>${esc(nm)}</b> has <b>${gq(A.g[0])}</b> operating today (${gq(A.base)} switched on before ${Y0}). Under the house rules it adds <b>${gq(A.house)}</b> in ${Y0}-${Y1}` +
+    (st !== "US" && U.house ? ` (${pc(A.house / U.house)} of the US house view)` : "") + `, reaching about <b>${gq(end)}</b> by end-${Y1}`;
+  if (A.base > 0.5) t += ` — ${(end / A.base).toFixed(1)}× end-${Y0 - 1}, about ${Math.round((Math.pow(end / A.base, 1 / (Y1 - Y0 + 1)) - 1) * 100)}% a year`;
+  t += `. Of the adds, ${gq(went)} already went live in ${Y0}, ${gq(uc)} is under construction, ${gq(dl)} delayed and ${gq(aH)} announced with High likelihood; the biggest year is ${peak} (${gq(sum(A.hy[peak]))}).`;
+  if (ops.length) t += ` The largest named builders: ${ops.map(([k, p]) => `${esc(ENT[R0 + k].n)} ${gq(p.house)}`).join(", ")} — ${pc(sum(ops.map(([, p]) => p.house)) / A.house)} of the adds` +
+    (unnamed > 0.5 ? `; Aterio does not name the operator of another ${gq(unnamed)} (${pc(unnamed / A.house)})` : "") + ".";
+  const ml = A.out.aM + A.out.aL;
+  if (ml > 0.5 || A.out.rule > 0.5 || A.after > 0.5) t += ` Left out of the house view: ${gq(ml)} announced with Medium or Low likelihood dated ${Y0}-${Y1}` +
+    (A.out.rule > 0.5 ? `, ${gq(A.out.rule)} dropped by the low-likelihood / no-tenant rule` : "") + (A.after > 0.5 ? `, ${gq(A.after)} of pipeline dated after ${Y1}` : "") + ".";
+  return t;
+}
+function stOps(A){
+  const rows = [...A.prov.entries()].map(([k, p]) => ({k, ...p, live: sum(p.g.slice(0, 6))})).filter(r => r.live > 0.05 || r.house > 0.05).sort((a, b) => b.house - a.house || b.live - a.live);
+  const top = rows.slice(0, 15), rest = rows.slice(15), c = v => `<td class="n">${gw(v)}</td>`, S_ = (f, rs) => sum(rs.map(f));
+  const nm = k => k < 0 ? `<span class="why">operator not named</span>` : PLACEHOLDER.test(ENT[R0 + k].n) ? `<span class="why" title="Aterio writes “${esc(ENT[R0 + k].n)}”">operator not named</span>`
+    : `<a class="ent" href="#" data-e="${tgt(k)}">${esc(ENT[R0 + k].n)}</a>`;
+  const row = (lab, rs, b) => `<tr${b ? ' class="tot"' : ""}><td>${lab}</td>${c(S_(r => r.g[0], rs))}${c(S_(r => r.g[1] + r.g[2], rs))}${c(S_(r => r.g[3], rs))}${c(S_(r => r.g[4] + r.g[5], rs))}<td class="n"><b>${gw(S_(r => r.house, rs))}</b></td><td class="n">${A.house > 0.05 ? pc(S_(r => r.house, rs) / A.house) : "–"}</td></tr>`;
+  return `<table><tr><th>Operator</th><th class="n">Operating</th><th class="n">Building + delayed</th><th class="n">Ann. high</th><th class="n">Ann. med/low</th><th class="n">House ${Y0}-${String(Y1).slice(2)}</th><th class="n">Share</th></tr>` +
+    top.map(r => row(nm(r.k), [r])).join("") + (rest.length ? row(`<span class="why">Other ${rest.length} operators</span>`, rest) : "") + row("Total", rows, true) + `</table>`;
+}
+function stGeo(A, st){
+  const us = st === "US", c = v => `<td class="n">${gw(v)}</td>`;
+  const rows = (us ? Object.entries(A.st).map(([s, x]) => ({lab: `<a class="ent" href="#" data-st="${s}">${esc(SN(s))}</a>`, g: x.g, house: x.house}))
+    : [...A.cty.values()].map(x => ({lab: esc(x.county || "County not given"), g: x.g, house: x.house}))).map(r => ({...r, live: sum(r.g.slice(0, 6))}))
+    .filter(r => r.live > 0.05 || r.house > 0.05).sort((a, b) => b.house - a.house || b.live - a.live);
+  const top = rows.slice(0, 20), rest = rows.slice(20);
+  const row = (lab, rs) => `<tr><td>${lab}</td>${c(sum(rs.map(r => r.g[0])))}${c(sum(rs.map(r => r.g[1] + r.g[2])))}${c(sum(rs.map(r => r.g[3])))}<td class="n"><b>${gw(sum(rs.map(r => r.house)))}</b></td><td class="n">${A.house > 0.05 ? pc(sum(rs.map(r => r.house)) / A.house) : "–"}</td></tr>`;
+  return `<table><tr><th>${us ? "State" : "County"}</th><th class="n">Operating</th><th class="n">Building + delayed</th><th class="n">Ann. high</th><th class="n">House ${Y0}-${String(Y1).slice(2)}</th><th class="n">Share of adds</th></tr>` +
+    top.map(r => row(r.lab, [r])).join("") + (rest.length ? row(`<span class="why">Other ${rest.length} ${us ? "states" : "counties"}</span>`, rest) : "") + `</table>`;
+}
+function stCounter(A){
+  const cats = [["ten", "Named tenants"], ["fin", "Financiers"], ["bk", "Backers of the developer"], ["pt", "Power, equipment, construction"], ["ut", "Utilities"]];
+  const blocks = cats.map(([k, lab]) => { const m = [...A.cp[k].entries()].sort((a, b) => b[1][2] - a[1][2] || b[1][0] - a[1][0]); if (!m.length) return "";
+    return `<div><div class="lb">${lab}</div><ol>${m.slice(0, 6).map(([i, [v, n, h]]) => `<li><a class="ent" href="#" data-e="${tgt(i)}">${esc(ENT[R0 + i].n)}</a> <span class="why">adds ${gq(h)} · on ${gq(v)}, ${n} bldg${n > 1 ? "s" : ""}</span></li>`).join("")}</ol>${m.length > 6 ? `<div class="why">+ ${m.length - 6} more</div>` : ""}</div>`; }).filter(Boolean);
+  return blocks.length ? `<div class="cpl">${blocks.join("")}</div>` : `<p class="why">No other company named.</p>`;
+}
+
+/* ------------------------------------------------------------------ view furniture */
+const kpi = (lab, v, sub, cls) => `<div class="kpi${cls ? " " + cls : ""}"><span class="kl">${lab}</span><strong>${v}</strong>${sub ? `<small>${sub}</small>` : ""}</div>`;
+const vhead = (kick, title, small, sub, right) => `<div class="vhead"><div><p class="kick">${kick}</p><h2>${esc(title)}${small ? `<small>${esc(small)}</small>` : ""}</h2>${sub ? `<p class="vsub">${sub}</p>` : ""}</div>${right ? `<div class="vright">${right}</div>` : ""}</div>`;
+const panel = (title, sub, body, extra) => `<section class="panel"><div class="ph"><h3>${title}</h3>${extra || ""}</div>${sub ? `<p class="cs">${sub}</p>` : ""}${body}</section>`;
+const tabsHTML = items => `<div class="tabs"><div class="tabbar" role="tablist">${items.map(([k, l], j) => `<button type="button" role="tab" data-tab="${k}" aria-selected="${j === 0}">${esc(l)}</button>`).join("")}</div>` +
+  items.map(([k, , h], j) => `<div class="tabpane" role="tabpanel" data-pane="${k}"${j ? " hidden" : ""}>${h}</div>`).join("") + `</div>`;
+const note = t => `<details class="note"><summary>How to read these numbers</summary><p>${t}</p></details>`;
+function setView(key, crumb){
+  document.querySelectorAll("#nav a").forEach(a => { if (a.dataset.k === key) a.setAttribute("aria-current", "page"); else a.removeAttribute("aria-current"); });
+  $("crumb").textContent = "Research / DC build-out" + (crumb ? " / " + crumb : "");
+  document.title = (crumb ? crumb + " · " : "") + "Hyperscaler DC Build";
+  const cur = document.querySelector("#nav a[aria-current]");
+  if (cur && innerWidth <= 1020) { const side = cur.closest(".side"); side.scrollLeft = cur.offsetLeft - side.clientWidth / 2 + cur.offsetWidth / 2; }
+}
+
+/* ------------------------------------------------------------------ view: the four compared */
+function showFour(){
+  LS.e = null; LS.st = null; setView("four", "The four hyperscalers");
+  $("view").innerHTML = vhead("Hyperscalers · self-built + recorded leases", "Amazon, Google, Meta and Microsoft", "", `Aterio census as of ${esc(M.asof)} · GW IT-eq · house view = house rules of ${esc(M.rules_decided)}`,
+      `Click a company card to open its full view. Leases are what Aterio recorded, so leased GW is a floor. The method and the Bernstein cross-check sit under <a href="#method">Reference</a>.`) +
+    `<div class="toolbar"><span class="lbl">Count</span><span class="seg" id="segRole"></span><span class="lbl" style="margin-left:8px">Map and states</span><span class="seg" id="segMetric"></span></div>` +
+    `<div class="kpis" id="fourKpi"></div><div class="cards" id="cards"></div>` +
+    panel("House view: GW added per year, 2026-30", `<span id="multLead"></span>`, `<div class="legend" id="multLegend"></div><div class="mult" id="mult"></div>`) +
+    `<div class="grid2">` + panel("Where they are building", `<span id="mapLead"></span>`, `<div class="filters"><span class="seg" id="segMap"></span></div><div class="legend" id="mapLegend"></div><div class="map" id="fourMap"></div>`) +
+    panel("By state", `<span id="stLead"></span>`, `<div class="tscroll"><table id="stTable"></table></div>`) + `</div>` +
+    panel("Everything Aterio records, by stage and likelihood", "Any date, before the house rules. GW IT-eq. Hover a segment for its GW.", `<div class="legend" id="stkLegend"></div><div id="stk"></div>`) +
+    panel("Campuses", `<span id="campLead"></span>`, `<div class="filters"><span class="seg" id="segCo"></span><input id="q" type="search" placeholder="Filter campus, state, city, provider…" aria-label="Filter campuses"></div><div class="tbl-wrap"><table id="campTable"></table></div>`) +
+    `<a class="panel xlink" href="#method"><div><h3>Cross-check: Bernstein's player table</h3><p class="cs" style="margin:3px 0 0">Bernstein (2026-11-06) puts operating and under-construction GW by player on a later Aterio export. Where our figures sit against theirs, and why.</p></div><span class="go">Open the cross-check →</span></a>`;
+  $("q").value = S.q; $("q").oninput = e => { S.q = e.target.value; camps(); };
+  renderFour();
+}
+function renderFour(){
+  seg($("segRole"), [["both", "Self-built + leased"], ["self", "Self-built"], ["leased", "Leased"]], S.role, k => { S.role = k; renderFour(); });
+  seg($("segMetric"), [["house", "House view 2026-30"], ["pipe", "Whole pipeline"], ["all", "Operating + pipeline"]], S.metric, k => { S.metric = k; fourMap(); states(); });
+  seg($("segCo"), C.map(c => [c.id, c.name]), S.co, k => { S.co = k; camps(); });
+  fourKpi(); cards(); mult(); fourMap(); states(); stack(); camps();
+}
+function fourKpi(){
+  const sH = sum(C.map(houseOf)), op = sum(C.map(c => tot(c, "op"))), uc = sum(C.map(c => tot(c, "uc"))), dl = sum(C.map(c => tot(c, "dl")));
+  const agg = {}; C.forEach(c => c.campuses.filter(campOk).forEach(cp => { agg[cp.st] = (agg[cp.st] || 0) + cp.house; }));
+  const top2 = Object.entries(agg).sort((a, b) => b[1] - a[1]).slice(0, 2), t2 = sum(top2.map(x => x[1]));
+  $("fourKpi").innerHTML = kpi(`House view ${Y0}-${Y1}, the four`, `${f1(sH)}<small>GW</small>`, `${roleTxt()}; a shared building counts for each tenant`, "lead") +
+    kpi("Share of the US house view", pc(sH / M.us.house), `of ${f1(M.us.house)} GW for the whole census`) +
+    kpi("Operating today", `${f1(op)}<small>GW</small>`, "the four, same basis") +
+    kpi("Under construction", `${f1(uc)}<small>GW</small>`, `plus delayed ${f1(dl)} GW`) +
+    kpi("Top two states", top2.length ? pc(t2 / sH) : "–", top2.length ? `${top2.map(([s, v]) => `${esc(SN(s))} ${f1(v)}`).join(" + ")} GW of the house view` : "");
+}
+function cards(){
+  $("cards").innerHTML = C.map(c => { const h = houseOf(c), i = FOURI[c.id], parts = HB.map(([g, l, col]) => [l, col, houseBy(c, g)]), pt = sum(parts.map(p => p[2])) || 1;
+    return `<a class="hcard" href="${i >= 0 ? coHash(i) : "#four"}" style="--cc:var(--c-${c.id})"><div class="hc-top"><span class="hc-name">${esc(c.name)}</span><span class="hc-tick">${esc(c.tick)}</span></div>` +
+      `<div class="hc-k">House view 2026-30</div><div class="hc-v">${f1(h)}<small>GW IT-eq</small></div>` +
+      `<div class="mini">${parts.filter(p => p[2] > 0.005).map(([l, col, v]) => `<span style="width:${v / pt * 100}%;background:${col}" data-t="<b>${esc(c.name)}</b> house view · ${l}: <b>${f1(v)} GW</b> (${pc(v / pt)})"></span>`).join("")}</div>` +
+      `<dl><dt>Operating today</dt><dd>${f1(tot(c, "op"))}</dd><dt>Under construction</dt><dd>${f1(tot(c, "uc"))}</dd><dt>Delayed</dt><dd>${f1(tot(c, "dl"))}</dd>` +
+      `<dt>Announced high, any date</dt><dd>${f1(tot(c, "aH"))}</dd>` +
+      (S.role === "both" ? `<dt>Leased share of house view</dt><dd>${c.house ? pc(c.house_leased / c.house) : "–"}</dd>` : "") +
+      `<dt>Campuses · states</dt><dd>${c.n_campuses} · ${c.states.length}</dd></dl><span class="hc-go">Open ${esc(c.name)} →</span></a>`; }).join("");
+}
+function mult(){
+  $("multLegend").innerHTML = HB.map(([k, l, c]) => `<span><i style="background:${c}"></i>${l}</span>`).join("") + (S.role === "both" ? `<span><i class="dash"></i>Everything Aterio dates to the year (no filter)</span>` : "");
+  const val = (c, y, g) => roles().reduce((a, r) => a + (c.house_by[y][r][g] || 0), 0);
+  const ytot = (c, y) => HB.reduce((a, [g]) => a + val(c, y, g), 0);
+  const mx = Math.max(...C.flatMap(c => YRS.map(y => Math.max(ytot(c, y), S.role === "both" ? c.raw_by[y] : 0))), 0.1) * 1.05;
+  const W = 300, H = 200, base = H - 20, top = 26, cw = (W - 6) / YRS.length, bw = cw * 0.62, ys = v => base - v / mx * (base - top);
+  $("multLead").textContent = `Same y-axis for the four. Bars = the house view (${roleTxt()}); the dashed box = everything Aterio dates to that year before the rules. Aterio's dates have slipped export after export, so read 2028-30 as an upper path.`;
+  $("mult").innerHTML = C.map(c => { let s = `<line class="gl" x1="0" x2="${W}" y1="${base}" y2="${base}"/>`;
+    YRS.forEach((y, i) => { const x = 3 + i * cw + (cw - bw) / 2; let acc = 0; const t = ytot(c, y), rv = c.raw_by[y];
+      if (S.role === "both" && rv > t + 0.02) s += `<rect x="${x - 2}" y="${ys(rv)}" width="${bw + 4}" height="${base - ys(rv)}" rx="3" fill="none" stroke="var(--muted)" stroke-dasharray="3 3" data-t="${esc(c.name)} ${y}: Aterio dates <b>${f1(rv)} GW</b> to the year; house view ${f1(t)}"/>`;
+      const segs = HB.filter(([g]) => val(c, y, g) > 0.003);
+      segs.forEach(([g, l, col], j) => { const v = val(c, y, g), ya = ys(acc + v), yb = ys(acc), last = j === segs.length - 1, tt = `data-t="${esc(c.name)} ${y} · ${l}: <b>${f1(v)} GW</b> (house view ${f1(t)})"`;
+        s += last ? `<path d="${rtop(x, ya, bw, yb - ya, 3)}" fill="${col}" ${tt}/>` : `<rect x="${x}" y="${ya + 1}" width="${bw}" height="${Math.max(0, yb - ya - 1)}" fill="${col}" ${tt}/>`; acc += v; });
+      s += `<text class="val" x="${x + bw / 2}" y="${ys(Math.max(t, S.role === "both" ? rv : 0)) - 5}" text-anchor="middle">${f1(t)}</text><text class="ax" x="${x + bw / 2}" y="${H - 5}" text-anchor="middle">${y}</text>`; });
+    return `<div><h4><i class="nd" style="background:var(--c-${c.id})"></i>${esc(c.name)}</h4><p class="cs">${f1(houseOf(c))} GW in 2026-30</p><div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(c.name)} house view by year">${s}</svg></div></div>`; }).join("");
+}
+function fourMap(){
+  const all = C.flatMap(c => c.campuses.filter(cp => campOk(cp) && cp.x != null).map(cp => ({c, cp, v: cv(cp)}))).filter(p => p.v > 0.0005);
+  const mxv = Math.max(...all.map(p => p.v), 0.1), rr = v => 2.5 + Math.sqrt(v / mxv) * 24, sel = S.mapCo;
+  const pts = all.filter(p => sel === "all" || p.c.id === sel).sort((a, b) => b.v - a.v), tv = sum(pts.map(p => p.v));
+  seg($("segMap"), [["all", "All four"], ...C.map(c => [c.id, c.name])], sel, k => { S.mapCo = k; fourMap(); });
+  $("mapLegend").innerHTML = sel === "all" ? C.map(c => `<span><i class="c" style="background:var(--c-${c.id})"></i>${esc(c.name)}</span>`).join("") : Object.values(STC).map(([l, c]) => `<span><i class="c" style="background:${c}"></i>${l}</span>`).join("");
+  $("mapLead").textContent = `${pts.length} campuses · ${f1(tv)} GW IT-eq, ${METRIC[S.metric]}. Circle area = GW, one scale for all four (largest ${f1(mxv)} GW). ${sel === "all" ? "Coloured by company: pick one to colour by stage." : "Coloured by where most of the campus sits."}`;
+  $("fourMap").innerHTML = `<svg viewBox="0 0 975 610" role="img" aria-label="Campus map of the four hyperscalers"><use href="#usmap"/>` +
+    pts.map(({c, cp, v}) => `<circle cx="${cp.x}" cy="${cp.y}" r="${rr(v).toFixed(1)}" fill="${sel === "all" ? `var(--c-${c.id})` : STC[status(cp)][1]}" data-t="<b>${esc(c.name)}</b> · ${esc(cp.name)}<br>${esc(cp.city ? cp.city + ", " : "")}${esc(cp.st)} · ${cp.role === "self" ? "self-built" : "leased from " + esc(cp.prov)}${cp.users ? "<br>Tenants: " + esc(cp.users) : ""}<br>Operating ${f1(cp.op)} · building ${f1(cp.uc)} · delayed ${f1(cp.dl)} · announced H/M/L ${f1(cp.aH)}/${f1(cp.aM)}/${f1(cp.aL)} GW<br>House view 2026-30: <b>${f1(cp.house)} GW</b>${cp.hy ? " (" + cp.hy[0] + (cp.hy[1] !== cp.hy[0] ? "-" + cp.hy[1] : "") + ")" : ""}${cp.like ? " · likelihood " + esc(cp.like) : ""}"/>`).join("") + `</svg>`;
+}
+function states(){
+  const agg = {};
+  C.forEach(c => c.campuses.filter(campOk).forEach(cp => { const r = agg[cp.st] = agg[cp.st] || {}; r[c.id] = (r[c.id] || 0) + cv(cp); }));
+  const rows = Object.entries(agg).map(([st, r]) => ({st, ...r, t: C.reduce((a, c) => a + (r[c.id] || 0), 0)})).filter(r => r.t > 0.0005).sort((a, b) => b.t - a.t);
+  const mx = Math.max(...rows.flatMap(r => C.map(c => r[c.id] || 0)), 0.1), top = rows.slice(0, 15), rest = rows.slice(15), all = sum(rows.map(r => r.t));
+  const cell = v => `<td class="n db"><i style="width:${(v || 0) / mx * 88}%"></i><span>${v > 0.0005 ? f1(v) : "–"}</span></td>`;
+  $("stLead").textContent = `GW IT-eq, ${METRIC[S.metric]}, ${roleTxt()}. Top 15 states by the four combined; shading compares cells. Click a state to open it.`;
+  $("stTable").innerHTML = `<tr><th>State</th>${C.map(c => `<th class="n">${esc(c.tick)}</th>`).join("")}<th class="n">Four</th><th class="n">Share</th></tr>` +
+    top.map(r => `<tr><td><a class="ent" href="#" data-st="${r.st}">${esc(SN(r.st))}</a></td>${C.map(c => cell(r[c.id])).join("")}<td class="n"><b>${f1(r.t)}</b></td><td class="n">${pc(r.t / all)}</td></tr>`).join("") +
+    (rest.length ? `<tr><td class="why">Other ${rest.length} states</td>${C.map(c => `<td class="n">${f1(sum(rest.map(r => r[c.id] || 0)))}</td>`).join("")}<td class="n">${f1(sum(rest.map(r => r.t)))}</td><td class="n">${pc(sum(rest.map(r => r.t)) / all)}</td></tr>` : "") +
+    `<tr class="tot"><td>US</td>${C.map(c => `<td class="n">${f1(sum(rows.map(r => r[c.id] || 0)))}</td>`).join("")}<td class="n">${f1(all)}</td><td></td></tr>`;
+}
+function stack(){
+  $("stkLegend").innerHTML = G.map(([k, l, c]) => `<span><i style="background:${c}"></i>${l}</span>`).join("");
+  const totals = C.map(c => G.reduce((a, [g]) => a + tot(c, g), 0)), mx = Math.max(...totals, 0.1);
+  $("stk").innerHTML = C.map((c, i) => `<div class="crow"><span class="nm"><i class="nd" style="background:var(--c-${c.id})"></i>${esc(c.name)}</span><div class="stk" style="width:${totals[i] / mx * 100}%">` +
+    G.map(([g, l, col]) => { const v = tot(c, g); return v > 0 ? `<span style="width:${v / totals[i] * 100}%;background:${col}" data-t="<b>${esc(c.name)}</b> · ${l}: <b>${f1(v)} GW</b> IT-eq (${pc(v / totals[i])})"></span>` : ""; }).join("") +
+    `</div><span class="tv">${f1(totals[i])}</span></div>`).join("");
+}
+function camps(){
+  const c = C.find(x => x.id === S.co), q = S.q.toLowerCase();
+  const list = c.campuses.filter(cp => campOk(cp) && (!q || [cp.name, cp.st, SN(cp.st), cp.city, cp.county, cp.prov, cp.users].join(" ").toLowerCase().includes(q)));
+  $("campLead").textContent = `${c.name}: ${list.length} campus rows (${roleTxt()}), largest first by everything Aterio records. GW IT-eq.${c.nomw ? ` ${c.nomw} of its buildings carry no MW in Aterio and count as zero.` : ""}`;
+  $("campTable").innerHTML = `<tr><th>Campus</th><th>Where</th><th>Role</th><th class="n">Operating</th><th class="n">Building</th><th class="n">Delayed</th><th class="n">Ann. high</th><th class="n">Ann. med</th><th class="n">Ann. low</th><th class="n">House 26-30</th><th class="n">Dates</th><th>Likelihood</th><th>Flags</th></tr>` +
+    list.slice(0, 400).map(cp => `<tr><td><b>${esc(cp.name)}</b><div class="why">${cp.n} bldg${cp.n > 1 ? "s" : ""}${cp.nomw ? ` · ${cp.nomw} without MW` : ""}</div></td><td class="why">${esc([cp.city, cp.county].filter(Boolean).join(", "))}${cp.city || cp.county ? ", " : ""}${esc(cp.st)}</td>` +
+      `<td>${cp.role === "self" ? `<span class="tag">self-built</span>` : `<span class="tag">leased</span><div class="why">${esc(cp.prov)}${cp.shared ? ` · shared: ${esc(cp.users)}` : ""}</div>`}</td>` +
+      ["op", "uc", "dl", "aH", "aM", "aL"].map(g => `<td class="n">${cp[g] > 0.0005 ? f1(cp[g]) : "–"}</td>`).join("") +
+      `<td class="n"><b>${cp.house > 0.0005 ? f1(cp.house) : "–"}</b></td><td class="n">${cp.py ? cp.py[0] + (cp.py[1] !== cp.py[0] ? "-" + cp.py[1] : "") : "–"}</td><td>${esc(cp.like || "–")}</td>` +
+      `<td>${cp.ai ? '<span class="tag">AI</span> ' : ""}${cp.btm ? '<span class="tag">on-site power</span>' : ""}</td></tr>`).join("");
+}
+
+/* ------------------------------------------------------------------ view: one company (any name in the census; the four default to self-built + leased) */
+function showCo(i){
+  const e = ENT[i]; LS.e = i; LS.st = null;
+  const four = e.kind === "wiki" && FOUR.has(e.t), rk = Object.keys(e.r);
+  const opts = [...(four && (e.r.op || e.r.ten) ? [["sl", "Self-built + leased"]] : []), ["all", `All roles (${e.nb})`], ...rk.map(k => [k, `${RL[k][0]} (${new Set(e.r[k]).size})`])];
+  let role = LS.role; if (!opts.some(o => o[0] === role)) role = opts[0][0]; LS.role = role;
+  const A = coAgg(e, role === "sl" ? ["op", "ten"] : role), th = e.w && LU.th[e.w];
+  const cov = e.kind === "raw" ? [...new Set(coveredBy[i - R0] || [])].filter(x => x !== i) : [];
+  setView("e:" + i, e.n);
+  let wk = "";
+  if (e.kind === "wiki") wk = `<a href="../index.html#${esc(e.w)}">Wiki page: ${esc(e.w)}</a>${th ? ` · ${esc(th)}` : ""}`;
+  else if (e.kind === "group") wk = `Every name Aterio carries under ${esc(e.t)}: ${esc(e.al)}.` + (e.w ? ` <a href="../index.html#${esc(e.w)}">Wiki page</a>` : "");
+  else wk = `Name as Aterio writes it.${e.w ? ` <a href="../index.html#${esc(e.w)}">Wiki page: ${esc(e.w)}</a>${th ? ` · ${esc(th)}` : ""}` : ""}` +
+    (cov.length ? ` Part of ${cov.map(x => `<a class="ent" href="#" data-e="${x}">${esc(ENT[x].n)}</a>`).join(", ")}, which also counts its other names.` : "");
+  const kick = four ? "Hyperscaler" : e.kind === "wiki" ? "Wiki company" : e.kind === "group" ? "Company group" : "Company, as Aterio names it";
+  let h = vhead(kick, e.n, e.t, `${esc(rolesTxt(e)) || "–"} <span class="why">(buildings; BTM = generation phases)</span>`, wk);
+  if (rk.length) {
+    const yrSum = gi => YRS.reduce((a, y) => a + A.hy[y][gi], 0), end = A.base + A.house;
+    h += `<div class="toolbar"><span class="lbl">Role</span><span class="seg" id="coRole"></span><button type="button" class="btn" id="coCsv" title="Download every campus row">${ICON_DL}Download CSV</button></div>`;
+    const extra = rk.filter(k => k !== "op" && k !== "ten");
+    if (four && extra.length) h += `<p class="cs" style="margin:-6px 0 14px">“Self-built + leased” is the basis of <a href="#four">The four compared</a>. ${esc(e.n)} is also named as ${extra.map(k => RL[k][1]).join(" and ")} on other buildings; “All roles” adds them.</p>`;
+    h += `<div class="kpis">` +
+      kpi(`House view ${Y0}-${Y1}`, gqv(A.house), `went live ${Y0} ${gq(yrSum(0))} · building ${gq(yrSum(1))} · delayed ${gq(yrSum(2))} · announced high ${gq(yrSum(3))}`, "lead") +
+      kpi("Operating today", gqv(A.g[0]), `${gq(A.base)} switched on before ${Y0}`) +
+      kpi(`End-${Y1}, house view`, gqv(end), A.base > 0.05 ? `×${(end / A.base).toFixed(1)} vs end-${Y0 - 1}; no retirements` : "operating base + house view adds") +
+      kpi("Under construction", gqv(A.g[1]), `plus delayed ${gq(A.g[2])}`) +
+      kpi("Announced, any date", gqv(A.g[3] + A.g[4] + A.g[5]), `high ${gq(A.g[3])} · medium ${gq(A.g[4])} · low ${gq(A.g[5])}`) +
+      kpi("Footprint", `${A.n.toLocaleString("en-US")}<small>bldgs</small>`, `${A.list.length} campuses · ${Object.keys(A.st).length} states${A.after > 0.05 ? ` · after ${Y1} ${gq(A.after)}` : ""}${A.g[6] > 0.05 ? ` · withdrawn ${gq(A.g[6])}` : ""}`) + `</div>`;
+    h += `<div class="grid2">` + panel("How it grows: capacity at each year end", `IT-eq · operating base + the house view adds, stacked by stage; ×multiple vs end-${Y0 - 1}`, cumChart(A)) +
+      panel("Adds per year", "IT-eq · house view by activation year (Aterio's dates, no delay haircut)", coYears(A)) + `</div>`;
+    h += `<div class="grid2">` + panel("Where", "", coMap(A.list)) + panel("By state", "GW IT-eq, ranked by the house view adds. Click a state to open it.", `<div class="tscroll">${coStates(A)}</div>`) + `</div>`;
+    const tabs = [["camp", `Campuses (${A.list.length})`, `<p class="cs">Largest first by operating + pipeline, IT-eq. Campus cost is Aterio's whole-campus figure (it covers buildings where this company has no role). “In registry” = the campus is in Capstone's DC delay-risk registry.</p><div class="tbl-wrap">${coCamps(e, A)}</div>`],
+      ["cp", "Who it works with", `<p class="cs">Other companies named on the same buildings, by IT-eq on those buildings (withdrawn excluded). Click a name to open it.</p>${coCounter(A)}`]];
+    const bt = coBtm(e); if (bt) tabs.push(["btm", "Behind-the-meter power", bt]);
+    h += `<section class="panel">${tabsHTML(tabs)}</section>`;
+  } else {
+    const bt = coBtm(e);
+    h += bt ? panel("Behind-the-meter generation", "", bt) : `<p class="why">No buildings recorded for this name.</p>`;
+  }
+  h += note(`Aterio census as of ${esc(M.asof)}, Capstone treatment: GW IT-eq = facility MW ÷ ${FK}; house view = went live in ${Y0}, under construction, delayed, and announced High, dated ${Y0}-${Y1} on Aterio's dates. A building counts once here even if the company holds several roles on it, but it also counts in full for every other company named on it, so never add companies together. Roles are Aterio's fields, not checked one by one. End-${Y1} assumes nothing operating today retires.`);
+  $("view").innerHTML = h;
+  if (rk.length) { seg($("coRole"), opts, role, k => { LS.role = k; showCo(i); }); $("coCsv").onclick = () => coCsv(e, A); }
+}
+
+/* ------------------------------------------------------------------ view: a state, or the whole US */
+let US_A = null;
+function showState(st){
+  LS.e = null; LS.st = st;
+  const us = st === "US", nm = us ? "United States" : SN(st), A = stAgg(st);
+  if (!US_A) US_A = us ? A : stAgg("US");
+  const U = US_A, end = A.base + A.house, ml = A.out.aM + A.out.aL, nCty = [...A.cty.values()].filter(x => x.county).length;
+  const went = sum(YRS.map(y => A.hy[y][0]));
+  setView("st:" + st, nm);
+  let h = vhead(us ? "United States · all states" : "State", nm, us ? "" : st, `${A.n.toLocaleString("en-US")} buildings on ${A.list.length.toLocaleString("en-US")} campuses ${us ? `in ${Object.keys(A.st).length} states` : `in ${nCty} counties`}`,
+    us ? "Click a state in the tables to open it." : `Share of the US: <b>${pc(A.g[0] / U.g[0])}</b> of operating capacity, <b>${pc(A.house / U.house)}</b> of the house view ${Y0}-${Y1}, ${pc(A.g[1] / U.g[1])} of what is under construction. <a href="#st=US">Open the US total</a>`);
+  h += `<div class="story">${stStory(A, nm, st, U)}</div>`;
+  h += `<div class="kpis">` +
+    kpi(`House view adds ${Y0}-${Y1}`, gqv(A.house), us ? "the whole census, house rules" : `${pc(A.house / U.house)} of the US house view`, "lead") +
+    kpi("Operating today", gqv(A.g[0]), `${gq(A.base)} before ${Y0} · ${gq(went)} went live in ${Y0}`) +
+    kpi(`End-${Y1}, house view`, gqv(end), A.base > 0.5 ? `×${(end / A.base).toFixed(1)} vs end-${Y0 - 1} · ~${Math.round((Math.pow(end / A.base, 1 / (Y1 - Y0 + 1)) - 1) * 100)}% a year` : "") +
+    kpi("Under construction", gqv(A.g[1]), `plus delayed ${gq(A.g[2])}`) +
+    kpi("Announced, any date", gqv(A.g[3] + A.g[4] + A.g[5]), `high ${gq(A.g[3])} · medium ${gq(A.g[4])} · low ${gq(A.g[5])}`) +
+    kpi("Left out of the house view", gqv(ml + A.out.rule + A.after + A.undated), `med/low ${Y0}-${Y1} ${gq(ml)}${A.out.rule > 0.05 ? ` · no-tenant rule ${gq(A.out.rule)}` : ""} · after ${Y1} ${gq(A.after)}${A.undated > 0.05 ? ` · undated ${gq(A.undated)}` : ""}`) + `</div>`;
+  h += `<div class="grid2">` + panel("How it grows: capacity at each year end", `IT-eq · operating base + the house view adds, stacked by stage; ×multiple vs end-${Y0 - 1}`, cumChart(A)) +
+    panel("Adds per year", "IT-eq · house view by activation year (Aterio's dates, no delay haircut)", coYears(A)) + `</div>`;
+  h += `<div class="grid2">` + panel("Where", "", stMap(A, st)) +
+    panel("Who builds it", "Operators (Aterio provider), ranked by the house view adds. GW IT-eq. Click a name to open it.", `<div class="tscroll">${stOps(A)}</div>`) + `</div>`;
+  const tabs = [["camp", `Campuses (${A.list.length.toLocaleString("en-US")})`, `<p class="cs">Largest first by operating + pipeline, IT-eq. Campus cost is Aterio's whole-campus figure. “In registry” = the campus is in Capstone's DC delay-risk registry.</p><div class="tbl-wrap">${coCamps({own: new Set(), n: nm}, A, true)}</div>`],
+    ["geo", us ? "By state" : "By county", `<p class="cs">GW IT-eq, ranked by the house view adds.</p><div class="tscroll">${stGeo(A, st)}</div>`],
+    ["cp", "Tenants, money and power", `<p class="cs">Other companies named on the ${esc(nm)} buildings, ranked by the house view adds on them (withdrawn excluded).</p>${stCounter(A)}`]];
+  h += `<section class="panel">${tabsHTML(tabs)}<div style="margin-top:12px"><button type="button" class="btn" id="stCsv">${ICON_DL}Download CSV of every campus</button></div></section>`;
+  h += note(`Aterio census as of ${esc(M.asof)}, Capstone treatment: GW IT-eq = facility MW ÷ ${FK}; house view = went live in ${Y0}, under construction, delayed, and announced High, dated ${Y0}-${Y1} on Aterio's dates; operating before ${Y0} = active buildings dated before ${Y0} or undated. End-${Y1} assumes nothing operating today retires. Aterio's dates have slipped export after export (median +9 months for what was under construction a year ago), so read the later years as an upper path.`);
+  $("view").innerHTML = h;
+  fitStMap(A, st);
+  $("stCsv").onclick = () => coCsv({own: new Set(), n: nm}, A);
+}
+
+/* ------------------------------------------------------------------ view: method and the Bernstein cross-check */
+function showMethod(){
+  LS.e = null; LS.st = null; setView("method", "Method");
+  $("view").innerHTML = vhead("Reference", "Method and sources", "", `Aterio census as of ${esc(M.asof)} · house rules of ${esc(M.rules_decided)} · page built ${esc(M.built)}`, "") +
+    panel("How the numbers are built", "", `<dl class="mdl">
+      <dt>Licensed data</dt><dd>Aterio data-center census, internal use only.</dd>
+      <dt>GW IT-eq</dt><dd>Facility power ÷ ${M.fac_it}, Aterio's own median (house rule 1). The Bernstein table below is the one place on facility GW.</dd>
+      <dt>Self-built</dt><dd>Aterio lists the company as the <b>provider</b>: owner and operator of the building.</dd>
+      <dt>Leased</dt><dd>Aterio names the company among the <b>end users</b> of someone else's building (colo, developer or neocloud). Leases are only what Aterio has recorded, so leased GW is a floor.</dd>
+      <dt>Shared buildings</dt><dd>A building with several named tenants counts in full for each (${C.map(c => `${esc(c.name)} ${f1(c.shared_it)}`).join(", ")} GW shared), so never add companies together.</dd>
+      <dt>House view</dt><dd>What went live in ${Y0}, what is under construction or delayed, and announced projects rated High likelihood, dated ${Y0}-${Y1} on Aterio's own dates; a hyperscaler self-build counts as having a tenant. Same rules as the Aterio deck tab of the <a href="dc-delay-risk.html#aterio-deck">DC delay-risk page</a>.</dd>
+      <dt>Dates</dt><dd>Aterio's dates have slipped export after export (median +9 months for what was under construction a year ago), so read the later years as an upper path. End-${Y1} totals assume nothing operating today retires.</dd>
+      <dt>Search</dt><dd>Covers every name the census carries in any role (operator, tenant, backer, financier, partner, utility, behind-the-meter). Wiki companies bundle their aliases with the same matching as their page sections, so a wiki company can count more than its hyperscaler card (Google also appears as a financier).</dd></dl>`) +
+    panel("Cross-check: Bernstein's player table", `<span id="bLead"></span>`, `<div class="tscroll"><table id="bTable"></table></div>`) +
+    panel("Sources", "", `<p class="foot">Source: Aterio data-center census (${esc(M.inventory)}), licensed, internal use; Capstone calculations by <code>_wiki/_tools/build_aterio_hyperscalers.py</code> (rules in <code>_wiki/_data/aterio/treatment.json</code>; data also in <code>_wiki/_data/aterio/hyperscalers.json</code> and <code>company_lookup.json</code>). Rerun when a new Aterio export lands. Map: us-atlas states, Albers USA (lower 48).</p>`);
+  bern();
+}
+function bern(){
+  const B = M.bernstein; if (!B) { $("bLead").textContent = "No Bernstein file on disk."; return; }
+  $("bLead").innerHTML = `${esc(B.source.broker)}, <i>${esc(B.source.title)}</i> (${esc(B.source.date)}; ${esc(B.source.analysts)}), Exhibits 15-17: GW by player on <b>Aterio data via Bernstein</b>, a later export than our ${esc(M.asof)}, basis not stated. Ours here is <b>facility</b> GW (no ÷${M.fac_it}) so the two sit on the same basis. A Bernstein figure above ours can mean a later export, campus-level counting or leases Aterio recorded later. Two what-ifs on the building side: <b>+ Delayed</b> adds Aterio's Delayed stage to + leased; <b>whole campus</b> also counts every announced building, any likelihood, on a campus where at least one building is already under construction. The highlighted cell in each block is our figure closest to Bernstein's. Whole-campus counting overshoots wherever a campus under construction carries a long announced tail, so a close match there points to a few specific campuses rather than to Bernstein's general method.`;
+  const near = (vals, b) => { if (b == null) return -1; let k = -1, best = Infinity; vals.forEach((v, i) => { if (v != null && Math.abs(v - b) < best) { best = Math.abs(v - b); k = i; } }); return k; };
+  const cell = (v, hit) => `<td class="n"${hit ? ` style="background:color-mix(in srgb,var(--accent) 16%,transparent);font-weight:650"` : ""}>${f1(v)}</td>`;
+  $("bTable").innerHTML = `<tr><th>Company</th><th class="n">Operating · ours, self-built</th><th class="n">ours, + leased</th><th class="n">Bernstein</th><th class="n">Building · ours, self-built</th><th class="n">ours, + leased</th><th class="n">+ Delayed</th><th class="n">whole campus</th><th class="n">Bernstein</th></tr>` +
+    C.map(c => { const r = B.rows[c.id] || {}, f = c.fac;
+      const op = [f.op_self, f.op], uc = [f.uc_self, f.uc, f.dl == null ? null : f.uc + f.dl, f.uc_campus];
+      const ko = near(op, r.active), ku = near(uc, r.uc);
+      return `<tr><td><b>${esc(c.name)}</b><div class="why">Bernstein row: ${esc(c.bern)}</div></td>${op.map((v, i) => cell(v, i === ko)).join("")}<td class="n"><b>${f1(r.active)}</b></td>${uc.map((v, i) => cell(v, i === ku)).join("")}<td class="n"><b>${f1(r.uc)}</b></td></tr>`; }).join("");
+}
+
+/* ------------------------------------------------------------------ sidebar, routing, wiring */
+function buildNav(){
+  const li = (key, href, label, v, dot) => `<a href="${href}" data-k="${key}">${dot ? `<i class="nd" style="background:${dot}"></i>` : ""}<span>${esc(label)}</span>${v ? `<span class="nv">${esc(v)}</span>` : ""}</a>`;
+  const grp = (t, items) => `<div class="ng"><p>${t}</p>${items.join("")}</div>`;
+  const covered = new Set(Object.keys(coveredBy).map(Number));
+  const stTop = ENT.map((e, i) => [e, i]).filter(([e]) => e.kind === "state" && e.t !== "US").sort((a, b) => b[0].house - a[0].house).slice(0, 8);
+  const wikiTop = ENT.map((e, i) => [e, i]).filter(([e]) => e.kind === "wiki" && !FOUR.has(e.t)).sort((a, b) => b[0].mw - a[0].mw).slice(0, 6);
+  const gw1 = v => (v / 1000).toFixed(1);
+  $("nav").innerHTML =
+    grp("Overview", [li("four", "#four", "The four compared", f1(sum(C.map(c => c.house)))), li("st:US", "#st=US", "United States", gw1(STX.US.house))]) +
+    grp("Hyperscalers · GW 26-30", C.map(c => FOURI[c.id] >= 0 ? li("e:" + FOURI[c.id], coHash(FOURI[c.id]), c.name, f1(c.house), `var(--c-${c.id})`) : "")) +
+    grp("Top states · GW 26-30", stTop.map(([e]) => li("st:" + e.st, "#st=" + e.st, e.n, gw1(e.house)))) +
+    grp("Companies", wikiTop.map(([e, i]) => li("e:" + i, coHash(i), e.n, e.t))) +
+    grp("Reference", [li("method", "#method", "Method and Bernstein check")]);
+  $("sideFoot").innerHTML = `<span class="dot-live"></span>Aterio census <b>${esc(M.asof)}</b><br>House rules of ${esc(M.rules_decided)} · built ${esc(M.built)}<br>Licensed data, internal use` +
+    `<a href="index.html">All dashboards <span aria-hidden="true">↗</span></a><a href="../index.html">Research wiki <span aria-hidden="true">↗</span></a>`;
+}
+function route(){
+  closeDrop(); tip.style.display = "none";
+  const h = location.hash; let m;
+  if ((m = h.match(/^#co=(.+)$/))) { let n = ""; try { n = decodeURIComponent(m[1]); } catch (_) {}
+    let i = ENT.findIndex(e => e.n === n && e.kind !== "state" && !e.dup);
+    if (i < 0) { i = ENT.findIndex(e => e.n === n && e.kind !== "state"); if (i >= 0 && ENT[i].dup) i = tgt(i - R0); }   // a fully covered raw name opens its covering entry
+    if (i >= 0) { if (LS.e !== i) LS.role = null; showCo(i); window.scrollTo(0, 0); return; } }
+  if ((m = h.match(/^#st=([A-Z]{2})$/)) && STX[m[1]]) { showState(m[1]); window.scrollTo(0, 0); return; }
+  if (h === "#method") showMethod(); else showFour();
+  window.scrollTo(0, 0);
+}
+$("usPaths").innerHTML = Object.entries(M.map).map(([st, p]) => `<path class="stp" d="${p.d}"><title>${esc(SN(st))}</title></path>`).join("");
+$("asof").textContent = M.asof;
+$("themeBtn").onclick = () => { const r = document.documentElement; const dark = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; r.dataset.theme = dark ? "light" : "dark"; try { localStorage.setItem("hsdc-theme", r.dataset.theme); } catch (_) {} };
+try { const t = localStorage.getItem("hsdc-theme"); if (t) document.documentElement.dataset.theme = t; } catch (_) {}
+(function wire(){
+  const inp = $("coQ"), box = $("coList");
+  inp.addEventListener("input", drop);
+  inp.addEventListener("focus", () => { if (inp.value.trim()) drop(); });
+  inp.addEventListener("keydown", ev => {
+    if (ev.key === "ArrowDown") { ev.preventDefault(); if (box.hidden) drop(); else moveHi(1); }
+    else if (ev.key === "ArrowUp") { ev.preventDefault(); moveHi(-1); }
+    else if (ev.key === "Enter") { ev.preventDefault(); if (box.hidden) drop(); if (LS.hits.length) pick(LS.hits[LS.hi]); }
+    else if (ev.key === "Escape") closeDrop(); });
+  box.addEventListener("mousedown", ev => { const it = ev.target.closest(".it"); if (it) { ev.preventDefault(); pick(+it.dataset.e); } });
+  document.addEventListener("click", ev => {
+    const tb = ev.target.closest("[data-tab]");
+    if (tb) { const root = tb.closest(".tabs"); root.querySelectorAll("[data-tab]").forEach(b => b.setAttribute("aria-selected", String(b === tb))); root.querySelectorAll("[data-pane]").forEach(p => { p.hidden = p.dataset.pane !== tb.dataset.tab; }); return; }
+    const sa = ev.target.closest("[data-st]");
+    if (sa) { ev.preventDefault(); openSt(sa.dataset.st); return; }
+    const a = ev.target.closest("[data-e]");
+    if (a && !a.closest("#coList")) { ev.preventDefault(); openEnt(+a.dataset.e); return; }
+    if (!ev.target.closest(".srch")) closeDrop(); });
+  window.addEventListener("hashchange", route);
+})();
+buildNav(); route();
+</script>
+</body>
+</html>

@@ -1,6 +1,6 @@
 {
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
- "_updated": "2026-11-07",
+ "_updated": "2026-11-09",
  "terms": {
   "Hixle AI": {
    "correct": "Higgsfield (AI video startup)",
@@ -7904,6 +7904,134 @@
    "ci": true,
    "rule": "ASR drops the final 't'.",
    "first_seen": "2026-11-07 (All-In 'Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze', 2026-11-07, YouTube ASR)"
+  },
+  "identic AI": {
+   "correct": "agentic AI",
+   "domain": "acronyms",
+   "ci": true,
+   "rule": "ASR mis-hears 'agentic'.",
+   "first_seen": "2026-11-09 (Zscaler CEO Jay Chaudhry on Schwab Network 'Market Overtime', YouTube ASR)"
+  },
+  "Entropic": {
+   "correct": "Anthropic",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR; context = AI lab.",
+   "first_seen": "2026-11-09 (Zscaler CEO Jay Chaudhry on Schwab Network 'Market Overtime', YouTube ASR)"
+  },
+  "Microsoft and TryID": {
+   "correct": "Microsoft Entra ID",
+   "domain": "names",
+   "ci": true,
+   "rule": "ASR splits 'Entra ID'.",
+   "first_seen": "2026-11-09 (Zscaler CEO Jay Chaudhry on Schwab Network 'Market Overtime', YouTube ASR)"
+  },
+  "zero to the branch": {
+   "correct": "Zero Trust Branch (Zscaler product)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR.",
+   "first_seen": "2026-11-09 (Zscaler CEO Jay Chaudhry on Schwab Network 'Market Overtime', YouTube ASR)"
+  },
+  "Caspar": {
+   "correct": "CASPA (Chinese American Semiconductor Professional Association)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR; also 'Casper'.",
+   "first_seen": "2026-11-09 (CASPA 2026 CEO Summit fireside, Intel CEO Lip-Bu Tan, YouTube ASR)"
+  },
+  "chef eye chat": {
+   "correct": "fireside chat",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR.",
+   "first_seen": "2026-11-09 (CASPA 2026 CEO Summit fireside, Intel CEO Lip-Bu Tan, YouTube ASR)"
+  },
+  "a genetic phase": {
+   "correct": "agentic phase",
+   "domain": "acronyms",
+   "ci": true,
+   "rule": "ASR mis-hears 'agentic'.",
+   "first_seen": "2026-11-09 (CASPA 2026 CEO Summit fireside, Intel CEO Lip-Bu Tan, YouTube ASR)"
+  },
+  "Samonova": {
+   "correct": "SambaNova",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR.",
+   "first_seen": "2026-11-09 (CASPA 2026 CEO Summit fireside, Intel CEO Lip-Bu Tan, YouTube ASR)"
+  },
+  "Data Bricks": {
+   "correct": "Databricks",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR.",
+   "first_seen": "2026-11-09 (CASPA 2026 CEO Summit fireside, Intel CEO Lip-Bu Tan, YouTube ASR)"
+  },
+  "Choong Khye Lee": {
+   "correct": "Seok-Hee Lee (ex-SK hynix CEO, ex-Intel)",
+   "domain": "people",
+   "ci": true,
+   "rule": "YouTube ASR; reading inferred from context.",
+   "first_seen": "2026-11-09 (CASPA 2026 CEO Summit fireside, Intel CEO Lip-Bu Tan, YouTube ASR)"
+  },
+  "Jimmy Chang": {
+   "correct": "Jimmy Cheng (CASPA President)",
+   "domain": "people",
+   "ci": true,
+   "rule": "Spelling per the video title.",
+   "first_seen": "2026-11-09 (CASPA 2026 CEO Summit fireside, Intel CEO Lip-Bu Tan, YouTube ASR)"
+  },
+  "Kaden": {
+   "correct": "Cadence (CDNS)",
+   "domain": "names",
+   "ci": false,
+   "rule": "ASR of Cadence Design Systems in Lip-Bu Tan's career segment.",
+   "keep_when": "never in a semis/EDA context",
+   "first_seen": "2026-11-09 (CASPA 2026 CEO Summit fireside, Intel CEO Lip-Bu Tan, YouTube ASR)"
+  },
+  "SaaS pocalypse": {
+   "correct": "SaaSpocalypse",
+   "domain": "terms",
+   "ci": true,
+   "rule": "ASR split of the 'SaaSpocalypse' software sell-off meme.",
+   "first_seen": "2026-11-09 (Schwab Network, Zscaler CEO Jay Chaudhry, YouTube ASR)"
+  },
+  "Kristo": {
+   "correct": "Christophe (Fouquet, ASML CEO)",
+   "domain": "people",
+   "ci": false,
+   "rule": "ASR of ASML CEO Christophe Fouquet's first name.",
+   "keep_when": "a different person named Kristo",
+   "first_seen": "2026-11-09 (CASPA 2026 CEO Summit fireside, Intel CEO Lip-Bu Tan, YouTube ASR)"
+  },
+  "Lipu": {
+   "correct": "Lip-Bu (Tan, Intel CEO)",
+   "domain": "people",
+   "ci": false,
+   "rule": "ASR of Lip-Bu Tan's first name.",
+   "first_seen": "2026-11-09 (CASPA 2026 CEO Summit fireside, Intel CEO Lip-Bu Tan, YouTube ASR)"
+  },
+  "Daddy Permuda": {
+   "correct": "Dadi Perlmutter (probable; ex-Intel)",
+   "domain": "people",
+   "ci": true,
+   "rule": "Probable ASR of Dadi Perlmutter in Tan's Intel-history remarks; UNCONFIRMED.",
+   "first_seen": "2026-11-09 (CASPA 2026 CEO Summit fireside, Intel CEO Lip-Bu Tan, YouTube ASR)"
+  },
+  "Sha Maloney": {
+   "correct": "Sean Maloney (probable; ex-Intel)",
+   "domain": "people",
+   "ci": true,
+   "rule": "Probable ASR of Sean Maloney; UNCONFIRMED.",
+   "first_seen": "2026-11-09 (CASPA 2026 CEO Summit fireside, Intel CEO Lip-Bu Tan, YouTube ASR)"
+  },
+  "Mike Herston": {
+   "correct": "Michael Hurlston (probable; Lumentum CEO) — UNCONFIRMED",
+   "domain": "people",
+   "ci": true,
+   "rule": "Probable ASR of Michael Hurlston; keep UNCONFIRMED until a second source confirms.",
+   "first_seen": "2026-11-09 (CASPA 2026 CEO Summit fireside, Intel CEO Lip-Bu Tan, YouTube ASR)"
   }
  },
  "summary_traps": [

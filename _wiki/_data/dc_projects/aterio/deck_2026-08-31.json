@@ -1,0 +1,521 @@
+{
+ "asof": "2026-08-31",
+ "forecast_asof": "2026-08-27",
+ "basis": "facility MW (SELECTED_POWER_CAPACITY_MW), building level",
+ "US": {
+  "act": 7.0,
+  "uc": 71.5,
+  "del": 5.7,
+  "ann_High": 132.4,
+  "ann_Medium": 105.6,
+  "ann_Low": 30.3,
+  "total": 352.5,
+  "high_all": 208.2
+ },
+ "us_by_year": {
+  "2026": {
+   "act": 7.0,
+   "ann_High": 0.0,
+   "ann_Low": 0.0,
+   "ann_Medium": 0.0,
+   "del": 0.1,
+   "uc": 13.1
+  },
+  "2027": {
+   "act": 0.0,
+   "ann_High": 10.5,
+   "ann_Low": 0.3,
+   "ann_Medium": 4.7,
+   "del": 1.0,
+   "uc": 27.0
+  },
+  "2028": {
+   "act": 0.0,
+   "ann_High": 45.9,
+   "ann_Low": 7.4,
+   "ann_Medium": 34.4,
+   "del": 1.6,
+   "uc": 26.8
+  },
+  "2029": {
+   "act": 0.0,
+   "ann_High": 50.0,
+   "ann_Low": 9.2,
+   "ann_Medium": 38.4,
+   "del": 2.5,
+   "uc": 3.5
+  },
+  "2030": {
+   "act": 0.0,
+   "ann_High": 25.9,
+   "ann_Low": 13.3,
+   "ann_Medium": 28.1,
+   "del": 0.5,
+   "uc": 1.1
+  }
+ },
+ "states": [
+  {
+   "st": "TX",
+   "act": 1.47,
+   "uc": 16.61,
+   "del": 1.72,
+   "ann_High": 37.31,
+   "ann_Medium": 32.76,
+   "ann_Low": 7.02,
+   "total": 96.88,
+   "high_all": 55.28,
+   "delayed_all": 4.25,
+   "lag_later": 14.78,
+   "lag_both": 25.45,
+   "sc_opt": 95.63,
+   "sc_base": 77.38,
+   "sc_cons": 55.27
+  },
+  {
+   "st": "VA",
+   "act": 1.56,
+   "uc": 9.06,
+   "del": 0.95,
+   "ann_High": 20.14,
+   "ann_Medium": 11.12,
+   "ann_Low": 1.15,
+   "total": 43.98,
+   "high_all": 30.61,
+   "delayed_all": 1.54,
+   "lag_later": 1.44,
+   "lag_both": 5.37,
+   "sc_opt": 42.42,
+   "sc_base": 37.27,
+   "sc_cons": 30.35
+  },
+  {
+   "st": "GA",
+   "act": 0.33,
+   "uc": 4.55,
+   "del": 0.0,
+   "ann_High": 6.64,
+   "ann_Medium": 7.54,
+   "ann_Low": 0.75,
+   "total": 19.81,
+   "high_all": 11.32,
+   "delayed_all": 0.0,
+   "lag_later": 1.48,
+   "lag_both": 6.21,
+   "sc_opt": 19.71,
+   "sc_base": 16.2,
+   "sc_cons": 11.51
+  },
+  {
+   "st": "PA",
+   "act": 0.03,
+   "uc": 2.6,
+   "del": 0.0,
+   "ann_High": 5.47,
+   "ann_Medium": 7.65,
+   "ann_Low": 2.28,
+   "total": 18.04,
+   "high_all": 8.07,
+   "delayed_all": 0.0,
+   "lag_later": 1.1,
+   "lag_both": 2.69,
+   "sc_opt": 17.9,
+   "sc_base": 13.43,
+   "sc_cons": 8.44
+  },
+  {
+   "st": "OH",
+   "act": 0.64,
+   "uc": 4.53,
+   "del": 0.0,
+   "ann_High": 8.23,
+   "ann_Medium": 2.79,
+   "ann_Low": 0.07,
+   "total": 16.26,
+   "high_all": 12.29,
+   "delayed_all": 0.0,
+   "lag_later": 0.9,
+   "lag_both": 5.5,
+   "sc_opt": 16.12,
+   "sc_base": 14.81,
+   "sc_cons": 12.9
+  },
+  {
+   "st": "UT",
+   "act": 0.14,
+   "uc": 1.1,
+   "del": 1.7,
+   "ann_High": 3.9,
+   "ann_Medium": 4.48,
+   "ann_Low": 2.11,
+   "total": 13.44,
+   "high_all": 5.01,
+   "delayed_all": 1.7,
+   "lag_later": 1.63,
+   "lag_both": 1.63,
+   "sc_opt": 11.69,
+   "sc_base": 8.43,
+   "sc_cons": 5.11
+  },
+  {
+   "st": "AZ",
+   "act": 0.3,
+   "uc": 2.15,
+   "del": 0.0,
+   "ann_High": 3.8,
+   "ann_Medium": 5.56,
+   "ann_Low": 0.45,
+   "total": 12.26,
+   "high_all": 6.06,
+   "delayed_all": 0.0,
+   "lag_later": 0.26,
+   "lag_both": 1.02,
+   "sc_opt": 12.22,
+   "sc_base": 9.7,
+   "sc_cons": 6.25
+  },
+  {
+   "st": "IN",
+   "act": 0.33,
+   "uc": 2.36,
+   "del": 0.0,
+   "ann_High": 5.26,
+   "ann_Medium": 2.19,
+   "ann_Low": 0.0,
+   "total": 10.14,
+   "high_all": 7.62,
+   "delayed_all": 0.0,
+   "lag_later": 0.22,
+   "lag_both": 1.1,
+   "sc_opt": 10.14,
+   "sc_base": 9.26,
+   "sc_cons": 7.94
+  },
+  {
+   "st": "NY",
+   "act": 0.05,
+   "uc": 0.45,
+   "del": 0.5,
+   "ann_High": 0.14,
+   "ann_Medium": 6.79,
+   "ann_Low": 2.18,
+   "total": 10.11,
+   "high_all": 1.14,
+   "delayed_all": 0.5,
+   "lag_later": 2.15,
+   "lag_both": 7.22,
+   "sc_opt": 9.61,
+   "sc_base": 5.37,
+   "sc_cons": 0.64
+  },
+  {
+   "st": "IL",
+   "act": 0.14,
+   "uc": 1.25,
+   "del": 0.0,
+   "ann_High": 3.71,
+   "ann_Medium": 2.74,
+   "ann_Low": 1.22,
+   "total": 9.06,
+   "high_all": 4.78,
+   "delayed_all": 0.0,
+   "lag_later": 0.75,
+   "lag_both": 4.28,
+   "sc_opt": 9.06,
+   "sc_base": 7.01,
+   "sc_cons": 4.86
+  },
+  {
+   "st": "NV",
+   "act": 0.01,
+   "uc": 2.17,
+   "del": 0.0,
+   "ann_High": 4.99,
+   "ann_Medium": 1.14,
+   "ann_Low": 0.17,
+   "total": 8.48,
+   "high_all": 7.16,
+   "delayed_all": 0.0,
+   "lag_later": 0.29,
+   "lag_both": 0.59,
+   "sc_opt": 8.38,
+   "sc_base": 7.84,
+   "sc_cons": 7.16
+  },
+  {
+   "st": "WV",
+   "act": 0.0,
+   "uc": 0.46,
+   "del": 0.0,
+   "ann_High": 4.98,
+   "ann_Medium": 1.94,
+   "ann_Low": 0.0,
+   "total": 7.38,
+   "high_all": 5.44,
+   "delayed_all": 0.0,
+   "lag_later": 1.66,
+   "lag_both": 1.66,
+   "sc_opt": 7.38,
+   "sc_base": 6.6,
+   "sc_cons": 5.44
+  },
+  {
+   "st": "KY",
+   "act": 0.0,
+   "uc": 0.11,
+   "del": 0.0,
+   "ann_High": 1.81,
+   "ann_Medium": 0.29,
+   "ann_Low": 4.9,
+   "total": 7.11,
+   "high_all": 1.93,
+   "delayed_all": 0.0,
+   "lag_later": 0.11,
+   "lag_both": 1.27,
+   "sc_opt": 7.11,
+   "sc_base": 3.57,
+   "sc_cons": 1.93
+  },
+  {
+   "st": "MO",
+   "act": 0.1,
+   "uc": 2.37,
+   "del": 0.0,
+   "ann_High": 2.85,
+   "ann_Medium": 0.33,
+   "ann_Low": 0.03,
+   "total": 5.68,
+   "high_all": 5.32,
+   "delayed_all": 0.0,
+   "lag_later": 0.57,
+   "lag_both": 0.57,
+   "sc_opt": 5.68,
+   "sc_base": 5.53,
+   "sc_cons": 5.32
+  }
+ ],
+ "rest": {
+  "act": 1.9,
+  "uc": 21.76,
+  "del": 0.79,
+  "ann_High": 23.18,
+  "ann_Medium": 18.31,
+  "ann_Low": 7.95,
+  "total": 73.89,
+  "high_all": 46.2
+ },
+ "rest_sc": {
+  "opt": 73.22,
+  "base": 60.46,
+  "cons": 46.83
+ },
+ "n_states_rest": 30,
+ "delayed_us": 8.8,
+ "delayed_top": {
+  "TX": 4.25,
+  "UT": 1.7,
+  "VA": 1.54,
+  "NC": 0.65,
+  "NY": 0.5,
+  "CA": 0.16,
+  "NJ": 0.04
+ },
+ "delayed_by_like": {
+  "High": 2.04,
+  "Low": 6.01,
+  "Medium": 0.79
+ },
+ "lag": {
+  "n_both": 696,
+  "gw_both": 77.8,
+  "gw_later": 33.2,
+  "share_later": 0.427,
+  "med_lag_m_later": 14.0,
+  "gw_earlier": 8.7,
+  "uc_gw_both": 22.7,
+  "uc_gw_later": 11.1
+ },
+ "act_date_equals": {
+  "aterio": 0.954,
+  "public": 0.394
+ },
+ "us_scen_cum": {
+  "2024": {
+   "opt": 35.0,
+   "base": 35.0,
+   "cons": 35.0
+  },
+  "2025": {
+   "opt": 44.2,
+   "base": 44.2,
+   "cons": 44.2
+  },
+  "2026": {
+   "opt": 64.3,
+   "base": 64.3,
+   "cons": 64.3
+  },
+  "2027": {
+   "opt": 107.1,
+   "base": 105.0,
+   "cons": 102.0
+  },
+  "2028": {
+   "opt": 221.7,
+   "base": 200.4,
+   "cons": 174.0
+  },
+  "2029": {
+   "opt": 321.7,
+   "base": 279.0,
+   "cons": 227.1
+  },
+  "2030": {
+   "opt": 390.4,
+   "base": 327.0,
+   "cons": 254.1
+  },
+  "2031": {
+   "opt": 430.3,
+   "base": 355.3,
+   "cons": 270.1
+  },
+  "2032": {
+   "opt": 456.5,
+   "base": 372.0,
+   "cons": 277.6
+  }
+ },
+ "us_scen_add_2630": {
+  "opt": 346.3,
+  "base": 282.9,
+  "cons": 209.9
+ },
+ "recon": {
+  "2027": {
+   "all_live": 107.9,
+   "act_uc_high": 102.1,
+   "opt": 107.1,
+   "base": 105.0,
+   "cons": 102.0
+  },
+  "2028": {
+   "all_live": 224.0,
+   "act_uc_high": 176.1,
+   "opt": 221.7,
+   "base": 200.4,
+   "cons": 174.0
+  },
+  "2030": {
+   "all_live": 396.7,
+   "act_uc_high": 257.1,
+   "opt": 390.4,
+   "base": 327.0,
+   "cons": 254.1
+  }
+ },
+ "history_uc": {
+  "2025-08-31": {
+   "gw": 22.31,
+   "n": 391,
+   "share_later": 0.882,
+   "share_earlier": 0.045,
+   "median": 9.0,
+   "wmean": 11.6,
+   "bins": [
+    {
+     "label": "Pulled in",
+     "gw": 1.01
+    },
+    {
+     "label": "Unchanged",
+     "gw": 1.62
+    },
+    {
+     "label": "1-3 mo",
+     "gw": 1.77
+    },
+    {
+     "label": "4-6 mo",
+     "gw": 2.85
+    },
+    {
+     "label": "7-12 mo",
+     "gw": 6.39
+    },
+    {
+     "label": "13-24 mo",
+     "gw": 6.96
+    },
+    {
+     "label": ">24 mo",
+     "gw": 1.7
+    }
+   ],
+   "due": {
+    "gw": 15.23,
+    "n": 282,
+    "now": {
+     "active": 3.92,
+     "uc": 9.78,
+     "delayed": 1.0,
+     "ann": 0.53,
+     "wd": 0.0
+    }
+   }
+  },
+  "2026-02-28": {
+   "gw": 46.65,
+   "n": 654,
+   "share_later": 0.529,
+   "share_earlier": 0.12,
+   "median": 2.0,
+   "wmean": 5.1,
+   "bins": [
+    {
+     "label": "Pulled in",
+     "gw": 5.58
+    },
+    {
+     "label": "Unchanged",
+     "gw": 16.4
+    },
+    {
+     "label": "1-3 mo",
+     "gw": 4.94
+    },
+    {
+     "label": "4-6 mo",
+     "gw": 5.84
+    },
+    {
+     "label": "7-12 mo",
+     "gw": 6.45
+    },
+    {
+     "label": "13-24 mo",
+     "gw": 6.44
+    },
+    {
+     "label": ">24 mo",
+     "gw": 0.99
+    }
+   ],
+   "due": {
+    "gw": 10.89,
+    "n": 180,
+    "now": {
+     "active": 4.03,
+     "uc": 6.76,
+     "delayed": 0.11,
+     "ann": 0.0,
+     "wd": 0.0
+    }
+   }
+  }
+ },
+ "_doc": [
+  "Built 2026-11-09 by aterio_states.py from P:\\Felipe Monteiro\\Aterio (inventory 2026-08-31, weekly report forecast 2026-08-27) + history_uc copied from _wiki/_data/aterio/summary.json (comparisons: UC buildings in the base snapshot vs their 08-31 activation date).",
+  "Facility MW (SELECTED_POWER_CAPACITY_MW), building level, GW. Additions = live buildings (not withdrawn/cancelled) with activation date 2026-30; 'act' = active buildings activated in 2026."
+ ]
+}

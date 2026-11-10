@@ -10,10 +10,10 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AMD` (filings + transc
 | Revenue | $51.4bn | $96.9bn |
 | Gross profit | $28.5bn | $53.3bn |
 | Gross margin | 55.5% | 55.0% |
-| EBITDA | $15.3bn | $34.4bn |
+| EBITDA | $15.2bn | $34.1bn |
 | EPS | $7.79 | $17.62 |
 | Capex | $1.8bn | $2.8bn |
-| OCF (≈EBITDA) | $15.3bn | $34.4bn |
+| OCF (≈EBITDA) | $15.2bn | $34.1bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -414,6 +414,7 @@ _Source: Vivek Arya (BofA) @ BofA SEMICON West & OCP Takeaways call, 2026-10-19 
 
 | Date | Source | Theme | Bias | What was said |
 |---|---|---|---|---|
+| **11-09** | 🆕 **Lip-Bu Tan (Intel CEO — competitor voice, talks his book) at the CASPA CEO Summit fireside, moderator Jimmy Cheng (CASPA president)** (⚠️ conference fireside on YouTube; ASR, no speaker labels; uploaded 2026-11-09, event ≈2026-10-23/24, before both Q3 prints; [transcript](../_podcasts/adhoc/2026-11-09%20-%20CASPA%202026%20The%20CEO%20Summit%20Fireside%20Chat%20with%20Intel%20CEO%20Lip-Bu%20Tan%20and%20CASPA%20President%20Jimmy%20Cheng.md)) | competicao | neutral | 🆕 **An Intel-side overture to AMD, not a deal:** *"Even recently, I talked to Lisa Su, good friend of mine. I said, 'Lisa, we have to find some area we can work together.'"* [00:20:00] — no area named, no AMD response reported; framed as *"we can compete at the same time we can collaborate. The market is big enough"* [00:21:05]. Sits against AMD's own line on this page that TSMC stays the *"PRIMARY SUPPLIER"* with every vendor evaluated for advanced packaging/wafers (Jean Hu / Ramsey, Citi TMT conference, 2026-09-08). Separately Tan says Intel must *"reclaimed the leadership in CPU"* [00:34:20] — an implicit concession of AMD's current position — and that he is customising Xeon per customer [00:34:58]. (Lip-Bu Tan on CASPA CEO Summit, "CASPA 2026 The CEO Summit: Fireside Chat with Intel CEO Lip-Bu Tan and CASPA President Jimmy Cheng", 2026-11-09 upload — conference fireside, not broker research.) |
 | **11-05** | 🆕 **SemiAnalysis · Bryan Shan / Alec Ibarra / Cam Quilici / Kimbo Chen / Wenyao Gao / Dylan Patel / Myron Xie — "The Iron(wood) Throne: Google's TPU Stakes Its Claim on Inference"** (⚠️ independent research, not a broker — no rating/PT; paid full text; a TPU note, AMD datapoints only) [source](../relat%C3%B3rios%20bons/2026_11_05_ENC_The_Ironwood_Throne_Googles_TPU_Stakes_Its_Claim_on_Inference_email.html) | competicao / produto | mixed | ⚠️ **MI355X loses on perf/$ to TPUv7 in AgentX:** on GLM-5.2 FP8, TPUv7 delivers **1.2x-2.7x the tokens per dollar of B200, B300 and MI355X** (60-300 tok/s/user); on Kimi K3, **1.15x-2.5x** GB200 / B200 / B300 / MI355X. ✅ **Software speed is AMD's edge in the note:** AMD's MonoKernel on GLM-5.2 across eight MI350X cuts a decode step from *"about 2,459 launches to 210"* and runs **2.31x faster at batch 1** (AMD-reported, per SemiAnalysis); AMD and TPU shipped megakernels in open-source engines first, NVIDIA *"quickly followed within a week"*; *"Nvidia is now slower moving than AMD, Google, and Amazon"*; AMD gives vLLM / SGLang / TileRT / Tokenspeed maintainers *"liberal access to clusters"* (names Anush, Ramine, Vamsi and Lisa). *"NVIDIA only occasionally loses to AMD on some model/scenarios"* (SemiAnalysis, 2026-11-05). |
 | **11-04** | 🆕 **Riot Platforms (uncovered landlord) CEO Jason Les on McNallie Money with Anthony Power (Power Analysis), "RIOT Q3 Earnings CEO Q&A \| Corsicana Deal Signed", 2026-11-04** (⚠️ **paid/sponsored interview** per the show notes; landlord talking its book; YouTube ASR, no speaker labels; not broker research) [transcript](../_podcasts/adhoc/2026-11-04%20-%20RIOT%20Q3%20Earnings%20CEO%20Q%26A%20Corsicana%20Deal%20Signed%20Latest%20RIOT%20Stock%20News%20RIOT%20Platforms%20RIOT.md) | supply | neutral | 🆕 **AMD's own Rockdale colocation is on schedule.** *"The first thing that we did the start of this year was 25 megawatts [transcribed "megawws"] with AMD… a few months later, we announced an upsize of that to 50 megawatts"* [00:04:40]; *"The phases of that have been on time. We're delivering the next phase this month and we are close to finalizing uh bank financing"* [00:01:25]; *"AMD has capacity at our site and they have options for additional capacity"*, and the most likely outcome is that *"one or both of our tenants at Rockdale will take the balance of the site"* [00:12:52]. Riot's in-house switchgear (ESS Metron) is *"the only reason we were able to deliver that product for AMD so quickly"* [00:16:06]. ✅ Consistent with Bernstein (07-30, Full log below) on AMD contracting DC capacity directly. ⚠️ **Basis:** Bernstein's *"200MW capacity"* with Riot is a **reservation**; Les's 50 MW is **leased** — keep both, do not merge. No $ or tenor. Deal ID RIOT-AMD-2026 on [ai-compute-deals](themes/ai-compute-deals.md). |
 | **10-30** | 🆕🔭 **J.P. Morgan · Harlan Sur — 'Ask Me Anything about INTC/KLAC/SNDK/NXPI' webinar: JPM checks with *"some of our AMD relationships last night"* (business and engineering level), the night of Intel's Q3 print** — Harlan Sur (J.P. Morgan) @ JPM 'Ask Me Anything about INTC/KLAC/SNDK/NXPI' webinar, 2026-10-30 — Capstone notes (Notion transcript) ([source](../_equity_calls/Semis/2026-10-30_JPMorgan_Harlan-Sur-AMA-INTC-KLAC-SNDK-NXPI-AMD-MRVL-post-3Q26.md)) ⚠️ second-hand checks relayed by the analyst; no AMD rating/PT on the call; not company guidance | guidance / competicao | bull | *"AMD is on track to meet or beat second half consensus estimates and still on track to meet or beat, probably more likely beat calendar '27 consensus estimates."* On Intel's PC-inventory miss: *"AMD is telling us that Intel overshipped into the PC channels in first half of this year and partway through Q3"*; *"AMD believes they did not overship"*; *"secured enough supply for a strong server shipment profile in the second half of the year and moving into next year"*; Helios *"going to be very strong in second half of the year"*. Sur's summary: *"second half looking good… 2027, looking good to better."* On PC: Lisa Su flagged a weaker 2H PC TAM *"at least 2 or 3 times"* on the Q2 call (✓ matches this page's Q2 record — 2H PC planned softer on component costs). Context from the same call (Sur on [[INTC]]): Intel's Q4 guide $15.5bn, $1.5-2bn below sell- and buy-side, PC CPU shipments −25% q/q in the Dec-Q; advanced-packaging substrates tight *"for everybody"*, AMD named. ➤ AMD's own Q3 print is still ahead and is the test. |
@@ -815,6 +816,53 @@ _Source: AMD earnings calls (dates above); management commentary, paraphrased. Q
 
 **Inter-quarter management update — Goldman Sachs Communacopia + Technology Conference (2026-09-11), not an earnings call.** The second post-print management appearance in four days (after Citi TMT on 09-08), and it moves exactly **one** thing. **Nothing in the TAM or target stack was raised:** Matt Ramsay restated the November **Financial Analyst Day** frame verbatim — *"more than 60% growth of the data center franchise, more than 80% of growth of the AI business"*, *"the company growing at more than 35% annually"*, and *"more than $20 in earnings over the strategic timeframe, and I think **we've updated that to be significantly more than $20**"* — and walked the server-CPU ladder out loud: *"a **$60 billion server TAM, and we've now more than tripled that**"* / *"$60 billion TAM out to 2030 and **up that now to $120 billion and then $220 billion**"*, with total TAM *"**more than around $2 trillion by 2030**, and that's a **40% growth rate** of the TAM, and we expect to **grow faster than that** as a company."* 🔴 **WHAT DID MOVE IS THE CPU:GPU RATIO IN THE PARAGRAPH ABOVE. The 07-23 roundtable mark of "4:1 today, tightening toward 1:1" is superseded by Dan McNamara's own present tense: *"I would say that it's growing. If you think about it today, **we're saying 1:1 sort of ratio, and it's going to continue to grow**."* The July destination is now described as the current base, with further tightening ahead. The prior 4:1 figure is retained above and recorded in `## Changelog`.** ⚠️ **Three caveats bound it. (1) Management refuses the ratio twice in the same answer — *"We haven't been super specific about what that ratio is… because it does look different depending on what customer it is"* and *"it's just very hard to pinpoint, plug this into a model"* — so 1:1 is a hedged marker, not a modelling input. (2) The 07-23 "4:1" was framed as the HEAD-NODE ratio, while the 09-11 answer spans head nodes AND the new agentic-sandbox CPU class, so the two may not be strictly like-for-like. (3) The **40% growth rate** on the $2Tn TAM sits against the **+45% CAGR** this page carries from 07-23 — both management, seven weeks apart, neither retired.** ✅ **Also restated and unchanged: the >50% share-of-TAM ambition and the "$100 billion server business" framing (*"you guys can do the math on more than 50% of the $220 billion"*), "much more than doubling the data center business" in 2027, and Q2's "even the enterprise part of the server business grew more than 70%". And McNamara added the reason the ladder keeps rising: at the November event *"I said… 'there's multiple areas of growth for the CPU.' **We called it, but we called it too low. So we've upped it now.**"* (AMD management fireside, GS Communacopia + Technology Conference, AlphaSense fast-follow transcript, 2026-09-11.)**
 
+## DC construction pipeline — Aterio census (2026-08-31)
+<!-- aterio-census:begin asof=2026-08-31 · generated by _tools/build_aterio_company.py into _data/aterio/company_blocks/AMD.md; refresh = rerun the script and paste the new block between these markers (agent edit + Changelog line), never by script -->
+_Source: Aterio US data-center census, licensed export as of 2026-08-31 (internal use; `P:\Felipe Monteiro\Aterio`). Reference page: [US DC construction pipeline — Aterio census](themes/aterio-dc-census.md) · explorer: [aterio-dc.html](_dashboards/aterio-dc.html). MW = facility power per building (published, else Aterio's estimate); IT-eq ≈ facility ÷ 1.15. Likelihood = Aterio's execution tier: High = power negotiated, land secured, financing lined up or capex committed on earnings calls (>80% materialise); Medium ~50-60%; Low = announced with no power or financing signal (<40%); a high tier does not mean the date holds (Aterio team on a Goldman Sachs call, 2026-10-20). Activation dates are mostly Aterio's own estimates. Roles come from Aterio's fields (operator, end users, backers, financing, partners) and are not checked one by one. "In registry" = the campus is in Capstone's DC delay-risk registry ([dc-delay-risk](_dashboards/dc-delay-risk.html))._
+
+| Role in the census | Buildings | Active | Under construction | Delayed | Planned (all dates) | Withdrawn / cancelled | 2026-30 not yet active: High · Medium · Low |
+|---|---|---|---|---|---|---|---|
+| Named end user (someone else's building) | 5 on 4 campuses | 25 | 292 | – | 157 | – | 450 · – · – |
+| Project financing | 2 on 2 campuses | – | 50 | – | 120 | – | 170 · – · – |
+
+_MW, facility basis. A building can count under several companies (operator, tenant, financier), so never add these rows across pages._
+
+**Capstone house view, 2026-30 (GW IT-eq)**: facility MW ÷ 1.15 (Aterio's own facility/IT median); counts what switched on since Jan-2026, under construction, delayed and planned rated High, dated 2026-30 by Aterio; drops campuses rated Low with no named end user (house rules of 2026-11-09). This is the figure to quote; the other tables in this section stay on Aterio's own basis (facility MW, every likelihood tier).
+
+| Role in the census | House view | 2026 | 2027 | 2028 | 2029 | 2030 | Switched on · building · delayed · planned High | Aterio's dating, no filter |
+|---|---|---|---|---|---|---|---|---|
+| Named end user (someone else's building) | **0.41** | 0.02 | 0.25 | 0.14 | – | – | 0.02 · 0.25 · – · 0.14 | 0.41 |
+| Project financing | **0.15** | – | 0.15 | – | – | – | – · 0.04 · – · 0.10 | 0.15 |
+
+_GW IT-eq, same rules and code as the US house view on the reference page (`_tools/aterio_core.py`, rules in `_data/aterio/treatment.json`). A building counts for every company with a role on it, so never add rows across roles or pages._
+
+**When it switches on — named end user (someone else's building)** (MW facility, by Aterio activation year; not yet active only)
+
+| | 2026 | 2027 | 2028 | 2029 | 2030 | 2031+ | undated |
+|---|---|---|---|---|---|---|---|
+| Under construction | – | 292 | – | – | – | – | – |
+| Planned · High | – | – | 157 | – | – | – | – |
+
+_Already switched on in 2026: 25 MW._
+
+**Campuses with 2026-30 activity — named end user (someone else's building)**
+
+| Campus | State | Operator | Buildings | Under constr. MW | Delayed MW | Planned MW | Likelihood (not yet active) | Activation | In registry |
+|---|---|---|---|---|---|---|---|---|---|
+| Core Scientific Pecos Campus | TX | Core Scientific | 1 UC | 185 | – | – | High | 2027-06 | ✓ |
+| Core Scientific Hunt County Campus (Quinlan) | TX | Core Scientific | 1 planned | – | – | 157 | High | 2028-03 | ✓ |
+| Muskogee Campus | OK | Core Scientific | 1 UC | 82 | – | – | High | 2027-12 | ✓ |
+| Riot Rockdale Campus (Thorndale) | TX | Riot Platforms, Inc. | 1 active · 1 UC | 25 | – | – | High | 2027-05 | ✓ |
+
+**Campuses with 2026-30 activity — project financing**
+
+| Campus | State | Operator | Buildings | Under constr. MW | Delayed MW | Planned MW | Likelihood (not yet active) | Activation | In registry |
+|---|---|---|---|---|---|---|---|---|---|
+| Core Scientific Dalton Campus | GA | Core Scientific | 1 planned | – | – | 120 | High | 2027-12 | ✓ |
+| AI Data Center - Auburn (Auburn University) | AL | Core Scientific | 1 UC | 50 | – | – | High | 2027-03 | – |
+
+<!-- aterio-census:end -->
+
 ## Sources
 
 - 🆕 **2026-11-06 (/run-inbox):** [Jason Les (Riot Platforms CEO) on McNallie Money, "RIOT Q3 Earnings CEO Q&A | Corsicana Deal Signed", 2026-11-04 — paid/sponsored interview, machine transcript, not broker research](../_podcasts/adhoc/2026-11-04%20-%20RIOT%20Q3%20Earnings%20CEO%20Q%26A%20Corsicana%20Deal%20Signed%20Latest%20RIOT%20Stock%20News%20RIOT%20Platforms%20RIOT.md) — AMD's Rockdale colocation 25 → 50 MW, next phase delivered Nov-2026, options for more.
@@ -908,6 +956,9 @@ _Source: AMD earnings calls (dates above); management commentary, paraphrased. Q
 
 ## Changelog
 
+- 2026-11-09 — run-inbox: Lip-Bu Tan CASPA CEO Summit fireside (event ≈10-23/24, uploaded 11-09) — 1 Intra-quarter row at the top of the live table: Tan says he recently asked Lisa Su to "find some area we can work together" (Intel-side overture, no area, not a deal). Nothing superseded; Sinal/Síntese unchanged.
+- 2026-11-09 — added the "DC construction pipeline — Aterio census" section (Aterio US census export 2026-08-31, licensed; facility MW): named end user 5 buildings, 292 MW under construction, 2026-30 not yet active High/Medium/Low 450/0/0 MW; project financier 2 buildings, 50 MW under construction, 2026-30 not yet active High/Medium/Low 170/0/0 MW. Reference: [themes/aterio-dc-census.md](themes/aterio-dc-census.md). Nothing superseded.
+- 2026-11-09 — Aterio census section refreshed: added the Capstone house-view table (GW IT-eq, 2026-30; Aterio census as of 2026-08-31, Capstone treatment: facility ÷ 1.15, switched on since Jan-2026 + under construction + delayed + planned High, Low-likelihood campuses with no tenant dropped; house rules of 2026-11-09): named end user 0.41 GW; project financier 0.15 GW. Facility figures in the section are unchanged (same export); nothing superseded.
 - 2026-11-06 — run-inbox: Riot CEO Jason Les (McNallie Money, 2026-11-04, paid interview) → 1 Intra-quarter row (top table, below 11-05) + 1 Síntese UPDATE + Sources: AMD Rockdale colocation 25 → 50 MW leased (vs Bernstein 07-30 "200MW reserved", different basis), next phase delivered Nov-2026, options for more. Superseded: none.
 - 2026-11-06 — verification (transcription QA): Riot/Les Intra-quarter row — quoted "megawws" written as megawatts [transcribed "megawws"]; attribution checked (all quoted figures are Les's, none host-only).
 - 2026-11-05 — run-inbox: SemiAnalysis "The Iron(wood) Throne" (11-05) → 1 Intra-quarter row (top) + 1 Síntese UPDATE: MI355X behind TPUv7 FP8 on AgentX perf/$ (GLM-5.2 1.2-2.7x, Kimi K3 1.15-2.5x, shared with B200/B300); AMD MonoKernel 2,459 → 210 launches, 2.31x at batch 1 on 8× MI350X (AMD-reported); OSS-support comparison vs NVIDIA. Superseded: none.

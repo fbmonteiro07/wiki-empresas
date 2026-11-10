@@ -426,6 +426,24 @@
           "cited_in": [
             "themes/ai-datacenter-power.md"
           ]
+        },
+        {
+          "value": "US census as of 2026-08-31: 51.8 GW active · 71.5 GW under construction (dated 2026/27/28/29/30: 13.1/27.0/26.8/3.5/1.1) · 8.8 GW delayed · 382.7 GW planned (announced + land bank); not yet active with activation 2026-30 = 345.5 GW, of which Aterio likelihood High 205.1 · Medium 107.3 · Low 33.1 GW",
+          "source": "Aterio data-center census (licensed project-level export, P:\\Felipe Monteiro\\Aterio)",
+          "date": "2026-08-31",
+          "scope": "facility GW, building-level, US; IT-eq ≈ facility ÷ 1.15; activation dates mostly Aterio estimates; tiers: High >80% / Medium ~50-60% / Low <40% materialise (Aterio @ GS call 2026-10-20)",
+          "cited_in": [
+            "themes/aterio-dc-census.md"
+          ]
+        },
+        {
+          "value": "~55 GW active · ~83 GW under construction (~858 buildings) · ~455 GW announced (US), up from 44 / 43 / 214 GW in the 16-Jan-2026 report",
+          "source": "Aterio team on a Goldman Sachs call (report of the prior Friday)",
+          "date": "2026-10-20",
+          "scope": "facility GW, US, building-level",
+          "cited_in": [
+            "themes/aterio-dc-census.md"
+          ]
         }
       ],
       "status": "scope-trap",

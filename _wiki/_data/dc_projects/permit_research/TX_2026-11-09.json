@@ -1,0 +1,1226 @@
+{
+ "_doc": [
+  "Permit and status research for the 20 largest Texas campuses in the DC registry (by IT-eq GW dated 2026-30, pipeline universe, 2026-11-09).",
+  "Four research agents read TCEQ / ERCOT / company / press sources per campus; reviewed by Capstone before use. 'campus' = exact registry name. Registry fields changed from it are in overrides.csv with the same date.",
+  "Shown in dc-delay-risk.html: double-click Texas -> 'What is missing' column (bold line = this research, grey line = registry flags)."
+ ],
+ "state": "TX",
+ "researched": "2026-11-09",
+ "campuses": [
+  {
+   "rank": 1,
+   "campus": "Project Kilby (Chevron Energy Forge One / Microsoft)",
+   "air_permit": {
+    "status": "pending",
+    "detail": "Kilby Power Plant major-source permit TCEQ NSR 181895 / PSDTX1684 / GHGPSDTX260 (applicant Energy Forge One LLC): application received 2025-10-17; Notice of Application and Preliminary Decision 2026-04-15 ('The executive director has completed the technical review of the application and prepared a draft permit'); public meeting in Pecos 2026-06-10. Not issued: still on TCEQ's pending-applications page (modified 2026-11-06) and 'Pending' on TCEQ turbine list v2026.10.7. Caught by the Sep-21 freeze (Semafor via The Next Web 2026-10-01: the order covers projects that make their own power, incl. Kilby; Wells Fargo lists Kilby among projects TCEQ is holding).",
+    "date": "2026-04",
+    "src": [
+     "https://www.tceq.texas.gov/downloads/permitting/air/bilingual/pending-permit-notices/181895-napd-english.pdf",
+     "https://www.tceq.texas.gov/permitting/air/newsourcereview/airpermits-pendingpermit-apps",
+     "https://www.tceq.texas.gov/agency/decisions/hearings/events/public-meeting-energy-forge-one-llc-181895-psdtx1684-and-ghgpsdtx260",
+     "https://www.tceq.texas.gov/downloads/permitting/air/memos/turbine-lst.xlsx",
+     "https://thenextweb.com/news/texas-politics-delay-chevron-microsoft-data-centre"
+    ],
+    "src_date": "2026-11-06"
+   },
+   "interconnection": {
+    "status": "study",
+    "batch_zero": "",
+    "detail": "No large-load interconnection request found; the plant serves load behind the meter with no ERCOT tie on day one ('An August grid-connection pause did not reach Kilby', Semafor via The Next Web 2026-10-01). 'Study' = generation interconnection requests by Energy Forge One in ERCOT's queue (third-party trackers): 27INR0572 371 MW COD Nov-2027; 28INR0457 560 MW storage; 28INR0459 950 MW simple cycle ('SS Completed, FIS Started, No IA' at 2026-10-01); 29INR0199 1,056 MW combined cycle, COD Jul-2029.",
+    "src": [
+     "https://www.infrasure.ai/project/ercot-28inr0459-kilby1-part-4-large-block-simple-cycle",
+     "https://www.interconnection.fyi/project/ercot-29inr0199",
+     "https://cleanview.co/power-projects/planned/natural-gas-power-plants/texas/27INR0572/kilby1-part-1-small-block-simple-cycle",
+     "https://thenextweb.com/news/texas-politics-delay-chevron-microsoft-data-centre"
+    ],
+    "src_date": "2026-10-25"
+   },
+   "local": {
+    "status": "unknown",
+    "detail": "Unincorporated Reeves County (no city zoning; inferred from TCEQ directions). JETI value-limitation J0022 with Pecos-Barstow-Toyah ISD: agreement posted 2026-07-24 (power plant). Reeves County posted a tax-abatement consideration for its 2026-10-13 court; project and outcome not confirmed. No local approval found for the Microsoft data center.",
+    "src": [
+     "https://comptroller.texas.gov/economy/development/prop-tax/jeti/application-details.php?id=J0022",
+     "https://www.motherjones.com/politics/2026/05/chevron-energy-forge-one-texas-tax-break-power-plant-microsoft-data-center/",
+     "https://www.reevescounty.org/visitors/rc-news"
+    ],
+    "src_date": "2026-09-10"
+   },
+   "other_gates": [
+    {
+     "item": "Chevron FID: EPC, permitting and financing not completed (CFO, Q3 call 2026-10-30); FID could slip from YE-2026 into 2027 (Semafor 2026-10-01); company targets first power 2028, full 2031",
+     "status": "pending",
+     "src": "https://dataphoenix.info/news/chevron-microsoft-texas-data-center-schedule-update"
+    },
+    {
+     "item": "Microsoft 20-year PPA for 2.67 GW (2026-06-22)",
+     "status": "signed",
+     "src": "https://worldoil.com/news/2026/6/22/chevron-signs-20-year-microsoft-power-deal-for-west-texas-ai-project/"
+    }
+   ],
+   "construction": {
+    "detail": "Early earthworks under way while contracts are finalised and permits awaited (Semafor via The Next Web, 2026-10-01). No FID at 2026-10-30. Generating equipment cannot be installed before the air permit. Nothing built or energized; no construction status found for the Microsoft data center.",
+    "src": [
+     "https://thenextweb.com/news/texas-politics-delay-chevron-microsoft-data-centre",
+     "https://dataphoenix.info/news/chevron-microsoft-texas-data-center-schedule-update"
+    ]
+   },
+   "missing_summary": "Final TCEQ air permit (draft stage, frozen since Sep-21), FID, EPC and financing, ERCOT generation interconnection agreements, and any confirmed local approval for the Microsoft data center.",
+   "changes_vs_registry": [
+    "air_permit_date: keep 2025-10 (application); add preliminary decision 2026-04-15 and public meeting 2026-06-10; issuance held by the Sep-21 freeze",
+    "interconnection: study stays, re-scoped to generation interconnection (no IA as of 2026-10-01); no large-load request; behind the meter on day one",
+    "local_approval: unknown stays; JETI J0022 (power plant only)",
+    "notes: FID still pending 2026-10-30, possible slip to 2027; early earthworks started"
+   ],
+   "confidence": "medium",
+   "campus_agent": "Project Kilby (Chevron Energy Forge One / Microsoft), Pecos, Reeves County",
+   "gw_it_eq_2026_30": 1.78
+  },
+  {
+   "rank": 2,
+   "campus": "Vantage Frontier (Stargate Shackelford)",
+   "air_permit": {
+    "status": "pending",
+    "detail": "Two VoltaGrid authorizations for the ABI-1 plant (299 FM 604). (1) Initial generation: EGU Standard Permit registration 180842 (project 395504), 210 gas engines, 'The total generating capacity of all EGUs proposed for installation at this site will be equivalent to 709 MW', minor source; review signed 2025-07-17 (effectively issued; SemiAnalysis 2026-11-01: 'Initial generation is separately authorized'). (2) Additional capacity: major-source NSR 182467 / PSDTX1692 / GHGPSDTX266, application 2025-12-12, receipt notice 2025-12-17, preliminary-decision notice mailed 2026-09-22 (FracTracker); not issued, caught by the freeze ('remains pending', SemiAnalysis).",
+    "date": "2026-09",
+    "src": [
+     "https://records.tceq.texas.gov/cs/idcplg?IdcService=TCEQ_EXTERNAL_SEARCH_GET_FILE&Rendition=Web&dID=8983248",
+     "https://www.tceq.texas.gov/downloads/permitting/air/bilingual/pending-permit-notices/182467-nori-english.pdf",
+     "https://fractracker.org/2026/10/texas-data-center-permits-after-governor-halt/",
+     "https://www.tceq.texas.gov/permitting/air/newsourcereview/airpermits-pendingpermit-apps"
+    ],
+    "src_date": "2026-11-06"
+   },
+   "interconnection": {
+    "status": "unknown",
+    "batch_zero": "",
+    "detail": "No ERCOT large-load request, utility service agreement or Batch Zero classification naming Frontier found; Vantage says only 'multiple, diverse power feeds'. Third-party trackers conflict (AEP Texas unverified; off-grid microgrid; grid + gas).",
+    "src": [
+     "https://telborg.com/dc-intel/briefings/vantage-frontier-shackelford",
+     "https://vantage-dc.com/data-center-locations/north-america/shackelford-county-tx"
+    ],
+    "src_date": "2026-04-27"
+   },
+   "local": {
+    "status": "approved",
+    "detail": "Shackelford County created Reinvestment Zone 2025-1 and accepted Vantage's Chapter 312 abatement application unanimously on 2025-07-21 (10-year PILOT $10M/yr); executed agreement not located (Telborg 2026-04-27). Unincorporated county land, no zoning.",
+    "src": [
+     "https://ktxs.com/news/local/new-data-center-expected-to-create-250-full-time-jobs-in-shackelford-county",
+     "https://www.thealbanynews.net/news/data-center-plans-move-forward-shackelford-county",
+     "https://telborg.com/dc-intel/briefings/vantage-frontier-shackelford"
+    ],
+    "src_date": "2026-04-27"
+   },
+   "other_gates": [
+    {
+     "item": "TCEQ construction stormwater (CGP): no Frontier record; TCEQ suspended at least 17 data-center stormwater notices issued after Sep-21 (Frontier not named)",
+     "status": "unknown",
+     "src": "https://www.tpr.org/environment/2026-10-26/tceq-suspends-stormwater-approvals-other-data-center-related-reviews-appear-unchanged-after-watchdog-report"
+    },
+    {
+     "item": "Gas supply interconnect to ABI-1",
+     "status": "unknown",
+     "src": "https://telborg.com/dc-intel/briefings/vantage-frontier-shackelford"
+    }
+   ],
+   "construction": {
+    "detail": "Epoch imagery 2026-09-04: B1-B5 shells complete and roofed; B1-B3 cooling and backup generators being installed; B6-B7 foundations; B8-B10 pads cleared. TDLR completion dates 2027-02-15 (B1) to 2028-05-11 (B10). Vantage targets first-building delivery late 2026. No building energized as of 2026-11-09.",
+    "src": [
+     "https://epoch.ai/data/ai-data-centers/directory/openai-stargate-shackelford",
+     "https://epoch.ai/publications/openai-stargate-where-the-us-sites-stand"
+    ]
+   },
+   "missing_summary": "Major ABI-1 air permit (182467/PSDTX1692) for generation beyond the 709 MW standard-permit tranche (frozen since Sep-21); no documented grid interconnection; county abatement agreement not seen executed.",
+   "changes_vs_registry": [
+    "air_permit_date (B1-B4): '' -> 2025-07 (EGU Standard Permit 180842, 709 MW generation)",
+    "air_permit (B5-B10): pending stays; add permit numbers; application 2025-12-12, preliminary decision mailed 2026-09-22",
+    "local_approval: unknown -> approved (county reinvestment zone + abatement application accepted 2025-07-21)",
+    "interconnection: unknown stays"
+   ],
+   "confidence": "medium",
+   "campus_agent": "Vantage Frontier (Stargate Shackelford), Shackelford County",
+   "gw_it_eq_2026_30": 1.4
+  },
+  {
+   "rank": 3,
+   "campus": "Galaxy Helios",
+   "air_permit": {
+    "status": "n/a",
+    "detail": "Grid-served campus (private 345 kV substation; WETT Pitchfork and Cottonwood 345 kV substations; 'electrical yards with backup generation'). No TCEQ application for prime or bridge generation by Galaxy found (pending page, turbine list).",
+    "date": "",
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000108/exhibit992-glxyq32026ove.htm",
+     "https://www.tceq.texas.gov/permitting/air/newsourcereview/airpermits-pendingpermit-apps"
+    ],
+    "src_date": "2026-10-27"
+   },
+   "interconnection": {
+    "status": "energized",
+    "batch_zero": "base_load",
+    "detail": "Phase I energized (133 MW IT / ~200 MW gross to CoreWeave, Q2-2026). Helios I (800 MW) ERCOT-approved; ERCOT approved another 830 MW on 2026-01-15 after a Large Load Interconnection Study (service agreement with AEP Texas; WETT transmission); 1.63 GW total approved. Galaxy (2026-09-08): Helios I 800 MW and Helios II 830 MW 'Batch Zero Base Load', Helios III 1,000 MW 'Batch Zero Studied Load', all conditional on the audit ('the risk that a project is removed from Batch Zero').",
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000005/heliosercotapproval_1x15.htm",
+     "https://finviz.com/news/389885/galaxy-provides-update-on-ercot-batch-zero-large-load-classifications",
+     "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000108/glxy-20260930xpressrelease.htm"
+    ],
+    "src_date": "2026-10-27"
+   },
+   "local": {
+    "status": "approved",
+    "detail": "Unincorporated Dickens County, no zoning. Chapter 312 abatements: Galaxy Helios I (Jul-2025); 'Galaxy Helios II LLC' and 'Galaxy Helios III LLC' (2026-05-11, unanimous). Separate county agreement with CoreWeave (~$19M over 10 years + $2M housing fund).",
+    "src": [
+     "https://www.thetexasspur.com/community-opinions/dickens-commissioners-approve-tax-abatements-galaxy-helios-ii-galaxy-helios-iii",
+     "https://citizenportal.ai/articles/9723121/texas/dickens-county/commissioners-approve-tax-abatement-for-galaxy-helios-i",
+     "https://www.thetexasspur.com/news/dickens-county-approves-19-million-tax-abatement-galaxy-tenant-coreweave"
+    ],
+    "src_date": "2026-05-11"
+   },
+   "other_gates": [
+    {
+     "item": "Batch Zero audit outcome: classifications conditional; ERCOT verification report targeted Dec-10-2026",
+     "status": "pending",
+     "src": "https://finviz.com/news/389885/galaxy-provides-update-on-ercot-batch-zero-large-load-classifications"
+    },
+    {
+     "item": "Tenant for the 830 MW Helios II tranche ('in discussions with prospective tenants')",
+     "status": "pending",
+     "src": "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000108/glxy-20260930xpressrelease.htm"
+    }
+   ],
+   "construction": {
+    "detail": "Phase I 133 MW IT operational since Q2-2026. Phase II (260 MW IT) fully financed and under construction, data halls from Q2-2027. Phase III (133 MW IT) rent from 2028, no construction disclosed. Helios II (830 MW) unleased, no construction.",
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1859392/000185939226000108/glxy-20260930xpressrelease.htm"
+    ]
+   },
+   "missing_summary": "No permit or local gap found; final Batch Zero confirmation beyond the energized Phase I (Helios I/II only conditional base load) and a tenant for the 830 MW Helios II tranche.",
+   "changes_vs_registry": [
+    "local_approval (all rows): unknown -> approved (Dickens County Chapter 312 abatements Jul-2025 and 2026-05-11)",
+    "interconnection: no change; re-cite Batch Zero to Galaxy's 2026-09-08 release"
+   ],
+   "confidence": "high",
+   "campus_agent": "Galaxy Helios, Afton, Dickens County",
+   "gw_it_eq_2026_30": 1.218
+  },
+  {
+   "rank": 4,
+   "campus": "Goodnight (Crusoe for Google)",
+   "air_permit": {
+    "status": "pending",
+    "detail": "TCEQ NSR 182880 / PSDTX1698 / GHGPSDTX268, applicant Crusoe Energy Systems LLC, 'Goodnight Data Center', 10001 Lima Road, Claude; 20 x GE LM6000 / Aero DT46 at 932.9 MW (turbine list). Application 2026-01-30; amended receipt notice 2026-02-11 ('administratively complete and will conduct a technical review'). No preliminary decision on TCEQ's pending page (modified 2026-11-06): still in technical review, frozen by the Sep-21 directive.",
+    "date": "2026-01",
+    "src": [
+     "https://www.tceq.texas.gov/downloads/permitting/air/bilingual/pending-permit-notices/182880-nori-english.pdf",
+     "https://www.tceq.texas.gov/permitting/air/newsourcereview/airpermits-pendingpermit-apps",
+     "https://www.tceq.texas.gov/downloads/permitting/air/memos/turbine-lst.xlsx"
+    ],
+    "src_date": "2026-11-06"
+   },
+   "interconnection": {
+    "status": "agreement",
+    "batch_zero": "",
+    "detail": "ERCOT. Two Crusoe loads behind the 265.5 MW Goodnight 1 wind farm's point of interconnection (Oncor Midpoint Switch), SB 6 net metering: Crusoe Load One approved by PUCT in Docket 58881 (Apr-2026); Crusoe Load Two (LLI-1898, 260 MW) final order in Docket 59220 on 2026-07-24, with curtailment within 30 minutes of an ERCOT emergency notice on ~525.5 MW combined. ERCOT approved the Crusoe Two large-load study 2026-03-02. No Batch Zero class disclosed; energization not confirmed. The 933 MW of gas generation is planned off-grid.",
+    "src": [
+     "https://newsletter.interconnection.fyi/p/queue-update-load-cluster-studies",
+     "https://www.whitecase.com/insight-alert/puct-affirms-curtailment-authority-over-co-located-data-centers-first-net-metering",
+     "https://interchange.puc.texas.gov/Documents/59220_56_1662474.PDF"
+    ],
+    "src_date": "2026-07-29"
+   },
+   "local": {
+    "status": "approved",
+    "detail": "Armstrong County approved a reinvestment zone and Chapter 312 Phase 1 and Phase 2 abatement agreements with Crusoe Energy / GN DC1 LLC on 2024-11-12; amended to per-building PILOTs of $1.35M/yr on ~2025-10-14.",
+    "src": [
+     "https://www.co.armstrong.tx.us/page/armstrong.Commissioners.Court",
+     "https://www.co.armstrong.tx.us/upload/page/5361/docs/2024/NOV/Nov2024.pdf",
+     "https://www.newschannel10.com/2025/10/18/armstrong-county-ai-data-center-project-scaled-back-original-plan/"
+    ],
+    "src_date": "2025-10-17"
+   },
+   "other_gates": [
+    {
+     "item": "TCEQ wastewater permit WQ0016881001 (GN DC1 LLC): filed, status not found",
+     "status": "unknown",
+     "src": "https://www.compute-atlas.com/facilities/google-armstrong-county-tx"
+    },
+    {
+     "item": "PUCT curtailment conditions on the co-located load (Dockets 58881, 59220)",
+     "status": "in force",
+     "src": "https://newsletter.interconnection.fyi/p/queue-update-load-cluster-studies"
+    }
+   ],
+   "construction": {
+    "detail": "Ground broken Jun-2025; >5,500 workers on site (Crusoe 2026-09-28; Google confirmed as customer). TDLR completion dates B1 2026-09-12, B2 2026-11-07, B3 2027-01-29 to B6 2027-07-30. No building energization confirmed as of Nov-2026; first phase described as due 2027.",
+    "src": [
+     "https://crusoe.ai/resources/newsroom/crusoe-developing-data-center-campus-in-armstrong-county-texas",
+     "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2025027064"
+    ]
+   },
+   "missing_summary": "The 933 MW gas-plant air permit (182880, in technical review, frozen since Sep-21) and confirmed energization of the PUCT-approved wind-netted loads (~525 MW, not the full ~1 GW IT).",
+   "changes_vs_registry": [
+    "interconnection (all rows): unknown -> agreement (PUCT Dockets 58881 and 59220; ~525 MW of grid-netted load)",
+    "local_approval (all rows): unknown -> approved (Armstrong County Chapter 312, 2024-11-12; PILOT amendment 2025-10-14)",
+    "air_permit: pending stays; ~933 MW now verified at 932.9 MW"
+   ],
+   "confidence": "medium",
+   "campus_agent": "Goodnight (Crusoe for Google), near Claude, Armstrong County",
+   "gw_it_eq_2026_30": 1.006
+  },
+  {
+   "rank": 5,
+   "campus": "Riot Corsicana",
+   "air_permit": {
+    "status": "n/a",
+    "detail": "Grid-only (Oncor), no on-site prime or bridge generation; no TCEQ air application found.",
+    "date": "",
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1167419/000110465926122417/riot-20260930x10q.htm"
+    ],
+    "src_date": "2026-11-04"
+   },
+   "interconnection": {
+    "status": "agreement",
+    "batch_zero": "base_load",
+    "detail": "Riot 10-Q (2026-11-04): 'The additional MWs of capacity planned for the expansion of the Corsicana Facility was studied and approved by ERCOT under its prior large load interconnection process, are not subject to the Batch Zero study process, and are classified as base load.' The existing ~400 MW is mining. Per a third-party Q3-call transcript, mining 'will not need to come down for the first 400 MW', so Phase 1 rides the substation expansion (under way).",
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1167419/000110465926122417/riot-20260930x10q.htm",
+     "https://gloom.sh/stocks/riot/transcripts/q3-2026"
+    ],
+    "src_date": "2026-11-04"
+   },
+   "local": {
+    "status": "approved",
+    "detail": "Unincorporated Navarro County, no zoning. Navarro County Resolution 2024.13 (2024-10-15): Reinvestment Zone 24-102 and a 10-year 50% Chapter 312 abatement on 265.71 acres; coverage of the new AI improvements not established.",
+    "src": [
+     "https://navarro.easydocs.us/minutes/LinkedDir/2024/Links%202024-10-15-Regular/Item%2016%20Approve%20Resolution%20for%20Tax%20Abatement%20Navarro%20County%20and%20Riot%20Corsicana%20LLC.pdf"
+    ],
+    "src_date": "2024-10-15"
+   },
+   "other_gates": [
+    {
+     "item": "Substation expansion (600 MW over the existing 400 MW): under construction, energization date not disclosed",
+     "status": "under_construction",
+     "src": "https://gloom.sh/stocks/riot/transcripts/q3-2026"
+    },
+    {
+     "item": "Project financing (non-recourse debt) expected to launch in 2027",
+     "status": "pending",
+     "src": "https://www.riotplatforms.com/riot-platforms-reports-third-quarter-2026-financial-results-and-strategic-highlights/"
+    }
+   ],
+   "construction": {
+    "detail": "Lease with Anthropic signed 2026-10-28, effective 2026-11-04; long-lead equipment being ordered by YE-2026; substation expansion under way. Pad targets: Phase 1 2027-06-28 to 2027-09-11; Phase 2 2027-12-24 / 2028-01-28; Phase 3 2028-07-30.",
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1167419/000110465926122417/riot-20260930x10q.htm"
+    ]
+   },
+   "missing_summary": "No permit or approval found missing; execution items remain (substation expansion energization, project financing).",
+   "changes_vs_registry": [
+    "interconnection (P1): energized -> agreement (Phase 1 rides the ERCOT-approved substation expansion; third-party transcript)",
+    "interconnection (P2, P3): agreement stays; re-cite to the 10-Q (base load, outside Batch Zero)",
+    "local_approval (all rows): unknown -> approved (Navarro County Resolution 2024.13)"
+   ],
+   "confidence": "high",
+   "campus_agent": "Riot Corsicana (Anthropic lease), Navarro County",
+   "gw_it_eq_2026_30": 0.91
+  },
+  {
+   "rank": 6,
+   "campus": "Meta El Paso (Sopaipilla JV: BlackRock GIP/HPS 80% / Meta 20%)",
+   "air_permit": {
+    "status": "issued",
+    "detail": "McCloud bridge plant (813 x 450 kW Enchanted Rock gas gensets; 366 MW in the PUCT filing): TCEQ Air Quality Standard Permit (EGUs) registration 181733, project 398782, 'EL PASO DATACENTER - EGUS', permittee Enchanted Rock LLC; received 2025-10-02 (expedited), issued 2025-10-22. Issued before the Sep-21 freeze; an amendment would be caught (a secondary source says the permit covers ~225 MW via a gas-use cap; the TCEQ record shows no MW). Wurldwide LLC PBR 106.511 No. 183096 (emergency engines, 2026-02-20) is backup.",
+    "date": "2025-10",
+    "src": [
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=398782",
+     "https://insideclimatenews.org/news/24092026/el-paso-electric-only-considered-gas-to-power-meta-data-center/",
+     "https://measuredai.substack.com/p/meta-blackrock-el-paso-data-centers"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "interconnection": {
+    "status": "unknown",
+    "batch_zero": "",
+    "detail": "El Paso Electric (WECC): ERCOT Batch Zero and the Aug-3 audit do not apply. No signed service agreement found in a primary source. Load filings: 220 MW original, >440 MW by 2027, potentially 1 GW by 2029. The McCloud bridge plant needs a PUCT CCN (Docket 59076): ALJs' proposal for decision 2026-09-23 recommends approval 'only with protections'; final order expected by 2026-12-07 (KVIA).",
+    "src": [
+     "https://kvia.com/news/2026/09/28/city-council-authorizes-ongoing-negotiations-to-protect-ratepayers-from-meta-data-center-energy-facility/",
+     "https://insideclimatenews.org/news/24092026/el-paso-electric-only-considered-gas-to-power-meta-data-center/"
+    ],
+    "src_date": "2026-09-28"
+   },
+   "local": {
+    "status": "approved",
+    "detail": "Inside City of El Paso limits on city-sold land. Dec-2023: city and county incentive agreements with Wurldwide LLC, county abatement and development agreement (2023-12-04), land sale (2023-12-29), El Paso Water agreement (2.5 MGD). The city's 2026 Data Center Policy Framework does not apply to this campus. Open: subdivision plat 'Seafox Addition' (case SUSU25-00066) status not found.",
+    "src": [
+     "https://measuredai.substack.com/p/meta-blackrock-el-paso-data-centers",
+     "https://insideclimatenews.org/news/24092026/el-paso-electric-only-considered-gas-to-power-meta-data-center/",
+     "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017750"
+    ],
+    "src_date": "2026-09-24"
+   },
+   "other_gates": [
+    {
+     "item": "PUCT CCN for the McCloud bridge plant (366 MW, Docket 59076)",
+     "status": "pending; order expected by 2026-12-07",
+     "src": "https://kvia.com/news/2026/09/28/city-council-authorizes-ongoing-negotiations-to-protect-ratepayers-from-meta-data-center-energy-facility/"
+    },
+    {
+     "item": "PUCT CCN for EPE's Pine-McCloud Central 345 kV line (filed Oct-2026; decision ~Apr-2027, energization May-2029; link to Meta not confirmed by EPE)",
+     "status": "pending",
+     "src": "https://kvia.com/news/el-paso/2026/11/05/community-meeting-discusses-proposed-el-paso-electric-transmission-line-project/"
+    },
+    {
+     "item": "Subdivision plat Seafox Addition (SUSU25-00066)",
+     "status": "unknown",
+     "src": "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017750"
+    }
+   ],
+   "construction": {
+    "detail": "Groundbreaking 2025-10-15; TDLR 'Project Seafox': 12 buildings, completion 2029-02-28; >2,300 workers on site by Jul-2026; under construction, not operational (2026-09-24). First capacity 2028; Meta rent from 2028-12-01.",
+    "src": [
+     "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017750",
+     "https://insideclimatenews.org/news/24092026/el-paso-electric-only-considered-gas-to-power-meta-data-center/"
+    ]
+   },
+   "missing_summary": "The PUCT CCN for the McCloud bridge plant (Docket 59076, order ~2026-12-07) and the PUCT CCN for EPE's Pine-McCloud Central 345 kV line (~Apr-2027); the EPE service agreement and the subdivision plat are unconfirmed. Its TCEQ air permit is already issued.",
+   "changes_vs_registry": [
+    "air_permit: unknown -> issued (TCEQ Standard Permit 181733, 2025-10-22, before the freeze)",
+    "local_approval: unknown -> approved (Dec-2023 city/county agreements, land sale, water)",
+    "interconnection: unknown stays; add PUCT Docket 59076 and the Pine-McCloud CCN"
+   ],
+   "confidence": "medium",
+   "campus_agent": "Meta El Paso (Sopaipilla JV)",
+   "gw_it_eq_2026_30": 0.833
+  },
+  {
+   "rank": 7,
+   "campus": "Cipher Colchis",
+   "air_permit": {
+    "status": "n/a",
+    "detail": "Grid-only: Cipher told the Tom Green County Commissioners Court (2026-09-22) that no TCEQ air permits are required and there will be no on-site generation (KLST). No TCEQ record for Colchis LLC or Cipher in Tom Green County (2026-11-09). The Westline 2335 PSD application in Tom Green County is Beacon Data Centers' project, not Colchis.",
+    "date": "",
+    "src": [
+     "https://www.yahoo.com/news/us/articles/colchis-cipher-digital-briefs-commissioners-201328943.html",
+     "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000050/cifr-20260930.htm"
+    ],
+    "src_date": "2026-09-22"
+   },
+   "interconnection": {
+    "status": "agreement",
+    "batch_zero": "base_load",
+    "detail": "Fully executed 1 GW Direct Connect Agreement with AEP, energization targeted 2028 (Cipher Q3-25). Cipher Q3-26 (2026-11-02): 'conditional base load classification for 1 GW at Colchis'; final classification expected Dec-2026 after the audit; ERCOT has temporarily paused certain energization approvals for large data-center loads (10-Q).",
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1819989/000181998925000110/nov3_earningspressreleasex.htm",
+     "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000047/exh991-q326_earningsxprxvf.htm",
+     "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000050/cifr-20260930.htm"
+    ],
+    "src_date": "2026-11-02"
+   },
+   "local": {
+    "status": "n/a",
+    "detail": "Unincorporated Tom Green County outside San Angelo limits; no zoning; no abatement sought; the 2026-09-22 court item was a briefing. A road-use agreement (City Farm Road) was discussed, not executed.",
+    "src": [
+     "https://sanangelolive.com/news/politics/2026-06-02/san-angelo-may-end-data-center-it-cant-regulate",
+     "https://www.yahoo.com/news/us/articles/colchis-cipher-digital-briefs-commissioners-201328943.html"
+    ],
+    "src_date": "2026-09-22"
+   },
+   "other_gates": [
+    {
+     "item": "Final ERCOT Batch Zero classification and energization approval (reports due by 2026-12-10)",
+     "status": "pending (conditional base load)",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000050/cifr-20260930.htm"
+    },
+    {
+     "item": "Tenant lease ('in discussions')",
+     "status": "none signed",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000047/cipherdigital_businessup.htm"
+    },
+    {
+     "item": "County road-use agreement",
+     "status": "proposed, not executed",
+     "src": "https://sanangelolive.com/news/business/2026-09-23/red-creek-power-substation-one-kind"
+    }
+   ],
+   "construction": {
+    "detail": "Not started: grading targeted Q4-2026, construction Q1-2027 (14-20 months, phased); energization targeted 2028.",
+    "src": [
+     "https://www.yahoo.com/news/us/articles/colchis-cipher-digital-briefs-commissioners-201328943.html"
+    ]
+   },
+   "missing_summary": "Final Batch Zero classification and ERCOT energization approval (audit report due ~2026-12-10), a tenant lease and the county road-use agreement; no TCEQ or land-use approvals required per the company.",
+   "changes_vs_registry": [
+    "air_permit: unknown -> n/a (no on-site generation; no TCEQ record)",
+    "local_approval: unknown -> n/a (unincorporated, no abatement sought)",
+    "add batch_zero = base_load (conditional)"
+   ],
+   "confidence": "high",
+   "campus_agent": "Cipher Colchis",
+   "gw_it_eq_2026_30": 0.833
+  },
+  {
+   "rank": 8,
+   "campus": "Crusoe/Lancium Childress",
+   "air_permit": {
+    "status": "n/a",
+    "detail": "Grid plus behind-the-meter solar and storage (Lancium/Crusoe release 2026-07-15); no gas generation disclosed; no Lancium/Crusoe data-center air record in Childress County (TCEQ NSR search 2026-11-09).",
+    "date": "",
+    "src": [
+     "https://lancium.com/2026/07/15/crusoe-and-lancium-announce-1-0-gigawatt-ai-data-center-campus-in-childress-texas/",
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.start"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "interconnection": {
+    "status": "agreement",
+    "batch_zero": "",
+    "detail": "Lancium: the campus 'features a 1GW interconnect, which has been fully approved by ERCOT' (page labelled Mar-2026); approved before Batch Zero (TechTimes, secondary). Not energized; whether the audit-period energization pause applies is not disclosed.",
+    "src": [
+     "https://lancium.com/locations-childress-county/",
+     "https://www.techtimes.com/articles/320962/20260719/approved-grid-beats-metro-lancium-activates-two-texas-ai-gigawatt-campuses-one-week.htm"
+    ],
+    "src_date": "2026-07-19"
+   },
+   "local": {
+    "status": "approved",
+    "detail": "Childress County Lancium Reinvestment Zone No. 1 (2025-02-25); Chapter 381 and Chapter 312 Phase 1-10 abatement agreements posted (Phase 1 dated 2025-03-10). County jurisdiction (CR 23).",
+    "src": [
+     "https://www.childresstx.us/pages/tax-abatements"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "other_gates": [
+    {
+     "item": "ERCOT energization authorization during the audit",
+     "status": "unknown applicability",
+     "src": "https://www.sec.gov/Archives/edgar/data/1819989/000181998926000050/cifr-20260930.htm"
+    }
+   ],
+   "construction": {
+    "detail": "TDLR 'Project Hyper - Childress': Building 1 started 2026-07-06 (completion 2028-02-28); Building 3 started 2026-10-05 (completion 2028-05-31). Tenant not assigned in TDLR; Meta reported (Bloomberg).",
+    "src": [
+     "https://www.tdlr.texas.gov/TABS/Projects/TABS2027000824",
+     "https://www.tdlr.texas.gov/TABS/Projects/TABS2027000835"
+    ]
+   },
+   "missing_summary": "Nothing found missing except ERCOT energization authorization; whether the audit-period pause applies to this pre-Batch-Zero approval is undisclosed.",
+   "changes_vs_registry": [
+    "air_permit: unknown -> n/a (grid + BTM solar/storage)",
+    "local_approval: unknown -> approved (Reinvestment Zone 2025-02-25; Ch.312/381 agreements)"
+   ],
+   "confidence": "medium",
+   "campus_agent": "Crusoe/Lancium Childress",
+   "gw_it_eq_2026_30": 0.833
+  },
+  {
+   "rank": 9,
+   "campus": "Stargate Milam County (SB Energy)",
+   "air_permit": {
+    "status": "n/a",
+    "detail": "Only backup engines: TCEQ PBR 106.511 No. 183969, 'MILAM COUNTY DC', SE DC DevCo LLC, issued 2026-05-06. Prime power is co-located solar plus storage (SB Energy S-1/A). No gas permit exists or is pending.",
+    "date": "2026-05",
+    "src": [
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=409044",
+     "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "interconnection": {
+    "status": "agreement",
+    "batch_zero": "",
+    "detail": "S-1/A (2026-09-21): Load Interconnection 'Utility and ISO secured' for Buildings 1-2; Key Permits 'Obtained'; footnote: 'Energization of certain Texas projects remains subject to completion of the ERCOT and PUCT audit and verification process.' No Batch Zero class disclosed for Milam. Leases: no extensions for utility delays; tenant buy-out after 365+ days of delay.",
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    ],
+    "src_date": "2026-09-21"
+   },
+   "local": {
+    "status": "approved",
+    "detail": "Milam County Commissioners Court approved a reinvestment zone and tax agreement with SE DC DevCo LLC (595-acre campus) on 2025-06-09 (Ch.312 + Sec. 381.004).",
+    "src": [
+     "https://www.fox44news.com/news/local-news/milam-county/new-job-opportunities-coming-to-milam-county/"
+    ],
+    "src_date": "2025-06-09"
+   },
+   "other_gates": [
+    {
+     "item": "ERCOT/PUCT audit and verification before energization",
+     "status": "pending (S-1/A footnote)",
+     "src": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    },
+    {
+     "item": "Construction financing for Buildings 1-2 ('in active discussions; not yet closed')",
+     "status": "pending",
+     "src": "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm"
+    }
+   ],
+   "construction": {
+    "detail": "NTP Apr-2026, vertical construction; Building 1 first-phase RFS 2027, final 2028; Building 2 RFS 2028; no capacity in operation (S-1/A). TDLR 'Freebird Data Center Phase 1' (tenant OpenAI): completion 2026-10-15.",
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/2133037/000162828026062846/sbenergy-sx1a2.htm",
+     "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026017746"
+    ]
+   },
+   "missing_summary": "ERCOT/PUCT audit clearance for energization and construction financing for Buildings 1-2; otherwise nothing found missing.",
+   "changes_vs_registry": [
+    "air_permit: n/a confirmed (backup engines only)",
+    "local_approval_date: '' -> 2025-06"
+   ],
+   "confidence": "high",
+   "campus_agent": "Stargate Milam County (SB Energy)",
+   "gw_it_eq_2026_30": 0.753
+  },
+  {
+   "rank": 10,
+   "campus": "Hut 8 Beacon Point",
+   "air_permit": {
+    "status": "n/a",
+    "detail": "Grid-served (1,000 MW AEP Texas interconnection) with batteries; on-site backup generation only. No TCEQ authorization under Hut 8 / Beacon Point names (2026-11-09).",
+    "date": "",
+    "src": [
+     "https://www.kristv.com/news/local-news/in-your-neighborhood/corpus-christi/calallen/beacon-point-ai-massive-data-center-planned-for-nueces-county"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "interconnection": {
+    "status": "agreement",
+    "batch_zero": "base_load",
+    "detail": "Hut 8 (2026-09-04): 'conditional Base Load classification in ERCOT's Batch Zero Process for Beacon Point'; 1,000 MW AEP Texas interconnection agreement in place; Q3-26: campus substation construction commenced, 1,000 MW of utility capacity under construction. Not energized.",
+    "src": [
+     "https://x.com/Hut8Corp/status/2095953929469125048",
+     "https://blockspace.media/insight/these-companies-have-received-ercot-batch-zero-base-load-designation/",
+     "https://www.sec.gov/Archives/edgar/data/1964789/000110465926122347/tm2628741d1_ex99-1.htm"
+    ],
+    "src_date": "2026-11-04"
+   },
+   "local": {
+    "status": "n/a",
+    "detail": "Unincorporated Nueces County outside Robstown limits; no city or county land-use approval needed (Hut 8 via KRIS). The county refused a tax abatement (2026-10-01).",
+    "src": [
+     "https://www.yahoo.com/news/articles/nueces-county-address-covers-finances-153610070.html",
+     "https://www.kristv.com/news/local-news/in-your-neighborhood/corpus-christi/calallen/beacon-point-ai-massive-data-center-planned-for-nueces-county"
+    ],
+    "src_date": "2026-10-02"
+   },
+   "other_gates": [
+    {
+     "item": "Final Batch Zero classification and ERCOT energization authorization",
+     "status": "pending (conditional base load since 2026-09-04)",
+     "src": "https://x.com/Hut8Corp/status/2095953929469125048"
+    },
+    {
+     "item": "Phase 2 construction financing",
+     "status": "pending",
+     "src": "https://www.sec.gov/Archives/edgar/data/1964789/000119312526446146/hut-20260930.htm"
+    }
+   ],
+   "construction": {
+    "detail": "Q3-26: substation, foundation and underground utility work at Phase 1; Phase 1 (352 MW IT) first data hall Q3-2027; Phase 2 Q2-2028.",
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1964789/000110465926122347/tm2628741d1_ex99-1.htm"
+    ]
+   },
+   "missing_summary": "Final Batch Zero classification and ERCOT energization authorization (Dec-2026 audit report) and Phase 2 financing; no land-use approval needed.",
+   "changes_vs_registry": [
+    "local_approval: unknown -> n/a (unincorporated; no approval required)",
+    "add batch_zero = base_load (conditional)"
+   ],
+   "confidence": "high",
+   "campus_agent": "Hut 8 Beacon Point",
+   "gw_it_eq_2026_30": 0.704
+  },
+  {
+   "rank": 11,
+   "campus": "Google Meitner Energy Center (Intersect; Project Pumpkin)",
+   "air_permit": {
+    "status": "issued",
+    "detail": "TCEQ air standard permit registration 184049 (project 409390), IP Meitner Gas LLC, 'MEITNER ENERGY CENTER' (CR B / CR 21, NE of Pampa), rule 'Electric Generating Facilities 6005': received 2026-05-13 (expedited), ISSUED 2026-05-28, before the freeze. Matches Google's on-site gas firming for a minority of demand; the record shows no MW or unit count. Separately, ERCOT generation queue 29INR0341 'Pampa Natural Gas' (250.7 MW, COD 2030-01-01) has no TCEQ air application yet; one filed now would be frozen.",
+    "date": "2026-05",
+    "src": [
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=409390",
+     "https://www.interconnection.fyi/project/ercot-29inr0341",
+     "https://www.powermag.com/google-launches-1-gw-plus-co-located-data-center-and-generation-complex-in-texas-panhandle/"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "interconnection": {
+    "status": "study",
+    "batch_zero": "",
+    "detail": "Load co-located behind IP Meitner's generator substation under the ERCOT SGIA (Cross Texas Transmission / IP Meitner). Second Amendment (Jun-2025): third-party large load 'up to 840 MW'; Interconnection Study Agreement executed 2025-06-12; studies 'have not been completed or deemed final by ERCOT'. Fifth Amendment (2026-05-28): 'Phase 1 (840 MW) Large Load Expected In-Service Date(s): 10/26/2027', plus Phase 2 of 420 MW (250 MW 2028-10-01, +170 MW 2029-10-01). No filing found saying the study is complete; no Batch Zero class disclosed.",
+    "src": [
+     "https://storage.googleapis.com/ercot_interconnection_agreements/35077_2179.pdf",
+     "https://storage.googleapis.com/ercot_interconnection_agreements/35077_2497.pdf",
+     "https://storage.googleapis.com/ercot_interconnection_agreements/35077_2611.pdf"
+    ],
+    "src_date": "2026-05-28"
+   },
+   "local": {
+    "status": "approved",
+    "detail": "Gray County approved the data-center tax abatement agreements for Intersect in the 'Meitner' Reinvestment Zone on 2025-10-15 (air-cooling condition) plus a road-use agreement (Pampa News 2025-10-16). Unincorporated, no zoning. Roberts County Ch.312 abatement with IP Meitner LLC for the generation side (executed 2024-02-16).",
+    "src": [
+     "https://www.thepampanews.com/stories/county-passes-tax-abatement-for-intersect-power-in-recent-meeting,135676",
+     "https://assets.comptroller.texas.gov/open-data-files/ch312-abatement-detail.csv"
+    ],
+    "src_date": "2025-10-16"
+   },
+   "other_gates": [
+    {
+     "item": "Construction stormwater TXR1566WJ 'PUMPKIN SPS' (1,984 acres)",
+     "status": "active since 2025-11-06",
+     "src": "https://www2.tceq.texas.gov/wq_dpa/index.cfm"
+    },
+    {
+     "item": "ERCOT large-load study for Phase 1 (840 MW)",
+     "status": "not shown final",
+     "src": "https://storage.googleapis.com/ercot_interconnection_agreements/35077_2497.pdf"
+    },
+    {
+     "item": "Air permit for the 250.7 MW 'Pampa Natural Gas' unit (29INR0341)",
+     "status": "not filed",
+     "src": "https://www.interconnection.fyi/project/ercot-29inr0341"
+    }
+   ],
+   "construction": {
+    "detail": "Ground broken Dec-2025; Google announced construction 2026-06-04; TDLR completions 1A 2027-11-30, 2A 2027-12-14, 3A 2028-04-18; solar, wind and switchyard construction started Jul-Aug 2026. Nothing energized; GIA large-load in-service date 2027-10-26.",
+    "src": [
+     "https://www.newschannel10.com/2026/01/17/pampas-3-billion-ai-data-center-signals-new-era-growth-gray-county/",
+     "https://blog.google/innovation-and-ai/infrastructure-and-cloud/global-network/meitner-energy-center/"
+    ]
+   },
+   "missing_summary": "ERCOT completion and approval of the 840 MW large-load study (in service 2027-10-26; Batch Zero status not disclosed) and an air application for the separate 250.7 MW Pampa gas unit; the gas-firming air permit and the county abatement are in hand.",
+   "changes_vs_registry": [
+    "air_permit: unknown -> issued (TCEQ standard permit 184049, 2026-05-28)",
+    "interconnection: unknown -> study (840 MW large load, ISA 2025-06-12, study not final)",
+    "local_approval: unknown -> approved (Gray County 2025-10-15)",
+    "scope: Phase 2 large load of 420 MW (2028-10 / 2029-10) not in the registry"
+   ],
+   "confidence": "medium",
+   "campus_agent": "Google Meitner Energy Center (Intersect; Project Pumpkin)",
+   "gw_it_eq_2026_30": 0.7
+  },
+  {
+   "rank": 12,
+   "campus": "Crusoe Abilene expansion (Microsoft)",
+   "air_permit": {
+    "status": "pending",
+    "detail": "State permit 182126 / PSDTX1688 / GHGPSDTX263 (TCEQ project 400428), Crusoe Energy Systems LLC: 'would authorize construction of the Longhorn Data Center Buildings 9 and 10' (615 FM 2404, Abilene). Received 2025-11-07; technically complete 2026-08-05; public hearing requested 2026-08-24; no TCEQ action since; frozen (TCEQ 2026-10-14: applications 'will not advance through the review process'). Turbine list: 39 x GE LM2500, 1,330 MW, pending. Companion application 182267 was WITHDRAWN 2026-04-20.",
+    "date": "2025-11",
+    "src": [
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=400428",
+     "https://www.tceq.texas.gov/downloads/permitting/air/bilingual/pending-permit-notices/182126-nori-english.pdf",
+     "https://fractracker.org/2026/10/texas-data-center-permits-after-governor-halt/"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "interconnection": {
+    "status": "unknown",
+    "batch_zero": "",
+    "detail": "Crusoe (2026-03-27): a 900 MW power plant dedicated to the new campus plus battery storage; described as behind-the-meter. Lancium's ERCOT-approved 1.2 GW interconnect is for the original campus. No ERCOT large-load request or Batch Zero class disclosed for Buildings 9-10.",
+    "src": [
+     "https://www.crusoe.ai/resources/newsroom/crusoe-announces-new-900-mw-ai-factory-campus-in-abilene-texas-to-support-microsoft-ai-infrastructure"
+    ],
+    "src_date": "2026-03-27"
+   },
+   "local": {
+    "status": "unknown",
+    "detail": "No Ch.312 abatement for Buildings 9-10 found; city zoning or annexation not found (City of Abilene site unreachable).",
+    "src": [
+     "https://assets.comptroller.texas.gov/open-data-files/ch312-abatement-detail.csv"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "other_gates": [
+    {
+     "item": "Construction stormwater TXR1536ZN 'Abilene Data Center Buildings 9 & 10' (450 acres; NOI approved 2026-09-23)",
+     "status": "SUSPENDED (TCEQ, data-center NOIs suspended Oct-2026)",
+     "src": "https://www2.tceq.texas.gov/wq_dpa/index.cfm"
+    },
+    {
+     "item": "Construction stormwater TXR1530VE 'Project Ludicrous' (B9B10, 477 acres)",
+     "status": "active",
+     "src": "https://www2.tceq.texas.gov/wq_dpa/index.cfm"
+    },
+    {
+     "item": "TCEQ public meeting (granted, not scheduled) and contested-case hearing request on 182126",
+     "status": "pending",
+     "src": "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=400428"
+    }
+   ],
+   "construction": {
+    "detail": "Land clearing and site preparation under way (Crusoe 2026-03-27); two buildings of 336 MW IT each, first energized mid-2027 (company); TDLR completions 2027-09-17 and 2027-11-11. Nothing energized.",
+    "src": [
+     "https://www.crusoe.ai/resources/newsroom/crusoe-announces-new-900-mw-ai-factory-campus-in-abilene-texas-to-support-microsoft-ai-infrastructure"
+    ]
+   },
+   "missing_summary": "The TCEQ air permit for the 900 MW on-site plant (pending, frozen, with a contested-case request) and valid stormwater coverage (the Buildings 9-10 NOI is suspended); no ERCOT large-load approval or local abatement disclosed.",
+   "changes_vs_registry": [
+    "air_permit: pending stays; frozen; application 2025-11",
+    "notes: companion 182267 withdrawn 2026-04-20",
+    "add suspended stormwater NOI TXR1536ZN",
+    "interconnection: unknown stays (behind the meter; 'hybrid' not supported)"
+   ],
+   "confidence": "high",
+   "campus_agent": "Crusoe Abilene expansion for Microsoft (Longhorn Data Center Buildings 9 and 10)",
+   "gw_it_eq_2026_30": 0.672
+  },
+  {
+   "rank": 13,
+   "campus": "Stargate Abilene (Crusoe/Lancium)",
+   "air_permit": {
+    "status": "issued",
+    "detail": "TCEQ air standard permit registration 177263, 'LONGHORN DATA CENTER' (Electric Generating Facilities 6005): issued 2024-08-21 (Abilene DC 1 LLC), amended 2025-01-22; 10 simple-cycle turbines (5 Solar Titan 350 + 5 GE LM2500), ~360.5 MW, on-site use (Compute Atlas citing TCEQ). Issued before the freeze. The expansion permit 182126 covers Buildings 9-10 only.",
+    "date": "2024-08",
+    "src": [
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=378588",
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=387309",
+     "https://www.compute-atlas.com/facilities/crusoe-abilene-onsite-generation-tx"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "interconnection": {
+    "status": "energized",
+    "batch_zero": "",
+    "detail": "Lancium: 1.2 GW interconnect 'fully approved by ERCOT'. Oracle (FQ1 FY27 call, 2026-09-10): six of eight buildings (618 MW) delivered to the customer.",
+    "src": [
+     "https://lancium.com/locations/"
+    ],
+    "src_date": "2026-09-10"
+   },
+   "local": {
+    "status": "approved",
+    "detail": "City of Abilene Reinvestment Zone RZ21-1 and Taylor County Ch.312 abatements with Lancium Abilene LLC (executed 2021-12-21; split per building 2025-08-28).",
+    "src": [
+     "https://assets.comptroller.texas.gov/open-data-files/ch312-abatement-detail.csv",
+     "https://finance.yahoo.com/news/energy-company-renegotiates-deal-abilene-154450383.html"
+    ],
+    "src_date": "2026-03-09"
+   },
+   "other_gates": [
+    {
+     "item": "Construction stormwater TXR1524ZF 'Project Plaid Buildings 7&8' (NOI 2026-08-21)",
+     "status": "active",
+     "src": "https://www2.tceq.texas.gov/wq_dpa/index.cfm"
+    },
+    {
+     "item": "Title V operating permit for the 10-turbine plant",
+     "status": "unverified",
+     "src": "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=tv.start"
+    }
+   ],
+   "construction": {
+    "detail": "Buildings 1-2 energized 2025; six of eight buildings (618 MW) delivered by 2026-09-10 (Oracle); completion of buildings 7-8 not confirmed as of 2026-11-09.",
+    "src": [
+     "https://epoch.ai/data/data_centers/data_center_timelines.csv"
+    ]
+   },
+   "missing_summary": "Nothing found missing for buildings 3-8 (air permit issued, grid approved and energized, abatements in place); completion of buildings 7-8 and the Title V status are unverified.",
+   "changes_vs_registry": [
+    "air_permit: unknown -> issued (standard permit 177263, 2024-08)",
+    "local_approval: unknown -> approved (RZ21-1 / Taylor County Ch.312)"
+   ],
+   "confidence": "high",
+   "campus_agent": "Stargate Abilene (Crusoe/Lancium; Oracle/OpenAI), Buildings 3-8",
+   "gw_it_eq_2026_30": 0.618
+  },
+  {
+   "rank": 14,
+   "campus": "Nscale Ward County (Ionic Digital site)",
+   "air_permit": {
+    "status": "pending",
+    "detail": "Expansion (89 MW Nscale tranche): TCEQ air standard permit registration 184871 (project 412889), Nscale Ward County II LLC, 'Electric Generating Facilities 6005': received 2026-08-03, deficiency cycles to 2026-09-04, PENDING, no TCEQ action since; caught by the freeze. Whether the units are prime, bridge or backup is not stated. Base 200 MW IT: grid-fed, no air filing. Uncontracted 377 MW: no application by Ionic found.",
+    "date": "2026-08",
+    "src": [
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=412889",
+     "https://fractracker.org/2026/10/texas-data-center-permits-after-governor-halt/"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "interconnection": {
+    "status": "study",
+    "batch_zero": "base_load",
+    "detail": "Ionic (2026-09-10): ERCOT provisionally classified the remaining 466 MW as Base Load in Batch Zero (Pathway (b), for projects already initially energized), subject to verification; TNMP is the TSP; final classification expected Dec-2026; energization late 2027 subject to approvals and utility works (Ionic Q3, 2026-11-04). The base lease is energized and live (Nscale 2026-10-01).",
+    "src": [
+     "https://www.financialcontent.com/article/gnwcq-2026-9-10-ionic-digital-receives-base-load-provisional-classification-in-ercots-batch-zero-process",
+     "https://www.sec.gov/Archives/edgar/data/2007691/000200769126000020/ionicdigitalq32026ex991.htm",
+     "https://www.nscale.com/press-releases/execution-at-scale"
+    ],
+    "src_date": "2026-11-04"
+   },
+   "local": {
+    "status": "unknown",
+    "detail": "No Ward County or City of Barstow abatement, development agreement or zoning action found.",
+    "src": [
+     "https://assets.comptroller.texas.gov/open-data-files/ch312-abatement-detail.csv"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "other_gates": [
+    {
+     "item": "Construction stormwater TXR1548ZO 'Nscale Data Center - Ward County' and TXR1546ZO 'Nscale MAF 2-1 grading' (coverage began 2026-09-28)",
+     "status": "SUSPENDED",
+     "src": "https://www2.tceq.texas.gov/wq_dpa/index.cfm"
+    },
+    {
+     "item": "ERCOT final Batch Zero classification and audit",
+     "status": "pending; expected Dec-2026",
+     "src": "https://www.sec.gov/Archives/edgar/data/2007691/000200769126000020/ionicdigitalq32026ex991.htm"
+    }
+   ],
+   "construction": {
+    "detail": "Base lease (~200 MW IT, Microsoft GB300) live per Nscale (2026-10-01). Expansion: substation upgrade and predevelopment; stormwater NOIs suspended; 466 MW energization targeted late 2027; Microsoft declined its expansion option, so the 377 MW is unleased.",
+    "src": [
+     "https://www.nscale.com/press-releases/execution-at-scale",
+     "https://www.sec.gov/Archives/edgar/data/2007691/000200769126000020/ionicdigitalq32026ex991.htm"
+    ]
+   },
+   "missing_summary": "Expansion lacks the TCEQ air permit 184871 (pending, frozen), valid stormwater coverage (both Nscale NOIs suspended) and ERCOT's final Batch Zero classification; the energized base lease lacks nothing found.",
+   "changes_vs_registry": [
+    "air_permit (WARDEXP): pending stays; air_permit_date '' -> 2026-08 (registration 184871)",
+    "add suspended stormwater NOIs",
+    "interconnection: study / base_load (provisional) confirmed"
+   ],
+   "confidence": "medium",
+   "campus_agent": "Nscale Ward County (Ionic Digital site)",
+   "gw_it_eq_2026_30": 0.588
+  },
+  {
+   "rank": 15,
+   "campus": "IREN Childress",
+   "air_permit": {
+    "status": "n/a",
+    "detail": "Grid-only; no TCEQ air authorization for IREN entities in Childress County (2020 to 2026-11-09).",
+    "date": "",
+    "src": [
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.start"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "interconnection": {
+    "status": "energized",
+    "batch_zero": "",
+    "detail": "IREN 10-K: Childress has an executed grid connection agreement and has operated since April 2023 (750 MW site); registry rows (~700 MW gross) fit within it. No Batch Zero class disclosed for Childress.",
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000052/"
+    ],
+    "src_date": "2025-08-28"
+   },
+   "local": {
+    "status": "unknown",
+    "detail": "No zoning; an amended abatement agreement was discussed by Childress County commissioners (undated, unverified).",
+    "src": [
+     "https://www.redriversun.com/node/8167"
+    ],
+    "src_date": "2026-06-20"
+   },
+   "other_gates": [],
+   "construction": {
+    "detail": "Horizon 1 (50 MW IT) accepted by Microsoft Aug-2026; Horizons 2-4 slipped to Jan-Mar 2027 on a Microsoft-requested network change and supplier timing, not permits (Q1 FY27 call, 2026-11-05).",
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1878848/000187884826000066/"
+    ]
+   },
+   "missing_summary": "Nothing found missing for the grid-only build-out inside the energized 750 MW; Horizons 2-4 slipped for customer and supplier reasons, not permits.",
+   "changes_vs_registry": [
+    "air_permit: n/a confirmed",
+    "interconnection: energized confirmed"
+   ],
+   "confidence": "medium",
+   "campus_agent": "IREN Childress",
+   "gw_it_eq_2026_30": 0.533
+  },
+  {
+   "rank": 16,
+   "campus": "Nexus Hubbard (Nexus Data Centers)",
+   "air_permit": {
+    "status": "pending",
+    "detail": "Major-source NSR 183046 / PSDTX1700 / GHGPSDTX269 (Nexus Hubbard Power LLC, TCEQ project 405217, 'Self Powered Data Center', 880 SH 171, Hubbard): received 2026-02-17, technically complete 2026-09-17, comment period to 2026-10-23, public hearing requested 2026-10-13; PENDING and paused by the Sep-21 directive (TCEQ: 'If a permit application is subject to the directive, TCEQ has paused that permit application', ICN 2026-10-19). 'The data center does not sell power to the grid.' Separately issued: Standard Permit 180320 (Electric Generating Facilities, 2025-06-18; ~613 MW of gas generation per Cutrer Labs, MW not in the TCEQ record) and PBR 180353 (emergency engines, 2025-06-16). Whether phase 1 can run 24/7 under the standard permit alone is not established.",
+    "date": "2026-02",
+    "src": [
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=405217",
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=393747",
+     "https://www.tceq.texas.gov/downloads/permitting/air/bilingual/pending-permit-notices/183046-pls-english.pdf",
+     "https://insideclimatenews.org/news/19102026/texas-continued-permitting-data-centers-after-moratorium/"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "interconnection": {
+    "status": "unknown",
+    "batch_zero": "",
+    "detail": "No ERCOT large-load filing or utility agreement found; TCEQ filings describe a self-powered data center whose plant does not sell to the grid. Islanded operation would sit outside ERCOT large-load approval and Batch Zero; no source on grid backup.",
+    "src": [
+     "https://www.tceq.texas.gov/downloads/permitting/air/bilingual/pending-permit-notices/183046-pls-english.pdf"
+    ],
+    "src_date": "2026-02-22"
+   },
+   "local": {
+    "status": "n/a",
+    "detail": "Unincorporated Hill County outside Hubbard city limits (no zoning). Reinvestment zone 2026-02-10 (tax only); Nexus withdrew its abatement request 2026-04-07; the county moratorium of 2026-05-12 exempted projects under construction and was rescinded 2026-06-04.",
+    "src": [
+     "https://lakelander.com/2026/04/17/nexus-pulls-out-of-county-tax-abatement-negotiations/",
+     "https://www.tpr.org/news/2026-06-05/hill-county-drops-data-center-moratorium-after-lawsuit-adopts-new-review-requirements"
+    ],
+    "src_date": "2026-06-05"
+   },
+   "other_gates": [
+    {
+     "item": "Public hearing requested on 183046/PSDTX1700: possible contested-case referral after the freeze",
+     "status": "pending",
+     "src": "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=405217"
+    },
+    {
+     "item": "Project financing (~$15bn)",
+     "status": "not closed",
+     "src": "https://datacenters.cutrerlabs.com/projects/nexus-hubbard/"
+    },
+    {
+     "item": "Construction stormwater TXR1588WJ and TXR1546YI",
+     "status": "active",
+     "src": "https://www15.tceq.texas.gov/crpub/"
+    }
+   ],
+   "construction": {
+    "detail": "Site prep since Nov-2025; TDLR HB1 (TABS2026022673) start 2026-01-06, completion 2027-10-29; HB2 (TABS2026023798) completion 2028-01-05. Nothing energized.",
+    "src": [
+     "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026022673",
+     "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026023798"
+    ]
+   },
+   "missing_summary": "The major-source TCEQ air permit for the self-powered plant (183046/PSDTX1700, pending, paused by the Sep-21 directive, hearing requested); financing not closed; grid connection unconfirmed.",
+   "changes_vs_registry": [
+    "air_permit: unknown -> pending (filed 2026-02)",
+    "local_approval: unknown -> n/a (unincorporated; moratorium rescinded)",
+    "notes: Standard Permit 180320 and PBR 180353 issued 2025-06"
+   ],
+   "confidence": "medium",
+   "campus_agent": "Nexus Hubbard (Nexus Data Centers)",
+   "gw_it_eq_2026_30": 0.5
+  },
+  {
+   "rank": 17,
+   "campus": "Skybox / Prologis PowerCampus Austin (Hutto)",
+   "air_permit": {
+    "status": "n/a",
+    "detail": "Grid-supplied ('600 MW of total load supplied by on-site Oncor substation'); TCEQ shows only PBR 174373 (106.511 emergency engines) for Hutto Data Center Campus LLC.",
+    "date": "",
+    "src": [
+     "https://www.skyboxdatacenters.com/images/PC-Austin-Brochure-Final-Formatting.pdf",
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=411667"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "interconnection": {
+    "status": "unknown",
+    "batch_zero": "",
+    "detail": "No primary source states an Oncor/ERCOT agreement or energization date; an Oncor substation stood next to the site by Dec-2025 (Utility Dive photo caption) and trackers call Hutto 1 commissioned/operational (unverified).",
+    "src": [
+     "https://www.utilitydive.com/news/texas-approves-ai-data-center-co-location-next-to-wind-farm-with-curtailme/826617/",
+     "https://datacenterhawk.com/marketplace/providers/skybox-datacenters/3399-county-road-132/hutto-1"
+    ],
+    "src_date": "2026-07-30"
+   },
+   "local": {
+    "status": "approved",
+    "detail": "City of Hutto: annexation, light-industrial zoning and municipal services agreement (2023-06-15); development agreement and Ch.312 abatement R-2023-164 (2023-07-20).",
+    "src": [
+     "https://baxtel.com/news/officials-make-progress-on-a-massive-data-center-in-hutto",
+     "https://centexdatacenters.org/projects/skybox-prologis-hutto"
+    ],
+    "src_date": "2023-07-20"
+   },
+   "other_gates": [
+    {
+     "item": "Construction stormwater TXR1506RL",
+     "status": "active",
+     "src": "https://www15.tceq.texas.gov/crpub/"
+    }
+   ],
+   "construction": {
+    "detail": "TDLR: Bldg 1 shell 2024, interior to 2026-06; Bldg 2 fit-up to 2026-10; Bldg 3 shell to 2026-06; Bldg 4 2027-01 to 2028-10. Hutto 1 possibly energized (unverified).",
+    "src": [
+     "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026001377",
+     "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2027002367"
+    ]
+   },
+   "missing_summary": "No air or local approval missing; the grid connection and energization of the 600 MW are not confirmed by a primary source (Building 1 may already be live).",
+   "changes_vs_registry": [
+    "local_approval: unknown -> approved (2023-07)",
+    "air_permit: n/a confirmed",
+    "interconnection: unknown stays; tranche-1 COD 2026-12 may be conservative"
+   ],
+   "confidence": "medium",
+   "campus_agent": "Skybox / Prologis PowerCampus Austin (Hutto)",
+   "gw_it_eq_2026_30": 0.5
+  },
+  {
+   "rank": 18,
+   "campus": "Google Wilbarger County (Project Rise, AES co-located)",
+   "air_permit": {
+    "status": "n/a",
+    "detail": "Co-located with 'new clean power plants developed and operated by AES' (Google 2026-02-24); TCEQ shows only PBR 183941 (backup engines, issued 2026-06-16) for Platon Investments LLC; no generation permit filing in Wilbarger County.",
+    "date": "",
+    "src": [
+     "https://storage.googleapis.com/gweb-uniblog-publish-prod/documents/wilbarger_county_PR.pdf",
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=408851"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "interconnection": {
+    "status": "agreement",
+    "batch_zero": "",
+    "detail": "Company-stated: AES (2026-02-24) brings 'a site that is fully ready for construction, with land and interconnection agreements'; load vs generation not specified; ERCOT large-load approval and Batch Zero class undisclosed.",
+    "src": [
+     "https://www.prnewswire.com/news-releases/aes-announces-landmark-agreements-with-google-in-texas-302695111.html"
+    ],
+    "src_date": "2026-02-24"
+   },
+   "local": {
+    "status": "n/a",
+    "detail": "Unincorporated Wilbarger County, about 6.5 mi SE of Vernon (no zoning); no county abatement found; Google funds a $4.5M Vernon water-pipeline repair and buys city water (KAUZ 2026-10-14).",
+    "src": [
+     "https://www.newschannel6now.com/2026/10/14/google-holds-open-house-wilbarger-county-data-center-project/"
+    ],
+    "src_date": "2026-10-14"
+   },
+   "other_gates": [
+    {
+     "item": "TCEQ wastewater permits WQ0016937001 / WQ0016938001 (Platon Investments WWTP)",
+     "status": "pending since 2026-01, likely held by the freeze (not confirmed)",
+     "src": "https://www.tceq.texas.gov/downloads/permitting/wastewater/title-iv/tpdes/wq0016937001-platoninvestmentsllc-platoninvestmentswwtp-wilbarger-tpdes-adminpackage.pdf"
+    },
+    {
+     "item": "AES co-located generation build and fuel mix",
+     "status": "not disclosed",
+     "src": "https://www.prnewswire.com/news-releases/aes-announces-landmark-agreements-with-google-in-texas-302695111.html"
+    }
+   ],
+   "construction": {
+    "detail": "TDLR Project Rise 1A and 2A: start 2026-03-31, completion 2028-03-31; under construction per satellite imagery (Aug-2026). Nothing energized.",
+    "src": [
+     "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025053",
+     "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026025297"
+    ]
+   },
+   "missing_summary": "ERCOT large-load approval and Batch Zero status are undisclosed (the 'interconnection agreements' are company-stated, possibly generation-side) and the TCEQ wastewater permits are pending, likely frozen.",
+   "changes_vs_registry": [
+    "air_permit: unknown -> n/a",
+    "interconnection: unknown -> agreement (company-stated)",
+    "local_approval: unknown -> n/a"
+   ],
+   "confidence": "medium",
+   "campus_agent": "Google Wilbarger County (Project Rise, AES co-located)",
+   "gw_it_eq_2026_30": 0.354
+  },
+  {
+   "rank": 19,
+   "campus": "CyrusOne Bosque County (Thad Hill Energy Center powered land)",
+   "air_permit": {
+    "status": "n/a",
+    "detail": "Supplied from Calpine's existing Thad Hill Energy Center (792 MW net); no new-generation filing; CyrusOne holds only PBR 180711 (backup diesel engines).",
+    "date": "",
+    "src": [
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=394940"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "interconnection": {
+    "status": "agreement",
+    "batch_zero": "",
+    "detail": "Calpine (2025-07-30): 'The deal secures power, grid connection, and land'; Phase 2 to 400 MW (2025-11-03). CyrusOne: 'Load studies are completed'. Batch Zero class not disclosed (CEG: some Calpine sites are in Batch Zero, unnamed).",
+    "src": [
+     "https://www.calpine.com/?p=4605",
+     "https://www.cyrusone.com/data-centers/north-america/bosque-county-tx"
+    ],
+    "src_date": "2025-11-03"
+   },
+   "local": {
+    "status": "n/a",
+    "detail": "Unincorporated Bosque County (no zoning); the signed county agreement is a road-repair agreement; no abatement found.",
+    "src": [
+     "https://www.cyrusone.com/data-centers/north-america/bosque-county-tx"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "other_gates": [
+    {
+     "item": "Title V site operating permit O4941 (backup-generator site)",
+     "status": "pending",
+     "src": "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=tv.project_report&proj_num=40584&status_txt=ACTIVE"
+    }
+   ],
+   "construction": {
+    "detail": "DFW10 topped out ~2026-03; TDLR fit-outs to 2026-10 / 2027-08. Calpine says operational Q4-2026; CyrusOne's page: first phase completed Q3-2027, all phases Q4-2027. Nothing confirmed energized.",
+    "src": [
+     "https://www.cyrusone.com/data-centers/north-america/bosque-county-tx",
+     "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026001239"
+    ]
+   },
+   "missing_summary": "No construction or interconnection approval found missing; the Title V operating permit is pending and the Batch Zero class undisclosed.",
+   "changes_vs_registry": [
+    "local_approval: unknown -> n/a",
+    "interconnection: agreement retained"
+   ],
+   "confidence": "high",
+   "campus_agent": "CyrusOne Bosque County (Thad Hill Energy Center powered land)",
+   "gw_it_eq_2026_30": 0.334
+  },
+  {
+   "rank": 20,
+   "campus": "CyrusOne Freestone County (Freestone Energy Center)",
+   "air_permit": {
+    "status": "n/a",
+    "detail": "Phase 1 (380 MW) served from Calpine's existing Freestone Energy Center under a PUCT-approved net-metering co-location; CyrusOne holds only PBR 184743 (backup engines). Flag: a separate EGU standard permit 185288 by 'Fairfield Crossing Energy Center LLC' on FM 488 (received 2026-09-08) is pending, link to CyrusOne unconfirmed.",
+    "date": "",
+    "src": [
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=412304",
+     "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=414633"
+    ],
+    "src_date": "2026-11-09"
+   },
+   "interconnection": {
+    "status": "agreement",
+    "batch_zero": "",
+    "detail": "CEG Q1-26 (8-K 2026-05-11): 'The PUCT has approved the net metering application for the co-location of a Cyrus One data center at our Freestone site, subject to conditions' (PUCT Docket 58872). Phase 2 (380 MW) is an 'exclusive agreement' with no separate approval found.",
+    "src": [
+     "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000063/ceg-20260511991.htm",
+     "https://interchange.puc.texas.gov/Documents/58872_30_1599884.PDF"
+    ],
+    "src_date": "2026-05-11"
+   },
+   "local": {
+    "status": "n/a",
+    "detail": "Unincorporated Freestone County (no zoning). Reinvestment Zone No. 12 / PILOT for C1 Freestone LLC approved 2025-12-03; the Phase 2 abatement request withdrawn 2026-06-17; no moratorium adopted.",
+    "src": [
+     "https://freestonecountytimesonline.com/county-commissioners-approve-reinvestment-zone/",
+     "https://freestonecountytimesonline.com/cyrusone-rescinds-tax-abatement-request-commissioners-hear-concerns/"
+    ],
+    "src_date": "2026-06-25"
+   },
+   "other_gates": [
+    {
+     "item": "Fairfield Crossing EGU standard permit 185288 on FM 488 (ownership unconfirmed)",
+     "status": "pending, likely frozen",
+     "src": "https://www2.tceq.texas.gov/airperm/index.cfm?fuseaction=airpermits.project_report&proj_id=414633"
+    },
+    {
+     "item": "Phase 2 approvals (PUCT net metering / ERCOT study)",
+     "status": "not found",
+     "src": "https://www.sec.gov/Archives/edgar/data/1868275/000186827526000104/"
+    }
+   ],
+   "construction": {
+    "detail": "Ground broken Jun-2026; TDLR DFW20A-C completions 2027-03-23, 2027-05-23, 2027-08-23. Nothing energized.",
+    "src": [
+     "https://www.tdlr.texas.gov/TABS/Search/Project/TABS2026026013",
+     "https://www.datacenterdynamics.com/en/news/cyrusone-breaks-ground-on-380mw-data-center-in-texas/"
+    ]
+   },
+   "missing_summary": "No Phase 1 approval found missing (PUCT net metering approved subject to conditions); Phase 2 approvals and the Batch Zero class are undisclosed.",
+   "changes_vs_registry": [
+    "local_approval: unknown -> n/a",
+    "interconnection: agreement retained (PUCT Docket 58872)"
+   ],
+   "confidence": "medium",
+   "campus_agent": "CyrusOne Freestone County (Freestone Energy Center)",
+   "gw_it_eq_2026_30": 0.317
+  }
+ ]
+}

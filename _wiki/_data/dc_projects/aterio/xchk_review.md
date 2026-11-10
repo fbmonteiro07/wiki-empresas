@@ -1,0 +1,353 @@
+# Registry vs Aterio census — cross-check (Aterio 2026-08-31)
+
+Registry campuses 287: matched 277 (124 hand-reviewed, 163 auto). Aterio under construction 2026-30: 67.2 GW IT-eq, of which 57.9 GW sits on campuses the registry has. Registry under construction 60.3 GW, all phases 129.2 GW.
+
+## Flags (most serious first)
+
+- **TX · Crusoe/Lancium Childress** ↔ Childress Clean Campus (Crusoe)
+  - [reg_ahead] Registry has 833 MW under construction; Aterio lists 10 building(s), all only announced (870 MW IT-eq).
+- **PA · Aligned Project Phoenix (Shippingport Industrial Park; ex-Bruce Mansfield)** ↔ Project Phoenix (Aligned Data Centers)
+  - [reg_ahead] Registry has 556 MW under construction; Aterio lists 3 building(s), all only announced (no MW figure).
+  - [earlier] First date: registry 2029-06, Aterio 2028-06 (-12 months — Aterio earlier).
+- **AR · AVAIO Digital Leo (Pulaski County)** ↔ AVAIO Digital Leo (AVAIO Digital)
+  - [reg_ahead] Registry has 125 MW under construction; Aterio lists 7 building(s), all only announced (832 MW IT-eq).
+  - [size] Size 2026-30: registry 125 MW vs Aterio 832 MW IT-eq (×6.7).
+- **KY · TeraWulf 'Justified' campus (Hawesville)** ↔ TeraWulf Hawesville Campus (TeraWulf )
+  - [reg_ahead] Registry has 401 MW under construction; Aterio lists 2 building(s), all only announced (417 MW IT-eq).
+- **IN · Meridian Arc (Fluidstack / Next Frontier JV), New Lebanon** ↔ Heartland Industrial Park (Coatue Management)
+  - [reg_ahead] Registry has 430 MW under construction; Aterio lists 7 building(s), all only announced (374 MW IT-eq).
+  - [later] First date: registry 2027-07, Aterio 2028-06 (+11 months — Aterio later).
+- **ND · Fighting Pike Data Center (Critical Data House)** ↔ Fighting Pike Williston Campus (Company Not Disclosed)
+  - [reg_ahead] Registry has 108 MW under construction; Aterio lists 7 building(s), all only announced (396 MW IT-eq).
+  - [later] First date: registry 2027-12, Aterio 2028-12 (+12 months — Aterio later).
+- **AZ · Project Blue (Beale Infrastructure / Humphrey's Peak LLC)** ↔ Project Blue (Beale Infrastructure)
+  - [reg_ahead] Registry has 238 MW under construction; Aterio lists 10 building(s), all only announced (357 MW IT-eq).
+- **AZ · Novva Mesa campus (Project Borealis)** ↔ Arizona, Novva Campus (Novva Data Centers)
+  - [reg_ahead] Registry has 50 MW under construction; Aterio lists 5 building(s), all only announced (261 MW IT-eq).
+  - [later] First date: registry 2027-06, Aterio 2028-09 (+15 months — Aterio later).
+- **VA · STACK NVA02 (9590 Hornbaker Rd)** ↔ NVA02 Northern Virginia, Stack Campus (STACK Infrastructure)
+  - [withdrawn] Aterio marks 2 building(s), 90 MW IT-eq, Not Approved/Withdrawn or Cancelled; the registry carries 263 MW still to come.
+  - [delayed] Aterio marks 90 MW IT-eq Delayed.
+  - [earlier] First date: registry 2028-01, Aterio 2026-12 (-13 months — Aterio earlier).
+- **TX · Core Scientific Hunt County** ↔ Core Scientific Hunt County Campus (Core Scientific)
+  - [reg_ahead] Registry has 110 MW under construction; Aterio lists 2 building(s), all only announced (374 MW IT-eq).
+  - [size] Size 2026-30: registry 110 MW vs Aterio 374 MW IT-eq (×3.4).
+- **TX · CyrusOne Castroville SAT14** ↔ SAT 14A (CyrusOne)
+  - [reg_ahead] Registry has 126 MW under construction; Aterio lists 1 building(s), all only announced (no MW figure).
+  - [earlier] First date: registry 2027-12, Aterio 2027-01 (-11 months — Aterio earlier).
+- **OH · OpenAI Stargate Lordstown (SoftBank; ex-Foxconn/Lordstown Motors plant)** ↔ Lordstown Campus (Company Not Disclosed)
+  - [reg_ahead] Registry has 250 MW under construction; Aterio lists 1 building(s), all only announced (no MW figure).
+- **VA · ODATA Virginia Hyperscale Campus** ↔ IAD-05 Data Center (Aligned Data Centers)
+  - [reg_ahead] Registry has 250 MW under construction; Aterio lists 1 building(s), all only announced (no MW figure).
+- **VA · STACK Loudoun Digital Campus II** ↔ Loudoun County Campus Stack (STACK Infrastructure)
+  - [reg_ahead] Registry has 120 MW under construction; Aterio lists 2 building(s), all only announced (125 MW IT-eq).
+- **VA · PowerHouse Arcola** ↔ Arcola, Powerhouse Campus (Power House Data Centers)
+  - [reg_ahead] Registry has 100 MW under construction; Aterio lists 2 building(s), all only announced (104 MW IT-eq).
+  - [later] First date: registry 2027-08, Aterio 2029-09 (+25 months — Aterio later).
+- **GA · Northern Data Maysville** ↔ RUM Maysville Data Center Campus (RUM GROUP)
+  - [reg_ahead] Registry has 100 MW under construction; Aterio lists 3 building(s), all only announced (52 MW IT-eq).
+- **ND · Teton Digital Project Trinity** ↔ Project Trinity (Teton Digital)
+  - [reg_ahead] Registry has 58 MW under construction; Aterio lists 1 building(s), all only announced (87 MW IT-eq).
+  - [later] First date: registry 2026-12, Aterio 2027-09 (+9 months — Aterio later).
+- **UT · Joule Delta Campus (Joule Capital Partners)** ↔ JOULE Campus (Joule Capital Partners )
+  - [delayed] Aterio marks 1418 MW IT-eq Delayed.
+- **TX · Pacifico Energy GW Ranch** ↔ GW Ranch Project (Amazon AWS)
+  - [later] First date: registry 2027-06, Aterio 2028-06 (+12 months — Aterio later).
+- **GA · OpenAI Project Camellia (Savannah Gateway Industrial Hub)** ↔ Project Camellia (OpenAI)
+  - [later] First date: registry 2028-06, Aterio 2029-06 (+12 months — Aterio later).
+- **IN · AWS northern Indiana campuses (NIPSCO / NIPSCO GenCo ADS Contract)** ↔ Hobart Data Center Campus + Project Orion (Amazon AWS)
+  - [aterio_ahead] Registry has nothing under construction (2000 MW not started); Aterio has 186 MW IT-eq under construction (3 building(s)).
+  - [later] First date: registry 2027-01, Aterio 2027-12 (+11 months — Aterio later).
+- **PA · PowerHouse PAX-1 Carlisle (Middlesex Twp)** ↔ Pennsylvania, Power House Campus (Power House Data Centers)
+  - [aterio_ahead] Registry has nothing under construction (1500 MW not started); Aterio has 225 MW IT-eq under construction (3 building(s)).
+- **TX · Fermi America Project Matador** ↔ HyperGrid Data Center Campus (Fermi America)
+  - [delayed] Aterio marks 410 MW IT-eq Delayed.
+  - [size] Size 2026-30: registry 156 MW vs Aterio 2584 MW IT-eq (×16.6).
+- **WY · Google Project Tembo (fka Project Jade, Crusoe/Tallgrass)** ↔ Wyoming Crusoe Campus - Project Jade (Google)
+  - [later] First date: registry 2027-11, Aterio 2030-06 (+31 months — Aterio later).
+- **MI · Stargate Michigan / The Barn (Project Mitten), Saline Twp** ↔ OpenAI Stargate - Michigan Campus (Related Digital)
+  - [later] First date: registry 2026-12, Aterio 2027-11 (+11 months — Aterio later).
+- **IL · Joliet Technology Center (PowerHouse Data Centers / Hillwood), Bernhard & Rowell near Chicagoland Speedway** ↔ Joliet Data Center Campus (Power House Data Centers)
+  - [later] First date: registry 2027-12, Aterio 2028-12 (+12 months — Aterio later).
+  - [size] Size 2026-30: registry 1500 MW vs Aterio 587 MW IT-eq (×0.4).
+- **IN · Meta Lebanon (LEAP district, Boone County)** ↔ Project Domino (Facebook)
+  - [later] First date: registry 2027-12, Aterio 2028-09 (+9 months — Aterio later).
+- **VA · EdgeCore Louisa (Shannon Hill Regional Business Park)** ↔ Louisa County Data Center Campus (Edgecore)
+  - [later] First date: registry 2028-06, Aterio 2029-09 (+15 months — Aterio later).
+- **MI · Google 'Project Cannoli' (Van Buren Twp, north of I-94 between Haggerty Rd and I-275)** ↔ Project Cannoli (Panattoni Development Company)
+  - [later] First date: registry 2027-12, Aterio 2028-09 (+9 months — Aterio later).
+- **PA · Nebius Highridge (Highridge Business Park, Butler Twp)** ↔ Nebius Pennsylvania Campus (Nebius)
+  - [aterio_ahead] Registry has nothing under construction (783 MW not started); Aterio has 174 MW IT-eq under construction (1 building(s)).
+- **IL · T5 @ Chicago IV (Grayslake)** ↔ Grayslake, T5 Campus (T5 Data Centers)
+  - [aterio_ahead] Registry has nothing under construction (800 MW not started); Aterio has 156 MW IT-eq under construction (3 building(s)).
+- **TX · Matrix Data Center Campus (MSB Global), Sulphur Springs** ↔ Matrix Data Center Campus (Company Not Disclosed)
+  - [delayed] Aterio marks 800 MW IT-eq Delayed.
+- **MO · Nebius Independence AI factory** ↔ Nebius Independence Campus (Nebius)
+  - [later] First date: registry 2027-03, Aterio 2028-12 (+21 months — Aterio later).
+- **VA · AWS Mattameade (Mattermeade/Orrock) Tech Campus** ↔ AWS Mattameade Campus (Amazon AWS)
+  - [later] First date: registry 2027-06, Aterio 2028-06 (+12 months — Aterio later).
+- **IN · Microsoft La Porte (Radius Industrial Park)** ↔ Indiana 1, Microsoft Campus (Microsoft)
+  - [aterio_ahead] Registry has nothing under construction (657 MW not started); Aterio has 235 MW IT-eq under construction (3 building(s)).
+- **OH · Meta Piqua** ↔ Piqua Campus (Facebook)
+  - [aterio_ahead] Registry has nothing under construction (583 MW not started); Aterio has 261 MW IT-eq under construction (1 building(s)).
+- **VA · Digital Realty Digital Dulles** ↔ Digital Dulles (Digital Realty)
+  - [delayed] Aterio marks 84 MW IT-eq Delayed.
+  - [later] First date: registry 2026-06, Aterio 2027-03 (+9 months — Aterio later).
+  - [size] Size 2026-30: registry 265 MW vs Aterio 807 MW IT-eq (×3.0).
+- **TX · Texas Critical Data Centers (New Era Energy & Digital)** ↔ Texas Critical Data Center Campus (Stream Data Centers)
+  - [later] First date: registry 2027-08, Aterio 2029-03 (+19 months — Aterio later).
+  - [size] Size 2026-30: registry 172 MW vs Aterio 870 MW IT-eq (×5.0).
+- **TX · CloudBurst San Marcos Gigacenter** ↔ CloudBurst Texas Flagship (CloudBurst Data Centers)
+  - [later] First date: registry 2026-11, Aterio 2028-03 (+16 months — Aterio later).
+- **MS · AVAIO Digital Taurus (Brandon)** ↔ AVAIO Digital Taurus (AVAIO Digital)
+  - [later] First date: registry 2027-06, Aterio 2028-09 (+15 months — Aterio later).
+  - [size] Size 2026-30: registry 97 MW vs Aterio 901 MW IT-eq (×9.3).
+- **VA · CleanArc VA1** ↔ Virginia, Clear Arc Campus (Clean Arc)
+  - [later] First date: registry 2027-05, Aterio 2029-06 (+25 months — Aterio later).
+- **TX · CyrusOne Freestone County (Freestone Energy Center)** ↔ Freestone Energy Center Campus (CyrusOne)
+  - [later] First date: registry 2027-09, Aterio 2028-06 (+9 months — Aterio later).
+  - [size] Size 2026-30: registry 317 MW vs Aterio 661 MW IT-eq (×2.1).
+- **SD · Sioux Falls hyperscale data center (Gemini Data Center SD)** ↔ Sioux Falls Technology Park (Company Not Disclosed)
+  - [later] First date: registry 2028-06, Aterio 2029-06 (+12 months — Aterio later).
+- **TX · Nscale Ward County (Ionic Digital site)** ↔ Cedarvale AI Campus (Ionic Digital)
+  - [aterio_ahead] Registry has nothing under construction (388 MW not started); Aterio has 104 MW IT-eq under construction (2 building(s)).
+  - [earlier] First date: registry 2027-11, Aterio 2026-12 (-11 months — Aterio earlier).
+  - [size] Size 2026-30: registry 588 MW vs Aterio 209 MW IT-eq (×0.4).
+- **NY · Stream U.S. Data Centers at STAMP (Town of Alabama)** ↔ North Campus Science, Technology & Advanced Manufacturing Park (STAMP) + South Campus Science, Technology & Advanced Manufacturing Park (STAMP) (Stream Data Centers)
+  - [delayed] Aterio marks 436 MW IT-eq Delayed.
+- **NE · Google Omaha (NW Omaha)** ↔ Omaha NE, Google Campus (Google)
+  - [aterio_ahead] Registry has nothing under construction (158 MW not started); Aterio has 84 MW IT-eq under construction (1 building(s)).
+  - [size] Size 2026-30: registry 237 MW vs Aterio 501 MW IT-eq (×2.1).
+- **NC · Digital Realty Charlotte (12899 Moores Chapel Rd)** ↔ Charlotte, Digital Realty Campus (Digital Realty)
+  - [later] First date: registry 2027-06, Aterio 2028-03 (+9 months — Aterio later).
+- **VA · QTS Richmond (White Oak Technology Park)** ↔ Richmond 4, QTS Campus (QTS Data Centers)
+  - [later] First date: registry 2027-02, Aterio 2028-09 (+19 months — Aterio later).
+- **GA · Google Project Pegasus (411 Pegasus Pkwy)** ↔ Project Pegasus (Form8tion Data Centers)
+  - [later] First date: registry 2026-12, Aterio 2029-12 (+36 months — Aterio later).
+- **AZ · EdgeCore Mesa campus (PH01) - expansion** ↔ Phoenix, Edgecore Campus (Edgecore)
+  - [aterio_ahead] Registry has nothing under construction (290 MW not started); Aterio has 63 MW IT-eq under construction (1 building(s)).
+  - [earlier] First date: registry 2027-06, Aterio 2026-09 (-9 months — Aterio earlier).
+- **VA · AWS Wellington (Bristow / Gainesville)** ↔ Wellington, AWS Campus (Amazon AWS)
+  - [delayed] Aterio marks 128 MW IT-eq Delayed.
+- **AL · Nebius AI factory (Oxmoor Valley, Lakeshore Pkwy)** ↔ Nebius Birmingham Campus (Nebius)
+  - [later] First date: registry 2027-03, Aterio 2028-03 (+12 months — Aterio later).
+- **TX · Data City Texas (Energy Abundance)** ↔ Data City (Company Not Disclosed)
+  - [later] First date: registry 2026-06, Aterio 2028-03 (+21 months — Aterio later).
+- **TX · Rowan Cinco (Medina County)** ↔ CINCO Campus Data Center (Rowan Digital Infrastructure)
+  - [later] First date: registry 2026-06, Aterio 2027-06 (+12 months — Aterio later).
+- **NC · Microsoft Stover North (Hickory Lincolnton Hwy, Newton)** ↔ Stover North Data Center Campus (Microsoft)
+  - [delayed] Aterio marks 188 MW IT-eq Delayed.
+- **NC · Microsoft Boyd Farm (Old Maiden Rd, Maiden)** ↔ Boyd Farm Data Center Campus (Microsoft)
+  - [delayed] Aterio marks 188 MW IT-eq Delayed.
+- **AZ · Prime Data Centers PHX01 (Phoenix / Avondale campus)** ↔ Phoenix, Prime Campus (Prime Data Centers)
+  - [later] First date: registry 2027-06, Aterio 2028-03 (+9 months — Aterio later).
+- **WY · Meta Cheyenne (Project Cosmo, High Plains Business Park)** ↔ Cheyenne, Meta Campus (Facebook)
+  - [aterio_ahead] Registry has nothing under construction (55 MW not started); Aterio has 231 MW IT-eq under construction (4 building(s)).
+- **AZ · Menlo Digital MD-PX1 (Ahwatukee / south Phoenix)** ↔ MD-PX1 (Phoenix) (Menlo Digital)
+  - [later] First date: registry 2027-06, Aterio 2028-06 (+12 months — Aterio later).
+- **KS · Beale De Soto (Project Pilot)** ↔ De Soto Campus (Beale Infrastructure)
+  - [later] First date: registry 2028-06, Aterio 2030-06 (+24 months — Aterio later).
+- **VA · CloudHQ Manassas Corporate Center (MCC)** ↔ MCC (Manassas) Cloud HQ Campus (CloudHQ)
+  - [later] First date: registry 2027-06, Aterio 2028-06 (+12 months — Aterio later).
+- **NV · Fleet/Tract PR RNO (Peru Ridge, TRIC; name mapping inferred)** ↔ Tract Peru Ridge Campus (Tract)
+  - [later] First date: registry 2027-10, Aterio 2028-09 (+11 months — Aterio later).
+- **VA · EdgeCore Culpeper (Culpeper Technology Zone)** ↔ Culpeper Tech Zone, Edgecore (Edgecore)
+  - [later] First date: registry 2028-03, Aterio 2028-12 (+9 months — Aterio later).
+- **NC · Microsoft Lyle Creek (NC-16, Conover)** ↔ Lyle Creek Data Center Campus (Microsoft)
+  - [delayed] Aterio marks 141 MW IT-eq Delayed.
+- **VA · Meta Henrico (Project Tropical, Portugee Rd)** ↔ Henrico, Meta Campus (Facebook)
+  - [aterio_ahead] Registry has nothing under construction (167 MW not started); Aterio has 174 MW IT-eq under construction (2 building(s)).
+- **VA · Village Place Technology Park** ↔ Village Technology Park (Black Chamber)
+  - [delayed] Aterio marks 104 MW IT-eq Delayed.
+- **TX · PowerHouse Circle T Data Center (Westlake)** ↔ Circle T Data Center Campus (Power House Data Centers)
+  - [later] First date: registry 2027-12, Aterio 2029-03 (+15 months — Aterio later).
+  - [size] Size 2026-30: registry 62 MW vs Aterio 261 MW IT-eq (×4.2).
+- **VA · Corscale Gainesville Crossing** ↔ Gainesville, Corescale Campus (Corscale)
+  - [later] First date: registry 2026-06, Aterio 2028-06 (+24 months — Aterio later).
+- **NV · EdgeCore Reno (TRIC)** ↔ Reno, Edgecore Campus (Edgecore)
+  - [later] First date: registry 2026-05, Aterio 2027-03 (+10 months — Aterio later).
+  - [size] Size 2026-30: registry 72 MW vs Aterio 188 MW IT-eq (×2.6).
+- **NV · PowerHouse Reno (TRIC)** ↔ Reno, Powerhouse Campus (Power House Data Centers)
+  - [later] First date: registry 2026-05, Aterio 2028-03 (+22 months — Aterio later).
+  - [size] Size 2026-30: registry 54 MW vs Aterio 174 MW IT-eq (×3.2).
+- **UT · Novva West Jordan Campus** ↔ Utah, Novva Campus (Novva Data Centers)
+  - [aterio_done] Registry still has 60 MW to come; Aterio shows every building active (3).
+  - [size] Size 2026-30: registry 60 MW vs Aterio 125 MW IT-eq (×2.1).
+- **TX · AWS Project Eagle (Wharton County)** ↔ Project Eagle (Amazon AWS)
+  - [later] First date: registry 2027-07, Aterio 2028-06 (+11 months — Aterio later).
+- **VA · AWS DCA-060 Stevensburg** ↔ AWS Culpeper Campus (Amazon AWS)
+  - [delayed] Aterio marks 70 MW IT-eq Delayed.
+- **CA · Digital Realty Santa Clara (SJC37)** ↔ Santa Clara, Digital Realty Campus (Digital Realty)
+  - [delayed] Aterio marks 87 MW IT-eq Delayed.
+- **OR · AWS Boardman - Lewis & Clark (PDX-01)** ↔ Lewis, AWS Campus (Amazon AWS)
+  - [aterio_done] Registry still has 52 MW to come; Aterio shows every building active (3).
+- **CA · STACK Infrastructure Santa Clara (SVY02)** ↔ SVY02A - Silicon Valley Data Center (STACK Infrastructure)
+  - [delayed] Aterio marks 42 MW IT-eq Delayed.
+  - [earlier] First date: registry 2027-11, Aterio 2027-02 (-9 months — Aterio earlier).
+- **OR · QTS Hillsboro 3** ↔ Hillsboro, QTS Campus (QTS Data Centers)
+  - [aterio_done] Registry still has 58 MW to come; Aterio shows every building active (5).
+- **OH · PORTS-Pike / PORTS Technology Campus (SB Energy; ex-DOE Portsmouth GDP)** ↔ Ports Technology Campus (SB Energy)
+  - [size] Size 2026-30: registry 8024 MW vs Aterio 3185 MW IT-eq (×0.4).
+- **LA · Meta Hyperion (Richland Parish) + Meta Hyperion expansion / Evest LLC second north-Louisiana data center (Richland Parish)** ↔ Hyperion, Meta Campus (Facebook)
+  - [earlier] First date: registry 2029-06, Aterio 2027-03 (-27 months — Aterio earlier).
+- **PA · Homer City Energy Campus (ex-Homer City coal plant; Kiewit EPC)** ↔ The Homer City Energy Campus (Amazon AWS)
+  - [size] Size 2026-30: registry 2933 MW vs Aterio 1263 MW IT-eq (×0.4).
+- **WV · Monarch Compute Campus (Nscale / AIPCorp)** ↔ Monarch Compute Campus (Nscale)
+  - [size] Size 2026-30: registry 1370 MW vs Aterio 2800 MW IT-eq (×2.0).
+- **TX · Nexus Hubbard (Nexus Data Centers)** ↔ Nexus Hubbard Campus (Nexus Data Centers)
+  - [size] Size 2026-30: registry 500 MW vs Aterio 2891 MW IT-eq (×5.8).
+- **WI · Microsoft Fairwater Wisconsin** ↔ Wisconsin 1, Microsoft Campus- Fairwater + Wisconsin 2, Microsoft Campus (Microsoft)
+  - [earlier] First date: registry 2028-05, Aterio 2027-05 (-12 months — Aterio earlier).
+  - [size] Size 2026-30: registry 2263 MW vs Aterio 821 MW IT-eq (×0.4).
+- **MS · xAI/SpaceX Colossus II - Memphis (Tulane Rd) + xAI/SpaceX Colossus II - Southaven (MACROHARDRR) + xAI/SpaceX MiniHard** ↔ xAI Colossus 2 Campus (xAI)
+  - [size] Size 2026-30: registry 1994 MW vs Aterio 844 MW IT-eq (×0.4).
+- **NM · Project Jupiter / Stargate New Mexico (STACK, BorderPlex)** ↔ Project Jupiter (BorderPlex Digital Assets)
+  - [size] Size 2026-30: registry 1833 MW vs Aterio 783 MW IT-eq (×0.4).
+- **NC · AWS Blue Marlin (Energy Way Industrial Park)** ↔ Energy Way Industrial Park Campus (Amazon AWS)
+  - [earlier] First date: registry 2028-06, Aterio 2027-09 (-9 months — Aterio earlier).
+  - [size] Size 2026-30: registry 163 MW vs Aterio 1315 MW IT-eq (×8.1).
+- **TX · IREN Sweetwater 1** ↔ Iren Sweetwater 1 (Iren Ltd)
+  - [size] Size 2026-30: registry 250 MW vs Aterio 1217 MW IT-eq (×4.9).
+- **OK · Core Scientific Muskogee (CoreWeave)** ↔ Muskogee Campus (Core Scientific)
+  - [size] Size 2026-30: registry 152 MW vs Aterio 1278 MW IT-eq (×8.4).
+- **TX · Core Scientific Pecos** ↔ Core Scientific Pecos Campus (Core Scientific)
+  - [size] Size 2026-30: registry 185 MW vs Aterio 1165 MW IT-eq (×6.3).
+- **GA · Project Arrowhead (Premier Data Center Development, Irwin County)** ↔ Project Arrowhead (Company Not Disclosed)
+  - [size] Size 2026-30: registry 1042 MW vs Aterio 217 MW IT-eq (×0.2).
+- **NV · Fleet/Tract SV RNO (South Valley, TRIC; name mapping inferred)** ↔ South Valley Technology Park (Tract)
+  - [size] Size 2026-30: registry 200 MW vs Aterio 1000 MW IT-eq (×5.0).
+- **UT · QTS Eagle Mountain (652 E Hyperscale Way)** ↔ QTS - Eagle Mountain Data Center Campus (QTS Data Centers)
+  - [size] Size 2026-30: registry 304 MW vs Aterio 768 MW IT-eq (×2.5).
+- **GA · QTS Fayetteville / Microsoft Fairwater Atlanta** ↔ Fayetteville, QTS Campus - Fairwater (QTS Data Centers)
+  - [earlier] First date: registry 2027-11, Aterio 2026-12 (-11 months — Aterio earlier).
+- **MO · Google Project Mica (Northland)** ↔ Kansas City 2, Google Campus (Google)
+  - [earlier] First date: registry 2027-11, Aterio 2026-12 (-11 months — Aterio earlier).
+- **PA · AWS Keystone Trade Center (Falls Twp; NorthPoint redevelopment of ex-US Steel site)** ↔ Keystone TC Data Center Campus (NorthPoint Development)
+  - [size] Size 2026-30: registry 132 MW vs Aterio 797 MW IT-eq (×6.0).
+- **PA · AWS Susquehanna / Berwick (Salem Twp; ex-Talen Cumulus campus)** ↔ Cumulus Data Center Campus (Amazon AWS)
+  - [size] Size 2026-30: registry 122 MW vs Aterio 768 MW IT-eq (×6.3).
+- **OH · AWS New Albany (Miller Rd NW; three sub-campuses)** ↔ New Albany 3, AWS Campus (Amazon AWS)
+  - [size] Size 2026-30: registry 284 MW vs Aterio 575 MW IT-eq (×2.0).
+- **TX · Riot Rockdale** ↔ Riot Rockdale Campus (Riot Platforms, Inc.)
+  - [size] Size 2026-30: registry 241 MW vs Aterio 609 MW IT-eq (×2.5).
+- **TX · Google Meitner Energy Center (Intersect; Project Pumpkin)** ↔ Meitner Campus (Google)
+  - [size] Size 2026-30: registry 700 MW vs Aterio 123 MW IT-eq (×0.2).
+- **TX · DataBank Red Oak** ↔ Red Oak, Data Bank Campus (DataBank)
+  - [earlier] First date: registry 2027-06, Aterio 2026-09 (-9 months — Aterio earlier).
+- **TX · Google Wilbarger County (Project Rise, AES co-located)** ↔ Google Wilbarger Data Center Campus (Google)
+  - [size] Size 2026-30: registry 708 MW vs Aterio 82 MW IT-eq (×0.1).
+- **NE · Google Lincoln** ↔ Lincoln, Google Campus (Google)
+  - [earlier] First date: registry 2027-10, Aterio 2026-12 (-10 months — Aterio earlier).
+- **PA · CoreWeave Lancaster (Greenfield Rd; ex-printing sites)** ↔ Lancaster, CoreWeave Campus (Chirisa Technology Parks)
+  - [size] Size 2026-30: registry 92 MW vs Aterio 609 MW IT-eq (×6.6).
+- **VA · AWS Cosner Tech Campus** ↔ AWS Cosner Tech Campus (Amazon AWS)
+  - [earlier] First date: registry 2027-06, Aterio 2026-09 (-9 months — Aterio earlier).
+- **TX · Google South Haskell (THM campus, ex-Musselman Tech)** ↔ South Haskell County - Google Data Center Campus (Google)
+  - [size] Size 2026-30: registry 208 MW vs Aterio 417 MW IT-eq (×2.0).
+- **KS · Red Wolf DCD hyperscale campus (near Kansas Speedway)** ↔ Red Wolf Data Center Campus  (Company Not Disclosed)
+  - [size] Size 2026-30: registry 83 MW vs Aterio 522 MW IT-eq (×6.3).
+- **TX · Abernathy (Flash Compute / FS CS I)** ↔ Abernathy Campus (Fluidstack)
+  - [size] Size 2026-30: registry 168 MW vs Aterio 417 MW IT-eq (×2.5).
+- **ND · Polaris Forge 1 (Applied Digital)** ↔ Polaris Forge 1 (Applied Digital)
+  - [earlier] First date: registry 2027-06, Aterio 2026-09 (-9 months — Aterio earlier).
+- **GA · Microsoft Rome campus 'ATL80' / Project Firecracker (0 Huffaker Rd)** ↔ Georgia 4, Microsoft Campus (Microsoft)
+  - [earlier] First date: registry 2029-06, Aterio 2028-06 (-12 months — Aterio earlier).
+  - [size] Size 2026-30: registry 352 MW vs Aterio 166 MW IT-eq (×0.5).
+- **NM · Meta Los Lunas** ↔ Los Lunas, Meta Campus (Facebook)
+  - [earlier] First date: registry 2028-01, Aterio 2026-09 (-16 months — Aterio earlier).
+  - [size] Size 2026-30: registry 131 MW vs Aterio 330 MW IT-eq (×2.5).
+- **NY · TeraWulf Cayuga (ex-Cayuga coal plant, Lansing)** ↔ Cayuga Data Campus (TeraWulf )
+  - [size] Size 2026-30: registry 333 MW vs Aterio 120 MW IT-eq (×0.4).
+- **TX · Core Scientific Denton (CoreWeave)** ↔ Core Scientific Denton Campus (Core Scientific)
+  - [earlier] First date: registry 2027-11, Aterio 2026-09 (-14 months — Aterio earlier).
+- **TX · QTS South Dallas DFW2 (Wilmer)** ↔ QTS DFW2 Campus (QTS Data Centers)
+  - [size] Size 2026-30: registry 75 MW vs Aterio 366 MW IT-eq (×4.9).
+- **MO · Google Kansas City East (Hunt Midwest Business Center)** ↔ Kansas City, Google Campus (Google)
+  - [size] Size 2026-30: registry 105 MW vs Aterio 334 MW IT-eq (×3.2).
+- **NV · Switch Citadel Campus (TRIC)** ↔ The Citadel, Switch Campus (Switch Data Centers)
+  - [earlier] First date: registry 2028-06, Aterio 2026-12 (-18 months — Aterio earlier).
+  - [size] Size 2026-30: registry 98 MW vs Aterio 326 MW IT-eq (×3.3).
+- **AZ · STACK PHX02 Central Phoenix (720 N 40th St)** ↔ PHX02 Phoenix, Stack Campus (STACK Infrastructure)
+  - [earlier] First date: registry 2028-06, Aterio 2027-06 (-12 months — Aterio earlier).
+- **TX · CyrusOne Bosque County (Thad Hill Energy Center powered land)** ↔ Whitney, CyrusOne Campus (CyrusOne)
+  - [size] Size 2026-30: registry 334 MW vs Aterio 86 MW IT-eq (×0.3).
+- **AZ · Stream Phoenix I-VI (Goodyear)** ↔ Phoenix, Streamdatacenters Campus (Stream Data Centers)
+  - [earlier] First date: registry 2030-01, Aterio 2027-02 (-35 months — Aterio earlier).
+- **VA · Chirisa Technology Park CTP-02 / CTP-03 (PowerHouse)** ↔ CTP Campus, Richmond (Chirisa Technology Parks)
+  - [size] Size 2026-30: registry 100 MW vs Aterio 278 MW IT-eq (×2.8).
+- **TX · EdgeConneX Austin (Cedar Creek) - first campus** ↔ Austin, EdgeConnex Campus (EdgeConnex)
+  - [size] Size 2026-30: registry 80 MW vs Aterio 292 MW IT-eq (×3.7).
+- **OR · AWS Hermiston - E Penney (PDX-138)** ↔ Hermiston 1, AWS Campus (Amazon AWS)
+  - [size] Size 2026-30: registry 52 MW vs Aterio 282 MW IT-eq (×5.4).
+- **OR · AWS Boardman - Airport (PDX-154)** ↔ AWS Boardman Airport South Campus (Amazon AWS)
+  - [size] Size 2026-30: registry 62 MW vs Aterio 250 MW IT-eq (×4.0).
+- **WI · Meta Beaver Dam** ↔ Beaver Dam, Meta Campus (Facebook)
+  - [size] Size 2026-30: registry 183 MW vs Aterio 79 MW IT-eq (×0.4).
+- **NY · Niagara Digital Campus (Urbacon / Niagara Falls Redevelopment)** ↔ Niagara Digital Campus (Urbacon Data Centre Solutions)
+  - [earlier] First date: registry 2029-06, Aterio 2028-09 (-9 months — Aterio earlier).
+- **TX · Edged Fort Worth DFW02 (Veale Ranch / Project Outpost)** ↔ II Dallas-Fort Worth campus (Edged Energy)
+  - [size] Size 2026-30: registry 163 MW vs Aterio 60 MW IT-eq (×0.4).
+- **VA · Vantage VA4 (Stafford Gateway)** ↔ Vantage VA4 Campus (Vantage Data Centers)
+  - [size] Size 2026-30: registry 53 MW vs Aterio 167 MW IT-eq (×3.1).
+- **OH · AWS Hilliard (Cosgray Rd / 4186 Scioto Darby Creek Rd campus)** ↔ Hilliard 3, AWS Campus (Amazon AWS)
+  - [earlier] First date: registry 2027-09, Aterio 2026-12 (-9 months — Aterio earlier).
+- **TX · Google Red Oak** ↔ Google Alamo Data Center Campus (Google)
+  - [earlier] First date: registry 2027-06, Aterio 2026-09 (-9 months — Aterio earlier).
+- **TX · Digital Realty Digital Garland** ↔ Garland, Digital Realty Campus (Digital Realty)
+  - [earlier] First date: registry 2029-07, Aterio 2026-12 (-31 months — Aterio earlier).
+
+## Registry-only (no Aterio match)
+
+- NE · Gage County data center (Google/Tenaska, proposed) — 833 MW IT-eq (reviewed: No Gage County / Tenaska site in the census.)
+- GA · Nixon Technology Center (3G Investments, Four H Club Rd) — 500 MW IT-eq (reviewed: Georgia DRI #4853 is dated 2026-10-12, after the 08-31 export.)
+- MO · Cloverleaf Troy Campus (Cloverleaf Infrastructure) — 416 MW IT-eq (reviewed: No Cloverleaf / Troy / Lincoln County building in the census.)
+- NY · Blockfusion Niagara Falls (North East Data LLC, 5380 Frontier Ave) — 300 MW IT-eq (reviewed: No Blockfusion / North East Data building in the census (Aterio's Niagara Digital Campus is Urbacon's).)
+- AL · Applied Digital Brookwood campus (likely Delta Forge 2) — 210 MW IT-eq (reviewed: No Applied Digital / Brookwood / Tuscaloosa building in the 08-31 census.)
+- TX · Prime DFW04 (Benbrook / west Fort Worth) — 144 MW IT-eq (reviewed: No Prime building in Benbrook / west Fort Worth in the census.)
+- GA · Kingston Technology Hub (Thor Equities) — 125 MW IT-eq (reviewed: Georgia DRI #4835 was filed 2026-09-04, after the 08-31 export. Aterio's Project Springbank (Kingston, withdrawn) is an earlier filing and is not assumed to be this site.)
+- GA · Rum Group Georgia data center (Anthropic compute deal) — 100 MW IT-eq (reviewed: Site not named in the source. Aterio's RUM GROUP campus in Maysville (180 MW) is matched to 'Northern Data Maysville' instead: the two registry rows may be one site (see that note).)
+- AZ · Compass El Mirage PHX-II (El Mirage Rd & Peoria Ave) — 90 MW IT-eq (reviewed: Aterio's Compass Phoenix campus is in Goodyear (active); nothing for PHX-II at El Mirage.)
+- TX · Prime DFW02 (Garland) — 48 MW IT-eq (reviewed: No Prime building in Garland in the census.)
+
+## Aterio-only, under construction (top 40 of 157)
+
+- TX · Project Horizon (Poolside, Fort Stockton) — UC 217 MW IT-eq, first 2029-03
+- TX · North Haskell County - Google Data Center Campus (Google, Haskell) — UC 148 MW IT-eq, first 2028-03
+- VA · NVA04 Sterling, Stack Campus (STACK Infrastructure, Sterling) — UC 144 MW IT-eq, first 2026-12
+- TX · San Antonio 4, Microsoft Campus (Microsoft, Castroville) — UC 142 MW IT-eq, first 2026-12
+- VA · LYH Chase City (Microsoft, Chase City) — UC 141 MW IT-eq, first 2028-09
+- VA · Remington, PointOne Campus (PointOne , Remington) — UC 0 MW IT-eq, first 2027-12
+- GA · Rock House Road, AWS Campus (Amazon AWS, Lithia Springs) — UC 136 MW IT-eq, first 2027-06
+- WY · Microsoft HR Ranch Rd Campus (Microsoft, ) — UC 136 MW IT-eq, first 2028-03
+- VA · Tech Park at Brambleton Campus Data Center (STACK Infrastructure, Ashburn) — UC 133 MW IT-eq, first 2027-09
+- VA · Boydton 2, Microsoft Campus (Microsoft, Boydton) — UC 132 MW IT-eq, first 2027-03
+- GA · Stanton Springs, Meta Campus (Facebook, Social Circle) — UC 130 MW IT-eq, first 2027-03
+- AZ · Waddell, Aligned Campus (Aligned Data Centers, Waddell) — UC 125 MW IT-eq, first 2027-03
+- VA · Project Nova SDC (STACK Infrastructure, Sterling) — UC 124 MW IT-eq, first 2027-02
+- MO · New Florence, AWS Campus (Amazon AWS, New Florence) — UC 124 MW IT-eq, first 2028-09
+- TX · Asphalt Dr, CyrusOne Campus (CyrusOne, Fort Worth) — UC 122 MW IT-eq, first 2026-11
+- GA · Lithia Springs, Data Bank Campus (DataBank, Atlanta) — UC 118 MW IT-eq, first 2026-09
+- LA · North Bossier Parish Campus (STACK Infrastructure, Benton) — UC 115 MW IT-eq, first 2027-09
+- NV · Peru Shelf Technology Park (Tract, Sparks) — UC 108 MW IT-eq, first 2028-06
+- VA · Ashburn (VA3), Vantage Campus (Vantage Data Centers, Ashburn) — UC 107 MW IT-eq, first 2028-09
+- KY · Louisville, PowerHouse Campus (Power House Data Centers, Louisville) — UC 97 MW IT-eq, first 2027-09
+- GA · Fayetteville, QTS Campus - Expansion (QTS Data Centers, Fayetteville) — UC 96 MW IT-eq, first 2029-03
+- VA · South Hill, Microsoft Campus (Microsoft, South Hill) — UC 47 MW IT-eq, first 2027-09
+- WY · Wyoming 2, Microsoft Campus (Microsoft, Cheyenne) — UC 94 MW IT-eq, first 2026-12
+- VA · Clarksville, Microsoft Campus (Microsoft, Clarksville) — UC 94 MW IT-eq, first 2026-12
+- GA · Georgia 1, Microsoft Campus (Microsoft, Douglasville) — UC 94 MW IT-eq, first 2028-09
+- AR · Serverfarm Clarksville Campus (Serverfarm, Clarksville) — UC 94 MW IT-eq, first 2028-05
+- TX · Red Oak, Compass Campus (Compass Datacenters, Red Oak) — UC 0 MW IT-eq, first 2027-06
+- AZ · Mirage, Microsoft Campus (Microsoft, El Mirage) — UC 93 MW IT-eq, first 2026-11
+- TX · County Road 381, Microsoft Campus (Microsoft, Castroville) — UC 0 MW IT-eq, first 2029-06
+- AZ · Mesa, CyrusOne Campus (CyrusOne, Mesa) — UC 87 MW IT-eq, first 2027-09
+- NC · Bit Digital Data Center North Carolina (WhiteFiber, Yadkinville) — UC 86 MW IT-eq, first 2027-03
+- GA · Rockdale Technology Park 1 (Company Not Disclosed, Conyers) — UC 84 MW IT-eq, first 2028-06
+- GA · Winston, Streamdatacenters Campus (Stream Data Centers, Winston) — UC 84 MW IT-eq, first 2028-09
+- VA · Aldie, Microsoft Campus (Microsoft, Aldie) — UC 84 MW IT-eq, first 2027-03
+- OH · New Albany, Google Campus (Google, New Albany) — UC 84 MW IT-eq, first 2026-09
+- NC · Lenoir, Google Campus (Google, Lenoir) — UC 84 MW IT-eq, first 2026-11
+- MO · Kansas City, Meta Campus (Facebook, Kansas City) — UC 84 MW IT-eq, first 2027-12
+- OH · NEO-01 Perkins Township Data Center (Aligned Data Centers, Sandusky) — UC 84 MW IT-eq, first 2026-09
+- CA · Alviso Milipitas, Microsoft Campus (Microsoft, San Jose) — UC 84 MW IT-eq, first 2028-06
+- VA · Leesburg, Google Campus (Google, Leesburg) — UC 84 MW IT-eq, first 2026-09

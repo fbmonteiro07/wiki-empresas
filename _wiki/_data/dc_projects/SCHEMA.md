@@ -32,7 +32,7 @@ project_id,campus,phase,developer,tenant,city,county,state,lat,lon,mw,mw_basis,c
 | air_permit | `n/a` \| `issued` \| `pending` \| `not_filed` \| `unknown` | STATE air permit for on-site prime/bridge generation (e.g. TCEQ NSR/standard permit). `n/a` = grid-only with ordinary backup gensets |
 | air_permit_date | `YYYY-MM` or blank | issue date (if issued) or filing date (if pending) |
 | interconnection | `energized` \| `agreement` \| `study` \| `unknown` | large-load grid connection status |
-| local_approval | `approved` \| `pending` \| `denied` \| `unknown` | zoning / site plan / building permit |
+| local_approval | `approved` \| `pending` \| `denied` \| `n/a` \| `unknown` | zoning / site plan / building permit; `n/a` = no construction approval required (added 2026-11-09; not for Texas). This field is what the engine's `new_license` channel tests, so in states where a pause holds STATE approvals it carries them: New York rows record the DEC permit EO 62 holds; Texas rows record state construction approvals (TCEQ construction stormwater / water) that the TCEQ freeze and the pledged Hinojosa ban would hold, with county abatements and city zoning in the notes only |
 | local_approval_date | `YYYY-MM` or blank | |
 | local_moratorium | text or blank | name of a local moratorium that covers the site (jurisdiction + dates if known) |
 | source | `;`-separated URLs or corpus paths (relative to `E:\Wiki Felipe empresas`) | every row needs ≥1 |

@@ -1,0 +1,832 @@
+{
+  "source": "Bernstein / Chad Dillard, Exhibit 6, 2026-11-04; user confirmed Bernstein",
+  "aterio_source": "P:\\Felipe Monteiro\\Aterio\\data-centers\\inventory\\data_center_inventory_20260831.csv",
+  "aterio_vintage": "2026-08-31",
+  "gdp_basis": "2025 annual nominal GDP, BEA via FRED, release 2026-09-30; Bernstein denominator unknown",
+  "labor_calibration": {
+    "tag": "PARTIAL / derived",
+    "formula": "36 / (36 + 63), from rounded Wyoming components",
+    "fraction": 0.36363636363636365,
+    "headline_8pct_times_fraction": 2.909090909090909
+  },
+  "labels": [
+    {
+      "state": "WY",
+      "total_pct_printed": 100,
+      "labor_pct_printed": 36,
+      "rest_pct_printed": 63,
+      "gdp_2025_bn": 52.4912,
+      "gdp_source": "https://fred.stlouisfed.org/series/WYNGSP",
+      "implied_budget_bn": 52.4912,
+      "implied_million_usd_per_construction_facility_mw": 41.00875
+    },
+    {
+      "state": "NM",
+      "total_pct_printed": 33,
+      "labor_pct_printed": 12,
+      "rest_pct_printed": 21,
+      "gdp_2025_bn": 152.12,
+      "gdp_source": "https://fred.stlouisfed.org/series/NMNGSP",
+      "implied_budget_bn": 50.199600000000004,
+      "implied_million_usd_per_construction_facility_mw": 40.68038897893031
+    },
+    {
+      "state": "IA",
+      "total_pct_printed": 32,
+      "labor_pct_printed": 12,
+      "rest_pct_printed": 20,
+      "gdp_2025_bn": 271.9372,
+      "gdp_source": "https://fred.stlouisfed.org/series/IANGSP",
+      "implied_budget_bn": 87.01990400000001,
+      "implied_million_usd_per_construction_facility_mw": 56.43314137483788
+    },
+    {
+      "state": "NV",
+      "total_pct_printed": 30,
+      "labor_pct_printed": 11,
+      "rest_pct_printed": 19
+    },
+    {
+      "state": "TX",
+      "total_pct_printed": 28,
+      "labor_pct_printed": 10,
+      "rest_pct_printed": 18,
+      "gdp_2025_bn": 2932.3436,
+      "gdp_source": "https://fred.stlouisfed.org/series/TXNGSP",
+      "implied_budget_bn": 821.0562080000001,
+      "implied_million_usd_per_construction_facility_mw": 49.41953822077766
+    },
+    {
+      "state": "OH",
+      "total_pct_printed": 21,
+      "labor_pct_printed": 8,
+      "rest_pct_printed": 13,
+      "gdp_2025_bn": 976.8717,
+      "gdp_source": "https://fred.stlouisfed.org/series/OHNGSP",
+      "implied_budget_bn": 205.143057,
+      "implied_million_usd_per_construction_facility_mw": 45.259566164157796
+    },
+    {
+      "state": "GA",
+      "total_pct_printed": 19,
+      "labor_pct_printed": 7,
+      "rest_pct_printed": 12,
+      "gdp_2025_bn": 936.0867,
+      "gdp_source": "https://fred.stlouisfed.org/series/GANGSP",
+      "implied_budget_bn": 177.856473,
+      "implied_million_usd_per_construction_facility_mw": 39.131734604747564
+    },
+    {
+      "state": "OK",
+      "total_pct_printed": 19,
+      "labor_pct_printed": 7,
+      "rest_pct_printed": 12
+    },
+    {
+      "state": "WI",
+      "total_pct_printed": 16,
+      "labor_pct_printed": 6,
+      "rest_pct_printed": 10
+    },
+    {
+      "state": "AZ",
+      "total_pct_printed": 14,
+      "labor_pct_printed": 5,
+      "rest_pct_printed": 9
+    },
+    {
+      "state": "PA",
+      "total_pct_printed": 12,
+      "labor_pct_printed": 4,
+      "rest_pct_printed": 8
+    },
+    {
+      "state": "AL",
+      "total_pct_printed": 11,
+      "labor_pct_printed": 4,
+      "rest_pct_printed": 7
+    },
+    {
+      "state": "NE",
+      "total_pct_printed": 9,
+      "labor_pct_printed": 3,
+      "rest_pct_printed": 6
+    },
+    {
+      "state": "SC",
+      "total_pct_printed": 8,
+      "labor_pct_printed": 3,
+      "rest_pct_printed": 5
+    },
+    {
+      "state": "MI",
+      "total_pct_printed": 8,
+      "labor_pct_printed": 3,
+      "rest_pct_printed": 5
+    },
+    {
+      "state": "MD",
+      "total_pct_printed": 7,
+      "labor_pct_printed": 2,
+      "rest_pct_printed": 4
+    },
+    {
+      "state": "OR",
+      "total_pct_printed": 6,
+      "labor_pct_printed": 2,
+      "rest_pct_printed": 4
+    },
+    {
+      "state": "AR",
+      "total_pct_printed": 6,
+      "labor_pct_printed": 2,
+      "rest_pct_printed": 4
+    },
+    {
+      "state": "IL",
+      "total_pct_printed": 6,
+      "labor_pct_printed": 2,
+      "rest_pct_printed": 4
+    },
+    {
+      "state": "KS",
+      "total_pct_printed": 4,
+      "labor_pct_printed": 2,
+      "rest_pct_printed": 3
+    },
+    {
+      "state": "TN",
+      "total_pct_printed": 4,
+      "labor_pct_printed": 1,
+      "rest_pct_printed": 2
+    },
+    {
+      "state": "ID",
+      "total_pct_printed": 3,
+      "labor_pct_printed": 1,
+      "rest_pct_printed": 2
+    },
+    {
+      "state": "CO",
+      "total_pct_printed": 1,
+      "labor_pct_printed": null,
+      "rest_pct_printed": null
+    },
+    {
+      "state": "NY",
+      "total_pct_printed": 1,
+      "labor_pct_printed": null,
+      "rest_pct_printed": null
+    },
+    {
+      "state": "CA",
+      "total_pct_printed": 0,
+      "labor_pct_printed": null,
+      "rest_pct_printed": null
+    },
+    {
+      "state": "MN",
+      "total_pct_printed": 0,
+      "labor_pct_printed": null,
+      "rest_pct_printed": null
+    },
+    {
+      "state": "FL",
+      "total_pct_printed": 0,
+      "labor_pct_printed": null,
+      "rest_pct_printed": null
+    }
+  ],
+  "audit": [
+    {
+      "state": "AK",
+      "construction_buildings": 0,
+      "construction_facility_mw": 0,
+      "qualifying_campuses": 0,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "AL",
+      "construction_buildings": 11,
+      "construction_facility_mw": 916.0,
+      "qualifying_campuses": 4,
+      "campuses_with_cost": 1,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 6.0,
+      "known_full_campus_budget_bn": 1.5
+    },
+    {
+      "state": "AR",
+      "construction_buildings": 3,
+      "construction_facility_mw": 300.0,
+      "qualifying_campuses": 2,
+      "campuses_with_cost": 1,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 8.0,
+      "known_full_campus_budget_bn": 4.0
+    },
+    {
+      "state": "AZ",
+      "construction_buildings": 36,
+      "construction_facility_mw": 2149.5,
+      "qualifying_campuses": 17,
+      "campuses_with_cost": 1,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 2.0,
+      "known_full_campus_budget_bn": 1.0
+    },
+    {
+      "state": "CA",
+      "construction_buildings": 9,
+      "construction_facility_mw": 356.83,
+      "qualifying_campuses": 7,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "CO",
+      "construction_buildings": 4,
+      "construction_facility_mw": 161.0,
+      "qualifying_campuses": 3,
+      "campuses_with_cost": 1,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.192,
+      "known_full_campus_budget_bn": 0.192
+    },
+    {
+      "state": "CT",
+      "construction_buildings": 0,
+      "construction_facility_mw": 0,
+      "qualifying_campuses": 0,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "DC",
+      "construction_buildings": 0,
+      "construction_facility_mw": 0,
+      "qualifying_campuses": 0,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "DE",
+      "construction_buildings": 0,
+      "construction_facility_mw": 0,
+      "qualifying_campuses": 0,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "FL",
+      "construction_buildings": 1,
+      "construction_facility_mw": 16.0,
+      "qualifying_campuses": 1,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "GA",
+      "construction_buildings": 57,
+      "construction_facility_mw": 4545.07,
+      "qualifying_campuses": 27,
+      "campuses_with_cost": 6,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 33.2,
+      "known_full_campus_budget_bn": 20.7
+    },
+    {
+      "state": "HI",
+      "construction_buildings": 0,
+      "construction_facility_mw": 0,
+      "qualifying_campuses": 0,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "IA",
+      "construction_buildings": 14,
+      "construction_facility_mw": 1542.0,
+      "qualifying_campuses": 4,
+      "campuses_with_cost": 1,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 70.0,
+      "known_full_campus_budget_bn": 10.0
+    },
+    {
+      "state": "ID",
+      "construction_buildings": 2,
+      "construction_facility_mw": 96.36,
+      "qualifying_campuses": 1,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "IL",
+      "construction_buildings": 23,
+      "construction_facility_mw": 1248.1,
+      "qualifying_campuses": 13,
+      "campuses_with_cost": 1,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 4.0,
+      "known_full_campus_budget_bn": 2.0
+    },
+    {
+      "state": "IN",
+      "construction_buildings": 27,
+      "construction_facility_mw": 2357.5,
+      "qualifying_campuses": 8,
+      "campuses_with_cost": 6,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 125.832,
+      "known_full_campus_budget_bn": 25.832
+    },
+    {
+      "state": "KS",
+      "construction_buildings": 3,
+      "construction_facility_mw": 324.76,
+      "qualifying_campuses": 2,
+      "campuses_with_cost": 1,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 6.2,
+      "known_full_campus_budget_bn": 3.1
+    },
+    {
+      "state": "KY",
+      "construction_buildings": 2,
+      "construction_facility_mw": 112.0,
+      "qualifying_campuses": 1,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "LA",
+      "construction_buildings": 18,
+      "construction_facility_mw": 3196.0,
+      "qualifying_campuses": 5,
+      "campuses_with_cost": 3,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 486.0,
+      "known_full_campus_budget_bn": 62.0
+    },
+    {
+      "state": "MA",
+      "construction_buildings": 0,
+      "construction_facility_mw": 0,
+      "qualifying_campuses": 0,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "MD",
+      "construction_buildings": 15,
+      "construction_facility_mw": 902.0,
+      "qualifying_campuses": 4,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "ME",
+      "construction_buildings": 0,
+      "construction_facility_mw": 0,
+      "qualifying_campuses": 0,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "MI",
+      "construction_buildings": 3,
+      "construction_facility_mw": 1398.0,
+      "qualifying_campuses": 1,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "MN",
+      "construction_buildings": 3,
+      "construction_facility_mw": 97.0,
+      "qualifying_campuses": 3,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "MO",
+      "construction_buildings": 15,
+      "construction_facility_mw": 2373.99,
+      "qualifying_campuses": 9,
+      "campuses_with_cost": 4,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 73.0,
+      "known_full_campus_budget_bn": 36.0
+    },
+    {
+      "state": "MS",
+      "construction_buildings": 22,
+      "construction_facility_mw": 1622.5,
+      "qualifying_campuses": 4,
+      "campuses_with_cost": 3,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 142.0,
+      "known_full_campus_budget_bn": 26.0
+    },
+    {
+      "state": "MT",
+      "construction_buildings": 0,
+      "construction_facility_mw": 0,
+      "qualifying_campuses": 0,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "NC",
+      "construction_buildings": 14,
+      "construction_facility_mw": 1229.04,
+      "qualifying_campuses": 9,
+      "campuses_with_cost": 2,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 43.5,
+      "known_full_campus_budget_bn": 13.5
+    },
+    {
+      "state": "ND",
+      "construction_buildings": 6,
+      "construction_facility_mw": 815.0,
+      "qualifying_campuses": 3,
+      "campuses_with_cost": 1,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 9.0,
+      "known_full_campus_budget_bn": 3.0
+    },
+    {
+      "state": "NE",
+      "construction_buildings": 5,
+      "construction_facility_mw": 454.0,
+      "qualifying_campuses": 3,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "NH",
+      "construction_buildings": 0,
+      "construction_facility_mw": 0,
+      "qualifying_campuses": 0,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "NJ",
+      "construction_buildings": 3,
+      "construction_facility_mw": 325.0,
+      "qualifying_campuses": 2,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "NM",
+      "construction_buildings": 8,
+      "construction_facility_mw": 1234.0,
+      "qualifying_campuses": 2,
+      "campuses_with_cost": 1,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 660.0,
+      "known_full_campus_budget_bn": 165.0
+    },
+    {
+      "state": "NV",
+      "construction_buildings": 27,
+      "construction_facility_mw": 2171.32,
+      "qualifying_campuses": 13,
+      "campuses_with_cost": 1,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 6.0,
+      "known_full_campus_budget_bn": 3.0
+    },
+    {
+      "state": "NY",
+      "construction_buildings": 4,
+      "construction_facility_mw": 450.0,
+      "qualifying_campuses": 2,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "OH",
+      "construction_buildings": 66,
+      "construction_facility_mw": 4532.59,
+      "qualifying_campuses": 30,
+      "campuses_with_cost": 7,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 46.25,
+      "known_full_campus_budget_bn": 12.25
+    },
+    {
+      "state": "OK",
+      "construction_buildings": 14,
+      "construction_facility_mw": 1214.0,
+      "qualifying_campuses": 7,
+      "campuses_with_cost": 1,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 18.0,
+      "known_full_campus_budget_bn": 3.0
+    },
+    {
+      "state": "OR",
+      "construction_buildings": 11,
+      "construction_facility_mw": 663.0,
+      "qualifying_campuses": 6,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "PA",
+      "construction_buildings": 27,
+      "construction_facility_mw": 2602.3,
+      "qualifying_campuses": 6,
+      "campuses_with_cost": 3,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 131.0,
+      "known_full_campus_budget_bn": 31.0
+    },
+    {
+      "state": "RI",
+      "construction_buildings": 0,
+      "construction_facility_mw": 0,
+      "qualifying_campuses": 0,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "SC",
+      "construction_buildings": 11,
+      "construction_facility_mw": 870.32,
+      "qualifying_campuses": 5,
+      "campuses_with_cost": 2,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 42.8,
+      "known_full_campus_budget_bn": 12.8
+    },
+    {
+      "state": "SD",
+      "construction_buildings": 0,
+      "construction_facility_mw": 0,
+      "qualifying_campuses": 0,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "TN",
+      "construction_buildings": 4,
+      "construction_facility_mw": 732.0,
+      "qualifying_campuses": 3,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 1,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "TX",
+      "construction_buildings": 173,
+      "construction_facility_mw": 16614.0,
+      "qualifying_campuses": 77,
+      "campuses_with_cost": 31,
+      "conflicting_cost_campuses": 3,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 625.388129368,
+      "known_full_campus_budget_bn": 145.109129368
+    },
+    {
+      "state": "UT",
+      "construction_buildings": 7,
+      "construction_facility_mw": 1103.0,
+      "qualifying_campuses": 2,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "VA",
+      "construction_buildings": 142,
+      "construction_facility_mw": 9060.960000000001,
+      "qualifying_campuses": 74,
+      "campuses_with_cost": 1,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 4.0,
+      "known_full_campus_budget_bn": 2.0
+    },
+    {
+      "state": "VT",
+      "construction_buildings": 0,
+      "construction_facility_mw": 0,
+      "qualifying_campuses": 0,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "WA",
+      "construction_buildings": 4,
+      "construction_facility_mw": 224.91,
+      "qualifying_campuses": 3,
+      "campuses_with_cost": 1,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 4.8,
+      "known_full_campus_budget_bn": 4.8
+    },
+    {
+      "state": "WI",
+      "construction_buildings": 14,
+      "construction_facility_mw": 1788.7,
+      "qualifying_campuses": 4,
+      "campuses_with_cost": 2,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 34.0,
+      "known_full_campus_budget_bn": 9.0
+    },
+    {
+      "state": "WV",
+      "construction_buildings": 1,
+      "construction_facility_mw": 460.0,
+      "qualifying_campuses": 1,
+      "campuses_with_cost": 0,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 0.0,
+      "known_full_campus_budget_bn": 0.0
+    },
+    {
+      "state": "WY",
+      "construction_buildings": 12,
+      "construction_facility_mw": 1280.0,
+      "qualifying_campuses": 5,
+      "campuses_with_cost": 1,
+      "conflicting_cost_campuses": 0,
+      "cross_state_campus_ids": 0,
+      "naive_construction_row_cost_bn": 3.6,
+      "known_full_campus_budget_bn": 1.2
+    }
+  ],
+  "tx_oh_ga": [
+    {
+      "state": "TX",
+      "bernstein_total_pct": 28,
+      "bernstein_labor_pct": 10,
+      "gdp_2025_bn": 2932.3436,
+      "implied_budget_bn": 821.0562080000001,
+      "implied_budget_rounding_low_bn": 806.3944900000001,
+      "implied_budget_rounding_high_bn": 835.7179259999999,
+      "construction_facility_gw": 16.614,
+      "implied_usdm_per_facility_mw": 49.41953822077766,
+      "naive_cost_bn": 625.388129368,
+      "known_campus_budget_bn": 145.109129368,
+      "known_campus_budget_over_gdp_pct": 4.948571830668138,
+      "campuses_with_cost": 31,
+      "qualifying_campuses": 77,
+      "tx_calibrated_ratio_pct": 28.000000000000004,
+      "tx_calibrated_relative_error_pct": 2.220446049250313e-14,
+      "cross_state_fit": "CALIBRATION ONLY"
+    },
+    {
+      "state": "OH",
+      "bernstein_total_pct": 21,
+      "bernstein_labor_pct": 8,
+      "gdp_2025_bn": 976.8717,
+      "implied_budget_bn": 205.143057,
+      "implied_budget_rounding_low_bn": 200.2586985,
+      "implied_budget_rounding_high_bn": 210.02741550000002,
+      "construction_facility_gw": 4.53259,
+      "implied_usdm_per_facility_mw": 45.259566164157796,
+      "naive_cost_bn": 46.25,
+      "known_campus_budget_bn": 12.25,
+      "known_campus_budget_over_gdp_pct": 1.254002956580685,
+      "campuses_with_cost": 7,
+      "qualifying_campuses": 30,
+      "tx_calibrated_ratio_pct": 22.930186711736518,
+      "tx_calibrated_relative_error_pct": 9.191365293983411,
+      "cross_state_fit": "WITHIN 25%; weak holdout, not economic validation"
+    },
+    {
+      "state": "GA",
+      "bernstein_total_pct": 19,
+      "bernstein_labor_pct": 7,
+      "gdp_2025_bn": 936.0867,
+      "implied_budget_bn": 177.856473,
+      "implied_budget_rounding_low_bn": 173.1760395,
+      "implied_budget_rounding_high_bn": 182.5369065,
+      "construction_facility_gw": 4.54507,
+      "implied_usdm_per_facility_mw": 39.131734604747564,
+      "naive_cost_bn": 33.2,
+      "known_campus_budget_bn": 20.7,
+      "known_campus_budget_over_gdp_pct": 2.211333629673405,
+      "campuses_with_cost": 6,
+      "qualifying_campuses": 27,
+      "tx_calibrated_ratio_pct": 23.99513427347167,
+      "tx_calibrated_relative_error_pct": 26.290180386692995,
+      "cross_state_fit": "POINT ESTIMATE >25%; rounding-sensitive"
+    }
+  ],
+  "guardrails": {
+    "label_arithmetic": "PARTIAL: independently rounded components do not always add to printed totals; a printed zero does not establish zero activity",
+    "deduplication": "PARTIAL: campus ID, building ID fallback; max conflicting cost retained. Cross-state campus IDs flagged; state totals are diagnostic and must not be summed without resolving allocation",
+    "cost_coverage": "FAIL for full valuation: missing budgets, whole-campus vs construction-phase mismatch",
+    "vintage": "FAIL for exact replication: August Aterio export vs November exhibit, GDP vintage unknown",
+    "annual_flow": "FAIL for GDP impact: total project budget is not annual local value added",
+    "headline_aggregation": "UNRESOLVED: 8% aggregation weights and geographic universe not disclosed in exhibit",
+    "labor_validation": "UNRESOLVED: calibration to chart is not independent validation of labor share",
+    "skeptic": "PARTIAL replication; independent TX/OH/GA raw-data and arithmetic check passed. Georgia threshold is rounding-sensitive. See skeptic-tx-oh-ga.txt; project URLs were exported, not externally verified."
+  }
+}

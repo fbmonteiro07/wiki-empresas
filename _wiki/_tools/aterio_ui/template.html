@@ -1,0 +1,766 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Aterio Data Explorer</title>
+<style>
+:root{
+  color-scheme:light;
+  --page:#f4f3ef; --surface:#fcfcfb; --surface-2:#f0efec; --border:#e3e2dc; --grid:#e1e0d9; --axis:#c3c2b7;
+  --ink:#0b0b0b; --ink-2:#52514e; --ink-3:#7c7b76; --accent:#2a78d6;
+  /* lifecycle: ordinal blue (validated --ordinal) + problem stages: ordinal orange */
+  --g-active:#104281; --g-uc:#2a78d6; --g-ann:#86b6ef; --g-delayed:#eb6834; --g-wd:#a8401a;
+  /* execution likelihood: ordinal blue, unrated neutral */
+  --l-High:#1c5cab; --l-Medium:#3987e5; --l-Low:#86b6ef; --l-Unrated:#c3c2b7;
+  /* two-series lines */
+  --s1:#2a78d6; --s2:#eb6834;
+  /* sequential (map, matrix) */
+  --q0:#ecebe6; --q1:#cde2fb; --q2:#9ec5f4; --q3:#6da7ec; --q4:#3987e5; --q5:#256abf; --q6:#104281;
+  --chip:#ecebe6; --warn-bg:#fdf3e7; --warn-ink:#7a4526; --on-hi:#ffffff;
+}
+@media (prefers-color-scheme: dark){
+  :root:where(:not([data-theme="light"])){
+    color-scheme:dark;
+    --page:#121211; --surface:#1a1a19; --surface-2:#232321; --border:#33332f; --grid:#2c2c2a; --axis:#383835;
+    --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#8f8e86; --accent:#3987e5;
+    --g-active:#b7d3f6; --g-uc:#3987e5; --g-ann:#1c5cab; --g-delayed:#d95926; --g-wd:#f59a62;
+    --l-High:#9ec5f4; --l-Medium:#3987e5; --l-Low:#1c5cab; --l-Unrated:#55544f;
+    --s1:#3987e5; --s2:#d95926;
+    --q0:#262624; --q1:#0d366b; --q2:#184f95; --q3:#256abf; --q4:#3987e5; --q5:#6da7ec; --q6:#b7d3f6;
+    --chip:#2a2a27; --warn-bg:#2e2219; --warn-ink:#f0b48c; --on-hi:#0b0b0b;
+  }
+}
+:root[data-theme="dark"]{
+  color-scheme:dark;
+  --page:#121211; --surface:#1a1a19; --surface-2:#232321; --border:#33332f; --grid:#2c2c2a; --axis:#383835;
+  --ink:#f0efec; --ink-2:#c3c2b7; --ink-3:#8f8e86; --accent:#3987e5;
+  --g-active:#b7d3f6; --g-uc:#3987e5; --g-ann:#1c5cab; --g-delayed:#d95926; --g-wd:#f59a62;
+  --l-High:#9ec5f4; --l-Medium:#3987e5; --l-Low:#1c5cab; --l-Unrated:#55544f;
+  --s1:#3987e5; --s2:#d95926;
+  --q0:#262624; --q1:#0d366b; --q2:#184f95; --q3:#256abf; --q4:#3987e5; --q5:#6da7ec; --q6:#b7d3f6;
+  --chip:#2a2a27; --warn-bg:#2e2219; --warn-ink:#f0b48c; --on-hi:#0b0b0b;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;scroll-padding-top:56px}
+body{margin:0;background:var(--page);color:var(--ink);font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:var(--accent)}
+code{font:12px/1.4 ui-monospace,Consolas,monospace;background:var(--surface-2);padding:1px 4px;border-radius:4px}
+.wrap{max-width:1320px;margin:0 auto;padding:0 20px}
+header.top{padding:22px 0 10px}
+.eyebrow{font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--ink-3);font-weight:600}
+h1{margin:2px 0 4px;font-size:26px;letter-spacing:-.01em}
+.sub{color:var(--ink-2);margin:0;font-size:13.5px;max-width:980px}
+.toprow{display:flex;justify-content:space-between;gap:12px;align-items:flex-start}
+button,select,input{font:inherit;color:var(--ink);background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:5px 10px}
+button{cursor:pointer}
+button:hover{background:var(--surface-2)}
+nav.sec{position:sticky;top:0;z-index:20;background:color-mix(in srgb,var(--page) 92%,transparent);backdrop-filter:blur(6px);border-bottom:1px solid var(--border)}
+nav.sec .wrap{display:flex;gap:4px;overflow-x:auto;padding-top:8px;padding-bottom:8px;scrollbar-width:none}
+nav.sec a{white-space:nowrap;text-decoration:none;color:var(--ink-2);font-size:13px;padding:4px 10px;border-radius:999px}
+nav.sec a:hover,nav.sec a.on{background:var(--surface-2);color:var(--ink)}
+section{padding:26px 0 8px}
+section>h2{font-size:20px;margin:0 0 2px;letter-spacing:-.005em}
+.lede{color:var(--ink-2);margin:0 0 14px;max-width:960px;font-size:13.5px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 16px;min-width:0}
+.card h3{margin:0 0 2px;font-size:14.5px}
+.card .note{color:var(--ink-3);font-size:12px;margin:4px 0 0}
+.card .how{color:var(--ink-2);font-size:12.5px;margin:0 0 8px}
+.grid{display:grid;gap:14px}
+.g2{grid-template-columns:repeat(2,minmax(0,1fr))}
+.g3{grid-template-columns:repeat(3,minmax(0,1fr))}
+.g4{grid-template-columns:repeat(4,minmax(0,1fr))}
+.g5{grid-template-columns:repeat(5,minmax(0,1fr))}
+.span2{grid-column:span 2}
+@media (max-width:1000px){.g3,.g4,.g5{grid-template-columns:repeat(2,minmax(0,1fr))}.span2{grid-column:auto}}
+@media (max-width:700px){.g2,.g3,.g4,.g5{grid-template-columns:minmax(0,1fr)}}
+.tile .lab{font-size:12.5px;color:var(--ink-2);display:flex;align-items:center;gap:6px}
+.tile .val{font-size:26px;font-weight:600;letter-spacing:-.01em;margin-top:2px}
+.tile .val small{font-size:13px;font-weight:500;color:var(--ink-2)}
+.tile .meta{font-size:12px;color:var(--ink-3)}
+.hero .val{font-size:52px;line-height:1.05}
+.sw{display:inline-block;width:10px;height:10px;border-radius:3px;flex:none}
+.delta{font-size:12px;color:var(--ink-2)}
+.take{margin:0;padding-left:18px}
+.take li{margin:0 0 7px;color:var(--ink-2)}
+.take li b{color:var(--ink)}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:12px;color:var(--ink-2);margin:0 0 6px}
+.legend span{display:inline-flex;align-items:center;gap:5px}
+.legend .ln{width:14px;height:2px;border-radius:2px;display:inline-block}
+.chart{display:block;overflow:visible}
+.chart text{fill:var(--ink-3);font-size:11px}
+.chart text.lbl{fill:var(--ink-2);font-size:11.5px}
+.chart text.val{fill:var(--ink-2);font-size:11px}
+.chart .gridl{stroke:var(--grid);stroke-width:1}
+.chart .base{stroke:var(--axis);stroke-width:1}
+.chart .hit{fill:transparent}
+.chart .hit:hover{fill:var(--ink);fill-opacity:.04}
+.chart .ch{stroke:var(--ink-3);stroke-width:1}
+#tip{position:fixed;pointer-events:none;z-index:50;background:var(--surface);border:1px solid var(--border);border-radius:8px;padding:7px 10px;font-size:12px;box-shadow:0 4px 18px rgba(0,0,0,.12);display:none;max-width:320px}
+#tip .t{font-weight:600;margin-bottom:3px;color:var(--ink)}
+#tip .r{display:flex;align-items:center;gap:7px;color:var(--ink-2);white-space:nowrap}
+#tip .r b{color:var(--ink);font-weight:600;min-width:46px;text-align:right}
+#tip .k{width:12px;height:3px;border-radius:2px;flex:none}
+table.t{width:100%;border-collapse:collapse;font-size:12.5px}
+table.t th{text-align:left;font-weight:600;color:var(--ink-2);border-bottom:1px solid var(--border);padding:5px 6px;cursor:pointer;white-space:nowrap;position:sticky;top:0;background:var(--surface)}
+table.t td{border-bottom:1px solid var(--grid);padding:4px 6px;vertical-align:top}
+table.t td.n,table.t th.n{text-align:right;font-variant-numeric:tabular-nums}
+table.t tr.tot td{font-weight:600;border-top:1px solid var(--axis)}
+.scroll{max-height:440px;overflow:auto}
+.chip{display:inline-block;font-size:11px;padding:0 6px;border-radius:999px;background:var(--chip);color:var(--ink-2);margin-left:4px;white-space:nowrap}
+.chip.w{background:color-mix(in srgb,var(--accent) 18%,transparent);color:var(--ink)}
+.bar{height:6px;border-radius:3px;background:var(--surface-2);position:relative;min-width:60px}
+.bar i{position:absolute;left:0;top:0;bottom:0;border-radius:3px;background:var(--g-uc)}
+.seg{display:flex;gap:2px;height:28px;margin:6px 0 4px}
+.seg div{border-radius:4px;color:#fff;font-size:11.5px;display:flex;align-items:center;padding:0 6px;white-space:nowrap;overflow:hidden;min-width:0}
+.seg div.dk{color:#0b0b0b}
+.ctl{display:flex;flex-wrap:wrap;gap:6px;align-items:center;margin:0 0 10px;font-size:12.5px;color:var(--ink-2)}
+.ctl .tg button{border-radius:0;margin-left:-1px;padding:4px 10px}
+.ctl .tg button:first-child{border-radius:8px 0 0 8px;margin-left:0}
+.ctl .tg button:last-child{border-radius:0 8px 8px 0}
+.ctl .tg button.on{background:var(--ink);color:var(--surface);border-color:var(--ink)}
+.warn{padding:9px 12px;border-radius:10px;background:var(--warn-bg);color:var(--warn-ink);font-size:12.5px;margin:10px 0 0}
+.files{display:grid;gap:10px;grid-template-columns:repeat(auto-fill,minmax(280px,1fr))}
+.files .card{padding:12px 14px}
+.files .path{font:12px/1.35 ui-monospace,Consolas,monospace;word-break:break-all;color:var(--ink)}
+.files .m{font-size:12px;color:var(--ink-3);margin:4px 0}
+.files p{margin:0;font-size:12.5px;color:var(--ink-2)}
+.kind{font-size:10.5px;text-transform:uppercase;letter-spacing:.06em;font-weight:700;color:var(--ink-3)}
+.joins{display:flex;flex-wrap:wrap;gap:8px;align-items:center;font-size:12.5px;color:var(--ink-2);margin-top:10px}
+.joins .bx{border:1px solid var(--border);background:var(--surface);border-radius:8px;padding:4px 9px;color:var(--ink)}
+.mx td{text-align:right;font-variant-numeric:tabular-nums;padding:6px 8px;border:2px solid var(--surface)}
+.mx th{padding:6px 8px;font-size:12px;color:var(--ink-2);text-align:right;font-weight:600}
+.mx th.rh{text-align:left}
+.mx td.lt{color:var(--on-hi)}
+.det td{background:var(--surface-2);font-size:12px;color:var(--ink-2)}
+.det b{color:var(--ink)}
+tr.click{cursor:pointer}
+tr.click:hover td{background:var(--surface-2)}
+.pager{display:flex;gap:8px;align-items:center;justify-content:flex-end;margin-top:8px;font-size:12.5px;color:var(--ink-2)}
+footer{color:var(--ink-3);font-size:12px;padding:26px 0 40px}
+.recon td:first-child{max-width:520px}
+.muted{color:var(--ink-3)}
+.mapwrap svg path.st{stroke:var(--surface);stroke-width:1}
+.mapwrap svg path.st:hover{stroke:var(--ink);stroke-width:1.5}
+.mapwrap circle{fill:var(--s2);fill-opacity:.55;stroke:var(--surface);stroke-width:.6}
+.scale{display:flex;gap:2px;align-items:center;font-size:11px;color:var(--ink-3);margin-top:4px;flex-wrap:wrap}
+.scale i{display:inline-block;width:26px;height:10px;border-radius:2px}
+</style>
+</head>
+<body>
+<div id="tip"></div>
+<header class="top wrap">
+  <div class="toprow">
+    <div>
+      <div class="eyebrow">Aterio · US data-center census · explorer</div>
+      <h1>What the Aterio data holds, and what it says</h1>
+      <p class="sub" id="sub"></p>
+    </div>
+    <button id="theme" title="Theme: auto / light / dark">◐ Auto</button>
+  </div>
+</header>
+<nav class="sec"><div class="wrap" id="nav"></div></nav>
+<main class="wrap">
+
+<section id="overview">
+  <h2>Overview</h2>
+  <p class="lede">Every building Aterio tracks, by stage. All power figures are <b>facility power</b> (the building's total draw). To get IT load, divide by the facility/IT ratio shown on each tile.</p>
+  <div class="grid g5" id="tiles"></div>
+  <div class="card" style="margin-top:14px">
+    <h3>Where the census's GW sit</h3>
+    <div id="segAll"></div>
+    <p class="note" id="segNote"></p>
+  </div>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card"><h3>What this data says</h3><ul class="take" id="take"></ul></div>
+    <div class="card"><h3>Which "GW under construction"? Four numbers, four bases</h3>
+      <p class="how">Quoted figures differ because of what they count: building or campus, stage, date window, facility power or IT load.</p>
+      <table class="t recon" id="recon"></table>
+    </div>
+  </div>
+</section>
+
+<section id="files">
+  <h2>Files and fields</h2>
+  <p class="lede">What is in the folder, how the files join, and how complete each field is. Fill rates are for US rows; "UC" is the fill rate among buildings under construction.</p>
+  <div class="files" id="fileCards"></div>
+  <div class="joins" id="joins"></div>
+  <div class="card" style="margin-top:14px">
+    <div class="ctl"><b style="color:var(--ink)">Field guide</b> <input id="fq" placeholder="filter fields…" style="width:200px"> <span class="muted">Level comes from Aterio's dictionary: <b>Campus</b>-level fields repeat on every building of the campus, so never sum them across buildings.</span></div>
+    <div class="scroll" style="max-height:520px"><table class="t" id="fieldTbl"></table></div>
+  </div>
+</section>
+
+<section id="timeline">
+  <h2>When does it come online?</h2>
+  <p class="lede">GW by the activation date on each building: the go-live date for active buildings, Aterio's or the public estimate for the rest. The pipeline is lumpy: a few multi-GW campuses fill the out-years.</p>
+  <div class="grid g2">
+    <div class="card span2"><h3>GW by activation year and current stage</h3><p class="how">Facility GW. Bars before the as-of year are mostly active buildings; later bars are the pipeline.</p><div id="tlChart"></div><p class="note" id="tlNote"></p></div>
+    <div class="card"><h3>Announced GW by Aterio's execution likelihood</h3><p class="how">PROJECT_EXECUTION_LIKELIHOOD (High / Medium / Low; blank = unrated). Announced + land bank buildings only.</p><div id="likeChart"></div></div>
+    <div class="card"><h3>Aterio's own activation forecast</h3>
+      <div class="ctl"><span class="tg" id="fcMode"><button data-v="cum" class="on">Cumulative</button><button data-v="add">Annual adds</button></span></div>
+      <div id="fcChart"></div><p class="note" id="fcNote"></p></div>
+  </div>
+</section>
+
+<section id="growth">
+  <h2>How the census grew</h2>
+  <p class="lede">Two ways to read history. <b>Snapshots</b> show what Aterio knew at each month-end. The <b>reconstruction</b> applies today's knowledge back in time (from the weekly report). The gap between them is coverage Aterio added later, not projects that started later.</p>
+  <div class="grid g2">
+    <div class="card"><h3>Recorded then vs known today</h3>
+      <div class="ctl"><span class="tg" id="grMetric"><button data-v="uc" class="on">Under construction</button><button data-v="ann">Announced</button><button data-v="active">Active</button></span></div>
+      <div id="grChart"></div><p class="note" id="grNote"></p></div>
+    <div class="card"><h3>Month-end snapshots by stage</h3><p class="how">Point-in-time GW in each monthly-history file (plus the current file).</p><div id="snapChart"></div></div>
+    <div class="card span2"><h3>Quarterly flows from the event log</h3><p class="how">GW of buildings with an event of that type in the quarter, at each building's current size. Aterio backfills dates, so recent quarters keep filling in. The last quarter is partial (to the as-of date).</p>
+      <div class="grid g4" id="flowMultiples"></div></div>
+  </div>
+</section>
+
+<section id="execution">
+  <h2>Execution: do projects arrive when Aterio says?</h2>
+  <p class="lede">Compares the same buildings across two snapshots. The base month selects the earlier snapshot.</p>
+  <div class="ctl">Compare against <span class="tg" id="baseSel"></span></div>
+  <div class="grid g3" id="execTiles"></div>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card"><h3>Where each stage went</h3><p class="how">GW at the base date, by stage then (rows) and stage now (columns). "Dropped" = row no longer in the census. Shading = share of the row.</p><div id="matrix" style="overflow-x:auto"></div><p class="note" id="mxNote"></p></div>
+    <div class="card"><h3>Activation-date changes</h3>
+      <div class="ctl"><span class="tg" id="slipStage"><button data-v="uc" class="on">Under construction then</button><button data-v="ann">Announced then</button></span></div>
+      <p class="how">GW by how far the building's activation date moved between the two snapshots, for buildings dated after the base.</p>
+      <div id="slipChart"></div><p class="note" id="slipNote"></p></div>
+    <div class="card"><h3>Announcement cohorts: where they are now</h3><p class="how">Share of each announcement year's GW by current stage.</p><div id="convChart"></div></div>
+    <div class="card"><h3>How long things take</h3><p class="how">Median months from announcement to construction start (by start year) and from construction start to activation (active buildings, by activation year).</p><div id="durChart"></div><p class="note" id="durNote"></p></div>
+    <div class="card"><h3>Construction progress (satellite read)</h3><p class="how">Under-construction GW by PCT_CONSTRUCTION_STATUS.</p><div id="progChart"></div></div>
+    <div class="card"><h3>Execution likelihood by stage</h3><p class="how">Aterio's rating, GW. It rates under construction High almost by definition. The signal sits in announced.</p><div id="likeStage"></div></div>
+  </div>
+</section>
+
+<section id="map">
+  <h2>Where</h2>
+  <p class="lede">State shading by the selected metric. Dots are the buildings behind it, sized by MW (lower 48 only).</p>
+  <div class="ctl"><span class="tg" id="mapMetric"><button data-v="uc" class="on">Under construction</button><button data-v="ann">Announced</button><button data-v="active">Active</button><button data-v="risk">Delayed + withdrawn</button></span>
+    <label style="margin-left:8px"><input type="checkbox" id="dots" checked> buildings</label></div>
+  <div class="grid g2">
+    <div class="card span2 mapwrap"><div id="mapSvg"></div><div class="scale" id="mapScale"></div></div>
+    <div class="card"><h3>States</h3><div class="scroll"><table class="t" id="stateTbl"></table></div></div>
+    <div class="card"><h3>Top counties by GW under construction</h3><div class="scroll"><table class="t" id="cntyTbl"></table></div></div>
+  </div>
+</section>
+
+<section id="players">
+  <h2>Who builds, who rents, who funds</h2>
+  <p class="lede">Provider = the developer/owner Aterio lists. Tenants, backers, financiers and builders are free-text lists on each building. A building's MW counts in full for every company named on it, so those totals overlap.</p>
+  <div class="grid g4" id="playerTiles"></div>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card span2"><h3>Top providers</h3>
+      <div class="ctl">Rank by <span class="tg" id="provMetric"><button data-v="uc" class="on">Under construction</button><button data-v="ann">Announced</button><button data-v="active">Active</button><button data-v="tot">Total</button></span>
+      <label><input type="checkbox" id="provCnd"> include "Company Not Disclosed"</label></div>
+      <div id="provChart"></div><p class="note">Chips: ticker (where Aterio lists one); <span class="chip w">wiki</span> = we have a page for it.</p></div>
+    <div class="card span2"><h3>Named companies on the buildings</h3>
+      <div class="ctl"><span class="tg" id="listSel"><button data-v="end_users" class="on">Tenants / end users</button><button data-v="backed_by">Provider backers</button><button data-v="financing">Project financing</button><button data-v="builders">Construction &amp; equipment</button></span></div>
+      <div id="listChart"></div><p class="note" id="listNote"></p></div>
+    <div class="card span2"><h3>All providers ≥150 MW</h3><div class="ctl"><input id="pq" placeholder="filter providers…" style="width:220px"></div><div class="scroll"><table class="t" id="provTbl"></table></div></div>
+  </div>
+</section>
+
+<section id="power">
+  <h2>Grid and onsite power</h2>
+  <p class="lede">Which grid operators and utilities the pipeline lands on, and the separate behind-the-meter (BTM) generation inventory.</p>
+  <div class="grid g2">
+    <div class="card"><h3>Balancing authorities</h3><p class="how">GW by stage, top 16. ERCO = ERCOT.</p><div id="baChart"></div><p class="note" id="baNote"></p></div>
+    <div class="card"><h3>Utilities (pipeline)</h3><p class="how">GW under construction + delayed + announced, top 20.</p><div id="utilChart"></div><p class="note" id="utilNote"></p></div>
+    <div class="card span2"><h3>DC capacity vs grid demand (Aterio weekly report)</h3><p class="how">Aterio's table: average balancing-authority demand next to the data-center capacity it attributes to that authority. Their basis, shown as delivered.</p><div class="scroll" style="max-height:300px"><table class="t" id="isoTbl"></table></div></div>
+  </div>
+  <h3 style="margin:22px 0 4px;font-size:16px">Behind-the-meter generation inventory</h3>
+  <p class="lede" id="btmLede"></p>
+  <div class="grid g4" id="btmTiles"></div>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card"><h3>Technology by stage</h3><p class="how">Nameplate GW per phase. Site preparation counts as under construction.</p><div id="btmTech"></div></div>
+    <div class="card"><h3>BTM by state</h3><div id="btmState"></div></div>
+    <div class="card"><h3>Equipment &amp; EPC names on BTM phases</h3><p class="how">Phases naming the company (count), GW by stage in the tooltip.</p><div id="btmEq"></div></div>
+    <div class="card"><h3>Developers and customers</h3><div class="ctl"><span class="tg" id="btmWho"><button data-v="developers" class="on">Developers</button><button data-v="customers">Customers</button></span></div><div id="btmWhoChart"></div></div>
+    <div class="card span2"><h3>All BTM phases</h3><div class="ctl"><input id="bq" placeholder="filter by project, developer, customer, state…" style="width:320px"></div><div class="scroll"><table class="t" id="btmTbl"></table></div></div>
+  </div>
+</section>
+
+<section id="cost">
+  <h2>Cost</h2>
+  <p class="lede">TOT_PROJECT_COST is a <b>campus</b> figure copied onto every building of the campus. Everything here is deduplicated to one value per campus and divided by the campus's total MW.</p>
+  <div class="grid g4" id="costTiles"></div>
+  <div class="grid g2" style="margin-top:14px">
+    <div class="card"><h3>$M per MW, campuses by stage</h3><p class="how">Count of campuses per band. Values below $2M or above $50M per MW are usually a scope mismatch (cost of phase 1 against the full campus MW, or the reverse).</p><div id="costHist"></div></div>
+    <div class="card"><h3>Median $M per MW by announcement year</h3><p class="how">Campuses in the $2-50M/MW band, years with ≥5 campuses.</p><div id="costYear"></div></div>
+    <div class="card span2"><h3>Largest disclosed campus budgets</h3><div class="scroll"><table class="t" id="costTbl"></table></div></div>
+  </div>
+</section>
+
+<section id="risk">
+  <h2>Risk ledger</h2>
+  <p class="lede">Buildings Aterio marks Delayed, Not Approved/Withdrawn or Cancelled, and how often these events occur.</p>
+  <div class="grid g2">
+    <div class="card"><h3>Delayed and withdrawn GW by state</h3><div id="riskState"></div></div>
+    <div class="card"><h3>Withdrawn and delayed events per quarter</h3><p class="how">GW at current size, from the event log.</p><div id="riskFlow"></div></div>
+  </div>
+</section>
+
+<section id="explorer">
+  <h2>Building explorer</h2>
+  <p class="lede">All US buildings, largest first. Click a row for details and Aterio's latest notes. Notes are kept for pipeline buildings only.</p>
+  <div class="card">
+    <div class="ctl">
+      <input id="xq" placeholder="search name, campus, provider, tenant, city…" style="width:260px">
+      <select id="xstage"><option value="">All stages</option></select>
+      <select id="xst"><option value="">All states</option></select>
+      <select id="xlike"><option value="">Any likelihood</option><option value="H">High</option><option value="M">Medium</option><option value="L">Low</option><option value="-">Unrated</option></select>
+      <label><input type="checkbox" id="xai"> AI flag</label>
+      <label><input type="checkbox" id="xbtm"> BTM flag</label>
+      <label>min MW <input id="xmw" type="number" value="0" style="width:70px"></label>
+      <button id="xcsv">Download CSV</button>
+    </div>
+    <div id="xsum" class="muted" style="font-size:12.5px;margin-bottom:6px"></div>
+    <div style="overflow-x:auto"><table class="t" id="xtbl"></table></div>
+    <div class="pager"><button id="xprev">‹ Prev</button><span id="xpage"></span><button id="xnext">Next ›</button></div>
+  </div>
+</section>
+
+<section id="caveats">
+  <h2>Caveats and definitions</h2>
+  <div class="grid g2">
+    <div class="card"><h3>Read before quoting a number</h3><ul class="take" id="cav"></ul></div>
+    <div class="card"><h3>Weekly report sheets</h3><p class="how">Aterio's Excel report. This page uses four of its sheets: 30-day deltas, the activation forecast, the momentum reconstruction and the ISO demand table. The rest are pivots of the same inventory.</p><div class="scroll" style="max-height:360px"><table class="t" id="sheetTbl"></table></div></div>
+  </div>
+</section>
+</main>
+<footer class="wrap" id="foot"></footer>
+
+<script>
+const D=/*__DATA__*/null;
+const G=["active","uc","delayed","ann","wd"];
+const GL=D.group_label;
+const GS={active:"Active",uc:"Under construction",delayed:"Delayed",ann:"Announced",wd:"Withdrawn / cancelled"};
+const SER=G.map(k=>({key:k,label:GS[k],color:"--g-"+k}));
+const $=id=>document.getElementById(id);
+const NS="http://www.w3.org/2000/svg";
+function mk(tag,attrs,parent,text){const e=document.createElementNS(NS,tag);for(const k in attrs||{})e.setAttribute(k,attrs[k]);if(text!=null)e.textContent=text;if(parent)parent.appendChild(e);return e}
+function h(tag,attrs,parent,text){const e=document.createElement(tag);for(const k in attrs||{}){if(k==="style")e.style.cssText=attrs[k];else if(k==="class")e.className=attrs[k];else e.setAttribute(k,attrs[k])}if(text!=null)e.textContent=text;if(parent)parent.appendChild(e);return e}
+const nf=new Intl.NumberFormat("en-US");
+const f1=v=>v==null||isNaN(v)?"–":(Math.abs(v)>=100?nf.format(Math.round(v)):(+v).toFixed(1));
+const f2=v=>v==null||isNaN(v)?"–":(Math.abs(v)>=10?(+v).toFixed(1):(+v).toFixed(2));
+const fN=v=>v==null?"–":nf.format(Math.round(v));
+const fP=v=>v==null||isNaN(v)?"–":Math.round(v*100)+"%";
+const sum=a=>a.reduce((s,v)=>s+(+v||0),0);
+const col=v=>`var(${v})`;
+
+/* ------------------------------------------------------------- tooltip */
+const tip=$("tip");
+function showTip(ev,title,rows,foot){
+  tip.replaceChildren();
+  h("div",{class:"t"},tip,title);
+  for(const r of rows||[]){const d=h("div",{class:"r"},tip);if(r.c)h("span",{class:"k",style:`background:${col(r.c)}`},d);h("b",{},d,r.v);h("span",{},d,r.l)}
+  if(foot)h("div",{class:"r",style:"margin-top:3px;color:var(--ink-3)"},tip,foot);
+  tip.style.display="block";moveTip(ev)}
+function moveTip(ev){const w=tip.offsetWidth,hh=tip.offsetHeight;let x=ev.clientX+14,y=ev.clientY+14;if(x+w>innerWidth-8)x=ev.clientX-w-14;if(y+hh>innerHeight-8)y=ev.clientY-hh-14;tip.style.left=x+"px";tip.style.top=y+"px"}
+function hideTip(){tip.style.display="none"}
+function bindTip(node,fn){node.addEventListener("mousemove",ev=>{const r=fn();showTip(ev,r[0],r[1],r[2])});node.addEventListener("mouseleave",hideTip)}
+
+/* ------------------------------------------------------------- chart helpers */
+/* nice axis: step from {1,2,2.5,5}×10^k giving 3-6 intervals; max = ceil(m/step)*step */
+function niceStep(m){if(!(m>0))return 1;const raw=m/5;const e=Math.pow(10,Math.floor(Math.log10(raw)));for(const f of [1,2,2.5,5,10]){if(f*e>=raw)return f*e}return 10*e}
+function niceMax(m){const st=niceStep(m);return Math.max(st,Math.ceil(m/st-1e-9)*st)}
+function ticks(max){const st=niceStep(max*0.999);const n=Math.round(max/st);return Array.from({length:n+1},(_,i)=>+(i*st).toFixed(6))}
+const tickFmt=v=>v>=10000?(v/1000)+"K":(v>=1000?nf.format(v):(Number.isInteger(v)?String(v):v.toFixed(1)));
+function topRound(x,y,w,hh,r){r=Math.max(0,Math.min(r,hh,w/2));return `M${x},${y+hh}V${y+r}Q${x},${y} ${x+r},${y}H${x+w-r}Q${x+w},${y} ${x+w},${y+r}V${y+hh}Z`}
+function rightRound(x,y,w,hh,r){r=Math.max(0,Math.min(r,w,hh/2));return `M${x},${y}H${x+w-r}Q${x+w},${y} ${x+w},${y+r}V${y+hh-r}Q${x+w},${y+hh} ${x+w-r},${y+hh}H${x}Z`}
+function legend(host,series,kind){const lg=h("div",{class:"legend"},host);for(const s of series){const sp=h("span",{},lg);h("i",{class:kind==="line"?"ln":"sw",style:`background:${col(s.color)}`},sp);sp.appendChild(document.createTextNode(s.label))}return lg}
+
+/* vertical columns, stacked */
+function columns(host,o){
+  host.replaceChildren();
+  if(o.series.length>1&&o.legend!==false)legend(host,o.series);
+  const W=Math.max(280,host.clientWidth),H=o.h||240,m={l:42,r:8,t:o.totals?16:8,b:22};
+  const iw=W-m.l-m.r,ih=H-m.t-m.b,n=o.cats.length;
+  const tot=o.cats.map((_,i)=>sum(o.series.map(s=>s.values[i])));
+  const max=niceMax(Math.max(...tot,o.minMax||0));
+  const s=mk("svg",{viewBox:`0 0 ${W} ${H}`,width:W,height:H,class:"chart",role:"img","aria-label":o.aria||""},host);
+  for(const t of ticks(max)){const y=m.t+ih-t/max*ih;mk("line",{x1:m.l,x2:W-m.r,y1:y,y2:y,class:t===0?"base":"gridl"},s);mk("text",{x:m.l-6,y:y+3.5,"text-anchor":"end"},s,tickFmt(t))}
+  const band=iw/n,bw=Math.min(24,band*0.72);
+  const every=Math.max(1,Math.ceil(n*(o.labW||32)/iw));
+  o.cats.forEach((c,i)=>{
+    const x=m.l+band*i+(band-bw)/2;let y0=m.t+ih;
+    const segs=o.series.map(se=>({se,v:+se.values[i]||0})).filter(d=>d.v>0);
+    segs.forEach((d,j)=>{const hh=d.v/max*ih;const top=j===segs.length-1;const gap=top?0:2;const y=y0-hh;
+      if(hh-gap>0.3){if(top)mk("path",{d:topRound(x,y,bw,hh,4),style:`fill:${col(d.se.color)}`},s);else mk("rect",{x,y:y+gap,width:bw,height:hh-gap,style:`fill:${col(d.se.color)}`},s)}
+      y0=y});
+    if(o.totals&&tot[i]>0&&band>=26)mk("text",{x:x+bw/2,y:y0-4,"text-anchor":"middle",class:"val"},s,(o.fmt||f1)(tot[i]));
+    if(i%every===0)mk("text",{x:m.l+band*i+band/2,y:H-6,"text-anchor":"middle"},s,c);
+    const hit=mk("rect",{x:m.l+band*i,y:m.t,width:band,height:ih,class:"hit"},s);
+    bindTip(hit,()=>[ (o.catTitle||(c=>c))(c,i), o.series.slice().reverse().filter(se=>(+se.values[i]||0)!==0||o.showZero).map(se=>({c:se.color,v:(o.fmt||f1)(se.values[i]||0)+(o.unit?" "+o.unit:""),l:se.label})), o.series.length>1?`Total ${(o.fmt||f1)(tot[i])}${o.unit?" "+o.unit:""}`:(o.foot?o.foot(i):"")]);
+  });
+}
+
+/* horizontal stacked bars */
+function hbars(host,o){
+  host.replaceChildren();
+  if(o.series.length>1&&o.legend!==false)legend(host,o.series);
+  const rows=o.rows;const rowH=o.rowH||24;const W=Math.max(300,host.clientWidth);const lw=Math.min(o.labelW||170,W*0.42);
+  const H=rows.length*rowH+6;const m={l:lw,r:56};const iw=W-m.l-m.r;
+  const tots=rows.map(r=>sum(o.series.map(se=>r.v[se.key])));const max=o.max||Math.max(...tots,1e-9);
+  const s=mk("svg",{viewBox:`0 0 ${W} ${H}`,width:W,height:H,class:"chart"},host);
+  mk("line",{x1:m.l,x2:m.l,y1:0,y2:H-4,class:"base"},s);
+  const maxCh=Math.floor((lw-10)/6.4);
+  rows.forEach((r,i)=>{
+    const y=i*rowH+4,bh=Math.min(16,rowH-8);
+    let lab=r.label;const extra=r.chip?" "+r.chip:"";if((lab+extra).length>maxCh)lab=lab.slice(0,Math.max(4,maxCh-extra.length-1))+"…";
+    const t=mk("text",{x:m.l-8,y:y+bh/2+4,"text-anchor":"end",class:"lbl"},s,lab);
+    if(r.chip){const ts=mk("tspan",{style:"fill:var(--ink-3)"},t," "+r.chip)}
+    let x0=m.l;const segs=o.series.map(se=>({se,v:+r.v[se.key]||0})).filter(d=>d.v>0);
+    segs.forEach((d,j)=>{const w=d.v/max*iw;const last=j===segs.length-1;const gap=last?0:2;
+      if(w-gap>0.3){if(last)mk("path",{d:rightRound(x0,y,w,bh,4),style:`fill:${col(d.se.color)}`},s);else mk("rect",{x:x0,y,width:w-gap,height:bh,style:`fill:${col(d.se.color)}`},s)}
+      x0+=w});
+    mk("text",{x:x0+5,y:y+bh/2+4,class:"val"},s,o.totalText?o.totalText(r,i):(o.fmt||f1)(tots[i]));
+    const hit=mk("rect",{x:0,y:i*rowH,width:W,height:rowH,class:"hit"},s);
+    bindTip(hit,()=>[r.title||r.label,o.series.slice().filter(se=>(+r.v[se.key]||0)>0).map(se=>({c:se.color,v:(o.fmt||f1)(r.v[se.key])+(o.unit?" "+o.unit:""),l:se.label})),(r.foot||"")+(o.series.length>1?`${r.foot?" · ":""}Total ${(o.fmt||f1)(tots[i])}${o.unit?" "+o.unit:""}`:"")]);
+  });
+}
+
+/* lines with crosshair */
+function lines(host,o){
+  host.replaceChildren();
+  if(o.series.length>1)legend(host,o.series,"line");
+  const W=Math.max(300,host.clientWidth),H=o.h||240,m={l:42,r:o.endLabels===false?10:52,t:10,b:22};
+  const iw=W-m.l-m.r,ih=H-m.t-m.b,n=o.x.length;
+  let mx=0;for(const se of o.series)for(const v of se.values)if(v!=null)mx=Math.max(mx,v);if(o.band)for(const v of o.band.hi)if(v!=null)mx=Math.max(mx,v);
+  const max=niceMax(mx);const X=i=>m.l+(n<=1?iw/2:i/(n-1)*iw),Y=v=>m.t+ih-v/max*ih;
+  const s=mk("svg",{viewBox:`0 0 ${W} ${H}`,width:W,height:H,class:"chart"},host);
+  for(const t of ticks(max)){const y=Y(t);mk("line",{x1:m.l,x2:W-m.r,y1:y,y2:y,class:t===0?"base":"gridl"},s);mk("text",{x:m.l-6,y:y+3.5,"text-anchor":"end"},s,tickFmt(t))}
+  const every=Math.max(1,Math.ceil(n*(o.labW||46)/iw));
+  o.x.forEach((c,i)=>{if(i%every===0||i===n-1&&n-1-(Math.floor((n-1)/every)*every)>every/2)mk("text",{x:X(i),y:H-6,"text-anchor":"middle"},s,o.fmtX?o.fmtX(c):c)});
+  if(o.band){let d="";const pts=[];o.band.hi.forEach((v,i)=>{if(v!=null)pts.push([X(i),Y(v)])});const lo=[];o.band.lo.forEach((v,i)=>{if(v!=null)lo.push([X(i),Y(v)])});
+    d="M"+pts.map(p=>p.join(",")).join("L")+"L"+lo.reverse().map(p=>p.join(",")).join("L")+"Z";mk("path",{d,style:`fill:${col(o.band.color)};fill-opacity:.12`},s)}
+  o.series.forEach(se=>{let d="",pen=false;se.values.forEach((v,i)=>{if(v==null){pen=false;return}d+=(pen?"L":"M")+X(i)+","+Y(v);pen=true});
+    mk("path",{d,style:`fill:none;stroke:${col(se.color)};stroke-width:2;stroke-linejoin:round;stroke-linecap:round`},s);
+    let li=-1;se.values.forEach((v,i)=>{if(v!=null)li=i});
+    if(li>=0){mk("circle",{cx:X(li),cy:Y(se.values[li]),r:4,style:`fill:${col(se.color)};stroke:var(--surface);stroke-width:2`},s);
+      if(o.endLabels!==false)mk("text",{x:X(li)+7,y:Y(se.values[li])+4,class:"val"},s,(o.fmt||f1)(se.values[li]))}});
+  const ch=mk("line",{y1:m.t,y2:m.t+ih,class:"ch",style:"display:none"},s);
+  const dots=o.series.map(se=>mk("circle",{r:4,style:`fill:${col(se.color)};stroke:var(--surface);stroke-width:2;display:none`},s));
+  const ov=mk("rect",{x:m.l,y:m.t,width:iw,height:ih,class:"hit",style:"fill:transparent"},s);
+  ov.addEventListener("mousemove",ev=>{const r=s.getBoundingClientRect();const px=(ev.clientX-r.left)*(W/r.width);const i=Math.max(0,Math.min(n-1,Math.round((px-m.l)/iw*(n-1))));
+    ch.setAttribute("x1",X(i));ch.setAttribute("x2",X(i));ch.style.display="";
+    o.series.forEach((se,k)=>{const v=se.values[i];if(v==null){dots[k].style.display="none";return}dots[k].setAttribute("cx",X(i));dots[k].setAttribute("cy",Y(v));dots[k].style.display=""});
+    const rows=o.series.filter(se=>se.values[i]!=null).map(se=>({c:se.color,v:(o.fmt||f1)(se.values[i])+(o.unit?" "+o.unit:""),l:se.label}));
+    if(o.band&&o.band.hi[i]!=null)rows.push({v:`${(o.fmt||f1)(o.band.lo[i])}–${(o.fmt||f1)(o.band.hi[i])}`,l:o.band.label||"range"});
+    showTip(ev,o.fmtX?o.fmtX(o.x[i]):o.x[i],rows)});
+  ov.addEventListener("mouseleave",()=>{hideTip();ch.style.display="none";dots.forEach(d=>d.style.display="none")});
+}
+
+/* tall segmented bar */
+function segbar(host,parts,fmt){
+  host.replaceChildren();const tot=sum(parts.map(p=>p.v));const bar=h("div",{class:"seg",role:"img"},host);
+  const lg=legend(host,parts.map(p=>({label:p.label,color:p.c})));
+  parts.forEach(p=>{if(!(p.v>0))return;const d=h("div",{style:`flex:${p.v} 1 0;background:${col(p.c)}`},bar);if(p.dark)d.classList.add("dk");
+    const txt=`${fmt(p.v)} · ${fP(p.v/tot)}`;if(p.v/tot>0.07)d.textContent=txt;
+    bindTip(d,()=>[p.label,[{c:p.c,v:fmt(p.v),l:fP(p.v/tot)+" of total"}],p.foot||""])});
+}
+
+/* sortable table */
+function table(tbl,cols,rows,opt={}){
+  let sk=opt.sort||null,sd=-1;
+  function draw(){tbl.replaceChildren();const th=h("thead",{},tbl);const tr=h("tr",{},th);
+    cols.forEach(c=>{const e=h("th",{class:c.num?"n":""},tr,c.label+(sk===c.k?(sd<0?" ↓":" ↑"):""));if(c.title)e.title=c.title;e.onclick=()=>{if(sk===c.k)sd=-sd;else{sk=c.k;sd=c.num?-1:1}draw()}});
+    let rs=rows.slice();if(sk){const c=cols.find(c=>c.k===sk);rs.sort((a,b)=>{const va=c.sv?c.sv(a):a[sk],vb=c.sv?c.sv(b):b[sk];return (va>vb?1:va<vb?-1:0)*sd})}
+    const tb=h("tbody",{},tbl);for(const r of rs.slice(0,opt.limit||9999)){const tr=h("tr",{},tb);
+      cols.forEach(c=>{const td=h("td",{class:c.num?"n":""},tr);if(c.html)c.html(td,r);else td.textContent=c.fmt?c.fmt(r[c.k],r):(c.num?f1(r[c.k]):(r[c.k]??""))})}
+    if(opt.total){const tr=h("tr",{class:"tot"},tb);cols.forEach((c,i)=>{h("td",{class:c.num?"n":""},tr,i===0?"Total":(c.num&&c.sum!==false?(c.fmt||f1)(sum(rows.map(r=>r[c.k]))):""))})}}
+  draw();
+}
+function toggle(id,cb){const box=$(id);box.querySelectorAll("button").forEach(b=>b.onclick=()=>{box.querySelectorAll("button").forEach(x=>x.classList.toggle("on",x===b));cb(b.dataset.v)});return ()=>box.querySelector("button.on").dataset.v}
+
+/* ------------------------------------------------------------- header */
+const T=D.totals,R=D.it_ratio;
+$("sub").textContent=`Building-level export as of ${D.asof}, read from ${D.src}. ${fN(T.n)} US buildings (plus ${fN(T.n_ca)} in Canada, excluded below) from ${fN(T.providers)} providers on ${fN(T.campuses)} campuses in ${T.states} states. Facility power unless marked IT-eq; IT-eq = facility ÷ ${R} (median of the ${fN(D.it_ratio_n)} buildings that report both).`;
+const SECS=[["overview","Overview"],["files","Files & fields"],["timeline","Timeline"],["growth","Growth"],["execution","Execution"],["map","Map"],["players","Players"],["power","Power"],["cost","Cost"],["risk","Risk"],["explorer","Explorer"],["caveats","Caveats"]];
+SECS.forEach(([id,l])=>h("a",{href:"#"+id},$("nav"),l));
+const io=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting){document.querySelectorAll("nav.sec a").forEach(a=>a.classList.toggle("on",a.getAttribute("href")==="#"+e.target.id))}})},{rootMargin:"-40% 0px -55% 0px"});
+SECS.forEach(([id])=>io.observe($(id)));
+const themes=["auto","light","dark"];let ti=0;try{ti=Math.max(0,themes.indexOf(localStorage.getItem("aterio-theme")||"auto"))}catch(e){}
+function applyTheme(){const t=themes[ti];if(t==="auto")document.documentElement.removeAttribute("data-theme");else document.documentElement.setAttribute("data-theme",t);$("theme").textContent=(t==="auto"?"◐ Auto":t==="light"?"☀ Light":"☾ Dark");try{localStorage.setItem("aterio-theme",t)}catch(e){}}
+$("theme").onclick=()=>{ti=(ti+1)%3;applyTheme()};applyTheme();
+
+/* ------------------------------------------------------------- overview */
+const SG={};G.forEach(g=>SG[g]={n:0,gw:0});D.stages.forEach(s=>{SG[s.grp].n+=s.n;SG[s.grp].gw+=s.gw});
+const D30={};G.forEach(g=>D30[g]={n:0,gw:0});
+const S2G={"Active":"active","Construction":"uc","Delayed":"delayed","Announcement":"ann","Land Bank":"ann","Not Approved/Withdrawn":"wd","Cancelled":"wd"};
+(D.weekly.d30||[]).forEach(r=>{const g=S2G[r.DATA_CENTER_STAGE];if(g){D30[g].n+=r.q_delta_30d||0;D30[g].gw+=(r.s_delta_30d_power_capacity_mw||0)/1000}});
+const d30asof=(D.weekly.d30&&D.weekly.d30[0]&&D.weekly.d30[0].updated_at)||"";
+function renderTiles(){
+  const host=$("tiles");host.replaceChildren();
+  ["uc","active","ann","delayed","wd"].forEach(g=>{
+    const c=h("div",{class:"card tile"+(g==="uc"?" hero":"")},host);
+    const lab=h("div",{class:"lab"},c);h("span",{class:"sw",style:`background:${col("--g-"+g)}`},lab);lab.appendChild(document.createTextNode(GL[g]));
+    const v=h("div",{class:"val"},c,f1(SG[g].gw));h("small",{},v," GW");
+    h("div",{class:"meta"},c,`${fN(SG[g].n)} buildings · ≈${f1(SG[g].gw/R)} GW IT-eq`);
+    const d=D30[g];if(d30asof)h("div",{class:"delta"},c,`${d.gw>=0?"+":"−"}${f1(Math.abs(d.gw))} GW, ${d.n>=0?"+":"−"}${fN(Math.abs(d.n))} bldgs in 30d to ${d30asof}`);
+  });
+  segbar($("segAll"),[{label:GS.active,v:SG.active.gw,c:"--g-active"},{label:GS.uc,v:SG.uc.gw,c:"--g-uc"},{label:GS.delayed,v:SG.delayed.gw,c:"--g-delayed"},{label:GL.ann,v:SG.ann.gw,c:"--g-ann",dark:true},{label:GS.wd,v:SG.wd.gw,c:"--g-wd"}],v=>f1(v)+" GW");
+  $("segNote").textContent=`${f1(sum(G.map(g=>SG[g].gw)))} GW in total. Announced is ${(SG.ann.gw/SG.uc.gw).toFixed(1)}× under construction. ${fN(sum(D.stages.map(s=>s.n-s.n_mw)))} buildings carry no MW at all (counted, but adding 0 GW).`;
+}
+renderTiles();
+const take=$("take");D.takeaways.forEach(t=>{const li=h("li",{},take);li.innerHTML=t});
+(function(){const rc=D.recon,tb=$("recon");
+  const rows=[
+    ["This file, building level: stage = Construction",rc.uc,`${D.asof} · facility GW · ≈${f1(rc.uc/R)} GW IT-eq`],
+    ["…plus buildings marked Delayed",rc.uc_delayed,`${D.asof} · facility GW`],
+    ["This file, campus level: every building (any stage) on a campus with ≥1 building under construction, activation 2026-30",rc.campus_2630,`${D.asof} · of which ${f1(rc.campus_2630_by_grp.ann)} GW is still only announced (later phases). Adding ${f1(rc.uc_nocampus_2630)} GW of construction buildings that have no campus ID gives ${f1(rc.campus_2630+rc.uc_nocampus_2630)} GW`],
+    ["Aterio on a Goldman Sachs-hosted call, 2026-10-20: GW under construction (building level)",83,"Aterio call 2026-10-20 (also ~55 GW active, ~455 GW announced, 40-50 GW withdrawn)"],
+    ["Reference deck, 2026-11-06 (Aterio base): campuses under construction dated 2026-30",139.5,"Campus-level basis, as the row above. The deck's own basis note was not received"],
+    ["Capstone DC registry (dc-delay-risk, round 2, 2026-11-06): under construction, public sources",62.3,"IT-eq GW · large public campuses only"]];
+  const th=h("thead",{},tb);const tr=h("tr",{},th);h("th",{},tr,"Number");h("th",{class:"n"},tr,"GW");h("th",{},tr,"Basis / source");
+  const bd=h("tbody",{},tb);rows.forEach(r=>{const t=h("tr",{},bd);h("td",{},t,r[0]);h("td",{class:"n"},t,(+r[1]).toFixed(1));h("td",{class:"muted"},t,r[2])});
+})();
+
+/* ------------------------------------------------------------- files & fields */
+(function(){const host=$("fileCards");
+  D.files.forEach(f=>{const c=h("div",{class:"card"},host);h("div",{class:"kind"},c,f.kind);h("div",{class:"path"},c,f.path);
+    h("div",{class:"m"},c,`${f.kind==="history"?fN(f.rows)+" month-end folders":f.kind==="report"?f.rows+" sheets":f.kind==="dictionary"?f.rows+" fields":fN(f.rows)+" rows"} · ${(f.size/1e6).toFixed(1)} MB${f.asof?" · as of "+f.asof:""}`);h("p",{},c,f.what)});
+  const j=$("joins");
+  h("span",{class:"muted"},j,"Joins:");
+  [[ "Inventory","Events","ATERIO_DATA_CENTER_UID"],["Inventory","BTM phases","ATERIO_POWER_GENERATION_PROJECT_UID"],["Building","Campus","ATERIO_DATA_CENTER_CAMPUS_UID (many → one)"],["Snapshot t","Snapshot t+1","ATERIO_DATA_CENTER_UID"]].forEach(([a,b,k])=>{const s=h("span",{style:"display:inline-flex;gap:6px;align-items:center;margin-right:10px"},j);h("span",{class:"bx"},s,a);s.appendChild(document.createTextNode("⟷"));h("span",{class:"bx"},s,b);h("code",{},s,k)});
+  function draw(){const q=$("fq").value.toLowerCase();const rows=D.fields.filter(f=>!q||(f.f+" "+f.desc).toLowerCase().includes(q));
+    table($("fieldTbl"),[
+      {k:"f",label:"Field",html:(td,r)=>{h("code",{},td,r.f)}},
+      {k:"level",label:"Level",html:(td,r)=>{td.textContent=r.level||"–";if(r.level==="Campus")td.style.fontWeight="600"}},
+      {k:"fill",label:"Fill (US)",num:true,html:(td,r)=>{const w=h("div",{style:"display:flex;gap:6px;align-items:center;justify-content:flex-end"},td);h("span",{},w,fP(r.fill));const b=h("div",{class:"bar",style:"width:70px"},w);h("i",{style:`width:${r.fill*100}%`},b)}},
+      {k:"fill_uc",label:"Fill (UC)",num:true,fmt:v=>fP(v)},
+      {k:"desc",label:"Description",html:(td,r)=>{td.textContent=r.desc;if(r.example){h("div",{class:"muted"},td,"e.g. "+r.example)}}}],rows)}
+  $("fq").oninput=draw;draw();
+})();
+
+/* ------------------------------------------------------------- timeline */
+let fcMode="cum";
+function renderTimeline(){
+  const tl=D.timeline;
+  columns($("tlChart"),{cats:tl.years,series:G.map(g=>({label:GS[g],color:"--g-"+g,values:tl.series[g]||tl.years.map(()=>0)})),unit:"GW",h:280,totals:true,labW:30});
+  const und=tl.undated;$("tlNote").textContent=`Undated (no activation date): ${G.filter(g=>und[g]>0).map(g=>GS[g].toLowerCase()+" "+f1(und[g])+" GW").join(", ")}. Withdrawn buildings keep the date they had before being withdrawn.`;
+  const yi=tl.years.findIndex(y=>+y>=+D.asof.slice(0,4));const yrs=tl.years.slice(yi);
+  columns($("likeChart"),{cats:yrs,series:["High","Medium","Low","Unrated"].map(k=>({label:k,color:"--l-"+k,values:tl.series["ann_"+k].slice(yi)})),unit:"GW",h:240,totals:true});
+  const fc=D.weekly.forecast||[];const cats=fc.map(f=>String(f.year));
+  if(fcMode==="cum"){lines($("fcChart"),{x:cats,series:[{label:"Baseline (cumulative)",color:"--s1",values:fc.map(f=>f.base)}],band:{lo:fc.map(f=>f.cons),hi:fc.map(f=>f.opt),color:"--s1",label:"conservative–optimistic"},unit:"GW",h:240,labW:34})}
+  else{const add=k=>fc.map((f,i)=>i===0?null:+(f[k]-fc[i-1][k]).toFixed(2));lines($("fcChart"),{x:cats,series:[{label:"Baseline adds",color:"--s1",values:add("base")}],band:{lo:add("cons"),hi:add("opt"),color:"--s1",label:"conservative–optimistic"},unit:"GW",h:240,labW:34})}
+  const f28=fc.find(f=>f.year===+D.asof.slice(0,4)+2);
+  $("fcNote").textContent=`Sum of Aterio's state sheet (US Additional Info - Evo State, updated ${D.weekly.forecast_asof}). The baseline counts the full pipeline at Aterio's dates. The band runs from conservative to optimistic. ${f28?`End-${f28.year}: ${f1(f28.cons)}–${f1(f28.opt)} GW, baseline ${f1(f28.base)}.`:""} On the 2026-10-20 call Aterio said 2028 adds ~98 GW "with the full bulk of the pipeline".`;
+}
+toggle("fcMode",v=>{fcMode=v;renderTimeline()});
+
+/* ------------------------------------------------------------- growth */
+let grMetric="uc";
+function renderGrowth(){
+  const mom=D.weekly.momentum||[];const snaps=D.snapshots;
+  const months=mom.map(m=>m.m);snaps.forEach(s=>{const k=s.date.slice(0,7);if(!months.includes(k))months.push(k)});months.sort();
+  const start=months.findIndex(m=>m>="2023-01");const ms=months.slice(Math.max(0,start));
+  const key={uc:"uc",ann:"ann",active:"act"}[grMetric];
+  const known=ms.map(m=>{const r=mom.find(x=>x.m===m);return r&&(grMetric!=="active"||r[key]>0)?r[key]:null});
+  const then=ms.map(m=>{const r=snaps.find(s=>s.date.slice(0,7)===m);return r?(grMetric==="ann"?r.ann:r[grMetric]):null});
+  lines($("grChart"),{x:ms,series:[{label:"Known today (Aterio reconstruction)",color:"--s1",values:known},{label:"Recorded at the time (snapshot)",color:"--s2",values:then}],unit:"GW",h:250,fmtX:m=>m.slice(2).replace("-","/"),labW:40});
+  const f=snaps[0];const r0=mom.find(x=>x.m===f.date.slice(0,7));
+  if(r0&&grMetric!=="active"){const a=grMetric==="ann"?f.ann:f[grMetric],b=r0[key];$("grNote").textContent=`At ${f.date} the snapshot held ${f1(a)} GW. Today's data puts that month at ${f1(b)} GW, ${f1(b-a)} GW more that Aterio had not yet found. The reconstruction's stage definitions are Aterio's (the snapshot's announced includes land bank). Its latest month is partial.`}
+  else $("grNote").textContent="The reconstruction's 'active' series is cumulative activations dated by the go-live date.";
+  columns($("snapChart"),{cats:snaps.map(s=>s.date.slice(2,7).replace("-","/")),series:G.map(g=>({label:GS[g],color:"--g-"+g,values:snaps.map(s=>s[g])})),unit:"GW",h:250,labW:36,catTitle:(c,i)=>"Snapshot "+snaps[i].date,foot:null});
+  const fl=D.flows,host=$("flowMultiples");host.replaceChildren();
+  [["ann","Announced","--g-ann"],["start","Construction started","--g-uc"],["active","Went active","--g-active"],["wd","Withdrawn / not approved","--g-wd"]].forEach(([k,l,c])=>{
+    const card=h("div",{},host);h("div",{style:"font-size:12.5px;font-weight:600;margin-bottom:2px"},card,l);const ch=h("div",{},card);
+    columns(ch,{cats:fl.q.map(q=>q.replace(/^20/,"").replace("Q","q")),series:[{label:l,color:c,values:fl[k]}],unit:"GW",h:170,labW:30,catTitle:(c2,i)=>fl.q[i],foot:i=>`${fN(fl[k+"_n"][i])} buildings`});});
+}
+toggle("grMetric",v=>{grMetric=v;renderGrowth()});
+
+/* ------------------------------------------------------------- execution */
+let base=D.default_base,slipStage="uc";
+(function(){const box=$("baseSel");Object.keys(D.comparisons).sort().reverse().forEach(b=>{const bt=h("button",{"data-v":b},box,b);if(b===base)bt.classList.add("on")});toggle("baseSel",v=>{base=v;renderExec()})})();
+toggle("slipStage",v=>{slipStage=v;renderExec()});
+function renderExec(){
+  const c=D.comparisons[base];if(!c)return;
+  const t=$("execTiles");t.replaceChildren();
+  const tile=(lab,val,unit,meta)=>{const d=h("div",{class:"card tile"},t);h("div",{class:"lab"},d,lab);const v=h("div",{class:"val"},d,val);if(unit)h("small",{},v," "+unit);h("div",{class:"meta"},d,meta)};
+  tile(`Construction GW due by ${D.asof} that is now active`,fP(c.due.now.active/(c.due.gw||1)),"",`${f1(c.due.now.active)} of ${f1(c.due.gw)} GW dated ${c.base}→${D.asof}; ${f1(c.due.now.uc)} GW still building, ${f1(c.due.now.delayed)} GW delayed`);
+  const s=c.slip.uc;tile("Construction GW whose date moved later",fP(s.share_later),"",`median slip ${s.median} months, MW-weighted mean ${s.wmean} months, across ${f1(s.gw)} GW dated after ${c.base}`);
+  tile("Added since the base date",f1(c.new.gw),"GW",`${fN(c.new.n)} buildings; ${f1(c.new.before.gw)} GW announced before ${c.base} (backfill), ${f1(c.new.after.gw)} GW announced after, ${f1(c.new.undated.gw)} GW undated. ${fN(c.dropped.n)} rows (${f1(c.dropped.gw)} GW) dropped.`);
+  /* matrix */
+  const host=$("matrix");host.replaceChildren();const tb=h("table",{class:"mx"},host);const hd=h("tr",{},h("thead",{},tb));h("th",{class:"rh"},hd,`${c.base} ↓  now →`);
+  const cols=[...G,"dropped"];cols.forEach(k=>h("th",{},hd,k==="dropped"?"Dropped":GS[k]));h("th",{},hd,"Total then");
+  const bd=h("tbody",{},tb);
+  G.forEach(go=>{const row=c.mat[go];const tot=row._total;if(!(tot>0))return;const tr=h("tr",{},bd);const th=h("th",{class:"rh"},tr);h("span",{class:"sw",style:`background:${col("--g-"+go)};margin-right:6px`},th);th.appendChild(document.createTextNode(GS[go]));
+    cols.forEach(k=>{const v=row[k]||0;const sh=v/tot;const b=sh<=0?0:sh<.05?1:sh<.15?2:sh<.3?3:sh<.5?4:sh<.75?5:6;const td=h("td",{style:`background:var(--q${b})`},tr,v>0?f1(v):"·");if(b>=4)td.classList.add("lt");
+      bindTip(td,()=>[`${GS[go]} on ${c.base} → ${k==="dropped"?"dropped":GS[k]} now`,[{v:f1(v)+" GW",l:fP(sh)+" of the row"},{v:fN(c.matn[go][k]),l:"buildings"}]])});
+    h("td",{},tr,f1(tot))});
+  $("mxNote").textContent=`GW at the size recorded on ${c.base}. ${fN(c.matched)} of ${fN(c.old_n)} buildings matched by ID.`;
+  /* slip */
+  const sl=c.slip[slipStage];
+  columns($("slipChart"),{cats:sl.bins.map(b=>b.label),series:[{label:"GW",color:slipStage==="uc"?"--g-uc":"--g-ann",values:sl.bins.map(b=>b.gw)}],unit:"GW",h:220,totals:true,labW:20,foot:i=>`${fN(sl.bins[i].n)} buildings`});
+  $("slipNote").textContent=`${f1(sl.gw)} GW (${fN(sl.n)} buildings) ${slipStage==="uc"?"under construction":"announced"} on ${c.base} with a later activation date. ${fP(sl.share_later)} moved later, ${fP(sl.share_earlier)} earlier. Median ${sl.median} months, MW-weighted mean ${sl.wmean}. Many announced dates are Aterio estimates that roll forward until a public date exists, so part of this is re-estimation, not observed delay.`;
+  /* conversion cohorts */
+  const cv=D.execution.conv.filter(r=>r.gw>0);
+  hbars($("convChart"),{rows:cv.map(r=>{const t=sum(G.map(g=>r[g]))||1;return {label:String(r.year),v:Object.fromEntries(G.map(g=>[g,r[g]/t*100])),foot:`${fN(r.n)} buildings, ${f1(r.gw)} GW announced that year`,gw:r.gw}}),series:SER,fmt:v=>Math.round(v)+"%",max:100,labelW:60,rowH:22,totalText:r=>f1(r.gw)+" GW"});
+  /* durations */
+  const ds=D.execution.dur_start,db=D.execution.dur_build;const yrs=[...new Set([...ds.map(d=>d.year),...db.map(d=>d.year)])].sort();
+  lines($("durChart"),{x:yrs.map(String),series:[{label:"Announcement → construction start",color:"--s2",values:yrs.map(y=>{const r=ds.find(d=>d.year===y);return r?r.median_m:null})},{label:"Construction start → active",color:"--s1",values:yrs.map(y=>{const r=db.find(d=>d.year===y);return r?r.median_m:null})}],unit:"months",h:220,labW:30});
+  $("durNote").textContent=`Buildings under construction today plan a median ${D.execution.uc_plan_m} months from start to activation (${fN(D.execution.uc_plan_n)} with both dates).`;
+  /* progress */
+  const pr=D.execution.progress;
+  hbars($("progChart"),{rows:pr.filter(p=>p.n>0).map(p=>({label:p.label,v:{uc:p.gw},foot:`${fN(p.n)} buildings`})),series:[{key:"uc",label:"GW",color:"--g-uc"}],unit:"GW",labelW:96,rowH:24});
+  const lb=D.execution.like_by_grp;
+  hbars($("likeStage"),{rows:["uc","delayed","ann","wd"].map(g=>({label:GS[g],v:lb[g]})),series:["High","Medium","Low","Unrated"].map(k=>({key:k,label:k,color:"--l-"+k})),unit:"GW",labelW:140,rowH:26});
+}
+
+/* ------------------------------------------------------------- map */
+let mapMetric="uc";
+function renderMap(){
+  const host=$("mapSvg");host.replaceChildren();
+  const val=s=>{const v=D.states[s];if(!v)return 0;return mapMetric==="risk"?v.delayed+v.wd:v[mapMetric]};
+  const vals=Object.keys(D.states).map(val).filter(v=>v>0).sort((a,b)=>a-b);
+  const q=k=>vals.length?vals[Math.min(vals.length-1,Math.floor(k*vals.length))]:0;
+  const br=[q(.25),q(.5),q(.7),q(.85),q(.95)];
+  const bin=v=>v<=0?0:1+br.filter(b=>v>b).length;
+  const W=975,H=610;const s=mk("svg",{viewBox:`0 0 ${W} ${H}`,style:"width:100%;height:auto;max-height:560px",class:"chart"},host);
+  for(const st in D.map){const p=D.map[st];const v=val(st);const pth=mk("path",{d:p.d,class:"st",style:`fill:var(--q${bin(v)})`},s);
+    bindTip(pth,()=>{const x=D.states[st]||{};return[`${x.name||st}`,G.map(g=>({c:"--g-"+g,v:f1(x[g]||0)+" GW",l:GS[g]})),`${fN(x.n||0)} buildings · AI-flagged pipeline ${f1(x.ai||0)} GW · ${fN(x.btm||0)} BTM-flagged`]})}
+  if($("dots").checked){const ci=D.row_cols;const I=Object.fromEntries(ci.map((c,i)=>[c,i]));
+    const want=mapMetric==="risk"?["delayed","wd"]:[mapMetric];
+    const rows=D.rows.filter(r=>r[I.x]!=null&&want.includes(S2G[r[I.stage]])&&r[I.mw]>0);
+    const mxv=Math.max(...rows.map(r=>r[I.mw]),1);
+    rows.slice().reverse().forEach(r=>{const c=mk("circle",{cx:r[I.x],cy:r[I.y],r:Math.max(1.6,Math.sqrt(r[I.mw]/mxv)*12)},s);
+      bindTip(c,()=>[r[I.name],[{v:f1(r[I.mw])+" MW",l:r[I.stage]},{v:r[I.act]||"–",l:"activation"}],`${r[I.provider]} · ${r[I.city]||r[I.county]}, ${r[I.st]}`])})}
+  const sc=$("mapScale");sc.replaceChildren();sc.appendChild(document.createTextNode("GW by state: "));
+  const edges=[0,...br];for(let i=1;i<=6;i++){const sp=h("span",{style:"display:inline-flex;align-items:center;gap:3px;margin-right:8px"},sc);h("i",{style:`background:var(--q${i})`},sp);sp.appendChild(document.createTextNode(i===6?`> ${f1(br[4])}`:`${f1(edges[i-1])}–${f1(edges[i])}`))}
+  const sp0=h("span",{style:"display:inline-flex;align-items:center;gap:3px"},sc);h("i",{style:"background:var(--q0)"},sp0);sp0.appendChild(document.createTextNode("none"));
+}
+toggle("mapMetric",v=>{mapMetric=v;renderMap()});$("dots").onchange=renderMap;
+(function(){const rows=Object.entries(D.states).map(([st,v])=>({st,name:v.name,...v,risk:v.delayed+v.wd}));
+  table($("stateTbl"),[{k:"st",label:"State",fmt:(v,r)=>`${r.name} (${v})`},{k:"active",label:"Active",num:true},{k:"uc",label:"UC",num:true},{k:"delayed",label:"Delayed",num:true},{k:"ann",label:"Announced",num:true},{k:"ann_hi",label:"…high",num:true,title:"Announced with High likelihood"},{k:"wd",label:"Withdrawn",num:true},{k:"n",label:"Bldgs",num:true,fmt:fN},{k:"ai",label:"AI pipe",num:true,title:"AI-flagged GW in UC+delayed+announced"},{k:"btm",label:"BTM",num:true,fmt:fN,title:"Buildings flagged for onsite generation"}],rows,{sort:"uc",total:true});
+  table($("cntyTbl"),[{k:"county",label:"County",fmt:(v,r)=>`${v}, ${r.st}`},{k:"uc",label:"UC",num:true},{k:"active",label:"Active",num:true},{k:"ann",label:"Announced",num:true},{k:"n",label:"Bldgs",num:true,fmt:fN}],D.counties,{sort:"uc"});
+})();
+
+/* ------------------------------------------------------------- players */
+let provMetric="uc",listSel="end_users";
+(function(){const t=$("playerTiles");const tile=(lab,val,meta)=>{const d=h("div",{class:"card tile"},t);h("div",{class:"lab"},d,lab);h("div",{class:"val"},d,val);h("div",{class:"meta"},d,meta)};
+  tile("Hyperscaler self-builds",fP(D.hs_share_uc),"of under-construction GW, provider ticker AMZN, GOOG, META, MSFT, ORCL or AAPL. Aterio said ~30% on its 2026-10-20 call");
+  tile("Public providers",fP(D.pub_share_uc),"of under-construction GW (PROVIDER_PUBLIC_PRIVATE = Public)");
+  tile('"Company Not Disclosed"',f1(D.cnd.ann+D.cnd.uc+D.cnd.delayed)+" GW",`in the pipeline (${f1(D.cnd.uc)} GW under construction). The largest single "provider", so the ranking undercounts whoever these are`);
+  const ai=D.ai;tile("AI-flagged",f1(ai.by_grp.uc+ai.by_grp.ann+ai.by_grp.delayed)+" GW",`of the pipeline carries FLG_AI_FACILITY = Y (${f1(ai.by_grp.uc)} GW under construction). The flag is set in ${fP(ai.fill)} of rows and blank does not mean "not AI"`);
+})();
+function renderPlayers(){
+  let ps=D.providers.filter(p=>$("provCnd").checked||p.name!=="Company Not Disclosed");
+  const mv=p=>provMetric==="tot"?G.reduce((s,g)=>s+p[g],0):p[provMetric];
+  ps=ps.slice().sort((a,b)=>mv(b)-mv(a)).slice(0,20);
+  hbars($("provChart"),{rows:ps.map(p=>({label:p.name,chip:(p.tick||"")+(p.wiki?" ·wiki":""),title:`${p.name}${p.tick?" ("+p.tick+")":""}`,v:p,foot:`${fN(p.n)} buildings in ${p.states} states${p.backed?" · backed by "+p.backed:""}`})),series:SER,unit:"GW",labelW:220,rowH:24});
+  const L=D.lists[listSel];
+  hbars($("listChart"),{rows:L.rows.slice(0,18).map(r=>({label:r.name,v:r,foot:`named on ${fN(r.n)} buildings`})),series:SER,unit:"GW",labelW:220,rowH:22});
+  $("listNote").textContent=`Field filled on ${fP(L.fill)} of US buildings (${fN(L.n_bld)}, ${f1(L.gw_bld)} GW). Totals overlap where a building names several companies. Names are as typed by Aterio, not normalised.`;
+}
+toggle("provMetric",v=>{provMetric=v;renderPlayers()});toggle("listSel",v=>{listSel=v;renderPlayers()});$("provCnd").onchange=renderPlayers;
+(function(){function draw(){const q=$("pq").value.toLowerCase();const rows=D.providers.filter(p=>!q||(p.name+" "+p.tick+" "+p.backed).toLowerCase().includes(q)).map(p=>({...p,tot:G.reduce((s,g)=>s+p[g],0)}));
+  table($("provTbl"),[{k:"name",label:"Provider",html:(td,r)=>{td.textContent=r.name;if(r.tick)h("span",{class:"chip"},td,r.tick);if(r.wiki)h("span",{class:"chip w"},td,"wiki")}},{k:"pub",label:"Type"},{k:"active",label:"Active",num:true},{k:"uc",label:"UC",num:true},{k:"delayed",label:"Delayed",num:true},{k:"ann",label:"Announced",num:true},{k:"ann_hi",label:"…high",num:true},{k:"wd",label:"Withdrawn",num:true},{k:"ai",label:"AI",num:true},{k:"n",label:"Bldgs",num:true,fmt:fN},{k:"states",label:"States",num:true,fmt:fN},{k:"backed",label:"Backed by"}],rows,{sort:"uc"})}
+  $("pq").oninput=draw;draw()})();
+
+/* ------------------------------------------------------------- power */
+let btmWho="developers";
+function renderPower(){
+  hbars($("baChart"),{rows:D.ba.rows.map(b=>({label:b.ba+" · "+b.name,title:b.name,v:b,foot:`${fN(b.n)} buildings`})),series:SER,unit:"GW",labelW:200,rowH:22});
+  $("baNote").textContent=`${f1(D.ba.unknown_pipe_gw)} GW of the pipeline has no balancing authority assigned.`;
+  hbars($("utilChart"),{rows:D.utilities.rows.slice(0,20).map(u=>({label:u.name,chip:u.tick,v:{uc:u.uc,delayed:u.delayed,ann:u.ann},foot:`${u.pub||"?"} · ${fN(u.n)} buildings · ${f1(u.active)} GW active`})),series:SER.filter(s=>["uc","delayed","ann"].includes(s.key)),unit:"GW",labelW:220,rowH:22});
+  const U=D.utilities;$("utilNote").textContent=`${f1(U.unknown_pipe_gw)} of ${f1(U.pipe_gw)} GW of pipeline (${fP(U.unknown_pipe_gw/U.pipe_gw)}) has no utility assigned, including ${f1(U.unknown_uc_gw)} GW under construction. Rankings cover the assigned part only.`;
+  const B=D.btm;
+  hbars($("btmTech"),{rows:B.techs.map(t=>({label:t.tech,chip:t.src&&t.src!==t.tech?t.src:"",v:t,foot:`${fN(t.n)} phases`})),series:SER,unit:"GW",labelW:200,rowH:24});
+  hbars($("btmState"),{rows:B.states.map(t=>({label:t.st,v:t,foot:`${fN(t.n)} phases`})),series:SER,unit:"GW",labelW:50,rowH:20});
+  hbars($("btmEq"),{rows:B.equipment.map(r=>({label:r.name,v:{n:r.n},foot:G.filter(g=>r[g]>0).map(g=>`${GS[g]} ${f1(r[g])} GW`).join(" · ")})),series:[{key:"n",label:"Phases",color:"--s1"}],fmt:fN,labelW:220,rowH:20});
+  const W2=B[btmWho].slice().sort((a,b)=>sum(G.map(g=>b[g]))-sum(G.map(g=>a[g])));hbars($("btmWhoChart"),{rows:W2.map(r=>({label:r.name,v:r,foot:`${fN(r.n)} phases`})),series:SER,unit:"GW",labelW:200,rowH:22});
+}
+toggle("btmWho",v=>{btmWho=v;renderPower()});
+(function(){const B=D.btm;
+  $("btmLede").textContent=`A separate Aterio file (as of ${B.asof}): ${fN(B.phases_n)} generation phases at ${fN(B.plants_n)} plants in ${fN(B.projects_n)} projects, ${fN(B.flag_n.Y||0)} flagged behind-the-meter (the rest are front-of-meter plants contracted to data centers). Nameplate MW, not data-center load.`;
+  const t=$("btmTiles");const tile=(lab,val,meta)=>{const d=h("div",{class:"card tile"},t);h("div",{class:"lab"},d,lab);const v=h("div",{class:"val"},d,val);h("div",{class:"meta"},d,meta)};
+  tile("Tracked nameplate",f1(B.gw)+" GW",`${f1(B.by_grp.active)} active · ${f1(B.by_grp.uc)} building or site prep · ${f1(B.by_grp.ann)} announced`);
+  const gas=B.sources.find(s=>s.src==="Natural Gas");tile("Natural gas share",fP(gas?gas.gw/B.gw:0),B.sources.slice(0,4).map(s=>`${s.src} ${f1(s.gw)}`).join(" · "));
+  tile("Data centers linked",fN(B.dc.n),`${f1(B.dc.gw)} GW of DC facility power: ${fN(B.dc.n_by_grp.ann)} announced, ${fN(B.dc.n_by_grp.uc)} under construction, ${fN(B.dc.n_by_grp.active)} active`);
+  tile("Generators on DC rows",fN(D.generators.by_grp.uc),`backup gensets on under-construction buildings (filled on ${fP(D.generators.fill)} of rows; ≈${D.generators.mw_per_gen} MW of facility per genset)`);
+  const I=Object.fromEntries(B.phase_cols.map((c,i)=>[c,i]));
+  function draw(){const q=$("bq").value.toLowerCase();const rows=B.phases.filter(p=>!q||p.join(" ").toLowerCase().includes(q)).map(p=>Object.fromEntries(B.phase_cols.map((c,i)=>[c,p[i]])));
+    table($("btmTbl"),[{k:"project",label:"Project",html:(td,r)=>{td.textContent=r.project;if(r.phase&&r.phase!==r.project)h("div",{class:"muted"},td,r.phase)}},{k:"developer",label:"Developer"},{k:"customer",label:"Customer"},{k:"tech",label:"Technology"},{k:"stage",label:"Stage"},{k:"mw",label:"MW",num:true,fmt:fN},{k:"st",label:"State",fmt:(v,r)=>`${r.county?r.county+", ":""}${v}`},{k:"act",label:"Activation"},{k:"equipment",label:"Equipment / EPC"},{k:"btm",label:"BTM"}],rows,{sort:"mw",limit:400})}
+  $("bq").oninput=draw;draw();
+  table($("isoTbl"),[{k:"ba",label:"BA"},{k:"name",label:"Name"},{k:"demand_gw",label:"Avg demand GW",num:true},{k:"dc_gw",label:"DC capacity GW",num:true},{k:"share",label:"DC / demand",num:true,fmt:fP}],D.weekly.iso||[],{sort:"demand_gw"});
+})();
+
+/* ------------------------------------------------------------- cost */
+function renderCost(){
+  const C=D.cost;const t=$("costTiles");t.replaceChildren();
+  const tile=(lab,val,meta)=>{const d=h("div",{class:"card tile"},t);h("div",{class:"lab"},d,lab);h("div",{class:"val"},d,val);h("div",{class:"meta"},d,meta)};
+  tile("Campuses with a budget",fN(C.campuses),`cost filled on ${fP(C.bld_fill)} of buildings`);
+  tile("Summed per building (wrong)","$"+C.naive_tn+"tn","the campus figure counted once per building");
+  tile("Summed per campus","$"+C.dedup_tn+"tn",`${fN(C.multi_value_campuses)} campuses carry more than one value (max kept)`);
+  tile("Median $M per MW",f1(C.sane_median),`${fN(C.sane_n)} campuses in the $2-50M band (all campuses: ${f1(C.median_mpm)})`);
+  columns($("costHist"),{cats:C.hist.map(b=>b.label),series:G.map(g=>({label:GS[g],color:"--g-"+g,values:C.hist.map(b=>b[g])})),fmt:fN,unit:"campuses",h:230,totals:true,labW:20});
+  columns($("costYear"),{cats:C.by_year.map(r=>String(r.year)),series:[{label:"Median $M/MW",color:"--s1",values:C.by_year.map(r=>r.median)}],unit:"$M/MW",h:230,totals:true,foot:i=>`${fN(C.by_year[i].n)} campuses · MW-weighted ${f1(C.by_year[i].wavg)}`});
+  table($("costTbl"),[{k:"name",label:"Campus"},{k:"prov",label:"Provider"},{k:"st",label:"State"},{k:"stage",label:"Stage (mode)"},{k:"mw",label:"Campus MW",num:true,fmt:fN},{k:"bn",label:"Cost $bn",num:true},{k:"mpm",label:"$M/MW",num:true},{k:"n",label:"Bldgs",num:true,fmt:fN}],C.top,{sort:"bn"});
+}
+
+/* ------------------------------------------------------------- risk */
+function renderRisk(){
+  hbars($("riskState"),{rows:D.risk_states.filter(r=>r.delayed+r.wd>0).slice(0,16).map(r=>({label:(D.states[r.st]||{}).name||r.st,v:r,foot:`${fN(r.n_delayed)} delayed, ${fN(r.n_wd)} withdrawn/cancelled buildings · ${f1(r.uc)} GW under construction`})),series:SER.filter(s=>["delayed","wd"].includes(s.key)),unit:"GW",labelW:130,rowH:22});
+  const fl=D.flows;
+  columns($("riskFlow"),{cats:fl.q.map(q=>q.replace(/^20/,"").replace("Q","q")),series:[{label:"Delayed",color:"--g-delayed",values:fl.delayed},{label:"Withdrawn / not approved",color:"--g-wd",values:fl.wd},{label:"Cancelled",color:"--l-Unrated",values:fl.cancel}],unit:"GW",h:230,labW:30,catTitle:(c,i)=>fl.q[i]});
+}
+
+/* ------------------------------------------------------------- explorer */
+(function(){const ci=D.row_cols,I=Object.fromEntries(ci.map((c,i)=>[c,i]));
+  const stg=[...new Set(D.rows.map(r=>r[I.stage]))];stg.forEach(s=>h("option",{value:s},$("xstage"),s));
+  Object.keys(D.states).sort().forEach(s=>h("option",{value:s},$("xst"),`${s} · ${D.states[s].name}`));
+  let page=0,open=-1,cur=[];const PS=50;
+  function filt(){const q=$("xq").value.toLowerCase().trim(),st=$("xstage").value,ss=$("xst").value,lk=$("xlike").value,ai=$("xai").checked,bt=$("xbtm").checked,mn=+$("xmw").value||0;
+    cur=D.rows.filter(r=>(!st||r[I.stage]===st)&&(!ss||r[I.st]===ss)&&(!lk||(lk==="-"?!r[I.like]:r[I.like]===lk))&&(!ai||r[I.ai])&&(!bt||r[I.btm])&&r[I.mw]>=mn&&(!q||[r[I.name],r[I.campus],r[I.provider],r[I.tick],r[I.users],r[I.city],r[I.county],r[I.utility]].join(" ").toLowerCase().includes(q)));
+    page=0;open=-1;draw()}
+  function draw(){const tb=$("xtbl");tb.replaceChildren();const hd=h("tr",{},h("thead",{},tb));
+    [["Building / campus"],["Provider"],["Where"],["Stage"],["MW","n"],["IT MW","n"],["Activation"],["Lik."],["Flags"],["Utility / BA"],["Tenants"]].forEach(([l,c])=>h("th",{class:c||""},hd,l));
+    const bd=h("tbody",{},tb);const L={H:"High",M:"Medium",L:"Low"};
+    cur.slice(page*PS,page*PS+PS).forEach((r,k)=>{const idx=page*PS+k;const tr=h("tr",{class:"click"},bd);
+      const c0=h("td",{},tr,r[I.name]);if(r[I.campus])h("div",{class:"muted"},c0,r[I.campus]);
+      const c1=h("td",{},tr,r[I.provider]);if(r[I.tick])h("span",{class:"chip"},c1,r[I.tick]);
+      h("td",{},tr,`${r[I.city]||r[I.county]||""}, ${r[I.st]}`);
+      const c3=h("td",{},tr);h("span",{class:"sw",style:`background:${col("--g-"+S2G[r[I.stage]])};margin-right:5px`},c3);c3.appendChild(document.createTextNode(r[I.stage]));
+      h("td",{class:"n"},tr,f1(r[I.mw])+(r[I.pub]?"":"*"));h("td",{class:"n"},tr,r[I.it]==null?"–":f1(r[I.it]));h("td",{},tr,r[I.act]||"–");h("td",{},tr,L[r[I.like]]||"–");
+      h("td",{},tr,[r[I.ai]?"AI":"",r[I.btm]?"BTM":""].filter(Boolean).join(" · "));h("td",{},tr,[r[I.utility],r[I.ba]].filter(Boolean).join(" · "));h("td",{},tr,r[I.users]);
+      tr.onclick=()=>{open=open===idx?-1:idx;draw()};
+      if(open===idx){const dt=h("tr",{class:"det"},bd);const td=h("td",{colspan:11},dt);
+        const kv=[["Announced",r[I.ann]],["Construction start",r[I.cs]],["Activation",r[I.act]],["% complete",r[I.pct]==null?"":r[I.pct]+"%"],["County",r[I.county]],["MW source",r[I.pub]?"provider published":"Aterio estimate (*)"],["Tenants",r[I.users]]];
+        const p=h("div",{},td);kv.filter(x=>x[1]).forEach(([k,v])=>{h("b",{},p,k+": ");p.appendChild(document.createTextNode(v+"   "))});
+        if(r[I.notes])h("div",{style:"margin-top:5px"},td,"Aterio notes: "+r[I.notes])}});
+    const tot=sum(cur.map(r=>r[I.mw]));$("xsum").textContent=`${fN(cur.length)} buildings · ${f1(tot/1000)} GW facility · * = MW is Aterio's estimate (no published figure)`;
+    const np=Math.max(1,Math.ceil(cur.length/PS));$("xpage").textContent=`page ${page+1} / ${np}`;$("xprev").disabled=page===0;$("xnext").disabled=page>=np-1}
+  ["xq","xmw"].forEach(id=>$(id).oninput=filt);["xstage","xst","xlike","xai","xbtm"].forEach(id=>$(id).onchange=filt);
+  $("xprev").onclick=()=>{page=Math.max(0,page-1);open=-1;draw()};$("xnext").onclick=()=>{page++;open=-1;draw()};
+  $("xcsv").onclick=()=>{const cols=ci.filter(c=>!["x","y"].includes(c));const esc=v=>{v=v==null?"":String(v);return /[",\n]/.test(v)?'"'+v.replace(/"/g,'""')+'"':v};
+    const lines=[cols.join(",")].concat(cur.map(r=>cols.map(c=>esc(r[I[c]])).join(",")));const b=new Blob([lines.join("\n")],{type:"text/csv"});const a=document.createElement("a");a.href=URL.createObjectURL(b);a.download=`aterio_buildings_${D.asof}.csv`;a.click();setTimeout(()=>URL.revokeObjectURL(a.href),2000)};
+  filt();
+})();
+
+/* ------------------------------------------------------------- caveats */
+(function(){const c=$("cav");[
+  `<b>Facility vs IT.</b> SELECTED_POWER_CAPACITY_MW is the building's total power: the provider-published figure where one exists (≈${fP((D.stages.find(s=>s.stage==="Construction")||{gw_pub:0}).gw_pub/SG.uc.gw)} of construction GW), otherwise Aterio's estimate (a lower/upper band is in the file). CRITICAL_IT_CAPACITY_MW is filled on few rows. IT-eq here = facility ÷ ${R} (median; the MW-weighted ratio is ${D.it_ratio_wtd}).`,
+  `<b>Building, not campus.</b> One row is one building. A 1 GW campus usually appears as several buildings in different stages. Campus-level totals (like the 139.5 GW in the reference deck) add the announced later phases of campuses already building.`,
+  `<b>Campus-level fields repeat.</b> TOT_PROJECT_COST (and the other fields marked Campus in the field guide) is copied onto each building. Summing per building overstates cost ${(D.cost.naive_tn/D.cost.dedup_tn).toFixed(1)}×.`,
+  `<b>Announced ≠ demand.</b> Announcements include speculative multi-GW land plays. Aterio itself says it does not expect all of it to reach construction. Use the likelihood split, and quote announced GW with that caveat.`,
+  `<b>Coverage keeps growing.</b> Monthly growth in the snapshots mixes new projects with older ones Aterio finds later. The reconstruction (Growth section) separates the two.`,
+  `<b>Dates are partly estimates.</b> Activation dates without a public source are Aterio estimates (ESTIMATED_ACTIVATION_DATE_ATERIO). They roll forward when nothing changes, so slippage stats mix real delays with re-estimation.`,
+  `<b>Canada.</b> The export carries ${fN(T.n_ca)} Canadian buildings (${f1(T.gw_ca)} GW). Every figure on this page is US-only.`,
+  `<b>Names are not normalised.</b> Tenants, backers, financiers and equipment names are free text. "Company Not Disclosed" is the largest provider in the pipeline.`,
+  `<b>Licensed data.</b> Aterio export, Capstone internal use. Attribute as "Aterio data-center census, as of ${D.asof}".`
+].forEach(t=>{const li=h("li",{},c);li.innerHTML=t});
+  const used=new Set(["US 30d Comparison","US Additional Info - Evo State","US Const Announced Momentum","Data - ISO vs Data Centers"]);
+  table($("sheetTbl"),[{k:"name",label:"Sheet"},{k:"rows",label:"Rows",num:true,fmt:fN},{k:"used",label:"Used here"}],(D.weekly.sheets||[]).map(s=>({...s,used:used.has(s.name)?"yes":""})));
+  $("foot").textContent=`Built ${D.built} by _wiki/_tools/build_aterio_dashboard.py from ${D.src} (inventory ${D.asof}, events ${D.events_asof}, BTM ${D.btm.asof}). Aggregates in _wiki/_data/aterio/summary.json. State geometry: us-atlas 3.0.1 (Albers USA). Aterio data, licensed; internal use.`;
+})();
+
+/* ------------------------------------------------------------- render + resize */
+function renderAll(){renderTimeline();renderGrowth();renderExec();renderMap();renderPlayers();renderPower();renderCost();renderRisk()}
+renderAll();
+let rz;let lastW=innerWidth;addEventListener("resize",()=>{if(Math.abs(innerWidth-lastW)<8)return;lastW=innerWidth;clearTimeout(rz);rz=setTimeout(renderAll,150)});
+</script>
+</body>
+</html>

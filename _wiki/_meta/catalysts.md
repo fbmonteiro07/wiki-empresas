@@ -1,17 +1,11 @@
 # Catalyst calendar & outcome loop
 
-_Generated 2026-11-09 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
+_Generated 2026-11-10 · parsed from every page's 'Catalysts / what to watch'. Dates are heuristic (latest date in the bullet). Log results in `_meta/outcomes.md`. Rebuild: `py _wiki/_tools/build_catalysts.py`._
 
-## 📅 Upcoming (51)
+## 📅 Upcoming (45)
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| 2026-11-09 | CME | Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract ends 2026-11-09 (Duffy said he "believe[s]" so; filed under a full 40.3 review), then the agency decides ([Duf |
-| 2026-11-09 | KKR | **2026-11-09 — Q3 results and call**, announced by KKR on 2026-09-29. Test fee activation, insurance earnings, K-Series flows and realization progress. [Company announcement](https://media.kkr.com/new |
-| 2026-11-09 | QCOM | **🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed** (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. **B |
-| 2026-11-09 | QCOM | 🆕 **2026-11-09: Bernstein QCOM HQ visit** (Bernstein TMT sales · Tyler Seidman, event notice, 2026-09-28). |
-| 2026-11-09 | QCOM | 🆕 **2026-11-09: Bernstein Qualcomm HQ visit with CEO, CFO and Head of Data Center** (Bernstein · Tyler Seidman events list, 09-29/09-30); 2026-10-01 Susquehanna "The AI Arms Race" session lists QCOM a |
-| 2026-11-09 | SNDK | 🆕 **2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split:** record date, issue of seven additional shares after the close, then split-adjusted trading (8-K Item 8.01, 2026-10-29). ➤ From 11-20, BBG cons |
 | 2026-11-10 | FLEX | **🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands.** Flex said *"more strategy details will be shared at an Innovation Day event on November 10, 2026  |
 | 2026-11-10 | IFX | 🆕 **2026-11-10 — FYQ4 print + FY27 guide** (Jefferies · Janardan Menon, 2026-09-30, via sales relays). Jefferies expects FYQ4 revenue €4.71bn / segment margin 23.7%; FY27 revenue ~€20bn (+22%), segmen |
 | 2026-11-12 | COHR | 🆕 **2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis)** (Jefferies trading desk · Jeffrey Favuzza, 2026-09-28, corporate-access list). |
@@ -58,13 +52,19 @@ _Generated 2026-11-09 · parsed from every page's 'Catalysts / what to watch'. D
 | 2029-12-08 | MU | 🆕 **2026-10-16 — the buyback now has a formula and a window, from Micron IR.** From **2026-12-09 through 2029-12-08** Micron may repurchase up to **trailing-12-month FCF − CHIPS proceeds received in t |
 | 2031-12-31 | NSCALE | 2031-12-31 — Monarch expansion to ~8 GW gross planned. |
 
-## ⏰ Passed — need a post-mortem (0)
+## ⏰ Passed — need a post-mortem (7)
 
 _Date passed, no outcome logged. Decide bull/bear/neutral and add a line to `_meta/outcomes.md`._
 
 | Date | Ticker | Catalyst |
 |---|---|---|
-| _none_ | | |
+| 2026-11-09 | SNDK | 🆕 **2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split:** record date, issue of seven additional shares after the close, then split-adjusted trading (8-K Item 8.01, 2026-10-29). ➤ From 11-20, BBG cons |
+| 2026-11-09 | QCOM | 🆕 **2026-11-09: Bernstein Qualcomm HQ visit with CEO, CFO and Head of Data Center** (Bernstein · Tyler Seidman events list, 09-29/09-30); 2026-10-01 Susquehanna "The AI Arms Race" session lists QCOM a |
+| 2026-11-09 | QCOM | 🆕 **2026-11-09: Bernstein QCOM HQ visit** (Bernstein TMT sales · Tyler Seidman, event notice, 2026-09-28). |
+| 2026-11-09 | QCOM | **🆕 APPLE LICENSING EXTENSION — announced 2026-09-24 ahead of the April 2027 expiry, terms not disclosed** (Bernstein desk · Seidman, 2026-09-24). Watch for duration/rate in the FQ4 print or 10-K. **B |
+| 2026-11-09 | META | 🆕 **2026-11-09 — the go-to-market is taking shape (The Information · Jyoti Mann, "Meta Plans Sales Team, Consulting Partnerships to Win Over Big Companies", 2026-11-09 — journalism, not broker researc |
+| 2026-11-09 | KKR | **2026-11-09 — Q3 results and call**, announced by KKR on 2026-09-29. Test fee activation, insurance earnings, K-Series flows and realization progress. [Company announcement](https://media.kkr.com/new |
+| 2026-11-09 | CME | Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract ends 2026-11-09 (Duffy said he "believe[s]" so; filed under a full 40.3 review), then the agency decides ([Duf |
 
 ## ✅ Resolved (391)
 

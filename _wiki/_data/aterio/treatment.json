@@ -1,0 +1,29 @@
+{
+ "_doc": [
+  "Capstone treatment of the Aterio data-center census — the house rules for any headline number taken from it.",
+  "Decided by Felipe on 2026-11-09 (answers to the six-question review of the export). Hand-edit; read by _wiki/_tools/aterio_capstone_view.py.",
+  "Change a rule here, rerun the view (or the dc-delay-risk build), and note the change and date in 'history'."
+ ],
+ "decided": "2026-11-09",
+ "basis": {"headline": "IT-eq", "fac_it": "median", "note": "Facility power (SELECTED_POWER_CAPACITY_MW) ÷ Aterio's own facility/IT median, measured on the buildings that carry both fields in the export being read (1.15 on the 08-31 export). Comparable with SemiAnalysis, the registry and the chip models. Facility GW is still shown for power and grid questions."},
+ "window": [2026, 2030],
+ "date_field": "DATA_CENTER_ACTIVATION_DATE",
+ "date_note": "Aterio's activation date as published (Aterio's own estimate in ~95% of buildings that carry both); no Capstone delay haircut on top.",
+ "include": {
+  "active_activated_in_window": true,
+  "building_stages": ["Construction", "Delayed"],
+  "announced_stages": ["Announcement", "Land Bank"],
+  "announced_likelihood": ["High"]
+ },
+ "exclude": {
+  "low_likelihood_without_tenant": true,
+  "note": "A campus rated Low likelihood whose buildings name no end user is dropped in every stage (it removes low-likelihood construction and delayed sites with no tenant; low-likelihood announced sites are already out under the High-only rule). A building without a campus ID is its own campus."
+ },
+ "tenant_required": false,
+ "tenant_note": "Outside the low-likelihood rule, a named end user is not required.",
+ "registry_role": "The public-source registry (dc-delay-risk) stays independent; Aterio is the cross-check, not the base.",
+ "history": [
+  {"date": "2026-11-09", "change": "first version: IT-eq headline; construction + delayed + announced High; Aterio's published activation date; drop Low-likelihood campuses with no tenant; no tenant requirement otherwise; registry independent."},
+  {"date": "2026-11-09", "change": "ratio kept at the median (÷1.15) after the double-check showed 417 of 1,025 rows at exactly 1.000; the MW-weighted (÷1.17) and without-1.000 (÷1.27) variants stay on the page as the 169-186 GW band. Decided by Felipe."}
+ ]
+}

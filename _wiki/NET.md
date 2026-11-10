@@ -12,10 +12,10 @@ _Wiki · generated 2026-06-25 · sources: `E:\Wiki Felipe empresas\CDNs\_importe
 | Revenue | $2.9bn | $3.9bn |
 | Gross profit | $2.1bn | $2.8bn |
 | Gross margin | 73.5% | 72.9% |
-| EBITDA | $686m | $1.0bn |
+| EBITDA | $687m | $1.0bn |
 | EPS | $1.28 | $1.86 |
 | Capex | $486m | $551m |
-| OCF (≈EBITDA) | $686m | $1.0bn |
+| OCF (≈EBITDA) | $687m | $1.0bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -115,6 +115,11 @@ _Source: The Pragmatic Engineer · Gergely Orosz, "The Pulse: Time to rethink so
 - ✅ **Closes the 10-24 ⏳ on the count:** Matthew Prince's own post of 2026-10-22 (reproduced as an image in the newsletter; the post was not pulled separately): across the Cloudflare network, *"thousands"* of attempts to exploit PHP2Shell in the 10 hours before public announcement, *"tens of thousands in the 45 minutes post announcement"*, hundreds of thousands within 2 hours, and *"millions now"*. Matches Calacanis's relay of "millions" (All-In, 10-23). ⚠️ These are exploit-attempt counts seen on Cloudflare's network — not blocks billed, customers or revenue.
 - 🆕 **Role in the fix:** OpenAI's statement (as quoted by Orosz) lists Cloudflare among the partners contributing research, technical support and coordination to prepare protections ahead of disclosure; Orosz says Cloudflare built tooling to monitor and block exploit attempts. ✅ Arora's virtual-patch read (10-23). No WAF revenue, customer count or pricing — nothing moves the PT ladder, estimates or the DBNR gap.
 
+## 🆕 2026-11-09 (/run-inbox) — **ZSCALER'S CEO, ASKED ABOUT COMPETITION ON TV, NEVER MENTIONS CLOUDFLARE — BUT PITCHES THE SAME FRONT-LINE ROLE IN THE PHP WEEK. NOTHING ON THIS PAGE MOVES.**
+_Source: Jay Chaudhry (Zscaler co-founder, chairman & CEO — competitor, talking his book) on Schwab Network "Market Overtime", "Zscaler (ZS) CEO on Why Wall Street is Undervaluing the Company", posted 2026-11-09 (recording up to ~2 weeks earlier, inferred) — TV interview, not broker research; YouTube ASR without speaker labels ([transcript](../_podcasts/adhoc/2026-11-09%20-%20Zscaler%20%28ZS%29%20CEO%20on%20Why%20Wall%20Street%20is%20Undervaluing%20the%20Company.md)). Full read on [ai-cybersecurity](themes/ai-cybersecurity.md) (11-09 block)._
+- **No mention.** Cloudflare is not named anywhere in the episode. Asked about competition, he talks only about *"firewall guys"*, hyperscalers and CrowdStrike (as a partner) — the opposite of Bernstein's 09-17 read above, which names Cloudflare as the specific source of pressure on Zscaler.
+- ✅ **Same pitch as the PHP-week blocks above:** *"Last week, you saw a PHP vulnerabilities put every website at risk"*; Zscaler's answer is to *"go dark from the internet"* — applications *"hidden behind Zscaler"* [00:05:54]–[00:06:26] (anecdote, no count) — the front-line proxy role this page logs for Cloudflare (Prince's PHP2Shell counts, 10-30 block). ✅ Agent requests metered *"based on the amount of traffic that's flowing through us"* [00:18:17] — the same traffic-through-a-policy-engine model as Cloudflare's Zero Trust/AI-gateway line. Thin for NET: no number, no share claim.
+
 ## Debate / thesis
 
 - **AI-software read-through — Vercel validates *and contests* the "CDN for tokens" category (Vercel CEO Guillermo Rauch, Stanford MS&E435, 2026-06-29):** Rauch frames token/inference infrastructure (his "AI Gateway") as needing the exact CDN primitives — routing, failover, caching, observability, security, model load-balancing (route a cheap model for "say thanks," not a frontier GPU) — i.e. precisely Cloudflare's Act-3 Workers AI + AI Gateway bet. Independent validation of the TAM, but a reminder the category is contested (Vercel building the same gateway). Agentic-deploy demand inflecting hard (Vercel compute ~3x in months, deployments ~2x since Jan) corroborates NET's own AI-at-the-edge usage signals. See [tokenmaxxing theme](themes/tokenmaxxing.md).
@@ -190,6 +195,7 @@ From the FY2025 10-K "Selected Risks" / Item 1A (NET 10-K FY2025):
 
 ## Changelog
 
+- 2026-11-09 — run-inbox: Zscaler CEO Jay Chaudhry on Schwab Network (posted 2026-11-09) → 1 dated block after the 10-30 block: Cloudflare not mentioned; same PHP-week "hide the apps" pitch and traffic-metered agent model. No Intra-quarter section on this page (not scaffolded). Nothing superseded.
 - 2026-10-30 — run-inbox: The Pragmatic Engineer / Orosz (2026-10-30) → 1 dated block (the CEO's own PHP2Shell exploit-attempt counts from his 10-22 post, closing the 10-24 relay; Cloudflare in OpenAI's coordinated-fix partner list), 1 Sources line. Nothing superseded.
 - 2026-10-28 — run-inbox: Matthew Prince on USV (2026-10-22) → 1 dated block (60/40 traffic mix, basis unstated, vs ">50% non-human" on the Q2 call — held side by side, nothing overwritten; "business model not figured out"; 40x CPU arithmetic; GPU utilization 5-8%; OpenAI security "clearinghouse"; distillation incentive caveat). Nothing superseded; no intra-quarter table on this page, so no row.
 - 2026-10-24 — run-inbox: All-In (2026-10-23) → 1 dated block (PHP exploit week: Cloudflare CEO "millions of hacking attempts" as relayed by Calacanis, unverified; Arora names Cloudflare as the other virtual-patch option), 1 Sources line. Nothing superseded.

@@ -5,6 +5,13 @@ Reads   _wiki/_data/dc_projects/raw/*.csv        regional registry files (see SC
         _wiki/_data/dc_projects/state_rules.json state instruments, governors, scenarios, lead times, basis factors
         _wiki/_data/dc_projects/local_moratoria.json
         _wiki/_data/dc_projects/us_states_albers_10m.json  (us-atlas@3.0.1, pre-projected Albers USA)
+        _wiki/_data/dc_projects/broker/*.json       broker-note tabs (Bernstein), hand-built, GW content only
+        _wiki/_data/dc_projects/independent/*.json  independent-research tabs (SemiAnalysis), hand-built, GW content only
+        _wiki/_data/dc_projects/team/*.json         teammates' standalone pages (manifest + HTML stored unchanged), one tab each
+        _wiki/_data/dc_projects/aterio/registry_map.json + the Aterio export on P:  -> aterio_registry_xchk.run() -> tab
+                                                    'Aterio census' (registry vs census; falls back to aterio/xchk.json)
+        _wiki/_data/dc_projects/aterio/deck_*.json   numbers behind the 3-slide Aterio deck -> tab 'Aterio deck'
+                                                    (pptx/pdf downloads in _dashboards/aterio-deck/)
 Writes  _wiki/_data/dc_projects/projects.csv      merged + validated registry
         _wiki/_data/dc_projects/model_output.json per-phase results, aggregates, guardrails
         _wiki/_data/dc_projects/validation.txt    schema problems found while merging
@@ -55,7 +62,7 @@ ENUMS = {
     "power_path": {"grid", "btm_gas", "hybrid", "nuclear", "other", ""},
     "air_permit": {"n/a", "issued", "pending", "not_filed", "unknown", ""},
     "interconnection": {"energized", "agreement", "study", "unknown", ""},
-    "local_approval": {"approved", "pending", "denied", "unknown", ""},
+    "local_approval": {"approved", "pending", "denied", "unknown", "n/a", ""},   # n/a = none required (e.g. unincorporated TX county)
 }
 BUCKETS = ["energized", "no_pause", "protected", "ends_first", "delayed"]
 YEARS = [2026, 2027, 2028, 2029, 2030]
@@ -283,7 +290,7 @@ def approval_state(row: dict, kind: str, sc: dict) -> tuple[str, int | None]:
         return "unknown", None
     if kind == "new_license":
         st = row["local_approval"]
-        if st == "approved":
+        if st in ("approved", "n/a"):
             return "have", m_parse(row["local_approval_date"])
         if st in ("pending", "denied"):
             return "need", m_parse(row["local_approval_date"])
@@ -367,6 +374,21 @@ def it_eq(row: dict, rules: dict) -> float:
     return row["_mw"] / rules["basis"]["to_it"].get(row["mw_basis"] or "unknown", rules["basis"]["to_it"]["unknown"])
 
 
+def aterio_ratio() -> dict:
+    """Aterio's own facility/IT ratio (house rule 1 in _data/aterio/treatment.json) through the shared loader: measured
+    on the newest export, or the value saved by the last house-view run when P: is offline. Never a literal here."""
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import aterio_core as core
+    k, how = core.house_ratio()
+    return {"k": k, "source": how}
+
+
+def bench_k(block: dict, rules: dict) -> float:
+    """Divisor that puts a benchmark block built on Aterio data on the registry's basis (IT-eq): Aterio's facility/IT
+    ratio when state_rules.json tags the block basis 'facility', 1 when it is untagged (used as stated)."""
+    return rules["_aterio"]["k"] if str(block.get("basis", "")).lower() == "facility" else 1.0
+
+
 def in_universe(row: dict, uni: str) -> bool:
     cod = m_parse(row["cod_base"])
     if cod is None or not (2026 * 12 <= cod <= 2030 * 12 + 11):
@@ -445,16 +467,22 @@ def rake(agg: dict, rules: dict, iters: int = 500) -> dict:
     """Extrapolate the registry to the reference deck's Aterio totals by iterative proportional fitting on a
     state-group x base-year table: rows = the deck's top-10 states (+ one group for every other state), columns =
     the deck's base-case adds 2026-30. Every registry cell keeps its own bucket mix and slip pattern, so the result
-    reads 'if the GW the registry misses looked like the GW it covers, in the same state and the same year'."""
+    reads 'if the GW the registry misses looked like the GW it covers, in the same state and the same year'.
+
+    Basis (fixed 2026-11-09): the registry cells are IT-eq, the deck's totals are facility power at campus level (the
+    Aterio census reproduces them; state_rules.json tags the block basis 'facility'). Every target is therefore divided
+    by Aterio's own facility/IT ratio before the fit, so the scaled view is IT-eq. Until that date the targets were used
+    as stated and the scaled view ran about 15% high."""
     deck = rules["benchmarks"]["capstone_deck"]
+    fk = bench_k(deck, rules)               # facility -> IT-eq for the deck's figures (1.0 if the block is untagged)
     reg = agg["states"]
     grp = {s: (s if s in deck["states"] and reg[s]["gw_2630"] > 0.05 else "_rest") for s in reg}
-    tg = {g: deck["states"][g] for g in set(grp.values()) if g != "_rest"}
-    tg["_rest"] = deck["total"] - sum(tg.values())
-    ty = {y: float(deck["annual_base"][str(y)]) for y in YEARS}
+    tg = {g: deck["states"][g] / fk for g in set(grp.values()) if g != "_rest"}
+    tg["_rest"] = deck["total"] / fk - sum(tg.values())
+    ty = {y: float(deck["annual_base"][str(y)]) / fk for y in YEARS}
     # the deck's own 2026-28 state cards are a third margin (added after the 2026-11-06 double-check: without them the
     # rake missed the deck's TX/VA/PA/IN 2026-28 levels and let thin 2029-30 cells carry the headline)
-    tc = {s: float(v["gw"]) for s, v in deck.get("state_cards_2628", {}).items() if s in tg}
+    tc = {s: float(v["gw"]) / fk for s, v in deck.get("state_cards_2628", {}).items() if s in tg}
     base = defaultdict(float)
     for s, cl in agg["_cells"].items():
         for cy, ny, b, g in cl:
@@ -485,7 +513,11 @@ def rake(agg: dict, rules: dict, iters: int = 500) -> dict:
     for s, v in states.items():
         v["factor"] = round(v["gw_2630"] / reg[s]["gw_2630"], 2) if reg[s]["gw_2630"] else None
     out = _finish(dict(states), agg["n"])
-    out["rake"] = {"state_targets": tg, "year_targets": ty, "card_targets_2628": tc, "moved_to_rest_2930": moved,
+    r2 = lambda d: {a: round(v, 2) for a, v in d.items()}
+    out["rake"] = {"basis": "IT-eq" if fk != 1.0 else "deck units, as stated", "deck_basis": deck.get("basis") or "as stated", "fac_it": fk,
+                   "fac_it_source": rules["_aterio"]["source"] if fk != 1.0 else "",
+                   "deck_total": deck["total"], "target_total": round(deck["total"] / fk, 2),
+                   "state_targets": r2(tg), "year_targets": r2(ty), "card_targets_2628": r2(tc), "moved_to_rest_2930": moved,
                    "fit_card_2628": {s: round(sum(v for (g2, y), v in m.items() if g2 == s and y <= 2028), 2) for s in tc},
                    "fit_state": {g: round(sum(v for (g2, _), v in m.items() if g2 == g), 2) for g in tg},
                    "fit_year": {y: round(sum(v for (_, y2), v in m.items() if y2 == y), 2) for y in ty},
@@ -610,11 +642,15 @@ def guardrails(rows, results, aggs, rules) -> list[dict]:
                 "model": round(uc, 1), "anchor": ate["value"], "ratio": round(cov, 2),
                 "flag": flag(cov, 0.75, 1.25, 0.5, 1.5), "source": ate["source"], "caveat": ate["caveat"] + " The census counts buildings under construction; the deck's 139.5 GW counts campuses (later phases included), so the two don't reconcile with each other either."})
     deck = bm["capstone_deck"]
+    dk = bench_k(deck, rules)
+    deck_it = deck["total"] / dk            # the deck's total on the registry's basis
     out.append({"id": "level-deck", "kind": "stock · coverage",
-                "check": "Registry GW vs the reference deck's Aterio base (139.5 GW dated 2026-30)",
-                "model": round(u["total"], 1), "anchor": deck["total"], "ratio": round(u["total"] / deck["total"], 2),
-                "flag": flag(u["total"] / deck["total"], 0.75, 1.25, 0.5, 1.5), "source": deck["source"],
-                "caveat": "Coverage, not validation. The scaled view is raked to these totals, so the scaled view cannot be checked against them."})
+                "check": f"Registry GW (IT-eq) vs the reference deck's Aterio base dated 2026-30 ({deck['total']:g} GW"
+                         + (f" facility at campus level ÷ {dk:g} = {deck_it:.1f} GW IT-eq)" if dk != 1.0 else ", as stated)"),
+                "model": round(u["total"], 1), "anchor": round(deck_it, 1), "ratio": round(u["total"] / deck_it, 2),
+                "flag": flag(u["total"] / deck_it, 0.75, 1.25, 0.5, 1.5), "source": deck["source"],
+                "caveat": "Coverage, not validation. The scaled view is raked to these totals, so the scaled view cannot be checked against them."
+                          + (f" Basis: the deck states none; the Aterio census reproduces its total as facility power, so it is divided by Aterio's facility/IT median ({dk:g}) since 2026-11-09. Before that the anchor was {deck['total']:g}." if dk != 1.0 else "")})
     # timing: share of the registry's 2026-30 GW landing in 2027, vs national 2027 forecasts scaled by coverage
     b27 = u["annual_base"][2027]
     for f in bm["flows_2027"]:
@@ -635,7 +671,8 @@ def guardrails(rows, results, aggs, rules) -> list[dict]:
                     "check": f"Texas net GW out of 2027 in the bear case ({lab} view) vs FundaAI's 2-3 GW IT downside",
                     "model": round(cut, 2), "anchor": f"{fa['lo']}-{fa['hi']}", "ratio": round(cut / mid, 2),
                     "flag": flag(cut / mid, fa["lo"] / mid, fa["hi"] / mid, 0.5, 1.6), "source": fa["source"],
-                    "caveat": fa["caveat"] + (" Registry view covers only part of Texas, so it should sit at or below the anchor." if lab == "registry" else " Raked view is in the deck's units (basis unstated); FundaAI is IT-GW.")})
+                    "caveat": fa["caveat"] + (" Registry view covers only part of Texas, so it should sit at or below the anchor." if lab == "registry" else (f" Raked view is IT-eq since 2026-11-09 (deck targets ÷ {dk:g}), the same basis as FundaAI's IT-GW." if dk != 1.0
+                                          else " Raked view is in the deck's units (basis unstated); FundaAI is IT-GW."))})
     w = bm.get("wfs_tx_held")
     if w:
         held = sum(it_eq(r, rules) / 1000 for r, x in zip(rows, results["bear"])
@@ -711,6 +748,460 @@ def broker_views(rows: list[dict], rules: dict) -> list[dict]:
     return out
 
 
+def independent_views(model: dict) -> list[dict]:
+    """_data/dc_projects/independent/*.json (hand-built from independent research, e.g. SemiAnalysis; not brokers) +
+    the registry beside it: per state, 2028 adds (IT-eq GW) by universe, the unstarted part, what slips past 2028 per
+    scenario and the raked view; the named projects matched by project_id prefix; and every registry phase whose
+    source or notes cite the author (the 'subset')."""
+    import re
+    out = []
+    ph, ag = model["phases"], model["aggs"]
+    scen_ids = list(model["scenarios"])
+    yr = lambda s: int(s[:4]) if s and s[:4].isdigit() else None
+    for path in sorted(glob.glob(os.path.join(DATA, "independent", "*.json"))):
+        doc = json.load(open(path, encoding="utf-8"))
+        reg = {}
+        for s in doc.get("states", []):
+            st = s["st"]
+            rows = [p for p in ph if p["st"] == st and p["u"] and yr(p["cod"]) == 2028]
+            d = {u: ag[scen_ids[0]][u]["states"].get(st, {}).get("ab", {}).get(2028, 0.0)
+                 for u in ("construction", "pipeline", "scaled")}
+            d["unstarted"] = round(sum(p["it"] for p in rows if p["ps"] == "not_started") / 1000, 3)
+            d["out"] = {sc: round(sum(p["it"] for p in rows if (yr(p["res"][sc]["n"]) or 0) > 2028) / 1000, 3)
+                        for sc in scen_ids}
+            d["n"] = len(rows)
+            reg[st] = d
+        doc["registry"] = reg
+        doc["registry_us"] = {u: {y: ag[scen_ids[0]][u]["annual_base"].get(y, 0.0) for y in (2027, 2028)}
+                              for u in ("construction", "pipeline", "scaled")}
+        for pr in doc.get("projects", []):
+            hit = [p for p in ph if pr.get("match") and p["id"].startswith(pr["match"])]
+            pr["reg"] = {"n": len(hit), "mw": round(sum(p["mw"] for p in hit)), "it": round(sum(p["it"] for p in hit)),
+                         "bases": sorted({p["basis"] for p in hit}), "cod": sorted({p["cod"] for p in hit if p["cod"]}),
+                         "ps": {k: round(sum(p["it"] for p in hit if p["ps"] == k)) for k in ("energized", "under_construction", "not_started")},
+                         "bear_delayed": round(sum(p["it"] for p in hit if p["res"].get("bear", {}).get("b") == "delayed"))} if hit else None
+        key = re.compile(doc.get("cite_regex", r"semi\s*analysis"), re.I)
+        sub = []
+        for p in ph:
+            txt = (p.get("notes") or "") + " " + (p.get("src") or "")
+            if not key.search(txt):
+                continue
+            notes = p.get("notes") or ""
+            m_ = key.search(notes)
+            snip = ""
+            if m_:
+                a, b = max(0, notes.rfind(".", 0, m_.start()) + 1, m_.start() - 160), min(len(notes), m_.end() + 220)
+                snip = ("…" if a > 0 else "") + notes[a:b].strip() + ("…" if b < len(notes) else "")
+            sub.append({"id": p["id"], "campus": p["campus"], "phase": p["phase"], "st": p["st"], "mw": p["mw"],
+                        "basis": p["basis"], "it": p["it"], "ps": p["ps"], "cod": p["cod"], "u": p["u"],
+                        "res": {sc: [p["res"][sc]["b"], p["res"][sc]["n"]] for sc in scen_ids},
+                        "snip": snip or "cited in the source column"})
+        doc["registry_subset"] = sub
+        doc["_file"] = os.path.relpath(path, os.path.dirname(os.path.dirname(DATA))).replace("\\", "/")
+        out.append(doc)
+    return out
+
+
+def aterio_view() -> dict | None:
+    """Registry vs the Aterio census (aterio_registry_xchk.py): recomputed on every build from the model_output.json just
+    written + the newest Aterio export; if the export is unreachable (P: offline), the last saved xchk.json is used."""
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import aterio_registry_xchk as X
+        out = X.run()
+        X.write(out)
+        out["live"] = True
+        return out
+    except Exception as e:  # noqa: BLE001 - page must build without P:
+        p = os.path.join(DATA, "aterio", "xchk.json")
+        if os.path.exists(p):
+            out = json.load(open(p, encoding="utf-8"))
+            out["live"] = False
+            out["stale_reason"] = f"{type(e).__name__}: {e}"[:200]
+            return out
+        return None
+
+
+def aterio_deck() -> dict | None:
+    """_data/dc_projects/aterio/deck_<asof>.json = the numbers behind the 3-slide Aterio deck (additions by state and
+    likelihood, delay, scenarios), copied unchanged from P:\\Felipe Monteiro\\_deck_src_aterio_estados\\data_aterio.json
+    (aterio_states.py). Newest file wins -> tab 'Aterio deck'. The pptx/pdf copies offered for download sit in
+    _dashboards/aterio-deck/ (listed here, linked relative to the page)."""
+    files = sorted(glob.glob(os.path.join(DATA, "aterio", "deck_*.json")))
+    if not files:
+        return None
+    d = json.load(open(files[-1], encoding="utf-8"))
+    dl = os.path.join(os.path.dirname(DASH), "aterio-deck")
+    d["downloads"] = sorted(os.path.basename(p) for p in glob.glob(os.path.join(dl, "*.p*")))
+    d["file"] = "aterio/" + os.path.basename(files[-1])
+    return d
+
+
+def aterio_capstone() -> dict | None:
+    """Capstone treatment of the Aterio census (house rules in _data/aterio/treatment.json, decided 2026-11-09) via
+    aterio_capstone_view.run() on the newest export; falls back to the saved _data/aterio/capstone_view.json if P: is
+    offline. Shown on the Aterio deck tab and as a row in 'Aterio vs the rest of our base'."""
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        import aterio_capstone_view as V
+        out = V.run()
+        V.write(out)
+        out["live"] = True
+        return out
+    except Exception as e:  # noqa: BLE001 - page must build without P:
+        p = os.path.join(ROOT, "_data", "aterio", "capstone_view.json")
+        if os.path.exists(p):
+            out = json.load(open(p, encoding="utf-8"))
+            out["live"] = False
+            out["stale_reason"] = f"{type(e).__name__}: {e}"[:200]
+            return out
+        return None
+
+
+def aterio_compare(model: dict, deck: dict | None, ax: dict | None, cv: dict | None = None) -> dict | None:
+    """'Aterio vs the rest of our base' (Aterio deck tab): one question, every source the page holds. Aterio census
+    (deck_*.json, aterio/xchk.json via ax, _data/aterio/summary.json), this registry (model aggs), the reference deck and
+    flow benchmarks (state_rules.json), SemiAnalysis (independent/), Bernstein (broker/), and aterio/compare_extra.json
+    (wiki-text rows). Each row keeps the figure as stated and its basis; 'it' puts facility on IT-eq with Aterio's own
+    facility/IT median so rows can share an axis. Universe (building vs campus, US vs N. America, all dates vs a window)
+    stays in 'what' and is never converted away; basis 'n/s' (not stated) is plotted as stated, hollow."""
+    if not deck:
+        return None
+    k = model["fac_it"]["k"]      # the build's one facility/IT ratio (aterio_core.house_ratio): same as the rake's
+
+    def newest(sub, pat):
+        fs = sorted(glob.glob(os.path.join(DATA, sub, pat)))
+        return json.load(open(fs[-1], encoding="utf-8")) if fs else {}
+
+    by, sc, us, st = deck["us_by_year"], deck["us_scen_cum"], deck["US"], {x["st"]: x for x in deck["states"]}
+    yr = lambda y: sum(by[y].values())
+    inc = lambda y, s: sc[y][s] - sc[str(int(y) - 1)][s]
+    bm = model["rules"]["benchmarks"]
+    ref = bm["capstone_deck"]
+    flows = {f["id"]: f for f in bm.get("flows_2027", [])}
+    agg = model["aggs"]
+    sa = newest("independent", "semianalysis_*.json")
+    san = {x["id"]: x for x in sa.get("national", [])}
+    be = newest("broker", "bernstein_*.json")
+    extra = newest("aterio", "compare_extra.json").get("rows", [])
+    summ = {}
+    sp = os.path.join(ROOT, "_data", "aterio", "summary.json")
+    if os.path.exists(sp):
+        summ = json.load(open(sp, encoding="utf-8"))
+    asof = deck["asof"]
+
+    def row(kind, who, date, stated, basis, what, val=None, lo=None, hi=None):
+        conv = (lambda v: None if v is None else round(v / k, 2)) if basis == "facility" else (lambda v: v)
+        return {"kind": kind, "who": who, "date": date, "stated": stated, "basis": basis, "what": what,
+                "it": conv(val), "it_lo": conv(lo), "it_hi": conv(hi)}
+
+    def ext(g):
+        return [row("broker", x["who"], x["date"], x["stated"], x["basis"], x["what"], x.get("val"), x.get("lo"), x.get("hi"))
+                for x in extra if x["group"] == g]
+
+    def annual(u, y):  # in-memory aggs key years as int; model_output.json as str
+        a = agg["base"][u]["annual_base"]
+        return a.get(y, a.get(int(y), 0))
+
+    def regs(when, field):
+        out = []
+        for u, lab in (("construction", "under construction"), ("pipeline", "construction + credible pipeline")):
+            v = annual(u, field) if when == "y" else agg["base"][u]["states"].get(field, {}).get("gw_2630", 0)
+            out.append(row("registry", f"This registry, {lab}", model["as_of"], f"{v:.1f} GW IT-eq", "IT",
+                           "Public-source phases (campus × phase), base dates" + ("" if when == "y" else ", 2026-30"), round(v, 2)))
+        return out
+
+    def sa_row(i, what):
+        x = san.get(i)
+        if not x:
+            return []
+        d = "2026-" + x["src"][:2] + "-" + x["src"][2:] if len(x.get("src", "")) == 4 else sa.get("source", {}).get("date", "")
+        return [row("indep", "SemiAnalysis", d, f"{x['gw']:g} GW", "IT", what, x["gw"])]
+
+    groups = []
+    # ---- 2026
+    g = [row("aterio", "Aterio census, everything dated 2026", asof, f"{yr('2026'):.1f} GW", "facility",
+             f"Buildings with 2026 activation: online since Jan {by['2026']['act']:.1f} + building {by['2026']['uc']:.1f} + delayed {by['2026']['del']:.1f}", yr("2026")),
+         row("ref", "Reference deck (Aterio base), base case", "2026-11-06", f"{ref['annual_base']['2026']:g} GW", "facility",
+             "Campuses with at least one building under construction (campus level)", ref["annual_base"]["2026"])]
+    g += ext("y2026") + regs("y", "2026")
+    groups.append({"id": "y2026", "q": "US additions in 2026", "kind": "flow", "rows": g})
+    # ---- 2027
+    g = [row("aterio", "Aterio census, everything dated 2027", asof, f"{yr('2027'):.1f} GW", "facility",
+             "Buildings with 2027 activation, any stage or likelihood", yr("2027")),
+         row("aterio", "Aterio scenarios (conservative · baseline · optimistic)", deck["forecast_asof"],
+             f"{inc('2027', 'cons'):.1f} · {inc('2027', 'base'):.1f} · {inc('2027', 'opt'):.1f} GW", "facility",
+             "Weekly-report activation forecast, 2027 increment", inc("2027", "base"), inc("2027", "cons"), inc("2027", "opt"))]
+    g += sa_row("us2027", "US IT capacity added in 2027 (22 GW vertical construction + 16 GW planned)")
+    g += sa_row("top20_2027", "2027 adds in the top-20 states only, ~3/4 under construction")
+    for fid, who in (("bernstein", "Bernstein"), ("jefferies", "Jefferies")):
+        f = flows.get(fid)
+        if f:
+            d = (f.get("source", "").rsplit(", ", 1) + [""])[1].split(" ")[0]
+            g.append(row("broker", who, d, f"{f['value']:g} IT GW", "IT", f.get("caveat", ""), f["value"]))
+    g += ext("y2027")
+    g.append(row("ref", "Reference deck (Aterio base), base case", "2026-11-06", f"{ref['annual_base']['2027']:g} GW", "facility",
+                 "Campuses with at least one building under construction (campus level)", ref["annual_base"]["2027"]))
+    g += regs("y", "2027")
+    groups.append({"id": "y2027", "q": "US additions in 2027", "kind": "flow", "rows": g})
+    # ---- 2028
+    g = [row("aterio", "Aterio census, everything dated 2028", asof, f"{yr('2028'):.1f} GW", "facility",
+             f"Buildings with 2028 activation; {(by['2028']['ann_High'] + by['2028']['ann_Medium'] + by['2028']['ann_Low']) / yr('2028'):.0%} announced, not building", yr("2028")),
+         row("aterio", "Aterio scenarios (conservative · baseline · optimistic)", deck["forecast_asof"],
+             f"{inc('2028', 'cons'):.1f} · {inc('2028', 'base'):.1f} · {inc('2028', 'opt'):.1f} GW", "facility",
+             "Weekly-report activation forecast, 2028 increment", inc("2028", "base"), inc("2028", "cons"), inc("2028", "opt"))]
+    g += sa_row("us2028", "US net additions in 2028; most not yet under construction")
+    g += ext("y2028")
+    g.append(row("ref", "Reference deck (Aterio base), base case", "2026-11-06", f"{ref['annual_base']['2028']:g} GW", "facility",
+                 "Campuses with at least one building under construction (campus level)", ref["annual_base"]["2028"]))
+    g += regs("y", "2028")
+    groups.append({"id": "y2028", "q": "US additions in 2028", "kind": "flow", "rows": g})
+    # ---- under construction (stock)
+    uc_del = us["uc"] + us["del"]
+    g = [row("aterio", "Aterio census, buildings under construction or delayed", asof, f"{uc_del:.1f} GW", "facility",
+             "Building level, activation 2026-30", uc_del)]
+    if ax:
+        g.append(row("aterio", "… of which on campuses this registry carries", ax.get("asof", asof), f"{ax['totals']['at_uc_matched']:.1f} GW IT-eq", "IT",
+                     f"Campus-matched in the Aterio census tab ({ax['totals']['at_uc_matched'] / ax['totals']['at_uc']:.0%} of Aterio's under construction)",
+                     ax["totals"]["at_uc_matched"]))
+    rc = (summ.get("recon") or {})
+    if rc.get("campus_2630"):
+        g.append(row("aterio", "Aterio census, campus-level cut (all buildings on campuses building now)", asof,
+                     f"{rc['campus_2630'] + rc.get('uc_nocampus_2630', 0):.1f} GW", "facility",
+                     f"Reproduces the reference deck's universe: {rc['campus_2630']:.1f} GW on campuses + {rc.get('uc_nocampus_2630', 0):.1f} GW building without a campus ID",
+                     rc["campus_2630"] + rc.get("uc_nocampus_2630", 0)))
+    ac = bm.get("aterio_census") or {}
+    if ac.get("value"):
+        g.append(row("aterio", "Aterio at a GS-hosted call", "2026-10-20", f"{ac['value']:g} GW", "n/s",
+                     "Under construction, all completion dates, ~858 buildings; basis not stated (later than the 08-31 export)", ac["value"]))
+    g.append(row("ref", "Reference deck (Aterio base)", "2026-11-06", f"{ref['total']:g} GW", "facility",
+                 "Campuses with at least one building under construction, 2026-30 (campus level)", ref["total"]))
+    cu = agg["base"]["construction"]
+    g.append(row("registry", "This registry, under construction 2026-30", model["as_of"], f"{cu['total']:.1f} GW IT-eq", "IT",
+                 f"Public-source phases; includes {cu['wf']['energized']:.1f} GW energized since", cu["total"]))
+    groups.append({"id": "uc", "q": "Under construction now (stock)", "kind": "stock", "rows": g})
+    # ---- Texas
+    tx = st.get("TX", {})
+    g = [row("aterio", "Aterio census, Texas, everything dated 2026-30", asof, f"{tx.get('total', 0):.1f} GW", "facility",
+             f"{tx.get('high_all', 0) / max(tx.get('total', 1), 1e-9):.0%} high likelihood", tx.get("total")),
+         row("aterio", "Aterio scenarios, Texas 2026-30 (cons. · base · opt.)", deck["forecast_asof"],
+             f"{tx.get('sc_cons', 0):.1f} · {tx.get('sc_base', 0):.1f} · {tx.get('sc_opt', 0):.1f} GW", "facility",
+             "Weekly-report activation forecast", tx.get("sc_base"), tx.get("sc_cons"), tx.get("sc_opt")),
+         row("aterio", "Aterio census, Texas under construction or delayed", asof, f"{tx.get('uc', 0) + tx.get('del', 0):.1f} GW", "facility",
+             "Building level, activation 2026-30", tx.get("uc", 0) + tx.get("del", 0))]
+    btx = be.get("texas") or {}
+    bsrc = be.get("source", {})
+    if btx:
+        ug = btx.get("uc_grandfathered") or {}
+        g.append(row("broker", "Bernstein (Aterio data)", bsrc.get("date", ""), f"{ug.get('total', 0):g} GW ({ug.get('credible', 0):g} credible)", "n/s",
+                     "Texas under construction, treated as grandfathered; later Aterio cut than 08-31", ug.get("total")))
+        g.append(row("broker", "Bernstein (Aterio data)", bsrc.get("date", ""), f"{btx.get('likely_built_gw', 0):g} of {btx.get('forward_nameplate_gw', 0):g} GW", "n/s",
+                     "Texas 'likely built' out of the forward nameplate pipeline (no window stated)", btx.get("likely_built_gw")))
+    g.append(row("ref", "Reference deck (Aterio base)", "2026-11-06", f"{ref['states']['TX']:g} GW", "facility",
+                 "Texas campuses with a building under construction, 2026-30 (campus level)", ref["states"]["TX"]))
+    g += regs("st", "TX")
+    groups.append({"id": "tx", "q": "Texas", "kind": "mixed", "rows": g})
+    # ---- delay
+    g = [row("aterio", "Aterio census, 'delayed' stage", asof, f"{deck['delayed_us']:.1f} GW", "facility",
+             f"All dates; {deck['delayed_by_like'].get('Low', 0):.1f} GW of it low likelihood; before the TCEQ freeze and the election", deck["delayed_us"])]
+    dl = {s: agg[s]["construction"]["wf"]["delayed"] for s in agg}
+    g.append(row("registry", "This registry, delayed (base · bear · stress)", model["as_of"],
+                 " · ".join(f"{dl[s]:.1f}" for s in ("base", "bear", "stress") if s in dl) + " GW IT-eq", "IT",
+                 "Under-construction universe, post-election permit-pause scenarios", dl.get("bear"), dl.get("base"), dl.get("stress")))
+    if "bear" in agg:
+        g.append(row("registry", "This registry, delayed in the bear case incl. pipeline", model["as_of"],
+                     f"{agg['bear']['pipeline']['wf']['delayed']:.1f} GW IT-eq", "IT", "Construction + credible pipeline", agg["bear"]["pipeline"]["wf"]["delayed"]))
+    g.append(row("ref", "Reference deck (Aterio base)", "2026-11-06", f"{ref['waterfall']['delayed']:g} GW", "facility",
+                 f"Delayed by state pauses, campus level ({ref['waterfall']['delayed_year_shift']:g} GW slip a calendar year)", ref["waterfall"]["delayed"]))
+    fa = bm.get("fundaai_tx_2027") or {}
+    if fa:
+        g.append(row("indep", "FundaAI", "2026-11-04", f"{fa['lo']:g}-{fa['hi']:g} IT GW", "IT",
+                     "Texas only, 2027 deliverable supply cut if the TCEQ freeze runs most of 2027", None, fa["lo"], fa["hi"]))
+    hd = be.get("headline") or {}
+    if hd.get("potentially_subject_gw"):
+        g.append(row("broker", "Bernstein (Aterio data)", bsrc.get("date", ""), f"{hd['potentially_subject_gw']:g} GW", "n/s",
+                     f"Credible pipeline newly at risk after the election and not yet building ({hd.get('incremental_credible_gw', 0):g} newly at risk − {hd.get('of_which_uc_grandfathered_gw', 0):g} grandfathered); realistic impact {'-'.join(str(x) for x in hd.get('realistic_impact_pct', []))}% of credible",
+                     hd["potentially_subject_gw"]))
+    groups.append({"id": "delay", "q": "Delay", "kind": "mixed", "rows": g})
+
+    # ---- the house view of Aterio (treatment.json), inserted right after Aterio's own row in each group
+    I = lambda v: v / k
+    sa27, sa28 = (san.get("us2027") or {}).get("gw"), (san.get("us2028") or {}).get("gw")
+    cap_reads = []
+    if cv:
+        cy = cv["us"]["by_year"]
+        rule = "House rules (2026-11-09): online + building + delayed + announced High; Low-likelihood campuses with no tenant dropped; Aterio's own dates"
+
+        def crow(stated, val, what=rule):
+            r = row("aterio", "Aterio, Capstone treatment (house rules)", cv["asof"], stated, "IT", what, val)
+            r["cap"] = True
+            return r
+
+        cuc = sum(v["building"] + v["delayed"] for v in cy.values())
+        ctx = next((s for s in cv["states"] if s["st"] == "TX"), None)
+        add = {y: crow(f"{cy[y[1:]]['total']:.1f} GW IT-eq", cy[y[1:]]["total"]) for y in ("y2026", "y2027", "y2028")}
+        add["uc"] = crow(f"{cuc:.1f} GW IT-eq", cuc, "Buildings under construction or delayed, activation 2026-30, minus Low-likelihood campuses with no tenant")
+        if ctx:
+            add["tx"] = crow(f"{ctx['it']:.1f} GW IT-eq", ctx["it"], "Texas 2026-30 under the house rules (" + rule.split(": ", 1)[1] + ")")
+        for gg in groups:
+            if gg["id"] in add:
+                gg["rows"].insert(1, add[gg["id"]])
+        gd, rm, hu = cv["guard"], cv["removed"], deck["history_uc"]["2025-08-31"]
+        ab = rm["announced_by_likelihood"]
+        lstage = cv["sens"].get("low_no_tenant_by_stage", {})
+        built_stages = [s for s in ("Active", "Construction", "Delayed") if lstage.get(s)]
+        cap_reads = [
+            {"h": "What the rules keep",
+             "t": f"{cv['us']['it']:.0f} GW IT-eq of the {cv['raw']['it']:.0f} GW Aterio dates to 2026-30 ({cv['us']['it'] / cv['raw']['it']:.0%}; the {cv['raw']['it']:.0f} includes "
+                  f"{cv['raw'].get('online_it', 0):.1f} GW already live). Announced Medium ({ab.get('Medium', 0):.0f} GW) and Low ({ab.get('Low', 0):.0f}) go out. The no-tenant rule "
+                  f"removes {rm['low_no_tenant_built']:.1f} GW, all of it {' and '.join(s.lower() for s in built_stages) or 'nothing built'}: no construction site is rated Low. "
+                  f"A further {rm['after_window']:.0f} GW in these stages is dated after {cv['window'][1]}."},
+            {"h": "SemiAnalysis is the independent check",
+             "t": f"2027: {cy['2027']['total']:.1f} vs SemiAnalysis +{sa27:g} GW IT. 2028: {cy['2028']['total']:.1f} vs {sa28:g}. SemiAnalysis counts the net change in operating IT "
+                  f"capacity, so ramps spread over years; Aterio credits a building's full capacity on one date. Aterio's own conservative scenario "
+                  f"({I(inc('2027', 'cons')):.1f} / {I(inc('2028', 'cons')):.1f}) is essentially the same cut of the same data, so it is not a second check."},
+        ]
+        vt = {v["asof"]: v for v in cv.get("vintages", [])}
+        dec = vt.get(f"{int(cv['asof'][:4]) - 1}-12-31")
+        coh = cv.get("cohorts", {})
+        if dec:
+            c1, c2, c3 = coh.get("uc_last_year"), coh.get("uc_this_year"), coh.get("ann_high_next_year")
+            cap_reads.append({"h": "The dates are the soft part",
+                              "t": f"Under the same rules the 2027 bar read {dec['by_year']['2027']:.1f} GW in the {dec['asof'][:7]} export and {cy['2027']['total']:.1f} now; "
+                                   f"2028 went {dec['by_year']['2028']:.1f} → {cy['2028']['total']:.1f}."
+                                   + (f" Construction Aterio dated to {c1['year']} (in its {c1['snap'][:7]} export) delivered {c1['live_it'] / c1['gw_it']:.0%} in that year." if c1 and c1["gw_it"] else "")
+                                   + (f" Construction dated Jan-{['', 'Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'][int(c2['to'][5:7])]} {c2['to'][:4]} (in {c2['snap'][:7]}) delivered {c2['live_it'] / c2['gw_it']:.0%} by {c2['to'][:7]}." if c2 and c2["gw_it"] else "")
+                                   + (f" Of the announced-High GW dated {c3['year']} in {c3['snap'][:7]}, {c3['still_dated_it'] / c3['gw_it']:.0%} is still dated {c3['year']}." if c3 and c3["gw_it"] else "")})
+        seen25 = dec["act_seen"].get(str(cv["window"][0] - 1)) if dec else None
+        cap_reads.append({"h": "Still far above the pace actually delivered",
+                          "t": f"Buildings that went live (IT-eq): {gd['pace_online_it']['2024']:.1f} GW in 2024, {gd['pace_online_it']['2025']:.1f} in 2025"
+                               + (f" ({seen25:.1f} as first seen in {dec['asof'][:7]}: Aterio backfills)" if seen25 else "")
+                               + f", {gd['pace_online_it'][str(cv['window'][0])]:.1f} so far in {cv['window'][0]}. The treated 2027 is {gd['next_year_vs_last_full_year']:.1f}× 2025 and the "
+                                 f"{gd['peak_year']} peak {gd['peak_vs_last_full_year']:.1f}×; the peak is largely where slipping capacity currently lands. "
+                                 f"{hu['share_later']:.0%} of the Aug-25 construction slipped, median {hu['median']:.0f} months."})
+    r27c, r28c = annual("construction", "2027"), annual("construction", "2028")
+    reads = [
+        {"h": "Aterio is the top of our range in 2027, and agrees with SemiAnalysis",
+         "t": f"Everything Aterio dates to 2027 is {I(yr('2027')):.1f} GW IT-eq; SemiAnalysis has +{sa27:g} GW IT. Jefferies "
+              f"({flows['jefferies']['value']:g}, its own probabilities on Aterio's data) and Bernstein ({flows['bernstein']['value']:g}) sit at about half. "
+              f"Aterio's own conservative case barely moves 2027 ({I(inc('2027', 'cons')):.1f})."},
+        {"h": "2028 is where the sources split",
+         "t": f"Aterio dates {I(yr('2028')):.0f} GW IT-eq to 2028 and its baseline keeps {I(inc('2028', 'base')):.0f}. SemiAnalysis's {sa28:g} GW sits at Aterio's conservative case "
+              f"({I(inc('2028', 'cons')):.1f}), which in our reconstruction keeps only what is online, building or high likelihood."
+              + "".join(f" {x['who']} has {x['val']:g} {x['basis']} GW ({x['what'].split(' in ')[0]})." for x in extra if x["group"] == "y2028" and x.get("val") is not None)},
+        {"h": "The registry is the built core, not a forecast",
+         "t": f"Our registry has {r27c:.1f} GW IT-eq under construction for 2027 and {r28c:.1f} for 2028. "
+              + (f"{ax['totals']['at_uc_matched'] / ax['totals']['at_uc']:.0%} of Aterio's under-construction GW sits on campuses we carry; " if ax else "")
+              + "the gap to Aterio is mostly announced capacity, which the registry keeps out of the construction universe."},
+        {"h": "Three Aterio cuts, three sizes: keep the universe in the label",
+         "t": f"Aterio buildings under construction: {uc_del:.1f} GW facility. Whole campuses that have a building under construction: {(rc.get('campus_2630') or 0) + rc.get('uc_nocampus_2630', 0):.1f} GW (the reference deck's {ref['total']:g}). "
+              f"Everything dated 2026-30: {us['total']:.0f} GW. The same vendor gives {uc_del:.0f}, {(rc.get('campus_2630') or 0) + rc.get('uc_nocampus_2630', 0):.0f} or {us['total']:.0f} GW depending on the cut."},
+    ]
+    flags = []
+    cal = model.get("calib") or {}
+    if rc.get("campus_2630"):
+        rep = f"{ref['total']:g} GW as facility power at campus level ({rc['campus_2630'] + rc.get('uc_nocampus_2630', 0):.1f} GW)"
+        if cal.get("fac_it", 1.0) != 1.0:
+            flags.append(f"Basis of this page's scaled view, fixed on 2026-11-09: the census reproduces the reference deck's {rep}, so the deck's totals are now "
+                         f"divided by Aterio's facility/IT median ({cal['fac_it']:g}) before the registry (IT-eq) is raked to them. The scaled view totals "
+                         f"{cal['target_total']:.1f} GW IT-eq. Until 2026-11-09 it was raked to {ref['total']:g} GW as if that were IT-eq and ran ~{(cal['fac_it'] - 1) * 100:.0f}% high.")
+        else:
+            flags.append(f"Basis check on this page's scaled view: it rakes the registry (IT-eq) to the reference deck's totals as stated. The census reproduces the deck's "
+                         f"{rep}, so on an IT-eq basis the deck is about {ref['total'] / k:.0f} GW and the scaled view runs ~{(k - 1) * 100:.0f}% high "
+                         f"(the deck block in state_rules.json is not tagged basis 'facility').")
+    if cv:
+        reads[1]["t"] += f" Under our house rules Aterio's 2028 is {cv['us']['by_year']['2028']['total']:.1f}."
+    return {"fac_it": k, "asof": asof, "groups": groups, "reads": reads, "flags": flags, "cap_reads": cap_reads}
+
+
+def permit_research() -> dict:
+    """_data/dc_projects/permit_research/*.json (hand-reviewed campus-level permit research, one file per state and
+    date): {"state", "researched", "campuses": [{"campus" (exact registry name), missing_summary, air_permit,
+    interconnection, local, other_gates, construction, confidence, ...}]} -> {"ST|campus": record}. Later files win."""
+    out = {}
+    for path in sorted(glob.glob(os.path.join(DATA, "permit_research", "*.json"))):
+        doc = json.load(open(path, encoding="utf-8"))
+        for c in doc.get("campuses", []):
+            out[f"{doc['state']}|{c['campus']}"] = {**c, "state": doc["state"], "researched": doc.get("researched", "")}
+    return out
+
+
+def team_xchk(html_page: str, map_doc: dict, phases: list[dict]) -> dict:
+    """Cross-check a teammate's matrix (its `const D = {...};` data line) against the registry via the hand-reviewed
+    map (key 'state|column|project name' -> registry campus names). Registry-only = campuses in the 2026-30 universe,
+    not Aterio-low, that no matrix project maps to."""
+    line = next((ln for ln in html_page.splitlines() if ln.startswith("const D = ")), None)
+    if not line:
+        return {"error": "no `const D = ` data line in the page"}
+    D = json.loads(line[len("const D = "):].rstrip().rstrip(";"))
+    cols = {c["k"]: c["n"] for c in D["columns"]}
+    by_c = defaultdict(list)
+    for p in phases:
+        by_c[(p["st"], p["campus"])].append(p)
+    yr = lambda s: s[:7] if s else ""
+    mp, used, stale = map_doc.get("map", {}), set(), []
+    matched, only_d, other = [], [], {"portfolio": 0, "excluded": 0, "unmapped": 0}
+    for p in D["projects"]:
+        e = mp.get(f"{p['s']}|{p['c']}|{p['n']}")
+        base = {"st": p["s"], "col": cols.get(p["c"], p["c"]), "n": p["n"], "mw": p.get("mw"), "m": p.get("m", ""),
+                "t": p.get("t", ""), "conf": p.get("conf", ""), "src": p.get("src", ""), "partners": p.get("p", "")}
+        if not e:
+            other["unmapped"] += 1
+            only_d.append({**base, "unreviewed": True})
+            continue
+        if e["kind"] != "site":
+            other[e["kind"]] += 1
+            continue
+        names = [n for n in e.get("registry", []) if (p["s"], n) in by_c]
+        stale += [f"{p['s']}|{n}" for n in e.get("registry", []) if (p["s"], n) not in by_c]
+        if not names:
+            only_d.append(base)
+            continue
+        ph = [x for n in names for x in by_c[(p["s"], n)]]
+        used |= {(p["s"], n) for n in names}
+        cods = sorted(yr(x["cod"]) for x in ph if x["cod"])
+        matched.append({**base, "reg": names, "reg_ids": sorted(x["id"] for x in ph)[:1],
+                        "reg_mw": round(sum(x["mw"] for x in ph)), "reg_it": round(sum(x["it"] for x in ph)),
+                        "reg_it_u": round(sum(x["it"] for x in ph if x["u"])), "reg_cod": [cods[0], cods[-1]] if cods else [],
+                        "reg_bear": round(sum(x["it"] for x in ph if x["res"].get("bear", {}).get("b") == "delayed"))})
+    only_r = []
+    for (st, camp), ph in by_c.items():
+        if (st, camp) in used:
+            continue
+        u = [x for x in ph if x["u"] and x["lk"] != "low"]
+        if not u:
+            continue
+        cods = sorted(yr(x["cod"]) for x in u if x["cod"])
+        only_r.append({"st": st, "campus": camp, "dev": u[0]["dev"], "ten": u[0]["ten"], "it": round(sum(x["it"] for x in u)),
+                       "cod": [cods[0], cods[-1]] if cods else [], "n": len(u)})
+    only_r.sort(key=lambda r: -r["it"])
+    only_d.sort(key=lambda r: -(r["mw"] or 0))
+    return {"asof": D.get("asof"), "n_projects": len(D["projects"]), "matched": matched, "only_daniel": only_d,
+            "only_registry": only_r, "other": other, "stale": stale, "findings": map_doc.get("findings", {}),
+            "reviewed": map_doc.get("reviewed", "")}
+
+
+def team_views(phases: list[dict] | None = None) -> list[dict]:
+    """_data/dc_projects/team/*.json manifests (only those naming a 'file'), each pointing at a teammate's standalone
+    HTML page stored unchanged next to it. The page goes into the dashboard payload only (shown in a sandboxed frame),
+    not into model_output.json. With 'registry_map', the matrix is cross-checked against the registry (team_xchk)."""
+    out = []
+    for path in sorted(glob.glob(os.path.join(DATA, "team", "*.json"))):
+        doc = json.load(open(path, encoding="utf-8"))
+        if "file" not in doc:
+            continue
+        page = os.path.join(DATA, "team", doc["file"])
+        if not os.path.exists(page):
+            continue
+        doc["html"] = open(page, encoding="utf-8").read()
+        doc["_file"] = os.path.relpath(page, os.path.dirname(os.path.dirname(DATA))).replace("\\", "/")
+        mpath = os.path.join(DATA, "team", doc.get("registry_map", ""))
+        if doc.get("registry_map") and os.path.exists(mpath) and phases is not None:
+            doc["xchk"] = team_xchk(doc["html"], json.load(open(mpath, encoding="utf-8")), phases)
+        out.append(doc)
+    return out
+
+
 # ----------------------------------------------------------------------------- week-over-week history
 HIST = os.path.join(DATA, "history")
 SNAP_F = ("campus", "phase", "st", "city", "mw", "basis", "cs", "ps", "lk", "cod", "codsrc", "pw", "air", "ic", "loc")
@@ -727,7 +1218,9 @@ def snapshot(model: dict, aggs: dict, scen_ids: list[str]) -> dict:
     tot = {s: {u: {"total": round(aggs[s][u]["total"], 2), "energized": round(aggs[s][u]["wf"]["energized"], 2),
                    "delayed": round(aggs[s][u]["wf"]["delayed"], 2), "to_2031": round(aggs[s][u]["to_2031"], 2)}
                for u in ("construction", "pipeline", "scaled")} for s in scen_ids}
-    return {"ts": _dt.datetime.now().strftime("%Y-%m-%dT%H:%M"), "as_of": model["as_of"], "rows": rows, "tot": tot}
+    cal = model.get("calib") or {}
+    return {"ts": _dt.datetime.now().strftime("%Y-%m-%dT%H:%M"), "as_of": model["as_of"], "rows": rows, "tot": tot,
+            "scaled": {"basis": cal.get("basis"), "fac_it": cal.get("fac_it"), "target_total": cal.get("target_total")}}
 
 
 def latest_checkpoint() -> dict | None:
@@ -751,14 +1244,24 @@ def diff_snap(old: dict, new: dict, scen_ids: list[str]) -> dict:
                  for k in common if o[k]["res"].get(s) != n[k]["res"].get(s)] for s in scen_ids}
     tot = {s: {u: {m: [old.get("tot", {}).get(s, {}).get(u, {}).get(m), v] for m, v in d.items()} for u, d in new["tot"][s].items()}
            for s in scen_ids}
-    return {"base": old["ts"], "head": new["ts"], "as_of": [old.get("as_of"), new.get("as_of")],
+    # the scaled view's level is set by its targets: say so when they changed between the two checks (a basis or target
+    # change moves every scaled figure without any change in the registry). Checkpoints before 2026-11-09 carry no
+    # 'scaled' record; their target is the scaled total they stored.
+    notes = []
+    ns = new.get("scaled") or {}
+    old_t = (old.get("scaled") or {}).get("target_total") or old.get("tot", {}).get(scen_ids[0], {}).get("scaled", {}).get("total")
+    if ns.get("target_total") and old_t and abs(ns["target_total"] - old_t) > 0.05:
+        notes.append(f"Scaled view re-based between these checks: its target went from {old_t:g} to {ns['target_total']:g} GW"
+                     + (f" (reference deck's totals ÷ {ns['fac_it']:g}, facility to IT-eq, since 2026-11-09)" if (ns.get("fac_it") or 1.0) != 1.0 else "")
+                     + ". The change in the scaled figures is a change of basis, not of the registry.")
+    return {"base": old["ts"], "head": new["ts"], "as_of": [old.get("as_of"), new.get("as_of")], "notes": notes,
             "new": [pick(n[k], k) for k in sorted(n.keys() - o.keys())],
             "dropped": [pick(o[k], k) for k in sorted(o.keys() - n.keys())],
             "changed": changed, "moves": moves, "tot": tot}
 
 
 def is_empty(d: dict) -> bool:
-    return not (d["new"] or d["dropped"] or d["changed"] or any(d["moves"].values()))
+    return not (d["new"] or d["dropped"] or d["changed"] or any(d["moves"].values()) or d.get("notes"))
 
 
 def history(model: dict, aggs: dict, scen_ids: list[str], checkpoint: bool) -> dict:
@@ -802,6 +1305,7 @@ def main() -> int:
     locals_doc = json.load(open(os.path.join(DATA, "local_moratoria.json"), encoding="utf-8"))
     locals_ = locals_doc["moratoria"]
     rules["_locals"] = locals_
+    rules["_aterio"] = aterio_ratio()          # facility -> IT-eq for benchmark blocks tagged basis 'facility'
     as_of = m_parse(rules["as_of"])
     rows = apply_ramps(apply_adjustments(load_registry(problems), problems), problems)
     campus_mw = defaultdict(float)
@@ -834,7 +1338,8 @@ def main() -> int:
     aggs = {s: {u: aggregate(rows, results[s], u, rules) for u in ("construction", "pipeline")} for s in scen_ids}
     for s_ in scen_ids:
         aggs[s_]["scaled"] = rake(aggs[s_]["construction"], rules)
-    rules["_calib"] = {"method": "IPF rake of registry state x base-year cells to the reference deck's state and year totals",
+    rules["_calib"] = {"method": "IPF rake of registry state x base-year cells to the reference deck's state and year totals, "
+                                 "each converted from facility to IT-eq with Aterio's own facility/IT ratio when the deck block is tagged facility",
                        **aggs[scen_ids[0]]["scaled"]["rake"]}
     for s_ in scen_ids:
         for u in list(aggs[s_]):
@@ -852,7 +1357,7 @@ def main() -> int:
             "xy": r["_xy"], "mw": r["_mw"], "basis": r["mw_basis"] or "unknown", "it": round(it_eq(r, rules), 1),
             "cs": r["campus_status"], "ps": r["phase_status"], "lk": r["likelihood"], "cod": r["cod_base"][:7],
             "codsrc": r["cod_source"], "pw": r["power_path"], "air": r["air_permit"], "ic": r["interconnection"],
-            "loc": r["local_approval"], "src": r["source"], "sd": r["source_date"], "notes": r["notes"],
+            "loc": r["local_approval"], "lm": r["local_moratorium"], "src": r["source"], "sd": r["source_date"], "notes": r["notes"],
             "u": "construction" if in_universe(r, "construction") else ("pipeline" if in_universe(r, "pipeline") else ""),
             "res": {s: {"b": results[s][i]["b"], "n": m_fmt(results[s][i]["n"]), "d": results[s][i]["d"],
                         "r": results[s][i]["r"]} for s in scen_ids},
@@ -862,15 +1367,23 @@ def main() -> int:
              "n_campuses": len({(r["state"], r["campus"]) for r in rows}),
              "scenarios": {s: rules["scenarios"][s] for s in scen_ids},
              "aggs": rnd(aggs), "checks": checks, "rules": public_rules, "locals": locals_doc, "calib": rules["_calib"],
+             "fac_it": rules["_aterio"],
              "phases": phases, "problems": problems[:400]}
     model["moved"] = history(model, aggs, scen_ids, checkpoint)
     model["broker"] = broker_views(rows, rules)
+    model["independent"] = independent_views(model)
     with open(os.path.join(DATA, "model_output.json"), "w", encoding="utf-8") as fh:
         json.dump(model, fh, ensure_ascii=False, indent=1)
 
     tpl = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "dc_delay_ui", "template.html"),
                encoding="utf-8").read()
-    payload = json.dumps({**model, "map": state_paths(), "stateNames": STATE_NAMES}, ensure_ascii=False,
+    ax, deck = aterio_view(), aterio_deck()
+    if deck:
+        deck["capstone"] = aterio_capstone()
+        deck["compare"] = aterio_compare(model, deck, ax, deck["capstone"])
+    payload = json.dumps({**model, "map": state_paths(), "stateNames": STATE_NAMES, "team": team_views(phases),
+                          "permitResearch": permit_research(), "aterio": ax, "aterioDeck": deck},
+                         ensure_ascii=False,
                          separators=(",", ":")).replace("</", "<\\/")
     page = tpl.replace("/*__DATA__*/null", payload)
     with open(DASH, "w", encoding="utf-8", newline="\n") as fh:

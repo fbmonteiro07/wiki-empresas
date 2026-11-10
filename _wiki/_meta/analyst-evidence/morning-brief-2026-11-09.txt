@@ -1,0 +1,78 @@
+Morning Analyst Inbox — 2026-11-09
+
+Cutoff: 07:35 São Paulo / 10:35 UTC. Book prioritization is provisional: portfolio weights remain a seed. These are research priorities, not trade instructions.
+
+Today's focus: CRWV for tomorrow's funding/deployment test; DDOG for contract-renewal assumptions; FLEX for spin economics; COHR for the stale house-model gap; PANW for organic growth behind positive checks.
+
+Evidence key: E = _wiki/_meta/analyst-evidence/2026-11-09-morning-source-checks.json. “supp-” IDs identify supplemental research signals, not engine alerts.
+
+FIVE PRIORITY IDEAS
+
+1. CRWV — Separate an equity growth story from a credit survival story.
+
+Broker evidence: BofA's November 8 SALES digest relays Tal Liani's preview: Q3 revenue ~$3.65bn, operating margin 6.7%, active power 1.7GW and ~$20bn additional funding needed. These are analyst estimates, not reported results. The same digest relays Ana Goshko's November 5 credit argument: unsecured bond yields in the high-15% area do not equal the cost of secured, project-level GPU financing.
+
+Inference/action: both analysts can be right while equity disappoints. Slower deployment could improve bondholder cash coverage but lower equity growth. Build a bridge from unrestricted parent cash to committed/conditional project facilities, customer acceptance, capex and dilution. Do not apply unsecured yields to every funding source or treat short-term rental anecdotes as blended pricing.
+
+Falsifier: signed, drawable financing and customer acceptance support the deployment plan without materially worse dilution or economics; alternatively, activation slips despite intact demand.
+Signals esti-4246a23edb3c; supp-20261109-crwv. Evidence: E.crwv; _wiki/CRWV.md; _wiki/_data/house.json.
+
+2. DDOG — A forecast cutoff is not customer churn.
+
+Management-relayed evidence: JPM / Samik Chatterjee, Jaiden Patel and Mashu Nishi, November 6 CEO/CFO call recap, says 2027 assumptions include the largest customer's minimum commitment only until the current contract expires; renewal enters the forecast when signed. Management describes broad core-business acceleration and logs unbundling to manage customers' data-volume economics.
+
+Inference/action: separate renewal timing, consumption and price yield. Obtain the expiry date and renewal economics; scenario-test the forecast cliff without treating it as either guaranteed renewal or lost business. Logs growth alone does not establish pricing power.
+
+Number conflict: JPM calls the Q3 beat ~$47m versus a $1.14bn guidance midpoint. The company reported $1.197bn on November 4; its August 6 guide was $1.135–1.145bn. Those figures do not reconcile. Do not allocate beat dollars using JPM's roughly 60/40 core/customer split until corrected. [Q3 release](https://investors.datadoghq.com/news-releases/news-release-details/datadog-announces-third-quarter-2026-financial-results) / [original guide](https://investors.datadoghq.com/news-releases/news-release-details/datadog-announces-second-quarter-2026-financial-results)
+
+Falsifier: weaker non-AI consumption or renewal concessions outweigh volume growth.
+Signal supp-20261109-ddog. Evidence: E.ddog; _wiki/DDOG.md. Friday's missing-meeting-readout status is superseded, but pricing risk remains open.
+
+3. FLEX — Require separate Axiom economics before assigning a separate valuation.
+
+Hard evidence: CFO Kevin Krumm's October 28 call attributes approximately half of the ~$950m FY27 revenue-guide increase to EPC. About 10 percentage points of CPI's guided growth comes from acquisitions. The $2bn Axiom convertible preferred was agreed, with proceeds intended to repay acquisition debt; agreement is not confirmation of cash receipt.
+
+Inference/action: tomorrow's presentations must separate organic CPI growth, EPC earnings, standalone costs, debt allocation and preferred dilution. A stronger consolidated margin does not automatically make Axiom's common equity more valuable.
+
+Falsifier: the standalone cash-flow and capital-structure bridge absorbs the apparent operating upside, or organic growth falls short.
+Signal cata-30cf21294c0d. Evidence: E.flex; _wiki/FLEX.md; FLEX/transcripts/FLEX_Q2-FY27-earnings_2026-10-28.md.
+
+4. COHR — Refresh the earnings bridge; do not pull a 2028 contract into 2027.
+
+Evidence: Capstone / Felipe Monteiro's September 1 initiation carries CY27 EPS $11.30 versus Bloomberg's November 6 $13.35. JPM / Joseph Cardoso, Manmohanpreet Singh and Marc Vitenzon, November 5, relays a new ~$20bn, five-year PhotonLink LTA starting early CY2028, plus a separate nearer-term product ramp.
+
+Inference/action: bridge CY27 transceiver volumes, internal laser mix, margins and near-term PhotonLink shipments before changing the house number. The later LTA supports visibility but is not CY27 revenue. Keep the previously flagged BofA November 5 $20bn-summary/$30bn-body conflict quarantined; use the company-indexed/JPM ~$20bn record, not an average.
+
+Falsifier: yield, packaging or customer-acceptance delays prevent the near-term ramp; headline commitments without enforceable economics do not close that risk.
+Signals esti-f3b9feaacb62; cata-c030b28ed093. Evidence: E.cohr; _wiki/_data/house.json; _wiki/_data/estimates.json; existing theme record COHR-PHOTONLINK-NPO-20261104 in _wiki/themes/ai-compute-deals.md. No new commitment counted today.
+
+5. PANW — Positive checks are not yet an organic-growth verdict.
+
+Broker evidence: Barclays / Saket Kalia and Carly Buecker, November 9 preview, expects an organic and inorganic NGS ARR beat, citing SASE/XSIAM and federal strength, but an unchanged FY27 NGS ARR/RPO guide. Overweight/$375 is unchanged; only the email preview was available.
+
+Management evidence: Nikesh Arora's David Senra podcast, posted November 8 with recording date unspecified, discusses a 40% operating-margin business as his historical strategic framework—not new guidance.
+
+Inference/action: prepare an organic/acquired ARR bridge and distinguish firewall pricing from volume. Retain the wiki's pre-registered bull test—organic NGS ARR growth at least 28% and non-GAAP operating margin at least 30%—as a house hurdle, not management guidance.
+Falsifier: organic growth below 25% challenges the thesis; nondisclosure leaves it unvalidated. A headline beat driven by acquisitions is insufficient.
+Signals cata-2c7b4a6f3c93; supp-20261109-panw. Evidence: E.panw; _wiki/PANW.md; _wiki/_meta/reconciliation-2026-11-08-inbox.md.
+
+MODEL CONTROLS AND SENTIMENT
+
+Standing, not fresh alpha: GOOG's June 5 house gross revenue $505bn versus November 6 BBG net revenue $428.3bn is a basis mismatch (esti-8a702c5380c3). CRWV's October 14 house CY26/27 EPS of -$3.27/-$1.83 is MORE optimistic than November 6 BBG -$3.95/-$2.25 despite the engine's “below” labels (esti-aa7f9f2c7f8d; esti-4246a23edb3c). LITE's June 16 $12.81 versus November 6 BBG $15.22 needs vintage reconciliation (esti-06d43205aba7). Evidence: E.model_controls; _wiki/_data/house.json; _wiki/_data/estimates.json.
+
+Narrative shift: BofA's November 8 sales feedback describes the debate moving from AI usefulness toward financing, lab growth and buildout durability. Forced-selling explanations are investor anecdotes, not verified positioning data. The research implication is to distinguish contracted demand from fundable, deliverable earnings—not to infer a market bottom. Signal supp-20261109-crwv; E.crwv.
+
+CATALYST PREPARATION
+
+• November 10: FLEX webcast 9am ET; Axiom 1pm ET, confirmed in Flex's November 6 [notice](https://investors.flex.com/news/news-details/2026/Flex-to-Host-Innovation-Day-on-November-10-2026/default.aspx). Prepare the standalone bridge above. Signal cata-30cf21294c0d; E.flex.
+• November 10: CRWV results call 5pm ET, per its October 27 [notice](https://investors.coreweave.com/news/news-details/2026/CoreWeave-Announces-Date-of-Third-Quarter-2026-Financial-Results-and-Conference-Call/default.aspx). Freeze funding and activation expectations today. Signal supp-20261109-crwv; E.crwv.
+• November 12–20: COHR Asia NDR, per Jefferies / Jeffrey Favuzza's September 28 invitation for Blayne Curtis. Invitation only; reconfirm access and request yield, acceptance and contract-protection detail. Signal cata-c030b28ed093; E.cohr.
+• November 18: PANW post-close results, confirmed by the company's November 3 [notice](https://www2.paloaltonetworks.com/company/press/2026/palo-alto-networks-to-announce-fiscal-first-quarter-2027-financial-results-on-wednesday--november-18--2026). Prepare organic-versus-acquired tests now. Signal cata-2c7b4a6f3c93; E.panw.
+
+WHAT MATERIALLY CHANGED
+
+Versus Friday's emailed brief: DDOG's meeting readout is now available; BofA adds a two-sided CRWV equity/credit framework; FLEX has confirmed separate webcast times; PANW adds fresh Barclays checks but no new podcast guidance. COHR's model alert is new versus Friday morning, not a new company announcement.
+
+The engine now shows 38 active / 1 high / 29 focus names versus Friday's published 37 / 1 / 29. Friday's later rebuilt snapshot was 40 / 1 / 30: the SMCI belief alert and settled November 6 share-count catalyst subsequently rolled off. Sunday and today are unchanged at 38 / 1 / 29, with zero automated belief changes. Alert expiry is not a bullish resolution. Evidence: E.engine_delta; _wiki/_data/analyst/history/.
+
+Scope: 901 mailbox entries inventoried across the fixed weekend window; selected research bodies and primary/local evidence reviewed, not an exhaustive audit. DDOG's meeting outcome is logged. Company pages and house models were not edited; the existing compute-deal record was checked without adding a duplicate.

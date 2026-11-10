@@ -3,6 +3,48 @@
 
 - **2026-10-09 — weekly AI credit review:** Added reported ~$40bn financing proposal with no committed amount and no aggregation with Anthropic compute TCV. September 25 index/rebalance watch remains unreviewed in this credit run; no outcome inferred. [Dated evidence](_data/credit-monitor/research-sources/2026-10-09-primary.json). with a date — don't overwrite. -->
 
+## 🐦 TWITTER RUMOR — TERAFAB AMBITIONS: ~1M WAFER STARTS/MONTH, 70% MEMORY / 30% LOGIC. HOUSE COST SIZING: ~$280-355bn ON A HOME-COST BASIS, ~$335-620bn IF BUILT IN THE US, 173-220 EUV TOOLS (2026-11-09)
+
+_⚠️ **RUMOR-GRADE.** Filed as a **Twitter rumor** at Felipe's request (2026-11-09). These are ambitions, not company guidance, orders or a capex schedule. Do not carry the 1M wpm or the 70/30 split into models as Terafab's plan._
+
+- **The ambition, and where this wiki can actually trace it:**
+  - **Scale (~1M wafer starts/month, end of decade):** ASML IR (2026-10-21) described phase 2 as *"a completely new campus"* at ~*"a million wafer starts a month"*, *"closer to the end of the decade"* (Q3 block above). ASML CEO Fouquet compared Terafab to the Korean DRAM projects of *"millions of wafers"* (Bloomberg interview, relayed by @dnystedt, 2026-06-18).
+  - **Mix (70% memory / 30% logic):** a *"stated plan"* relayed second-hand on a UBS callback (2026-10-22; machine transcript, analyst UNCONFIRMED). The same analyst adds that *"everything I see him doing is based on Intel 14A"* ([semicap-wfe](themes/semicap-wfe.md), 11-05 block).
+  - **Twitter corpus check (tweets.sqlite, 2026-11-09):** no tweet from the curated handles carries the 1M wpm or the 70/30 numbers. The nearest Terafab-scale tweets are:
+    - @dnystedt, 06-18 (above).
+    - @Fxhedgers, 08-06: $16.8bn initial investment, already on this page.
+    - @bespokeinvest, 08-13: a *"100+ million square foot"* complex estimate.
+  - **The company's own dollars, for scale:**
+    - Musk @ Tesla Q3 call (2026-10-21): *"not going to be less than tens of billions in capital equipment up through early 2028"*, then *"north of $100 billion"* long term.
+    - Reported figures: $16.8bn Phase I (Aug-26); $20-25bn (Mar-26 announcement); $55bn initial filing (Reuters, May-26); *"upwards of $119bn"* (press, via MS 2026-09-20).
+
+- **HOUSE SIZING (Capstone estimate, 2026-11-09).** The question is what 1M wpm at a 70/30 split would cost if built. It is not a forecast of Terafab spend. Two skeptic passes came back PARTIAL; their fixes are applied.
+
+| Leg | Wafers/month | $ per 10k wpm | Home-cost basis | US-built | EUV tools |
+|---|---|---|---|---|---|
+| Logic (N2/A14-class) | 300k | $4.7-5.6bn (Taiwan) | $140-170bn | $170-270bn | 124-132 |
+| Memory (assumed DRAM, 1c/1d) | 700k | $2.0-2.6bn (Korea) | $140-185bn | $170-350bn | 49-88 |
+| **Total** | **1M** | — | **~$280-355bn** | **~$335-620bn** | **173-220** |
+
+  - **Logic inputs:**
+    - **N2 total fab cost:** Bristlemoon (Jun-26) $4.7bn per 10kwpm (11 EUV tools per 25kwpm at ~34% OEE, $240m per tool). Fubon/Jefferies (2025-10-28) has $28bn per 50k N2 = $5.6bn, and N3 = $4.0bn.
+    - **Tools cross-check:** Bernstein (Rasgon/Dai, 2026-07-20) $3.4bn of tools per 10k WSPM of advanced logic ≈ Bristlemoon's $3.3bn.
+    - **A14-class:** house $4.9bn ([TSM](TSM.md), EUV-only uplift) to ~$5.7bn. Intel 14A's High-NA tools are not included (upside).
+    - **EUV count:** 300k ÷ 2,430 wpm per tool.
+  - **Memory inputs:**
+    - **Tools:** Bernstein $1.4bn per 10k for DRAM-HBM (front-end only; HBM TSV/stacking back-end is excluded).
+    - **Shell:** $0.61bn per 10k (SK hynix W31tn Yongin Phase 1 ÷ 360k WSPM; JPM 08-09 / DB 09-16) to $1.24bn (Y2 W35.2tn ÷ ~200k, DBe). Treat $0.61bn as a FLOOR: "Phase 1" may be the first cleanroom only.
+    - **Bounds** (multi-decade nominal headlines): Yongin W600tn ÷ 4 fabs ≈ $2.9bn per 10k (MS 07-01). Micron New York ~$100bn ÷ 4 fabs at 50-80k each ≈ $3.1-5.0bn per 10k in the US.
+    - **EUV count:** 5-9 EUV layers ÷ 71,280 exposures per tool per month (Bristlemoon memory OEE 45%).
+    - **If NAND instead:** tools $1.3bn per 10k and no EUV.
+  - **US premium:** Fubon's overseas *"build cost"* of ~+60% for the US has an ambiguous basis. It could apply to the shell only (≈×1.18 on logic) or to the whole fab (×1.6); both are shown.
+
+- **Read:**
+  1. **The ambition costs ~3-6x Musk's own "north of $100bn".** 1M wpm is a multi-decade aspiration, not a funded plan; the reported dollars fund phase 1.
+  2. **EUV is the binding constraint, not money.** 173-220 tools ≈ 1.6-2.0 years of ASML's entire 2028 Low-NA capacity (110, [semicap-wfe](themes/semicap-wfe.md) 07-15/07-20), for one customer.
+  3. **Memory is 70% of the wafers but ~half of the dollars.** DRAM costs ≈ half as much per wafer as leading-edge logic.
+  4. **Load-bearing inputs:** Bernstein's tool intensities; the Yongin shell mapping; memory type (DRAM vs NAND vs HBM back-end); the basis of the US premium.
+
 ## 🆕🔴 THE ~$40bn CHIP FINANCING IS NO LONGER A PRESS NUMBER: A BINDING COMMITMENT LETTER WITH AN APOLLO-MANAGED LESSOR FOR A ~$40bn GPU MASTER FINANCE LEASE — CLOSE EXPECTED BEFORE YEAR-END, SCHEDULES FROM 1H27 (8-K, EVENT 2026-10-24, FILED 2026-10-26)
 
 **Source: ★ PRIMARY — [SpaceX 8-K, Item 8.01, filed 2026-10-26, event date 2026-10-24, acc. 0001104659-26-118614](../SPCX/SPCX_8-K_2026-10-26_0001104659-26-118614.html)** (signed by CFO Bret Johnsen; EDGAR original archived, and the team's P: print of the same filing came through the inbox).
@@ -260,17 +302,17 @@ _(UBS Index Analytics · **Jason Irukulapati**, "The Daily Catch — S&P 1500/IC
 _Wiki · generated 2026-06-29 · sources: IPO prospectus (424B4 2026-06-12 / S-1 2026-05-20, archived in `../SPCX/`) + FinTwit. **Newly public — IPO'd June 2026 (Nasdaq: SPCX).** Master index: [../INDEX.md](../INDEX.md). Themes: [ai-datacenter-power](themes/ai-datacenter-power.md) · [custom-asic-tpu](themes/custom-asic-tpu.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-06 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-09 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $47.0bn | $180.0bn |
-| Gross profit | — | $112.5bn |
-| Gross margin | — | 62.5% |
-| EBITDA | $21.0bn | $114.6bn |
+| Revenue | $47.0bn | $180.3bn |
+| Gross profit | — | $113.1bn |
+| Gross margin | — | 62.7% |
+| EBITDA | $21.0bn | $114.9bn |
 | EPS | $-0.98 | $4.07 |
-| Capex | $63.2bn | $270.9bn |
-| OCF (≈EBITDA) | $21.0bn | $114.6bn |
+| Capex | $63.2bn | $271.5bn |
+| OCF (≈EBITDA) | $21.0bn | $114.9bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->
@@ -946,6 +988,57 @@ _The single most detailed sell-side model on the name; stock ref $160.42 (06-Jul
 
 <!-- Consensus estimates (BBG) block auto-injected here by the HTML builder once estimates exist -->
 
+## DC construction pipeline — Aterio census (2026-08-31)
+<!-- aterio-census:begin asof=2026-08-31 · generated by _tools/build_aterio_company.py into _data/aterio/company_blocks/SPCX.md; refresh = rerun the script and paste the new block between these markers (agent edit + Changelog line), never by script -->
+_Source: Aterio US data-center census, licensed export as of 2026-08-31 (internal use; `P:\Felipe Monteiro\Aterio`). Reference page: [US DC construction pipeline — Aterio census](themes/aterio-dc-census.md) · explorer: [aterio-dc.html](_dashboards/aterio-dc.html). MW = facility power per building (published, else Aterio's estimate); IT-eq ≈ facility ÷ 1.15. Likelihood = Aterio's execution tier: High = power negotiated, land secured, financing lined up or capex committed on earnings calls (>80% materialise); Medium ~50-60%; Low = announced with no power or financing signal (<40%); a high tier does not mean the date holds (Aterio team on a Goldman Sachs call, 2026-10-20). Activation dates are mostly Aterio's own estimates. Roles come from Aterio's fields (operator, end users, backers, financing, partners) and are not checked one by one. "In registry" = the campus is in Capstone's DC delay-risk registry ([dc-delay-risk](_dashboards/dc-delay-risk.html))._
+
+| Role in the census | Buildings | Active | Under construction | Delayed | Planned (all dates) | Withdrawn / cancelled | 2026-30 not yet active: High · Medium · Low |
+|---|---|---|---|---|---|---|---|
+| Operator / self-build | 8 on 3 campuses | 1,278 | 620 | – | 1,000 | – | 620 · 1,000 · – |
+
+_MW, facility basis. A building can count under several companies (operator, tenant, financier), so never add these rows across pages._
+
+**Capstone house view, 2026-30 (GW IT-eq)**: facility MW ÷ 1.15 (Aterio's own facility/IT median); counts what switched on since Jan-2026, under construction, delayed and planned rated High, dated 2026-30 by Aterio; drops campuses rated Low with no named end user (house rules of 2026-11-09). This is the figure to quote; the other tables in this section stay on Aterio's own basis (facility MW, every likelihood tier).
+
+| Role in the census | House view | 2026 | 2027 | 2028 | 2029 | 2030 | Switched on · building · delayed · planned High | Aterio's dating, no filter |
+|---|---|---|---|---|---|---|---|---|
+| Operator / self-build | **0.97** | 0.97 | – | – | – | – | 0.43 · 0.54 · – · – | 1.84 |
+
+_GW IT-eq, same rules and code as the US house view on the reference page (`_tools/aterio_core.py`, rules in `_data/aterio/treatment.json`). A building counts for every company with a role on it, so never add rows across roles or pages._
+
+**When it switches on — operator / self-build** (MW facility, by Aterio activation year; not yet active only)
+
+| | 2026 | 2027 | 2028 | 2029 | 2030 | 2031+ | undated |
+|---|---|---|---|---|---|---|---|
+| Under construction | 620 | – | – | – | – | – | – |
+| Planned · Medium | – | – | – | 1,000 | – | – | – |
+
+_Already switched on in 2026: 500 MW._
+
+**Campuses with 2026-30 activity — operator / self-build**
+
+| Campus | State | Buildings | Under constr. MW | Delayed MW | Planned MW | Likelihood (not yet active) | Activation | In registry |
+|---|---|---|---|---|---|---|---|---|
+| XAI Texas Campus (Bastrop) | TX | 2 planned | – | – | 1,000 | Medium | 2029-06 → 2029-09 (Aterio est.) | – |
+| xAI Colossus 2 Campus (Southaven) | MS | 2 active · 2 UC | 620 | – | – | High | 2026-09 → 2026-12 | ✓ |
+| xAI Colossus 1 (Memphis) | TN | 2 active | – | – | – | – | switched on 2026 (150 MW) | – |
+
+**Behind-the-meter power for data centers — developer** (Aterio BTM inventory: 9 phases on 2 projects; MW = generation **nameplate**, a different basis from the data-center MW above — never add them): construction 1,130 · active 247 · site preparation 140.
+
+| Project | State | Technology | Phases | Nameplate MW | Customers | Activation |
+|---|---|---|---|---|---|---|
+| Colossus 2 (BTM) | MS | Simple Cycle | 6 construction · 1 site preparation | 1,240 | xAI | 2026-12 → 2027-09 |
+| Colossus 1 (BTM) | TN | Photovoltaic | 1 construction · 1 active | 277 | xAI | 2025-11 → 2026-09 |
+
+**Behind-the-meter power for data centers — customer** (Aterio BTM inventory: 9 phases on 2 projects; MW = generation **nameplate**, a different basis from the data-center MW above — never add them): construction 1,130 · active 247 · site preparation 140.
+
+| Project | State | Technology | Phases | Nameplate MW | Customers | Activation |
+|---|---|---|---|---|---|---|
+| Colossus 2 (BTM) | MS | Simple Cycle | 6 construction · 1 site preparation | 1,240 | xAI | 2026-12 → 2027-09 |
+| Colossus 1 (BTM) | TN | Photovoltaic | 1 construction · 1 active | 277 | xAI | 2025-11 → 2026-09 |
+
+<!-- aterio-census:end -->
+
 ## Sources
 - 🆕 **2026-11-07 (/run-inbox):** [All-In, "Midterm Blood Bath, $4T AI Sell Off, Data Center Freeze, What's Next for Trump", 2026-11-07 (transcript)](../_podcasts/allin/2026-11-07%20-%20Midterm%20Blood%20Bath%2C%20%244T%20AI%20Sell%20Off%2C%20Data%20Center%20Freeze%2C%20What%27s%20Next%20for%20Trump.md) — podcast, not broker research; hosts are investors talking their book (Calacanis discloses buying SpaceX shares on air).
 - 🆕 **2026-11-05 (/run-inbox):** [SemiAnalysis · Knuhtsen / Eliahou Ontiveros / Patel — "Elon Is Doing It Again: SpaceX Will Be The World's Biggest AI Cloud" (2026-11-03)](../relat%C3%B3rios%20bons/SemiAnalysis_-_Elon_Is_Doing_It_Again__SpaceX_Will_Be_The_World_s_Biggest_AI_Cloud.html) · [FundaAI — "Research|AIDC: Texas Permitting Risks Rise After Midterm Elections; 2027 Delivery Forecast Unchanged" (2026-11-04)](../relat%C3%B3rios%20bons/tx_data_center.html) · [Wells Fargo · Jerry Revich et al. — "Texas Policy Reset Adds Timing Risk to 20-30% of the Data Center Power Pipeline" (2026-11-04)](../relat%C3%B3rios%20bons/Texas_Policy_Reset_Adds_Timing_Risk_to_20-30_of_the_Data_Ce.html)
@@ -1057,6 +1150,13 @@ _**Q4 FY26 window · opened 2026-10-20** (Q3 2026 print, reported 2026-10-20 AMC
 
 ## Changelog
 
+- 2026-11-09 — added the "DC construction pipeline — Aterio census" section (Aterio US census export 2026-08-31, licensed; facility MW): operator 8 buildings, 620 MW under construction, 2026-30 not yet active High/Medium/Low 620/1,000/0 MW; BTM dev 9 generation phases; BTM cust 9 generation phases. Reference: [themes/aterio-dc-census.md](themes/aterio-dc-census.md). Nothing superseded.
+- 2026-11-09 — Aterio census section refreshed: added the Capstone house-view table (GW IT-eq, 2026-30; Aterio census as of 2026-08-31, Capstone treatment: facility ÷ 1.15, switched on since Jan-2026 + under construction + delayed + planned High, Low-likelihood campuses with no tenant dropped; house rules of 2026-11-09): operator 0.97 GW. Facility figures in the section are unchanged (same export); nothing superseded.
+- 2026-11-09 — Felipe request: new top block "TWITTER RUMOR — Terafab ambitions".
+  - Labelled rumor-grade: 1M wpm (ASML IR 10-21) and the 70/30 memory/logic split (UBS callback 10-22, UNCONFIRMED).
+  - The tweet-corpus check found no tweet carrying those numbers.
+  - Capstone house sizing: ~$280-355bn on a home-cost basis, ~$335-620bn US-built, 173-220 EUV tools (two skeptic passes, PARTIAL→fixed).
+  - Superseded: none.
 - 2026-11-07 — run-inbox: 1 Q4-window Full-log row — Chamath's SpaceX→Anthropic 90-day re-pricing scenario (host game theory; non-cancelable periods to Jan./Mar. 2027 noted), SpaceX filed as a hyperscaler, the 6 GW Cochise County AZ pitch as described from a video (unverified, kept out of the ~13 GW ladder), Calacanis's on-air SpaceX share-buying disclosure; Sources line (podcast, All-In).
 - 2026-11-05 — run-inbox: SemiAnalysis "Elon Is Doing It Again" (11-03), FundaAI Texas note (11-04), Wells Fargo Texas note (11-04) — 2 Q4-window Full-log rows, 1 Sinal update + Síntese UPDATE, Sources. Chart figures (IT MW 1.3/1.7/2.7 GW; nameplate 1.8/2.1/2.9 GW; Southaven 2,769 → 1,240 MW) read from the page images. Superseded: none. Conflicts logged, not resolved: contract tenor (SemiAnalysis "six-month" vs 10-Q "typically three years"); SpaceX Texas exposure (SemiAnalysis Starbase/Terafab vs FundaAI "no direct cut"). Terminology correction (transcription QA): "TeraFab" → Terafab (wiki spelling; SemiAnalysis prints "TeraFab").
 

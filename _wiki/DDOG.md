@@ -14,7 +14,7 @@ _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\DDOG\transcri
 | Gross margin | 80.6% | 80.4% |
 | EBITDA | $1.1bn | $1.4bn |
 | EPS | $2.50 | $3.18 |
-| Capex | $84m | $95m |
+| Capex | $84m | $94m |
 | OCF (≈EBITDA) | $1.1bn | $1.4bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._

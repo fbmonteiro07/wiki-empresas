@@ -1,4 +1,4 @@
-531 rows merged from raw/*.csv
+775 rows merged from raw/*.csv
 midwest_ne.csv:20 PA-FALLSTWP-AWSKEYSTONE-ALL: mw='' not numeric — skipped
 midwest_ne.csv:21 PA-HOMERCITY-HCR-ALL: cod_base='' unparseable
 midwest_ne.csv:23 PA-BUTLERTWP-NEBIUS-P1: phase_status='' not in schema
@@ -7,6 +7,7 @@ midwest_ne.csv:35 IN-FORTWAYNE-GOOGLE-B6: phase_status='' not in schema
 midwest_ne.csv:38 KY-HAWESVILLE-TERAWULF-JUSTIFIED: campus_status='' not in schema
 midwest_ne.csv:38 KY-HAWESVILLE-TERAWULF-JUSTIFIED: phase_status='' not in schema
 midwest_ne.csv:45 NJ-KENILWORTH-COREWEAVE-P1: mw='' not numeric — skipped
+ne_semianalysis_r3.csv:12 NY-TONAWANDA-RIVERVIEW-ALL: cod_base='' unparseable
 south.csv:8 GA-DALTON-COREWEAVEDALTON-D3: cod_base='' unparseable
 south.csv:9 GA-AUGUSTA-EISENHOWER-ALL: cod_base='' unparseable
 south.csv:10 GA-ATLANTA-EDGEDTILFORD-ATL0103: cod_base='' unparseable
@@ -32,6 +33,6 @@ va_se.csv:49 WV-DAVIS-FUNDAMENTALRIDGELINE-P1: cod_base='' unparseable
 va_se.csv:56 NC-STATESVILLE-COMPASS-B1: mw='' not numeric — skipped
 va_se.csv:57 NC-CONOVER-MSFTLYLECREEK-ALL: mw='' not numeric — skipped
 va_se.csv:58 NC-HICKORY-MSFTSTOVER-ALL: mw='' not numeric — skipped
-overrides.csv:8 PA-HOMERCITY-HCR-ALL: cod_base='' unparseable
-overrides.csv:30 VA-CHESTERFIELD-POWERHOUSECHIRISA-P1: cod_base='' unparseable
+overrides.csv:4 PA-HOMERCITY-HCR-ALL: cod_base='' unparseable
+overrides.csv:16 VA-CHESTERFIELD-POWERHOUSECHIRISA-P1: cod_base='' unparseable
 south.csv GA-UNKNOWN-RUMGROUP-ANTHROPIC: lat/lon missing — not on the map

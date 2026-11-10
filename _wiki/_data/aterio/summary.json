@@ -1,0 +1,11083 @@
+{
+ "asof": "2026-08-31",
+ "events_asof": "2026-08-31",
+ "built": "2026-11-09 18:42",
+ "src": "P:\\Felipe Monteiro\\Aterio",
+ "it_ratio": 1.15,
+ "it_ratio_wtd": 1.172,
+ "it_ratio_n": 1025,
+ "it_ratio_measured": 1.15,
+ "group_label": {
+  "active": "Active",
+  "uc": "Under construction",
+  "delayed": "Delayed",
+  "ann": "Announced (incl. land bank)",
+  "wd": "Withdrawn / cancelled"
+ },
+ "stages": [
+  {
+   "stage": "Active",
+   "grp": "active",
+   "n": 2077,
+   "gw": 51.82,
+   "n_mw": 1972,
+   "gw_pub": 22.17,
+   "gw_it_rep": 15.28,
+   "n_it": 484,
+   "gw_ai": 7.53,
+   "n_ai": 123,
+   "gw_btm": 3.35,
+   "like": {
+    "High": 5.53,
+    "Medium": 0.0,
+    "Low": 0.0,
+    "Unrated": 46.29
+   }
+  },
+  {
+   "stage": "Construction",
+   "grp": "uc",
+   "n": 821,
+   "gw": 71.54,
+   "n_mw": 804,
+   "gw_pub": 38.18,
+   "gw_it_rep": 16.7,
+   "n_it": 190,
+   "gw_ai": 37.83,
+   "n_ai": 336,
+   "gw_btm": 15.39,
+   "like": {
+    "High": 70.67,
+    "Medium": 0.87,
+    "Low": 0.0,
+    "Unrated": 0.0
+   }
+  },
+  {
+   "stage": "Delayed",
+   "grp": "delayed",
+   "n": 91,
+   "gw": 8.84,
+   "n_mw": 91,
+   "gw_pub": 7.35,
+   "gw_it_rep": 3.26,
+   "n_it": 35,
+   "gw_ai": 5.67,
+   "n_ai": 41,
+   "gw_btm": 5.82,
+   "like": {
+    "High": 2.04,
+    "Medium": 0.79,
+    "Low": 6.01,
+    "Unrated": 0.0
+   }
+  },
+  {
+   "stage": "Announcement",
+   "grp": "ann",
+   "n": 4042,
+   "gw": 380.36,
+   "n_mw": 3632,
+   "gw_pub": 286.61,
+   "gw_it_rep": 33.23,
+   "n_it": 315,
+   "gw_ai": 171.66,
+   "n_ai": 1269,
+   "gw_btm": 148.9,
+   "like": {
+    "High": 166.28,
+    "Medium": 153.48,
+    "Low": 60.6,
+    "Unrated": 0.0
+   }
+  },
+  {
+   "stage": "Land Bank",
+   "grp": "ann",
+   "n": 65,
+   "gw": 2.34,
+   "n_mw": 37,
+   "gw_pub": 0.3,
+   "gw_it_rep": 0.0,
+   "n_it": 0,
+   "gw_ai": 0.04,
+   "n_ai": 2,
+   "gw_btm": 0.3,
+   "like": {
+    "High": 0.37,
+    "Medium": 1.81,
+    "Low": 0.16,
+    "Unrated": 0.0
+   }
+  },
+  {
+   "stage": "Not Approved/Withdrawn",
+   "grp": "wd",
+   "n": 710,
+   "gw": 39.61,
+   "n_mw": 547,
+   "gw_pub": 19.21,
+   "gw_it_rep": 0.34,
+   "n_it": 3,
+   "gw_ai": 5.7,
+   "n_ai": 92,
+   "gw_btm": 7.53,
+   "like": {
+    "High": 1.06,
+    "Medium": 4.96,
+    "Low": 33.59,
+    "Unrated": 0.0
+   }
+  },
+  {
+   "stage": "Cancelled",
+   "grp": "wd",
+   "n": 7,
+   "gw": 0.39,
+   "n_mw": 6,
+   "gw_pub": 0.3,
+   "gw_it_rep": 0.0,
+   "n_it": 0,
+   "gw_ai": 0.0,
+   "n_ai": 0,
+   "gw_btm": 0.0,
+   "like": {
+    "High": 0.0,
+    "Medium": 0.0,
+    "Low": 0.39,
+    "Unrated": 0.0
+   }
+  }
+ ],
+ "totals": {
+  "n": 7813,
+  "gw": 554.9,
+  "n_all": 8226,
+  "n_ca": 413,
+  "gw_ca": 25.99,
+  "ca_stage": {
+   "Announcement": 197,
+   "Active": 194,
+   "Construction": 17,
+   "Not Approved/Withdrawn": 3,
+   "Delayed": 2
+  },
+  "providers": 379,
+  "campuses": 1098,
+  "no_campus": 1474,
+  "states": 51,
+  "counties": 653
+ },
+ "timeline": {
+  "years": [
+   "2016",
+   "2017",
+   "2018",
+   "2019",
+   "2020",
+   "2021",
+   "2022",
+   "2023",
+   "2024",
+   "2025",
+   "2026",
+   "2027",
+   "2028",
+   "2029",
+   "2030",
+   "2031",
+   "2032",
+   "2033",
+   "2034",
+   "2035",
+   "2036+"
+  ],
+  "series": {
+   "active": [
+    1.08,
+    1.58,
+    1.37,
+    2.19,
+    3.33,
+    2.6,
+    3.3,
+    4.01,
+    6.02,
+    9.17,
+    7.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "uc": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    13.13,
+    26.98,
+    26.83,
+    3.49,
+    1.12,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ],
+   "delayed": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.05,
+    0.99,
+    1.56,
+    2.55,
+    0.51,
+    0.51,
+    1.05,
+    0.46,
+    0.46,
+    0.46,
+    0.23
+   ],
+   "ann": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.05,
+    15.54,
+    87.71,
+    97.62,
+    67.39,
+    39.59,
+    26.03,
+    18.78,
+    10.89,
+    6.75,
+    10.61
+   ],
+   "ann_High": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.03,
+    10.54,
+    45.94,
+    49.98,
+    25.93,
+    15.97,
+    7.47,
+    4.99,
+    3.16,
+    2.39,
+    0.25
+   ],
+   "ann_Medium": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.02,
+    4.71,
+    34.39,
+    38.4,
+    28.12,
+    16.67,
+    11.93,
+    7.52,
+    3.62,
+    1.84,
+    6.51
+   ],
+   "ann_Low": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.29,
+    7.38,
+    9.25,
+    13.34,
+    6.95,
+    6.63,
+    6.27,
+    4.1,
+    2.52,
+    3.85
+   ],
+   "ann_Unrated": [
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "undated": {
+   "active": 0.64,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 1.75,
+   "wd": 8.67
+  },
+  "uc_by_year": {
+   "2026": 13.13,
+   "2027": 26.98,
+   "2028": 26.83,
+   "2029": 3.49,
+   "2030": 1.12
+  }
+ },
+ "weekly": {
+  "sheets": [
+   {
+    "name": "US 30d Comparison",
+    "rows": 8,
+    "cols": 11
+   },
+   {
+    "name": "US Data Centers Dataset",
+    "rows": 7749,
+    "cols": 42
+   },
+   {
+    "name": "Data - Main KPIs",
+    "rows": 3201,
+    "cols": 16
+   },
+   {
+    "name": "Data - DC by Project Stage",
+    "rows": 156,
+    "cols": 3
+   },
+   {
+    "name": "Data - ISO vs Data Centers",
+    "rows": 117,
+    "cols": 6
+   },
+   {
+    "name": "US Overview Dashboard",
+    "rows": 243,
+    "cols": 100
+   },
+   {
+    "name": "US Additional Info - Evo ISO",
+    "rows": 775,
+    "cols": 8
+   },
+   {
+    "name": "Balancing Authorities vs US Dat",
+    "rows": 59,
+    "cols": 8
+   },
+   {
+    "name": "US Additional Info - Cancelled",
+    "rows": 512,
+    "cols": 7
+   },
+   {
+    "name": "US Equipments Generator Demand",
+    "rows": 943,
+    "cols": 5
+   },
+   {
+    "name": "US Project Days To Complete",
+    "rows": 56,
+    "cols": 5
+   },
+   {
+    "name": "US Additional Info - Announceme",
+    "rows": 220,
+    "cols": 7
+   },
+   {
+    "name": "US Additional Info - Announced ",
+    "rows": 162,
+    "cols": 6
+   },
+   {
+    "name": "US Additional Info - Evo State",
+    "rows": 847,
+    "cols": 6
+   },
+   {
+    "name": "US Additional Info - Evo Prov",
+    "rows": 5383,
+    "cols": 6
+   },
+   {
+    "name": "US Additional Info - Evo Util",
+    "rows": 3907,
+    "cols": 6
+   },
+   {
+    "name": "Data Additional KPIs",
+    "rows": 205,
+    "cols": 12
+   },
+   {
+    "name": "US Add Info - AC - Conv - Cumul",
+    "rows": 230,
+    "cols": 6
+   },
+   {
+    "name": "US Add Info - AC - Conv - Cur",
+    "rows": 281,
+    "cols": 6
+   },
+   {
+    "name": "US Const Announced Momentum",
+    "rows": 3469,
+    "cols": 13
+   },
+   {
+    "name": "State Overview Dashboard",
+    "rows": 114,
+    "cols": 66
+   },
+   {
+    "name": "US Add Info - Const Stat",
+    "rows": 244,
+    "cols": 13
+   },
+   {
+    "name": "Equipments \"Generator Demand\"",
+    "rows": 59,
+    "cols": 15
+   },
+   {
+    "name": "Data Dictionary",
+    "rows": 109,
+    "cols": 4
+   },
+   {
+    "name": "About",
+    "rows": 98,
+    "cols": 12
+   }
+  ],
+  "d30": [
+   {
+    "DATA_CENTER_STAGE": "Active",
+    "q_current": 2073,
+    "s_current_power_capacity_mw": 51640.254999999976,
+    "s_current_square_footage": 311912440,
+    "q_30d_ago": 2050,
+    "s_30d_ago_power_capacity_mw": 50295.11499999998,
+    "s_30d_ago_square_footage": 306666979,
+    "q_delta_30d": 23,
+    "s_delta_30d_power_capacity_mw": 1345.1399999999921,
+    "s_delta_30d_square_footage": 5245461,
+    "updated_at": "2026-08-27"
+   },
+   {
+    "DATA_CENTER_STAGE": "Announcement",
+    "q_current": 4050,
+    "s_current_power_capacity_mw": 381423.6299999996,
+    "s_current_square_footage": 698880566,
+    "q_30d_ago": 3791,
+    "s_30d_ago_power_capacity_mw": 347857.65999999986,
+    "s_30d_ago_square_footage": 688335644,
+    "q_delta_30d": 259,
+    "s_delta_30d_power_capacity_mw": 33565.96999999974,
+    "s_delta_30d_square_footage": 10544922,
+    "updated_at": "2026-08-27"
+   },
+   {
+    "DATA_CENTER_STAGE": "Cancelled",
+    "q_current": 7,
+    "s_current_power_capacity_mw": 391,
+    "s_current_square_footage": 530800,
+    "q_30d_ago": 7,
+    "s_30d_ago_power_capacity_mw": 391,
+    "s_30d_ago_square_footage": 530800,
+    "q_delta_30d": 0,
+    "s_delta_30d_power_capacity_mw": 0,
+    "s_delta_30d_square_footage": 0,
+    "updated_at": "2026-08-27"
+   },
+   {
+    "DATA_CENTER_STAGE": "Construction",
+    "q_current": 821,
+    "s_current_power_capacity_mw": 71625.44999999995,
+    "s_current_square_footage": 219854481,
+    "q_30d_ago": 804,
+    "s_30d_ago_power_capacity_mw": 68217.91999999994,
+    "s_30d_ago_square_footage": 218678023,
+    "q_delta_30d": 17,
+    "s_delta_30d_power_capacity_mw": 3407.5300000000134,
+    "s_delta_30d_square_footage": 1176458,
+    "updated_at": "2026-08-27"
+   },
+   {
+    "DATA_CENTER_STAGE": "Delayed",
+    "q_current": 93,
+    "s_current_power_capacity_mw": 8941.66,
+    "s_current_square_footage": 19460437,
+    "q_30d_ago": 93,
+    "s_30d_ago_power_capacity_mw": 8901.640000000001,
+    "s_30d_ago_square_footage": 19160437,
+    "q_delta_30d": 0,
+    "s_delta_30d_power_capacity_mw": 40.01999999999862,
+    "s_delta_30d_square_footage": 300000,
+    "updated_at": "2026-08-27"
+   },
+   {
+    "DATA_CENTER_STAGE": "Land Bank",
+    "q_current": 65,
+    "s_current_power_capacity_mw": 2337.3999999999996,
+    "s_current_square_footage": 1050000,
+    "q_30d_ago": 60,
+    "s_30d_ago_power_capacity_mw": 2379.5199999999995,
+    "s_30d_ago_square_footage": 4050000,
+    "q_delta_30d": 5,
+    "s_delta_30d_power_capacity_mw": -42.11999999999989,
+    "s_delta_30d_square_footage": -3000000,
+    "updated_at": "2026-08-27"
+   },
+   {
+    "DATA_CENTER_STAGE": "Not Approved/Withdrawn",
+    "q_current": 704,
+    "s_current_power_capacity_mw": 39217.38000000004,
+    "s_current_square_footage": 135139810,
+    "q_30d_ago": 622,
+    "s_30d_ago_power_capacity_mw": 32543.039999999957,
+    "s_30d_ago_square_footage": 126567351,
+    "q_delta_30d": 82,
+    "s_delta_30d_power_capacity_mw": 6674.340000000084,
+    "s_delta_30d_square_footage": 8572459,
+    "updated_at": "2026-08-27"
+   }
+  ],
+  "forecast": [
+   {
+    "year": 2018,
+    "opt": 13.55,
+    "base": 13.55,
+    "cons": 13.55
+   },
+   {
+    "year": 2019,
+    "opt": 15.74,
+    "base": 15.74,
+    "cons": 15.74
+   },
+   {
+    "year": 2020,
+    "opt": 19.07,
+    "base": 19.07,
+    "cons": 19.07
+   },
+   {
+    "year": 2021,
+    "opt": 21.67,
+    "base": 21.67,
+    "cons": 21.67
+   },
+   {
+    "year": 2022,
+    "opt": 24.98,
+    "base": 24.98,
+    "cons": 24.98
+   },
+   {
+    "year": 2023,
+    "opt": 28.99,
+    "base": 28.99,
+    "cons": 28.99
+   },
+   {
+    "year": 2024,
+    "opt": 35.01,
+    "base": 35.01,
+    "cons": 35.01
+   },
+   {
+    "year": 2025,
+    "opt": 44.18,
+    "base": 44.18,
+    "cons": 44.18
+   },
+   {
+    "year": 2026,
+    "opt": 64.34,
+    "base": 64.33,
+    "cons": 64.32
+   },
+   {
+    "year": 2027,
+    "opt": 107.14,
+    "base": 105.02,
+    "cons": 102.0
+   },
+   {
+    "year": 2028,
+    "opt": 221.72,
+    "base": 200.38,
+    "cons": 174.02
+   },
+   {
+    "year": 2029,
+    "opt": 321.7,
+    "base": 278.98,
+    "cons": 227.08
+   },
+   {
+    "year": 2030,
+    "opt": 390.44,
+    "base": 327.04,
+    "cons": 254.13
+   },
+   {
+    "year": 2031,
+    "opt": 430.31,
+    "base": 355.26,
+    "cons": 270.1
+   },
+   {
+    "year": 2032,
+    "opt": 456.5,
+    "base": 371.98,
+    "cons": 277.56
+   },
+   {
+    "year": 2033,
+    "opt": 474.75,
+    "base": 383.05,
+    "cons": 282.55
+   },
+   {
+    "year": 2034,
+    "opt": 485.64,
+    "base": 389.61,
+    "cons": 285.71
+   },
+   {
+    "year": 2035,
+    "opt": 492.39,
+    "base": 393.86,
+    "cons": 288.1
+   }
+  ],
+  "forecast_asof": "2026-08-27",
+  "momentum": [
+   {
+    "m": "2021-01",
+    "uc_n": 82,
+    "uc": 3.42,
+    "ann_n": 96,
+    "ann": 5.07,
+    "act_n": 1261,
+    "act": 19.32
+   },
+   {
+    "m": "2021-02",
+    "uc_n": 86,
+    "uc": 3.59,
+    "ann_n": 105,
+    "ann": 5.54,
+    "act_n": 1263,
+    "act": 19.37
+   },
+   {
+    "m": "2021-03",
+    "uc_n": 89,
+    "uc": 3.74,
+    "ann_n": 118,
+    "ann": 6.06,
+    "act_n": 1272,
+    "act": 19.76
+   },
+   {
+    "m": "2021-04",
+    "uc_n": 91,
+    "uc": 3.82,
+    "ann_n": 115,
+    "ann": 5.92,
+    "act_n": 1277,
+    "act": 19.98
+   },
+   {
+    "m": "2021-05",
+    "uc_n": 94,
+    "uc": 3.98,
+    "ann_n": 123,
+    "ann": 6.38,
+    "act_n": 1283,
+    "act": 20.26
+   },
+   {
+    "m": "2021-06",
+    "uc_n": 92,
+    "uc": 3.9,
+    "ann_n": 141,
+    "ann": 7.15,
+    "act_n": 1292,
+    "act": 20.58
+   },
+   {
+    "m": "2021-07",
+    "uc_n": 95,
+    "uc": 4.06,
+    "ann_n": 143,
+    "ann": 7.34,
+    "act_n": 1299,
+    "act": 20.82
+   },
+   {
+    "m": "2021-08",
+    "uc_n": 97,
+    "uc": 4.11,
+    "ann_n": 160,
+    "ann": 8.5,
+    "act_n": 1302,
+    "act": 20.94
+   },
+   {
+    "m": "2021-09",
+    "uc_n": 101,
+    "uc": 4.19,
+    "ann_n": 166,
+    "ann": 8.8,
+    "act_n": 1311,
+    "act": 21.25
+   },
+   {
+    "m": "2021-10",
+    "uc_n": 106,
+    "uc": 4.44,
+    "ann_n": 167,
+    "ann": 9.06,
+    "act_n": 1315,
+    "act": 21.38
+   },
+   {
+    "m": "2021-11",
+    "uc_n": 108,
+    "uc": 4.58,
+    "ann_n": 168,
+    "ann": 9.12,
+    "act_n": 1321,
+    "act": 21.51
+   },
+   {
+    "m": "2021-12",
+    "uc_n": 108,
+    "uc": 4.69,
+    "ann_n": 171,
+    "ann": 9.14,
+    "act_n": 1325,
+    "act": 21.71
+   },
+   {
+    "m": "2022-01",
+    "uc_n": 112,
+    "uc": 4.88,
+    "ann_n": 175,
+    "ann": 9.5,
+    "act_n": 1335,
+    "act": 21.98
+   },
+   {
+    "m": "2022-02",
+    "uc_n": 110,
+    "uc": 4.88,
+    "ann_n": 177,
+    "ann": 9.68,
+    "act_n": 1341,
+    "act": 22.21
+   },
+   {
+    "m": "2022-03",
+    "uc_n": 117,
+    "uc": 5.17,
+    "ann_n": 174,
+    "ann": 9.56,
+    "act_n": 1342,
+    "act": 22.24
+   },
+   {
+    "m": "2022-04",
+    "uc_n": 119,
+    "uc": 5.37,
+    "ann_n": 193,
+    "ann": 10.57,
+    "act_n": 1343,
+    "act": 22.25
+   },
+   {
+    "m": "2022-05",
+    "uc_n": 125,
+    "uc": 5.75,
+    "ann_n": 203,
+    "ann": 11.07,
+    "act_n": 1346,
+    "act": 22.35
+   },
+   {
+    "m": "2022-06",
+    "uc_n": 132,
+    "uc": 5.91,
+    "ann_n": 205,
+    "ann": 11.56,
+    "act_n": 1363,
+    "act": 23.06
+   },
+   {
+    "m": "2022-07",
+    "uc_n": 136,
+    "uc": 6.16,
+    "ann_n": 212,
+    "ann": 11.8,
+    "act_n": 1372,
+    "act": 23.5
+   },
+   {
+    "m": "2022-08",
+    "uc_n": 142,
+    "uc": 6.35,
+    "ann_n": 208,
+    "ann": 11.64,
+    "act_n": 1375,
+    "act": 23.82
+   },
+   {
+    "m": "2022-09",
+    "uc_n": 143,
+    "uc": 6.45,
+    "ann_n": 227,
+    "ann": 13.09,
+    "act_n": 1378,
+    "act": 23.95
+   },
+   {
+    "m": "2022-10",
+    "uc_n": 143,
+    "uc": 6.63,
+    "ann_n": 236,
+    "ann": 13.69,
+    "act_n": 1385,
+    "act": 24.22
+   },
+   {
+    "m": "2022-11",
+    "uc_n": 143,
+    "uc": 6.68,
+    "ann_n": 265,
+    "ann": 15.76,
+    "act_n": 1393,
+    "act": 24.53
+   },
+   {
+    "m": "2022-12",
+    "uc_n": 143,
+    "uc": 6.74,
+    "ann_n": 281,
+    "ann": 16.4,
+    "act_n": 1404,
+    "act": 25.01
+   },
+   {
+    "m": "2023-01",
+    "uc_n": 141,
+    "uc": 6.73,
+    "ann_n": 316,
+    "ann": 18.39,
+    "act_n": 1419,
+    "act": 25.52
+   },
+   {
+    "m": "2023-02",
+    "uc_n": 143,
+    "uc": 6.82,
+    "ann_n": 318,
+    "ann": 18.55,
+    "act_n": 1423,
+    "act": 25.64
+   },
+   {
+    "m": "2023-03",
+    "uc_n": 141,
+    "uc": 6.74,
+    "ann_n": 322,
+    "ann": 18.75,
+    "act_n": 1430,
+    "act": 25.89
+   },
+   {
+    "m": "2023-04",
+    "uc_n": 153,
+    "uc": 7.33,
+    "ann_n": 332,
+    "ann": 19.27,
+    "act_n": 1432,
+    "act": 25.98
+   },
+   {
+    "m": "2023-05",
+    "uc_n": 173,
+    "uc": 8.21,
+    "ann_n": 347,
+    "ann": 20.48,
+    "act_n": 1439,
+    "act": 26.33
+   },
+   {
+    "m": "2023-06",
+    "uc_n": 175,
+    "uc": 8.44,
+    "ann_n": 377,
+    "ann": 22.78,
+    "act_n": 1452,
+    "act": 26.76
+   },
+   {
+    "m": "2023-07",
+    "uc_n": 181,
+    "uc": 8.85,
+    "ann_n": 405,
+    "ann": 24.5,
+    "act_n": 1461,
+    "act": 27.07
+   },
+   {
+    "m": "2023-08",
+    "uc_n": 191,
+    "uc": 9.64,
+    "ann_n": 419,
+    "ann": 25.59,
+    "act_n": 1468,
+    "act": 27.33
+   },
+   {
+    "m": "2023-09",
+    "uc_n": 196,
+    "uc": 9.75,
+    "ann_n": 443,
+    "ann": 27.5,
+    "act_n": 1476,
+    "act": 27.81
+   },
+   {
+    "m": "2023-10",
+    "uc_n": 196,
+    "uc": 9.72,
+    "ann_n": 466,
+    "ann": 29.16,
+    "act_n": 1487,
+    "act": 28.34
+   },
+   {
+    "m": "2023-11",
+    "uc_n": 195,
+    "uc": 10.27,
+    "ann_n": 488,
+    "ann": 30.34,
+    "act_n": 1500,
+    "act": 28.89
+   },
+   {
+    "m": "2023-12",
+    "uc_n": 198,
+    "uc": 10.64,
+    "ann_n": 551,
+    "ann": 34.4,
+    "act_n": 1508,
+    "act": 29.22
+   },
+   {
+    "m": "2024-01",
+    "uc_n": 217,
+    "uc": 11.72,
+    "ann_n": 638,
+    "ann": 42.06,
+    "act_n": 1513,
+    "act": 29.48
+   },
+   {
+    "m": "2024-02",
+    "uc_n": 244,
+    "uc": 13.45,
+    "ann_n": 649,
+    "ann": 42.65,
+    "act_n": 1518,
+    "act": 29.74
+   },
+   {
+    "m": "2024-03",
+    "uc_n": 257,
+    "uc": 14.59,
+    "ann_n": 722,
+    "ann": 46.75,
+    "act_n": 1532,
+    "act": 30.3
+   },
+   {
+    "m": "2024-04",
+    "uc_n": 286,
+    "uc": 16.47,
+    "ann_n": 748,
+    "ann": 49.35,
+    "act_n": 1541,
+    "act": 30.67
+   },
+   {
+    "m": "2024-05",
+    "uc_n": 295,
+    "uc": 17.11,
+    "ann_n": 851,
+    "ann": 56.97,
+    "act_n": 1552,
+    "act": 31.22
+   },
+   {
+    "m": "2024-06",
+    "uc_n": 308,
+    "uc": 17.77,
+    "ann_n": 879,
+    "ann": 60.1,
+    "act_n": 1561,
+    "act": 31.6
+   },
+   {
+    "m": "2024-07",
+    "uc_n": 335,
+    "uc": 19.13,
+    "ann_n": 949,
+    "ann": 64.18,
+    "act_n": 1568,
+    "act": 32.12
+   },
+   {
+    "m": "2024-08",
+    "uc_n": 352,
+    "uc": 20.26,
+    "ann_n": 1026,
+    "ann": 68.48,
+    "act_n": 1577,
+    "act": 32.48
+   },
+   {
+    "m": "2024-09",
+    "uc_n": 367,
+    "uc": 21.25,
+    "ann_n": 1059,
+    "ann": 70.93,
+    "act_n": 1588,
+    "act": 32.95
+   },
+   {
+    "m": "2024-10",
+    "uc_n": 390,
+    "uc": 22.79,
+    "ann_n": 1188,
+    "ann": 82.12,
+    "act_n": 1604,
+    "act": 33.66
+   },
+   {
+    "m": "2024-11",
+    "uc_n": 401,
+    "uc": 23.77,
+    "ann_n": 1264,
+    "ann": 90.34,
+    "act_n": 1629,
+    "act": 34.97
+   },
+   {
+    "m": "2024-12",
+    "uc_n": 427,
+    "uc": 26.06,
+    "ann_n": 1313,
+    "ann": 93.98,
+    "act_n": 1636,
+    "act": 35.25
+   },
+   {
+    "m": "2025-01",
+    "uc_n": 449,
+    "uc": 27.63,
+    "ann_n": 1530,
+    "ann": 110.15,
+    "act_n": 1651,
+    "act": 35.91
+   },
+   {
+    "m": "2025-02",
+    "uc_n": 477,
+    "uc": 30.02,
+    "ann_n": 1656,
+    "ann": 119.28,
+    "act_n": 1656,
+    "act": 36.21
+   },
+   {
+    "m": "2025-03",
+    "uc_n": 499,
+    "uc": 31.89,
+    "ann_n": 1852,
+    "ann": 141.5,
+    "act_n": 1673,
+    "act": 37.04
+   },
+   {
+    "m": "2025-04",
+    "uc_n": 533,
+    "uc": 33.72,
+    "ann_n": 1970,
+    "ann": 155.63,
+    "act_n": 1682,
+    "act": 37.56
+   },
+   {
+    "m": "2025-05",
+    "uc_n": 541,
+    "uc": 34.61,
+    "ann_n": 2107,
+    "ann": 169.31,
+    "act_n": 1699,
+    "act": 38.35
+   },
+   {
+    "m": "2025-06",
+    "uc_n": 581,
+    "uc": 38.01,
+    "ann_n": 2229,
+    "ann": 187.94,
+    "act_n": 1715,
+    "act": 39.41
+   },
+   {
+    "m": "2025-07",
+    "uc_n": 600,
+    "uc": 40.03,
+    "ann_n": 2307,
+    "ann": 197.37,
+    "act_n": 1736,
+    "act": 40.42
+   },
+   {
+    "m": "2025-08",
+    "uc_n": 649,
+    "uc": 44.18,
+    "ann_n": 2446,
+    "ann": 220.5,
+    "act_n": 1745,
+    "act": 41.32
+   },
+   {
+    "m": "2025-09",
+    "uc_n": 685,
+    "uc": 48.32,
+    "ann_n": 2552,
+    "ann": 228.93,
+    "act_n": 1770,
+    "act": 42.37
+   },
+   {
+    "m": "2025-10",
+    "uc_n": 719,
+    "uc": 51.14,
+    "ann_n": 2682,
+    "ann": 242.19,
+    "act_n": 1776,
+    "act": 42.89
+   },
+   {
+    "m": "2025-11",
+    "uc_n": 735,
+    "uc": 53.84,
+    "ann_n": 2849,
+    "ann": 264.51,
+    "act_n": 1795,
+    "act": 43.84
+   },
+   {
+    "m": "2025-12",
+    "uc_n": 751,
+    "uc": 56.3,
+    "ann_n": 2989,
+    "ann": 273.74,
+    "act_n": 1807,
+    "act": 44.41
+   },
+   {
+    "m": "2026-01",
+    "uc_n": 787,
+    "uc": 60.82,
+    "ann_n": 3180,
+    "ann": 291.59,
+    "act_n": 1811,
+    "act": 44.54
+   },
+   {
+    "m": "2026-02",
+    "uc_n": 821,
+    "uc": 64.34,
+    "ann_n": 3346,
+    "ann": 317.22,
+    "act_n": 1826,
+    "act": 45.58
+   },
+   {
+    "m": "2026-03",
+    "uc_n": 846,
+    "uc": 68.51,
+    "ann_n": 3431,
+    "ann": 325.09,
+    "act_n": 1839,
+    "act": 46.26
+   },
+   {
+    "m": "2026-04",
+    "uc_n": 873,
+    "uc": 71.33,
+    "ann_n": 3594,
+    "ann": 334.52,
+    "act_n": 1845,
+    "act": 46.73
+   },
+   {
+    "m": "2026-05",
+    "uc_n": 882,
+    "uc": 73.78,
+    "ann_n": 3681,
+    "ann": 341.31,
+    "act_n": 1876,
+    "act": 48.41
+   },
+   {
+    "m": "2026-06",
+    "uc_n": 872,
+    "uc": 73.7,
+    "ann_n": 3877,
+    "ann": 362.1,
+    "act_n": 1907,
+    "act": 50.13
+   },
+   {
+    "m": "2026-07",
+    "uc_n": 891,
+    "uc": 76.21,
+    "ann_n": 3985,
+    "ann": 374.06,
+    "act_n": 1916,
+    "act": 50.84
+   },
+   {
+    "m": "2026-08",
+    "uc_n": 888,
+    "uc": 76.57,
+    "ann_n": 3990,
+    "ann": 376.37,
+    "act_n": 0,
+    "act": 0.0
+   }
+  ],
+  "iso": [
+   {
+    "ba": "PJM",
+    "name": "PJM Interconnection",
+    "demand_gw": 95.53,
+    "dc_gw": 18.74,
+    "share": 0.1961
+   },
+   {
+    "ba": "MISO",
+    "name": "Midcontinent Independent System Operator",
+    "demand_gw": 82.98,
+    "dc_gw": 4.7,
+    "share": 0.0566
+   },
+   {
+    "ba": "ERCO",
+    "name": "Electric Reliability Council of Texas",
+    "demand_gw": 72.56,
+    "dc_gw": 4.8,
+    "share": 0.0661
+   },
+   {
+    "ba": "CISO",
+    "name": "California Independent System Operator",
+    "demand_gw": 37.1,
+    "dc_gw": 2.37,
+    "share": 0.0639
+   },
+   {
+    "ba": "SWPP",
+    "name": "Southwest Power Pool",
+    "demand_gw": 22.64,
+    "dc_gw": 1.67,
+    "share": 0.0738
+   },
+   {
+    "ba": "NYIS",
+    "name": "New York Independent System Operator",
+    "demand_gw": 15.11,
+    "dc_gw": 0.29,
+    "share": 0.019
+   },
+   {
+    "ba": "ISNE",
+    "name": "ISO New England",
+    "demand_gw": 14.46,
+    "dc_gw": 0.23,
+    "share": 0.0158
+   },
+   {
+    "ba": "Dominion Virginia Power zone - PJM",
+    "name": "DOM",
+    "demand_gw": 0.34,
+    "dc_gw": 16.96,
+    "share": 12111.8755
+   },
+   {
+    "ba": "Pacific Gas and Electric",
+    "name": "PGAE",
+    "demand_gw": 0.11,
+    "dc_gw": 13.61,
+    "share": 1295.9584
+   },
+   {
+    "ba": "ERCO - North Central",
+    "name": "NCEN",
+    "demand_gw": 0.1,
+    "dc_gw": 22.48,
+    "share": 2146.7756
+   },
+   {
+    "ba": "Zones 3 and 5 - MISO",
+    "name": "0035",
+    "demand_gw": 0.08,
+    "dc_gw": 12.63,
+    "share": 2433.9226
+   },
+   {
+    "ba": "American Electric Power zone - PJM",
+    "name": "AEP",
+    "demand_gw": 0.08,
+    "dc_gw": 17.14,
+    "share": 3116.7863
+   },
+   {
+    "ba": "Commonwealth Edison zone - PJM",
+    "name": "CE",
+    "demand_gw": 0.08,
+    "dc_gw": 11.67,
+    "share": 1770.2379
+   },
+   {
+    "ba": "Southern California Edison - CISO",
+    "name": "SCE",
+    "demand_gw": 0.07,
+    "dc_gw": 19.7,
+    "share": 1046.4699
+   },
+   {
+    "ba": "ERCO - South Central",
+    "name": "SCEN",
+    "demand_gw": 0.06,
+    "dc_gw": 12.38,
+    "share": 1617.1042
+   },
+   {
+    "ba": "Zones 2 and 7 - MISO",
+    "name": "0027",
+    "demand_gw": 0.05,
+    "dc_gw": 21.02,
+    "share": 588.0715
+   },
+   {
+    "ba": "Public Service Electric & Gas of New Jersey zone - PJM",
+    "name": "PS",
+    "demand_gw": 0.04,
+    "dc_gw": 5.08,
+    "share": 498.486
+   },
+   {
+    "ba": "ERCO - Coast",
+    "name": "COAS",
+    "demand_gw": 0.03,
+    "dc_gw": 19.21,
+    "share": 438.0347
+   },
+   {
+    "ba": "Zone 1 - MISO",
+    "name": "0001",
+    "demand_gw": 0.03,
+    "dc_gw": 12.34,
+    "share": 332.6843
+   },
+   {
+    "ba": "Zone 6 - MISO",
+    "name": "0006",
+    "demand_gw": 0.03,
+    "dc_gw": 11.21,
+    "share": 965.2961
+   },
+   {
+    "ba": "Omaha Public Power District - SWPP",
+    "name": "OPPD",
+    "demand_gw": 0.02,
+    "dc_gw": 2.38,
+    "share": 905.9635
+   },
+   {
+    "ba": "Zones 8, 9 and 10 - MISO",
+    "name": "8910",
+    "demand_gw": 0.02,
+    "dc_gw": 25.78,
+    "share": 380.7997
+   },
+   {
+    "ba": "New York City - NYIS",
+    "name": "ZONJ",
+    "demand_gw": 0.02,
+    "dc_gw": 6.36,
+    "share": 141.2023
+   },
+   {
+    "ba": "ISNE - Northeast Mass.",
+    "name": "4008",
+    "demand_gw": 0.02,
+    "dc_gw": 3.0,
+    "share": 102.7438
+   },
+   {
+    "ba": "San Diego Gas and Electric - CISO",
+    "name": "SDGE",
+    "demand_gw": 0.01,
+    "dc_gw": 3.79,
+    "share": 26.7446
+   },
+   {
+    "ba": "ERCO - Far West",
+    "name": "FWES",
+    "demand_gw": 0.01,
+    "dc_gw": 7.86,
+    "share": 374.9927
+   },
+   {
+    "ba": "ERCO - South",
+    "name": "SOUT",
+    "demand_gw": 0.01,
+    "dc_gw": 5.84,
+    "share": 33.6002
+   },
+   {
+    "ba": "Grand River Dam Authority - SWPP",
+    "name": "GRDA",
+    "demand_gw": 0.01,
+    "dc_gw": 1.42,
+    "share": 507.605
+   },
+   {
+    "ba": "Independence Power - SWPP",
+    "name": "INDN",
+    "demand_gw": 0.01,
+    "dc_gw": 0.16,
+    "share": 62.6457
+   },
+   {
+    "ba": "Oklahoma Gas and Electric Co. - SWPP",
+    "name": "OKGE",
+    "demand_gw": 0.01,
+    "dc_gw": 5.8,
+    "share": 33.1623
+   },
+   {
+    "ba": "Westar Energy - SWPP",
+    "name": "WR",
+    "demand_gw": 0.01,
+    "dc_gw": 4.77,
+    "share": 38.3018
+   },
+   {
+    "ba": "American Transmission Systems, Inc. zone - PJM",
+    "name": "ATSI",
+    "demand_gw": 0.01,
+    "dc_gw": 8.09,
+    "share": 21.1182
+   },
+   {
+    "ba": "Baltimore Gas null zone - PJM",
+    "name": "BC",
+    "demand_gw": 0.01,
+    "dc_gw": 3.42,
+    "share": 43.2071
+   },
+   {
+    "ba": "Dayton Power null zone - PJM",
+    "name": "DAY",
+    "demand_gw": 0.01,
+    "dc_gw": 2.05,
+    "share": 572.53
+   },
+   {
+    "ba": "Duke Energy Ohio/Kentucky zone  - PJM",
+    "name": "DEOK",
+    "demand_gw": 0.01,
+    "dc_gw": 3.06,
+    "share": 69.6894
+   },
+   {
+    "ba": "Delmarva Power null zone - PJM",
+    "name": "DPL",
+    "demand_gw": 0.01,
+    "dc_gw": 2.05,
+    "share": 17.4699
+   },
+   {
+    "ba": "Duquesne Lighting Company zone - PJM",
+    "name": "DUQ",
+    "demand_gw": 0.01,
+    "dc_gw": 1.48,
+    "share": 25.7066
+   },
+   {
+    "ba": "East Kentucky Power Cooperative zone - PJM",
+    "name": "EKPC",
+    "demand_gw": 0.01,
+    "dc_gw": 1.56,
+    "share": 19.7629
+   },
+   {
+    "ba": "Metropolitan Edison zone - PJM",
+    "name": "ME",
+    "demand_gw": 0.01,
+    "dc_gw": 1.76,
+    "share": 60.3006
+   },
+   {
+    "ba": "PECO Energy zone - PJM",
+    "name": "PE",
+    "demand_gw": 0.01,
+    "dc_gw": 4.4,
+    "share": 63.1792
+   },
+   {
+    "ba": "Potomac Electric Power zone - PJM",
+    "name": "PEP",
+    "demand_gw": 0.01,
+    "dc_gw": 3.24,
+    "share": 18.747
+   },
+   {
+    "ba": "Rockland Electric (East) zone - PJM",
+    "name": "RECO",
+    "demand_gw": 0.01,
+    "dc_gw": 0.19,
+    "share": 104.8881
+   },
+   {
+    "ba": "West - NYIS",
+    "name": "ZONA",
+    "demand_gw": 0.01,
+    "dc_gw": 1.71,
+    "share": 80.4266
+   },
+   {
+    "ba": "Capital - NYIS",
+    "name": "ZONF",
+    "demand_gw": 0.01,
+    "dc_gw": 1.27,
+    "share": 13.5962
+   },
+   {
+    "ba": "ISNE - New Hampshire",
+    "name": "4002",
+    "demand_gw": 0.01,
+    "dc_gw": 1.42,
+    "share": 2.6314
+   },
+   {
+    "ba": "ISNE - Connecticut",
+    "name": "4004",
+    "demand_gw": 0.01,
+    "dc_gw": 3.39,
+    "share": 53.5032
+   },
+   {
+    "ba": "ERCO - East",
+    "name": "EAST",
+    "demand_gw": 0.0,
+    "dc_gw": 2.45,
+    "share": 8.3305
+   },
+   {
+    "ba": "ERCO - North",
+    "name": "NRTH",
+    "demand_gw": 0.0,
+    "dc_gw": 2.35,
+    "share": 179.0
+   },
+   {
+    "ba": "Lincoln Electric System - SWPP",
+    "name": "LES",
+    "demand_gw": 0.0,
+    "dc_gw": 0.61,
+    "share": 97.0
+   },
+   {
+    "ba": "KCP&L Greater Missouri Operations - SWPP",
+    "name": "MPS",
+    "demand_gw": 0.0,
+    "dc_gw": 1.4,
+    "share": 4.4621
+   },
+   {
+    "ba": "City of Springfield - SWPP",
+    "name": "SPRM",
+    "demand_gw": 0.0,
+    "dc_gw": 0.58,
+    "share": 6.0
+   },
+   {
+    "ba": "Southwestern Public Service Company - SWPP",
+    "name": "SPS",
+    "demand_gw": 0.0,
+    "dc_gw": 5.52,
+    "share": 14.9579
+   },
+   {
+    "ba": "Atlantic Electric zone - PJM",
+    "name": "AE",
+    "demand_gw": 0.0,
+    "dc_gw": 1.28,
+    "share": 50.0
+   },
+   {
+    "ba": "Allegheny Power zone - PJM",
+    "name": "AP",
+    "demand_gw": 0.0,
+    "dc_gw": 5.53,
+    "share": 26.0
+   },
+   {
+    "ba": "Pennsylvania Power zone - PJM",
+    "name": "PL",
+    "demand_gw": 0.0,
+    "dc_gw": 4.69,
+    "share": 107.25
+   },
+   {
+    "ba": "Pennsylvania Electric zone - PJM",
+    "name": "PN",
+    "demand_gw": 0.0,
+    "dc_gw": 1.89,
+    "share": 40.0
+   },
+   {
+    "ba": "Genesee - NYIS",
+    "name": "ZONB",
+    "demand_gw": 0.0,
+    "dc_gw": 1.04,
+    "share": 2.9164
+   },
+   {
+    "ba": "Hudson Valley - NYIS",
+    "name": "ZONG",
+    "demand_gw": 0.0,
+    "dc_gw": 1.1,
+    "share": 10.0
+   },
+   {
+    "ba": "Millwood & Dunwoodie - NYIS",
+    "name": "ZONH & ZONI",
+    "demand_gw": 0.0,
+    "dc_gw": 0.98,
+    "share": 33.2112
+   },
+   {
+    "ba": "Long Island - NYIS",
+    "name": "ZONK",
+    "demand_gw": 0.0,
+    "dc_gw": 2.66,
+    "share": 6.0
+   },
+   {
+    "ba": "ISNE - Maine",
+    "name": "4001",
+    "demand_gw": 0.0,
+    "dc_gw": 1.28,
+    "share": 5.0
+   },
+   {
+    "ba": "ISNE - Vermont",
+    "name": "4003",
+    "demand_gw": 0.0,
+    "dc_gw": 0.6,
+    "share": 0.0
+   },
+   {
+    "ba": "ISNE - Rhode Island",
+    "name": "4005",
+    "demand_gw": 0.0,
+    "dc_gw": 0.97,
+    "share": 2.25
+   },
+   {
+    "ba": "ISNE - Southeast Mass.",
+    "name": "4006",
+    "demand_gw": 0.0,
+    "dc_gw": 1.85,
+    "share": 40.0
+   },
+   {
+    "ba": "ISNE - Western/Central Mass.",
+    "name": "4007",
+    "demand_gw": 0.0,
+    "dc_gw": 1.95,
+    "share": 21.737
+   }
+  ]
+ },
+ "snapshots": [
+  {
+   "date": "2024-12-31",
+   "n": 2863,
+   "active": 34.75,
+   "uc": 19.35,
+   "delayed": 0.0,
+   "ann": 44.85,
+   "wd": 0.0,
+   "n_uc": 361
+  },
+  {
+   "date": "2025-01-31",
+   "n": 3135,
+   "active": 38.06,
+   "uc": 18.6,
+   "delayed": 0.0,
+   "ann": 62.04,
+   "wd": 0.0,
+   "n_uc": 321
+  },
+  {
+   "date": "2025-02-28",
+   "n": 3318,
+   "active": 38.55,
+   "uc": 19.42,
+   "delayed": 0.0,
+   "ann": 68.82,
+   "wd": 0.0,
+   "n_uc": 340
+  },
+  {
+   "date": "2025-03-31",
+   "n": 3534,
+   "active": 39.58,
+   "uc": 19.58,
+   "delayed": 0.0,
+   "ann": 83.34,
+   "wd": 0.0,
+   "n_uc": 342
+  },
+  {
+   "date": "2025-04-30",
+   "n": 3709,
+   "active": 39.26,
+   "uc": 21.27,
+   "delayed": 0.18,
+   "ann": 94.5,
+   "wd": 0.69,
+   "n_uc": 374
+  },
+  {
+   "date": "2025-05-31",
+   "n": 3893,
+   "active": 38.88,
+   "uc": 22.11,
+   "delayed": 4.18,
+   "ann": 99.5,
+   "wd": 3.9,
+   "n_uc": 387
+  },
+  {
+   "date": "2025-06-30",
+   "n": 4140,
+   "active": 39.28,
+   "uc": 23.21,
+   "delayed": 4.38,
+   "ann": 121.88,
+   "wd": 4.02,
+   "n_uc": 419
+  },
+  {
+   "date": "2025-07-31",
+   "n": 4415,
+   "active": 39.44,
+   "uc": 23.89,
+   "delayed": 4.68,
+   "ann": 136.86,
+   "wd": 6.98,
+   "n_uc": 431
+  },
+  {
+   "date": "2025-08-31",
+   "n": 4770,
+   "active": 40.14,
+   "uc": 28.62,
+   "delayed": 1.55,
+   "ann": 158.26,
+   "wd": 12.66,
+   "n_uc": 496
+  },
+  {
+   "date": "2025-09-30",
+   "n": 4942,
+   "active": 41.76,
+   "uc": 31.55,
+   "delayed": 2.76,
+   "ann": 168.0,
+   "wd": 15.31,
+   "n_uc": 530
+  },
+  {
+   "date": "2025-10-31",
+   "n": 5193,
+   "active": 43.63,
+   "uc": 34.06,
+   "delayed": 2.84,
+   "ann": 176.34,
+   "wd": 17.11,
+   "n_uc": 544
+  },
+  {
+   "date": "2025-11-30",
+   "n": 5515,
+   "active": 44.77,
+   "uc": 37.7,
+   "delayed": 2.97,
+   "ann": 206.41,
+   "wd": 17.79,
+   "n_uc": 585
+  },
+  {
+   "date": "2025-12-31",
+   "n": 5680,
+   "active": 44.3,
+   "uc": 41.63,
+   "delayed": 2.97,
+   "ann": 215.61,
+   "wd": 18.15,
+   "n_uc": 624
+  },
+  {
+   "date": "2026-01-31",
+   "n": 5868,
+   "active": 44.72,
+   "uc": 46.19,
+   "delayed": 6.08,
+   "ann": 224.51,
+   "wd": 18.49,
+   "n_uc": 656
+  },
+  {
+   "date": "2026-02-28",
+   "n": 6122,
+   "active": 45.68,
+   "uc": 47.65,
+   "delayed": 5.46,
+   "ann": 241.51,
+   "wd": 19.98,
+   "n_uc": 671
+  },
+  {
+   "date": "2026-03-31",
+   "n": 6439,
+   "active": 45.64,
+   "uc": 51.77,
+   "delayed": 5.71,
+   "ann": 270.33,
+   "wd": 23.11,
+   "n_uc": 717
+  },
+  {
+   "date": "2026-04-30",
+   "n": 6628,
+   "active": 46.11,
+   "uc": 58.19,
+   "delayed": 6.63,
+   "ann": 283.01,
+   "wd": 25.63,
+   "n_uc": 768
+  },
+  {
+   "date": "2026-05-31",
+   "n": 6906,
+   "active": 46.03,
+   "uc": 62.47,
+   "delayed": 6.54,
+   "ann": 304.72,
+   "wd": 27.62,
+   "n_uc": 789
+  },
+  {
+   "date": "2026-06-30",
+   "n": 7132,
+   "active": 49.05,
+   "uc": 62.65,
+   "delayed": 7.18,
+   "ann": 318.49,
+   "wd": 30.97,
+   "n_uc": 766
+  },
+  {
+   "date": "2026-07-31",
+   "n": 7551,
+   "active": 50.27,
+   "uc": 68.1,
+   "delayed": 8.9,
+   "ann": 359.96,
+   "wd": 33.88,
+   "n_uc": 807
+  },
+  {
+   "date": "2026-08-31",
+   "n": 7813,
+   "active": 51.82,
+   "uc": 71.54,
+   "delayed": 8.84,
+   "ann": 382.7,
+   "wd": 40.0,
+   "n_uc": 821
+  }
+ ],
+ "comparisons": {
+  "2026-02-28": {
+   "base": "2026-02-28",
+   "old_n": 6122,
+   "old_gw": 360.28,
+   "matched": 5924,
+   "mat": {
+    "active": {
+     "active": 45.36,
+     "uc": 0.18,
+     "delayed": 0.0,
+     "ann": 0.07,
+     "wd": 0.0,
+     "dropped": 0.05,
+     "_total": 45.68
+    },
+    "uc": {
+     "active": 5.84,
+     "uc": 38.73,
+     "delayed": 1.64,
+     "ann": 0.67,
+     "wd": 0.0,
+     "dropped": 0.77,
+     "_total": 47.65
+    },
+    "delayed": {
+     "active": 0.03,
+     "uc": 0.28,
+     "delayed": 4.93,
+     "ann": 0.23,
+     "wd": 0.0,
+     "dropped": 0.0,
+     "_total": 5.46
+    },
+    "ann": {
+     "active": 0.06,
+     "uc": 14.11,
+     "delayed": 2.09,
+     "ann": 199.87,
+     "wd": 9.31,
+     "dropped": 16.06,
+     "_total": 241.51
+    },
+    "wd": {
+     "active": 0.0,
+     "uc": 0.16,
+     "delayed": 0.0,
+     "ann": 0.48,
+     "wd": 19.35,
+     "dropped": 0.0,
+     "_total": 19.98
+    }
+   },
+   "matn": {
+    "active": {
+     "active": 1944,
+     "uc": 4,
+     "delayed": 0,
+     "ann": 3,
+     "wd": 0,
+     "dropped": 3
+    },
+    "uc": {
+     "active": 89,
+     "uc": 540,
+     "delayed": 18,
+     "ann": 12,
+     "wd": 0,
+     "dropped": 12
+    },
+    "delayed": {
+     "active": 1,
+     "uc": 5,
+     "delayed": 61,
+     "ann": 4,
+     "wd": 0,
+     "dropped": 0
+    },
+    "ann": {
+     "active": 3,
+     "uc": 166,
+     "delayed": 12,
+     "ann": 2498,
+     "wd": 155,
+     "dropped": 183
+    },
+    "wd": {
+     "active": 0,
+     "uc": 3,
+     "delayed": 0,
+     "ann": 9,
+     "wd": 397,
+     "dropped": 0
+    }
+   },
+   "new": {
+    "n": 1889,
+    "gw": 180.44,
+    "after": {
+     "n": 953,
+     "gw": 87.88
+    },
+    "before": {
+     "n": 808,
+     "gw": 84.43
+    },
+    "undated": {
+     "n": 128,
+     "gw": 8.12
+    },
+    "by_grp": {
+     "active": 1.24,
+     "uc": 8.89,
+     "delayed": 0.0,
+     "ann": 159.79,
+     "wd": 10.51
+    },
+    "by_grp_before": {
+     "active": 0.67,
+     "uc": 4.9,
+     "delayed": 0.0,
+     "ann": 74.5,
+     "wd": 4.36
+    }
+   },
+   "dropped": {
+    "n": 198,
+    "gw": 16.89
+   },
+   "slip": {
+    "uc": {
+     "n": 654,
+     "gw": 46.65,
+     "bins": [
+      {
+       "label": "Pulled in",
+       "n": 68,
+       "gw": 5.58
+      },
+      {
+       "label": "Unchanged",
+       "n": 243,
+       "gw": 16.4
+      },
+      {
+       "label": "1-3 mo",
+       "n": 70,
+       "gw": 4.94
+      },
+      {
+       "label": "4-6 mo",
+       "n": 90,
+       "gw": 5.84
+      },
+      {
+       "label": "7-12 mo",
+       "n": 84,
+       "gw": 6.45
+      },
+      {
+       "label": "13-24 mo",
+       "n": 87,
+       "gw": 6.44
+      },
+      {
+       "label": ">24 mo",
+       "n": 12,
+       "gw": 0.99
+      }
+     ],
+     "share_later": 0.529,
+     "share_earlier": 0.12,
+     "wmean": 5.1,
+     "median": 2.0
+    },
+    "ann": {
+     "n": 2716,
+     "gw": 218.82,
+     "bins": [
+      {
+       "label": "Pulled in",
+       "n": 76,
+       "gw": 3.82
+      },
+      {
+       "label": "Unchanged",
+       "n": 1557,
+       "gw": 104.36
+      },
+      {
+       "label": "1-3 mo",
+       "n": 45,
+       "gw": 2.57
+      },
+      {
+       "label": "4-6 mo",
+       "n": 53,
+       "gw": 3.86
+      },
+      {
+       "label": "7-12 mo",
+       "n": 141,
+       "gw": 11.15
+      },
+      {
+       "label": "13-24 mo",
+       "n": 421,
+       "gw": 38.41
+      },
+      {
+       "label": ">24 mo",
+       "n": 423,
+       "gw": 54.65
+      }
+     ],
+     "share_later": 0.506,
+     "share_earlier": 0.017,
+     "wmean": 14.2,
+     "median": 0.0
+    }
+   },
+   "due": {
+    "gw": 10.89,
+    "n": 180,
+    "now": {
+     "active": 4.03,
+     "uc": 6.76,
+     "delayed": 0.11,
+     "ann": 0.0,
+     "wd": 0.0
+    }
+   }
+  },
+  "2025-08-31": {
+   "base": "2025-08-31",
+   "old_n": 4770,
+   "old_gw": 241.24,
+   "matched": 4483,
+   "mat": {
+    "active": {
+     "active": 39.27,
+     "uc": 0.29,
+     "delayed": 0.15,
+     "ann": 0.14,
+     "wd": 0.24,
+     "dropped": 0.06,
+     "_total": 40.14
+    },
+    "uc": {
+     "active": 9.15,
+     "uc": 16.8,
+     "delayed": 1.38,
+     "ann": 0.95,
+     "wd": 0.0,
+     "dropped": 0.33,
+     "_total": 28.62
+    },
+    "delayed": {
+     "active": 0.0,
+     "uc": 0.41,
+     "delayed": 0.8,
+     "ann": 0.0,
+     "wd": 0.05,
+     "dropped": 0.3,
+     "_total": 1.55
+    },
+    "ann": {
+     "active": 0.25,
+     "uc": 16.76,
+     "delayed": 5.68,
+     "ann": 106.81,
+     "wd": 9.31,
+     "dropped": 19.45,
+     "_total": 158.26
+    },
+    "wd": {
+     "active": 0.0,
+     "uc": 0.16,
+     "delayed": 0.0,
+     "ann": 1.1,
+     "wd": 11.4,
+     "dropped": 0.0,
+     "_total": 12.66
+    }
+   },
+   "matn": {
+    "active": {
+     "active": 1825,
+     "uc": 9,
+     "delayed": 2,
+     "ann": 7,
+     "wd": 3,
+     "dropped": 11
+    },
+    "uc": {
+     "active": 171,
+     "uc": 271,
+     "delayed": 27,
+     "ann": 20,
+     "wd": 0,
+     "dropped": 7
+    },
+    "delayed": {
+     "active": 0,
+     "uc": 7,
+     "delayed": 13,
+     "ann": 0,
+     "wd": 1,
+     "dropped": 3
+    },
+    "ann": {
+     "active": 10,
+     "uc": 262,
+     "delayed": 48,
+     "ann": 1424,
+     "wd": 176,
+     "dropped": 266
+    },
+    "wd": {
+     "active": 0,
+     "uc": 3,
+     "delayed": 0,
+     "ann": 19,
+     "wd": 185,
+     "dropped": 0
+    }
+   },
+   "new": {
+    "n": 3330,
+    "gw": 308.33,
+    "after": {
+     "n": 2239,
+     "gw": 213.36
+    },
+    "before": {
+     "n": 814,
+     "gw": 77.82
+    },
+    "undated": {
+     "n": 277,
+     "gw": 17.15
+    },
+    "by_grp": {
+     "active": 2.91,
+     "uc": 25.59,
+     "delayed": 0.07,
+     "ann": 260.82,
+     "wd": 18.93
+    },
+    "by_grp_before": {
+     "active": 1.86,
+     "uc": 11.04,
+     "delayed": 0.0,
+     "ann": 64.26,
+     "wd": 0.66
+    }
+   },
+   "dropped": {
+    "n": 287,
+    "gw": 20.14
+   },
+   "slip": {
+    "uc": {
+     "n": 391,
+     "gw": 22.31,
+     "bins": [
+      {
+       "label": "Pulled in",
+       "n": 22,
+       "gw": 1.01
+      },
+      {
+       "label": "Unchanged",
+       "n": 34,
+       "gw": 1.62
+      },
+      {
+       "label": "1-3 mo",
+       "n": 43,
+       "gw": 1.77
+      },
+      {
+       "label": "4-6 mo",
+       "n": 48,
+       "gw": 2.85
+      },
+      {
+       "label": "7-12 mo",
+       "n": 108,
+       "gw": 6.39
+      },
+      {
+       "label": "13-24 mo",
+       "n": 105,
+       "gw": 6.96
+      },
+      {
+       "label": ">24 mo",
+       "n": 31,
+       "gw": 1.7
+      }
+     ],
+     "share_later": 0.882,
+     "share_earlier": 0.045,
+     "wmean": 11.6,
+     "median": 9.0
+    },
+    "ann": {
+     "n": 1104,
+     "gw": 73.87,
+     "bins": [
+      {
+       "label": "Pulled in",
+       "n": 40,
+       "gw": 2.82
+      },
+      {
+       "label": "Unchanged",
+       "n": 394,
+       "gw": 25.48
+      },
+      {
+       "label": "1-3 mo",
+       "n": 28,
+       "gw": 1.86
+      },
+      {
+       "label": "4-6 mo",
+       "n": 53,
+       "gw": 2.98
+      },
+      {
+       "label": "7-12 mo",
+       "n": 123,
+       "gw": 9.33
+      },
+      {
+       "label": "13-24 mo",
+       "n": 270,
+       "gw": 17.47
+      },
+      {
+       "label": ">24 mo",
+       "n": 196,
+       "gw": 13.93
+      }
+     ],
+     "share_later": 0.617,
+     "share_earlier": 0.038,
+     "wmean": 12.5,
+     "median": 9.0
+    }
+   },
+   "due": {
+    "gw": 15.23,
+    "n": 282,
+    "now": {
+     "active": 3.92,
+     "uc": 9.78,
+     "delayed": 1.0,
+     "ann": 0.53,
+     "wd": 0.0
+    }
+   }
+  },
+  "2024-12-31": {
+   "base": "2024-12-31",
+   "old_n": 2863,
+   "old_gw": 98.94,
+   "matched": 2747,
+   "mat": {
+    "active": {
+     "active": 34.05,
+     "uc": 0.22,
+     "delayed": 0.15,
+     "ann": 0.16,
+     "wd": 0.01,
+     "dropped": 0.17,
+     "_total": 34.75
+    },
+    "uc": {
+     "active": 9.71,
+     "uc": 7.28,
+     "delayed": 0.96,
+     "ann": 0.76,
+     "wd": 0.0,
+     "dropped": 0.64,
+     "_total": 19.35
+    },
+    "delayed": {
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0,
+     "dropped": 0.0,
+     "_total": 0.0
+    },
+    "ann": {
+     "active": 1.73,
+     "uc": 11.47,
+     "delayed": 0.44,
+     "ann": 22.78,
+     "wd": 3.92,
+     "dropped": 4.49,
+     "_total": 44.85
+    },
+    "wd": {
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0,
+     "dropped": 0.0,
+     "_total": 0.0
+    }
+   },
+   "matn": {
+    "active": {
+     "active": 1668,
+     "uc": 9,
+     "delayed": 2,
+     "ann": 5,
+     "wd": 2,
+     "dropped": 13
+    },
+    "uc": {
+     "active": 190,
+     "uc": 114,
+     "delayed": 20,
+     "ann": 16,
+     "wd": 0,
+     "dropped": 21
+    },
+    "delayed": {
+     "active": 0,
+     "uc": 0,
+     "delayed": 0,
+     "ann": 0,
+     "wd": 0,
+     "dropped": 0
+    },
+    "ann": {
+     "active": 38,
+     "uc": 196,
+     "delayed": 9,
+     "ann": 390,
+     "wd": 88,
+     "dropped": 82
+    },
+    "wd": {
+     "active": 0,
+     "uc": 0,
+     "delayed": 0,
+     "ann": 0,
+     "wd": 0,
+     "dropped": 0
+    }
+   },
+   "new": {
+    "n": 5066,
+    "gw": 452.95,
+    "after": {
+     "n": 3812,
+     "gw": 371.32
+    },
+    "before": {
+     "n": 856,
+     "gw": 60.82
+    },
+    "undated": {
+     "n": 398,
+     "gw": 20.82
+    },
+    "by_grp": {
+     "active": 5.95,
+     "uc": 48.33,
+     "delayed": 7.16,
+     "ann": 355.58,
+     "wd": 35.93
+    },
+    "by_grp_before": {
+     "active": 2.2,
+     "uc": 13.82,
+     "delayed": 0.89,
+     "ann": 38.3,
+     "wd": 5.61
+    }
+   },
+   "dropped": {
+    "n": 116,
+    "gw": 5.3
+   },
+   "slip": {
+    "uc": {
+     "n": 306,
+     "gw": 16.9,
+     "bins": [
+      {
+       "label": "Pulled in",
+       "n": 39,
+       "gw": 1.63
+      },
+      {
+       "label": "Unchanged",
+       "n": 32,
+       "gw": 1.4
+      },
+      {
+       "label": "1-3 mo",
+       "n": 41,
+       "gw": 2.21
+      },
+      {
+       "label": "4-6 mo",
+       "n": 32,
+       "gw": 1.81
+      },
+      {
+       "label": "7-12 mo",
+       "n": 52,
+       "gw": 3.75
+      },
+      {
+       "label": "13-24 mo",
+       "n": 73,
+       "gw": 4.3
+      },
+      {
+       "label": ">24 mo",
+       "n": 37,
+       "gw": 1.8
+      }
+     ],
+     "share_later": 0.821,
+     "share_earlier": 0.097,
+     "wmean": 10.2,
+     "median": 8.0
+    },
+    "ann": {
+     "n": 665,
+     "gw": 37.49,
+     "bins": [
+      {
+       "label": "Pulled in",
+       "n": 41,
+       "gw": 2.73
+      },
+      {
+       "label": "Unchanged",
+       "n": 162,
+       "gw": 9.65
+      },
+      {
+       "label": "1-3 mo",
+       "n": 29,
+       "gw": 1.63
+      },
+      {
+       "label": "4-6 mo",
+       "n": 29,
+       "gw": 1.53
+      },
+      {
+       "label": "7-12 mo",
+       "n": 89,
+       "gw": 5.01
+      },
+      {
+       "label": "13-24 mo",
+       "n": 178,
+       "gw": 9.65
+      },
+      {
+       "label": ">24 mo",
+       "n": 137,
+       "gw": 7.29
+      }
+     ],
+     "share_later": 0.67,
+     "share_earlier": 0.073,
+     "wmean": 11.9,
+     "median": 12.0
+    }
+   },
+   "due": {
+    "gw": 16.04,
+    "n": 290,
+    "now": {
+     "active": 7.96,
+     "uc": 6.49,
+     "delayed": 0.96,
+     "ann": 0.63,
+     "wd": 0.0
+    }
+   }
+  }
+ },
+ "default_base": "2025-08-31",
+ "flows": {
+  "q": [
+   "2021Q1",
+   "2021Q2",
+   "2021Q3",
+   "2021Q4",
+   "2022Q1",
+   "2022Q2",
+   "2022Q3",
+   "2022Q4",
+   "2023Q1",
+   "2023Q2",
+   "2023Q3",
+   "2023Q4",
+   "2024Q1",
+   "2024Q2",
+   "2024Q3",
+   "2024Q4",
+   "2025Q1",
+   "2025Q2",
+   "2025Q3",
+   "2025Q4",
+   "2026Q1",
+   "2026Q2",
+   "2026Q3"
+  ],
+  "ann": [
+   1.35,
+   1.44,
+   1.83,
+   0.62,
+   0.89,
+   2.73,
+   2.27,
+   3.88,
+   2.56,
+   5.12,
+   6.01,
+   8.51,
+   15.52,
+   18.51,
+   14.54,
+   29.07,
+   54.31,
+   57.19,
+   59.99,
+   58.12,
+   66.46,
+   50.35,
+   24.95
+  ],
+  "ann_n": [
+   30,
+   31,
+   30,
+   9,
+   14,
+   46,
+   35,
+   65,
+   46,
+   79,
+   87,
+   129,
+   219,
+   249,
+   246,
+   346,
+   632,
+   546,
+   565,
+   619,
+   622,
+   598,
+   231
+  ],
+  "start": [
+   0.87,
+   0.8,
+   0.57,
+   0.91,
+   0.95,
+   1.3,
+   0.95,
+   0.75,
+   0.75,
+   2.32,
+   2.11,
+   1.9,
+   4.62,
+   4.04,
+   4.57,
+   6.58,
+   7.48,
+   8.18,
+   13.15,
+   9.96,
+   14.05,
+   9.0,
+   4.1
+  ],
+  "start_n": [
+   21,
+   17,
+   17,
+   16,
+   21,
+   27,
+   22,
+   12,
+   17,
+   47,
+   39,
+   25,
+   74,
+   70,
+   79,
+   96,
+   105,
+   120,
+   153,
+   100,
+   126,
+   91,
+   36
+  ],
+  "active": [
+   0.65,
+   0.82,
+   0.67,
+   0.46,
+   0.54,
+   0.81,
+   0.89,
+   1.06,
+   0.88,
+   0.87,
+   1.06,
+   1.41,
+   1.07,
+   1.3,
+   1.35,
+   2.3,
+   1.79,
+   2.37,
+   2.96,
+   2.04,
+   1.85,
+   3.87,
+   1.35
+  ],
+  "active_n": [
+   20,
+   20,
+   19,
+   14,
+   17,
+   21,
+   15,
+   26,
+   26,
+   22,
+   24,
+   32,
+   24,
+   29,
+   27,
+   48,
+   37,
+   42,
+   55,
+   37,
+   32,
+   68,
+   24
+  ],
+  "wd": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.27,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   2.05,
+   0.21,
+   0.41,
+   0.61,
+   2.6,
+   10.13,
+   4.3,
+   3.05,
+   5.07,
+   7.17
+  ],
+  "wd_n": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   4,
+   0,
+   0,
+   0,
+   0,
+   1,
+   38,
+   4,
+   14,
+   13,
+   53,
+   142,
+   106,
+   89,
+   84,
+   92
+  ],
+  "delayed": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.1,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.05,
+   0.34,
+   0.27,
+   0.0,
+   0.26,
+   0.0,
+   0.0
+  ],
+  "delayed_n": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   0,
+   0,
+   0,
+   1,
+   7,
+   5,
+   0,
+   4,
+   0,
+   0
+  ],
+  "cancel": [
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.0,
+   0.02,
+   0.0,
+   0.21,
+   0.0,
+   0.03,
+   0.96,
+   0.02,
+   0.0,
+   0.25,
+   0.0,
+   0.0
+  ],
+  "cancel_n": [
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   0,
+   1,
+   0,
+   4,
+   0,
+   1,
+   15,
+   1,
+   0,
+   6,
+   0,
+   0
+  ]
+ },
+ "events": {
+  "rows": 19875,
+  "us_rows": 19298,
+  "types": [
+   {
+    "type": "Active",
+    "n": 7471
+   },
+   {
+    "type": "Announced",
+    "n": 5637
+   },
+   {
+    "type": "Construction Started",
+    "n": 1858
+   },
+   {
+    "type": "Not Approved/Withdrawn",
+    "n": 640
+   },
+   {
+    "type": "Under Construction (10% Complete)",
+    "n": 483
+   },
+   {
+    "type": "Under Construction (5% Complete)",
+    "n": 449
+   },
+   {
+    "type": "Construction Finished",
+    "n": 413
+   },
+   {
+    "type": "Under Construction (15% Complete)",
+    "n": 384
+   },
+   {
+    "type": "Under Construction (85% Complete)",
+    "n": 304
+   },
+   {
+    "type": "Under Construction (70% Complete)",
+    "n": 235
+   },
+   {
+    "type": "Under Construction (95% Complete)",
+    "n": 216
+   },
+   {
+    "type": "Under Construction (20% Complete)",
+    "n": 213
+   },
+   {
+    "type": "Under Construction (90% Complete)",
+    "n": 212
+   },
+   {
+    "type": "Under Construction (60% Complete)",
+    "n": 198
+   },
+   {
+    "type": "Under Construction (50% Complete)",
+    "n": 192
+   },
+   {
+    "type": "Under Construction (40% Complete)",
+    "n": 189
+   },
+   {
+    "type": "Under Construction (30% Complete)",
+    "n": 111
+   },
+   {
+    "type": "Land Bank Purchase",
+    "n": 47
+   },
+   {
+    "type": "Cancelled",
+    "n": 28
+   },
+   {
+    "type": "Delayed",
+    "n": 18
+   }
+  ],
+  "future_active": 5540
+ },
+ "states": {
+  "AK": {
+   "name": "Alaska",
+   "n": 5,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "n_active": 0,
+   "n_uc": 0,
+   "n_delayed": 0,
+   "n_ann": 5,
+   "n_wd": 0,
+   "ai": 0.0,
+   "btm": 1,
+   "ann_hi": 0.0
+  },
+  "AL": {
+   "name": "Alabama",
+   "n": 71,
+   "active": 0.46,
+   "uc": 0.92,
+   "delayed": 0.0,
+   "ann": 2.43,
+   "wd": 0.0,
+   "n_active": 16,
+   "n_uc": 11,
+   "n_delayed": 0,
+   "n_ann": 44,
+   "n_wd": 0,
+   "ai": 0.83,
+   "btm": 0,
+   "ann_hi": 0.2
+  },
+  "AR": {
+   "name": "Arkansas",
+   "n": 29,
+   "active": 0.01,
+   "uc": 0.3,
+   "delayed": 0.0,
+   "ann": 2.74,
+   "wd": 0.0,
+   "n_active": 4,
+   "n_uc": 3,
+   "n_delayed": 0,
+   "n_ann": 22,
+   "n_wd": 0,
+   "ai": 1.17,
+   "btm": 18,
+   "ann_hi": 0.61
+  },
+  "AZ": {
+   "name": "Arizona",
+   "n": 320,
+   "active": 2.94,
+   "uc": 2.15,
+   "delayed": 0.0,
+   "ann": 10.31,
+   "wd": 4.06,
+   "n_active": 85,
+   "n_uc": 36,
+   "n_delayed": 0,
+   "n_ann": 156,
+   "n_wd": 43,
+   "ai": 2.85,
+   "btm": 16,
+   "ann_hi": 3.8
+  },
+  "CA": {
+   "name": "California",
+   "n": 248,
+   "active": 1.73,
+   "uc": 0.36,
+   "delayed": 0.16,
+   "ann": 3.81,
+   "wd": 0.74,
+   "n_active": 168,
+   "n_uc": 9,
+   "n_delayed": 3,
+   "n_ann": 53,
+   "n_wd": 15,
+   "ai": 1.88,
+   "btm": 5,
+   "ann_hi": 1.07
+  },
+  "CO": {
+   "name": "Colorado",
+   "n": 49,
+   "active": 0.25,
+   "uc": 0.16,
+   "delayed": 0.0,
+   "ann": 0.49,
+   "wd": 0.25,
+   "n_active": 32,
+   "n_uc": 4,
+   "n_delayed": 0,
+   "n_ann": 8,
+   "n_wd": 5,
+   "ai": 0.38,
+   "btm": 0,
+   "ann_hi": 0.09
+  },
+  "CT": {
+   "name": "Connecticut",
+   "n": 40,
+   "active": 0.05,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.96,
+   "n_active": 7,
+   "n_uc": 0,
+   "n_delayed": 0,
+   "n_ann": 1,
+   "n_wd": 32,
+   "ai": 0.0,
+   "btm": 0,
+   "ann_hi": 0.0
+  },
+  "DC": {
+   "name": "District Of Columbia",
+   "n": 6,
+   "active": 0.02,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "n_active": 6,
+   "n_uc": 0,
+   "n_delayed": 0,
+   "n_ann": 0,
+   "n_wd": 0,
+   "ai": 0.0,
+   "btm": 0,
+   "ann_hi": 0.0
+  },
+  "DE": {
+   "name": "Delaware",
+   "n": 19,
+   "active": 0.02,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.16,
+   "wd": 0.86,
+   "n_active": 6,
+   "n_uc": 0,
+   "n_delayed": 0,
+   "n_ann": 3,
+   "n_wd": 10,
+   "ai": 0.0,
+   "btm": 0,
+   "ann_hi": 0.0
+  },
+  "FL": {
+   "name": "Florida",
+   "n": 110,
+   "active": 0.19,
+   "uc": 0.02,
+   "delayed": 0.0,
+   "ann": 5.21,
+   "wd": 1.31,
+   "n_active": 54,
+   "n_uc": 1,
+   "n_delayed": 0,
+   "n_ann": 40,
+   "n_wd": 15,
+   "ai": 3.99,
+   "btm": 23,
+   "ann_hi": 0.61
+  },
+  "GA": {
+   "name": "Georgia",
+   "n": 547,
+   "active": 2.31,
+   "uc": 4.55,
+   "delayed": 0.0,
+   "ann": 25.73,
+   "wd": 6.14,
+   "n_active": 70,
+   "n_uc": 57,
+   "n_delayed": 0,
+   "n_ann": 355,
+   "n_wd": 65,
+   "ai": 5.56,
+   "btm": 4,
+   "ann_hi": 10.61
+  },
+  "HI": {
+   "name": "Hawaii",
+   "n": 2,
+   "active": 0.01,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "n_active": 2,
+   "n_uc": 0,
+   "n_delayed": 0,
+   "n_ann": 0,
+   "n_wd": 0,
+   "ai": 0.0,
+   "btm": 0,
+   "ann_hi": 0.0
+  },
+  "IA": {
+   "name": "Iowa",
+   "n": 118,
+   "active": 2.06,
+   "uc": 1.54,
+   "delayed": 0.0,
+   "ann": 2.79,
+   "wd": 0.0,
+   "n_active": 63,
+   "n_uc": 14,
+   "n_delayed": 0,
+   "n_ann": 41,
+   "n_wd": 0,
+   "ai": 0.68,
+   "btm": 6,
+   "ann_hi": 1.72
+  },
+  "ID": {
+   "name": "Idaho",
+   "n": 22,
+   "active": 0.17,
+   "uc": 0.1,
+   "delayed": 0.0,
+   "ann": 0.01,
+   "wd": 0.1,
+   "n_active": 6,
+   "n_uc": 2,
+   "n_delayed": 0,
+   "n_ann": 7,
+   "n_wd": 7,
+   "ai": 0.0,
+   "btm": 7,
+   "ann_hi": 0.0
+  },
+  "IL": {
+   "name": "Illinois",
+   "n": 278,
+   "active": 1.81,
+   "uc": 1.25,
+   "delayed": 0.0,
+   "ann": 13.59,
+   "wd": 0.11,
+   "n_active": 81,
+   "n_uc": 23,
+   "n_delayed": 0,
+   "n_ann": 162,
+   "n_wd": 12,
+   "ai": 2.48,
+   "btm": 5,
+   "ann_hi": 5.17
+  },
+  "IN": {
+   "name": "Indiana",
+   "n": 265,
+   "active": 1.02,
+   "uc": 2.36,
+   "delayed": 0.0,
+   "ann": 9.07,
+   "wd": 0.54,
+   "n_active": 33,
+   "n_uc": 27,
+   "n_delayed": 0,
+   "n_ann": 141,
+   "n_wd": 64,
+   "ai": 5.8,
+   "btm": 0,
+   "ann_hi": 6.69
+  },
+  "KS": {
+   "name": "Kansas",
+   "n": 50,
+   "active": 0.04,
+   "uc": 0.32,
+   "delayed": 0.0,
+   "ann": 3.24,
+   "wd": 0.0,
+   "n_active": 8,
+   "n_uc": 3,
+   "n_delayed": 0,
+   "n_ann": 34,
+   "n_wd": 5,
+   "ai": 0.61,
+   "btm": 5,
+   "ann_hi": 1.71
+  },
+  "KY": {
+   "name": "Kentucky",
+   "n": 94,
+   "active": 0.03,
+   "uc": 0.11,
+   "delayed": 0.0,
+   "ann": 9.19,
+   "wd": 0.47,
+   "n_active": 12,
+   "n_uc": 2,
+   "n_delayed": 0,
+   "n_ann": 71,
+   "n_wd": 9,
+   "ai": 5.62,
+   "btm": 4,
+   "ann_hi": 3.5
+  },
+  "LA": {
+   "name": "Louisiana",
+   "n": 49,
+   "active": 0.04,
+   "uc": 3.2,
+   "delayed": 0.0,
+   "ann": 3.97,
+   "wd": 0.0,
+   "n_active": 10,
+   "n_uc": 18,
+   "n_delayed": 0,
+   "n_ann": 21,
+   "n_wd": 0,
+   "ai": 6.26,
+   "btm": 0,
+   "ann_hi": 0.97
+  },
+  "MA": {
+   "name": "Massachusetts",
+   "n": 23,
+   "active": 0.16,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "n_active": 23,
+   "n_uc": 0,
+   "n_delayed": 0,
+   "n_ann": 0,
+   "n_wd": 0,
+   "ai": 0.0,
+   "btm": 0,
+   "ann_hi": 0.0
+  },
+  "MD": {
+   "name": "Maryland",
+   "n": 53,
+   "active": 0.04,
+   "uc": 0.9,
+   "delayed": 0.0,
+   "ann": 1.52,
+   "wd": 1.4,
+   "n_active": 12,
+   "n_uc": 15,
+   "n_delayed": 0,
+   "n_ann": 13,
+   "n_wd": 13,
+   "ai": 0.64,
+   "btm": 0,
+   "ann_hi": 1.01
+  },
+  "ME": {
+   "name": "Maine",
+   "n": 12,
+   "active": 0.01,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.45,
+   "wd": 0.06,
+   "n_active": 4,
+   "n_uc": 0,
+   "n_delayed": 0,
+   "n_ann": 7,
+   "n_wd": 1,
+   "ai": 0.06,
+   "btm": 5,
+   "ann_hi": 0.0
+  },
+  "MI": {
+   "name": "Michigan",
+   "n": 71,
+   "active": 0.24,
+   "uc": 1.4,
+   "delayed": 0.0,
+   "ann": 2.23,
+   "wd": 0.5,
+   "n_active": 31,
+   "n_uc": 3,
+   "n_delayed": 0,
+   "n_ann": 24,
+   "n_wd": 13,
+   "ai": 1.4,
+   "btm": 0,
+   "ann_hi": 1.04
+  },
+  "MN": {
+   "name": "Minnesota",
+   "n": 102,
+   "active": 0.24,
+   "uc": 0.1,
+   "delayed": 0.0,
+   "ann": 2.08,
+   "wd": 1.08,
+   "n_active": 29,
+   "n_uc": 3,
+   "n_delayed": 0,
+   "n_ann": 49,
+   "n_wd": 21,
+   "ai": 0.08,
+   "btm": 6,
+   "ann_hi": 1.51
+  },
+  "MO": {
+   "name": "Missouri",
+   "n": 123,
+   "active": 0.45,
+   "uc": 2.37,
+   "delayed": 0.0,
+   "ann": 3.73,
+   "wd": 1.61,
+   "n_active": 26,
+   "n_uc": 15,
+   "n_delayed": 0,
+   "n_ann": 54,
+   "n_wd": 28,
+   "ai": 2.52,
+   "btm": 1,
+   "ann_hi": 2.85
+  },
+  "MS": {
+   "name": "Mississippi",
+   "n": 56,
+   "active": 0.68,
+   "uc": 1.62,
+   "delayed": 0.0,
+   "ann": 1.87,
+   "wd": 0.0,
+   "n_active": 11,
+   "n_uc": 22,
+   "n_delayed": 0,
+   "n_ann": 23,
+   "n_wd": 0,
+   "ai": 1.66,
+   "btm": 8,
+   "ann_hi": 1.87
+  },
+  "MT": {
+   "name": "Montana",
+   "n": 24,
+   "active": 0.09,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.5,
+   "wd": 0.85,
+   "n_active": 4,
+   "n_uc": 0,
+   "n_delayed": 0,
+   "n_ann": 9,
+   "n_wd": 11,
+   "ai": 0.5,
+   "btm": 8,
+   "ann_hi": 0.5
+  },
+  "NC": {
+   "name": "North Carolina",
+   "n": 137,
+   "active": 0.64,
+   "uc": 1.23,
+   "delayed": 0.65,
+   "ann": 3.3,
+   "wd": 1.58,
+   "n_active": 44,
+   "n_uc": 14,
+   "n_delayed": 12,
+   "n_ann": 46,
+   "n_wd": 21,
+   "ai": 1.91,
+   "btm": 3,
+   "ann_hi": 2.07
+  },
+  "ND": {
+   "name": "North Dakota",
+   "n": 23,
+   "active": 0.1,
+   "uc": 0.81,
+   "delayed": 0.0,
+   "ann": 1.77,
+   "wd": 0.0,
+   "n_active": 2,
+   "n_uc": 6,
+   "n_delayed": 0,
+   "n_ann": 15,
+   "n_wd": 0,
+   "ai": 2.03,
+   "btm": 6,
+   "ann_hi": 0.67
+  },
+  "NE": {
+   "name": "Nebraska",
+   "n": 42,
+   "active": 1.0,
+   "uc": 0.45,
+   "delayed": 0.0,
+   "ann": 0.72,
+   "wd": 0.0,
+   "n_active": 27,
+   "n_uc": 5,
+   "n_delayed": 0,
+   "n_ann": 10,
+   "n_wd": 0,
+   "ai": 0.0,
+   "btm": 0,
+   "ann_hi": 0.67
+  },
+  "NH": {
+   "name": "New Hampshire",
+   "n": 7,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "n_active": 6,
+   "n_uc": 0,
+   "n_delayed": 0,
+   "n_ann": 0,
+   "n_wd": 1,
+   "ai": 0.0,
+   "btm": 0,
+   "ann_hi": 0.0
+  },
+  "NJ": {
+   "name": "New Jersey",
+   "n": 66,
+   "active": 0.65,
+   "uc": 0.33,
+   "delayed": 0.04,
+   "ann": 0.34,
+   "wd": 0.1,
+   "n_active": 49,
+   "n_uc": 3,
+   "n_delayed": 1,
+   "n_ann": 8,
+   "n_wd": 5,
+   "ai": 0.5,
+   "btm": 7,
+   "ann_hi": 0.17
+  },
+  "NM": {
+   "name": "New Mexico",
+   "n": 83,
+   "active": 0.38,
+   "uc": 1.23,
+   "delayed": 0.0,
+   "ann": 8.3,
+   "wd": 2.0,
+   "n_active": 13,
+   "n_uc": 8,
+   "n_delayed": 0,
+   "n_ann": 52,
+   "n_wd": 10,
+   "ai": 9.44,
+   "btm": 64,
+   "ann_hi": 0.0
+  },
+  "NV": {
+   "name": "Nevada",
+   "n": 150,
+   "active": 1.15,
+   "uc": 2.17,
+   "delayed": 0.0,
+   "ann": 7.86,
+   "wd": 0.0,
+   "n_active": 28,
+   "n_uc": 27,
+   "n_delayed": 0,
+   "n_ann": 95,
+   "n_wd": 0,
+   "ai": 6.99,
+   "btm": 20,
+   "ann_hi": 6.5
+  },
+  "NY": {
+   "name": "New York",
+   "n": 133,
+   "active": 0.43,
+   "uc": 0.45,
+   "delayed": 0.5,
+   "ann": 9.67,
+   "wd": 0.0,
+   "n_active": 50,
+   "n_uc": 4,
+   "n_delayed": 3,
+   "n_ann": 76,
+   "n_wd": 0,
+   "ai": 5.0,
+   "btm": 1,
+   "ann_hi": 0.14
+  },
+  "OH": {
+   "name": "Ohio",
+   "n": 369,
+   "active": 3.73,
+   "uc": 4.53,
+   "delayed": 0.0,
+   "ann": 19.73,
+   "wd": 1.14,
+   "n_active": 113,
+   "n_uc": 66,
+   "n_delayed": 0,
+   "n_ann": 183,
+   "n_wd": 7,
+   "ai": 13.64,
+   "btm": 84,
+   "ann_hi": 15.13
+  },
+  "OK": {
+   "name": "Oklahoma",
+   "n": 96,
+   "active": 0.86,
+   "uc": 1.21,
+   "delayed": 0.0,
+   "ann": 4.49,
+   "wd": 0.0,
+   "n_active": 28,
+   "n_uc": 14,
+   "n_delayed": 0,
+   "n_ann": 53,
+   "n_wd": 1,
+   "ai": 2.03,
+   "btm": 13,
+   "ann_hi": 2.93
+  },
+  "OR": {
+   "name": "Oregon",
+   "n": 147,
+   "active": 3.93,
+   "uc": 0.66,
+   "delayed": 0.0,
+   "ann": 1.95,
+   "wd": 0.0,
+   "n_active": 100,
+   "n_uc": 11,
+   "n_delayed": 0,
+   "n_ann": 36,
+   "n_wd": 0,
+   "ai": 0.36,
+   "btm": 0,
+   "ann_hi": 0.51
+  },
+  "PA": {
+   "name": "Pennsylvania",
+   "n": 467,
+   "active": 0.34,
+   "uc": 2.6,
+   "delayed": 0.0,
+   "ann": 23.7,
+   "wd": 1.54,
+   "n_active": 40,
+   "n_uc": 27,
+   "n_delayed": 0,
+   "n_ann": 318,
+   "n_wd": 82,
+   "ai": 18.22,
+   "btm": 141,
+   "ann_hi": 7.44
+  },
+  "RI": {
+   "name": "Rhode Island",
+   "n": 3,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "n_active": 3,
+   "n_uc": 0,
+   "n_delayed": 0,
+   "n_ann": 0,
+   "n_wd": 0,
+   "ai": 0.0,
+   "btm": 0,
+   "ann_hi": 0.0
+  },
+  "SC": {
+   "name": "South Carolina",
+   "n": 63,
+   "active": 0.61,
+   "uc": 0.87,
+   "delayed": 0.0,
+   "ann": 1.86,
+   "wd": 0.79,
+   "n_active": 18,
+   "n_uc": 11,
+   "n_delayed": 0,
+   "n_ann": 19,
+   "n_wd": 15,
+   "ai": 1.4,
+   "btm": 5,
+   "ann_hi": 0.8
+  },
+  "SD": {
+   "name": "South Dakota",
+   "n": 11,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.55,
+   "wd": 0.4,
+   "n_active": 2,
+   "n_uc": 0,
+   "n_delayed": 0,
+   "n_ann": 7,
+   "n_wd": 2,
+   "ai": 0.0,
+   "btm": 0,
+   "ann_hi": 0.0
+  },
+  "TN": {
+   "name": "Tennessee",
+   "n": 42,
+   "active": 1.34,
+   "uc": 0.73,
+   "delayed": 0.0,
+   "ann": 0.1,
+   "wd": 0.0,
+   "n_active": 32,
+   "n_uc": 4,
+   "n_delayed": 0,
+   "n_ann": 6,
+   "n_wd": 0,
+   "ai": 0.67,
+   "btm": 5,
+   "ann_hi": 0.03
+  },
+  "TX": {
+   "name": "Texas",
+   "n": 1414,
+   "active": 6.26,
+   "uc": 16.61,
+   "delayed": 4.25,
+   "ann": 108.41,
+   "wd": 1.81,
+   "n_active": 237,
+   "n_uc": 173,
+   "n_delayed": 39,
+   "n_ann": 944,
+   "n_wd": 21,
+   "ai": 70.92,
+   "btm": 574,
+   "ann_hi": 46.68
+  },
+  "UT": {
+   "name": "Utah",
+   "n": 229,
+   "active": 0.79,
+   "uc": 1.1,
+   "delayed": 1.7,
+   "ann": 25.94,
+   "wd": 0.0,
+   "n_active": 31,
+   "n_uc": 7,
+   "n_delayed": 8,
+   "n_ann": 183,
+   "n_wd": 0,
+   "ai": 17.63,
+   "btm": 161,
+   "ann_hi": 4.58
+  },
+  "VA": {
+   "name": "Virginia",
+   "n": 1235,
+   "active": 12.45,
+   "uc": 9.06,
+   "delayed": 1.54,
+   "ann": 37.82,
+   "wd": 9.43,
+   "n_active": 344,
+   "n_uc": 142,
+   "n_delayed": 25,
+   "n_ann": 561,
+   "n_wd": 163,
+   "ai": 4.44,
+   "btm": 43,
+   "ann_hi": 21.45
+  },
+  "VT": {
+   "name": "Vermont",
+   "n": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "n_active": 1,
+   "n_uc": 0,
+   "n_delayed": 0,
+   "n_ann": 0,
+   "n_wd": 0,
+   "ai": 0.0,
+   "btm": 0,
+   "ann_hi": 0.0
+  },
+  "WA": {
+   "name": "Washington",
+   "n": 102,
+   "active": 1.25,
+   "uc": 0.22,
+   "delayed": 0.0,
+   "ann": 1.52,
+   "wd": 0.0,
+   "n_active": 70,
+   "n_uc": 4,
+   "n_delayed": 0,
+   "n_ann": 28,
+   "n_wd": 0,
+   "ai": 0.02,
+   "btm": 0,
+   "ann_hi": 0.31
+  },
+  "WI": {
+   "name": "Wisconsin",
+   "n": 89,
+   "active": 0.38,
+   "uc": 1.79,
+   "delayed": 0.0,
+   "ann": 1.12,
+   "wd": 0.17,
+   "n_active": 18,
+   "n_uc": 14,
+   "n_delayed": 0,
+   "n_ann": 37,
+   "n_wd": 20,
+   "ai": 1.54,
+   "btm": 12,
+   "ann_hi": 0.86
+  },
+  "WV": {
+   "name": "West Virginia",
+   "n": 66,
+   "active": 0.0,
+   "uc": 0.46,
+   "delayed": 0.0,
+   "ann": 13.79,
+   "wd": 0.0,
+   "n_active": 4,
+   "n_uc": 1,
+   "n_delayed": 0,
+   "n_ann": 61,
+   "n_wd": 0,
+   "ai": 8.6,
+   "btm": 47,
+   "ann_hi": 7.07
+  },
+  "WY": {
+   "name": "Wyoming",
+   "n": 52,
+   "active": 0.43,
+   "uc": 1.28,
+   "delayed": 0.0,
+   "ann": 4.66,
+   "wd": 0.0,
+   "n_active": 14,
+   "n_uc": 12,
+   "n_delayed": 0,
+   "n_ann": 26,
+   "n_wd": 0,
+   "ai": 4.89,
+   "btm": 14,
+   "ann_hi": 3.08
+  }
+ },
+ "counties": [
+  {
+   "county": "Loudoun County",
+   "st": "VA",
+   "n": 380,
+   "active": 6.73,
+   "uc": 3.21,
+   "delayed": 0.1,
+   "ann": 8.39,
+   "wd": 0.07
+  },
+  {
+   "county": "Taylor County",
+   "st": "TX",
+   "n": 46,
+   "active": 0.75,
+   "uc": 2.48,
+   "delayed": 0.0,
+   "ann": 0.6,
+   "wd": 0.0
+  },
+  {
+   "county": "Licking County",
+   "st": "OH",
+   "n": 116,
+   "active": 1.31,
+   "uc": 2.18,
+   "delayed": 0.0,
+   "ann": 3.83,
+   "wd": 0.0
+  },
+  {
+   "county": "Maricopa County",
+   "st": "AZ",
+   "n": 239,
+   "active": 2.92,
+   "uc": 2.15,
+   "delayed": 0.0,
+   "ann": 6.16,
+   "wd": 1.86
+  },
+  {
+   "county": "Richland Parish",
+   "st": "LA",
+   "n": 16,
+   "active": 0.0,
+   "uc": 2.04,
+   "delayed": 0.0,
+   "ann": 3.0,
+   "wd": 0.0
+  },
+  {
+   "county": "Storey County",
+   "st": "NV",
+   "n": 39,
+   "active": 0.28,
+   "uc": 1.51,
+   "delayed": 0.0,
+   "ann": 1.49,
+   "wd": 0.0
+  },
+  {
+   "county": "Linn County",
+   "st": "IA",
+   "n": 18,
+   "active": 0.0,
+   "uc": 1.43,
+   "delayed": 0.0,
+   "ann": 0.58,
+   "wd": 0.0
+  },
+  {
+   "county": "Washtenaw County",
+   "st": "MI",
+   "n": 5,
+   "active": 0.0,
+   "uc": 1.4,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0
+  },
+  {
+   "county": "Montgomery County",
+   "st": "MO",
+   "n": 19,
+   "active": 0.0,
+   "uc": 1.34,
+   "delayed": 0.0,
+   "ann": 1.06,
+   "wd": 0.0
+  },
+  {
+   "county": "Ozaukee County",
+   "st": "WI",
+   "n": 11,
+   "active": 0.0,
+   "uc": 1.3,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0
+  },
+  {
+   "county": "Utah County",
+   "st": "UT",
+   "n": 37,
+   "active": 0.36,
+   "uc": 1.1,
+   "delayed": 0.0,
+   "ann": 2.51,
+   "wd": 0.0
+  },
+  {
+   "county": "Armstrong County",
+   "st": "TX",
+   "n": 6,
+   "active": 0.0,
+   "uc": 1.03,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0
+  },
+  {
+   "county": "Prince William County",
+   "st": "VA",
+   "n": 181,
+   "active": 1.98,
+   "uc": 1.0,
+   "delayed": 0.5,
+   "ann": 2.63,
+   "wd": 4.01
+  },
+  {
+   "county": "Douglas County",
+   "st": "GA",
+   "n": 36,
+   "active": 0.49,
+   "uc": 0.99,
+   "delayed": 0.0,
+   "ann": 0.61,
+   "wd": 0.0
+  },
+  {
+   "county": "Indiana County",
+   "st": "PA",
+   "n": 26,
+   "active": 0.0,
+   "uc": 0.97,
+   "delayed": 0.0,
+   "ann": 2.06,
+   "wd": 0.0
+  },
+  {
+   "county": "Dickens County",
+   "st": "TX",
+   "n": 25,
+   "active": 0.0,
+   "uc": 0.93,
+   "delayed": 0.0,
+   "ann": 3.28,
+   "wd": 0.0
+  },
+  {
+   "county": "Frederick County",
+   "st": "MD",
+   "n": 15,
+   "active": 0.0,
+   "uc": 0.9,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0
+  },
+  {
+   "county": "Doña Ana County",
+   "st": "NM",
+   "n": 4,
+   "active": 0.0,
+   "uc": 0.9,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0
+  },
+  {
+   "county": "Fulton County",
+   "st": "GA",
+   "n": 73,
+   "active": 0.77,
+   "uc": 0.86,
+   "delayed": 0.0,
+   "ann": 1.75,
+   "wd": 0.0
+  },
+  {
+   "county": "Pecos County",
+   "st": "TX",
+   "n": 42,
+   "active": 0.03,
+   "uc": 0.85,
+   "delayed": 0.0,
+   "ann": 6.15,
+   "wd": 0.0
+  },
+  {
+   "county": "Madison County",
+   "st": "MS",
+   "n": 32,
+   "active": 0.33,
+   "uc": 0.83,
+   "delayed": 0.0,
+   "ann": 1.0,
+   "wd": 0.0
+  },
+  {
+   "county": "Hill County",
+   "st": "TX",
+   "n": 30,
+   "active": 0.0,
+   "uc": 0.76,
+   "delayed": 0.0,
+   "ann": 4.17,
+   "wd": 0.0
+  },
+  {
+   "county": "Dallas County",
+   "st": "TX",
+   "n": 126,
+   "active": 0.71,
+   "uc": 0.75,
+   "delayed": 0.0,
+   "ann": 4.91,
+   "wd": 0.34
+  },
+  {
+   "county": "Cook County",
+   "st": "IL",
+   "n": 92,
+   "active": 1.26,
+   "uc": 0.72,
+   "delayed": 0.0,
+   "ann": 0.94,
+   "wd": 0.02
+  },
+  {
+   "county": "Fayette County",
+   "st": "GA",
+   "n": 15,
+   "active": 0.39,
+   "uc": 0.7,
+   "delayed": 0.0,
+   "ann": 0.23,
+   "wd": 0.0
+  }
+ ],
+ "providers": [
+  {
+   "name": "Company Not Disclosed",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "LBA Realty LLC",
+   "n": 1419,
+   "states": 42,
+   "active": 0.2,
+   "uc": 0.51,
+   "delayed": 4.09,
+   "ann": 92.18,
+   "wd": 14.28,
+   "ai": 31.47,
+   "ann_hi": 16.46
+  },
+  {
+   "name": "Amazon AWS",
+   "pub": "Public",
+   "tick": "AMZN",
+   "wiki": true,
+   "hs": true,
+   "backed": "Knighthead Capital Management LLC",
+   "n": 839,
+   "states": 16,
+   "active": 10.16,
+   "uc": 10.08,
+   "delayed": 0.29,
+   "ann": 31.15,
+   "wd": 3.06,
+   "ai": 10.09,
+   "ann_hi": 26.2
+  },
+  {
+   "name": "Google",
+   "pub": "Public",
+   "tick": "GOOG",
+   "wiki": true,
+   "hs": true,
+   "backed": "HDR Engineering LLC",
+   "n": 279,
+   "states": 21,
+   "active": 5.46,
+   "uc": 5.87,
+   "delayed": 0.0,
+   "ann": 11.13,
+   "wd": 0.17,
+   "ai": 5.86,
+   "ann_hi": 11.05
+  },
+  {
+   "name": "Facebook",
+   "pub": "Public",
+   "tick": "META",
+   "wiki": true,
+   "hs": true,
+   "backed": "",
+   "n": 237,
+   "states": 24,
+   "active": 4.83,
+   "uc": 7.09,
+   "delayed": 0.0,
+   "ann": 6.63,
+   "wd": 0.46,
+   "ai": 10.46,
+   "ann_hi": 1.6
+  },
+  {
+   "name": "Tract",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 245,
+   "states": 9,
+   "active": 0.0,
+   "uc": 0.47,
+   "delayed": 0.0,
+   "ann": 17.44,
+   "wd": 2.9,
+   "ai": 8.23,
+   "ann_hi": 14.02
+  },
+  {
+   "name": "Microsoft",
+   "pub": "Public",
+   "tick": "MSFT",
+   "wiki": true,
+   "hs": true,
+   "backed": "TA Realty",
+   "n": 312,
+   "states": 17,
+   "active": 5.53,
+   "uc": 3.78,
+   "delayed": 0.97,
+   "ann": 5.8,
+   "wd": 0.17,
+   "ai": 0.81,
+   "ann_hi": 4.86
+  },
+  {
+   "name": "QTS Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "Blackstone",
+   "n": 244,
+   "states": 19,
+   "active": 2.92,
+   "uc": 4.08,
+   "delayed": 0.0,
+   "ann": 5.58,
+   "wd": 1.64,
+   "ai": 1.47,
+   "ann_hi": 2.56
+  },
+  {
+   "name": "SB Energy",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 38,
+   "states": 2,
+   "active": 0.0,
+   "uc": 0.6,
+   "delayed": 0.0,
+   "ann": 11.54,
+   "wd": 0.0,
+   "ai": 10.89,
+   "ann_hi": 10.29
+  },
+  {
+   "name": "Joule Capital Partners",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 50,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 1.63,
+   "ann": 10.02,
+   "wd": 0.0,
+   "ai": 11.65,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Fermi America",
+   "pub": "Public",
+   "tick": "FRMI",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 44,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.47,
+   "ann": 10.5,
+   "wd": 0.0,
+   "ai": 10.97,
+   "ann_hi": 0.5
+  },
+  {
+   "name": "STACK Infrastructure",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "Blue Owl",
+   "n": 144,
+   "states": 10,
+   "active": 0.57,
+   "uc": 2.09,
+   "delayed": 0.15,
+   "ann": 5.3,
+   "wd": 0.1,
+   "ai": 3.22,
+   "ann_hi": 4.84
+  },
+  {
+   "name": "Nscale",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 18,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.46,
+   "delayed": 0.0,
+   "ann": 7.54,
+   "wd": 0.0,
+   "ai": 8.0,
+   "ann_hi": 0.92
+  },
+  {
+   "name": "Crusoe",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "Blackstone",
+   "n": 72,
+   "states": 3,
+   "active": 0.75,
+   "uc": 2.46,
+   "delayed": 0.0,
+   "ann": 4.77,
+   "wd": 0.0,
+   "ai": 6.41,
+   "ann_hi": 1.3
+  },
+  {
+   "name": "O'Leary Ventures",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 60,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 7.5,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Digital Realty",
+   "pub": "Public",
+   "tick": "DLR",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 160,
+   "states": 15,
+   "active": 2.52,
+   "uc": 0.87,
+   "delayed": 0.24,
+   "ann": 3.87,
+   "wd": 0.0,
+   "ai": 0.2,
+   "ann_hi": 1.53
+  },
+  {
+   "name": "Power House Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "American Real Estate Partners",
+   "n": 115,
+   "states": 7,
+   "active": 0.0,
+   "uc": 1.59,
+   "delayed": 0.0,
+   "ann": 5.68,
+   "wd": 0.0,
+   "ai": 2.64,
+   "ann_hi": 5.26
+  },
+  {
+   "name": "Vantage Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "SilverLake, Digital Bridge Group, GiantLeap Capital, Pantheon Infrastructure",
+   "n": 82,
+   "states": 10,
+   "active": 0.93,
+   "uc": 3.8,
+   "delayed": 0.0,
+   "ann": 1.67,
+   "wd": 0.0,
+   "ai": 3.93,
+   "ann_hi": 1.02
+  },
+  {
+   "name": "Galaxy",
+   "pub": "Public",
+   "tick": "GLXY",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 24,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.6,
+   "delayed": 0.0,
+   "ann": 5.13,
+   "wd": 0.0,
+   "ai": 1.63,
+   "ann_hi": 1.03
+  },
+  {
+   "name": "Prologis",
+   "pub": "Public",
+   "tick": "PLD",
+   "wiki": false,
+   "hs": false,
+   "backed": "Prologis",
+   "n": 61,
+   "states": 7,
+   "active": 0.0,
+   "uc": 0.03,
+   "delayed": 0.0,
+   "ann": 5.4,
+   "wd": 0.0,
+   "ai": 0.4,
+   "ann_hi": 1.11
+  },
+  {
+   "name": "Prometheus Hyperscale",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 22,
+   "states": 2,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 5.4,
+   "wd": 0.0,
+   "ai": 2.9,
+   "ann_hi": 1.4
+  },
+  {
+   "name": "CyrusOne",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "KKR",
+   "n": 112,
+   "states": 15,
+   "active": 1.32,
+   "uc": 0.77,
+   "delayed": 0.0,
+   "ann": 2.51,
+   "wd": 0.38,
+   "ai": 0.4,
+   "ann_hi": 1.67
+  },
+  {
+   "name": "Cipher Mining",
+   "pub": "Public",
+   "tick": "CIFR",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 37,
+   "states": 2,
+   "active": 0.0,
+   "uc": 0.7,
+   "delayed": 0.0,
+   "ann": 3.68,
+   "wd": 0.0,
+   "ai": 3.9,
+   "ann_hi": 0.7
+  },
+  {
+   "name": "Iren Ltd",
+   "pub": "Public",
+   "tick": "IREN",
+   "wiki": true,
+   "hs": false,
+   "backed": "Castle Hook Partners LP",
+   "n": 45,
+   "states": 2,
+   "active": 0.07,
+   "uc": 1.3,
+   "delayed": 0.0,
+   "ann": 2.98,
+   "wd": 0.0,
+   "ai": 2.75,
+   "ann_hi": 2.98
+  },
+  {
+   "name": "Core Scientific",
+   "pub": "Public",
+   "tick": "CORZ",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 34,
+   "states": 5,
+   "active": 0.37,
+   "uc": 0.84,
+   "delayed": 0.0,
+   "ann": 2.88,
+   "wd": 0.0,
+   "ai": 2.26,
+   "ann_hi": 1.56
+  },
+  {
+   "name": "Nexus Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 23,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.7,
+   "delayed": 0.0,
+   "ann": 3.33,
+   "wd": 0.0,
+   "ai": 4.03,
+   "ann_hi": 3.33
+  },
+  {
+   "name": "DCIP Group",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 23,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 3.98,
+   "wd": 0.0,
+   "ai": 3.98,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "TeraWulf",
+   "pub": "Public",
+   "tick": "WULF",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 22,
+   "states": 3,
+   "active": 0.07,
+   "uc": 0.45,
+   "delayed": 0.0,
+   "ann": 3.11,
+   "wd": 0.0,
+   "ai": 2.63,
+   "ann_hi": 2.62
+  },
+  {
+   "name": "Stream Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "Stream Realty Partners, LP",
+   "n": 71,
+   "states": 7,
+   "active": 0.23,
+   "uc": 0.31,
+   "delayed": 0.5,
+   "ann": 2.42,
+   "wd": 0.39,
+   "ai": 1.0,
+   "ann_hi": 1.01
+  },
+  {
+   "name": "TECfusions",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 20,
+   "states": 3,
+   "active": 0.06,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 3.23,
+   "wd": 0.0,
+   "ai": 3.27,
+   "ann_hi": 0.02
+  },
+  {
+   "name": "Aligned Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "AI Infrastructure Partnership (AIP), MGX, and BlackRock’s Global Infrastructure Partners (GIP)",
+   "n": 55,
+   "states": 10,
+   "active": 0.93,
+   "uc": 1.22,
+   "delayed": 0.07,
+   "ann": 1.01,
+   "wd": 0.0,
+   "ai": 1.49,
+   "ann_hi": 0.73
+  },
+  {
+   "name": "OpenAI",
+   "pub": "Public",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 3.2,
+   "wd": 0.0,
+   "ai": 3.2,
+   "ann_hi": 3.2
+  },
+  {
+   "name": "Skybox Datacenters",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "Prologis",
+   "n": 42,
+   "states": 3,
+   "active": 0.27,
+   "uc": 0.34,
+   "delayed": 0.0,
+   "ann": 2.45,
+   "wd": 0.0,
+   "ai": 1.3,
+   "ann_hi": 0.6
+  },
+  {
+   "name": "CloudHQ",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 35,
+   "states": 5,
+   "active": 0.63,
+   "uc": 0.85,
+   "delayed": 0.0,
+   "ann": 1.58,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 1.22
+  },
+  {
+   "name": "Related Digital",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 9,
+   "states": 3,
+   "active": 0.0,
+   "uc": 2.9,
+   "delayed": 0.0,
+   "ann": 0.12,
+   "wd": 0.0,
+   "ai": 2.72,
+   "ann_hi": 0.12
+  },
+  {
+   "name": "xAI",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 8,
+   "states": 3,
+   "active": 1.28,
+   "uc": 0.62,
+   "delayed": 0.0,
+   "ann": 1.0,
+   "wd": 0.0,
+   "ai": 2.9,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Beale Infrastructure",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "Blue Owl Capital",
+   "n": 34,
+   "states": 3,
+   "active": 0.0,
+   "uc": 0.33,
+   "delayed": 0.0,
+   "ann": 2.55,
+   "wd": 0.0,
+   "ai": 0.97,
+   "ann_hi": 2.14
+  },
+  {
+   "name": "Edgecore",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "Partners Group",
+   "n": 33,
+   "states": 4,
+   "active": 0.17,
+   "uc": 0.33,
+   "delayed": 0.0,
+   "ann": 2.28,
+   "wd": 0.0,
+   "ai": 0.21,
+   "ann_hi": 1.53
+  },
+  {
+   "name": "The Carlyle Group",
+   "pub": "Public",
+   "tick": "CG",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 12,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 2.75,
+   "wd": 0.0,
+   "ai": 2.75,
+   "ann_hi": 2.75
+  },
+  {
+   "name": "Beacon Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 31,
+   "states": 3,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 2.68,
+   "wd": 0.0,
+   "ai": 0.28,
+   "ann_hi": 2.41
+  },
+  {
+   "name": "Fibernet MercuryDelta",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 26,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 2.6,
+   "wd": 0.0,
+   "ai": 2.6,
+   "ann_hi": 2.6
+  },
+  {
+   "name": "Chevron",
+   "pub": "Public",
+   "tick": "CVX",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 20,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 2.5,
+   "wd": 0.0,
+   "ai": 2.5,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "MARA",
+   "pub": "Public",
+   "tick": "MARA",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 19,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 2.44,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Hut8",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 10,
+   "states": 3,
+   "active": 0.55,
+   "uc": 0.83,
+   "delayed": 0.0,
+   "ann": 1.05,
+   "wd": 0.0,
+   "ai": 1.83,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Takanock",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "DigitalBridge",
+   "n": 14,
+   "states": 3,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 2.37,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.32
+  },
+  {
+   "name": "Nebius",
+   "pub": "Public",
+   "tick": "NBIS",
+   "wiki": true,
+   "hs": false,
+   "backed": "",
+   "n": 13,
+   "states": 4,
+   "active": 0.0,
+   "uc": 0.5,
+   "delayed": 0.0,
+   "ann": 1.8,
+   "wd": 0.0,
+   "ai": 2.3,
+   "ann_hi": 1.8
+  },
+  {
+   "name": "Switch Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 39,
+   "states": 5,
+   "active": 1.13,
+   "uc": 0.47,
+   "delayed": 0.04,
+   "ann": 0.56,
+   "wd": 0.0,
+   "ai": 0.07,
+   "ann_hi": 0.53
+  },
+  {
+   "name": "T5 Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 41,
+   "states": 7,
+   "active": 0.12,
+   "uc": 0.41,
+   "delayed": 0.0,
+   "ann": 1.65,
+   "wd": 0.0,
+   "ai": 1.73,
+   "ann_hi": 1.52
+  },
+  {
+   "name": "EdgeConnex",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "TA Realty",
+   "n": 77,
+   "states": 20,
+   "active": 0.18,
+   "uc": 0.85,
+   "delayed": 0.0,
+   "ann": 1.1,
+   "wd": 0.71,
+   "ai": 0.34,
+   "ann_hi": 1.1
+  },
+  {
+   "name": "Edged Energy",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "www.endeavourii.com",
+   "n": 23,
+   "states": 9,
+   "active": 0.27,
+   "uc": 0.18,
+   "delayed": 0.0,
+   "ann": 1.67,
+   "wd": 0.0,
+   "ai": 1.02,
+   "ann_hi": 0.19
+  },
+  {
+   "name": "Amp Z",
+   "pub": "Public",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 10,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 2.1,
+   "wd": 0.0,
+   "ai": 2.1,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "AVAIO Digital",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 20,
+   "states": 4,
+   "active": 0.0,
+   "uc": 0.3,
+   "delayed": 0.0,
+   "ann": 1.8,
+   "wd": 0.0,
+   "ai": 2.09,
+   "ann_hi": 0.84
+  },
+  {
+   "name": "Poolside",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 16,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.25,
+   "delayed": 0.0,
+   "ann": 1.75,
+   "wd": 0.0,
+   "ai": 2.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Rubix Data Centers",
+   "pub": "Public",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 8,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 2.0,
+   "wd": 0.0,
+   "ai": 2.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "NorthPoint Development",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 32,
+   "states": 4,
+   "active": 0.01,
+   "uc": 0.7,
+   "delayed": 0.0,
+   "ann": 1.25,
+   "wd": 0.0,
+   "ai": 0.92,
+   "ann_hi": 0.22
+  },
+  {
+   "name": "Rowan Digital Infrastructure",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "MUFG, SMBC, Mizuho, and Bank of Nova Scotia (Scotiabank)",
+   "n": 25,
+   "states": 3,
+   "active": 0.0,
+   "uc": 1.09,
+   "delayed": 0.0,
+   "ann": 0.85,
+   "wd": 0.2,
+   "ai": 0.6,
+   "ann_hi": 0.55
+  },
+  {
+   "name": "NTT Global Data Centers",
+   "pub": "Public",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 48,
+   "states": 7,
+   "active": 0.72,
+   "uc": 0.57,
+   "delayed": 0.0,
+   "ann": 0.62,
+   "wd": 0.0,
+   "ai": 0.27,
+   "ann_hi": 0.62
+  },
+  {
+   "name": "PowerBridge",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 26,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 1.86,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Brookfield",
+   "pub": "Public",
+   "tick": "BN",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 10,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 1.8,
+   "wd": 0.0,
+   "ai": 1.8,
+   "ann_hi": 1.8
+  },
+  {
+   "name": "Applied Digital",
+   "pub": "Public",
+   "tick": "APLD",
+   "wiki": false,
+   "hs": false,
+   "backed": "Macquarie Asset Management,Sumitomo Mitsui Banking Corporation,Nvidia",
+   "n": 13,
+   "states": 4,
+   "active": 0.1,
+   "uc": 1.25,
+   "delayed": 0.0,
+   "ann": 0.42,
+   "wd": 0.4,
+   "ai": 2.17,
+   "ann_hi": 0.42
+  },
+  {
+   "name": "DC BLOX",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "Bain Capital Credit, Post Road Group",
+   "n": 29,
+   "states": 7,
+   "active": 0.04,
+   "uc": 0.26,
+   "delayed": 0.0,
+   "ann": 1.45,
+   "wd": 0.0,
+   "ai": 1.65,
+   "ann_hi": 0.33
+  },
+  {
+   "name": "Equinix",
+   "pub": "Public",
+   "tick": "EQIX",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 88,
+   "states": 12,
+   "active": 0.68,
+   "uc": 0.47,
+   "delayed": 0.0,
+   "ann": 0.56,
+   "wd": 0.0,
+   "ai": 0.65,
+   "ann_hi": 0.56
+  },
+  {
+   "name": "Compass Datacenters",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "Brookfield Infrastructure Partners L.P.",
+   "n": 73,
+   "states": 6,
+   "active": 0.5,
+   "uc": 0.5,
+   "delayed": 0.11,
+   "ann": 0.51,
+   "wd": 1.64,
+   "ai": 0.5,
+   "ann_hi": 0.51
+  },
+  {
+   "name": "Soluna Holdings, Inc",
+   "pub": "Public",
+   "tick": "SLNH",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 22,
+   "states": 1,
+   "active": 0.1,
+   "uc": 0.08,
+   "delayed": 0.0,
+   "ann": 1.38,
+   "wd": 0.0,
+   "ai": 0.65,
+   "ann_hi": 0.65
+  },
+  {
+   "name": "Hedgehog",
+   "pub": "Public",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 2,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 1.5,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.6
+  },
+  {
+   "name": "TA Digital Group",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "TA Realty",
+   "n": 22,
+   "states": 3,
+   "active": 0.1,
+   "uc": 0.57,
+   "delayed": 0.0,
+   "ann": 0.81,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.24
+  },
+  {
+   "name": "Chirisa Technology Parks",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "American Real Estate Partners",
+   "n": 17,
+   "states": 5,
+   "active": 0.16,
+   "uc": 0.29,
+   "delayed": 0.0,
+   "ann": 1.03,
+   "wd": 0.0,
+   "ai": 1.0,
+   "ann_hi": 0.62
+  },
+  {
+   "name": "DataBank",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "Digital Bridge Group, AustralianSuper, Swiss Life Asset Management",
+   "n": 79,
+   "states": 20,
+   "active": 0.43,
+   "uc": 0.66,
+   "delayed": 0.0,
+   "ann": 0.38,
+   "wd": 0.0,
+   "ai": 0.17,
+   "ann_hi": 0.38
+  },
+  {
+   "name": "Riot Platforms, Inc.",
+   "pub": "Public",
+   "tick": "RIOT",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 15,
+   "states": 1,
+   "active": 0.03,
+   "uc": 0.03,
+   "delayed": 0.0,
+   "ann": 1.41,
+   "wd": 0.0,
+   "ai": 0.95,
+   "ann_hi": 1.41
+  },
+  {
+   "name": "Prime Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 32,
+   "states": 5,
+   "active": 0.14,
+   "uc": 0.26,
+   "delayed": 0.01,
+   "ann": 1.03,
+   "wd": 0.0,
+   "ai": 0.82,
+   "ann_hi": 0.52
+  },
+  {
+   "name": "CloudBurst Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 15,
+   "states": 2,
+   "active": 0.0,
+   "uc": 0.1,
+   "delayed": 0.0,
+   "ann": 1.3,
+   "wd": 0.0,
+   "ai": 1.4,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Black Chamber",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 20,
+   "states": 2,
+   "active": 0.06,
+   "uc": 0.12,
+   "delayed": 0.12,
+   "ann": 0.98,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.68
+  },
+  {
+   "name": "Cloverleaf Infra",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 23,
+   "states": 5,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 1.23,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.34
+  },
+  {
+   "name": "Cologix",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 33,
+   "states": 8,
+   "active": 0.23,
+   "uc": 0.23,
+   "delayed": 0.0,
+   "ann": 0.69,
+   "wd": 0.0,
+   "ai": 0.8,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Circe Energy, LLC",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 8,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 1.1,
+   "wd": 0.0,
+   "ai": 1.1,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Atlas Development LLC",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 23,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 1.04,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "COPT Data Center",
+   "pub": "Public",
+   "tick": "CDP",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 18,
+   "states": 2,
+   "active": 0.02,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 1.02,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.03
+  },
+  {
+   "name": "Panattoni Development Company",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 2,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 1.0,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 1.0
+  },
+  {
+   "name": "Tachyon9 Corporation",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 6,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 1.0,
+   "wd": 0.0,
+   "ai": 1.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Infrakey DC Parks",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 21,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 1.0,
+   "wd": 0.0,
+   "ai": 1.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Alpha Compute",
+   "pub": "Public",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 5,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 1.0,
+   "wd": 0.0,
+   "ai": 1.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Yondr",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 14,
+   "states": 2,
+   "active": 0.1,
+   "uc": 0.05,
+   "delayed": 0.0,
+   "ann": 0.79,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.72
+  },
+  {
+   "name": "Bilateral Energy",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 5,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.93,
+   "wd": 0.0,
+   "ai": 0.93,
+   "ann_hi": 0.93
+  },
+  {
+   "name": "Arconic",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 8,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.93,
+   "wd": 0.0,
+   "ai": 0.93,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "BorderPlex Digital Assets",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.9,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "ai": 0.9,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Cielo Digital Infrastructure",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 9,
+   "states": 2,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.9,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.3
+  },
+  {
+   "name": "Sabey Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 27,
+   "states": 7,
+   "active": 0.29,
+   "uc": 0.15,
+   "delayed": 0.0,
+   "ann": 0.45,
+   "wd": 0.25,
+   "ai": 0.15,
+   "ann_hi": 0.33
+  },
+  {
+   "name": "Iron Mountain Data Centers",
+   "pub": "Public",
+   "tick": "IRM",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 35,
+   "states": 11,
+   "active": 0.43,
+   "uc": 0.19,
+   "delayed": 0.0,
+   "ann": 0.24,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.24
+  },
+  {
+   "name": "Active Infrastructure",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 12,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.86,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Clean Arc",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 3,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.28,
+   "delayed": 0.0,
+   "ann": 0.55,
+   "wd": 0.0,
+   "ai": 0.83,
+   "ann_hi": 0.55
+  },
+  {
+   "name": "Menlo Digital",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 13,
+   "states": 3,
+   "active": 0.0,
+   "uc": 0.22,
+   "delayed": 0.0,
+   "ann": 0.6,
+   "wd": 0.0,
+   "ai": 0.01,
+   "ann_hi": 0.55
+  },
+  {
+   "name": "Potentia Development",
+   "pub": "Public",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.8,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Clean Cloud Energy",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.8,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Serverfarm",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "Manulife Investment Management Holdings, Inc.",
+   "n": 15,
+   "states": 7,
+   "active": 0.11,
+   "uc": 0.29,
+   "delayed": 0.0,
+   "ann": 0.4,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.4
+  },
+  {
+   "name": "Oasis Digital Properties",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 10,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.76,
+   "wd": 0.0,
+   "ai": 0.76,
+   "ann_hi": 0.76
+  },
+  {
+   "name": "Bitdeer",
+   "pub": "Public",
+   "tick": "BTDR",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 14,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.74,
+   "wd": 0.0,
+   "ai": 0.74,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Novva Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 13,
+   "states": 5,
+   "active": 0.32,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.39,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.3
+  },
+  {
+   "name": "PointOne",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 12,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.16,
+   "ann": 0.48,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.48
+  },
+  {
+   "name": "NYDIG",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 2,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.64,
+   "wd": 0.0,
+   "ai": 0.64,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Centersquare",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "Brookfield",
+   "n": 38,
+   "states": 14,
+   "active": 0.6,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Penzance",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 6,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.6,
+   "wd": 0.0,
+   "ai": 0.6,
+   "ann_hi": 0.6
+  },
+  {
+   "name": "Apple Inc.",
+   "pub": "Public",
+   "tick": "AAPL",
+   "wiki": true,
+   "hs": true,
+   "backed": "",
+   "n": 18,
+   "states": 5,
+   "active": 0.45,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.09,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.09
+  },
+  {
+   "name": "Verrus Data",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 6,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.53,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "BaRupOn LLC",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 3,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.51,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.51
+  },
+  {
+   "name": "Luck Stone",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 8,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.51,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "SDC Capital Partners",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 17,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.13,
+   "delayed": 0.0,
+   "ann": 0.38,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.38
+  },
+  {
+   "name": "Quantica",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 8,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.5,
+   "wd": 0.0,
+   "ai": 0.5,
+   "ann_hi": 0.5
+  },
+  {
+   "name": "Tesla",
+   "pub": "Public",
+   "tick": "TSLA",
+   "wiki": true,
+   "hs": false,
+   "backed": "",
+   "n": 2,
+   "states": 1,
+   "active": 0.25,
+   "uc": 0.25,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "ai": 0.5,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "CoreSite",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "American Tower",
+   "n": 34,
+   "states": 10,
+   "active": 0.43,
+   "uc": 0.02,
+   "delayed": 0.0,
+   "ann": 0.05,
+   "wd": 0.0,
+   "ai": 0.04,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Alcove Development",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 7,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.49,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "TPA Group",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 14,
+   "states": 2,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.49,
+   "wd": 0.2,
+   "ai": 0.2,
+   "ann_hi": 0.49
+  },
+  {
+   "name": "Keel Infrastructure",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 7,
+   "states": 2,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.48,
+   "wd": 0.0,
+   "ai": 0.48,
+   "ann_hi": 0.37
+  },
+  {
+   "name": "Fluidstack",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 3,
+   "states": 2,
+   "active": 0.0,
+   "uc": 0.24,
+   "delayed": 0.0,
+   "ann": 0.24,
+   "wd": 0.0,
+   "ai": 0.48,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Flexential",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 45,
+   "states": 15,
+   "active": 0.23,
+   "uc": 0.09,
+   "delayed": 0.0,
+   "ann": 0.14,
+   "wd": 0.0,
+   "ai": 0.14,
+   "ann_hi": 0.03
+  },
+  {
+   "name": "CoreWeave",
+   "pub": "Public",
+   "tick": "CRWV",
+   "wiki": true,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 3,
+   "active": 0.01,
+   "uc": 0.07,
+   "delayed": 0.0,
+   "ann": 0.35,
+   "wd": 0.0,
+   "ai": 0.44,
+   "ann_hi": 0.35
+  },
+  {
+   "name": "Coatue Management",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 7,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.43,
+   "wd": 0.0,
+   "ai": 0.43,
+   "ann_hi": 0.43
+  },
+  {
+   "name": "Lincoln Rackhouse",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 5,
+   "states": 2,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.42,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.38
+  },
+  {
+   "name": "CalEthos",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 5,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.42,
+   "wd": 0.0,
+   "ai": 0.42,
+   "ann_hi": 0.42
+  },
+  {
+   "name": "Corscale",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "Patrinely Group",
+   "n": 6,
+   "states": 1,
+   "active": 0.2,
+   "uc": 0.13,
+   "delayed": 0.0,
+   "ann": 0.08,
+   "wd": 0.0,
+   "ai": 0.19,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "PowerPlay AI",
+   "pub": "Public",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 1,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.4,
+   "wd": 0.0,
+   "ai": 0.4,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Provident Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 53,
+   "states": 4,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.36,
+   "wd": 0.82,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Atmosphere Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "AGC Equity Partners / Terra Energy LLC",
+   "n": 9,
+   "states": 2,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.36,
+   "wd": 0.0,
+   "ai": 0.36,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "KDC Real Estate Development & Investments",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 6,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.36,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.36
+  },
+  {
+   "name": "HyperScale Data",
+   "pub": "Public",
+   "tick": "GPUS",
+   "wiki": false,
+   "hs": false,
+   "backed": "Sentinum Inc",
+   "n": 4,
+   "states": 2,
+   "active": 0.04,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.31,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "H5 Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 25,
+   "states": 16,
+   "active": 0.35,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "SpotsyTechnoCampus LLC",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 9,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.35,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Form8tion Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 1,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.35,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Volition",
+   "pub": "Public",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 1,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.33,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Global[X]Digital",
+   "pub": "Public",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 6,
+   "states": 1,
+   "active": 0.32,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "ai": 0.32,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Big Digital Energy, Inc.",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.31,
+   "wd": 0.0,
+   "ai": 0.31,
+   "ann_hi": 0.02
+  },
+  {
+   "name": "WhiteFiber",
+   "pub": "Public",
+   "tick": "WYFI",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 3,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.1,
+   "delayed": 0.0,
+   "ann": 0.2,
+   "wd": 0.0,
+   "ai": 0.1,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "DataOne",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 34,
+   "states": 2,
+   "active": 0.05,
+   "uc": 0.25,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "ai": 0.3,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Karis Critical",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 9,
+   "states": 3,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.3,
+   "wd": 0.04,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "PNK Group USA",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 5,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.3,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "ZeroC Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 2,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.3,
+   "wd": 0.0,
+   "ai": 0.3,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Sentinel Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 8,
+   "states": 5,
+   "active": 0.01,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.29,
+   "wd": 0.09,
+   "ai": 0.29,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "TierPoint",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "Argo Infrastructure Partners",
+   "n": 41,
+   "states": 18,
+   "active": 0.18,
+   "uc": 0.01,
+   "delayed": 0.0,
+   "ann": 0.1,
+   "wd": 0.0,
+   "ai": 0.1,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Black Mountain",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 6,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.29,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.29
+  },
+  {
+   "name": "Starwood Capital Group",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.06,
+   "delayed": 0.0,
+   "ann": 0.21,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.03
+  },
+  {
+   "name": "Greenidge Generation Holdings Inc",
+   "pub": "Public",
+   "tick": "GREE",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 1,
+   "active": 0.06,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.2,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "CleanSpark",
+   "pub": "Public",
+   "tick": "CLSK",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 5,
+   "states": 2,
+   "active": 0.0,
+   "uc": 0.25,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "ai": 0.25,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Coravel",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 5,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.04,
+   "delayed": 0.0,
+   "ann": 0.21,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.21
+  },
+  {
+   "name": "5C Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 3,
+   "active": 0.0,
+   "uc": 0.2,
+   "delayed": 0.0,
+   "ann": 0.04,
+   "wd": 0.0,
+   "ai": 0.2,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Lumen",
+   "pub": "Public",
+   "tick": "LUMN",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 97,
+   "states": 30,
+   "active": 0.24,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Crow Holdings",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 2,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.24,
+   "wd": 0.06,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Headwaters Site Development LLC",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.24,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Ionic Digital",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.12,
+   "delayed": 0.0,
+   "ann": 0.12,
+   "wd": 0.0,
+   "ai": 0.24,
+   "ann_hi": 0.12
+  },
+  {
+   "name": "SAMX",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 3,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.23,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.23
+  },
+  {
+   "name": "PG&E Data Centers",
+   "pub": "Public",
+   "tick": "PCG",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 3,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.2,
+   "wd": 0.0,
+   "ai": 0.2,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Bentaus",
+   "pub": "Public",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 2,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.2,
+   "wd": 0.0,
+   "ai": 0.2,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Hi-Cloud",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 1,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.2,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Oppidan Connect",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 16,
+   "states": 8,
+   "active": 0.05,
+   "uc": 0.01,
+   "delayed": 0.0,
+   "ann": 0.12,
+   "wd": 0.15,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "RUM GROUP",
+   "pub": "Public",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 3,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.18,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Metrobloks",
+   "pub": "",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 6,
+   "states": 3,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.18,
+   "wd": 0.0,
+   "ai": 0.11,
+   "ann_hi": 0.07
+  },
+  {
+   "name": "Overwatch Capital",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 2,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.17,
+   "wd": 0.0,
+   "ai": 0.17,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "DataNovaX",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 2,
+   "states": 1,
+   "active": 0.01,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.15,
+   "wd": 0.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Inch & Co.",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 5,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.16,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "EnergiAcres",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 1,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.9,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Air Products",
+   "pub": "Public",
+   "tick": "APD",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 3,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.25,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Duos Technologies",
+   "pub": "Public",
+   "tick": "DUOT",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 6,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.2,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Stronghold Power Systems Inc",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 12,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.6,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Convergent LLC",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.21,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "TigerDC",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 9,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.4,
+   "ai": 0.4,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Gigaland",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 7,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.59,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Beltline Energy, LLC",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 16,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 1.2,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Gotspace Data Partners",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 32,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.96,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Green Data",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 10,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 2.0,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Klondike Digital Infrastructure",
+   "pub": "Public",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.5,
+   "ai": 0.5,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "LS Power",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 4,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.3,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "TAC Data Centers",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 10,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.6,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Diode Ventures",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 14,
+   "states": 4,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 0.41,
+   "ai": 0.0,
+   "ann_hi": 0.0
+  },
+  {
+   "name": "Vermaland",
+   "pub": "Private",
+   "tick": "",
+   "wiki": false,
+   "hs": false,
+   "backed": "",
+   "n": 11,
+   "states": 1,
+   "active": 0.0,
+   "uc": 0.0,
+   "delayed": 0.0,
+   "ann": 0.0,
+   "wd": 2.2,
+   "ai": 2.2,
+   "ann_hi": 0.0
+  }
+ ],
+ "hs_share_uc": 0.375,
+ "pub_share_uc": 0.495,
+ "cnd": {
+  "active": 0.2,
+  "uc": 0.51,
+  "delayed": 4.09,
+  "ann": 92.18,
+  "wd": 14.28
+ },
+ "lists": {
+  "end_users": {
+   "fill": 0.084,
+   "n_bld": 660,
+   "gw_bld": 76.49,
+   "rows": [
+    {
+     "name": "OpenAI",
+     "n": 110,
+     "active": 1.49,
+     "uc": 6.56,
+     "delayed": 0.0,
+     "ann": 13.49,
+     "wd": 0.0
+    },
+    {
+     "name": "Amazon AWS",
+     "n": 220,
+     "active": 0.66,
+     "uc": 5.4,
+     "delayed": 0.22,
+     "ann": 8.79,
+     "wd": 0.0
+    },
+    {
+     "name": "Anthropic",
+     "n": 68,
+     "active": 1.41,
+     "uc": 3.01,
+     "delayed": 0.0,
+     "ann": 4.95,
+     "wd": 0.0
+    },
+    {
+     "name": "Facebook",
+     "n": 48,
+     "active": 0.37,
+     "uc": 3.8,
+     "delayed": 0.0,
+     "ann": 4.85,
+     "wd": 0.0
+    },
+    {
+     "name": "Oracle",
+     "n": 72,
+     "active": 1.01,
+     "uc": 5.9,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0
+    },
+    {
+     "name": "Google",
+     "n": 48,
+     "active": 0.3,
+     "uc": 3.87,
+     "delayed": 0.0,
+     "ann": 2.31,
+     "wd": 0.0
+    },
+    {
+     "name": "Microsoft",
+     "n": 57,
+     "active": 0.94,
+     "uc": 1.69,
+     "delayed": 0.11,
+     "ann": 2.62,
+     "wd": 0.0
+    },
+    {
+     "name": "CoreWeave",
+     "n": 43,
+     "active": 0.79,
+     "uc": 1.66,
+     "delayed": 0.0,
+     "ann": 1.28,
+     "wd": 0.0
+    },
+    {
+     "name": "NVIDIA",
+     "n": 11,
+     "active": 0.0,
+     "uc": 0.73,
+     "delayed": 0.0,
+     "ann": 1.49,
+     "wd": 0.0
+    },
+    {
+     "name": "Fluidstack",
+     "n": 7,
+     "active": 0.0,
+     "uc": 1.08,
+     "delayed": 0.0,
+     "ann": 0.43,
+     "wd": 0.0
+    },
+    {
+     "name": "TensorWave",
+     "n": 8,
+     "active": 0.03,
+     "uc": 0.0,
+     "delayed": 0.22,
+     "ann": 0.99,
+     "wd": 0.0
+    },
+    {
+     "name": "xAI",
+     "n": 3,
+     "active": 0.78,
+     "uc": 0.4,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0
+    },
+    {
+     "name": "AMD",
+     "n": 5,
+     "active": 0.03,
+     "uc": 0.29,
+     "delayed": 0.0,
+     "ann": 0.16,
+     "wd": 0.0
+    },
+    {
+     "name": "Nebius",
+     "n": 5,
+     "active": 0.1,
+     "uc": 0.25,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0
+    },
+    {
+     "name": "Nscale",
+     "n": 5,
+     "active": 0.0,
+     "uc": 0.22,
+     "delayed": 0.0,
+     "ann": 0.12,
+     "wd": 0.0
+    },
+    {
+     "name": "Lambda",
+     "n": 3,
+     "active": 0.02,
+     "uc": 0.16,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0
+    },
+    {
+     "name": "Yotta Data Services Private Limited",
+     "n": 1,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 0.1,
+     "wd": 0.0
+    },
+    {
+     "name": "Cerebras",
+     "n": 5,
+     "active": 0.03,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 0.06,
+     "wd": 0.0
+    },
+    {
+     "name": "Core42",
+     "n": 3,
+     "active": 0.08,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0
+    },
+    {
+     "name": "Galaxy",
+     "n": 1,
+     "active": 0.0,
+     "uc": 0.08,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0
+    },
+    {
+     "name": "BluSky AI",
+     "n": 10,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 0.05,
+     "wd": 0.0
+    },
+    {
+     "name": "DataBank",
+     "n": 2,
+     "active": 0.02,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 0.03,
+     "wd": 0.0
+    },
+    {
+     "name": "Amazon",
+     "n": 2,
+     "active": 0.01,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 0.03,
+     "wd": 0.0
+    },
+    {
+     "name": "Crusoe",
+     "n": 2,
+     "active": 0.0,
+     "uc": 0.02,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0
+    },
+    {
+     "name": "Viridien",
+     "n": 1,
+     "active": 0.0,
+     "uc": 0.02,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0
+    }
+   ]
+  },
+  "backed_by": {
+   "fill": 0.11,
+   "n_bld": 860,
+   "gw_bld": 42.0,
+   "rows": [
+    {
+     "name": "Blackstone",
+     "n": 160,
+     "active": 2.95,
+     "uc": 2.6,
+     "delayed": 0.0,
+     "ann": 1.84,
+     "wd": 1.64
+    },
+    {
+     "name": "American Real Estate Partners",
+     "n": 68,
+     "active": 0.06,
+     "uc": 1.42,
+     "delayed": 0.0,
+     "ann": 3.51,
+     "wd": 0.0
+    },
+    {
+     "name": "Prologis",
+     "n": 48,
+     "active": 0.27,
+     "uc": 0.34,
+     "delayed": 0.0,
+     "ann": 3.63,
+     "wd": 0.0
+    },
+    {
+     "name": "Digital Bridge Group",
+     "n": 120,
+     "active": 1.31,
+     "uc": 1.25,
+     "delayed": 0.0,
+     "ann": 0.95,
+     "wd": 0.0
+    },
+    {
+     "name": "Knighthead Capital Management LLC",
+     "n": 25,
+     "active": 0.0,
+     "uc": 0.97,
+     "delayed": 0.0,
+     "ann": 2.06,
+     "wd": 0.0
+    },
+    {
+     "name": "AI Infrastructure Partnership (AIP)",
+     "n": 35,
+     "active": 0.8,
+     "uc": 0.89,
+     "delayed": 0.07,
+     "ann": 0.5,
+     "wd": 0.0
+    },
+    {
+     "name": "GiantLeap Capital",
+     "n": 47,
+     "active": 0.87,
+     "uc": 0.62,
+     "delayed": 0.0,
+     "ann": 0.77,
+     "wd": 0.0
+    },
+    {
+     "name": "MGX",
+     "n": 35,
+     "active": 0.8,
+     "uc": 0.89,
+     "delayed": 0.07,
+     "ann": 0.5,
+     "wd": 0.0
+    },
+    {
+     "name": "Pantheon Infrastructure",
+     "n": 47,
+     "active": 0.87,
+     "uc": 0.62,
+     "delayed": 0.0,
+     "ann": 0.77,
+     "wd": 0.0
+    },
+    {
+     "name": "SilverLake",
+     "n": 47,
+     "active": 0.87,
+     "uc": 0.62,
+     "delayed": 0.0,
+     "ann": 0.77,
+     "wd": 0.0
+    },
+    {
+     "name": "and BlackRock’s Global Infrastructure Partners (GIP)",
+     "n": 35,
+     "active": 0.8,
+     "uc": 0.89,
+     "delayed": 0.07,
+     "ann": 0.5,
+     "wd": 0.0
+    },
+    {
+     "name": "KKR",
+     "n": 69,
+     "active": 1.09,
+     "uc": 0.2,
+     "delayed": 0.0,
+     "ann": 0.68,
+     "wd": 0.0
+    },
+    {
+     "name": "AustralianSuper",
+     "n": 73,
+     "active": 0.43,
+     "uc": 0.63,
+     "delayed": 0.0,
+     "ann": 0.18,
+     "wd": 0.0
+    },
+    {
+     "name": "Swiss Life Asset Management",
+     "n": 73,
+     "active": 0.43,
+     "uc": 0.63,
+     "delayed": 0.0,
+     "ann": 0.18,
+     "wd": 0.0
+    },
+    {
+     "name": "LP",
+     "n": 32,
+     "active": 0.23,
+     "uc": 0.31,
+     "delayed": 0.0,
+     "ann": 0.69,
+     "wd": 0.0
+    },
+    {
+     "name": "Stream Realty Partners",
+     "n": 32,
+     "active": 0.23,
+     "uc": 0.31,
+     "delayed": 0.0,
+     "ann": 0.69,
+     "wd": 0.0
+    },
+    {
+     "name": "Blue Owl",
+     "n": 34,
+     "active": 0.75,
+     "uc": 0.45,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0
+    },
+    {
+     "name": "Lancium",
+     "n": 32,
+     "active": 0.75,
+     "uc": 0.45,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0
+    },
+    {
+     "name": "DigitalBridge",
+     "n": 4,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 1.02,
+     "wd": 0.0
+    },
+    {
+     "name": "TA Realty",
+     "n": 14,
+     "active": 0.14,
+     "uc": 0.65,
+     "delayed": 0.0,
+     "ann": 0.19,
+     "wd": 0.0
+    },
+    {
+     "name": "Partners Group",
+     "n": 14,
+     "active": 0.17,
+     "uc": 0.33,
+     "delayed": 0.0,
+     "ann": 0.32,
+     "wd": 0.0
+    },
+    {
+     "name": "Softbank",
+     "n": 20,
+     "active": 0.3,
+     "uc": 0.45,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0
+    },
+    {
+     "name": "Endeavour",
+     "n": 3,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 0.72,
+     "wd": 0.0
+    },
+    {
+     "name": "Blue Owl Capital",
+     "n": 14,
+     "active": 0.09,
+     "uc": 0.06,
+     "delayed": 0.0,
+     "ann": 0.48,
+     "wd": 0.0
+    },
+    {
+     "name": "Brookfield",
+     "n": 38,
+     "active": 0.6,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0
+    }
+   ]
+  },
+  "financing": {
+   "fill": 0.05,
+   "n_bld": 393,
+   "gw_bld": 57.67,
+   "rows": [
+    {
+     "name": "SoftBank Group",
+     "n": 66,
+     "active": 0.75,
+     "uc": 1.05,
+     "delayed": 0.0,
+     "ann": 10.29,
+     "wd": 0.0
+    },
+    {
+     "name": "Blue Owl Capital",
+     "n": 95,
+     "active": 1.04,
+     "uc": 4.07,
+     "delayed": 0.0,
+     "ann": 6.1,
+     "wd": 0.0
+    },
+    {
+     "name": "MVM EGI",
+     "n": 44,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.47,
+     "ann": 10.5,
+     "wd": 0.0
+    },
+    {
+     "name": "Macquarie Asset Management",
+     "n": 44,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.47,
+     "ann": 10.5,
+     "wd": 0.0
+    },
+    {
+     "name": "NVIDIA",
+     "n": 30,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 9.99,
+     "wd": 0.0
+    },
+    {
+     "name": "Google",
+     "n": 28,
+     "active": 0.0,
+     "uc": 1.24,
+     "delayed": 0.0,
+     "ann": 4.25,
+     "wd": 0.0
+    },
+    {
+     "name": "Morgan Stanley",
+     "n": 34,
+     "active": 0.0,
+     "uc": 1.25,
+     "delayed": 0.0,
+     "ann": 3.78,
+     "wd": 0.0
+    },
+    {
+     "name": "Transition Equity Partners",
+     "n": 23,
+     "active": 0.0,
+     "uc": 0.7,
+     "delayed": 0.0,
+     "ann": 3.33,
+     "wd": 0.0
+    },
+    {
+     "name": "Pelion Venture Partners",
+     "n": 36,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 2.65,
+     "wd": 0.0
+    },
+    {
+     "name": "Trident Ridge",
+     "n": 36,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 2.65,
+     "wd": 0.0
+    },
+    {
+     "name": "EnergySolutions",
+     "n": 26,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 2.6,
+     "wd": 0.0
+    },
+    {
+     "name": "Engine No 1",
+     "n": 20,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 2.5,
+     "wd": 0.0
+    },
+    {
+     "name": "DigitalBridge",
+     "n": 9,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 1.57,
+     "wd": 0.0
+    },
+    {
+     "name": "Marathon Capital",
+     "n": 2,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 1.5,
+     "wd": 0.0
+    },
+    {
+     "name": "Valor Equity Partners",
+     "n": 4,
+     "active": 0.78,
+     "uc": 0.62,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0
+    },
+    {
+     "name": "JPMorganChase",
+     "n": 12,
+     "active": 0.0,
+     "uc": 0.88,
+     "delayed": 0.0,
+     "ann": 0.45,
+     "wd": 0.0
+    },
+    {
+     "name": "Sumitomo Corporation",
+     "n": 7,
+     "active": 0.0,
+     "uc": 1.05,
+     "delayed": 0.0,
+     "ann": 0.0,
+     "wd": 0.0
+    },
+    {
+     "name": "BlackRock",
+     "n": 11,
+     "active": 0.0,
+     "uc": 0.55,
+     "delayed": 0.0,
+     "ann": 0.45,
+     "wd": 0.0
+    },
+    {
+     "name": "The Carlyle Group",
+     "n": 8,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 1.0,
+     "wd": 0.0
+    },
+    {
+     "name": "Nuveen",
+     "n": 3,
+     "active": 0.0,
+     "uc": 0.28,
+     "delayed": 0.0,
+     "ann": 0.55,
+     "wd": 0.0
+    },
+    {
+     "name": "Snowhawk",
+     "n": 3,
+     "active": 0.0,
+     "uc": 0.28,
+     "delayed": 0.0,
+     "ann": 0.55,
+     "wd": 0.0
+    },
+    {
+     "name": "a TIAA company",
+     "n": 3,
+     "active": 0.0,
+     "uc": 0.28,
+     "delayed": 0.0,
+     "ann": 0.55,
+     "wd": 0.0
+    },
+    {
+     "name": "Prologis",
+     "n": 9,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 0.51,
+     "wd": 0.0
+    },
+    {
+     "name": "MDH Partners",
+     "n": 7,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 0.49,
+     "wd": 0.0
+    },
+    {
+     "name": "Power Infrastructure Partners",
+     "n": 4,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 0.42,
+     "wd": 0.0
+    }
+   ]
+  },
+  "builders": {
+   "fill": 0.233,
+   "n_bld": 1822,
+   "gw_bld": 199.24,
+   "rows": [
+    {
+     "name": "Caterpillar",
+     "n": 108,
+     "active": 0.75,
+     "uc": 1.58,
+     "delayed": 1.63,
+     "ann": 17.89,
+     "wd": 0.0
+    },
+    {
+     "name": "Kimley-Horn",
+     "n": 205,
+     "active": 0.07,
+     "uc": 1.09,
+     "delayed": 0.15,
+     "ann": 14.58,
+     "wd": 0.11
+    },
+    {
+     "name": "Kiewit Power Constructors Co.",
+     "n": 61,
+     "active": 0.35,
+     "uc": 1.12,
+     "delayed": 0.0,
+     "ann": 12.05,
+     "wd": 0.0
+    },
+    {
+     "name": "AE Urbia",
+     "n": 50,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 1.63,
+     "ann": 10.02,
+     "wd": 0.0
+    },
+    {
+     "name": "Okland Construction",
+     "n": 50,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 1.63,
+     "ann": 10.02,
+     "wd": 0.0
+    },
+    {
+     "name": "Gensler",
+     "n": 116,
+     "active": 0.0,
+     "uc": 0.76,
+     "delayed": 0.0,
+     "ann": 10.43,
+     "wd": 0.34
+    },
+    {
+     "name": "Hyundai E&C",
+     "n": 44,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.47,
+     "ann": 10.5,
+     "wd": 0.0
+    },
+    {
+     "name": "Bechtel Corporation",
+     "n": 30,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 9.99,
+     "wd": 0.0
+    },
+    {
+     "name": "GE Vernova",
+     "n": 82,
+     "active": 0.75,
+     "uc": 2.79,
+     "delayed": 0.0,
+     "ann": 5.38,
+     "wd": 0.0
+    },
+    {
+     "name": "New Era Energy & Digital Inc.",
+     "n": 38,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 8.0,
+     "wd": 0.0
+    },
+    {
+     "name": "Pacifico Energy",
+     "n": 34,
+     "active": 0.0,
+     "uc": 0.6,
+     "delayed": 0.0,
+     "ann": 6.19,
+     "wd": 0.0
+    },
+    {
+     "name": "Bohler",
+     "n": 95,
+     "active": 0.06,
+     "uc": 1.07,
+     "delayed": 0.0,
+     "ann": 4.87,
+     "wd": 0.0
+    },
+    {
+     "name": "Entergy",
+     "n": 17,
+     "active": 0.0,
+     "uc": 2.37,
+     "delayed": 0.0,
+     "ann": 3.0,
+     "wd": 0.0
+    },
+    {
+     "name": "Bloom Energy",
+     "n": 19,
+     "active": 0.22,
+     "uc": 1.63,
+     "delayed": 0.0,
+     "ann": 3.14,
+     "wd": 0.0
+    },
+    {
+     "name": "TRANSGAS LIMITED",
+     "n": 28,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 4.8,
+     "wd": 0.0
+    },
+    {
+     "name": "AirJoule",
+     "n": 23,
+     "active": 0.0,
+     "uc": 0.7,
+     "delayed": 0.0,
+     "ann": 3.33,
+     "wd": 0.0
+    },
+    {
+     "name": "Everllence",
+     "n": 23,
+     "active": 0.0,
+     "uc": 0.7,
+     "delayed": 0.0,
+     "ann": 3.33,
+     "wd": 0.0
+    },
+    {
+     "name": "DPR Construction",
+     "n": 48,
+     "active": 0.77,
+     "uc": 2.06,
+     "delayed": 0.0,
+     "ann": 1.12,
+     "wd": 0.0
+    },
+    {
+     "name": "Lancium",
+     "n": 55,
+     "active": 0.75,
+     "uc": 1.21,
+     "delayed": 0.0,
+     "ann": 1.9,
+     "wd": 0.0
+    },
+    {
+     "name": "Urban Ltd",
+     "n": 52,
+     "active": 0.1,
+     "uc": 0.72,
+     "delayed": 0.1,
+     "ann": 2.74,
+     "wd": 0.0
+    },
+    {
+     "name": "Bowman Consulting",
+     "n": 40,
+     "active": 0.12,
+     "uc": 0.38,
+     "delayed": 0.5,
+     "ann": 2.52,
+     "wd": 0.0
+    },
+    {
+     "name": "HKS Inc.",
+     "n": 47,
+     "active": 0.75,
+     "uc": 1.32,
+     "delayed": 0.0,
+     "ann": 1.27,
+     "wd": 0.0
+    },
+    {
+     "name": "Turner Construction Company",
+     "n": 54,
+     "active": 0.0,
+     "uc": 0.61,
+     "delayed": 0.0,
+     "ann": 2.71,
+     "wd": 0.0
+    },
+    {
+     "name": "Ramboll",
+     "n": 31,
+     "active": 0.06,
+     "uc": 0.27,
+     "delayed": 0.0,
+     "ann": 2.79,
+     "wd": 0.0
+    },
+    {
+     "name": "Creekstone Energy",
+     "n": 36,
+     "active": 0.0,
+     "uc": 0.0,
+     "delayed": 0.0,
+     "ann": 2.65,
+     "wd": 0.0
+    }
+   ]
+  }
+ },
+ "utilities": {
+  "rows": [
+   {
+    "name": "Virginia Electric & Power Co",
+    "tick": "D",
+    "pub": "Public",
+    "n": 619,
+    "active": 8.05,
+    "uc": 5.0,
+    "delayed": 1.07,
+    "ann": 16.63,
+    "wd": 2.84
+   },
+   {
+    "name": "PacifiCorp",
+    "tick": "",
+    "pub": "Private",
+    "n": 167,
+    "active": 1.15,
+    "uc": 0.48,
+    "delayed": 1.7,
+    "ann": 18.23,
+    "wd": 0.0
+   },
+   {
+    "name": "Ohio Power Co",
+    "tick": "AEP",
+    "pub": "Public",
+    "n": 143,
+    "active": 2.75,
+    "uc": 1.6,
+    "delayed": 0.0,
+    "ann": 13.83,
+    "wd": 0.0
+   },
+   {
+    "name": "Georgia Power Co",
+    "tick": "GPJA",
+    "pub": "Public",
+    "n": 201,
+    "active": 1.22,
+    "uc": 1.93,
+    "delayed": 0.0,
+    "ann": 11.54,
+    "wd": 1.66
+   },
+   {
+    "name": "Southwestern Public Service Co",
+    "tick": "XEL",
+    "pub": "Public",
+    "n": 52,
+    "active": 0.06,
+    "uc": 0.77,
+    "delayed": 0.47,
+    "ann": 10.57,
+    "wd": 0.0
+   },
+   {
+    "name": "Oncor Electric Delivery Company LLC",
+    "tick": "",
+    "pub": "",
+    "n": 248,
+    "active": 1.25,
+    "uc": 1.75,
+    "delayed": 0.11,
+    "ann": 8.79,
+    "wd": 0.35
+   },
+   {
+    "name": "Commonwealth Edison Co",
+    "tick": "EXC",
+    "pub": "Private (Part of Exelon Corp)",
+    "n": 185,
+    "active": 1.76,
+    "uc": 0.94,
+    "delayed": 0.0,
+    "ann": 5.81,
+    "wd": 0.02
+   },
+   {
+    "name": "Nevada Power Co",
+    "tick": "",
+    "pub": "Private (Subsidiary of NV Energy)",
+    "n": 73,
+    "active": 0.94,
+    "uc": 1.16,
+    "delayed": 0.0,
+    "ann": 4.24,
+    "wd": 0.0
+   },
+   {
+    "name": "Arizona Public Service Co",
+    "tick": "",
+    "pub": "",
+    "n": 106,
+    "active": 1.31,
+    "uc": 0.87,
+    "delayed": 0.0,
+    "ann": 4.3,
+    "wd": 1.8
+   },
+   {
+    "name": "Entergy Louisiana LLC",
+    "tick": "ETR",
+    "pub": "Private (Subsidiary of Entergy Corp)",
+    "n": 18,
+    "active": 0.0,
+    "uc": 2.04,
+    "delayed": 0.0,
+    "ann": 3.0,
+    "wd": 0.0
+   },
+   {
+    "name": "New York Power Authority",
+    "tick": "",
+    "pub": "",
+    "n": 22,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 4.3,
+    "wd": 0.0
+   },
+   {
+    "name": "PPL Electric Utilities Corp",
+    "tick": "PPL",
+    "pub": "Public",
+    "n": 64,
+    "active": 0.0,
+    "uc": 0.13,
+    "delayed": 0.0,
+    "ann": 4.07,
+    "wd": 0.06
+   },
+   {
+    "name": "Rappahannock Electric Coop",
+    "tick": "",
+    "pub": "Private (Cooperative)",
+    "n": 37,
+    "active": 0.0,
+    "uc": 0.62,
+    "delayed": 0.0,
+    "ann": 2.8,
+    "wd": 0.0
+   },
+   {
+    "name": "United Electric Coop Service Inc - (TX)",
+    "tick": "",
+    "pub": "",
+    "n": 33,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 3.35,
+    "wd": 0.0
+   },
+   {
+    "name": "Pennsylvania Electric Co",
+    "tick": "FE",
+    "pub": "Public",
+    "n": 32,
+    "active": 0.01,
+    "uc": 0.97,
+    "delayed": 0.0,
+    "ann": 2.38,
+    "wd": 0.0
+   },
+   {
+    "name": "Northern Indiana Pub Serv Co",
+    "tick": "",
+    "pub": "",
+    "n": 66,
+    "active": 0.03,
+    "uc": 0.21,
+    "delayed": 0.0,
+    "ann": 3.1,
+    "wd": 0.25
+   },
+   {
+    "name": "Entergy Mississippi LLC",
+    "tick": "ETR",
+    "pub": "Private (Subsidiary of Entergy Corp)",
+    "n": 41,
+    "active": 0.33,
+    "uc": 1.13,
+    "delayed": 0.0,
+    "ann": 1.79,
+    "wd": 0.0
+   },
+   {
+    "name": "Duke Energy Carolinas, LLC",
+    "tick": "DUK",
+    "pub": "Public",
+    "n": 65,
+    "active": 0.2,
+    "uc": 0.78,
+    "delayed": 0.22,
+    "ann": 1.67,
+    "wd": 0.55
+   },
+   {
+    "name": "Bluebonnet Electric Coop, Inc",
+    "tick": "",
+    "pub": "",
+    "n": 33,
+    "active": 0.0,
+    "uc": 0.26,
+    "delayed": 0.0,
+    "ann": 2.23,
+    "wd": 0.38
+   },
+   {
+    "name": "DTE Electric Company",
+    "tick": "DTE",
+    "pub": "Public",
+    "n": 31,
+    "active": 0.06,
+    "uc": 1.4,
+    "delayed": 0.0,
+    "ann": 1.0,
+    "wd": 0.0
+   },
+   {
+    "name": "Cheyenne Light Fuel & Power",
+    "tick": "",
+    "pub": "",
+    "n": 15,
+    "active": 0.11,
+    "uc": 1.0,
+    "delayed": 0.0,
+    "ann": 1.35,
+    "wd": 0.0
+   },
+   {
+    "name": "Duke Energy Progress - (NC)",
+    "tick": "DUK",
+    "pub": "Public",
+    "n": 42,
+    "active": 0.2,
+    "uc": 0.49,
+    "delayed": 0.43,
+    "ann": 1.37,
+    "wd": 0.0
+   },
+   {
+    "name": "MidAmerican Energy Co",
+    "tick": "",
+    "pub": "Private",
+    "n": 92,
+    "active": 2.06,
+    "uc": 0.11,
+    "delayed": 0.0,
+    "ann": 2.18,
+    "wd": 0.0
+   },
+   {
+    "name": "Northern Virginia Elec Coop",
+    "tick": "",
+    "pub": "Private",
+    "n": 163,
+    "active": 2.48,
+    "uc": 1.09,
+    "delayed": 0.34,
+    "ann": 0.72,
+    "wd": 3.54
+   },
+   {
+    "name": "Big Country Electric Coop, Inc",
+    "tick": "",
+    "pub": "",
+    "n": 13,
+    "active": 0.0,
+    "uc": 2.05,
+    "delayed": 0.0,
+    "ann": 0.0,
+    "wd": 0.0
+   },
+   {
+    "name": "Pacific Gas & Electric Co.",
+    "tick": "PCG",
+    "pub": "Public",
+    "n": 95,
+    "active": 0.7,
+    "uc": 0.25,
+    "delayed": 0.06,
+    "ann": 1.65,
+    "wd": 0.0
+   },
+   {
+    "name": "El Paso Electric Co",
+    "tick": "",
+    "pub": "Private",
+    "n": 20,
+    "active": 0.01,
+    "uc": 1.45,
+    "delayed": 0.0,
+    "ann": 0.46,
+    "wd": 0.0
+   },
+   {
+    "name": "Indiana Michigan Power Co",
+    "tick": "AEP",
+    "pub": "Public",
+    "n": 44,
+    "active": 0.97,
+    "uc": 1.11,
+    "delayed": 0.0,
+    "ann": 0.75,
+    "wd": 0.0
+   },
+   {
+    "name": "Wisconsin Electric Power Co",
+    "tick": "WEC",
+    "pub": "Public",
+    "n": 37,
+    "active": 0.37,
+    "uc": 1.7,
+    "delayed": 0.0,
+    "ann": 0.15,
+    "wd": 0.13
+   },
+   {
+    "name": "Union Electric Co - (MO)",
+    "tick": "AEE",
+    "pub": "Public (Part of Ameren Corp)",
+    "n": 28,
+    "active": 0.11,
+    "uc": 1.21,
+    "delayed": 0.0,
+    "ann": 0.62,
+    "wd": 0.0
+   }
+  ],
+  "unknown_pipe_gw": 244.91,
+  "pipe_gw": 463.08,
+  "unknown_uc_gw": 24.76
+ },
+ "ba": {
+  "rows": [
+   {
+    "ba": "PJM",
+    "name": "PJM Interconnection",
+    "n": 2206,
+    "active": 19.8,
+    "uc": 18.98,
+    "delayed": 1.58,
+    "ann": 69.56,
+    "wd": 13.57
+   },
+   {
+    "ba": "ERCO",
+    "name": "Electric Reliability Council of Texas",
+    "n": 885,
+    "active": 5.77,
+    "uc": 14.23,
+    "delayed": 0.33,
+    "ann": 45.79,
+    "wd": 1.53
+   },
+   {
+    "ba": "MISO",
+    "name": "Midcontinent Independent System Operator",
+    "n": 684,
+    "active": 3.8,
+    "uc": 11.3,
+    "delayed": 0.0,
+    "ann": 23.83,
+    "wd": 2.19
+   },
+   {
+    "ba": "SWPP",
+    "name": "Southwest Power Pool",
+    "n": 274,
+    "active": 1.67,
+    "uc": 2.82,
+    "delayed": 3.92,
+    "ann": 17.79,
+    "wd": 1.01
+   },
+   {
+    "ba": "SOCO",
+    "name": "Southern Company",
+    "n": 471,
+    "active": 2.32,
+    "uc": 5.12,
+    "delayed": 0.0,
+    "ann": 18.38,
+    "wd": 4.77
+   },
+   {
+    "ba": "PACW",
+    "name": "PacifiCorp West",
+    "n": 162,
+    "active": 1.23,
+    "uc": 0.22,
+    "delayed": 1.7,
+    "ann": 16.83,
+    "wd": 0.0
+   },
+   {
+    "ba": "NYIS",
+    "name": "New York Independent System Operator",
+    "n": 126,
+    "active": 0.43,
+    "uc": 0.45,
+    "delayed": 0.5,
+    "ann": 9.21,
+    "wd": 0.0
+   },
+   {
+    "ba": "AZPS",
+    "name": "Arizona Public Service",
+    "n": 139,
+    "active": 1.63,
+    "uc": 1.14,
+    "delayed": 0.0,
+    "ann": 4.9,
+    "wd": 1.8
+   },
+   {
+    "ba": "NEVP",
+    "name": "NV Energy",
+    "n": 69,
+    "active": 0.22,
+    "uc": 0.72,
+    "delayed": 0.0,
+    "ann": 5.81,
+    "wd": 0.0
+   },
+   {
+    "ba": "CISO",
+    "name": "California Independent System Operator",
+    "n": 243,
+    "active": 2.37,
+    "uc": 0.42,
+    "delayed": 0.16,
+    "ann": 3.24,
+    "wd": 0.14
+   },
+   {
+    "ba": "DUK",
+    "name": "Duke Energy Carolinas",
+    "n": 100,
+    "active": 0.57,
+    "uc": 1.34,
+    "delayed": 0.65,
+    "ann": 2.3,
+    "wd": 0.33
+   },
+   {
+    "ba": "SRP",
+    "name": "Salt River Project",
+    "n": 98,
+    "active": 1.29,
+    "uc": 1.01,
+    "delayed": 0.0,
+    "ann": 2.2,
+    "wd": 0.06
+   },
+   {
+    "ba": "BPAT",
+    "name": "Bonneville Power Administration",
+    "n": 66,
+    "active": 2.96,
+    "uc": 0.34,
+    "delayed": 0.0,
+    "ann": 0.39,
+    "wd": 0.0
+   },
+   {
+    "ba": "WACM",
+    "name": "Western Area Power Administration - Rocky Mountain Region",
+    "n": 35,
+    "active": 0.37,
+    "uc": 1.12,
+    "delayed": 0.0,
+    "ann": 1.72,
+    "wd": 0.25
+   },
+   {
+    "ba": "TVA",
+    "name": "Tennessee Valley Authority",
+    "n": 50,
+    "active": 1.79,
+    "uc": 0.81,
+    "delayed": 0.0,
+    "ann": 0.02,
+    "wd": 0.0
+   },
+   {
+    "ba": "PACE",
+    "name": "PacifiCorp East",
+    "n": 20,
+    "active": 0.05,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 1.71,
+    "wd": 0.0
+   }
+  ],
+  "unknown_pipe_gw": 162.43
+ },
+ "generators": {
+  "fill": 0.188,
+  "by_grp": {
+   "active": 15946,
+   "uc": 8481,
+   "delayed": 215,
+   "ann": 8923,
+   "wd": 334
+  },
+  "mw_per_gen": 2.22
+ },
+ "ai": {
+  "by_grp": {
+   "active": 7.53,
+   "uc": 37.83,
+   "delayed": 5.67,
+   "ann": 171.7,
+   "wd": 5.7
+  },
+  "n_by_grp": {
+   "active": 123,
+   "uc": 336,
+   "delayed": 41,
+   "ann": 1271,
+   "wd": 92
+  },
+  "n_flag_n": 4,
+  "fill": 0.239
+ },
+ "cost": {
+  "bld_fill": 0.208,
+  "campuses": 242,
+  "naive_tn": 32.67,
+  "dedup_tn": 2.42,
+  "multi_value_campuses": 4,
+  "median_mpm": 9.2,
+  "sane_median": 9.6,
+  "sane_n": 208,
+  "by_grp": {
+   "active": {
+    "n": 6,
+    "median": 11.4,
+    "bn": 21.0
+   },
+   "uc": {
+    "n": 42,
+    "median": 10.0,
+    "bn": 386.0
+   },
+   "delayed": {
+    "n": 1,
+    "median": 5.4,
+    "bn": 58.0
+   },
+   "ann": {
+    "n": 139,
+    "median": 9.4,
+    "bn": 1764.0
+   },
+   "wd": {
+    "n": 20,
+    "median": 10.5,
+    "bn": 189.0
+   }
+  },
+  "hist": [
+   {
+    "label": "<$2M",
+    "active": 1,
+    "uc": 4,
+    "delayed": 0,
+    "ann": 16,
+    "wd": 2
+   },
+   {
+    "label": "$2-5M",
+    "active": 1,
+    "uc": 14,
+    "delayed": 0,
+    "ann": 24,
+    "wd": 3
+   },
+   {
+    "label": "$5-10M",
+    "active": 1,
+    "uc": 7,
+    "delayed": 1,
+    "ann": 50,
+    "wd": 5
+   },
+   {
+    "label": "$10-15M",
+    "active": 2,
+    "uc": 12,
+    "delayed": 0,
+    "ann": 28,
+    "wd": 8
+   },
+   {
+    "label": "$15-25M",
+    "active": 2,
+    "uc": 7,
+    "delayed": 0,
+    "ann": 26,
+    "wd": 3
+   },
+   {
+    "label": "$25-50M",
+    "active": 0,
+    "uc": 2,
+    "delayed": 0,
+    "ann": 11,
+    "wd": 1
+   },
+   {
+    "label": ">$50M",
+    "active": 0,
+    "uc": 1,
+    "delayed": 2,
+    "ann": 6,
+    "wd": 2
+   }
+  ],
+  "by_year": [
+   {
+    "year": 2023,
+    "n": 11,
+    "median": 10.4,
+    "wavg": 8.6
+   },
+   {
+    "year": 2024,
+    "n": 48,
+    "median": 9.7,
+    "wavg": 10.8
+   },
+   {
+    "year": 2025,
+    "n": 94,
+    "median": 9.6,
+    "wavg": 10.1
+   },
+   {
+    "year": 2026,
+    "n": 48,
+    "median": 10.1,
+    "wavg": 9.3
+   }
+  ],
+  "top": [
+   {
+    "name": "Ports Technology Campus",
+    "prov": "SB Energy",
+    "st": "OH",
+    "stage": "Announcement",
+    "mw": 9990,
+    "bn": 500.0,
+    "mpm": 50.1,
+    "n": 30
+   },
+   {
+    "name": "Project Jupiter",
+    "prov": "BorderPlex Digital Assets",
+    "st": "NM",
+    "stage": "Construction",
+    "mw": 900,
+    "bn": 165.0,
+    "mpm": 183.3,
+    "n": 4
+   },
+   {
+    "name": "Project Kestrel",
+    "prov": "Google",
+    "st": "MO",
+    "stage": "Announcement",
+    "mw": 480,
+    "bn": 100.0,
+    "mpm": 208.3,
+    "n": 5
+   },
+   {
+    "name": "Paducah AI Data Center Campus",
+    "prov": "Brookfield",
+    "st": "KY",
+    "stage": "Announcement",
+    "mw": 1800,
+    "bn": 100.0,
+    "mpm": 55.6,
+    "n": 10
+   },
+   {
+    "name": "Berry Hill Megasite Data Center Campus",
+    "prov": "STACK Infrastructure",
+    "st": "VA",
+    "stage": "Announcement",
+    "mw": 299,
+    "bn": 100.0,
+    "mpm": 334.4,
+    "n": 3
+   },
+   {
+    "name": "Berry Hill Land bank",
+    "prov": "STACK Infrastructure",
+    "st": "VA",
+    "stage": "Land Bank",
+    "mw": 299,
+    "bn": 73.0,
+    "mpm": 244.1,
+    "n": 1
+   },
+   {
+    "name": "Heartland Industrial Park",
+    "prov": "Coatue Management",
+    "st": "IN",
+    "stage": "Announcement",
+    "mw": 430,
+    "bn": 65.0,
+    "mpm": 151.2,
+    "n": 7
+   },
+   {
+    "name": "Hyperion, Meta Campus",
+    "prov": "Facebook",
+    "st": "LA",
+    "stage": "Construction",
+    "mw": 5040,
+    "bn": 50.0,
+    "mpm": 9.9,
+    "n": 16
+   },
+   {
+    "name": "Fibernet Delta Campus",
+    "prov": "Fibernet MercuryDelta",
+    "st": "UT",
+    "stage": "Announcement",
+    "mw": 2600,
+    "bn": 40.0,
+    "mpm": 15.4,
+    "n": 26
+   },
+   {
+    "name": "La Osa Project",
+    "prov": "Vermaland",
+    "st": "AZ",
+    "stage": "Not Approved/Withdrawn",
+    "mw": 2200,
+    "bn": 33.0,
+    "mpm": 15.0,
+    "n": 11
+   },
+   {
+    "name": "Red Butte Data Center Campus",
+    "prov": "Company Not Disclosed",
+    "st": "UT",
+    "stage": "Announcement",
+    "mw": 1500,
+    "bn": 30.8,
+    "mpm": 20.5,
+    "n": 10
+   },
+   {
+    "name": "Project Camellia",
+    "prov": "OpenAI",
+    "st": "GA",
+    "stage": "Announcement",
+    "mw": 3200,
+    "bn": 30.0,
+    "mpm": 9.4,
+    "n": 4
+   },
+   {
+    "name": "Goodnight Data Center Campus",
+    "prov": "Crusoe",
+    "st": "TX",
+    "stage": "Construction",
+    "mw": 1033,
+    "bn": 29.2,
+    "mpm": 28.3,
+    "n": 6
+   },
+   {
+    "name": "Vantage Shackelford Campus",
+    "prov": "Vantage Data Centers",
+    "st": "TX",
+    "stage": "Construction",
+    "mw": 1358,
+    "bn": 25.0,
+    "mpm": 18.4,
+    "n": 10
+   },
+   {
+    "name": "Arizona AI Data Center",
+    "prov": "Company Not Disclosed",
+    "st": "AZ",
+    "stage": "Announcement",
+    "mw": 1500,
+    "bn": 25.0,
+    "mpm": 16.7,
+    "n": 3
+   },
+   {
+    "name": "Hickman Property Data Center Campus",
+    "prov": "EdgeConnex",
+    "st": "GA",
+    "stage": "Not Approved/Withdrawn",
+    "mw": 372,
+    "bn": 24.9,
+    "mpm": 66.9,
+    "n": 5
+   },
+   {
+    "name": "Joliet Data Center Campus",
+    "prov": "Power House Data Centers",
+    "st": "IL",
+    "stage": "Announcement",
+    "mw": 1800,
+    "bn": 20.0,
+    "mpm": 11.1,
+    "n": 24
+   },
+   {
+    "name": "Buckeye Technology Park",
+    "prov": "Tract",
+    "st": "AZ",
+    "stage": "Announcement",
+    "mw": 1800,
+    "bn": 20.0,
+    "mpm": 11.1,
+    "n": 30
+   },
+   {
+    "name": "South Campus Science, Technology & Advanced Manufacturing Park (STAMP)",
+    "prov": "Stream Data Centers",
+    "st": "NY",
+    "stage": "Delayed",
+    "mw": 167,
+    "bn": 19.5,
+    "mpm": 116.5,
+    "n": 1
+   },
+   {
+    "name": "North Campus Science, Technology & Advanced Manufacturing Park (STAMP)",
+    "prov": "Stream Data Centers",
+    "st": "NY",
+    "stage": "Delayed",
+    "mw": 334,
+    "bn": 19.5,
+    "mpm": 58.3,
+    "n": 2
+   }
+  ]
+ },
+ "execution": {
+  "dur_start": [
+   {
+    "year": 2018,
+    "n": 13,
+    "median_m": 8.9
+   },
+   {
+    "year": 2019,
+    "n": 16,
+    "median_m": 8.7
+   },
+   {
+    "year": 2020,
+    "n": 10,
+    "median_m": 27.7
+   },
+   {
+    "year": 2021,
+    "n": 23,
+    "median_m": 11.0
+   },
+   {
+    "year": 2022,
+    "n": 43,
+    "median_m": 13.0
+   },
+   {
+    "year": 2023,
+    "n": 65,
+    "median_m": 14.0
+   },
+   {
+    "year": 2024,
+    "n": 231,
+    "median_m": 10.5
+   },
+   {
+    "year": 2025,
+    "n": 392,
+    "median_m": 9.6
+   },
+   {
+    "year": 2026,
+    "n": 220,
+    "median_m": 12.4
+   }
+  ],
+  "dur_build": [
+   {
+    "year": 2018,
+    "n": 28,
+    "median_m": 16.0
+   },
+   {
+    "year": 2019,
+    "n": 45,
+    "median_m": 19.1
+   },
+   {
+    "year": 2020,
+    "n": 62,
+    "median_m": 20.0
+   },
+   {
+    "year": 2021,
+    "n": 44,
+    "median_m": 19.8
+   },
+   {
+    "year": 2022,
+    "n": 47,
+    "median_m": 19.0
+   },
+   {
+    "year": 2023,
+    "n": 72,
+    "median_m": 19.0
+   },
+   {
+    "year": 2024,
+    "n": 90,
+    "median_m": 19.0
+   },
+   {
+    "year": 2025,
+    "n": 155,
+    "median_m": 18.0
+   },
+   {
+    "year": 2026,
+    "n": 115,
+    "median_m": 21.3
+   }
+  ],
+  "uc_plan_m": 26.6,
+  "uc_plan_n": 809,
+  "conv": [
+   {
+    "year": 2019,
+    "n": 29,
+    "gw": 1.57,
+    "active": 0.91,
+    "uc": 0.19,
+    "delayed": 0.11,
+    "ann": 0.37,
+    "wd": 0.0,
+    "n_active": 20,
+    "n_uc": 3,
+    "n_delayed": 3,
+    "n_ann": 3,
+    "n_wd": 0
+   },
+   {
+    "year": 2020,
+    "n": 39,
+    "gw": 2.34,
+    "active": 0.64,
+    "uc": 0.49,
+    "delayed": 0.3,
+    "ann": 0.91,
+    "wd": 0.0,
+    "n_active": 14,
+    "n_uc": 7,
+    "n_delayed": 5,
+    "n_ann": 13,
+    "n_wd": 0
+   },
+   {
+    "year": 2021,
+    "n": 100,
+    "gw": 5.23,
+    "active": 2.33,
+    "uc": 1.31,
+    "delayed": 0.04,
+    "ann": 1.03,
+    "wd": 0.53,
+    "n_active": 52,
+    "n_uc": 21,
+    "n_delayed": 1,
+    "n_ann": 19,
+    "n_wd": 7
+   },
+   {
+    "year": 2022,
+    "n": 160,
+    "gw": 9.77,
+    "active": 3.04,
+    "uc": 3.68,
+    "delayed": 0.49,
+    "ann": 2.56,
+    "wd": 0.0,
+    "n_active": 50,
+    "n_uc": 52,
+    "n_delayed": 8,
+    "n_ann": 49,
+    "n_wd": 1
+   },
+   {
+    "year": 2023,
+    "n": 341,
+    "gw": 22.2,
+    "active": 3.47,
+    "uc": 6.65,
+    "delayed": 0.35,
+    "ann": 8.24,
+    "wd": 3.48,
+    "n_active": 56,
+    "n_uc": 96,
+    "n_delayed": 6,
+    "n_ann": 133,
+    "n_wd": 50
+   },
+   {
+    "year": 2024,
+    "n": 1060,
+    "gw": 77.64,
+    "active": 2.71,
+    "uc": 20.64,
+    "delayed": 0.81,
+    "ann": 48.82,
+    "wd": 4.66,
+    "n_active": 54,
+    "n_uc": 258,
+    "n_delayed": 13,
+    "n_ann": 643,
+    "n_wd": 92
+   },
+   {
+    "year": 2025,
+    "n": 2362,
+    "gw": 229.61,
+    "active": 1.2,
+    "uc": 23.92,
+    "delayed": 6.15,
+    "ann": 177.82,
+    "wd": 20.51,
+    "n_active": 5,
+    "n_uc": 201,
+    "n_delayed": 44,
+    "n_ann": 1764,
+    "n_wd": 348
+   },
+   {
+    "year": 2026,
+    "n": 1451,
+    "gw": 141.76,
+    "active": 0.04,
+    "uc": 4.66,
+    "delayed": 0.0,
+    "ann": 130.23,
+    "wd": 6.83,
+    "n_active": 2,
+    "n_uc": 39,
+    "n_delayed": 0,
+    "n_ann": 1300,
+    "n_wd": 110
+   }
+  ],
+  "progress": [
+   {
+    "label": "Not reported",
+    "n": 1,
+    "gw": 0.01,
+    "by_year": {
+     "2027": 0.01
+    }
+   },
+   {
+    "label": "0%",
+    "n": 0,
+    "gw": 0.0,
+    "by_year": {}
+   },
+   {
+    "label": "1-25%",
+    "n": 385,
+    "gw": 35.93,
+    "by_year": {
+     "2026": 0.01,
+     "2027": 7.83,
+     "2028": 23.93,
+     "2029": 3.05,
+     "2030": 1.12
+    }
+   },
+   {
+    "label": "26-50%",
+    "n": 81,
+    "gw": 8.25,
+    "by_year": {
+     "2026": 0.66,
+     "2027": 5.2,
+     "2028": 2.3,
+     "2029": 0.09
+    }
+   },
+   {
+    "label": "51-75%",
+    "n": 110,
+    "gw": 8.76,
+    "by_year": {
+     "2026": 1.15,
+     "2027": 6.7,
+     "2028": 0.57,
+     "2029": 0.35
+    }
+   },
+   {
+    "label": "76-99%",
+    "n": 244,
+    "gw": 18.59,
+    "by_year": {
+     "2026": 11.31,
+     "2027": 7.24,
+     "2028": 0.04
+    }
+   },
+   {
+    "label": "100%",
+    "n": 0,
+    "gw": 0.0,
+    "by_year": {}
+   }
+  ],
+  "like_by_grp": {
+   "active": {
+    "High": 5.53,
+    "Medium": 0.0,
+    "Low": 0.0,
+    "Unrated": 46.29
+   },
+   "uc": {
+    "High": 70.67,
+    "Medium": 0.87,
+    "Low": 0.0,
+    "Unrated": 0.0
+   },
+   "delayed": {
+    "High": 2.04,
+    "Medium": 0.79,
+    "Low": 6.01,
+    "Unrated": 0.0
+   },
+   "ann": {
+    "High": 166.65,
+    "Medium": 155.29,
+    "Low": 60.76,
+    "Unrated": 0.0
+   },
+   "wd": {
+    "High": 1.06,
+    "Medium": 4.96,
+    "Low": 33.98,
+    "Unrated": 0.0
+   }
+  }
+ },
+ "risk_states": [
+  {
+   "st": "VA",
+   "delayed": 1.54,
+   "wd": 9.43,
+   "n_delayed": 25,
+   "n_wd": 163,
+   "ann": 37.82,
+   "uc": 9.06
+  },
+  {
+   "st": "GA",
+   "delayed": 0.0,
+   "wd": 6.14,
+   "n_delayed": 0,
+   "n_wd": 65,
+   "ann": 25.73,
+   "uc": 4.55
+  },
+  {
+   "st": "TX",
+   "delayed": 4.25,
+   "wd": 1.81,
+   "n_delayed": 39,
+   "n_wd": 21,
+   "ann": 108.41,
+   "uc": 16.61
+  },
+  {
+   "st": "AZ",
+   "delayed": 0.0,
+   "wd": 4.06,
+   "n_delayed": 0,
+   "n_wd": 43,
+   "ann": 10.31,
+   "uc": 2.15
+  },
+  {
+   "st": "NC",
+   "delayed": 0.65,
+   "wd": 1.58,
+   "n_delayed": 12,
+   "n_wd": 21,
+   "ann": 3.3,
+   "uc": 1.23
+  },
+  {
+   "st": "NM",
+   "delayed": 0.0,
+   "wd": 2.0,
+   "n_delayed": 0,
+   "n_wd": 10,
+   "ann": 8.3,
+   "uc": 1.23
+  },
+  {
+   "st": "UT",
+   "delayed": 1.7,
+   "wd": 0.0,
+   "n_delayed": 8,
+   "n_wd": 0,
+   "ann": 25.94,
+   "uc": 1.1
+  },
+  {
+   "st": "MO",
+   "delayed": 0.0,
+   "wd": 1.61,
+   "n_delayed": 0,
+   "n_wd": 28,
+   "ann": 3.73,
+   "uc": 2.37
+  },
+  {
+   "st": "PA",
+   "delayed": 0.0,
+   "wd": 1.54,
+   "n_delayed": 0,
+   "n_wd": 82,
+   "ann": 23.7,
+   "uc": 2.6
+  },
+  {
+   "st": "MD",
+   "delayed": 0.0,
+   "wd": 1.4,
+   "n_delayed": 0,
+   "n_wd": 13,
+   "ann": 1.52,
+   "uc": 0.9
+  },
+  {
+   "st": "FL",
+   "delayed": 0.0,
+   "wd": 1.31,
+   "n_delayed": 0,
+   "n_wd": 15,
+   "ann": 5.21,
+   "uc": 0.02
+  },
+  {
+   "st": "OH",
+   "delayed": 0.0,
+   "wd": 1.14,
+   "n_delayed": 0,
+   "n_wd": 7,
+   "ann": 19.73,
+   "uc": 4.53
+  },
+  {
+   "st": "MN",
+   "delayed": 0.0,
+   "wd": 1.08,
+   "n_delayed": 0,
+   "n_wd": 21,
+   "ann": 2.08,
+   "uc": 0.1
+  },
+  {
+   "st": "CT",
+   "delayed": 0.0,
+   "wd": 0.96,
+   "n_delayed": 0,
+   "n_wd": 32,
+   "ann": 0.0,
+   "uc": 0.0
+  },
+  {
+   "st": "CA",
+   "delayed": 0.16,
+   "wd": 0.74,
+   "n_delayed": 3,
+   "n_wd": 15,
+   "ann": 3.81,
+   "uc": 0.36
+  },
+  {
+   "st": "DE",
+   "delayed": 0.0,
+   "wd": 0.86,
+   "n_delayed": 0,
+   "n_wd": 10,
+   "ann": 0.16,
+   "uc": 0.0
+  },
+  {
+   "st": "MT",
+   "delayed": 0.0,
+   "wd": 0.85,
+   "n_delayed": 0,
+   "n_wd": 11,
+   "ann": 0.5,
+   "uc": 0.0
+  },
+  {
+   "st": "SC",
+   "delayed": 0.0,
+   "wd": 0.79,
+   "n_delayed": 0,
+   "n_wd": 15,
+   "ann": 1.86,
+   "uc": 0.87
+  },
+  {
+   "st": "IN",
+   "delayed": 0.0,
+   "wd": 0.54,
+   "n_delayed": 0,
+   "n_wd": 64,
+   "ann": 9.07,
+   "uc": 2.36
+  },
+  {
+   "st": "MI",
+   "delayed": 0.0,
+   "wd": 0.5,
+   "n_delayed": 0,
+   "n_wd": 13,
+   "ann": 2.23,
+   "uc": 1.4
+  }
+ ],
+ "fields": [
+  {
+   "f": "ATERIO_DATA_CENTER_UID",
+   "fill": 1.0,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "String",
+   "desc": "Unique identifier for each data center, used to track and reference facilities across various datasets.",
+   "example": "9c7e3cff-5317-4ebf-a54c-94bfd5fa8ae6"
+  },
+  {
+   "f": "DATA_CENTER_BUILDING_NAME",
+   "fill": 1.0,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "String",
+   "desc": "Name of the building where the data center is located.",
+   "example": "AI Data Center (Rayville) Building 1"
+  },
+  {
+   "f": "ATERIO_DATA_CENTER_CAMPUS_UID",
+   "fill": 0.811,
+   "fill_uc": 0.937,
+   "level": "Campus",
+   "type": "String",
+   "desc": "Unique identifier for each data center campus, used to track and reference facilities across various datasets.",
+   "example": "88a54779-fac4-47fc-bcc5-9b95d690df4b"
+  },
+  {
+   "f": "DATA_CENTER_CAMPUS_NAME",
+   "fill": 0.811,
+   "fill_uc": 0.937,
+   "level": "Campus",
+   "type": "String",
+   "desc": "Name of the campus or complex where the data center is situated, if applicable.",
+   "example": "Hyperion, Meta Campus"
+  },
+  {
+   "f": "DATA_CENTER_STAGE",
+   "fill": 1.0,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "String",
+   "desc": "Project stage, representing the current lifecycle phase. Possible values: Announcement, Construction, Land Bank, Not Approved/Withdrawn, Cancelled, Delayed, Active.",
+   "example": "Construction"
+  },
+  {
+   "f": "FLG_AI_FACILITY",
+   "fill": 0.239,
+   "fill_uc": 0.409,
+   "level": "Building",
+   "type": "String",
+   "desc": "Indicates if there is public data indicating the data center will be an AI facility: Possible values: Y/N/Null. Null does not imply the facility is non-AI. It simply means we abstain from classifying unless there is direct language in filings, press releases, ",
+   "example": "Y"
+  },
+  {
+   "f": "FLG_BTM_ONSITE_POWER_GENERATION",
+   "fill": 0.169,
+   "fill_uc": 0.161,
+   "level": "Campus",
+   "type": "String",
+   "desc": "Indicates if there is public data indicating the project will support behind-the-meter (BTM) power generation. Possible values: Y/N/null",
+   "example": "Y"
+  },
+  {
+   "f": "TOT_PROJECT_COST",
+   "fill": 0.208,
+   "fill_uc": 0.281,
+   "level": "Campus",
+   "type": "Integer",
+   "desc": "Total cost for the project.",
+   "example": "10000000000"
+  },
+  {
+   "f": "ATERIO_PROVIDER_UID",
+   "fill": 1.0,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "String",
+   "desc": "Unique identifier for the data center provider in our systems.",
+   "example": "50108cec-45df-413d-8cb6-2deb11e0ebfe"
+  },
+  {
+   "f": "PROVIDER_NAME",
+   "fill": 1.0,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "String",
+   "desc": "Name of the company or entity that owns or operates the data center.",
+   "example": "Facebook"
+  },
+  {
+   "f": "PROVIDER_URL",
+   "fill": 0.811,
+   "fill_uc": 0.991,
+   "level": "Building",
+   "type": "String",
+   "desc": "URL to the provider's main website.",
+   "example": "https://www.datacenters.atmeta.com"
+  },
+  {
+   "f": "PROVIDER_PUBLIC_PRIVATE",
+   "fill": 0.998,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "String",
+   "desc": "Status indicating whether the provider is public or privately owned.",
+   "example": "Public"
+  },
+  {
+   "f": "PROVIDER_TICKER_NAME",
+   "fill": 0.339,
+   "fill_uc": 0.503,
+   "level": "Building",
+   "type": "String",
+   "desc": "Stock ticker symbol for the provider.",
+   "example": "META"
+  },
+  {
+   "f": "PROVIDER_BLOOMBERG_TICKER_NAME",
+   "fill": 0.337,
+   "fill_uc": 0.503,
+   "level": "Building",
+   "type": "String",
+   "desc": "Bloomberg ticker symbol for the provider, for financial data tracking.",
+   "example": "META:US"
+  },
+  {
+   "f": "STOCK_EXCHANGE_PROVIDER_NAME",
+   "fill": 0.339,
+   "fill_uc": 0.503,
+   "level": "Building",
+   "type": "String",
+   "desc": "Stock Ticker including Stock Exchange",
+   "example": "NASDAQ:META"
+  },
+  {
+   "f": "PROVIDER_BACKED_BY",
+   "fill": 0.11,
+   "fill_uc": 0.184,
+   "level": "Building",
+   "type": "String",
+   "desc": "Corporations related to Provider / Investors backing the Provider",
+   "example": ""
+  },
+  {
+   "f": "CONSTRUCTION_EQUIPMENT_PROVIDER_COMPANIES",
+   "fill": 0.233,
+   "fill_uc": 0.263,
+   "level": "Campus",
+   "type": "String",
+   "desc": "Suppliers of machinery and equipment for data center construction",
+   "example": "Entergy"
+  },
+  {
+   "f": "PROJECT_FINANCING_COMPANIES",
+   "fill": 0.05,
+   "fill_uc": 0.083,
+   "level": "Campus",
+   "type": "String",
+   "desc": "Financial institutions providing capital and funding for the project",
+   "example": "Blue Owl Capital"
+  },
+  {
+   "f": "END_USER_COMPANIES",
+   "fill": 0.084,
+   "fill_uc": 0.276,
+   "level": "Building",
+   "type": "String",
+   "desc": "Organizations that will occupy, lease, or utilize the completed data center",
+   "example": "Facebook"
+  },
+  {
+   "f": "FULL_ADDRESS",
+   "fill": 0.998,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "String",
+   "desc": "Complete address of the data center.",
+   "example": "H R Gin Rd, Rayville, LA, USA"
+  },
+  {
+   "f": "ZIP_CODE",
+   "fill": 0.979,
+   "fill_uc": 0.99,
+   "level": "Building",
+   "type": "String",
+   "desc": "Postal code for the data centers location.",
+   "example": "71269"
+  },
+  {
+   "f": "COUNTY_FIPS_CODE",
+   "fill": 0.978,
+   "fill_uc": 0.988,
+   "level": "Building",
+   "type": "String",
+   "desc": "Federal Information Processing Standards (FIPS) code identifying the county.",
+   "example": "22083"
+  },
+  {
+   "f": "COUNTY_NAME",
+   "fill": 0.978,
+   "fill_uc": 0.988,
+   "level": "Building",
+   "type": "String",
+   "desc": "Name of the county where the data center is located.",
+   "example": "Richland Parish"
+  },
+  {
+   "f": "CITY_NAME",
+   "fill": 0.978,
+   "fill_uc": 0.988,
+   "level": "Building",
+   "type": "String",
+   "desc": "City where the data center resides.,",
+   "example": "Rayville"
+  },
+  {
+   "f": "PLACE_FIPS_CODE",
+   "fill": 0.905,
+   "fill_uc": 0.944,
+   "level": "Building",
+   "type": "String",
+   "desc": "FIPS code for the specific place (city/town).",
+   "example": "63680"
+  },
+  {
+   "f": "STATE_CODE",
+   "fill": 1.0,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "String",
+   "desc": "Abbreviated state code (e.g., CA for California).",
+   "example": "LA"
+  },
+  {
+   "f": "STATE_NAME",
+   "fill": 1.0,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "String",
+   "desc": "State Name",
+   "example": "Louisiana"
+  },
+  {
+   "f": "COUNTRY_CODE",
+   "fill": 1.0,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "String",
+   "desc": "Abbreviate country code (e.g., US for United States, CA for Canada)",
+   "example": "US"
+  },
+  {
+   "f": "COUNTRY_NAME",
+   "fill": 1.0,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "String",
+   "desc": "Country Name",
+   "example": "United States"
+  },
+  {
+   "f": "LOCATION_LATITUDE",
+   "fill": 1.0,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "Float",
+   "desc": "Latitude coordinate of the data center's location.",
+   "example": "32.50504"
+  },
+  {
+   "f": "LOCATION_LONGITUDE",
+   "fill": 1.0,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "Float",
+   "desc": "Longitude coordinate of the data center's location.",
+   "example": "-91.63684"
+  },
+  {
+   "f": "SITE_ACREAGE",
+   "fill": 0.657,
+   "fill_uc": 0.71,
+   "level": "Building",
+   "type": "Float",
+   "desc": "Total land area occupied by the data center, measured in acres.",
+   "example": "2250"
+  },
+  {
+   "f": "TOT_FACILITY_SPACE_SQFT",
+   "fill": 0.527,
+   "fill_uc": 0.75,
+   "level": "Building",
+   "type": "Integer",
+   "desc": "Area of the building in square feet, it does not account for multiple floors on the building. Measured with Satellite.",
+   "example": "445000"
+  },
+  {
+   "f": "TOT_DATACENTER_SPACE_SQFT",
+   "fill": 0.67,
+   "fill_uc": 0.828,
+   "level": "Building",
+   "type": "Integer",
+   "desc": "Square footage disclosed to be as dedicated data center space. Account for multiple floors on a building. This field is recommended for analysis.",
+   "example": "445000"
+  },
+  {
+   "f": "PROV_PUB_TOT_POWER_CAPACITY_MW",
+   "fill": 0.511,
+   "fill_uc": 0.445,
+   "level": "Building",
+   "type": "Float",
+   "desc": "Total published power capacity available for the data center, measured in megawatts (MW).",
+   "example": "222"
+  },
+  {
+   "f": "ATERIO_EST_TOT_POWER_CAPACITY_MW",
+   "fill": 0.713,
+   "fill_uc": 0.898,
+   "level": "Building",
+   "type": "Float",
+   "desc": "Estimate of total power capacity by Aterio (MW).",
+   "example": "222"
+  },
+  {
+   "f": "ATERIO_EST_TOT_POWER_CAPACITY_MW_LOWER",
+   "fill": 0.668,
+   "fill_uc": 0.85,
+   "level": "Building",
+   "type": "Float",
+   "desc": "Lower estimate of total power capacity by Aterio (MW).",
+   "example": "216.18"
+  },
+  {
+   "f": "ATERIO_EST_TOT_POWER_CAPACITY_MW_UPPER",
+   "fill": 0.668,
+   "fill_uc": 0.85,
+   "level": "Building",
+   "type": "Float",
+   "desc": "Upper estimate of total power capacity by Aterio (MW).",
+   "example": "227.98"
+  },
+  {
+   "f": "SELECTED_POWER_CAPACITY_MW",
+   "fill": 0.907,
+   "fill_uc": 0.979,
+   "level": "Building",
+   "type": "Float",
+   "desc": "Selected power capacity for the facility, selecting between the published value and Aterio's estimated value based on availability. This field is recommended for analysis.",
+   "example": "222"
+  },
+  {
+   "f": "CRITICAL_IT_CAPACITY_MW",
+   "fill": 0.131,
+   "fill_uc": 0.231,
+   "level": "Building",
+   "type": "Float",
+   "desc": "Power capacity (in MW) available to IT equipment (servers, storage, and networking) under fully redundant operating conditions, excluding facility overhead such as cooling and power distribution losses.",
+   "example": ""
+  },
+  {
+   "f": "AVG_MARKET_POWER_COST",
+   "fill": 0.071,
+   "fill_uc": 0.017,
+   "level": "Campus",
+   "type": "Float",
+   "desc": "Average power market cost. It's sourced directly from public filings and disclosures where providers or utilities reference average power market costs for a given facility or region.",
+   "example": ""
+  },
+  {
+   "f": "YEARLY_PUE",
+   "fill": 0.052,
+   "fill_uc": 0.01,
+   "level": "Building",
+   "type": "Float",
+   "desc": "The yearly average Power Usage Effectiveness (PUE) of the data center, measuring its energy efficiency (lower values indicate higher efficiency).",
+   "example": ""
+  },
+  {
+   "f": "TOT_NUM_GENERATORS",
+   "fill": 0.188,
+   "fill_uc": 0.33,
+   "level": "Building",
+   "type": "Integer",
+   "desc": "The total number of backup power generators installed at the data center, indicating its redundancy and resilience in case of power failures.",
+   "example": ""
+  },
+  {
+   "f": "DATA_CENTER_ANNOUNCED_DATE",
+   "fill": 0.721,
+   "fill_uc": 0.829,
+   "level": "Building",
+   "type": "Date",
+   "desc": "The date when the data center project was first publicly announced.",
+   "example": "2024-11-19 00:00:00"
+  },
+  {
+   "f": "DATA_CENTER_CANCELLED_DATE",
+   "fill": 0.004,
+   "fill_uc": 0.004,
+   "level": "Building",
+   "type": "Date",
+   "desc": "The date when the data center project was cancelled.",
+   "example": ""
+  },
+  {
+   "f": "DATA_CENTER_PROJECT_WITHDRAWN_DATE",
+   "fill": 0.082,
+   "fill_uc": 0.0,
+   "level": "Building",
+   "type": "Date",
+   "desc": "The date when the data center project was withdrawn.",
+   "example": ""
+  },
+  {
+   "f": "DATA_CENTER_CONSTRUCTION_START_DATE",
+   "fill": 0.238,
+   "fill_uc": 0.985,
+   "level": "Building",
+   "type": "Date",
+   "desc": "The date when physical construction work for the data center began.",
+   "example": "2024-12-05 00:00:00"
+  },
+  {
+   "f": "LATEST_SATELLITE_PICTURE_DATE",
+   "fill": 0.714,
+   "fill_uc": 0.999,
+   "level": "Building",
+   "type": "Date",
+   "desc": "The most recent date when a satellite image of the data center was captured, useful for tracking construction progress or operational status.",
+   "example": "2026-01-15 00:00:00"
+  },
+  {
+   "f": "PCT_CONSTRUCTION_STATUS",
+   "fill": 0.706,
+   "fill_uc": 0.999,
+   "level": "Building",
+   "type": "Float",
+   "desc": "The estimated percentage of construction completed, providing insight into the progress of the data center project.",
+   "example": "0.5"
+  },
+  {
+   "f": "DATA_CENTER_CONSTRUCTION_FINISHED_DATE",
+   "fill": 0.053,
+   "fill_uc": 0.028,
+   "level": "Building",
+   "type": "Date",
+   "desc": "The date when construction of the data center was completed.",
+   "example": ""
+  },
+  {
+   "f": "DATA_CENTER_ACTIVATION_DATE",
+   "fill": 0.956,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "Date",
+   "desc": "The official or estimated date when the data center became fully operational and available for use.",
+   "example": "2027-01-01 00:00:00"
+  },
+  {
+   "f": "ESTIMATED_ACTIVATION_DATE_ATERIO",
+   "fill": 0.608,
+   "fill_uc": 0.937,
+   "level": "Building",
+   "type": "Date",
+   "desc": "Aterio's internally estimated activation date.",
+   "example": ""
+  },
+  {
+   "f": "ESTIMATED_ACTIVATION_DATE_PUBLIC_SOURCE",
+   "fill": 0.105,
+   "fill_uc": 0.267,
+   "level": "Building",
+   "type": "Date",
+   "desc": "Estimated activation date as reported by publicly available sources.",
+   "example": ""
+  },
+  {
+   "f": "ESTIMATED_ACTIVATION_DATE_PUBLIC_SOURCE_URL",
+   "fill": 0.092,
+   "fill_uc": 0.22,
+   "level": "Building",
+   "type": "String",
+   "desc": "The public source URL from which the estimated activation date is derived, enabling direct traceability to the original reference.",
+   "example": ""
+  },
+  {
+   "f": "ATERIO_ELECTRICAL_UTILITY_UID",
+   "fill": 0.596,
+   "fill_uc": 0.687,
+   "level": "Building",
+   "type": "String",
+   "desc": "Unique identifier for the utility company supplying electricity.",
+   "example": "0d9443b3-9729-4842-b54e-30d99a82c457"
+  },
+  {
+   "f": "UTILITY_NAME",
+   "fill": 0.596,
+   "fill_uc": 0.687,
+   "level": "Building",
+   "type": "String",
+   "desc": "Name of the utility company.",
+   "example": "Entergy Louisiana LLC"
+  },
+  {
+   "f": "UTILITY_CODE",
+   "fill": 0.593,
+   "fill_uc": 0.68,
+   "level": "Building",
+   "type": "String",
+   "desc": "Code assigned to the utility for identification purposes.",
+   "example": "11241"
+  },
+  {
+   "f": "UTILITY_PUBLIC_PRIVATE",
+   "fill": 0.474,
+   "fill_uc": 0.521,
+   "level": "Building",
+   "type": "String",
+   "desc": "Status indicating whether the utility company is public or privately owned.",
+   "example": "Private (Subsidiary of Entergy Corp)"
+  },
+  {
+   "f": "UTILITY_TICKER_NAME",
+   "fill": 0.311,
+   "fill_uc": 0.363,
+   "level": "Building",
+   "type": "String",
+   "desc": "Stock ticker symbol for the utility company, if publicly traded.",
+   "example": "ETR"
+  },
+  {
+   "f": "UTILITY_BLOOMBERG_TICKER_NAME",
+   "fill": 0.309,
+   "fill_uc": 0.363,
+   "level": "Building",
+   "type": "String",
+   "desc": "Bloomberg ticker symbol for the utility provider, for financial data tracking.",
+   "example": "ETR:US"
+  },
+  {
+   "f": "UTILITY_EXCHANGE_PROVIDER_TICKER_NAME",
+   "fill": 0.31,
+   "fill_uc": 0.362,
+   "level": "Building",
+   "type": "String",
+   "desc": "Ticker name for the stock exchange where the utility company is listed.",
+   "example": "NYSE:ETR"
+  },
+  {
+   "f": "ATERIO_BAL_AUTH_UID",
+   "fill": 0.78,
+   "fill_uc": 0.901,
+   "level": "Building",
+   "type": "String",
+   "desc": "Unique identifier for the balancing authority responsible for the transmission and distribution of electricity to the data center.",
+   "example": "cead66ff-8552-43d5-b723-aeedd7318b2b"
+  },
+  {
+   "f": "BAL_AUTH_ABBR",
+   "fill": 0.78,
+   "fill_uc": 0.901,
+   "level": "Building",
+   "type": "String",
+   "desc": "Abbreviated name or acronym of the balancing authority.",
+   "example": "MISO"
+  },
+  {
+   "f": "BAL_AUTH_NAME",
+   "fill": 0.78,
+   "fill_uc": 0.901,
+   "level": "Building",
+   "type": "String",
+   "desc": "Full name of the balancing authority responsible for managing the electricity grid in the region where the data center is located.",
+   "example": "Midcontinent Independent System Operator"
+  },
+  {
+   "f": "ATERIO_BAL_AUTH_SUBREGION_UID",
+   "fill": 0.494,
+   "fill_uc": 0.58,
+   "level": "Building",
+   "type": "String",
+   "desc": "Unique identifier for the balancing authority responsible for the transmission and distribution of electricity to the data center.",
+   "example": "af578d20-93d7-483b-a595-c31587043ac7"
+  },
+  {
+   "f": "BAL_AUTH_SUBREGION_CODE",
+   "fill": 0.494,
+   "fill_uc": 0.58,
+   "level": "Building",
+   "type": "String",
+   "desc": "Code of the subregion under the balancing authority’s management.",
+   "example": "8910"
+  },
+  {
+   "f": "BAL_AUTH_SUBREGION_NAME",
+   "fill": 0.494,
+   "fill_uc": 0.58,
+   "level": "Building",
+   "type": "String",
+   "desc": "Name of the subregion under the balancing authority’s management.",
+   "example": "Zones 8, 9 and 10 - MISO"
+  },
+  {
+   "f": "ATERIO_POWER_GENERATION_PROJECT_UID",
+   "fill": 0.148,
+   "fill_uc": 0.151,
+   "level": "Building",
+   "type": "String",
+   "desc": "Links to Aterio's Power Generation dataset, enabling joins to analyze on-site energy infrastructure at the project level.",
+   "example": ""
+  },
+  {
+   "f": "DATASHEET_URL",
+   "fill": 0.9,
+   "fill_uc": 0.951,
+   "level": "Building",
+   "type": "String",
+   "desc": "URL linking to a datasheet with additional information.",
+   "example": "https://www.shreveporttimes.com/story/news/2024/11/19/facebook-parent-meta-plans"
+  },
+  {
+   "f": "MAP_URL",
+   "fill": 0.992,
+   "fill_uc": 0.998,
+   "level": "Building",
+   "type": "String",
+   "desc": "URL linking to an interactive map showing the data center location.",
+   "example": "https://maps.app.goo.gl/4tcPYW9qkoisYANB7"
+  },
+  {
+   "f": "PROJECT_PERMIT_URL",
+   "fill": 0.389,
+   "fill_uc": 0.583,
+   "level": "Building",
+   "type": "String",
+   "desc": "URL linking to the project permit information.",
+   "example": "https://cdn.misoenergy.org/20250806%20MTEP25%20Projects%20near%20the%20MISO-SPP%"
+  },
+  {
+   "f": "CAPEX_URL",
+   "fill": 0.025,
+   "fill_uc": 0.069,
+   "level": "Building",
+   "type": "String",
+   "desc": "URL linking to documentation detailing the project's capital expenditure (CAPEX).",
+   "example": ""
+  },
+  {
+   "f": "PROJECT_EXECUTION_LIKELIHOOD",
+   "fill": 0.746,
+   "fill_uc": 1.0,
+   "level": "Campus",
+   "type": "String",
+   "desc": "A categorical indicator of the probability that a data center project will be executed, based on available information such as provider announcements, market conditions, and project stage. Possible values: High, Medium, Low.",
+   "example": "High"
+  },
+  {
+   "f": "NOTES",
+   "fill": 0.853,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "String",
+   "desc": "Free-form field for additional comments or remarks about the data center.",
+   "example": "[2024-12-19 JR] Construction Status: No Construction; Expected Activation Date B"
+  },
+  {
+   "f": "RECORD_CREATED_DATE",
+   "fill": 1.0,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "Date",
+   "desc": "The date when the record was first created.",
+   "example": "2024-12-05 00:00:00"
+  },
+  {
+   "f": "RECORD_UPDATED_DATE",
+   "fill": 1.0,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "Date",
+   "desc": "The date when the record was last modified or updated.",
+   "example": "2026-02-12 00:00:00"
+  },
+  {
+   "f": "UPDATED_AT",
+   "fill": 1.0,
+   "fill_uc": 1.0,
+   "level": "Building",
+   "type": "Date",
+   "desc": "The date when the last execution or process update occurred.",
+   "example": "2026-02-13 00:00:00"
+  }
+ ],
+ "files": [
+  {
+   "path": "data-centers\\inventory\\data_center_inventory_20260831.csv",
+   "kind": "inventory",
+   "rows": 8226,
+   "size": 10890805,
+   "asof": "2026-08-31",
+   "what": "Building-level census: one row per data-center building (US + Canada), 77 fields: stage, power (published, Aterio estimate, selected, critical IT), dates, provider, tenants, utility, balancing authority, cost, links, notes."
+  },
+  {
+   "path": "data-centers\\inventory\\data_center_events_20260831.csv",
+   "kind": "events",
+   "rows": 19875,
+   "size": 4600827,
+   "asof": "2026-08-31",
+   "what": "Event log: one row per building per milestone (announced, construction started, 5-95% progress reads from satellite, finished, active, delayed, withdrawn, cancelled). Joins to the inventory on ATERIO_DATA_CENTER_UID."
+  },
+  {
+   "path": "data-centers/inventory/monthly-history/<date>/",
+   "kind": "history",
+   "rows": 20,
+   "size": 159329449,
+   "asof": "2024-12-31 to 2026-07-31",
+   "what": "Month-end point-in-time copies of the inventory and events (same schema). They show what Aterio knew at each date, so comparing them reveals stage moves, date slips and coverage added."
+  },
+  {
+   "path": "data-centers/inventory/quarterly-history/<date>/",
+   "kind": "history",
+   "rows": 5,
+   "size": 29232466,
+   "asof": "",
+   "what": "Quarter-end subset of the monthly history (byte-identical copies of the matching month-ends). Nothing new; kept for convenience."
+  },
+  {
+   "path": "data-centers/inventory/Data Centers Data Dictionary.xlsx",
+   "kind": "dictionary",
+   "rows": 79,
+   "size": 61846,
+   "asof": "",
+   "what": "Field guide for the inventory and events files: type, building vs campus level, description, example."
+  },
+  {
+   "path": "data-centers\\reports\\Aterio US Data Centers Weekly Report.xlsx",
+   "kind": "report",
+   "rows": 25,
+   "size": 5441914,
+   "asof": "2026-08-27",
+   "what": "Aterio's own Excel report: 30-day deltas by stage, a cumulative activation forecast (optimistic / baseline / conservative) by state, ISO, provider and utility, a monthly momentum series rebuilt with today's knowledge, ISO demand vs DC capacity, cancellations, conversion and days-to-start tables, generator demand."
+  },
+  {
+   "path": "power-generation\\behind-the-meter-inventory\\behind_the_meter_power_generation_inventory_20260831.csv",
+   "kind": "btm",
+   "rows": 310,
+   "size": 253070,
+   "asof": "2026-08-31",
+   "what": "Behind-the-meter / dedicated generation for data centers: one row per plant phase (project > plant > phase), technology, fuel, nameplate MW, stage, developer, customer, equipment suppliers, dates."
+  },
+  {
+   "path": "power-generation\\behind-the-meter-inventory\\data_center_with_behind_the_meter_20260831.csv",
+   "kind": "btm",
+   "rows": 1069,
+   "size": 1982969,
+   "asof": "2026-08-31",
+   "what": "The inventory rows (same 77 fields) of the data centers linked to a BTM generation project (join on ATERIO_POWER_GENERATION_PROJECT_UID)."
+  }
+ ],
+ "recon": {
+  "uc": 71.54,
+  "uc_delayed": 80.38,
+  "campus_2630": 134.55,
+  "campus_2630_by_grp": {
+   "active": 5.13,
+   "uc": 69.18,
+   "delayed": 1.12,
+   "ann": 59.13,
+   "wd": 0.0
+  },
+  "uc_nocampus_2630": 2.36
+ },
+ "row_cols": [
+  "name",
+  "campus",
+  "provider",
+  "tick",
+  "st",
+  "county",
+  "city",
+  "stage",
+  "mw",
+  "it",
+  "act",
+  "like",
+  "ai",
+  "btm",
+  "utility",
+  "ba",
+  "users",
+  "ann",
+  "cs",
+  "pct",
+  "x",
+  "y",
+  "notes",
+  "pub"
+ ],
+ "wiki_tickers": [
+  "AAPL",
+  "AMZN",
+  "CRWV",
+  "GOOG",
+  "IREN",
+  "JPM",
+  "META",
+  "MSFT",
+  "NBIS",
+  "ORCL",
+  "TSLA"
+ ],
+ "takeaways": [
+  "<b>71.5 GW of facility power is under construction</b> across 821 buildings (≈62 GW IT-equivalent). Aterio dates 13.1 GW of it to 2026, 27.0 GW to 2027 and 26.8 GW to 2028.",
+  "<b>The announced pipeline (383 GW) is 5.3× what is being built.</b> Aterio rates 44% of it high-likelihood. Its own forecast puts 200 GW cumulative online by end-2028 (baseline), against 52 GW active today.",
+  "<b>Part of the growth is coverage, not new projects.</b> Since 2025-08-31 the census added 3,330 buildings / 308 GW. 78 GW of that was announced before 2025-08-31, so it was backfilled.",
+  "<b>Dates slip.</b> Of the 22.3 GW that was under construction on 2025-08-31 and dated after it, 88% (MW-weighted) now carries a later activation date. The median slip is 9 months. Of the 15.2 GW that was due to go live by 2026-08-31, 3.9 GW is active.",
+  "<b>Construction is concentrated.</b> TX, VA, GA hold 42% of construction GW. Hyperscaler self-builds (AMZN, GOOG, META, MSFT, ORCL, AAPL as provider) are 38% of it.",
+  "<b>Onsite power is a gas story.</b> 195 GW of behind-the-meter generation phases are tracked, 79% natural gas, but only 38 GW is active or under construction. 1,069 data-center buildings link to one."
+ ],
+ "btm": {
+  "asof": "2026-08-31",
+  "phases_n": 310,
+  "projects_n": 137,
+  "plants_n": 252,
+  "gw": 195.39,
+  "by_grp": {
+   "active": 9.35,
+   "uc": 28.81,
+   "delayed": 0.89,
+   "ann": 145.8,
+   "wd": 10.54
+  },
+  "flag_n": {
+   "Y": 274,
+   "N": 36
+  },
+  "techs": [
+   {
+    "tech": "Simple Cycle",
+    "n": 90,
+    "active": 1.79,
+    "uc": 10.94,
+    "delayed": 0.0,
+    "ann": 37.22,
+    "wd": 4.14,
+    "src": "Natural Gas"
+   },
+   {
+    "tech": "Combined Cycle",
+    "n": 38,
+    "active": 2.89,
+    "uc": 4.68,
+    "delayed": 0.0,
+    "ann": 39.0,
+    "wd": 2.1,
+    "src": "Natural Gas"
+   },
+   {
+    "tech": "Reciprocating Engine",
+    "n": 87,
+    "active": 0.2,
+    "uc": 5.99,
+    "delayed": 0.09,
+    "ann": 36.02,
+    "wd": 0.0,
+    "src": "Natural Gas"
+   },
+   {
+    "tech": "Photovoltaic",
+    "n": 21,
+    "active": 0.36,
+    "uc": 0.78,
+    "delayed": 0.0,
+    "ann": 7.63,
+    "wd": 2.0,
+    "src": "Solar"
+   },
+   {
+    "tech": "Fuel Cell",
+    "n": 18,
+    "active": 0.0,
+    "uc": 3.71,
+    "delayed": 0.8,
+    "ann": 4.31,
+    "wd": 0.8,
+    "src": "Natural Gas"
+   },
+   {
+    "tech": "Small Modular Reactor",
+    "n": 6,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 9.5,
+    "wd": 0.0,
+    "src": "Nuclear"
+   },
+   {
+    "tech": "Battery",
+    "n": 31,
+    "active": 0.24,
+    "uc": 2.7,
+    "delayed": 0.0,
+    "ann": 6.25,
+    "wd": 0.3,
+    "src": "Storage"
+   },
+   {
+    "tech": "Conventional",
+    "n": 5,
+    "active": 2.63,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 4.47,
+    "wd": 0.0,
+    "src": "Nuclear"
+   },
+   {
+    "tech": "Onshore",
+    "n": 9,
+    "active": 1.23,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 1.37,
+    "wd": 0.0,
+    "src": "Wind"
+   },
+   {
+    "tech": "Steam Turbine",
+    "n": 2,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 0.0,
+    "wd": 1.2,
+    "src": "Geothermal"
+   },
+   {
+    "tech": "Other",
+    "n": 3,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 0.03,
+    "wd": 0.0,
+    "src": "Natural Gas"
+   }
+  ],
+  "sources": [
+   {
+    "src": "Natural Gas",
+    "n": 232,
+    "gw": 154.46
+   },
+   {
+    "src": "Nuclear",
+    "n": 10,
+    "gw": 16.5
+   },
+   {
+    "src": "Solar",
+    "n": 21,
+    "gw": 10.78
+   },
+   {
+    "src": "Storage",
+    "n": 31,
+    "gw": 9.49
+   },
+   {
+    "src": "Wind",
+    "n": 9,
+    "gw": 2.61
+   },
+   {
+    "src": "Geothermal",
+    "n": 1,
+    "gw": 1.2
+   },
+   {
+    "src": "Petroleum",
+    "n": 2,
+    "gw": 0.26
+   },
+   {
+    "src": "Coal",
+    "n": 1,
+    "gw": 0.09
+   },
+   {
+    "src": "Hydro",
+    "n": 1,
+    "gw": 0.01
+   },
+   {
+    "src": "Other",
+    "n": 1,
+    "gw": 0.01
+   },
+   {
+    "src": "Biomass",
+    "n": 1,
+    "gw": 0.0
+   }
+  ],
+  "states": [
+   {
+    "st": "TX",
+    "n": 133,
+    "active": 1.99,
+    "uc": 14.23,
+    "delayed": 0.8,
+    "ann": 65.81,
+    "wd": 4.1
+   },
+   {
+    "st": "UT",
+    "n": 31,
+    "active": 0.12,
+    "uc": 0.34,
+    "delayed": 0.0,
+    "ann": 23.78,
+    "wd": 0.0
+   },
+   {
+    "st": "WV",
+    "n": 17,
+    "active": 0.0,
+    "uc": 0.72,
+    "delayed": 0.0,
+    "ann": 18.71,
+    "wd": 0.0
+   },
+   {
+    "st": "NM",
+    "n": 9,
+    "active": 0.0,
+    "uc": 2.46,
+    "delayed": 0.0,
+    "ann": 8.88,
+    "wd": 2.0
+   },
+   {
+    "st": "OH",
+    "n": 38,
+    "active": 0.43,
+    "uc": 6.16,
+    "delayed": 0.0,
+    "ann": 5.04,
+    "wd": 0.0
+   },
+   {
+    "st": "PA",
+    "n": 19,
+    "active": 4.08,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 6.96,
+    "wd": 0.25
+   },
+   {
+    "st": "VA",
+    "n": 10,
+    "active": 1.45,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 0.14,
+    "wd": 3.71
+   },
+   {
+    "st": "WY",
+    "n": 5,
+    "active": 0.0,
+    "uc": 2.78,
+    "delayed": 0.0,
+    "ann": 1.5,
+    "wd": 0.0
+   },
+   {
+    "st": "FL",
+    "n": 2,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 4.0,
+    "wd": 0.0
+   },
+   {
+    "st": "AK",
+    "n": 1,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 3.0,
+    "wd": 0.0
+   },
+   {
+    "st": "AZ",
+    "n": 2,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 2.5,
+    "wd": 0.0
+   },
+   {
+    "st": "SC",
+    "n": 1,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 2.0,
+    "wd": 0.0
+   },
+   {
+    "st": "AR",
+    "n": 4,
+    "active": 0.0,
+    "uc": 0.66,
+    "delayed": 0.0,
+    "ann": 0.72,
+    "wd": 0.0
+   },
+   {
+    "st": "MS",
+    "n": 7,
+    "active": 0.0,
+    "uc": 1.24,
+    "delayed": 0.0,
+    "ann": 0.0,
+    "wd": 0.0
+   },
+   {
+    "st": "IL",
+    "n": 1,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 1.17,
+    "wd": 0.0
+   }
+  ],
+  "developers": [
+   {
+    "name": "Williams",
+    "n": 19,
+    "active": 0.43,
+    "uc": 1.68,
+    "delayed": 0.0,
+    "ann": 1.35,
+    "wd": 0.0
+   },
+   {
+    "name": "Nscale",
+    "n": 14,
+    "active": 0.0,
+    "uc": 0.72,
+    "delayed": 0.0,
+    "ann": 12.08,
+    "wd": 0.0
+   },
+   {
+    "name": "VoltaGrid",
+    "n": 14,
+    "active": 0.07,
+    "uc": 2.49,
+    "delayed": 0.09,
+    "ann": 0.44,
+    "wd": 0.0
+   },
+   {
+    "name": "Liberty Power Innovations",
+    "n": 11,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 3.7,
+    "wd": 0.0
+   },
+   {
+    "name": "EdgeConneX",
+    "n": 11,
+    "active": 0.0,
+    "uc": 2.5,
+    "delayed": 0.0,
+    "ann": 0.4,
+    "wd": 0.0
+   },
+   {
+    "name": "Intersect",
+    "n": 10,
+    "active": 0.0,
+    "uc": 1.39,
+    "delayed": 0.0,
+    "ann": 2.55,
+    "wd": 0.0
+   },
+   {
+    "name": "Joule",
+    "n": 9,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 5.1,
+    "wd": 0.0
+   },
+   {
+    "name": "xAI",
+    "n": 9,
+    "active": 0.25,
+    "uc": 1.27,
+    "delayed": 0.0,
+    "ann": 0.0,
+    "wd": 0.0
+   },
+   {
+    "name": "Fermi America",
+    "n": 8,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 16.15,
+    "wd": 0.0
+   },
+   {
+    "name": "Pacifico Energy",
+    "n": 8,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 12.47,
+    "wd": 0.0
+   },
+   {
+    "name": "Nexus Data Centers",
+    "n": 8,
+    "active": 0.0,
+    "uc": 3.45,
+    "delayed": 0.0,
+    "ann": 3.23,
+    "wd": 0.0
+   },
+   {
+    "name": "Solaris Energy Infrastructure",
+    "n": 8,
+    "active": 0.0,
+    "uc": 1.9,
+    "delayed": 0.0,
+    "ann": 0.0,
+    "wd": 0.0
+   },
+   {
+    "name": "NRG Energy",
+    "n": 7,
+    "active": 1.31,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 0.0,
+    "wd": 1.25
+   },
+   {
+    "name": "Knighthead Capital Management",
+    "n": 6,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 4.4,
+    "wd": 0.0
+   },
+   {
+    "name": "Inc.",
+    "n": 5,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 0.41,
+    "wd": 0.0
+   }
+  ],
+  "equipment": [
+   {
+    "name": "Caterpillar",
+    "n": 55,
+    "active": 0.43,
+    "uc": 3.42,
+    "delayed": 0.0,
+    "ann": 18.94,
+    "wd": 0.0
+   },
+   {
+    "name": "Solar Turbines",
+    "n": 38,
+    "active": 1.16,
+    "uc": 8.51,
+    "delayed": 0.0,
+    "ann": 5.88,
+    "wd": 0.0
+   },
+   {
+    "name": "Trinity Consultants",
+    "n": 37,
+    "active": 0.12,
+    "uc": 5.15,
+    "delayed": 0.0,
+    "ann": 5.85,
+    "wd": 1.25
+   },
+   {
+    "name": "GE Vernova",
+    "n": 34,
+    "active": 0.36,
+    "uc": 9.0,
+    "delayed": 0.0,
+    "ann": 11.57,
+    "wd": 1.5
+   },
+   {
+    "name": "Siemens Energy",
+    "n": 34,
+    "active": 0.43,
+    "uc": 4.39,
+    "delayed": 0.0,
+    "ann": 14.47,
+    "wd": 0.0
+   },
+   {
+    "name": "Jenbacher",
+    "n": 26,
+    "active": 0.18,
+    "uc": 3.7,
+    "delayed": 0.09,
+    "ann": 2.3,
+    "wd": 0.0
+   },
+   {
+    "name": "Tesla",
+    "n": 25,
+    "active": 0.43,
+    "uc": 5.23,
+    "delayed": 0.0,
+    "ann": 1.43,
+    "wd": 0.0
+   },
+   {
+    "name": "Ramboll",
+    "n": 20,
+    "active": 0.07,
+    "uc": 2.49,
+    "delayed": 0.0,
+    "ann": 10.66,
+    "wd": 0.0
+   },
+   {
+    "name": "ERM",
+    "n": 18,
+    "active": 0.0,
+    "uc": 3.7,
+    "delayed": 0.0,
+    "ann": 12.47,
+    "wd": 0.0
+   },
+   {
+    "name": "Bloom Energy",
+    "n": 18,
+    "active": 0.0,
+    "uc": 5.59,
+    "delayed": 0.0,
+    "ann": 4.04,
+    "wd": 0.21
+   },
+   {
+    "name": "Verdantas",
+    "n": 17,
+    "active": 0.43,
+    "uc": 1.46,
+    "delayed": 0.0,
+    "ann": 1.05,
+    "wd": 0.0
+   },
+   {
+    "name": "PROENERGY",
+    "n": 15,
+    "active": 0.0,
+    "uc": 2.62,
+    "delayed": 0.0,
+    "ann": 3.4,
+    "wd": 0.0
+   },
+   {
+    "name": "Wartsila",
+    "n": 15,
+    "active": 0.0,
+    "uc": 2.05,
+    "delayed": 0.0,
+    "ann": 2.36,
+    "wd": 0.0
+   },
+   {
+    "name": "Kimley-Horn",
+    "n": 14,
+    "active": 0.36,
+    "uc": 5.27,
+    "delayed": 0.0,
+    "ann": 0.57,
+    "wd": 0.0
+   },
+   {
+    "name": "Stantec",
+    "n": 10,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 5.49,
+    "wd": 0.0
+   },
+   {
+    "name": "TRC Companies",
+    "n": 9,
+    "active": 0.0,
+    "uc": 0.11,
+    "delayed": 0.0,
+    "ann": 11.4,
+    "wd": 0.0
+   },
+   {
+    "name": "Everllence",
+    "n": 9,
+    "active": 0.0,
+    "uc": 3.78,
+    "delayed": 0.0,
+    "ann": 3.23,
+    "wd": 0.0
+   },
+   {
+    "name": "SLR Consulting",
+    "n": 8,
+    "active": 0.0,
+    "uc": 3.45,
+    "delayed": 0.0,
+    "ann": 3.23,
+    "wd": 0.0
+   },
+   {
+    "name": "Mainspring Energy",
+    "n": 8,
+    "active": 0.0,
+    "uc": 1.1,
+    "delayed": 0.0,
+    "ann": 0.93,
+    "wd": 0.0
+   },
+   {
+    "name": "Kiewit Power Constructors Co.",
+    "n": 6,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 4.4,
+    "wd": 0.0
+   }
+  ],
+  "customers": [
+   {
+    "name": "Facebook",
+    "n": 20,
+    "active": 0.43,
+    "uc": 2.04,
+    "delayed": 0.0,
+    "ann": 1.35,
+    "wd": 0.0
+   },
+   {
+    "name": "Vantage Data Centers",
+    "n": 16,
+    "active": 0.2,
+    "uc": 4.87,
+    "delayed": 0.0,
+    "ann": 0.44,
+    "wd": 0.0
+   },
+   {
+    "name": "Nscale",
+    "n": 14,
+    "active": 0.0,
+    "uc": 0.72,
+    "delayed": 0.0,
+    "ann": 12.08,
+    "wd": 0.0
+   },
+   {
+    "name": "Google",
+    "n": 13,
+    "active": 0.0,
+    "uc": 4.17,
+    "delayed": 0.0,
+    "ann": 2.55,
+    "wd": 0.0
+   },
+   {
+    "name": "EdgeConneX",
+    "n": 11,
+    "active": 0.0,
+    "uc": 2.5,
+    "delayed": 0.0,
+    "ann": 0.4,
+    "wd": 0.0
+   },
+   {
+    "name": "Crusoe",
+    "n": 10,
+    "active": 0.44,
+    "uc": 2.33,
+    "delayed": 0.0,
+    "ann": 2.97,
+    "wd": 0.0
+   },
+   {
+    "name": "Joule",
+    "n": 9,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 5.1,
+    "wd": 0.0
+   },
+   {
+    "name": "xAI",
+    "n": 9,
+    "active": 0.25,
+    "uc": 1.27,
+    "delayed": 0.0,
+    "ann": 0.0,
+    "wd": 0.0
+   },
+   {
+    "name": "Fermi America",
+    "n": 8,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 16.15,
+    "wd": 0.0
+   },
+   {
+    "name": "Nexus Data Centers",
+    "n": 8,
+    "active": 0.0,
+    "uc": 3.45,
+    "delayed": 0.0,
+    "ann": 3.23,
+    "wd": 0.0
+   },
+   {
+    "name": "Amazon AWS",
+    "n": 5,
+    "active": 0.0,
+    "uc": 0.07,
+    "delayed": 0.0,
+    "ann": 10.2,
+    "wd": 0.0
+   },
+   {
+    "name": "Chevron",
+    "n": 4,
+    "active": 0.0,
+    "uc": 2.98,
+    "delayed": 0.0,
+    "ann": 0.39,
+    "wd": 0.0
+   },
+   {
+    "name": "Microsoft",
+    "n": 4,
+    "active": 0.0,
+    "uc": 2.98,
+    "delayed": 0.0,
+    "ann": 0.39,
+    "wd": 0.0
+   },
+   {
+    "name": "Fibernet MercuryDelta",
+    "n": 4,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 3.22,
+    "wd": 0.0
+   },
+   {
+    "name": "Prometheus Hyperscale",
+    "n": 4,
+    "active": 0.0,
+    "uc": 0.0,
+    "delayed": 0.0,
+    "ann": 1.8,
+    "wd": 0.0
+   }
+  ],
+  "dc": {
+   "n": 1069,
+   "gw": 155.43,
+   "by_grp": {
+    "active": 2.65,
+    "uc": 12.45,
+    "delayed": 5.71,
+    "ann": 127.79,
+    "wd": 6.83
+   },
+   "n_by_grp": {
+    "active": 37,
+    "uc": 104,
+    "delayed": 42,
+    "ann": 820,
+    "wd": 66
+   }
+  },
+  "phase_cols": [
+   "project",
+   "plant",
+   "phase",
+   "developer",
+   "customer",
+   "tech",
+   "source",
+   "stage",
+   "mw",
+   "st",
+   "county",
+   "act",
+   "equipment",
+   "btm"
+  ]
+ }
+}

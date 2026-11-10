@@ -1,0 +1,17 @@
+{
+ "_doc": "Team research shown as a tab on dc-delay-risk.html (build_dc_delay.py: team_views). The HTML is Daniel's file exactly as received on 2026-11-09 (Downloads/dc_matrix_standalone.html), stored unchanged and embedded in a sandboxed frame. To update the tab: drop the new file here, point 'file' at it, bump 'asof'/'received', rebuild.",
+ "id": "daniel",
+ "tab": "Daniel rsch",
+ "author": "Daniel (Capstone research)",
+ "title": "US data center build matrix: states × companies",
+ "asof": "2026-11-05",
+ "received": "2026-11-09",
+ "file": "daniel_dc_matrix_2026-11-05.html",
+ "registry_map": "daniel_registry_map.json",
+ "summary": "183 projects in 34 states plus a multi-state row, under 10 company groups (end user where disclosed or credibly reported); each state row carries Daniel's post-election friendliness rank, SemiAnalysis's 2028 GW where printed, and the regulatory state of play. Click a cell for project MW, partners, status, confidence and source.",
+ "caveats": [
+  "MW are headline figures in mixed units (IT, power or utility load, full-build or permit capacity), not our IT-eq basis: cell totals show concentration and are not additive forecasts.",
+  "Rank is Daniel's post-election data-center friendliness ranking (1 = friendliest) from the DC Regulation knowledge base; the 'SA' figure is SemiAnalysis's 2028 net additions (2026-11-01).",
+  "Includes Wells Fargo and FUNDA material marked internal only: keep the page on internal channels."
+ ]
+}
