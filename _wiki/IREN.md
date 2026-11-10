@@ -3,17 +3,17 @@
 _Wiki · generated 2026-11-06 · sources: `E:\Wiki Felipe empresas\IREN`: 10-K FY25 + FY26, 10-Qs Nov-25 → Nov-26, 20-F/A, Q4 FY26 and Q1 FY27 8-K press releases, and the [Q1 FY27 call transcript](../IREN/transcripts/IREN_Q1-FY27-earnings_2026-11-05.md). Also BBG consensus (pulled 2026-11-06, pre-revision), and corpus mentions on [[NBIS]], [[CRWV]], [[MSFT]], [[NVDA]], [[PWR]] and [ai-compute-deals](themes/ai-compute-deals.md). Fiscal year ends **30 June**: Q1 FY27 = the Sep-26 quarter. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-09 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-10 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $916m | $4.7bn |
-| Gross profit | $707m | $4.1bn |
-| Gross margin | 77.2% | 85.8% |
-| EBITDA | $395m | $3.5bn |
-| EPS | $-1.98 | $-0.64 |
-| Capex | $11.6bn | $17.5bn |
-| OCF (≈EBITDA) | $395m | $3.5bn |
+| Revenue | $905m | $4.7bn |
+| Gross profit | $692m | $4.0bn |
+| Gross margin | 76.5% | 84.7% |
+| EBITDA | $369m | $3.2bn |
+| EPS | $-1.98 | $-1.36 |
+| Capex | $11.3bn | $16.8bn |
+| OCF (≈EBITDA) | $369m | $3.2bn |
 
 _Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
 <!-- SNAPSHOT:END -->

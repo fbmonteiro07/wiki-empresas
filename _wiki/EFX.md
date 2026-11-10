@@ -3,7 +3,7 @@
 _Wiki · created 2026-11-02 · research cutoff 2026-11-02 · Outlook review 2026-11-02 · [Financials](themes/financials.md) · [Company index](00_INDEX.md). Source archive: [EFX](_dashboards/financials-sources.html#EFX)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-09 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-10 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
