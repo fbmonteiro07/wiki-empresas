@@ -116,6 +116,10 @@ main{max-width:1440px;margin:0 auto;padding:30px 36px 70px;outline:none}
 .legend i{display:inline-block;width:9px;height:9px;border-radius:2px;margin-right:5px;vertical-align:-1px}
 .legend i.c{border-radius:50%}
 .legend i.dash{background:transparent;border:1.5px dashed var(--muted)}
+.legend i.hm,.mini span.hm{background:repeating-linear-gradient(135deg,var(--g-aM) 0 2px,color-mix(in srgb,var(--g-aM) 30%,transparent) 2px 4px)}
+.chart .medv{fill:var(--muted);font-size:10.5px;font-weight:600}
+.hc-med{font-size:11.5px;color:var(--ink2);margin-top:2px;font-variant-numeric:tabular-nums}
+.hc-med b{color:var(--ink);font-weight:650}
 /* the four */
 .cards{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin:0 0 16px}
 .hcard{display:block;background:var(--surf);border:1px solid var(--border);border-radius:10px;padding:16px 18px 14px;color:inherit;text-decoration:none;box-shadow:var(--shadow);position:relative;overflow:hidden;transition:border-color .15s}
@@ -262,7 +266,8 @@ details.note p{margin:8px 0 0}
   <main id="main" tabindex="-1"><div id="view"></div></main>
 </div>
 <div id="tip"></div>
-<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="usmap" viewBox="0 0 975 610"><g id="usPaths"></g></symbol></defs></svg>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><symbol id="usmap" viewBox="0 0 975 610"><g id="usPaths"></g></symbol>
+  <pattern id="hatchM" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="5" height="5" fill="var(--g-aM)" fill-opacity=".3"/><rect width="2.2" height="5" fill="var(--g-aM)"/></pattern></defs></svg>
 <script>
 const M = /*__DATA__*/null;
 const $ = id => document.getElementById(id);
@@ -275,6 +280,11 @@ const SN = st => M.stateNames[st] || st;
 const C = M.companies, YRS = []; for (let y = M.window[0]; y <= M.window[1]; y++) YRS.push(String(y));
 const G = [["op", "Operating", "var(--g-op)"], ["uc", "Under construction", "var(--g-uc)"], ["dl", "Delayed", "var(--g-dl)"], ["aH", "Announced · high", "var(--g-aH)"], ["aM", "Announced · medium", "var(--g-aM)"], ["aL", "Announced · low", "var(--g-aL)"]];
 const HB = [["op", "Went live in 2026", "var(--g-op)"], ["uc", "Under construction", "var(--g-uc)"], ["dl", "Delayed", "var(--g-dl)"], ["aH", "Announced · high", "var(--g-aH)"]];
+// medium layer: announced projects rated Medium, dated in the window, campus rule 4 applied. Drawn hatched ON TOP of the
+// house view and labelled as outside it: the house view itself stays High only (house rules)
+const MEDL = "Announced · medium (outside the house view)", MEDF = "url(#hatchM)";
+const medLeg = () => `<span><i class="hm"></i>${MEDL}</span>`;
+const MED_NOTE = `The hatched “announced · medium” layer is what Aterio rates Medium likelihood and dates ${M.window[0]}-${M.window[1]}, on the same campus rule; it sits on top of the house view and is never counted in it (the house rules take High only).`;
 const S = {role: "both", metric: "house", co: C[0].id, q: "", mapCo: "all"};
 const tip = $("tip");
 function showTip(e, h){ tip.innerHTML = h; tip.style.display = "block"; const w = tip.offsetWidth, hh = tip.offsetHeight; let x = e.clientX + 14, y = e.clientY + 14; if (x + w > innerWidth - 8) x = e.clientX - w - 14; if (y + hh > innerHeight - 8) y = e.clientY - hh - 14; tip.style.left = x + "px"; tip.style.top = y + "px"; }
@@ -284,10 +294,11 @@ const roles = () => S.role === "both" ? ["self", "leased"] : [S.role];
 const roleTxt = () => S.role === "both" ? "self-built + leased" : S.role === "self" ? "self-built" : "leased";
 const tot = (c, g) => roles().reduce((a, r) => a + (c.tot[r][g] || 0), 0);
 const campOk = cp => S.role === "both" || cp.role === S.role;
-const cv = cp => S.metric === "house" ? cp.house : S.metric === "pipe" ? cp.uc + cp.dl + cp.aH + cp.aM + cp.aL : cp.op + cp.uc + cp.dl + cp.aH + cp.aM + cp.aL;
-const METRIC = {house: "house view 2026-30", pipe: "pipeline, any likelihood or date", all: "operating + pipeline"};
+const cv = cp => S.metric === "house" ? cp.house : S.metric === "housem" ? cp.house + (cp.med || 0) : S.metric === "pipe" ? cp.uc + cp.dl + cp.aH + cp.aM + cp.aL : cp.op + cp.uc + cp.dl + cp.aH + cp.aM + cp.aL;
+const METRIC = {house: "house view 2026-30", housem: "house view + announced medium 2026-30", pipe: "pipeline, any likelihood or date", all: "operating + pipeline"};
 const rtop = (x, y, w, h, r) => { r = Math.max(0, Math.min(r, w / 2, h)); return `M${x},${y + h}V${y + r}Q${x},${y} ${x + r},${y}H${x + w - r}Q${x + w},${y} ${x + w},${y + r}V${y + h}Z`; };
 const houseOf = c => S.role === "both" ? c.house : S.role === "self" ? c.house_self : c.house_leased;
+const medOf = c => (S.role === "both" ? c.med : S.role === "self" ? c.med_self : c.med_leased) || 0;
 const houseBy = (c, g) => YRS.reduce((a, y) => a + roles().reduce((b, r) => b + (c.house_by[y][r][g] || 0), 0), 0);
 function status(cp){ const parts = [["op", cp.op], ["uc", cp.uc + cp.dl], ["aH", cp.aH], ["aML", cp.aM + cp.aL]]; return parts.sort((a, b) => b[1] - a[1])[0][0]; }
 const STC = {op: ["Mostly operating", "var(--g-op)"], uc: ["Mostly being built", "var(--g-uc)"], aH: ["Mostly announced · high", "var(--g-aH)"], aML: ["Mostly announced · medium/low", "var(--g-aL)"]};
@@ -506,27 +517,29 @@ function coAgg(e, role){
 // R: building index -> the roles it is counted under; own: raw names left out of the counterparties
 function aggCore(R, own){
   const z = () => [0, 0, 0, 0, 0, 0, 0];
-  const A = {g: z(), house: 0, hy: {}, raw: {}, after: 0, undated: 0, n: R.size, nomw: 0, camps: new Map(), st: {}, cp: {},
+  const A = {g: z(), house: 0, med: 0, hy: {}, hm: {}, raw: {}, after: 0, undated: 0, n: R.size, nomw: 0, camps: new Map(), st: {}, cp: {},
     base: 0, prov: new Map(), cty: new Map(), out: {aM: 0, aL: 0, rule: 0}};
-  YRS.forEach(y => { A.hy[y] = [0, 0, 0, 0]; A.raw[y] = 0; });
+  YRS.forEach(y => { A.hy[y] = [0, 0, 0, 0]; A.hm[y] = 0; A.raw[y] = 0; });
   CPL.forEach(([k]) => { A.cp[k] = new Map(); });
   R.forEach((rs, j) => {
     const b = LU.bld[j], [c, g, mw, act, lk, fl] = b, v = (mw || 0) / FK, y = act ? String(Math.floor(act / 100)) : "", inW = !!y && +y >= Y0 && +y <= Y1;
     if (mw == null) A.nomw++;
     A.g[g] += v;
     if (fl & 1) { A.house += v; if (inW && g <= 3) A.hy[y][g] += v; }
+    const md = (fl & 32) && inW;                       // medium layer (never in the house view)
+    if (md) { A.med += v; A.hm[y] += v; }
     if ((fl & 2) && inW) A.raw[y] += v;
     if (g >= 1 && g <= 5) { if (y && +y > Y1) A.after += v; else if (!y) A.undated += v; }
     let cp = A.camps.get(c);
     if (!cp) { const k = LU.camps[c]; A.camps.set(c, cp = {c, name: k[0], st: k[1], city: k[2], county: k[3], x: k[4], y: k[5], reg: k[6], cost: k[7],
-      g: z(), house: 0, n: 0, nomw: 0, roles: new Set(), acts: [], like: new Set(), ai: false, btm: false, prov: new Set(), users: new Set()}); }
-    cp.n++; cp.g[g] += v; if (fl & 1) cp.house += v; if (mw == null) cp.nomw++;
+      g: z(), house: 0, med: 0, n: 0, nomw: 0, roles: new Set(), acts: [], like: new Set(), ai: false, btm: false, prov: new Set(), users: new Set()}); }
+    cp.n++; cp.g[g] += v; if (fl & 1) cp.house += v; if (md) cp.med += v; if (mw == null) cp.nomw++;
     rs.forEach(k => cp.roles.add(k));
     if (g >= 1 && g <= 5 && act) cp.acts.push(act);
     if (lk && g !== 0) cp.like.add(lk);
     if (fl & 4) cp.ai = true; if (fl & 8) cp.btm = true;
     if (b[6] != null) cp.prov.add(b[6]); b[7].forEach(i => cp.users.add(i));
-    const s = A.st[cp.st] = A.st[cp.st] || {g: z(), house: 0}; s.g[g] += v; if (fl & 1) s.house += v;
+    const s = A.st[cp.st] = A.st[cp.st] || {g: z(), house: 0, med: 0}; s.g[g] += v; if (fl & 1) s.house += v; if (md) s.med += v;
     // growth bookkeeping: base = operating before the window; what the house rules leave out of the dated pipeline
     if (g === 0 && !((fl & 1) && inW)) A.base += v;
     if (inW && (fl & 2) && !(fl & 1)) { if (g === 4) A.out.aM += v; else if (g === 5) A.out.aL += v; else A.out.rule += v; }
@@ -546,35 +559,41 @@ function stAgg(st){ const R = new Map(), none = new Set(); LU.bld.forEach((b, j)
 
 /* ------------------------------------------------------------------ chart and table builders (any company or state) */
 function coYears(A){
-  const tt = y => A.hy[y].reduce((a, b) => a + b, 0), mx = Math.max(...YRS.map(y => Math.max(tt(y), A.raw[y])), 0.001) * 1.08;
+  const tt = y => A.hy[y].reduce((a, b) => a + b, 0), mx = Math.max(...YRS.map(y => Math.max(tt(y) + A.hm[y], A.raw[y])), 0.001) * 1.08;
   const W = 520, H = 244, base = H - 34, top = 24, cw = (W - 6) / YRS.length, bw = cw * 0.55, ys = v => base - v / mx * (base - top);
   let s = `<line class="gl" x1="0" x2="${W}" y1="${base}" y2="${base}"/>`;
-  YRS.forEach((y, i) => { const x = 3 + i * cw + (cw - bw) / 2, t = tt(y), rv = A.raw[y]; let acc = 0;
-    if (rv > t + 0.5) s += `<rect x="${x - 2}" y="${ys(rv)}" width="${bw + 4}" height="${base - ys(rv)}" rx="3" fill="none" stroke="var(--muted)" stroke-dasharray="3 3" data-t="${y}: Aterio dates <b>${gq(rv)}</b> IT-eq to the year before the house rules; house view ${gq(t)}"/>`;
+  YRS.forEach((y, i) => { const x = 3 + i * cw + (cw - bw) / 2, t = tt(y), md = A.hm[y], rv = A.raw[y]; let acc = 0;
+    if (rv > t + md + 0.5) s += `<rect x="${x - 2}" y="${ys(rv)}" width="${bw + 4}" height="${base - ys(rv)}" rx="3" fill="none" stroke="var(--muted)" stroke-dasharray="3 3" data-t="${y}: Aterio dates <b>${gq(rv)}</b> IT-eq to the year before the house rules; house view ${gq(t)}${md > 0.05 ? `, + medium ${gq(md)}` : ""}"/>`;
     const segs = HB.map((d, gi) => [d, A.hy[y][gi]]).filter(([, v]) => v > 0.05);
-    segs.forEach(([[g, l, col], v], k) => { const ya = ys(acc + v), yb = ys(acc), tt_ = `data-t="${y} · ${l}: <b>${gq(v)}</b> IT-eq (house view ${gq(t)})"`;
+    if (md > 0.05) segs.push([["aM", MEDL, MEDF], md]);
+    segs.forEach(([[g, l, col], v], k) => { const ya = ys(acc + v), yb = ys(acc), tt_ = `data-t="${y} · ${l}: <b>${gq(v)}</b> IT-eq (house view ${gq(t)}${g === "aM" ? `; with medium ${gq(t + v)}` : ""})"`;
       s += k === segs.length - 1 ? `<path d="${rtop(x, ya, bw, yb - ya, 3)}" fill="${col}" ${tt_}/>` : `<rect x="${x}" y="${ya + 1}" width="${bw}" height="${Math.max(0, yb - ya - 1)}" fill="${col}" ${tt_}/>`; acc += v; });
-    s += `<text class="val" x="${x + bw / 2}" y="${ys(Math.max(t, rv)) - 5}" text-anchor="middle">${t > 0.05 ? gq(t) : "–"}</text><text class="ax" x="${x + bw / 2}" y="${H - 19}" text-anchor="middle">${y}</text>`; });
-  return `<div class="legend">${HB.map(([, l, c]) => `<span><i style="background:${c}"></i>${l}</span>`).join("")}<span><i class="dash"></i>Everything Aterio dates to the year</span></div>` +
+    const ly = ys(Math.max(t + md, rv)) - 5;
+    s += `<text class="val" x="${x + bw / 2}" y="${ly}" text-anchor="middle">${t > 0.05 ? gq(t) : "–"}</text><text class="ax" x="${x + bw / 2}" y="${H - 19}" text-anchor="middle">${y}</text>` +
+      (md > 0.05 ? `<text class="medv" x="${x + bw / 2}" y="${ly - 14}" text-anchor="middle">+${gq(md)} med</text>` : ""); });
+  return `<div class="legend">${HB.map(([, l, c]) => `<span><i style="background:${c}"></i>${l}</span>`).join("")}${A.med > 0.05 ? medLeg() : ""}<span><i class="dash"></i>Everything Aterio dates to the year</span></div>` +
     `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="House view by year">${s}</svg></div>`;
 }
 function cumChart(A){
   const B = [["Operating before " + Y0, "var(--g-base)"], ["Went live in " + Y0, "var(--g-op)"], ["Under construction", "var(--g-uc)"], ["Delayed", "var(--g-dl)"], ["Announced · high", "var(--g-aH)"]];
-  const cols = [{y: String(Y0 - 1), v: [A.base, 0, 0, 0, 0], raw: A.base}], acc = [0, 0, 0, 0];
-  let accRaw = 0;
-  YRS.forEach(y => { A.hy[y].forEach((v, g) => { acc[g] += v; }); accRaw += A.raw[y]; cols.push({y, v: [A.base, ...acc], raw: A.base + accRaw}); });
-  const mx = Math.max(...cols.map(c => Math.max(sum(c.v), c.raw)), 0.001) * 1.08;
+  const cols = [{y: String(Y0 - 1), v: [A.base, 0, 0, 0, 0], md: 0, raw: A.base}], acc = [0, 0, 0, 0];
+  let accRaw = 0, accMd = 0;
+  YRS.forEach(y => { A.hy[y].forEach((v, g) => { acc[g] += v; }); accRaw += A.raw[y]; accMd += A.hm[y]; cols.push({y, v: [A.base, ...acc], md: accMd, raw: A.base + accRaw}); });
+  const mx = Math.max(...cols.map(c => Math.max(sum(c.v) + c.md, c.raw)), 0.001) * 1.08;
   const W = 520, H = 244, base = H - 34, top = 24, cw = (W - 6) / cols.length, bw = cw * 0.58, ys = v => base - v / mx * (base - top);
   let s = `<line class="gl" x1="0" x2="${W}" y1="${base}" y2="${base}"/>`;
   cols.forEach((c, i) => { const x = 3 + i * cw + (cw - bw) / 2, t = sum(c.v); let a = 0;
-    if (c.raw > t + 0.5) s += `<rect x="${x - 2}" y="${ys(c.raw)}" width="${bw + 4}" height="${base - ys(c.raw)}" rx="3" fill="none" stroke="var(--muted)" stroke-dasharray="3 3" data-t="End-${c.y}: <b>${gq(c.raw)}</b> if everything Aterio dates to ${Y0}-${c.y} lands on time, any likelihood (house view ${gq(t)})"/>`;
+    if (c.raw > t + c.md + 0.5) s += `<rect x="${x - 2}" y="${ys(c.raw)}" width="${bw + 4}" height="${base - ys(c.raw)}" rx="3" fill="none" stroke="var(--muted)" stroke-dasharray="3 3" data-t="End-${c.y}: <b>${gq(c.raw)}</b> if everything Aterio dates to ${Y0}-${c.y} lands on time, any likelihood (house view ${gq(t)})"/>`;
     const segs = B.map((d, k) => [d, c.v[k]]).filter(([, v]) => v > 0.05);
-    segs.forEach(([[l, col], v], k) => { const ya = ys(a + v), yb = ys(a), tt = `data-t="End-${c.y} · ${l}: <b>${gq(v)}</b> (total ${gq(t)})"`;
+    if (c.md > 0.05) segs.push([[MEDL, MEDF], c.md]);
+    segs.forEach(([[l, col], v], k) => { const ya = ys(a + v), yb = ys(a), tt = `data-t="End-${c.y} · ${l}: <b>${gq(v)}</b> (house view ${gq(t)}${c.md > 0.05 ? `; with medium ${gq(t + c.md)}` : ""})"`;
       s += k === segs.length - 1 ? `<path d="${rtop(x, ya, bw, yb - ya, 3)}" fill="${col}" ${tt}/>` : `<rect x="${x}" y="${ya + 1}" width="${bw}" height="${Math.max(0, yb - ya - 1)}" fill="${col}" ${tt}/>`; a += v; });
-    s += `<text class="val" x="${x + bw / 2}" y="${ys(Math.max(t, c.raw)) - 5}" text-anchor="middle">${t > 0.05 ? gq(t) : "–"}</text>` +
+    const ly = ys(Math.max(t + c.md, c.raw)) - 5;
+    s += `<text class="val" x="${x + bw / 2}" y="${ly}" text-anchor="middle">${t > 0.05 ? gq(t) : "–"}</text>` +
+      (c.md > 0.05 ? `<text class="medv" x="${x + bw / 2}" y="${ly - 14}" text-anchor="middle">+${gq(c.md)} med</text>` : "") +
       `<text class="ax" x="${x + bw / 2}" y="${H - 19}" text-anchor="middle">${c.y}</text>` +
       (i && A.base > 0.5 ? `<text class="ax" x="${x + bw / 2}" y="${H - 4}" text-anchor="middle">×${(t / A.base).toFixed(1)}</text>` : ""); });
-  return `<div class="legend">${B.map(([l, c]) => `<span><i style="background:${c}"></i>${l}</span>`).join("")}<span><i class="dash"></i>Everything Aterio dates, any likelihood</span></div>` +
+  return `<div class="legend">${B.map(([l, c]) => `<span><i style="background:${c}"></i>${l}</span>`).join("")}${A.med > 0.05 ? medLeg() : ""}<span><i class="dash"></i>Everything Aterio dates, any likelihood</span></div>` +
     `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cumulative capacity by year end">${s}</svg></div>`;
 }
 const stcLegend = () => `<div class="legend">${Object.values(STC).map(([l, c]) => `<span><i class="c" style="background:${c}"></i>${l}</span>`).join("")}</div>`;
@@ -617,8 +636,8 @@ function coStates(A){
   const rows = Object.entries(A.st).map(([st, s]) => ({st, ...s, t: s.g.slice(0, 6).reduce((a, x) => a + x, 0)})).filter(r => r.t > 0.05).sort((a, b) => b.house - a.house || b.t - a.t);
   if (!rows.length) return `<p class="why">No MW recorded.</p>`;
   const top = rows.slice(0, 15), rest = rows.slice(15), c = v => `<td class="n">${gw(v)}</td>`;
-  const R = (lab, rs) => `<tr><td>${lab}</td>${c(sum(rs.map(r => r.g[0])))}${c(sum(rs.map(r => r.g[1] + r.g[2])))}${c(sum(rs.map(r => r.g[3])))}${c(sum(rs.map(r => r.g[4] + r.g[5])))}<td class="n"><b>${gw(sum(rs.map(r => r.house)))}</b></td></tr>`;
-  return `<table><tr><th>State</th><th class="n">Operating</th><th class="n">Building + delayed</th><th class="n">Ann. high</th><th class="n">Ann. med/low</th><th class="n">House ${Y0}-${String(Y1).slice(2)}</th></tr>` +
+  const R = (lab, rs) => `<tr><td>${lab}</td>${c(sum(rs.map(r => r.g[0])))}${c(sum(rs.map(r => r.g[1] + r.g[2])))}${c(sum(rs.map(r => r.g[3])))}${c(sum(rs.map(r => r.g[4] + r.g[5])))}<td class="n"><b>${gw(sum(rs.map(r => r.house)))}</b></td>${c(sum(rs.map(r => r.med)))}</tr>`;
+  return `<table><tr><th>State</th><th class="n">Operating</th><th class="n">Building + delayed</th><th class="n">Ann. high</th><th class="n">Ann. med/low, any date</th><th class="n">House ${Y0}-${String(Y1).slice(2)}</th><th class="n" title="Announced Medium dated ${Y0}-${Y1}: outside the house view">+ Med ${Y0}-${String(Y1).slice(2)}</th></tr>` +
     top.map(r => R(`<a class="ent" href="#" data-st="${r.st}" title="Open the state view">${esc(SN(r.st))}</a>`, [r])).join("") +
     (rest.length ? R(`<span class="why">Other ${rest.length} states</span>`, rest) : "") + `</table>`;
 }
@@ -627,13 +646,13 @@ function campRange(cp){ if (!cp.acts.length) return "–"; const a = Math.min(..
 function coCamps(e, A, noRole){
   const L2 = A.list, rows = L2.slice(0, 300);
   const names = s => [...s].filter(i => !e.own.has(i)).map(i => ENT[R0 + i].n);
-  return `<table><tr><th>Campus</th><th>Where</th>${noRole ? "" : "<th>Its role</th>"}<th>Operator</th><th>Tenants</th><th class="n">Operating</th><th class="n">Building</th><th class="n">Delayed</th><th class="n">Ann. high</th><th class="n">Ann. med</th><th class="n">Ann. low</th><th class="n">House ${Y0}-${String(Y1).slice(2)}</th><th class="n">Activation</th><th>Likelihood</th><th>In registry</th><th class="n">Campus cost</th><th>Flags</th></tr>` +
+  return `<table><tr><th>Campus</th><th>Where</th>${noRole ? "" : "<th>Its role</th>"}<th>Operator</th><th>Tenants</th><th class="n">Operating</th><th class="n">Building</th><th class="n">Delayed</th><th class="n">Ann. high</th><th class="n">Ann. med</th><th class="n">Ann. low</th><th class="n">House ${Y0}-${String(Y1).slice(2)}</th><th class="n" title="Announced Medium dated ${Y0}-${Y1}: outside the house view">+ Med ${Y0}-${String(Y1).slice(2)}</th><th class="n">Activation</th><th>Likelihood</th><th>In registry</th><th class="n">Campus cost</th><th>Flags</th></tr>` +
     rows.map(cp => `<tr><td><b>${esc(cp.name)}</b><div class="why">${cp.n} bldg${cp.n > 1 ? "s" : ""}${cp.nomw ? ` · ${cp.nomw} without MW` : ""}${cp.wd > 0.05 ? ` · withdrawn ${gq(cp.wd)}` : ""}</div></td>` +
       `<td class="why">${esc([cp.city, cp.county].filter(Boolean).join(", "))}${cp.city || cp.county ? ", " : ""}${esc(cp.st)}</td>` +
       (noRole ? "" : `<td>${[...cp.roles].map(k => `<span class="tag">${RL[k][1]}</span>`).join(" ")}</td>`) +
       `<td class="why">${esc(cp.roles.has("op") ? "itself" : names(cp.prov).join(", ") || "–")}</td><td class="why">${esc(names(cp.users).join(", ") || (cp.roles.has("ten") ? "itself" : "–"))}</td>` +
       ["op", "uc", "dl", "aH", "aM", "aL"].map(g => `<td class="n">${cp[g] > 0.05 ? gq(cp[g]) : "–"}</td>`).join("") +
-      `<td class="n"><b>${cp.house > 0.05 ? gq(cp.house) : "–"}</b></td><td class="n">${campRange(cp)}</td>` +
+      `<td class="n"><b>${cp.house > 0.05 ? gq(cp.house) : "–"}</b></td><td class="n">${cp.med > 0.05 ? gq(cp.med) : "–"}</td><td class="n">${campRange(cp)}</td>` +
       `<td>${esc([...cp.like].sort().map(x => LKN[x]).join("/") || "–")}</td><td class="why">${cp.reg ? "✓ " + esc(cp.reg) : "–"}</td>` +
       `<td class="n">${cp.cost != null ? "$" + (cp.cost >= 10 ? cp.cost.toFixed(0) : cp.cost.toFixed(1)) + "bn" : "–"}</td>` +
       `<td>${cp.ai ? '<span class="tag">AI</span> ' : ""}${cp.btm ? '<span class="tag">on-site power</span>' : ""}</td></tr>`).join("") + `</table>` +
@@ -642,9 +661,9 @@ function coCamps(e, A, noRole){
 function coCsv(e, A){
   const q = v => { v = String(v ?? ""); return /[",\n]/.test(v) ? `"${v.replace(/"/g, '""')}"` : v; };
   const names = s => [...s].filter(i => !e.own.has(i)).map(i => ENT[R0 + i].n).join("; ");
-  const head = ["selection", "campus", "city", "county", "state", "roles", "operator", "tenants", "buildings", "operating_mw_it", "building_mw_it", "delayed_mw_it", "ann_high_mw_it", "ann_med_mw_it", "ann_low_mw_it", "withdrawn_mw_it", "house_2026_30_mw_it", "activation_first", "activation_last", "likelihood", "in_registry", "campus_cost_usd_bn"];
+  const head = ["selection", "campus", "city", "county", "state", "roles", "operator", "tenants", "buildings", "operating_mw_it", "building_mw_it", "delayed_mw_it", "ann_high_mw_it", "ann_med_mw_it", "ann_low_mw_it", "withdrawn_mw_it", "house_2026_30_mw_it", "ann_med_2026_30_outside_house_mw_it", "activation_first", "activation_last", "likelihood", "in_registry", "campus_cost_usd_bn"];
   const rows = A.list.map(cp => [e.n, cp.name, cp.city, cp.county, cp.st, [...cp.roles].map(k => RL[k][1]).join("; "), cp.roles.has("op") ? "itself" : names(cp.prov), names(cp.users), cp.n,
-    ...["op", "uc", "dl", "aH", "aM", "aL", "wd", "house"].map(g => cp[g].toFixed(1)), cp.acts.length ? ymS(Math.min(...cp.acts)) : "", cp.acts.length ? ymS(Math.max(...cp.acts)) : "",
+    ...["op", "uc", "dl", "aH", "aM", "aL", "wd", "house", "med"].map(g => cp[g].toFixed(1)), cp.acts.length ? ymS(Math.min(...cp.acts)) : "", cp.acts.length ? ymS(Math.max(...cp.acts)) : "",
     [...cp.like].sort().map(x => LKN[x]).join("/"), cp.reg, cp.cost ?? ""]);
   const blob = new Blob(["﻿" + [head, ...rows].map(r => r.map(q).join(",")).join("\n")], {type: "text/csv;charset=utf-8"});
   const a = document.createElement("a"); a.href = URL.createObjectURL(blob); a.download = `aterio_${e.n.replace(/[^A-Za-z0-9]+/g, "_")}_${M.asof}.csv`; a.click(); setTimeout(() => URL.revokeObjectURL(a.href), 2000);
@@ -706,6 +725,10 @@ function stCounter(A){
 
 /* ------------------------------------------------------------------ view furniture */
 const kpi = (lab, v, sub, cls) => `<div class="kpi${cls ? " " + cls : ""}"><span class="kl">${lab}</span><strong>${v}</strong>${sub ? `<small>${sub}</small>` : ""}</div>`;
+// the medium layer next to the house view: what announced Medium dated in the window would add, and the totals with it
+const medKpi = A => kpi(`+ Announced medium ${Y0}-${Y1}`, (A.med > 0.0005 ? "+" : "") + gqv(A.med),
+  A.med > 0.05 ? `outside the house view · with it ${gq(A.house + A.med)} adds (${A.house > 0.05 ? "+" + pc(A.med / A.house) : "–"}), end-${Y1} ${gq(A.base + A.house + A.med)}`
+    : "nothing rated Medium dated in the window");
 const vhead = (kick, title, small, sub, right) => `<div class="vhead"><div><p class="kick">${kick}</p><h2>${esc(title)}${small ? `<small>${esc(small)}</small>` : ""}</h2>${sub ? `<p class="vsub">${sub}</p>` : ""}</div>${right ? `<div class="vright">${right}</div>` : ""}</div>`;
 const panel = (title, sub, body, extra) => `<section class="panel"><div class="ph"><h3>${title}</h3>${extra || ""}</div>${sub ? `<p class="cs">${sub}</p>` : ""}${body}</section>`;
 const tabsHTML = items => `<div class="tabs"><div class="tabbar" role="tablist">${items.map(([k, l], j) => `<button type="button" role="tab" data-tab="${k}" aria-selected="${j === 0}">${esc(l)}</button>`).join("")}</div>` +
@@ -737,7 +760,7 @@ function showFour(){
 }
 function renderFour(){
   seg($("segRole"), [["both", "Self-built + leased"], ["self", "Self-built"], ["leased", "Leased"]], S.role, k => { S.role = k; renderFour(); });
-  seg($("segMetric"), [["house", "House view 2026-30"], ["pipe", "Whole pipeline"], ["all", "Operating + pipeline"]], S.metric, k => { S.metric = k; fourMap(); states(); });
+  seg($("segMetric"), [["house", "House view 2026-30"], ["housem", "+ Medium 2026-30"], ["pipe", "Whole pipeline"], ["all", "Operating + pipeline"]], S.metric, k => { S.metric = k; renderFour(); });
   seg($("segCo"), C.map(c => [c.id, c.name]), S.co, k => { S.co = k; camps(); });
   fourKpi(); cards(); mult(); fourMap(); states(); stack(); camps();
 }
@@ -745,7 +768,9 @@ function fourKpi(){
   const sH = sum(C.map(houseOf)), op = sum(C.map(c => tot(c, "op"))), uc = sum(C.map(c => tot(c, "uc"))), dl = sum(C.map(c => tot(c, "dl")));
   const agg = {}; C.forEach(c => c.campuses.filter(campOk).forEach(cp => { agg[cp.st] = (agg[cp.st] || 0) + cp.house; }));
   const top2 = Object.entries(agg).sort((a, b) => b[1] - a[1]).slice(0, 2), t2 = sum(top2.map(x => x[1]));
+  const sM = sum(C.map(medOf));
   $("fourKpi").innerHTML = kpi(`House view ${Y0}-${Y1}, the four`, `${f1(sH)}<small>GW</small>`, `${roleTxt()}; a shared building counts for each tenant`, "lead") +
+    kpi(`+ Announced medium ${Y0}-${Y1}`, `+${f1(sM)}<small>GW</small>`, `outside the house view · with it ${f1(sH + sM)} GW; ${C.map(c => `${esc(c.tick)} ${f1(medOf(c))}`).join(" · ")}`) +
     kpi("Share of the US house view", pc(sH / M.us.house), `of ${f1(M.us.house)} GW for the whole census`) +
     kpi("Operating today", `${f1(op)}<small>GW</small>`, "the four, same basis") +
     kpi("Under construction", `${f1(uc)}<small>GW</small>`, `plus delayed ${f1(dl)} GW`) +
@@ -755,6 +780,7 @@ function cards(){
   $("cards").innerHTML = C.map(c => { const h = houseOf(c), i = FOURI[c.id], parts = HB.map(([g, l, col]) => [l, col, houseBy(c, g)]), pt = sum(parts.map(p => p[2])) || 1;
     return `<a class="hcard" href="${i >= 0 ? coHash(i) : "#four"}" style="--cc:var(--c-${c.id})"><div class="hc-top"><span class="hc-name">${esc(c.name)}</span><span class="hc-tick">${esc(c.tick)}</span></div>` +
       `<div class="hc-k">House view 2026-30</div><div class="hc-v">${f1(h)}<small>GW IT-eq</small></div>` +
+      `<div class="hc-med" data-t="<b>${esc(c.name)}</b>: announced projects rated Medium, dated ${Y0}-${Y1}: <b>${f1(medOf(c))} GW</b>, outside the house view">+ medium ${Y0}-${String(Y1).slice(2)} <b>${f1(medOf(c))}</b> → <b>${f1(h + medOf(c))}</b> GW</div>` +
       `<div class="mini">${parts.filter(p => p[2] > 0.005).map(([l, col, v]) => `<span style="width:${v / pt * 100}%;background:${col}" data-t="<b>${esc(c.name)}</b> house view · ${l}: <b>${f1(v)} GW</b> (${pc(v / pt)})"></span>`).join("")}</div>` +
       `<dl><dt>Operating today</dt><dd>${f1(tot(c, "op"))}</dd><dt>Under construction</dt><dd>${f1(tot(c, "uc"))}</dd><dt>Delayed</dt><dd>${f1(tot(c, "dl"))}</dd>` +
       `<dt>Announced high, any date</dt><dd>${f1(tot(c, "aH"))}</dd>` +
@@ -762,20 +788,24 @@ function cards(){
       `<dt>Campuses · states</dt><dd>${c.n_campuses} · ${c.states.length}</dd></dl><span class="hc-go">Open ${esc(c.name)} →</span></a>`; }).join("");
 }
 function mult(){
-  $("multLegend").innerHTML = HB.map(([k, l, c]) => `<span><i style="background:${c}"></i>${l}</span>`).join("") + (S.role === "both" ? `<span><i class="dash"></i>Everything Aterio dates to the year (no filter)</span>` : "");
+  $("multLegend").innerHTML = HB.map(([k, l, c]) => `<span><i style="background:${c}"></i>${l}</span>`).join("") + medLeg() + (S.role === "both" ? `<span><i class="dash"></i>Everything Aterio dates to the year (no filter)</span>` : "");
   const val = (c, y, g) => roles().reduce((a, r) => a + (c.house_by[y][r][g] || 0), 0);
   const ytot = (c, y) => HB.reduce((a, [g]) => a + val(c, y, g), 0);
-  const mx = Math.max(...C.flatMap(c => YRS.map(y => Math.max(ytot(c, y), S.role === "both" ? c.raw_by[y] : 0))), 0.1) * 1.05;
-  const W = 300, H = 200, base = H - 20, top = 26, cw = (W - 6) / YRS.length, bw = cw * 0.62, ys = v => base - v / mx * (base - top);
-  $("multLead").textContent = `Same y-axis for the four. Bars = the house view (${roleTxt()}); the dashed box = everything Aterio dates to that year before the rules. Aterio's dates have slipped export after export, so read 2028-30 as an upper path.`;
+  const mx = Math.max(...C.flatMap(c => YRS.map(y => Math.max(ytot(c, y) + val(c, y, "aM"), S.role === "both" ? c.raw_by[y] : 0))), 0.1) * 1.05;
+  const W = 300, H = 200, base = H - 20, top = 30, cw = (W - 6) / YRS.length, bw = cw * 0.62, ys = v => base - v / mx * (base - top);
+  $("multLead").textContent = `Same y-axis for the four. Bars = the house view (${roleTxt()}); hatched on top = announced Medium dated to the year, outside the house view; the dashed box = everything Aterio dates to that year before the rules. Aterio's dates have slipped export after export, so read 2028-30 as an upper path.`;
   $("mult").innerHTML = C.map(c => { let s = `<line class="gl" x1="0" x2="${W}" y1="${base}" y2="${base}"/>`;
-    YRS.forEach((y, i) => { const x = 3 + i * cw + (cw - bw) / 2; let acc = 0; const t = ytot(c, y), rv = c.raw_by[y];
-      if (S.role === "both" && rv > t + 0.02) s += `<rect x="${x - 2}" y="${ys(rv)}" width="${bw + 4}" height="${base - ys(rv)}" rx="3" fill="none" stroke="var(--muted)" stroke-dasharray="3 3" data-t="${esc(c.name)} ${y}: Aterio dates <b>${f1(rv)} GW</b> to the year; house view ${f1(t)}"/>`;
-      const segs = HB.filter(([g]) => val(c, y, g) > 0.003);
-      segs.forEach(([g, l, col], j) => { const v = val(c, y, g), ya = ys(acc + v), yb = ys(acc), last = j === segs.length - 1, tt = `data-t="${esc(c.name)} ${y} · ${l}: <b>${f1(v)} GW</b> (house view ${f1(t)})"`;
+    YRS.forEach((y, i) => { const x = 3 + i * cw + (cw - bw) / 2; let acc = 0; const t = ytot(c, y), md = val(c, y, "aM"), rv = c.raw_by[y];
+      if (S.role === "both" && rv > t + md + 0.02) s += `<rect x="${x - 2}" y="${ys(rv)}" width="${bw + 4}" height="${base - ys(rv)}" rx="3" fill="none" stroke="var(--muted)" stroke-dasharray="3 3" data-t="${esc(c.name)} ${y}: Aterio dates <b>${f1(rv)} GW</b> to the year; house view ${f1(t)}${md > 0.003 ? `, + medium ${f1(md)}` : ""}"/>`;
+      const segs = HB.filter(([g]) => val(c, y, g) > 0.003).map(([g, l, col]) => [g, l, col, val(c, y, g)]);
+      if (md > 0.003) segs.push(["aM", MEDL, MEDF, md]);
+      segs.forEach(([g, l, col, v], j) => { const ya = ys(acc + v), yb = ys(acc), last = j === segs.length - 1, tt = `data-t="${esc(c.name)} ${y} · ${l}: <b>${f1(v)} GW</b> (house view ${f1(t)}${g === "aM" ? `; with medium ${f1(t + v)}` : ""})"`;
         s += last ? `<path d="${rtop(x, ya, bw, yb - ya, 3)}" fill="${col}" ${tt}/>` : `<rect x="${x}" y="${ya + 1}" width="${bw}" height="${Math.max(0, yb - ya - 1)}" fill="${col}" ${tt}/>`; acc += v; });
-      s += `<text class="val" x="${x + bw / 2}" y="${ys(Math.max(t, S.role === "both" ? rv : 0)) - 5}" text-anchor="middle">${f1(t)}</text><text class="ax" x="${x + bw / 2}" y="${H - 5}" text-anchor="middle">${y}</text>`; });
-    return `<div><h4><i class="nd" style="background:var(--c-${c.id})"></i>${esc(c.name)}</h4><p class="cs">${f1(houseOf(c))} GW in 2026-30</p><div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(c.name)} house view by year">${s}</svg></div></div>`; }).join("");
+      const ly = ys(Math.max(t + md, S.role === "both" ? rv : 0)) - 5;
+      s += `<text class="val" x="${x + bw / 2}" y="${ly}" text-anchor="middle">${f1(t)}</text><text class="ax" x="${x + bw / 2}" y="${H - 5}" text-anchor="middle">${y}</text>` +
+        (md > 0.05 ? `<text class="medv" x="${x + bw / 2}" y="${ly - 13}" text-anchor="middle">+${f1(md)}</text>` : ""); });
+    const m = medOf(c);
+    return `<div><h4><i class="nd" style="background:var(--c-${c.id})"></i>${esc(c.name)}</h4><p class="cs">${f1(houseOf(c))} GW in 2026-30${m > 0.0005 ? ` · + medium ${f1(m)} → ${f1(houseOf(c) + m)}` : ""}</p><div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="${esc(c.name)} house view by year">${s}</svg></div></div>`; }).join("");
 }
 function fourMap(){
   const all = C.flatMap(c => c.campuses.filter(cp => campOk(cp) && cp.x != null).map(cp => ({c, cp, v: cv(cp)}))).filter(p => p.v > 0.0005);
@@ -810,11 +840,11 @@ function camps(){
   const c = C.find(x => x.id === S.co), q = S.q.toLowerCase();
   const list = c.campuses.filter(cp => campOk(cp) && (!q || [cp.name, cp.st, SN(cp.st), cp.city, cp.county, cp.prov, cp.users].join(" ").toLowerCase().includes(q)));
   $("campLead").textContent = `${c.name}: ${list.length} campus rows (${roleTxt()}), largest first by everything Aterio records. GW IT-eq.${c.nomw ? ` ${c.nomw} of its buildings carry no MW in Aterio and count as zero.` : ""}`;
-  $("campTable").innerHTML = `<tr><th>Campus</th><th>Where</th><th>Role</th><th class="n">Operating</th><th class="n">Building</th><th class="n">Delayed</th><th class="n">Ann. high</th><th class="n">Ann. med</th><th class="n">Ann. low</th><th class="n">House 26-30</th><th class="n">Dates</th><th>Likelihood</th><th>Flags</th></tr>` +
+  $("campTable").innerHTML = `<tr><th>Campus</th><th>Where</th><th>Role</th><th class="n">Operating</th><th class="n">Building</th><th class="n">Delayed</th><th class="n">Ann. high</th><th class="n">Ann. med</th><th class="n">Ann. low</th><th class="n">House 26-30</th><th class="n" title="Announced Medium dated 2026-30: outside the house view">+ Med 26-30</th><th class="n">Dates</th><th>Likelihood</th><th>Flags</th></tr>` +
     list.slice(0, 400).map(cp => `<tr><td><b>${esc(cp.name)}</b><div class="why">${cp.n} bldg${cp.n > 1 ? "s" : ""}${cp.nomw ? ` · ${cp.nomw} without MW` : ""}</div></td><td class="why">${esc([cp.city, cp.county].filter(Boolean).join(", "))}${cp.city || cp.county ? ", " : ""}${esc(cp.st)}</td>` +
       `<td>${cp.role === "self" ? `<span class="tag">self-built</span>` : `<span class="tag">leased</span><div class="why">${esc(cp.prov)}${cp.shared ? ` · shared: ${esc(cp.users)}` : ""}</div>`}</td>` +
       ["op", "uc", "dl", "aH", "aM", "aL"].map(g => `<td class="n">${cp[g] > 0.0005 ? f1(cp[g]) : "–"}</td>`).join("") +
-      `<td class="n"><b>${cp.house > 0.0005 ? f1(cp.house) : "–"}</b></td><td class="n">${cp.py ? cp.py[0] + (cp.py[1] !== cp.py[0] ? "-" + cp.py[1] : "") : "–"}</td><td>${esc(cp.like || "–")}</td>` +
+      `<td class="n"><b>${cp.house > 0.0005 ? f1(cp.house) : "–"}</b></td><td class="n">${cp.med > 0.0005 ? f1(cp.med) : "–"}</td><td class="n">${cp.py ? cp.py[0] + (cp.py[1] !== cp.py[0] ? "-" + cp.py[1] : "") : "–"}</td><td>${esc(cp.like || "–")}</td>` +
       `<td>${cp.ai ? '<span class="tag">AI</span> ' : ""}${cp.btm ? '<span class="tag">on-site power</span>' : ""}</td></tr>`).join("");
 }
 
@@ -844,6 +874,7 @@ function showCo(i){
     if (four && extra.length) h += `<p class="cs" style="margin:-6px 0 14px">“Self-built + leased” is the basis of <a href="#four">The four compared</a>. ${esc(e.n)} is also named as ${extra.map(k => RL[k][1]).join(" and ")} on other buildings; “All roles” adds them.</p>`;
     h += `<div class="kpis">` +
       kpi(`House view ${Y0}-${Y1}`, gqv(A.house), `went live ${Y0} ${gq(yrSum(0))} · building ${gq(yrSum(1))} · delayed ${gq(yrSum(2))} · announced high ${gq(yrSum(3))}`, "lead") +
+      medKpi(A) +
       kpi("Operating today", gqv(A.g[0]), `${gq(A.base)} switched on before ${Y0}`) +
       kpi(`End-${Y1}, house view`, gqv(end), A.base > 0.05 ? `×${(end / A.base).toFixed(1)} vs end-${Y0 - 1}; no retirements` : "operating base + house view adds") +
       kpi("Under construction", gqv(A.g[1]), `plus delayed ${gq(A.g[2])}`) +
@@ -872,7 +903,7 @@ function showCo(i){
     }
     h += bt ? panel("Behind-the-meter generation", "", bt) : RA.n ? "" : `<p class="why">No buildings recorded for this name.</p>`;
   }
-  h += note(`Aterio census as of ${esc(M.asof)}, Capstone treatment: GW IT-eq = facility MW ÷ ${FK}; house view = went live in ${Y0}, under construction, delayed, and announced High, dated ${Y0}-${Y1} on Aterio's dates. A building counts once here even if the company holds several roles on it, but it also counts in full for every other company named on it, so never add companies together. Roles are Aterio's fields, not checked one by one. End-${Y1} assumes nothing operating today retires.` +
+  h += note(`Aterio census as of ${esc(M.asof)}, Capstone treatment: GW IT-eq = facility MW ÷ ${FK}; house view = went live in ${Y0}, under construction, delayed, and announced High, dated ${Y0}-${Y1} on Aterio's dates. ${MED_NOTE} A building counts once here even if the company holds several roles on it, but it also counts in full for every other company named on it, so never add companies together. Roles are Aterio's fields, not checked one by one. End-${Y1} assumes nothing operating today retires.` +
     ` Public registry: Capstone's bottom-up list of the large US campuses from public sources (build of ${esc(RGM.asof)}, the DC delay-risk page), matched to this name on its developer and tenant fields; a separate count, never added to Aterio's.`);
   $("view").innerHTML = h;
   if (rk.length) { seg($("coRole"), opts, role, k => { LS.role = k; showCo(i); }); $("coCsv").onclick = () => coCsv(e, A); }
@@ -899,6 +930,7 @@ function showState(st){
   h += `<div class="story">${stStory(A, nm, st, U)}</div>`;
   h += `<div class="kpis">` +
     kpi(`House view adds ${Y0}-${Y1}`, gqv(A.house), us ? "the whole census, house rules" : `${pc(A.house / U.house)} of the US house view`, "lead") +
+    medKpi(A) +
     kpi("Operating today", gqv(A.g[0]), `${gq(A.base)} before ${Y0} · ${gq(went)} went live in ${Y0}`) +
     kpi(`End-${Y1}, house view`, gqv(end), A.base > 0.5 ? `×${(end / A.base).toFixed(1)} vs end-${Y0 - 1} · ~${Math.round((Math.pow(end / A.base, 1 / (Y1 - Y0 + 1)) - 1) * 100)}% a year` : "") +
     kpi("Under construction", gqv(A.g[1]), `plus delayed ${gq(A.g[2])}`) +
@@ -912,7 +944,7 @@ function showState(st){
     ["geo", us ? "By state" : "By county", `<p class="cs">GW IT-eq, ranked by the house view adds.</p><div class="tscroll">${stGeo(A, st)}</div>`],
     ["cp", "Tenants, money and power", `<p class="cs">Other companies named on the ${esc(nm)} buildings, ranked by the house view adds on them (withdrawn excluded).</p>${stCounter(A)}`]];
   h += `<section class="panel">${tabsHTML(tabs)}<div style="margin-top:12px"><button type="button" class="btn" id="stCsv">${ICON_DL}Download CSV of every campus</button></div></section>`;
-  h += note(`Aterio census as of ${esc(M.asof)}, Capstone treatment: GW IT-eq = facility MW ÷ ${FK}; house view = went live in ${Y0}, under construction, delayed, and announced High, dated ${Y0}-${Y1} on Aterio's dates; operating before ${Y0} = active buildings dated before ${Y0} or undated. End-${Y1} assumes nothing operating today retires. Aterio's dates have slipped export after export (median +9 months for what was under construction a year ago), so read the later years as an upper path.`);
+  h += note(`Aterio census as of ${esc(M.asof)}, Capstone treatment: GW IT-eq = facility MW ÷ ${FK}; house view = went live in ${Y0}, under construction, delayed, and announced High, dated ${Y0}-${Y1} on Aterio's dates. ${MED_NOTE} Operating before ${Y0} = active buildings dated before ${Y0} or undated. End-${Y1} assumes nothing operating today retires. Aterio's dates have slipped export after export (median +9 months for what was under construction a year ago), so read the later years as an upper path.`);
   $("view").innerHTML = h;
   fitStMap(A, st);
   $("stCsv").onclick = () => coCsv({own: new Set(), n: nm}, A);
@@ -929,6 +961,7 @@ function showMethod(){
       <dt>Leased</dt><dd>Aterio names the company among the <b>end users</b> of someone else's building (colo, developer or neocloud). Leases are only what Aterio has recorded, so leased GW is a floor.</dd>
       <dt>Shared buildings</dt><dd>A building with several named tenants counts in full for each (${C.map(c => `${esc(c.name)} ${f1(c.shared_it)}`).join(", ")} GW shared), so never add companies together.</dd>
       <dt>House view</dt><dd>What went live in ${Y0}, what is under construction or delayed, and announced projects rated High likelihood, dated ${Y0}-${Y1} on Aterio's own dates; a hyperscaler self-build counts as having a tenant. Same rules as the Aterio deck tab of the <a href="dc-delay-risk.html#aterio-deck">DC delay-risk page</a>.</dd>
+      <dt>Medium layer</dt><dd>Announced projects Aterio rates <b>Medium</b> likelihood, dated ${Y0}-${Y1}, with the same low-likelihood / no-tenant campus rule. Drawn hatched on top of the house view and never counted in it: the house rules take High only. US: ${f1(M.us.med || 0)} GW on top of the ${f1(M.us.house)} GW house view; the four: ${C.map(c => `${esc(c.name)} ${f1(c.med || 0)}`).join(", ")} GW.</dd>
       <dt>Dates</dt><dd>Aterio's dates have slipped export after export (median +9 months for what was under construction a year ago), so read the later years as an upper path. End-${Y1} totals assume nothing operating today retires.</dd>
       <dt>Search</dt><dd>Covers every name the census carries in any role (operator, tenant, backer, financier, partner, utility, behind-the-meter). Wiki companies bundle their aliases with the same matching as their page sections, so a wiki company can count more than its hyperscaler card (Google also appears as a financier). It also finds every developer and tenant the public registry names.</dd>
       <dt>Public registry</dt><dd>Capstone's bottom-up registry of the large US campuses from public sources (the <a href="dc-delay-risk.html">DC delay-risk page</a>; build of ${esc(RGM.asof)}): one row per dated phase, with developer, tenant, status, base date and the delay model's ${esc(RGM.scenLabel)} result. A company's registry rows are the phases whose developer or tenant field names it, matched on the name without legal or generic tail words (the terms are shown in its tab). Registry campuses are tied to Aterio campuses by the delay-risk page's hand-reviewed campus map. On the map, diamonds are registry campuses and circles Aterio's. The registry covers the large campuses only, so it sits below Aterio; never add the two.</dd></dl>`) +

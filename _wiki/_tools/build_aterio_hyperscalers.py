@@ -11,7 +11,8 @@ Attribution (per building, newest US export):
 Basis: facility MW (SELECTED_POWER_CAPACITY_MW) ÷ Aterio's own facility/IT median (house rule 1). Stages: operating =
 Active (any date), building = Construction, delayed = Delayed, announced = Announcement + Land Bank split by likelihood.
 House view = rules 2-4 over the activation window; a hyperscaler self-build counts as having a named tenant (itself)
-for rule 4. Bernstein's 2026-11-06 player table (Aterio data via Bernstein) is carried as the cross-check.
+for rule 4. Medium layer = the same rules with Medium added to the announced likelihoods, minus the house view
+(announced Medium dated in the window): shown on top of the house view, never inside it. Bernstein's 2026-11-06 player table (Aterio data via Bernstein) is carried as the cross-check.
 
 Company lookup (search bar at the top of the page): every company Aterio names in any role (operator, end user,
 backer, financier, power/equipment partner, utility, behind-the-meter generation) -> _data/aterio/company_lookup.json.
@@ -65,25 +66,31 @@ def build(src: str | None = None) -> dict:
                         ann & a["like"].eq("Low"), ann], ["op", "uc", "dl", "aH", "aM", "aL", "aM"], "drop")
     a["house"] = m["keep"]
     a["win"] = m["raw"]
+    # medium layer (shown on top of the house view, never inside it): the same rules with Medium added to the announced
+    # likelihoods, minus the house view = announced Medium dated in the window, campus rule 4 still applied
+    r_med = json.loads(json.dumps(rules))
+    r_med["include"]["announced_likelihood"] = list(r_med["include"]["announced_likelihood"]) + ["Medium"]
+    a["med"] = core.masks(a, r_med)["keep"] & ~m["keep"]
     a["n_ten"] = users.apply(lambda s: len([u for u in s.split(",") if u.strip()]))
     proj = bdd.albers_lower48()
     IT = lambda s: round(float(s.sum()) / 1000 / k, 3)
     out = {"asof": asof, "inventory": os.path.basename(inv), "fac_it": k, "window": [y0, y1], "rules_decided": rules.get("decided"),
            "built": __import__("datetime").date.today().isoformat(), "companies": [], "us": {}}
-    out["us"] = {"house": IT(a.loc[a["house"], "mw"]), "op": IT(a.loc[st.eq("Active"), "mw"])}
+    out["us"] = {"house": IT(a.loc[a["house"], "mw"]), "op": IT(a.loc[st.eq("Active"), "mw"]), "med": IT(a.loc[a["med"], "mw"])}
     for c in CO:
         self_ = tick.isin(c["tick"])
         ten = users.str.contains(c["rx"], case=False, regex=True) & ~self_
         d = a[self_ | ten].copy()
         d["role"] = np.where(self_.loc[d.index], "self", "leased")
         tot = {r: {g: IT(d.loc[(d["role"] == r) & (d["g"] == g), "mw"]) for g in GRPS + ["drop"]} for r in ("self", "leased")}
-        house_by = {str(y): {r: {g: IT(d.loc[d["house"] & (d["role"] == r) & (d["yr"] == y) & (d["g"] == g), "mw"]) for g in ("op", "uc", "dl", "aH")}
+        house_by = {str(y): {r: {**{g: IT(d.loc[d["house"] & (d["role"] == r) & (d["yr"] == y) & (d["g"] == g), "mw"]) for g in ("op", "uc", "dl", "aH")},
+                                 "aM": IT(d.loc[d["med"] & (d["role"] == r) & (d["yr"] == y), "mw"])}   # medium layer, not in the house view
                              for r in ("self", "leased")} for y in range(y0, y1 + 1)}
         raw_by = {str(y): IT(d.loc[d["win"] & (d["yr"] == y), "mw"]) for y in range(y0, y1 + 1)}
         pipe = d["g"].isin(["uc", "dl", "aH", "aM", "aL"])
         states = []
         for s, x in d.groupby("STATE_CODE"):
-            states.append({"st": s, **{g: IT(x.loc[x["g"] == g, "mw"]) for g in GRPS}, "house": IT(x.loc[x["house"], "mw"]),
+            states.append({"st": s, **{g: IT(x.loc[x["g"] == g, "mw"]) for g in GRPS}, "house": IT(x.loc[x["house"], "mw"]), "med": IT(x.loc[x["med"], "mw"]),
                            "leased": IT(x.loc[(x["role"] == "leased") & (x["g"] != "drop"), "mw"])})
         states.sort(key=lambda r: -(r["op"] + r["uc"] + r["dl"] + r["aH"] + r["aM"] + r["aL"]))
         camps = []
@@ -101,7 +108,7 @@ def build(src: str | None = None) -> dict:
                           "shared": bool((x["n_ten"] > 1).any()),
                           "x": None if px is None else round(px, 1), "y": None if py is None else round(py, 1),
                           **{g: IT(x.loc[x["g"] == g, "mw"]) for g in GRPS},
-                          "house": IT(x.loc[x["house"], "mw"]), "win": IT(x.loc[x["win"], "mw"]),
+                          "house": IT(x.loc[x["house"], "mw"]), "med": IT(x.loc[x["med"], "mw"]), "win": IT(x.loc[x["win"], "mw"]),
                           "after": IT(x.loc[pipe.loc[x.index] & (x["yr"] > y1), "mw"]),
                           "hy": [int(hy.min()), int(hy.max())] if len(hy) else None, "py": [int(ay.min()), int(ay.max())] if len(ay) else None,
                           "like": "/".join(sorted({v for v in x["like"] if v}, key=lambda v: -core.RANK.get(v, 0))),
@@ -112,6 +119,8 @@ def build(src: str | None = None) -> dict:
             "id": c["id"], "name": c["name"], "tick": c["tick"][0], "bern": c["bern"], "tot": tot,
             "house": IT(d.loc[d["house"], "mw"]), "house_self": IT(d.loc[d["house"] & (d["role"] == "self"), "mw"]),
             "house_leased": IT(d.loc[d["house"] & (d["role"] == "leased"), "mw"]),
+            "med": IT(d.loc[d["med"], "mw"]), "med_self": IT(d.loc[d["med"] & (d["role"] == "self"), "mw"]),
+            "med_leased": IT(d.loc[d["med"] & (d["role"] == "leased"), "mw"]),
             "win": IT(d.loc[d["win"], "mw"]), "after": IT(d.loc[pipe & (d["yr"] > y1), "mw"]), "undated": IT(d.loc[pipe & d["yr"].isna(), "mw"]),
             "fac": {"op": round(float(d.loc[d["g"] == "op", "mw"].sum()) / 1000, 2), "uc": round(float(d.loc[d["g"] == "uc", "mw"].sum()) / 1000, 2),
                     "dl": round(float(d.loc[d["g"] == "dl", "mw"].sum()) / 1000, 2),
@@ -237,7 +246,8 @@ def lookup(a, inv: str, proj) -> dict:
     bld = []
     for r in a.to_dict("records"):
         fl = (1 if r["house"] else 0) | (2 if r["win"] else 0) | (4 if r.get("FLG_AI_FACILITY") == "Y" else 0) \
-            | (8 if r.get("FLG_BTM_ONSITE_POWER_GENERATION") == "Y" else 0) | (16 if clean(r.get("ESTIMATED_ACTIVATION_DATE_PUBLIC_SOURCE")) else 0)
+            | (8 if r.get("FLG_BTM_ONSITE_POWER_GENERATION") == "Y" else 0) | (16 if clean(r.get("ESTIMATED_ACTIVATION_DATE_PUBLIC_SOURCE")) else 0) \
+            | (32 if r["med"] else 0)                                 # medium layer: announced Medium in the window, not in the house view
         lists = [[i for i in (eid(n) for n in _names(r[LIST_F[f]])) if i is not None] for f in ("ten", "bk", "fin", "pt")]
         bld.append([cix[r["key"]], GI[r["g"]], None if r["mw_raw"] != r["mw_raw"] else round(float(r["mw_raw"]), 1),
                     _ym(r["DATA_CENTER_ACTIVATION_DATE"]), LK.get(r["like"], 0), fl,
@@ -388,5 +398,5 @@ if __name__ == "__main__":
         t = c["tot"]
         print(f"  {c['name']:9s} operating {t['self']['op'] + t['leased']['op']:5.1f} (self {t['self']['op']:.1f}) · building {t['self']['uc'] + t['leased']['uc']:5.1f} · delayed {t['self']['dl'] + t['leased']['dl']:4.1f}"
               f" · announced H/M/L {t['self']['aH'] + t['leased']['aH']:.1f}/{t['self']['aM'] + t['leased']['aM']:.1f}/{t['self']['aL'] + t['leased']['aL']:.1f}"
-              f" · house {c['house']:.1f} (self {c['house_self']:.1f}, leased {c['house_leased']:.1f}) · campuses {c['n_campuses']} · states {len(c['states'])}")
+              f" · house {c['house']:.1f} (self {c['house_self']:.1f}, leased {c['house_leased']:.1f}) · + medium {c['med']:.2f} · campuses {c['n_campuses']} · states {len(c['states'])}")
     print("wrote", DASH)
