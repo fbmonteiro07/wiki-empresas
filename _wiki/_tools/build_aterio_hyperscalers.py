@@ -33,7 +33,8 @@ ROOT = os.path.dirname(HERE)                                       # _wiki
 DASH = os.path.join(ROOT, "_dashboards", "aterio-hyperscalers.html")
 TPL = os.path.join(HERE, "aterio_mags_ui", "template.html")
 OUTJ = os.path.join(ROOT, "_data", "aterio", "hyperscalers.json")
-OUTL = os.path.join(ROOT, "_data", "aterio", "company_lookup.json")   # every named company, for the page's search
+OUTL = os.path.join(ROOT, "_data", "aterio", "company_lookup.json")
+REGF = os.path.join(ROOT, "_data", "dc_projects", "model_output.json")   # public-source DC registry (build_dc_delay.py)   # every named company, for the page's search
 FONT = os.path.join(ROOT, "_data", "openrouter", "assets", "plus-jakarta-sans.woff2")  # the dashboards hub face
 CO = [{"id": "amzn", "name": "Amazon", "tick": ["AMZN"], "rx": r"\bamazon\b|\baws\b", "bern": "Amazon AWS"},
       {"id": "goog", "name": "Google", "tick": ["GOOG", "GOOGL"], "rx": r"google|alphabet", "bern": "Google"},
@@ -334,9 +335,28 @@ def write(out: dict) -> None:
     with open(OUTL, "w", encoding="utf-8", newline="\n") as fh:
         json.dump(out.get("lookup"), fh, ensure_ascii=False, separators=(",", ":"))
     tpl = open(TPL, encoding="utf-8").read()
-    payload = json.dumps({**out, "map": bdd.state_paths(), "stateNames": bdd.STATE_NAMES}, ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
+    payload = json.dumps({**out, "map": bdd.state_paths(), "stateNames": bdd.STATE_NAMES, "registry": registry()},
+                         ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     with open(DASH, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(tpl.replace("/*__FONT__*/", font_face()).replace("/*__DATA__*/null", payload))
+
+
+def registry() -> dict | None:
+    """Capstone's public-source DC registry, one row per phase, for the company view's second layer.
+    Read at render time, so --render-only picks up the latest registry build."""
+    if not os.path.exists(REGF):
+        return None
+    import datetime
+    m = json.load(open(REGF, encoding="utf-8"))
+    sc = "bear" if "bear" in m["scenarios"] else next(iter(m["scenarios"]))
+    url = lambda s: next((x.strip() for x in (s or "").split(";") if x.strip().startswith("http")), "")
+    rows = []
+    for p in m["phases"]:
+        xy, r = p.get("xy") or [None, None], p["res"][sc]
+        rows.append([p["campus"], p["phase"], p["dev"], p["ten"], p["st"], p["city"], p["county"], xy[0], xy[1],
+                     p["it"], p["mw"], p["basis"], p["ps"], p["lk"], p["cod"], r["b"], r["n"], url(p["src"]), p["sd"]])
+    return {"asof": datetime.date.fromtimestamp(os.path.getmtime(REGF)).isoformat(), "scen": sc,
+            "scenLabel": m["scenarios"][sc]["label"], "rows": rows}
 
 
 def font_face() -> str:

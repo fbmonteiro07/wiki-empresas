@@ -153,6 +153,10 @@ main{max-width:1440px;margin:0 auto;padding:30px 36px 70px;outline:none}
 .stp.hl{fill:var(--st-hl);stroke:var(--muted)}
 .map circle{stroke:var(--surf);stroke-width:1.1;fill-opacity:.82}
 .map .cs{margin:8px 0 0}
+.map path.rg{fill-opacity:.18;stroke-width:2.2;stroke-linejoin:round}
+.map path.rgh{fill:none;stroke:var(--surf);stroke-width:5;pointer-events:none}
+.map[data-src="at"] .rg,.map[data-src="rg"] .at{display:none}
+.legend i.dia{background:transparent;border:2px solid var(--ink2);border-radius:1px;transform:rotate(45deg);width:8px;height:8px;margin:0 7px 0 2px}
 /* tables */
 table{border-collapse:collapse;width:100%;font-size:12px}
 th{text-align:left;color:var(--muted);font-weight:650;font-size:10px;text-transform:uppercase;letter-spacing:.4px;padding:9px 8px;border-bottom:1px solid var(--border);white-space:nowrap;position:sticky;top:0;background:var(--surf2);z-index:1}
@@ -332,11 +336,140 @@ const gqv = v => { const s = gq(v), m = s.match(/^(.+) (GW|MW)$/); return m ? `$
 const ymS = a => a ? `${Math.floor(a / 100)}-${String(a % 100).padStart(2, "0")}` : "";
 const rxEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const rolesTxt = e => [...Object.keys(e.r).map(k => `${RL[k][1]} ${new Set(e.r[k]).size}`), ...Object.keys(e.b).map(k => `BTM ${BRL[k]} ${new Set(e.b[k]).size}`)].join(" · ");
-const kindTag = e => e.kind === "wiki" ? `<span class="tag">wiki · ${esc(e.w)}</span>` : e.kind === "group" ? `<span class="tag">all names · ${esc(e.t)}</span>`
+const kindTag = e => e.kind === "reg" ? `<span class="tag">public registry</span>` : e.kind === "wiki" ? `<span class="tag">wiki · ${esc(e.w)}</span>` : e.kind === "group" ? `<span class="tag">all names · ${esc(e.t)}</span>`
   : e.kind === "state" ? `<span class="tag">${e.t === "US" ? "all states" : "state · " + esc(e.t)}</span>` : (e.t ? `<span class="tag">${esc(e.t)}</span>` : "");
 const LS = {e: null, st: null, role: null, hi: 0, hits: []};
 const FOURI = Object.fromEntries(C.map(c => [c.id, ENT.findIndex(e => e.kind === "wiki" && e.t === c.tick)]));
 const coHash = i => "#co=" + encodeURIComponent(ENT[i].n);
+
+/* ------------------------------------------------------------------ public registry layer: Capstone's DC delay-risk registry (public sources) */
+const RGM = M.registry || {rows: [], asof: "", scen: "bear", scenLabel: ""};
+const RG = RGM.rows.map(r => ({campus: r[0], phase: r[1], dev: r[2] || "", ten: r[3] || "", st: r[4], city: r[5] || "", county: r[6] || "", x: r[7], y: r[8],
+  it: r[9] || 0, mw: r[10], basis: r[11], ps: r[12], lk: r[13], cod: r[14], b: r[15], nd: r[16], url: r[17], sd: r[18] || ""}));
+const RG2AT = {};   // registry campus -> the Aterio campuses mapped to it (the delay-risk page's hand-reviewed map + auto-matches)
+LU.camps.forEach((k, c) => { if (k[6]) k[6].split("; ").forEach(nm => { const key = k[1] + "|" + nm; (RG2AT[key] = RG2AT[key] || []).push(c); }); });
+const LEGAL = new Set("inc llc corp corporation ltd limited lp plc co company holdings holding group trust".split(" "));
+const DESC = new Set([...LEGAL, ..."capital partners energy systems data center centers datacenters infrastructure technologies technology platforms services web international global usa us america americas the".split(" ")]);
+// words too common to stand alone as a company name in free text (plus every state name)
+const GENW = new Set(("digital global american national united first new blue red black green white north south east west central pacific atlantic " +
+  "power energy data cloud compute tech technology infrastructure development developments properties property realty capital partners ventures " +
+  "investments investment edge core prime summit frontier metro city county state project projects campus park site land solutions systems " +
+  "networks network communications telecom electric utility utilities gas solar wind nuclear renewable renewables resources industries industrial " +
+  "construction engineering services international world one alpha apex peak star sky river valley rock stone iron steel gold silver eagle " +
+  "hyperscale hyperscaler hyperscalers ai the").split(" "));
+Object.values(M.stateNames).forEach(s => GENW.add(s.toLowerCase()));
+const GENERIC = /hyperscaler|neocloud|tenant|customer|developer|operator|investor|not named|confidential|anchor|\btb[cd]\b|multiple|various|unnamed|unknown/i;
+const SOURCES = /semianalysis|epoch|bernstein|barclays|jefferies|baxtel|tracker|\bper\b|\bseed\b|reported|press/i;
+const stripW = (s, set) => { const w = String(s || "").replace(/\([^)]*\)/g, " ").replace(/,/g, " ").trim().split(/\s+/).filter(Boolean);
+  while (w.length > 1 && set.has(w[w.length - 1].toLowerCase().replace(/\.$/, ""))) w.pop(); return w.join(" "); };
+// a usable match term: not a placeholder, not only generic words, a one-word term distinctive (4+ letters, or an all-caps acronym)
+const okTerm = c => { if (c.length < 3 || PLACEHOLDER.test(c) || GENERIC.test(c)) return false;
+  const w = c.toLowerCase().split(" "); if (w.every(x => GENW.has(x) || DESC.has(x))) return false;
+  return w.length > 1 || c.length >= 4 || c === c.toUpperCase(); };
+// "Crusoe Energy Systems" -> ["Crusoe Energy Systems", "Crusoe"]: the name without legal suffixes, and the brand without generic tail words when distinctive
+function nameTerms(s){ const full = stripW(s, LEGAL), core = stripW(s, DESC), t = []; if (okTerm(full)) t.push(full); if (core !== full && okTerm(core)) t.push(core); return t; }
+function regTerms(e){
+  if (e.kind === "state" || PLACEHOLDER.test(e.n)) return [];
+  if (e.kind === "reg") return [e.n];
+  const t = new Set(), add = s => nameTerms(s).forEach(x => t.add(x));
+  add(e.kind === "group" ? e.n.replace(/\s*\(.*$/, "") : e.n.replace(/\s*\([^)]*\)/g, ""));
+  if (e.kind !== "group") (e.n.match(/\(([^)]+)\)/g) || []).forEach(x => add(x.slice(1, -1)));
+  if (e.kind === "wiki") {
+    e.t.split("/").forEach(x => { if (x.length >= 3) t.add(x); });
+    e.al.split(/\s+/).forEach(x => { if (x.length >= 3 && !DESC.has(x.toLowerCase())) t.add(x); });
+  }
+  return [...t];
+}
+const termRx = ts => ts.length ? new RegExp("(^|[^a-z0-9])(" + ts.map(rxEsc).join("|") + ")(?![a-z0-9])", "i") : null;
+// a company's registry rows = the phases whose developer or tenant field names it
+function regOf(e){
+  if (e._rg) return e._rg;
+  const terms = regTerms(e), rx = termRx(terms), rows = [];
+  if (rx) RG.forEach(p => { const d = rx.test(p.dev), t = rx.test(p.ten); if (d || t) rows.push({p, roles: [d ? "dev" : "", t ? "ten" : ""].filter(Boolean)}); });
+  return e._rg = {terms, rows};
+}
+const regHint = e => { const n = regOf(e).rows.length; return n ? ` · registry ${n} phase${n > 1 ? "s" : ""}` : ""; };
+// names the registry carries that no census entry stands for become searchable entries of their own; a token must read as a
+// proper name (the developer / tenant fields sometimes carry notes) and must not contain a name the census already has
+(() => {
+  const known = new Set();
+  ENT.forEach(e => { if (e.kind !== "state") regTerms(e).forEach(x => known.add(x)); });
+  const knownRx = termRx([...known]);
+  const looksName = x => /^[A-Z0-9]/.test(x) && x.split(" ").length <= 5 && !/:|\s-\s/.test(x) && !SOURCES.test(x) &&
+    x.split(" ").every(w => /^[A-Z0-9&]/.test(w) || /^(of|the|and|de|du|la)$/i.test(w) || /^[a-z]+[A-Z]/.test(w));
+  const tok = s => String(s || "").replace(/\([^)]*\)/g, " ").replace(/\d+\s*%/g, " ").split(/\s*(?:\/|;|\+|,|&|\band\b)\s*/i)
+    .map(x => x.replace(/\b(self[- ]?build|JV|joint venture)\b/g, " ").replace(/\s+/g, " ").trim());
+  const seen = new Map();
+  RG.forEach(p => [p.dev, p.ten].forEach(s => tok(s).forEach(x => {
+    if (!looksName(x) || (knownRx && knownRx.test(x))) return;
+    const c = stripW(x, LEGAL); if (!okTerm(c)) return;
+    const k = c.toLowerCase(), o = seen.get(k) || new Map(); o.set(c, (o.get(c) || 0) + 1); seen.set(k, o); })));
+  seen.forEach(o => { const n = [...o.entries()].sort((a, b) => b[1] - a[1])[0][0];
+    const e = {n, t: "", w: "", al: "", r: {}, b: {}, own: new Set(), kind: "reg", nb: 0, mw: 0, nbtm: 0};
+    const R = regOf(e); if (!R.rows.length) return;
+    e.rgn = R.rows.length; e.rgmw = R.rows.reduce((a, x) => a + x.p.it, 0); ENT.push(e); });
+})();
+function regAgg(rows){
+  const camps = new Map(), z = () => ({energized: 0, under_construction: 0, not_started: 0, other: 0}), by = z(); let it = 0, del = 0;
+  rows.forEach(({p, roles}) => {
+    const k = p.st + "|" + p.campus; let c = camps.get(k);
+    if (!c) camps.set(k, c = {k, name: p.campus, st: p.st, city: p.city, county: p.county, x: p.x, y: p.y, it: 0, n: 0, by: z(),
+      roles: new Set(), dev: new Set(), ten: new Set(), cods: [], lk: new Set(), del: 0, dnew: [], urls: [], sd: "", at: RG2AT[k] || []});
+    const s = c.by[p.ps] != null ? p.ps : "other";
+    c.n++; c.it += p.it; c.by[s] += p.it; by[s] += p.it; it += p.it;
+    roles.forEach(r => c.roles.add(r)); if (p.dev) c.dev.add(p.dev); if (p.ten) c.ten.add(p.ten); if (p.cod) c.cods.push(p.cod); if (p.lk) c.lk.add(p.lk);
+    if (p.b === "delayed") { c.del += p.it; del += p.it; if (p.nd) c.dnew.push(p.nd); }
+    if (p.url && !c.urls.includes(p.url)) c.urls.push(p.url);
+    if (p.sd > c.sd) c.sd = p.sd;
+    if (c.x == null && p.x != null) { c.x = p.x; c.y = p.y; } });
+  const list = [...camps.values()].sort((a, b) => b.it - a.it);
+  list.forEach(c => { const k = ["energized", "under_construction", "not_started"].sort((a, b) => c.by[b] - c.by[a])[0];
+    c.stc = k === "energized" ? "op" : k === "under_construction" ? "uc" : c.lk.has("high") ? "aH" : "aML"; });
+  return {list, it, by, del, n: rows.length, nst: new Set(list.map(c => c.st)).size, terms: []};
+}
+function twoSrc(e, A, R, roleLab){
+  const mine = new Set(A.camps.keys());
+  let both = 0, other = 0, only = 0;
+  R.list.forEach(c => { if (!c.at.length) only++; else if (c.at.some(x => mine.has(x))) both++; else other++; });
+  const atReg = A.list.filter(cp => cp.reg).length;
+  const row = (nm, sub, n, v) => `<tr><td><b>${nm}</b><div class="why">${sub}</div></td><td class="n">${n.toLocaleString("en-US")}</td>${v.map(x => `<td class="n">${x > 0.05 ? gq(x) : "–"}</td>`).join("")}<td class="n"><b>${gq(sum(v))}</b></td></tr>`;
+  const tb = `<div class="tscroll"><table><tr><th>Source</th><th class="n">Campuses</th><th class="n">Operating / energized</th><th class="n">Building (+ delayed)</th><th class="n">Announced / not started</th><th class="n">Total</th></tr>` +
+    row("Aterio census", `export ${esc(M.asof)} · every building, any date · ${esc(roleLab)}`, A.list.length, [A.g[0], A.g[1] + A.g[2], A.g[3] + A.g[4] + A.g[5]]) +
+    row("Public registry", `build ${esc(RGM.asof)} · dated phases of the large campuses · as developer or tenant`, R.list.length, [R.by.energized, R.by.under_construction, R.by.not_started + R.by.other]) + `</table></div>`;
+  const s = R.list.length
+    ? `Of its ${R.list.length} registry campus${R.list.length > 1 ? "es" : ""}, <b>${both}</b> ${both === 1 ? "is" : "are"} also among its Aterio campuses` +
+      (other ? `, ${other} map${other === 1 ? "s" : ""} to an Aterio campus where Aterio names other companies` : "") +
+      (only ? ` and <b>${only}</b> ${only === 1 ? "is" : "are"} not in the Aterio export (often newer than ${esc(M.asof)})` : "") +
+      `. ${atReg} of its ${A.list.length} Aterio campuses are in the registry.` +
+      (R.del > 0.05 ? ` In the delay model's ${esc(RGM.scenLabel)} scenario, <b>${gq(R.del)}</b> of its registry phases are delayed (<a href="dc-delay-risk.html#${esc(RGM.scen)}/construction">DC delay risk</a>).` : "")
+    : `No phase in the public registry names it as developer or tenant${R.terms.length ? ` (searched for ${esc(R.terms.join(", "))})` : ""}. The registry covers the large campuses with public sources, so smaller names are often only in Aterio.`;
+  return tb + `<p class="cs" style="margin:10px 0 0">${s}</p>`;
+}
+function rgTable(e, R, A){
+  if (!R.list.length) return `<p class="cs">No phase in the public registry names ${esc(e.n)} as developer or tenant${R.terms.length ? ` (searched for ${esc(R.terms.join(", "))})` : ""}. The registry covers the large campuses with public sources, so smaller names are often only in Aterio.</p>`;
+  const mine = new Set(A ? A.camps.keys() : []);
+  const rng = c => { if (!c.cods.length) return "–"; const s = [...c.cods].sort(); return s[0] === s[s.length - 1] ? s[0] : `${s[0]} → ${s[s.length - 1]}`; };
+  const inAt = c => { if (!c.at.length) return `<span class="why">not in the ${esc(M.asof)} export</span>`;
+    const hit = c.at.some(x => mine.has(x)), nm = [...new Set(c.at.map(x => LU.camps[x][0]))].join("; ");
+    return `<span class="why">${hit ? "✓ " : ""}${esc(nm)}${hit ? "" : " (Aterio names other companies)"}</span>`; };
+  return `<p class="cs">Phases in Capstone's public-source registry (the <a href="dc-delay-risk.html#${esc(RGM.scen)}/construction">DC delay-risk page</a>, build of ${esc(RGM.asof)}) that name ${esc(e.n)} as developer or tenant, matched on <b>${esc(R.terms.join(", "))}</b>. MW IT-eq from each source's basis; dates are the registry's base schedule; “${esc(RGM.scenLabel)}” is the delay model's scenario. “In Aterio” = the campus maps to an Aterio campus (✓ = one of this company's Aterio campuses).</p>` +
+    `<div class="tbl-wrap"><table><tr><th>Campus</th><th>Where</th><th>Its role</th><th>Developer</th><th>Tenant</th><th class="n">Energized</th><th class="n">Building</th><th class="n">Not started</th><th class="n">Base dates</th><th>Likelihood</th><th>${esc(RGM.scenLabel)}</th><th>In Aterio</th><th>Source</th></tr>` +
+    R.list.map(c => `<tr><td><b>${esc(c.name)}</b><div class="why">${c.n} phase${c.n > 1 ? "s" : ""} · ${gq(c.it)} IT-eq</div></td>` +
+      `<td class="why">${esc([c.city, c.county].filter(Boolean).join(", "))}${c.city || c.county ? ", " : ""}${esc(c.st)}</td>` +
+      `<td>${[...c.roles].map(r => `<span class="tag">${r === "dev" ? "developer" : "tenant"}</span>`).join(" ")}</td>` +
+      `<td class="why">${esc([...c.dev].join("; ") || "–")}</td><td class="why">${esc([...c.ten].join("; ") || "–")}</td>` +
+      ["energized", "under_construction", "not_started"].map(k => `<td class="n">${c.by[k] > 0.05 ? gq(c.by[k]) : "–"}</td>`).join("") +
+      `<td class="n">${rng(c)}</td><td>${esc([...c.lk].join("/") || "–")}</td>` +
+      `<td>${c.del > 0.05 ? `<b style="color:var(--g-dl)">${gq(c.del)} delayed</b><div class="why">→ ${esc([...c.dnew].sort().pop() || "")}</div>` : `<span class="why">not delayed</span>`}</td>` +
+      `<td>${inAt(c)}</td>` +
+      `<td>${c.urls.length ? c.urls.slice(0, 2).map((u, j) => `<a href="${esc(u)}" target="_blank" rel="noopener">[${j + 1}]</a>`).join(" ") : `<span class="why">wiki corpus</span>`}<div class="why">${esc(c.sd)}</div></td></tr>`).join("") +
+    `</table></div>`;
+}
+function wireMapSrc(){
+  const ms = document.querySelector(".mapsrc"); if (!ms) return;
+  const set = k => { seg(ms, [["both", "Both sources"], ["at", "Aterio census"], ["rg", "Public registry"]], k, set); ms.closest(".panel").querySelector(".map").dataset.src = k; };
+  set("both");
+}
 
 function findCo(q){
   q = q.trim().toLowerCase(); if (!q) return [];
@@ -344,7 +477,7 @@ function findCo(q){
   ENT.forEach((e, i) => { if (e.dup) return; const n = e.n.toLowerCase(), ts = e.t.toLowerCase().split("/").filter(Boolean), al = e.al.toLowerCase(); let s = 0;
     if (ts.includes(q) || e.w.toLowerCase() === q) s = 100; else if (n === q) s = 95; else if (n.startsWith(q)) s = 80;
     else if (wb.test(n)) s = 65; else if (al && wb.test(al)) s = 60; else if (n.includes(q)) s = 40; else if (al.includes(q)) s = 35;
-    if (s) hits.push([s + (e.kind === "wiki" ? 12 : e.kind === "state" ? 10 : e.kind === "group" ? 6 : 0) + Math.min(12, Math.log10(1 + e.mw) * 3), i]); });
+    if (s) hits.push([s + (e.kind === "wiki" ? 12 : e.kind === "state" ? 10 : e.kind === "group" ? 6 : 0) + Math.min(12, Math.log10(1 + (e.kind === "reg" ? e.rgmw : e.mw)) * 3), i]); });
   return hits.sort((a, b) => b[0] - a[0]).slice(0, 14).map(h => h[1]);
 }
 function closeDrop(){ $("coList").hidden = true; $("coQ").setAttribute("aria-expanded", "false"); }
@@ -353,8 +486,8 @@ function drop(){
   LS.hits = findCo(q); LS.hi = 0;
   if (!q.trim()) { closeDrop(); return; }
   box.innerHTML = LS.hits.length ? LS.hits.map((i, k) => { const e = ENT[i];
-    return `<div class="it" role="option" id="co-opt-${k}" data-e="${i}" aria-selected="${k === 0}"><span><b>${esc(e.n)}</b> ${kindTag(e)}</span><span class="gw">${e.nb ? gq(e.mw) + " IT-eq" : e.nbtm + " BTM phases"}</span><span class="r">${esc(e.kind === "state" ? `${e.nb.toLocaleString("en-US")} buildings · house view ${Y0}-${Y1} ${gq(e.house)}` : rolesTxt(e))}</span></div>`; }).join("")
-    : `<div class="none">No company or state in the census matches “${esc(q)}”. Aterio writes names its own way: try a shorter part of the name.</div>`;
+    return `<div class="it" role="option" id="co-opt-${k}" data-e="${i}" aria-selected="${k === 0}"><span><b>${esc(e.n)}</b> ${kindTag(e)}</span><span class="gw">${e.kind === "reg" ? gq(e.rgmw) + " IT-eq" : e.nb ? gq(e.mw) + " IT-eq" : e.nbtm + " BTM phases"}</span><span class="r">${esc(e.kind === "state" ? `${e.nb.toLocaleString("en-US")} buildings · house view ${Y0}-${Y1} ${gq(e.house)}` : e.kind === "reg" ? `public registry only · ${e.rgn} phase${e.rgn > 1 ? "s" : ""}` : rolesTxt(e) + regHint(e))}</span></div>`; }).join("")
+    : `<div class="none">No company or state in the Aterio census or the public registry matches “${esc(q)}”. Aterio writes names its own way: try a shorter part of the name.</div>`;
   box.hidden = false; inp.setAttribute("aria-expanded", "true");
 }
 function moveHi(d){ if (!LS.hits.length) return; LS.hi = (LS.hi + d + LS.hits.length) % LS.hits.length;
@@ -445,11 +578,19 @@ function cumChart(A){
     `<div class="chart"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Cumulative capacity by year end">${s}</svg></div>`;
 }
 const stcLegend = () => `<div class="legend">${Object.values(STC).map(([l, c]) => `<span><i class="c" style="background:${c}"></i>${l}</span>`).join("")}</div>`;
-function coMap(list){
-  const pts = list.filter(cp => cp.x != null && cp.tot > 0.05), mx = Math.max(...pts.map(p => p.tot), 0.1), off = list.filter(cp => cp.x == null && cp.tot > 0.05).length;
-  return stcLegend() + `<div class="map"><svg viewBox="0 0 975 610" role="img" aria-label="Campus map"><use href="#usmap"/>` +
-    pts.map(cp => `<circle cx="${cp.x}" cy="${cp.y}" r="${(3 + Math.sqrt(cp.tot / mx) * 24).toFixed(1)}" fill="${STC[status(cp)][1]}" data-t="<b>${esc(cp.name)}</b> · ${esc(cp.city ? cp.city + ", " : "")}${esc(cp.st)}<br>Operating ${gq(cp.op)} · building ${gq(cp.uc)} · delayed ${gq(cp.dl)}<br>Announced high / med / low ${gq(cp.aH)} / ${gq(cp.aM)} / ${gq(cp.aL)}<br>House view 2026-30: <b>${gq(cp.house)}</b>"/>`).join("") +
-    `</svg><p class="cs">${pts.length} campuses (circle area = operating + pipeline, largest ${gq(mx)})${off ? `; ${off} outside the lower 48 or without coordinates` : ""}.</p></div>`;
+function coMap(list, R){
+  const pts = list.filter(cp => cp.x != null && cp.tot > 0.05), off = list.filter(cp => cp.x == null && cp.tot > 0.05).length;
+  const rp = R ? R.list.filter(c => c.x != null && c.it > 0.05) : [], mx = Math.max(...pts.map(p => p.tot), ...rp.map(c => c.it), 0.1);
+  const rad = v => 3 + Math.sqrt(v / mx) * 24, f = v => v.toFixed(1);
+  const atNames = c => [...new Set(c.at.map(x => LU.camps[x][0]))].join("; ");
+  return stcLegend() + (R ? `<div class="legend"><span><i class="c" style="background:var(--muted)"></i>Aterio campus</span><span><i class="dia"></i>Public-registry campus</span><span class="why">colour = the stage most of its MW is in</span></div>` : "") +
+    (R && pts.length && rp.length ? `<div class="filters"><span class="seg mapsrc"></span></div>` : "") +
+    `<div class="map" data-src="both"><svg viewBox="0 0 975 610" role="img" aria-label="Campus map"><use href="#usmap"/>` +
+    pts.map(cp => `<circle class="at" cx="${cp.x}" cy="${cp.y}" r="${f(rad(cp.tot))}" fill="${STC[status(cp)][1]}" data-t="<b>${esc(cp.name)}</b> · ${esc(cp.city ? cp.city + ", " : "")}${esc(cp.st)} <i>(Aterio)</i><br>Operating ${gq(cp.op)} · building ${gq(cp.uc)} · delayed ${gq(cp.dl)}<br>Announced high / med / low ${gq(cp.aH)} / ${gq(cp.aM)} / ${gq(cp.aL)}<br>House view 2026-30: <b>${gq(cp.house)}</b>${cp.reg ? `<br>In the public registry: ${esc(cp.reg)}` : ""}"/>`).join("") +
+    rp.map(c => { const r = rad(c.it), col = STC[c.stc][1];
+      const d = `M${f(c.x)},${f(c.y - r)}L${f(c.x + r)},${f(c.y)}L${f(c.x)},${f(c.y + r)}L${f(c.x - r)},${f(c.y)}Z`;
+      return `<path class="rg rgh" d="${d}"/><path class="rg" d="${d}" fill="${col}" stroke="${col}" data-t="<b>${esc(c.name)}</b> · ${esc(c.city ? c.city + ", " : "")}${esc(c.st)} <i>(public registry)</i><br>${c.n} phase${c.n > 1 ? "s" : ""}, ${gq(c.it)} IT-eq: energized ${gq(c.by.energized)} · building ${gq(c.by.under_construction)} · not started ${gq(c.by.not_started)}<br>Developer: ${esc([...c.dev].join("; ") || "–")}${c.ten.size ? `<br>Tenant: ${esc([...c.ten].join("; "))}` : ""}${c.del > 0.05 ? `<br>${esc(RGM.scenLabel)}: <b>${gq(c.del)} delayed</b>` : ""}<br>${c.at.length ? "Aterio: " + esc(atNames(c)) : "Not in the Aterio export"}"/>`; }).join("") +
+    `</svg><p class="cs">${pts.length ? `${pts.length} Aterio campuses (circles)` : ""}${pts.length && rp.length ? " · " : ""}${rp.length ? `${rp.length} public-registry campuses (diamonds)` : ""}; area = MW IT-eq, largest ${gq(mx)}${off ? `; ${off} outside the lower 48 or without coordinates` : ""}.</p></div>`;
 }
 function stMap(A, st){
   if (st === "US" || !M.map[st]) return coMap(A.list);
@@ -684,15 +825,18 @@ function showCo(i){
   const opts = [...(four && (e.r.op || e.r.ten) ? [["sl", "Self-built + leased"]] : []), ["all", `All roles (${e.nb})`], ...rk.map(k => [k, `${RL[k][0]} (${new Set(e.r[k]).size})`])];
   let role = LS.role; if (!opts.some(o => o[0] === role)) role = opts[0][0]; LS.role = role;
   const A = coAgg(e, role === "sl" ? ["op", "ten"] : role), th = e.w && LU.th[e.w];
+  const RR = regOf(e), RA = regAgg(RR.rows); RA.terms = RR.terms;
   const cov = e.kind === "raw" ? [...new Set(coveredBy[i - R0] || [])].filter(x => x !== i) : [];
   setView("e:" + i, e.n);
   let wk = "";
   if (e.kind === "wiki") wk = `<a href="../index.html#${esc(e.w)}">Wiki page: ${esc(e.w)}</a>${th ? ` · ${esc(th)}` : ""}`;
   else if (e.kind === "group") wk = `Every name Aterio carries under ${esc(e.t)}: ${esc(e.al)}.` + (e.w ? ` <a href="../index.html#${esc(e.w)}">Wiki page</a>` : "");
+  else if (e.kind === "reg") wk = `Not in the Aterio census under this name (Aterio may write it differently: try a shorter search). Everything below is from Capstone's public-source registry.`;
   else wk = `Name as Aterio writes it.${e.w ? ` <a href="../index.html#${esc(e.w)}">Wiki page: ${esc(e.w)}</a>${th ? ` · ${esc(th)}` : ""}` : ""}` +
     (cov.length ? ` Part of ${cov.map(x => `<a class="ent" href="#" data-e="${x}">${esc(ENT[x].n)}</a>`).join(", ")}, which also counts its other names.` : "");
-  const kick = four ? "Hyperscaler" : e.kind === "wiki" ? "Wiki company" : e.kind === "group" ? "Company group" : "Company, as Aterio names it";
-  let h = vhead(kick, e.n, e.t, `${esc(rolesTxt(e)) || "–"} <span class="why">(buildings; BTM = generation phases)</span>`, wk);
+  const kick = e.kind === "reg" ? "Company, as the public registry names it" : four ? "Hyperscaler" : e.kind === "wiki" ? "Wiki company" : e.kind === "group" ? "Company group" : "Company, as Aterio names it";
+  const regTxt = RA.n ? `registry ${RA.n} phase${RA.n > 1 ? "s" : ""} on ${RA.list.length} campus${RA.list.length > 1 ? "es" : ""}` : "";
+  let h = vhead(kick, e.n, e.t, e.kind === "reg" ? `Public ${regTxt}` : `${esc(rolesTxt(e)) || "–"} <span class="why">(buildings; BTM = generation phases)</span>${regTxt ? " · " + regTxt : ""}`, wk);
   if (rk.length) {
     const yrSum = gi => YRS.reduce((a, y) => a + A.hy[y][gi], 0), end = A.base + A.house;
     h += `<div class="toolbar"><span class="lbl">Role</span><span class="seg" id="coRole"></span><button type="button" class="btn" id="coCsv" title="Download every campus row">${ICON_DL}Download CSV</button></div>`;
@@ -705,20 +849,40 @@ function showCo(i){
       kpi("Under construction", gqv(A.g[1]), `plus delayed ${gq(A.g[2])}`) +
       kpi("Announced, any date", gqv(A.g[3] + A.g[4] + A.g[5]), `high ${gq(A.g[3])} · medium ${gq(A.g[4])} · low ${gq(A.g[5])}`) +
       kpi("Footprint", `${A.n.toLocaleString("en-US")}<small>bldgs</small>`, `${A.list.length} campuses · ${Object.keys(A.st).length} states${A.after > 0.05 ? ` · after ${Y1} ${gq(A.after)}` : ""}${A.g[6] > 0.05 ? ` · withdrawn ${gq(A.g[6])}` : ""}`) + `</div>`;
+    h += panel("Two sources", "Aterio's census next to Capstone's public-source registry. GW IT-eq. They count differently, so compare them, never add them.", twoSrc(e, A, RA, (opts.find(o => o[0] === role) || ["", ""])[1]));
     h += `<div class="grid2">` + panel("How it grows: capacity at each year end", `IT-eq · operating base + the house view adds, stacked by stage; ×multiple vs end-${Y0 - 1}`, cumChart(A)) +
       panel("Adds per year", "IT-eq · house view by activation year (Aterio's dates, no delay haircut)", coYears(A)) + `</div>`;
-    h += `<div class="grid2">` + panel("Where", "", coMap(A.list)) + panel("By state", "GW IT-eq, ranked by the house view adds. Click a state to open it.", `<div class="tscroll">${coStates(A)}</div>`) + `</div>`;
+    h += `<div class="grid2">` + panel("Where", "", coMap(A.list, RA)) + panel("By state", "GW IT-eq, ranked by the house view adds. Click a state to open it.", `<div class="tscroll">${coStates(A)}</div>`) + `</div>`;
     const tabs = [["camp", `Campuses (${A.list.length})`, `<p class="cs">Largest first by operating + pipeline, IT-eq. Campus cost is Aterio's whole-campus figure (it covers buildings where this company has no role). “In registry” = the campus is in Capstone's DC delay-risk registry.</p><div class="tbl-wrap">${coCamps(e, A)}</div>`],
+      ["reg", `Public registry (${RA.list.length})`, rgTable(e, RA, A)],
       ["cp", "Who it works with", `<p class="cs">Other companies named on the same buildings, by IT-eq on those buildings (withdrawn excluded). Click a name to open it.</p>${coCounter(A)}`]];
     const bt = coBtm(e); if (bt) tabs.push(["btm", "Behind-the-meter power", bt]);
     h += `<section class="panel">${tabsHTML(tabs)}</section>`;
   } else {
     const bt = coBtm(e);
-    h += bt ? panel("Behind-the-meter generation", "", bt) : `<p class="why">No buildings recorded for this name.</p>`;
+    if (RA.n) {
+      h += `<div class="kpis">` +
+        kpi("Public registry", gqv(RA.it), `IT-eq · ${RA.n} phases on ${RA.list.length} campuses in ${RA.nst} state${RA.nst > 1 ? "s" : ""}`, "lead") +
+        kpi("Energized", gqv(RA.by.energized), "registry phases") +
+        kpi("Under construction", gqv(RA.by.under_construction), "registry phases") +
+        kpi("Not started", gqv(RA.by.not_started + RA.by.other), "registry phases") +
+        kpi(`Delayed · ${esc(RGM.scenLabel)}`, gqv(RA.del), "delay model") + `</div>`;
+      h += `<div class="grid2">` + panel("Where", "", coMap([], RA)) + panel("By state", "Registry phases, MW IT-eq.", regStates(RA)) + `</div>`;
+      h += panel("Public registry", "", rgTable(e, RA, null));
+    }
+    h += bt ? panel("Behind-the-meter generation", "", bt) : RA.n ? "" : `<p class="why">No buildings recorded for this name.</p>`;
   }
-  h += note(`Aterio census as of ${esc(M.asof)}, Capstone treatment: GW IT-eq = facility MW ÷ ${FK}; house view = went live in ${Y0}, under construction, delayed, and announced High, dated ${Y0}-${Y1} on Aterio's dates. A building counts once here even if the company holds several roles on it, but it also counts in full for every other company named on it, so never add companies together. Roles are Aterio's fields, not checked one by one. End-${Y1} assumes nothing operating today retires.`);
+  h += note(`Aterio census as of ${esc(M.asof)}, Capstone treatment: GW IT-eq = facility MW ÷ ${FK}; house view = went live in ${Y0}, under construction, delayed, and announced High, dated ${Y0}-${Y1} on Aterio's dates. A building counts once here even if the company holds several roles on it, but it also counts in full for every other company named on it, so never add companies together. Roles are Aterio's fields, not checked one by one. End-${Y1} assumes nothing operating today retires.` +
+    ` Public registry: Capstone's bottom-up list of the large US campuses from public sources (build of ${esc(RGM.asof)}, the DC delay-risk page), matched to this name on its developer and tenant fields; a separate count, never added to Aterio's.`);
   $("view").innerHTML = h;
   if (rk.length) { seg($("coRole"), opts, role, k => { LS.role = k; showCo(i); }); $("coCsv").onclick = () => coCsv(e, A); }
+  wireMapSrc();
+}
+function regStates(R){
+  const by = {}; R.list.forEach(c => { const o = by[c.st] = by[c.st] || {en: 0, uc: 0, ns: 0}; o.en += c.by.energized; o.uc += c.by.under_construction; o.ns += c.by.not_started + c.by.other; });
+  const rows = Object.entries(by).map(([st, o]) => ({st, ...o, t: o.en + o.uc + o.ns})).sort((a, b) => b.t - a.t);
+  return `<div class="tscroll"><table><tr><th>State</th><th class="n">Energized</th><th class="n">Building</th><th class="n">Not started</th><th class="n">Total</th></tr>` +
+    rows.map(r => `<tr><td><a class="ent" href="#" data-st="${r.st}">${esc(SN(r.st))}</a></td><td class="n">${gw(r.en)}</td><td class="n">${gw(r.uc)}</td><td class="n">${gw(r.ns)}</td><td class="n"><b>${gw(r.t)}</b></td></tr>`).join("") + `</table></div>`;
 }
 
 /* ------------------------------------------------------------------ view: a state, or the whole US */
@@ -766,9 +930,10 @@ function showMethod(){
       <dt>Shared buildings</dt><dd>A building with several named tenants counts in full for each (${C.map(c => `${esc(c.name)} ${f1(c.shared_it)}`).join(", ")} GW shared), so never add companies together.</dd>
       <dt>House view</dt><dd>What went live in ${Y0}, what is under construction or delayed, and announced projects rated High likelihood, dated ${Y0}-${Y1} on Aterio's own dates; a hyperscaler self-build counts as having a tenant. Same rules as the Aterio deck tab of the <a href="dc-delay-risk.html#aterio-deck">DC delay-risk page</a>.</dd>
       <dt>Dates</dt><dd>Aterio's dates have slipped export after export (median +9 months for what was under construction a year ago), so read the later years as an upper path. End-${Y1} totals assume nothing operating today retires.</dd>
-      <dt>Search</dt><dd>Covers every name the census carries in any role (operator, tenant, backer, financier, partner, utility, behind-the-meter). Wiki companies bundle their aliases with the same matching as their page sections, so a wiki company can count more than its hyperscaler card (Google also appears as a financier).</dd></dl>`) +
+      <dt>Search</dt><dd>Covers every name the census carries in any role (operator, tenant, backer, financier, partner, utility, behind-the-meter). Wiki companies bundle their aliases with the same matching as their page sections, so a wiki company can count more than its hyperscaler card (Google also appears as a financier). It also finds every developer and tenant the public registry names.</dd>
+      <dt>Public registry</dt><dd>Capstone's bottom-up registry of the large US campuses from public sources (the <a href="dc-delay-risk.html">DC delay-risk page</a>; build of ${esc(RGM.asof)}): one row per dated phase, with developer, tenant, status, base date and the delay model's ${esc(RGM.scenLabel)} result. A company's registry rows are the phases whose developer or tenant field names it, matched on the name without legal or generic tail words (the terms are shown in its tab). Registry campuses are tied to Aterio campuses by the delay-risk page's hand-reviewed campus map. On the map, diamonds are registry campuses and circles Aterio's. The registry covers the large campuses only, so it sits below Aterio; never add the two.</dd></dl>`) +
     panel("Cross-check: Bernstein's player table", `<span id="bLead"></span>`, `<div class="tscroll"><table id="bTable"></table></div>`) +
-    panel("Sources", "", `<p class="foot">Source: Aterio data-center census (${esc(M.inventory)}), licensed, internal use; Capstone calculations by <code>_wiki/_tools/build_aterio_hyperscalers.py</code> (rules in <code>_wiki/_data/aterio/treatment.json</code>; data also in <code>_wiki/_data/aterio/hyperscalers.json</code> and <code>company_lookup.json</code>). Rerun when a new Aterio export lands. Map: us-atlas states, Albers USA (lower 48).</p>`);
+    panel("Sources", "", `<p class="foot">Source: Aterio data-center census (${esc(M.inventory)}), licensed, internal use; Capstone calculations by <code>_wiki/_tools/build_aterio_hyperscalers.py</code> (rules in <code>_wiki/_data/aterio/treatment.json</code>; data also in <code>_wiki/_data/aterio/hyperscalers.json</code> and <code>company_lookup.json</code>). Rerun when a new Aterio export lands. The public-registry layer is read from <code>_wiki/_data/dc_projects/model_output.json</code> at render time; the Friday DC-monitor run re-renders this page with <code>--render-only</code>. Map: us-atlas states, Albers USA (lower 48).</p>`);
   bern();
 }
 function bern(){
