@@ -34,6 +34,8 @@ approval is in hand (protected); otherwise the scenario's `unknown_exposed` list
 whether an unknown counts as not-yet-obtained. These defaults are shown on the page.
 
 stdlib only. Run:  py "E:\\Wiki Felipe empresas\\_wiki\\_tools\\build_dc_delay.py"
+        --render-only   re-render the page from the data already in dc-delay-risk.html with the current
+                        template (layout work; nothing recomputed, no data file written)
 """
 from __future__ import annotations
 
@@ -49,6 +51,8 @@ from collections import defaultdict
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))          # _wiki
 DATA = os.environ.get("DC_DATA") or os.path.join(ROOT, "_data", "dc_projects")          # env overrides: tests only
 DASH = os.environ.get("DC_DASH") or os.path.join(ROOT, "_dashboards", "dc-delay-risk.html")
+TEMPLATE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "dc_delay_ui", "template.html")
+FONT = os.path.join(ROOT, "_data", "openrouter", "assets", "plus-jakarta-sans.woff2")   # the dashboards-hub face
 
 COLS = ("project_id,campus,phase,developer,tenant,city,county,state,lat,lon,mw,mw_basis,campus_status,"
         "phase_status,likelihood,cod_base,cod_source,power_path,grid,utility,air_permit,air_permit_date,"
@@ -1307,7 +1311,38 @@ def history(model: dict, aggs: dict, scen_ids: list[str], checkpoint: bool) -> d
 
 
 # ----------------------------------------------------------------------------- main
+def font_face() -> str:
+    """@font-face for the hub's Plus Jakarta, inlined so the page stays a single file; '' if the font is missing."""
+    if not os.path.exists(FONT):
+        return ""
+    import base64
+    b64 = base64.b64encode(open(FONT, "rb").read()).decode()
+    return ('@font-face{font-family:"OR Jakarta";font-weight:200 800;font-style:normal;font-display:swap;'
+            f'src:url(data:font/woff2;base64,{b64}) format("woff2")}}')
+
+
+def write_page(payload: str) -> None:
+    tpl = open(TEMPLATE, encoding="utf-8").read()
+    page = tpl.replace("/*__FONT__*/", font_face()).replace("/*__DATA__*/null", payload)
+    with open(DASH, "w", encoding="utf-8", newline="\n") as fh:
+        fh.write(page)
+
+
+def render_only() -> int:
+    """Re-render the page from its own embedded data (the `const M = ...;` line) with the current template."""
+    page = open(DASH, encoding="utf-8").read()
+    line = next((ln for ln in page.split("\n") if ln.startswith("const M = {")), None)
+    if line is None:
+        print("no embedded data in", DASH, "- run a full build")
+        return 1
+    write_page(line[len("const M = "):].rstrip().rstrip(";"))
+    print("re-rendered", DASH, "from its embedded data")
+    return 0
+
+
 def main() -> int:
+    if "--render-only" in sys.argv:
+        return render_only()
     checkpoint = "--checkpoint" in sys.argv
     problems: list[str] = []
     rules = json.load(open(os.path.join(DATA, "state_rules.json"), encoding="utf-8"))
@@ -1384,8 +1419,6 @@ def main() -> int:
     with open(os.path.join(DATA, "model_output.json"), "w", encoding="utf-8") as fh:
         json.dump(model, fh, ensure_ascii=False, indent=1)
 
-    tpl = open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "dc_delay_ui", "template.html"),
-               encoding="utf-8").read()
     ax, deck = aterio_view(), aterio_deck()
     if deck:
         deck["capstone"] = aterio_capstone()
@@ -1394,9 +1427,7 @@ def main() -> int:
                           "permitResearch": permit_research(), "aterio": ax, "aterioDeck": deck},
                          ensure_ascii=False,
                          separators=(",", ":")).replace("</", "<\\/")
-    page = tpl.replace("/*__DATA__*/null", payload)
-    with open(DASH, "w", encoding="utf-8", newline="\n") as fh:
-        fh.write(page)
+    write_page(payload)
 
     b = aggs.get("bear", aggs[scen_ids[0]])["construction"]
     print(f"rows {len(rows)} · problems {len(problems)} · universe(construction) {b['total']:.1f} GW IT-eq")
