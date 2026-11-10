@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SAMSUNG\transcripts` (
 | EBITDA | ₩428503.5bn | ₩645010.5bn |
 | EPS | ₩46240.50 | ₩75465.36 |
 | Capex | ₩79868.0bn | ₩102494.6bn |
-| OCF (≈EBITDA) | ₩428503.5bn | ₩645010.5bn |
+| OCF (FCF + capex cons) | ₩324903.5bn | ₩494522.6bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > **No SEC filings (Korean issuer).** Samsung Electronics files in Korea (KRX 005930) and via GDR (LSE: SMSN); it is **not a US SEC registrant** — no 10-K/10-Q/20-F on disk or on EDGAR. All financials below are from public English-language earnings-call transcripts and Samsung IR, in **KRW**, with the consensus block auto-injected from BBG. Transcripts are summaries, not verbatim. Byline: transcripts + IR + BBG (KRW) + equity calls.

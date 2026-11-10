@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\BKNG` (filings + trans
 | EBITDA | $10.5bn | $11.9bn |
 | EPS | $10.14 | $12.17 |
 | Capex | $415m | $457m |
-| OCF (≈EBITDA) | $10.5bn | $11.9bn |
+| OCF (FCF + capex cons) | $9.1bn | $10.9bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > Sell-side coverage on disk is thin — there are **no equity-call notes, no decks, and no `_briefings/by-ticker/BKNG.md`** for this name (confirmed via [INDEX](../INDEX.md) §BKNG). The Bull/Bear below is built primarily from the two most recent earnings transcripts (analyst Q&A from GS, MS, Evercore, BofA, Citi, TD Cowen, DB, Mizuho, Barclays, Rothschild) plus the FY2025 10-K. Treat consensus/PT statements as absent rather than inferred.

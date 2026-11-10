@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\NOW` (filings + transc
 | EBITDA | $6.0bn | $7.6bn |
 | EPS | $3.95 | $4.79 |
 | Capex | $851m | $795m |
-| OCF (≈EBITDA) | $6.0bn | $7.6bn |
+| OCF (FCF + capex cons) | $6.4bn | $7.8bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > **Fidelity flag:** the two transcripts used (Q1-26, Q4-25) are third-party reconstructions (fool.com / insidermonkey via WebFetch) — close paraphrase of the source, **not verbatim**, with quotation marks only where the source has them. Treat the numbers as directional, not as exact quotation.

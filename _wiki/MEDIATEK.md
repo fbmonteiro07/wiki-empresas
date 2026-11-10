@@ -17,9 +17,9 @@ _Wiki · generated 2026-06-20 · **Taiwan issuer — no SEC filings**; sources: 
 | EBITDA | NT$134.9bn | NT$299.6bn |
 | EPS | NT$69.56 | NT$153.80 |
 | Capex | NT$19.6bn | NT$27.0bn |
-| OCF (≈EBITDA) | NT$134.9bn | NT$299.6bn |
+| OCF (FCF + capex cons) | NT$73.3bn | NT$193.1bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

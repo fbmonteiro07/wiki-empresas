@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NVTS` (10-K/10-Q filin
 | EBITDA | $-49m | $-72m |
 | EPS | $-0.19 | $-0.23 |
 | Capex | $2m | $4m |
-| OCF (≈EBITDA) | $-49m | $-72m |
+| OCF (FCF + capex cons) | $-101m | $-71m |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

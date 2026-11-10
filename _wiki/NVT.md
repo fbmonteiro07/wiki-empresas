@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NVT` (10-K FY2025, 10-
 | EBITDA | $1.2bn | $1.7bn |
 | EPS | $4.83 | $6.92 |
 | Capex | $143m | $170m |
-| OCF (≈EBITDA) | $1.2bn | $1.7bn |
+| OCF (FCF + capex cons) | $895m | $1.2bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

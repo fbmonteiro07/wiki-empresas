@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\TEL` (10-K FY2025, 10-
 | EBITDA | $5.5bn | $6.3bn |
 | EPS | $11.93 | $13.91 |
 | Capex | $1.2bn | $1.3bn |
-| OCF (≈EBITDA) | $5.5bn | $6.3bn |
+| OCF (FCF + capex cons) | $4.8bn | $5.1bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 _NB: ticker TEL here = **TE Connectivity** (connectors & sensors), **not** Tokyo Electron._
 

@@ -15,9 +15,9 @@ _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\MDB\transcrip
 | EBITDA | $613m | $821m |
 | EPS | $6.13 | $7.85 |
 | Capex | $11m | $12m |
-| OCF (≈EBITDA) | $613m | $821m |
+| OCF (FCF + capex cons) | $634m | $737m |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > **Fidelity flag:** all eight transcripts are third-party (Quartr via MarketBeat) diarized transcriptions, not company-issued. Numbers are quoted as transcribed; verify load-bearing figures against the press release / 10-Q. One internal inconsistency in the Q2 FY27 transcript (EA & other growth 36% vs "approximately 30%") is **resolved in favour of 36%**: Barclays' difference table has EA/other subscription revenue +35.9% y/y vs Street 18.6% (Barclays · Lenschow, 2026-09-02); Berry's "approximately 30%" most plausibly refers to total revenue (+30.5%) — inference, not transcribed. A second, smaller gap remains open: Q1 FY27 OCF is $202M in the transcript vs "$197.5mn" in Barclays' recap (2026-05-29) — check the press release. The Q2 FY26 transcript has no speaker attribution (labelled "Speaker 2"/"Operator") — CEO/CFO remarks there are inferred from context.

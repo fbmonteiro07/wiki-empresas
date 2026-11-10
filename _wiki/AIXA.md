@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-19 · **German issuer (Prime Standard, Frankfurt; tic
 | EBITDA | €130m | €235m |
 | EPS | €0.71 | €1.51 |
 | Capex | €39m | €34m |
-| OCF (≈EBITDA) | €130m | €235m |
+| OCF (FCF + capex cons) | €311m | €143m |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

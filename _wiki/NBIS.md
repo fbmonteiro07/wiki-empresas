@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\NBIS` (20-F filings + 
 | EBITDA | $1.3bn | $6.8bn |
 | EPS | $-3.60 | $-4.17 |
 | Capex | $23.4bn | $32.6bn |
-| OCF (≈EBITDA) | $1.3bn | $6.8bn |
+| OCF (FCF + capex cons) | $8.4bn | $8.5bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > **Provenance / fidelity flag:** NBIS is the **restructured ex-Yandex entity** — Dutch holdco (Nebius Group N.V., Schiphol/Amsterdam), Nasdaq:NBIS. In **July 2024 it divested all Russia + related international businesses (>95% of consolidated revenue, assets and employees** at the time); trading resumed **2024-10-21** (20-F FY2025, 2026-04-30). Short public history as an AI company → financials are **immature and reorganized** (Toloka deconsolidated Q2 2025 and recast into discontinued ops). On-disk **filings are SEC 20-F** (foreign private issuer; no 10-Q/10-K). The two transcripts read (Q1 2026 2026-05-13, Q4 2025 2026-02-12) are **third-party reconstructions** (fool.com / investing.com via WebFetch) — close paraphrase, not verbatim. **Outlook: attempted (`outlook.py --no-body --days 7`), returned no output in this session — treat as unavailable;** sell-side flow below is from on-disk `E:\briefings\2026`.

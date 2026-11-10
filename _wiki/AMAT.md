@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\AMAT` (10-K/10-Q + tra
 | EBITDA | $13.5bn | $18.8bn |
 | EPS | $14.43 | $20.21 |
 | Capex | $2.5bn | $2.6bn |
-| OCF (≈EBITDA) | $13.5bn | $18.8bn |
+| OCF (FCF + capex cons) | $9.7bn | $16.7bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

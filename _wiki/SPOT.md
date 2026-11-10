@@ -11,11 +11,11 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\SPOT` (filings 20-F + 
 | Gross profit | €6.5bn | €7.7bn |
 | Gross margin | 33.2% | 34.2% |
 | EBITDA | €3.0bn | €3.9bn |
-| EPS | €11.81 | €15.19 |
+| EPS | €11.82 | €15.19 |
 | Capex | €52m | €52m |
-| OCF (≈EBITDA) | €3.0bn | €3.9bn |
+| OCF (FCF + capex cons) | €3.3bn | €4.1bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > **Fidelity note:** SPOT publishes only its **prepared remarks** as an IR-CDN PDF; the Q&A is run live via Slido and is **not** transcribed. Both transcripts below are prepared-remarks-only (plus a short post-Q&A closing). No analyst Q&A is captured — treat the qualitative color as management-scripted, not interrogated. SPOT is a **20-F filer** (foreign private issuer; IFRS, EUR reporting) — there is no 10-K, no 10-Q.

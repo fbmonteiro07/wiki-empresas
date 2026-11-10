@@ -9,15 +9,15 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\CSCO` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $68.4bn | $75.6bn |
+| Revenue | $68.4bn | $75.7bn |
 | Gross profit | $44.8bn | $48.9bn |
 | Gross margin | 65.5% | 64.6% |
 | EBITDA | $25.6bn | $28.0bn |
 | EPS | $4.75 | $5.26 |
 | Capex | $1.3bn | $1.4bn |
-| OCF (≈EBITDA) | $25.6bn | $28.0bn |
+| OCF (FCF + capex cons) | $17.9bn | $20.2bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

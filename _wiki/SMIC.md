@@ -13,9 +13,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SMIC` · `_equity_call
 | EBITDA | $6.5bn | $8.2bn |
 | EPS | $0.16 | $0.23 |
 | Capex | $8.5bn | $7.1bn |
-| OCF (≈EBITDA) | $6.5bn | $8.2bn |
+| OCF (FCF + capex cons) | $6.8bn | $7.2bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

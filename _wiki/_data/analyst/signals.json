@@ -7,26 +7,13 @@
     "positions": 8
   },
   "stats": {
-    "signals": 44,
-    "active": 44,
-    "high": 3,
-    "belief_changes": 3,
-    "focus_names": 33
+    "signals": 42,
+    "active": 42,
+    "high": 2,
+    "belief_changes": 4,
+    "focus_names": 32
   },
   "focus": [
-    {
-      "ticker": "META",
-      "focus_score": 79,
-      "in_book": true,
-      "signal_count": 1,
-      "high_count": 1,
-      "sector": "AI — Hyperscalers & Software",
-      "thesis": "Fastest grower in Mag7 ex-GPU; bear = capital intensity and negative incremental ROIC.",
-      "next_catalyst": "2027-01-19",
-      "why": [
-        "META — catalyst passed without a logged outcome"
-      ]
-    },
     {
       "ticker": "GOOG",
       "focus_score": 78,
@@ -66,6 +53,19 @@
       "next_catalyst": "2026-11-17",
       "why": [
         "MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE."
+      ]
+    },
+    {
+      "ticker": "ANTHROPIC",
+      "focus_score": 62,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "AI labs (private)",
+      "thesis": "Pre-IPO frontier lab (Nasdaq: ANT; S-1/A No. 2 2026-11-10: $70-78 range, 825m sh + $26bn supplier Class N placement): Oct-31 run-rate ~$81bn; 2Q26 first op. pro",
+      "next_catalyst": "",
+      "why": [
+        "ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot"
       ]
     },
     {
@@ -123,20 +123,6 @@
       ]
     },
     {
-      "ticker": "CME",
-      "focus_score": 60,
-      "in_book": false,
-      "signal_count": 2,
-      "high_count": 0,
-      "sector": "Financials",
-      "thesis": "Futures-and-clearing toll on US rates, equity-index, energy and commodity risk; volatility-driven volume, pricing and market data versus perpetuals/retail-venue",
-      "next_catalyst": "2026-12-07",
-      "why": [
-        "CME — catalyst passed without a logged outcome",
-        "CME — 2026-12-07: CME Securities Clearing launch on 2026-12-07, ahead of the SEC Treasury clearing mandate…"
-      ]
-    },
-    {
       "ticker": "FLEX",
       "focus_score": 58,
       "in_book": false,
@@ -175,19 +161,6 @@
         "NSCALE — Bloomberg consensus missing",
         "NSCALE — latest earnings transcript absent",
         "NSCALE — 2026-11-16: NVIDIA Sale ($1.0bn convertible notes / non-voting shares) expected to close on or around…"
-      ]
-    },
-    {
-      "ticker": "SNDK",
-      "focus_score": 58,
-      "in_book": false,
-      "signal_count": 1,
-      "high_count": 0,
-      "sector": "Memory & storage",
-      "thesis": "Post-spin pure-play NAND on AI storage; price-driven blowout + $42B LTA backlog vs blowoff-top risk.",
-      "next_catalyst": "",
-      "why": [
-        "SNDK — catalyst passed without a logged outcome"
       ]
     },
     {
@@ -241,13 +214,13 @@
       "thesis": "InP chokepoint in AI interconnect; NVIDIA stake + CPO deal; bear is relative vs LITE.",
       "next_catalyst": "2026-11-12",
       "why": [
-        "COHR — 2027 EPS house view is 15% below consensus",
+        "COHR — 2027 EPS house view is 16% below consensus",
         "COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk…"
       ]
     },
     {
       "ticker": "LITE",
-      "focus_score": 51,
+      "focus_score": 53,
       "in_book": false,
       "signal_count": 1,
       "high_count": 0,
@@ -255,7 +228,7 @@
       "thesis": "US photonics pure-play (rev +90%); demand isn't the question, supply/execution is.",
       "next_catalyst": "",
       "why": [
-        "LITE — 2026 EPS house view is 16% below consensus"
+        "LITE — 2026 EPS house view is 17% below consensus"
       ]
     },
     {
@@ -390,6 +363,19 @@
       ]
     },
     {
+      "ticker": "CME",
+      "focus_score": 25,
+      "in_book": false,
+      "signal_count": 1,
+      "high_count": 0,
+      "sector": "Financials",
+      "thesis": "Futures-and-clearing toll on US rates, equity-index, energy and commodity risk; volatility-driven volume, pricing and market data versus perpetuals/retail-venue",
+      "next_catalyst": "2026-12-07",
+      "why": [
+        "CME — 2026-12-07: CME Securities Clearing launch on 2026-12-07, ahead of the SEC Treasury clearing mandate…"
+      ]
+    },
+    {
       "ticker": "CRWD",
       "focus_score": 25,
       "in_book": false,
@@ -457,43 +443,9 @@
   ],
   "signals": [
     {
-      "id": "post-a3feaac29739",
+      "id": "esti-c60c4b0fded3",
       "asof": "2026-11-10",
-      "source_date": "2026-11-09",
-      "event_date": "2026-11-09",
-      "type": "postmortem",
-      "priority": "high",
-      "score": 74,
-      "title": "META — catalyst passed without a logged outcome",
-      "tickers": [
-        "META"
-      ],
-      "in_book": [
-        "META"
-      ],
-      "impact": "high",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 2026-11-09 — the go-to-market is taking shape (The Information · Jyoti Mann, \"Meta Plans Sales Team, Consulting Partnerships to Win Over Big Companies\", 2026-11-09 — journalism, not broker researc",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for META in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 2026-11-09 — the go-to-market is taking shape (The Information · Jyoti Mann, \"Meta Plans Sales Team, Consulting Partnerships to Win Over Big Companies\", 2026-11-09 — journalism, not broker researc",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "esti-b57bd0050bb6",
-      "asof": "2026-11-10",
-      "source_date": "2026-11-09",
+      "source_date": "2026-11-10",
       "type": "model_check",
       "priority": "high",
       "score": 71,
@@ -507,7 +459,7 @@
       "impact": "high",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $428.4bn as of 2026-11-09, a derived +17.9% gap. Revenue comparisons require a basis check.",
+      "why_now": "Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $428.4bn as of 2026-11-10, a derived +17.9% gap. Revenue comparisons require a basis check.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -562,7 +514,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-11-09",
+      "source": "Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-11-10",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -659,6 +611,72 @@
       ],
       "evidence_anchor": "✅🔴 CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the ~70% FY28 revenue growth (\"we could grow 70% year-over-year, and we are confident about that\"),",
       "origin": "catalyst_calendar",
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "beli-310767ca860d",
+      "asof": "2026-11-10",
+      "source_date": "2026-11-10",
+      "type": "narrative_shift",
+      "priority": "medium",
+      "score": 62,
+      "title": "ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot",
+      "tickers": [
+        "ANTHROPIC"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "immediate",
+      "confidence": "high",
+      "why_now": "verification (transcription QA): every figure, name and quote in the roadshow inserts re-read against the transcript and the S-1/A No. 2 text; all numbers and arithmetic tie. Three wording corrections in the Debate bullet, no number changed: (1) the \"~12%\" 3Q adjusted OM was attributed to a \"10-27 bullet\" and a \"leaked\" 11% figure; it is FUNDA's 2026-10-26 derivation from the secondhand 11% nine-month figure (Bloomberg 10-14, primary not pulled), and the filed nine-month figure is 12%, not 11%; (2) the filing…",
+      "belief_update": "The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.",
+      "action": "Re-grade the ANTHROPIC thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.",
+      "falsifier": "The fingerprint moved only because of formatting or a derived snapshot insertion.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "supplier",
+          "detail": "AWS Trainium compute",
+          "from": "ANTHROPIC",
+          "in_book": true
+        },
+        {
+          "ticker": "GOOG",
+          "relation": "supplier",
+          "detail": "TPU compute",
+          "from": "ANTHROPIC",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "supplier",
+          "detail": "GPUs",
+          "from": "ANTHROPIC",
+          "in_book": true
+        },
+        {
+          "ticker": "OPENAI",
+          "relation": "competitor",
+          "detail": "frontier models",
+          "from": "ANTHROPIC",
+          "in_book": false
+        },
+        {
+          "ticker": "NSCALE",
+          "relation": "supplier",
+          "detail": "neocloud compute ($44.6bn, Monarch 460 MW)",
+          "from": "ANTHROPIC",
+          "in_book": false
+        }
+      ],
+      "source": "ANTHROPIC page Changelog 2026-11-10",
+      "evidence_paths": [
+        "ANTHROPIC.md"
+      ],
+      "evidence_anchor": "verification (transcription QA): every figure, name and quote in the roadshow inserts re-read against the transcript and the S-1/A No. 2 text; all numbers and arithmetic tie. Three wording corrections in the Debate bullet, no number changed: (1) the \"~12%\" 3Q adjusted OM was attributed to a \"10-27 bullet\" and a \"leaked\" 11% figure; it is FUNDA's 2026-10-26 derivation from the secondhand 11% nine-month figure (Bloomberg 10-14, primary not pulled), and the filed nine-month figure is 12%, not 11%; (2) the filing…",
+      "origin": "belief_diff",
       "feedback": "",
       "feedback_note": "",
       "hidden": false
@@ -938,38 +956,6 @@
       "hidden": false
     },
     {
-      "id": "post-6d84cf39ebcd",
-      "asof": "2026-11-10",
-      "source_date": "2026-11-09",
-      "event_date": "2026-11-09",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "CME — catalyst passed without a logged outcome",
-      "tickers": [
-        "CME"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract ends 2026-11-09 (Duffy said he \"believe[s]\" so; filed under a full 40.3 review), then the agency decides ([Duf",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for CME in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "Compute futures: the CFTC comment period on CME's Silicon Data H100-rental-index contract ends 2026-11-09 (Duffy said he \"believe[s]\" so; filed under a full 40.3 review), then the agency decides ([Duf",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-30cf21294c0d",
       "asof": "2026-11-10",
       "source_date": "2026-11-10",
@@ -1138,38 +1124,6 @@
       "hidden": false
     },
     {
-      "id": "post-295dee3c22c1",
-      "asof": "2026-11-10",
-      "source_date": "2026-11-09",
-      "event_date": "2026-11-09",
-      "type": "postmortem",
-      "priority": "medium",
-      "score": 58,
-      "title": "SNDK — catalyst passed without a logged outcome",
-      "tickers": [
-        "SNDK"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "overdue",
-      "confidence": "high",
-      "why_now": "🆕 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional shares after the close, then split-adjusted trading (8-K Item 8.01, 2026-10-29). ➤ From 11-20, BBG cons",
-      "belief_update": "The feedback loop is incomplete until the original bull/bear question is scored.",
-      "action": "Write a source-attributed bull won|bear won|neutral outcome for SNDK in outcomes.md.",
-      "falsifier": "An existing outcome entry is found under a different but equivalent event date.",
-      "readthrough": [],
-      "source": "Catalyst outcome ledger",
-      "evidence_paths": [
-        "_meta/catalysts.md",
-        "_meta/outcomes.md"
-      ],
-      "evidence_anchor": "🆕 2026-11-09 / 11-19 / 11-20 — 8-for-1 forward split: record date, issue of seven additional shares after the close, then split-adjusted trading (8-K Item 8.01, 2026-10-29). ➤ From 11-20, BBG cons",
-      "origin": "outcome_loop",
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
       "id": "cata-c76406c38a7d",
       "asof": "2026-11-10",
       "source_date": "2026-11-12",
@@ -1262,9 +1216,9 @@
       "hidden": false
     },
     {
-      "id": "esti-42312918a989",
+      "id": "esti-0b9075d75223",
       "asof": "2026-11-10",
-      "source_date": "2026-11-09",
+      "source_date": "2026-11-10",
       "type": "model_check",
       "priority": "medium",
       "score": 53,
@@ -1276,7 +1230,7 @@
       "impact": "medium",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $-3.27 versus Bloomberg consensus at $-3.94 as of 2026-11-09, a derived -17.0% gap.",
+      "why_now": "Capstone carries 2026 EPS at $-3.27 versus Bloomberg consensus at $-3.94 as of 2026-11-10, a derived -17.0% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1324,7 +1278,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-09",
+      "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-10",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1342,9 +1296,9 @@
       "hidden": false
     },
     {
-      "id": "esti-576e5f53ab87",
+      "id": "esti-8f19b63c0593",
       "asof": "2026-11-10",
-      "source_date": "2026-11-09",
+      "source_date": "2026-11-10",
       "type": "model_check",
       "priority": "medium",
       "score": 53,
@@ -1356,7 +1310,7 @@
       "impact": "medium",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2027 EPS at $-1.83 versus Bloomberg consensus at $-2.23 as of 2026-11-09, a derived -17.9% gap.",
+      "why_now": "Capstone carries 2027 EPS at $-1.83 versus Bloomberg consensus at $-2.23 as of 2026-11-10, a derived -17.9% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1404,7 +1358,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-09",
+      "source": "Capstone official model — P:\\Felipe Monteiro\\US Equities\\Modelos oficiais\\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-10",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1415,6 +1369,86 @@
         "house": -1.83,
         "consensus": -2.23,
         "delta_pct": -17.94,
+        "unit": ""
+      },
+      "feedback": "",
+      "feedback_note": "",
+      "hidden": false
+    },
+    {
+      "id": "esti-5b1b8a61ac28",
+      "asof": "2026-11-10",
+      "source_date": "2026-11-10",
+      "type": "model_check",
+      "priority": "medium",
+      "score": 53,
+      "title": "LITE — 2026 EPS house view is 17% below consensus",
+      "tickers": [
+        "LITE"
+      ],
+      "in_book": [],
+      "impact": "medium",
+      "urgency": "standing",
+      "confidence": "provisional",
+      "why_now": "Capstone carries 2026 EPS at $12.81 versus Bloomberg consensus at $15.46 as of 2026-11-10, a derived -17.1% gap.",
+      "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
+      "action": "Open the LITE model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
+      "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
+      "readthrough": [
+        {
+          "ticker": "AMZN",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "MSFT",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "NVDA",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": true
+        },
+        {
+          "ticker": "COHR",
+          "relation": "competitor",
+          "detail": "optical/InP",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "AIXA",
+          "relation": "supplier",
+          "detail": "MOCVD tools",
+          "from": "LITE",
+          "in_book": false
+        },
+        {
+          "ticker": "ANET",
+          "relation": "customer",
+          "detail": "optical",
+          "from": "LITE",
+          "in_book": false
+        }
+      ],
+      "source": "Capstone official model (Modelo consolidado incl. LITE .xlsx — consolidated optics, 2026-06-16). · Bloomberg consensus 2026-11-10",
+      "evidence_paths": [
+        "_data/house.json",
+        "_data/estimates.json"
+      ],
+      "evidence_anchor": "LITE 2026 EPS",
+      "origin": "house_vs_consensus",
+      "values": {
+        "house": 12.81,
+        "consensus": 15.46,
+        "delta_pct": -17.14,
         "unit": ""
       },
       "feedback": "",
@@ -1590,13 +1624,13 @@
       "hidden": false
     },
     {
-      "id": "esti-e1a01d689a48",
+      "id": "esti-b6e8e26cc2d3",
       "asof": "2026-11-10",
-      "source_date": "2026-11-09",
+      "source_date": "2026-11-10",
       "type": "model_check",
       "priority": "medium",
       "score": 51,
-      "title": "COHR — 2027 EPS house view is 15% below consensus",
+      "title": "COHR — 2027 EPS house view is 16% below consensus",
       "tickers": [
         "COHR"
       ],
@@ -1604,7 +1638,7 @@
       "impact": "medium",
       "urgency": "standing",
       "confidence": "provisional",
-      "why_now": "Capstone carries 2027 EPS at $11.30 versus Bloomberg consensus at $13.35 as of 2026-11-09, a derived -15.4% gap.",
+      "why_now": "Capstone carries 2027 EPS at $11.30 versus Bloomberg consensus at $13.39 as of 2026-11-10, a derived -15.6% gap.",
       "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
       "action": "Open the COHR model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
       "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
@@ -1659,7 +1693,7 @@
           "in_book": false
         }
       ],
-      "source": "Capstone initiation of coverage, 2026-09-01 (Felipe Monteiro) — NEUTRAL, 12-month PT $285 (25x CY27E EPS). Model: session scratchpad cohr · Bloomberg consensus 2026-11-09",
+      "source": "Capstone initiation of coverage, 2026-09-01 (Felipe Monteiro) — NEUTRAL, 12-month PT $285 (25x CY27E EPS). Model: session scratchpad cohr · Bloomberg consensus 2026-11-10",
       "evidence_paths": [
         "_data/house.json",
         "_data/estimates.json"
@@ -1668,88 +1702,8 @@
       "origin": "house_vs_consensus",
       "values": {
         "house": 11.3,
-        "consensus": 13.35,
-        "delta_pct": -15.36,
-        "unit": ""
-      },
-      "feedback": "",
-      "feedback_note": "",
-      "hidden": false
-    },
-    {
-      "id": "esti-0c74f485a146",
-      "asof": "2026-11-10",
-      "source_date": "2026-11-09",
-      "type": "model_check",
-      "priority": "medium",
-      "score": 51,
-      "title": "LITE — 2026 EPS house view is 16% below consensus",
-      "tickers": [
-        "LITE"
-      ],
-      "in_book": [],
-      "impact": "medium",
-      "urgency": "standing",
-      "confidence": "provisional",
-      "why_now": "Capstone carries 2026 EPS at $12.81 versus Bloomberg consensus at $15.20 as of 2026-11-09, a derived -15.7% gap.",
-      "belief_update": "The house/Street disagreement requires an explicit driver bridge.",
-      "action": "Open the LITE model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.",
-      "falsifier": "A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.",
-      "readthrough": [
-        {
-          "ticker": "AMZN",
-          "relation": "customer",
-          "detail": "optical",
-          "from": "LITE",
-          "in_book": true
-        },
-        {
-          "ticker": "MSFT",
-          "relation": "customer",
-          "detail": "optical",
-          "from": "LITE",
-          "in_book": true
-        },
-        {
-          "ticker": "NVDA",
-          "relation": "customer",
-          "detail": "optical",
-          "from": "LITE",
-          "in_book": true
-        },
-        {
-          "ticker": "COHR",
-          "relation": "competitor",
-          "detail": "optical/InP",
-          "from": "LITE",
-          "in_book": false
-        },
-        {
-          "ticker": "AIXA",
-          "relation": "supplier",
-          "detail": "MOCVD tools",
-          "from": "LITE",
-          "in_book": false
-        },
-        {
-          "ticker": "ANET",
-          "relation": "customer",
-          "detail": "optical",
-          "from": "LITE",
-          "in_book": false
-        }
-      ],
-      "source": "Capstone official model (Modelo consolidado incl. LITE .xlsx — consolidated optics, 2026-06-16). · Bloomberg consensus 2026-11-09",
-      "evidence_paths": [
-        "_data/house.json",
-        "_data/estimates.json"
-      ],
-      "evidence_anchor": "LITE 2026 EPS",
-      "origin": "house_vs_consensus",
-      "values": {
-        "house": 12.81,
-        "consensus": 15.2,
-        "delta_pct": -15.72,
+        "consensus": 13.39,
+        "delta_pct": -15.61,
         "unit": ""
       },
       "feedback": "",

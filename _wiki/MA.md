@@ -9,13 +9,13 @@ _Wiki · created 2026-10-31 · research cutoff 2026-10-31 · email review 2026-1
 |---|--:|--:|
 | Revenue | $36.9bn | $42.1bn |
 | Gross profit | $4.7bn | $5.3bn |
-| Gross margin | 12.6% | 12.6% |
+| Gross margin | 12.6% | 12.5% |
 | EBITDA | $23.2bn | $26.8bn |
-| EPS | $19.45 | $23.23 |
-| Capex | $689m | $864m |
-| OCF (≈EBITDA) | $23.2bn | $26.8bn |
+| EPS | $19.45 | $23.21 |
+| Capex | $686m | $849m |
+| OCF (FCF + capex cons) | $17.2bn | $21.3bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

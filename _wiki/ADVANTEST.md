@@ -13,9 +13,9 @@ _Wiki · generated 2026-06-20 · **Japanese issuer — NO SEC filings**; sources
 | EBITDA | ¥793.5bn | ¥1282.9bn |
 | EPS | **¥884.00** | **¥917.70** |
 | Capex | ¥24.5bn | — |
-| OCF (≈EBITDA) | ¥793.5bn | ¥1282.9bn |
+| OCF (FCF + capex cons) | ¥526.4bn | ¥855.2bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 _**Bold** = Capstone official model; plain = BBG consensus._
 <!-- SNAPSHOT:END -->
 

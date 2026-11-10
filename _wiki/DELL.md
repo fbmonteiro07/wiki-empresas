@@ -16,9 +16,9 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\DELL` (filings + trans
 | EBITDA | $21.2bn | $27.6bn |
 | EPS | $21.85 | $30.90 |
 | Capex | $4.1bn | $4.9bn |
-| OCF (≈EBITDA) | $21.2bn | $27.6bn |
+| OCF (FCF + capex cons) | $17.9bn | $23.4bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

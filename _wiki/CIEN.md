@@ -13,9 +13,9 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\CIEN` (filings + trans
 | EBITDA | $1.5bn | $2.6bn |
 | EPS | $7.62 | $13.50 |
 | Capex | $273m | $341m |
-| OCF (≈EBITDA) | $1.5bn | $2.6bn |
+| OCF (FCF + capex cons) | $962m | $1.5bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

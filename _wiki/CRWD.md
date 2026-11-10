@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWD` (filings + trans
 | EBITDA | $1.8bn | $2.3bn |
 | EPS | $1.23 | $1.59 |
 | Capex | $421m | $617m |
-| OCF (≈EBITDA) | $1.8bn | $2.3bn |
+| OCF (FCF + capex cons) | $2.3bn | $2.9bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > **Fidelity flag:** the two transcripts read (Q1 FY27 2026-06-03, Q4 FY26 2026-03-03) are third-party reconstructions (fool.com via WebFetch) — close paraphrase, **not verbatim**; quotation marks retained only where the source carried them. The WebFetch summary mislabeled Q1 FY27 as "ended Jan 31 2027" — it ended **April 30 2026** (confirmed by the 10-Q filed 2026-06-04). Q3/Q2 FY26 saved from WebSearch headline summaries (metrics only). No CRWD-specific sell-side PT exists in the on-disk briefings — only read-throughs and expert-call invites (see Debate); a standing MS rating is now confirmed via disclosure tables (see Debate).

@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\NXPI` (10-K/10-Q + tra
 | EBITDA | $5.8bn | $6.6bn |
 | EPS | $15.02 | $18.25 |
 | Capex | $448m | $784m |
-| OCF (≈EBITDA) | $5.8bn | $6.6bn |
+| OCF (FCF + capex cons) | $4.1bn | $4.9bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

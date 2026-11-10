@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\ADI` (10-K FY2025, 10-
 | EBITDA | $9.1bn | $10.7bn |
 | EPS | $14.04 | $17.56 |
 | Capex | $761m | $818m |
-| OCF (≈EBITDA) | $9.1bn | $10.7bn |
+| OCF (FCF + capex cons) | $6.3bn | $8.6bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

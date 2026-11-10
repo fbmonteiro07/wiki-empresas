@@ -1,0 +1,78 @@
+Morning Analyst Inbox — 2026-11-10
+
+Cutoff: 07:25 São Paulo / 10:25 UTC. Book prioritization remains provisional: portfolio weights are still a seed. These are research priorities, not trade instructions.
+
+Today's focus: NVDA for governance and policy risk; CRWV and FLEX for today's events; SKHYNIX/SAMSUNG for earnings quality versus valuation; CEG/NRG for divergent earnings revisions.
+
+Evidence key: E = _wiki/_meta/analyst-evidence/2026-11-10-morning-source-checks.json. “supp-” IDs are supplemental research signals, not engine alerts.
+
+FIVE PRIORITY IDEAS
+
+1. NVDA — Treat governance risk seriously without inventing an earnings impairment.
+
+Hard evidence: NVIDIA's November 8 board statement confirms an independent investigation overseen by independent directors and outside counsel. The board says it has no reason to believe secrets or national security were compromised and retains confidence in leadership. These are the board's statements, not completed findings. [Company statement](https://investor.nvidia.com/news/press-release-details/2026/Statement-from-NVIDIA-Board-of-Directors/default.aspx)
+
+Broker evidence: BofA / Vivek Arya, November 9, retains Buy/$350 while distinguishing containment, prolonged uncertainty and escalation. BofA's US 1 Committee, November 10, removes NVDA, MU and LRCX from that preferred list but explicitly retains Buy ratings.
+
+Inference/action: separate valuation risk from order, export-access and ecosystem-financing risk. Maintain an evidence checklist for customer cancellations, restrictions and funding decisions; do not assume competitors benefit if scrutiny spreads across suppliers.
+Falsifier of a “valuation-only” interpretation: documented order disruption, tighter restrictions or financing withdrawal changes expected cash flows.
+Signal supp-20261110-nvda. Evidence: E.nvda; _wiki/NVDA.md. The engine's closed September fireside is not this new signal.
+
+2. CRWV — Tonight must validate funded activation, not merely backlog.
+
+Broker forecast, unchanged since yesterday: BofA's November 8 sales digest relays Tal Liani's Q3 revenue ~$3.65bn, active power 1.7GW and ~$20bn additional funding need. It is not company guidance. UBS / Keirstead, Schiff and Giuditta's November 8 project list, ingested November 9, marks selected projects started; its power figures mix bases.
+
+Inference/action: require site-level customer acceptance, revenue conversion, unrestricted parent cash, facility draw conditions and incremental funding terms. “Started” is not “energized,” and a broker's new-permit interpretation is not legal protection. Do not sum facility MW, IT-load MW and separate developer/tenant roles.
+Falsifier: activation or acceptance slips, or financing costs/dilution absorb the contracted-demand upside. Conversely, drawable funding and accepted capacity would weaken the financing bear case.
+Signals esti-576e5f53ab87; supp-20261110-crwv. Evidence: E.crwv; _wiki/CRWV.md; _wiki/_data/house.json.
+
+3. FLEX — Today’s Axiom presentation needs a cash-and-capital bridge.
+
+Hard evidence: CFO Kevin Krumm's October 28 call says approximately half the ~$950m FY27 revenue-guide increase comes from EPC, while FY27 free-cash-flow conversion remains approximately 40%. The $2bn Axiom convertible preferred was agreed; the statement does not establish completion.
+
+Inference/action: extract organic CPI growth, EPC standalone contribution, separation costs, debt allocation and preferred conversion terms. Reconcile those to common-equity cash flows before assigning a spin-off valuation. A higher group EPS guide cannot answer all those questions.
+Falsifier: standalone costs, working capital or dilution absorb the apparent operating upside.
+Signal cata-30cf21294c0d. Evidence: E.flex; _wiki/FLEX.md; FLEX/transcripts/FLEX_Q2-FY27-earnings_2026-10-28.md.
+
+4. SKHYNIX/SAMSUNG — EPS upgrades can coexist with weaker economics.
+
+Broker evidence: Morgan Stanley / Shawn Kim, Cindy Huang, Kathy Zhu and Ryan Kim, November 9, cuts SK hynix's target W2,600,000→W1,600,000 and Samsung common W381,000→W309,000. Samsung replaces SEMCO—not SK hynix—as Top Pick.
+
+The visually checked report, pages 10–11, raises SK hynix FY27/28 EPS by 22%/29%, versus operating-profit revisions of 13%/1%. MS attributes the larger EPS increases to buybacks/cancellations and a switch to basic weighted-average shares, while reducing HBM margin assumptions and long-run DRAM profitability.
+
+Inference/action: rebuild the comparison on constant diluted shares and matched operating-profit assumptions. Do not interpret the EPS increases as a clean demand upgrade or the target cuts as near-term earnings cuts.
+Falsifier: sustained HBM pricing/margins and restrained supply undermine MS's through-cycle normalization; alternatively, operating cuts precede the assumed 2028 supply response.
+Signals beli-0229b7e48bb5; supp-20261110-memory. Evidence: E.memory; _wiki/SKHYNIX.md; _wiki/SAMSUNG.md; _inbox/_done/SKOREA_20261109_1658.pdf.
+
+5. CEG/NRG — Separate recurring power earnings from financial engineering.
+
+Hard evidence: CEG's November 9 release raises FY26 adjusted operating EPS guidance to $12.50–12.80, above the $12.04 consensus quoted by MS / David Arcaro and team, November 10. MS warns that commercial/generation outperformance may not recur. [CEG release](https://www.constellationenergy.com/news/2026/11/constellation-reports-third-quarter-2026-results.html)
+
+A useful source correction: Google's October 6 company agreement specifies 890 MW of incremental nuclear generation and a separate 2,700 MW financial energy-supply agreement. The wiki's previously unverified ~3.6GW headline is not entirely new generation. These are historical terms, not a new November commitment. [Original announcement](https://www.constellationenergy.com/news/2026/10/google-and-constellation-announce-landmark-agreement-to-bring-890-mw-of-new-nuclear-capacity-to-pjm-grid.html)
+
+NRG's November 9 guidance gives FY27 EPS midpoint $9.05 and EBITDA midpoint $5.75bn, excluding effects of its announced asset sale. MS / Arcaro's November 10 assessment expects modest EPS revisions lower despite largely in-line EBITDA. [NRG release](https://investors.nrg.com/news-releases/news-release-details/nrg-energy-reports-third-quarter-2026-results-reaffirms-2026)
+
+Inference/action: separate CEG base from enhanced earnings; bridge NRG depreciation, interest, preferred dividends and share count using release Appendix A-9 before adding sale-funded buybacks.
+Falsifier: CEG's earnings uplift proves transient, or NRG's apparent EPS shortfall disappears on a matched transaction/share-count basis.
+Signal supp-20261110-power. Evidence: E.power; _wiki/CEG.md; _wiki/themes/ai-datacenter-power.md; _wiki/themes/ai-compute-deals.md.
+
+MODEL AND DATA CONTROLS
+
+• CRWV: October 14 house CY26/27 EPS -$3.27/-$1.83 versus November 9 BBG -$3.94/-$2.23 remains MORE optimistic, despite the engine's “below” label (esti-42312918a989; esti-576e5f53ab87).
+• GOOG: June 5 house gross revenue $505bn versus November 9 BBG net revenue $428.4bn remains a basis mismatch, not fresh alpha (esti-b57bd0050bb6).
+• CEG: November 9 saved BBG CY26 EPS is $11.63 versus 1FY $12.04; the late-night reconciliation quotes $12.10. Pin series and vintage before sizing revisions. NRG's $10.24 BBG EPS mark exists in that reconciliation but NRG is absent from the saved export; it is not independently reproducible here.
+Signals supp-20261110-power and the engine IDs above. Evidence: E.model_controls; _wiki/_data/estimates.json; _wiki/_data/house.json; _wiki/_meta/reconciliation-2026-11-09-inbox.md.
+
+CATALYSTS AND PREPARATION
+
+• Today: FLEX 9am ET / Axiom 1pm ET, per the November 6 [company notice](https://investors.flex.com/news/news-details/2026/Flex-to-Host-Innovation-Day-on-November-10-2026/default.aspx). Prepare the standalone bridge. Signal cata-30cf21294c0d; E.flex.
+• Today: CRWV results call 5pm ET, per the October 27 [company notice](https://investors.coreweave.com/news/news-details/2026/CoreWeave-Announces-Date-of-Third-Quarter-2026-Financial-Results-and-Conference-Call/default.aspx). Freeze the funding/activation scorecard before results. Signal supp-20261110-crwv; E.crwv.
+• IFX has already reported: November 10 company FY27 guide is ~€20bn revenue, with data-center power close to €4bn. MS / Lee Simpson, Shawn Kim and Amelia Scicluna calls the overall guide in line. The company scope is data-center power, not pure AI; reconcile it with older AI-only markers and fiscal/calendar estimates before declaring a beat. Release-stage outcome logged neutral; call details still need review. [Company release](https://www.infineon.com/press-release/2026/infpr202611-025). Signals cata-ce699c62b4f0; supp-20261110-ifx. Evidence: E.ifx; _wiki/IFX.md.
+
+WHAT CHANGED VERSUS YESTERDAY
+
+New to this brief—not all newly announced: NVIDIA's verified November 8 board statement and today's US 1 removals; MS's memory valuation/share-count reset; CEG/NRG earnings distinctions; IFX's reported guide. CRWV/FLEX move from tomorrow's preparation to today's events. DDOG's renewal and COHR's contract-protection questions remain open, not invalidated by leaving the top five.
+
+Engine: 41 active / 2 high / 31 focus names / 3 belief changes, versus yesterday's 38 / 1 / 29 / 0. SKHYNIX reflects a substantive broker revision; IREN and PLTR largely reflect ingestion of UBS's November 8 discussion, not new operating disclosures. Both automated “high” alerts need judgment: GOOG is the basis mismatch; NVDA is a recycled closed-event calendar entry. KKR/QCOM readout gaps remain unscored. Evidence: E.engine_delta; _wiki/_data/analyst/history/.
+
+Scope: 667 mailbox entries inventoried; selected research and primary/local evidence reviewed, not an exhaustive audit. PDF review confirmed the EPS/share-count distinction. Outcomes and power-context confirmation were updated; company pages and house models were not edited.

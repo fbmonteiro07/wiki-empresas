@@ -13,9 +13,9 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\SHOP` (10-K/10-Q + tra
 | EBITDA | $2.7bn | $3.8bn |
 | EPS | $1.86 | $2.49 |
 | Capex | $27m | $28m |
-| OCF (≈EBITDA) | $2.7bn | $3.8bn |
+| OCF (FCF + capex cons) | $2.9bn | $3.7bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

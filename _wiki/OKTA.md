@@ -13,9 +13,9 @@ _Wiki · generated 2026-09-14 · sources: `E:\Wiki Felipe empresas\OKTA` (10-K/1
 | EBITDA | $857m | $983m |
 | EPS | $3.79 | $4.34 |
 | Capex | $13m | $15m |
-| OCF (≈EBITDA) | $857m | $983m |
+| OCF (FCF + capex cons) | $944m | $1.1bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

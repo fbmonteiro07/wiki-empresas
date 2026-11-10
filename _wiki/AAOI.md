@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AAOI` (filings + trans
 | EBITDA | $84m | $556m |
 | EPS | $0.63 | $3.74 |
 | Capex | $654m | $825m |
-| OCF (≈EBITDA) | $84m | $556m |
+| OCF (FCF + capex cons) | $-507m | $-286m |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

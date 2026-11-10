@@ -13,9 +13,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\INTC` (filings + trans
 | EBITDA | $18.6bn | $24.0bn |
 | EPS | $0.88 | $1.78 |
 | Capex | $21.7bn | $28.2bn |
-| OCF (≈EBITDA) | $18.6bn | $24.0bn |
+| OCF (FCF + capex cons) | $18.6bn | $25.5bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

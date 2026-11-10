@@ -15,9 +15,9 @@ _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\ESTC\transcri
 | EBITDA | $340m | $465m |
 | EPS | $2.91 | $3.78 |
 | Capex | $7m | $8m |
-| OCF (≈EBITDA) | $340m | $465m |
+| OCF (FCF + capex cons) | $402m | $505m |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > **Fidelity flag:** all seven transcripts are third-party (MarketBeat / Quartr feed) diarized transcriptions, not company-published. Speaker tags are unreliable in places — the Q1 FY26 file (2025-08-28) labels the CFO's prepared remarks as "Operator" and a Guggenheim analyst as "Howard Ma with Google"; the Q1 FY27 file renders UBS's Roddy Sultan as "Radi Sultan"; one Q1 FY26 sentence on disclosure policy is garbled. Numbers below are as transcribed — verify load-bearing figures against the press release / 10-Q before quoting externally.

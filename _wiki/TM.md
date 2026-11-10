@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\TM` (20-F + transcript
 | EBITDA | ¥5978.7bn | ¥6983.6bn |
 | EPS | — | — |
 | Capex | ¥2665.4bn | ¥2545.0bn |
-| OCF (≈EBITDA) | ¥5978.7bn | ¥6983.6bn |
+| OCF (FCF + capex cons) | ¥3979.4bn | ¥7258.5bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > **Fidelity caveat.** TM is a foreign private issuer (FPI). There is no English-language earnings call in the US format. The "transcripts" on disk are **English-language Q&A summaries extracted from SEC 6-K exhibits** (FY decks presented to the Tokyo Stock Exchange, EX-99.2) — they are **not verbatim transcripts** of Q&A with the sell-side. The entire "debate" reading below is inferred from the company's own material + 20-F; **English-language coverage is thin** (0 equity calls, 0 sell-side briefings on disk). Fiscal year ends 31-Mar; "FY2026" = fiscal year ended 31-Mar-2026.

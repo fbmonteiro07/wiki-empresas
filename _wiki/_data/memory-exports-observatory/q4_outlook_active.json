@@ -1,5 +1,5 @@
 {
-  "as_of": "2026-11-09",
+  "as_of": "2026-11-10",
   "quarter": "2026Q4",
   "owner": "Capstone research",
   "classification": "ESTIMATE / qualitative house judgment",
@@ -12,8 +12,8 @@
       "direction": "Up",
       "confidence": "Moderate–high",
       "focus": "Conventional contract prices",
-      "why": "September BOK and October DDR5 support higher Q4 contracts. Hynix Q3 actuals and Barclays / JPM post-results commentary reinforce the direction; repeated readings of the same result are not independent price observations.",
-      "limit": "DDR4 spot is softer. Morgan Stanley (28 Oct) says price hikes are moderating. No basis to select +10-15% versus nearly +20%, or upgrade confidence before October BOK and fresh company disclosures.",
+      "why": "September BOK, positive October DDR5 and MS 9 Nov relay of rising October PC DRAM contracts support Q4 conventional pricing. JPM September WSTS is corroborating Q3 blended evidence, not a Q4 fixed-spec price.",
+      "limit": "DDR4 spot remains softer. BofA10Nov Q4 DRAM ASP +8% and TrendForce via webcast DRAM/HBM +10-20% have different scopes and remain forecasts. October BOK and realized contract breadth are needed before a confidence upgrade; no house magnitude chosen.",
       "magnitude_confidence": "Low–moderate for the nearly +20% scenario"
     },
     {
@@ -21,8 +21,8 @@
       "direction": "Up, selectively",
       "confidence": "Moderate",
       "focus": "Contracts; strongest case in US enterprise SSD",
-      "why": "Enterprise SSD support is concentrated in North American CSPs. TrendForce5Nov flags cautious China enterprise SSD buying and consumer/module inventory pressure; selective upside remains, without broad price confirmation.",
-      "limit": "September BOK flash and larger-density spot remain weak. TrendForce5Nov broadens the caution to China enterprise SSD. Bernstein NAND mid-teens Q4 appears in its tracker title, but the detailed basis is unverified. Broad acceleration is not confirmed.",
+      "why": "MS 9 Nov report pp8-9 confirms rising Q4 North American enterprise SSD prices alongside sharp China wafer/spot weakness. Selective upside remains; broad NAND acceleration is unconfirmed.",
+      "limit": "September BOK flash, larger-density spot and China module checks remain weak. BofA10Nov +3% versus TrendForce webcast +8-13% are forecasts, not realized broad NAND contracts. US enterprise SSD settlement weakness would challenge selective upside.",
       "magnitude_confidence": "Low for broad +15–20% realization or company blended ASP"
     }
   ],
@@ -132,11 +132,11 @@
     },
     {
       "signal": "Spot / November early observations",
-      "date": "Through 9 Nov 2026; six observations",
-      "dram": "DDR4 unchanged at USD31.56; DDR5 USD52.68 versus USD52.88 on 6 Nov.",
-      "nand": "TLC256Gb USD15.48; 512Gb USD18.35; 1Tb USD27.85; all unchanged versus 6 Nov.",
-      "weight": "New DDR5 easing is a watchpoint, not yet persistent breadth. Larger-density NAND holds the lower 4 Nov levels; softer rolling means are not new daily cuts. No enterprise-contract reversal established.",
-      "source": "InSpectrum via Bloomberg, 9 Nov 2026",
+      "date": "Through 10 Nov 2026; seven observations",
+      "dram": "DDR4 USD31.36 versus31.56 on9Nov; DDR5 unchanged at USD52.68.",
+      "nand": "TLC256Gb USD15.48;512Gb USD18.35;1Tb USD27.85; all unchanged versus9Nov.",
+      "weight": "DDR4 softens again; DDR5 does not extend its9Nov cut. Larger-density NAND remains at lower4Nov levels. Rolling averages are not new daily price cuts; no US enterprise-contract reversal confirmed.",
+      "source": "InSpectrum via Bloomberg, 10 Nov 2026",
       "refs": [
         "spot"
       ]
@@ -502,6 +502,77 @@
       "refs": [
         "jpm-transcend-nov9"
       ]
+    },
+    {
+      "name": "JPM / September WSTS",
+      "byline": "Harlan Sur, Apoorva Kumar; email 9 Nov 2026",
+      "dram": "September blended ASP per GB +5% MoM.",
+      "nand": "September blended ASP per GB -2% MoM.",
+      "assessment": "Q3 industry mix-adjusted only by bits, not fixed-spec contracts. Supports divergence but does not establish Q4 realization.",
+      "refs": [
+        "jpm-wsts-nov9"
+      ]
+    },
+    {
+      "name": "MS / verified pricing pages",
+      "byline": "Shawn Kim, Cindy Huang, Kathy Zhu, Ryan Kim; report 9 Nov 2026, pp8-9",
+      "dram": "TrendForce relay: October PC module contracts +11-24% MoM; Q4 PC DRAM forecast +13-18% QoQ.",
+      "nand": "China wafers roughly -10% in ten days; NAND spot roughly -20% in two weeks. North American eSSD prices still rising in Q4.",
+      "assessment": "Different products, geographies and windows. Corroborates selective NAND caution; quarterly forecast is not an observed outcome. No house direction/confidence change.",
+      "refs": [
+        "ms-kim-report-nov9"
+      ]
+    },
+    {
+      "name": "Consumer memory cost pressure",
+      "byline": "CEVA / Yaniv Arieli, 9 Nov release; JPM / Joseph Cardoso et al., received 10 Nov",
+      "dram": "Memory-related softness in compute-intensive consumer devices; no DRAM split.",
+      "nand": "No NAND-specific ASP or price direction supplied.",
+      "assessment": "Primary buyer-demand cross-check; memory costs can weaken demand before producer contracts reverse.",
+      "refs": [
+        "ceva-nov9",
+        "jpm-ceva-nov10"
+      ]
+    },
+    {
+      "name": "BofA / Q4 ASP forecast",
+      "byline": "Simon Woo, Dai Shen, Vivek Arya, Mikio Hirakawa, Matt Shin;10Nov2026",
+      "dram": "+8% QoQ forecast.",
+      "nand": "+3% QoQ forecast.",
+      "assessment": "Industry ASP assumptions, not settled contracts. Lower magnitude than TrendForce; supports up direction without selecting a house numeric forecast.",
+      "refs": [
+        "bofa-tf-nov10"
+      ]
+    },
+    {
+      "name": "TrendForce / webcast forecast via BofA",
+      "byline": "Avril Wu, webcast10Nov2026; BofA notes same date",
+      "dram": "DRAM/HBM +10-20% QoQ forecast.",
+      "nand": "+8-13% QoQ forecast.",
+      "assessment": "Expert forecast relayed by broker, not independently verified webcast transcript. DRAM/HBM scope differs from conventional DRAM. Retain earlier15-20% NAND forecast as its dated vintage, not a like-for-like revision without scope reconciliation.",
+      "refs": [
+        "bofa-tf-nov10"
+      ]
+    },
+    {
+      "name": "MS / niche memory caution",
+      "byline": "Daniel Yen, Charlie Chan, Daisy Dai, Ethan Jia;10Nov2026",
+      "dram": "DDR3/4 niche exposure: weakening demand and eventual supply normalization; DDR5 explicitly excluded.",
+      "nand": "SLC/MLC and NOR scope; mainstream TLC/QLC explicitly excluded.",
+      "assessment": "Equity/cycle caution and2028 horizon. No new observed Q4 mainstream-price reversal; available narrative reviewed,56-page report pending.",
+      "refs": [
+        "ms-niche-nov10"
+      ]
+    },
+    {
+      "name": "Inventec / component constraints",
+      "byline": "JPM Albert Hung, James Yang, Gokul Hariharan;10Nov2026 call relay",
+      "dram": "Memory and CPUs remain server shipment bottlenecks; supply tightness expected to persist.",
+      "nand": "Memory type not separated; no NAND pricing number.",
+      "assessment": "Buyer corroboration of tightness; rising but reasonable component inventory warrants monitoring. Primary call not yet independently verified.",
+      "refs": [
+        "jpm-inventec-nov10"
+      ]
     }
   ],
   "watch": [
@@ -591,6 +662,14 @@
     {
       "date": "2026-11-09T16:05:37-03:00",
       "change": "9 Nov PM: MS / Shawn Kim, Cindy Huang, Kathy Zhu and Ryan Kim says near-term memory fundamentals remain intact, while cutting Samsung and Hynix equity targets on late-cycle/2028 supply-response concerns. These are equity and longer-horizon judgments, not a Q4 pricing downgrade. JPM sales / Joshua Meyers (9 Nov), relaying Digitimes / Transcend chairman Peter Shu, describes DRAM/NAND prices plateauing after Q3 and tighter DRAM allocation in 2027. This is secondary module-maker commentary, with no reconciled product/currency/basket or primary transcript; it adds caution on incremental price increases, but does not establish a declining Q4 quarterly-average producer contract basket. MS / Tom Wigg repeats the previously reviewed Moore view; UBS desk relays longer-horizon financing and memory-spend forecasts; Barclays / Jeffrey Rand discusses sentiment and a 2028 stress scenario. None supplies a new Q4 settled contract basket. Existing US enterprise SSD versus consumer/China divergence remains decisive. DRAM Up / Moderate-high; NAND Up selectively / Moderate, with low magnitude confidence, unchanged. Keep persistent DDR5 weakness plus falling BOK/realized contracts, or weakness spreading to US eSSD settlements, as the decisive falsifiers. The 15:57 collection passed all eight numeric legs. Reads and six November spot observations are identical to the morning: no second DDR5 cut is inferred from the repeated retrieval. October BOK remains absent for DRAM and flash individually; Japan October remains awaiting publication. Samsung primary script and Kioxia semiannual filing are unchanged by hash. No new monitoring failure."
+    },
+    {
+      "date": "2026-11-10T09:11:15-03:00",
+      "change": "10 Nov review: DRAM Up / Moderate-high and NAND Up selectively / Moderate remain unchanged. JPM / Harlan Sur and Apoorva Kumar (9 Nov email, September WSTS) reports blended DRAM ASP per GB +5% MoM and NAND -2%; this corroborates September divergence, not Q4 fixed-spec contracts. MS / Shawn Kim, Cindy Huang, Kathy Zhu and Ryan Kim (9 Nov report, pp1-16 inspected on 10 Nov) confirms China NAND wafer prices down roughly 10% over ten days and NAND spot down roughly 20% over two weeks, while reporting rising North American enterprise SSD prices in Q4. These broker channel-check baskets are not spliced into InSpectrum. The same report relays TrendForce October PC module contracts up 11-24% MoM and a Q4 PC DRAM forecast of +13-18% QoQ: reported monthly contracts and quarterly forecast remain separate. Rising DRAM contracts and US eSSD support coexist with consumer/module weakness. The bearish equity targets principally reflect 2028 supply and longer-run margins; no house Q4 magnitude forecast follows. CEVA / CFO Yaniv Arieli official 9 Nov release confirms memory-related consumer softness; JPM / Joseph Cardoso et al. received 10 Nov corroborates it without a memory price split. TrendForce 6 Nov mobile DRAM release still describes rising contracts. Simon Woo 10 Nov webcast invitation contains no webcast findings; MS sales forwarded older material is not redated. Decisive falsifiers remain persistent DDR5 weakening corroborated by BOK and realized contracts, or weakness spreading into US enterprise SSD settlements. No verified new company ASP input; frozen refit preserved. All eight numeric legs passed. October BOK DRAM and flash remain individually absent; Japan October awaits publication. The seventh November spot observation has DDR4 USD31.36 versus31.56 on9Nov; DDR5 holds52.68, and all three NAND specifications hold prior levels. Lower rolling NAND means do not represent another daily cut. Monthly contracts and September export readings are unchanged. Samsung script and Kioxia semiannual filing are unchanged by hash. No actionable monitoring failure."
+    },
+    {
+      "date": "2026-11-10T16:07:16-03:00",
+      "change": "10 Nov PM: Direction/confidence unchanged: DRAM Up / Moderate-high; NAND Up selectively / Moderate. BofA / Simon Woo, Dai Shen, Vivek Arya, Mikio Hirakawa and Matt Shin (10 Nov webcast takeaways) forecasts Q4 ASP +8% DRAM and +3% NAND, versus TrendForce / Avril Wu at the same webcast +10-20% DRAM/HBM and +8-13% NAND. Both are forecasts, not settled Q4 observations; the DRAM/HBM and broader ASP bases are not fully reconciled to conventional fixed-spec contracts. Their dispersion reinforces existing magnitude limits, without changing directional confidence. MS / Daniel Yen, Charlie Chan, Daisy Dai and Ethan Jia (10 Nov) turns cautious on niche DDR3/4, SLC/MLC and NOR, explicitly excluding mainstream DDR5 and TLC/QLC; do not read its 2028 supply normalization or equity downgrades as a Q4 mainstream-price reversal. JPM / Albert Hung, James Yang and Gokul Hariharan (10 Nov Inventec call relay) reports memory/CPU bottlenecks and persistent supply tightness, with component inventory rising but still reasonable. BofA / Mike Yang ASMedia note (dated11Nov, received10Nov16:10UTC) ties PC softness to high memory prices; consumer demand caution is already in the baseline. MS / Tom Wigg repeats9Nov pricing/thesis evidence; GS / Peter Callahan adds positioning discussion, no new pricing; BofA / Claudio Franco recirculates an October Hynix thesis, not a fresh company ASP result. Samsung script and Kioxia filing hashes unchanged; no new official company ASP disclosure identified. All eight numeric legs passed; prices and export observations match the morning exactly, including seven November spot dates. October BOK DRAM and flash individually absent; Japan October awaiting publication. No new actionable failure. Persistent DDR5 weakness plus falling BOK/realized contracts, or actual weakness spreading to US enterprise SSD settlements, remain the decisive falsifiers. UBS / Randy Abrams and Irene Chang (10 Nov Inventec) corroborates higher memory costs passed into notebook ASPs and buffer-stock accumulation. OEM revenue/ASP and inventory are not producer memory prices; no direction/confidence change."
     }
   ],
   "sources": [
@@ -959,6 +1038,66 @@
       "label": "JPM sales / Joshua Meyers, 9 Nov 2026; Digitimes relay of Transcend / Peter Shu",
       "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWqREfcAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
       "detail": "Available email narrative reviewed. Linked full report/underlying company transcript not claimed as reviewed. Distinct equity, module-procurement and sector pricing bases preserved."
+    },
+    {
+      "id": "jpm-wsts-nov9",
+      "label": "JPM / Sur and Kumar; 9 Nov email, September WSTS",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWqREi4AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available email narrative reviewed; original WSTS dataset not obtained."
+    },
+    {
+      "id": "ms-kim-report-nov9",
+      "label": "MS / Kim, Huang, Zhu, Kim; 9 Nov report pp1-16",
+      "url": "/relat%C3%B3rios%20bons/SKOREA_20261109_1658.html",
+      "detail": "Rendered report pages 1-16 inspected, including pricing pp8-9. Remaining pages not claimed reviewed. China spot/wafer, US enterprise SSD, PC contracts and forecasts separated."
+    },
+    {
+      "id": "ceva-nov9",
+      "label": "CEVA / CFO Yaniv Arieli; official release 9 Nov 2026",
+      "url": "https://www.ceva-ip.com/press/ceva-inc-announces-third-quarter-2026-financial-results/",
+      "detail": "Consumer demand softness related to memory; no sector ASP."
+    },
+    {
+      "id": "jpm-ceva-nov10",
+      "label": "JPM / Joseph Cardoso, Marc Vitenzon, Manmohanpreet Singh; received 10 Nov",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWqREkLAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available narrative reviewed; demand readthrough only."
+    },
+    {
+      "id": "tf-mobile-nov6",
+      "label": "TrendForce; 6 Nov 2026",
+      "url": "https://www.trendforce.com/presscenter/news/20261106-13297.html",
+      "detail": "Rising mobile DRAM contracts and reballed-memory adoption; older release reviewed 10 Nov, not new publication."
+    },
+    {
+      "id": "bofa-tf-nov10",
+      "label": "BofA / Simon Woo et al.;10Nov2026; Avril Wu webcast",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAQqMvDhAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWrLCK7AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available substantive email narrative reviewed. House BofA and expert TrendForce forecasts separated; full report and webcast transcript not claimed reviewed."
+    },
+    {
+      "id": "ms-niche-nov10",
+      "label": "MS / Daniel Yen, Charlie Chan, Daisy Dai, Ethan Jia;10Nov2026",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWrLAgcAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available narrative explicitly limits scope to niche memory. Full56-page report pending."
+    },
+    {
+      "id": "jpm-inventec-nov10",
+      "label": "JPM / Albert Hung, James Yang, Gokul Hariharan;10Nov2026",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWrLAgMAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available company-call relay reviewed; no primary transcript obtained."
+    },
+    {
+      "id": "bofa-asmedia-nov11",
+      "label": "BofA / Mike Yang;report11Nov2026, received10Nov16:10UTC",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAQqMvDhAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWrLCLLAAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Source date retained separately from received date; demand readthrough only."
+    },
+    {
+      "id": "ubs-inventec-nov10",
+      "label": "UBS / Randy Abrams, Irene Chang;10Nov2026",
+      "url": "https://outlook.office365.com/owa/?ItemID=AAMkADllY2NkMmU1LTc3YTEtNGRkMC1hMjBkLWU1NjIzOTY5OTZhMQBGAAAAAAC2MTk9L2QgQLGbcPk%2FhCdiBwDBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAAAAAEMAADBpLwblpT0TZ%2Bt%2Fvz7Ao6sAAWrLAd9AAA%3D&exvsurl=1&viewmodel=ReadMessageItem",
+      "detail": "Available narrative reviewed: memory cost pass-through and customer buffer stock. OEM ASP differs from memory ASP."
     }
   ],
   "historical_stats": [
@@ -2597,30 +2736,30 @@
         "key": "ISPPDR37 Index",
         "label": "DDR4 8Gb 3200 spot",
         "month": "2026-11",
-        "through": "2026-11-09",
-        "observations": 6,
-        "mean_value": 31.726666666666667,
-        "last_value": 31.56,
-        "mean_vs_previous_month_pct": -2.7260502393631314,
-        "last_vs_previous_month_end_pct": -1.251564455569465
+        "through": "2026-11-10",
+        "observations": 7,
+        "mean_value": 31.674285714285716,
+        "last_value": 31.36,
+        "mean_vs_previous_month_pct": -2.886650222457865,
+        "last_vs_previous_month_end_pct": -1.8773466833541974
       },
       {
         "key": "ISPPDR47 Index",
         "label": "DDR5 16Gb 4800/5600 spot",
         "month": "2026-11",
-        "through": "2026-11-09",
-        "observations": 6,
-        "mean_value": 52.84666666666667,
+        "through": "2026-11-10",
+        "observations": 7,
+        "mean_value": 52.822857142857146,
         "last_value": 52.68,
-        "mean_vs_previous_month_pct": 3.7686970780540507,
+        "mean_vs_previous_month_pct": 3.7219451555657868,
         "last_vs_previous_month_end_pct": -0.3782148260211837
       },
       {
         "key": "ISPPN256 Index",
         "label": "TLC 256Gb spot",
         "month": "2026-11",
-        "through": "2026-11-09",
-        "observations": 6,
+        "through": "2026-11-10",
+        "observations": 7,
         "mean_value": 15.48,
         "last_value": 15.48,
         "mean_vs_previous_month_pct": 1.0999587515468257,
@@ -2630,40 +2769,40 @@
         "key": "ISPPN512 Index",
         "label": "TLC 512Gb spot",
         "month": "2026-11",
-        "through": "2026-11-09",
-        "observations": 6,
-        "mean_value": 18.553333333333335,
+        "through": "2026-11-10",
+        "observations": 7,
+        "mean_value": 18.524285714285714,
         "last_value": 18.35,
-        "mean_vs_previous_month_pct": -4.900902845221388,
+        "mean_vs_previous_month_pct": -5.049792659051322,
         "last_vs_previous_month_end_pct": -3.217299578059074
       },
       {
         "key": "ISPPND1T Index",
         "label": "TLC 1Tb spot",
         "month": "2026-11",
-        "through": "2026-11-09",
-        "observations": 6,
-        "mean_value": 28.206666666666667,
+        "through": "2026-11-10",
+        "observations": 7,
+        "mean_value": 28.155714285714286,
         "last_value": 27.85,
-        "mean_vs_previous_month_pct": -4.496637916696367,
+        "mean_vs_previous_month_pct": -4.669154710141243,
         "last_vs_previous_month_end_pct": -3.6998616874135526
       },
       {
         "key": "ISPPDR29 Index",
         "label": "Legacy DDR3 4Gb spot",
         "month": "2026-11",
-        "through": "2026-11-09",
-        "observations": 6,
-        "mean_value": 12.378333333333334,
-        "last_value": 12.37,
-        "mean_vs_previous_month_pct": 1.2607996785212183,
-        "last_vs_previous_month_end_pct": -0.7223113964687111
+        "through": "2026-11-10",
+        "observations": 7,
+        "mean_value": 12.362857142857143,
+        "last_value": 12.27,
+        "mean_vs_previous_month_pct": 1.1341968975655536,
+        "last_vs_previous_month_end_pct": -1.5248796147672605
       }
     ],
     "source_dates": {
-      "KCS": "2026-11-09T15:57:50-03:00",
-      "BOK": "2026-11-09T16:00:09-03:00",
-      "InSpectrum": "2026-11-09T16:03:51-03:00"
+      "KCS": "2026-11-10T15:58:45-03:00",
+      "BOK": "2026-11-10T16:01:51-03:00",
+      "InSpectrum": "2026-11-10T16:05:24-03:00"
     }
   },
   "input_hashes": {
@@ -2675,7 +2814,7 @@
     "data/street_calls.json": "e6f37fbfa8c216a68ef92b7ab824bfa58035b3f449ea3ce7eba24e98e66b5802",
     "analyze_dashboard.py": "e644508e4b2f69f933c71c0d25ac3585536394b2b338b51e4d45505710b3444e"
   },
-  "reviewed_evidence": "d5f7f886a773b4a173d3a3edbd3294e9b50f828a1413e0f8b551a32de8fa3323",
-  "review_note": "9 Nov PM: MS / Shawn Kim, Cindy Huang, Kathy Zhu and Ryan Kim says near-term memory fundamentals remain intact, while cutting Samsung and Hynix equity targets on late-cycle/2028 supply-response concerns. These are equity and longer-horizon judgments, not a Q4 pricing downgrade. JPM sales / Joshua Meyers (9 Nov), relaying Digitimes / Transcend chairman Peter Shu, describes DRAM/NAND prices plateauing after Q3 and tighter DRAM allocation in 2027. This is secondary module-maker commentary, with no reconciled product/currency/basket or primary transcript; it adds caution on incremental price increases, but does not establish a declining Q4 quarterly-average producer contract basket. MS / Tom Wigg repeats the previously reviewed Moore view; UBS desk relays longer-horizon financing and memory-spend forecasts; Barclays / Jeffrey Rand discusses sentiment and a 2028 stress scenario. None supplies a new Q4 settled contract basket. Existing US enterprise SSD versus consumer/China divergence remains decisive. DRAM Up / Moderate-high; NAND Up selectively / Moderate, with low magnitude confidence, unchanged. Keep persistent DDR5 weakness plus falling BOK/realized contracts, or weakness spreading to US eSSD settlements, as the decisive falsifiers. The 15:57 collection passed all eight numeric legs. Reads and six November spot observations are identical to the morning: no second DDR5 cut is inferred from the repeated retrieval. October BOK remains absent for DRAM and flash individually; Japan October remains awaiting publication. Samsung primary script and Kioxia semiannual filing are unchanged by hash. No new monitoring failure.",
-  "reviewed_at": "2026-11-09T16:05:37-03:00"
+  "reviewed_evidence": "8f32281a1501b54daa3f2cf48cab059784ab9073bf14a62f4029c11898f243db",
+  "review_note": "10 Nov PM: Direction/confidence unchanged: DRAM Up / Moderate-high; NAND Up selectively / Moderate. BofA / Simon Woo, Dai Shen, Vivek Arya, Mikio Hirakawa and Matt Shin (10 Nov webcast takeaways) forecasts Q4 ASP +8% DRAM and +3% NAND, versus TrendForce / Avril Wu at the same webcast +10-20% DRAM/HBM and +8-13% NAND. Both are forecasts, not settled Q4 observations; the DRAM/HBM and broader ASP bases are not fully reconciled to conventional fixed-spec contracts. Their dispersion reinforces existing magnitude limits, without changing directional confidence. MS / Daniel Yen, Charlie Chan, Daisy Dai and Ethan Jia (10 Nov) turns cautious on niche DDR3/4, SLC/MLC and NOR, explicitly excluding mainstream DDR5 and TLC/QLC; do not read its 2028 supply normalization or equity downgrades as a Q4 mainstream-price reversal. JPM / Albert Hung, James Yang and Gokul Hariharan (10 Nov Inventec call relay) reports memory/CPU bottlenecks and persistent supply tightness, with component inventory rising but still reasonable. BofA / Mike Yang ASMedia note (dated11Nov, received10Nov16:10UTC) ties PC softness to high memory prices; consumer demand caution is already in the baseline. MS / Tom Wigg repeats9Nov pricing/thesis evidence; GS / Peter Callahan adds positioning discussion, no new pricing; BofA / Claudio Franco recirculates an October Hynix thesis, not a fresh company ASP result. Samsung script and Kioxia filing hashes unchanged; no new official company ASP disclosure identified. All eight numeric legs passed; prices and export observations match the morning exactly, including seven November spot dates. October BOK DRAM and flash individually absent; Japan October awaiting publication. No new actionable failure. Persistent DDR5 weakness plus falling BOK/realized contracts, or actual weakness spreading to US enterprise SSD settlements, remain the decisive falsifiers. UBS / Randy Abrams and Irene Chang (10 Nov Inventec) corroborates higher memory costs passed into notebook ASPs and buffer-stock accumulation. OEM revenue/ASP and inventory are not producer memory prices; no direction/confidence change.",
+  "reviewed_at": "2026-11-10T16:07:16-03:00"
 }

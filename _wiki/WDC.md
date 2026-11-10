@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\WDC` (filings + transc
 | EBITDA | $7.8bn | $15.1bn |
 | EPS | $15.66 | $32.68 |
 | Capex | $790m | $1.8bn |
-| OCF (≈EBITDA) | $7.8bn | $15.1bn |
+| OCF (FCF + capex cons) | $6.2bn | $11.6bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

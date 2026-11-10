@@ -10,12 +10,12 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AAPL` (filings + trans
 | Revenue | **$479.7bn** | **$507.0bn** |
 | Gross profit | $232.7bn | $240.3bn |
 | Gross margin | **48.5%** | **47.4%** |
-| EBITDA | $167.9bn | $182.6bn |
+| EBITDA | $167.8bn | $182.1bn |
 | EPS | **$8.89** | **$9.23** |
-| Capex | $13.6bn | $12.8bn |
-| OCF (≈EBITDA) | $167.9bn | $182.6bn |
+| Capex | $13.5bn | $12.5bn |
+| OCF (FCF + capex cons) | $145.6bn | $168.7bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 _**Bold** = Capstone official model; plain = BBG consensus._
 <!-- SNAPSHOT:END -->
 

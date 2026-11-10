@@ -317,9 +317,9 @@ _Wiki · generated 2026-06-29 · sources: IPO prospectus (424B4 2026-06-12 / S-1
 | EBITDA | $21.0bn | $114.9bn |
 | EPS | $-0.98 | $4.07 |
 | Capex | $63.2bn | $271.5bn |
-| OCF (≈EBITDA) | $21.0bn | $114.9bn |
+| OCF (FCF + capex cons) | $26.7bn | $106.6bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > 🔴 **DO NOT CITE THE CAPEX LINE IN THE SNAPSHOT ABOVE — it is a known `estimates.json` CY-sum defect, reproduced on two independent BBG pulls (2026-08-05 and 2026-08-06).** The `CY2026` capex field reads **$37.5bn** but its own quarterly components sum to **$57.4bn** (Q1 $10.0bn actual + Q2 $18.4bn actual + Q3E $10.83bn + Q4E $18.19bn) — a **~$19.9bn** internal gap. `CY2027` capex reads **$151.1bn = 154% of** CY2027 revenue, with no quarterly components available to verify it — treat as **UNVERIFIED**. **Use sum-of-quarters for SPCX capex.** Every other line in the block is sound (the revenue CY-sum checks out to within ~$1bn). Tracked as open item #2 in [reconciliation-2026-08-05](_meta/reconciliation-2026-08-05.md).

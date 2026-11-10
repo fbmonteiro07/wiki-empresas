@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\KLAC` (10-K/10-Q + tra
 | EBITDA | $7.4bn | $10.3bn |
 | EPS | $4.57 | $6.54 |
 | Capex | $480m | $716m |
-| OCF (≈EBITDA) | $7.4bn | $10.3bn |
+| OCF (FCF + capex cons) | $5.0bn | $7.9bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

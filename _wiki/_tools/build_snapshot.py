@@ -10,7 +10,10 @@ Source of truth:
   _data/house.json      (Capstone official model — 8 names: overlaid where present)
 
 Metrics (per user spec): Revenue, Gross profit (=Rev x GM%), Gross margin,
-EBITDA, EPS, Capex, OCF (no forward BBG consensus -> EBITDA shown as proxy).
+EBITDA, EPS, Capex, OCF. OCF = BBG FCF consensus + capex consensus on BBG's own
+calendar blend (periods.CY20xx.ocf from fetch_estimates.add_ocf; there is no BEst OCF
+field). Until 2026-11-10 this row showed EBITDA as a proxy, which hid prepayment-driven
+gaps (NBIS CY26: EBITDA $1.4bn vs Street OCF $8.4bn).
 
 Re-runnable: replaces the block between markers if it already exists.
 """
@@ -165,6 +168,16 @@ def build_block(ticker, est_co, house_co):
         r, g = vals[c].get("rev"), vals[c].get("gm")
         return money(r * g / 100.0, sym) if (r is not None and g is not None) else "—"
 
+    flagged = []
+
+    def ocf_cell(c):  # BBG FCF cons + |capex cons|, both on the <yr>BC calendar blend
+        p = est_co["periods"].get(c) or {}
+        s = money(p.get("ocf"), sym)
+        if p.get("ocf") is not None and p.get("ocf_flag"):
+            flagged.append(c)
+            s += " ⚠"
+        return s
+
     rows = [
         ("Revenue",       [cell(c, "rev",   lambda v: money(v, sym)) for c in cols]),
         ("Gross profit",  [gp_cell(c) for c in cols]),
@@ -172,7 +185,7 @@ def build_block(ticker, est_co, house_co):
         ("EBITDA",        [cell(c, "ebitda", lambda v: money(v, sym)) for c in cols]),
         ("EPS",           [cell(c, "eps",   lambda v: eps_fmt(v, sym)) for c in cols]),
         ("Capex",         [cell(c, "capex", lambda v: money(v, sym)) for c in cols]),
-        ("OCF (≈EBITDA)", [cell(c, "ebitda", lambda v: money(v, sym)) for c in cols]),
+        ("OCF (FCF + capex cons)", [ocf_cell(c) for c in cols]),
     ]
 
     asof = est_co.get("revisions", {}).get("asof") or EST_ASOF
@@ -197,7 +210,12 @@ def build_block(ticker, est_co, house_co):
         if rl:
             lines.append(f"**EPS revision** (BBG est. trend) — {rl}")
             lines.append("")
-    note = "_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._"
+    note = ("_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's "
+            "calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row "
+            "for non-December fiscal years)."
+            + (" ⚠ = small negative OCF against large capex while EBITDA > 0: FCF and capex consensus "
+               "come from different analyst sets, so the sign is not reliable." if flagged else "")
+            + "_")
     lines.append(note + legend)
     lines.append(END)
     return "\n".join(lines)

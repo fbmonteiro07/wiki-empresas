@@ -15,9 +15,9 @@ _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\DDOG\transcri
 | EBITDA | $1.1bn | $1.4bn |
 | EPS | $2.50 | $3.18 |
 | Capex | $84m | $94m |
-| OCF (≈EBITDA) | $1.1bn | $1.4bn |
+| OCF (FCF + capex cons) | $1.2bn | $1.6bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > **Fidelity flag:** all seven transcripts are third-party (Quartr via MarketBeat) diarized transcriptions, not company-published. Numbers are as spoken and transcribed — verify any load-bearing figure against the press release / 10-Q before it enters a model. The Q2 2025 file tags speakers only as "Speaker 1/2/3" (CEO/CFO inferred from context).

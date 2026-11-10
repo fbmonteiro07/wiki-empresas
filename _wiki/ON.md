@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\ON` (10-K/10-Q filings
 | EBITDA | $2.0bn | $2.6bn |
 | EPS | $3.22 | $4.79 |
 | Capex | $175m | $382m |
-| OCF (≈EBITDA) | $2.0bn | $2.6bn |
+| OCF (FCF + capex cons) | $1.7bn | $2.4bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

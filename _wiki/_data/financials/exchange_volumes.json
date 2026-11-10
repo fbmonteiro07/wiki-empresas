@@ -1,5 +1,5 @@
 {
- "built": "2026-11-10T00:14:47",
+ "built": "2026-11-10T20:01:00",
  "since": "2023-01",
  "note": "Monthly exchange statistics from public company releases and OCC. OCC counts cleared US listed-options contracts (equity + index), so exchange-group shares are of OCC volume. Cboe RPC is the company's rolling three-month average, reported with a one-month lag. ICE monthly releases give y/y % only. Industry ADV = OCC monthly total / Cboe US trading days (Capstone arithmetic).",
  "occ": {
@@ -3741,117 +3741,117 @@
     "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20251231&instrumentType=options&format=txt"
    },
    "2026-11": {
-    "total": 414059436,
+    "total": 493859592,
     "groups": {
      "Cboe": {
-      "contracts": 121837055,
-      "share": 29.43
+      "contracts": 144215538,
+      "share": 29.2
      },
      "Nasdaq": {
-      "contracts": 109237358,
-      "share": 26.38
+      "contracts": 131227870,
+      "share": 26.57
      },
      "ICE (NYSE)": {
-      "contracts": 77712203,
-      "share": 18.77
+      "contracts": 92219902,
+      "share": 18.67
      },
      "MIAX": {
-      "contracts": 67367390,
-      "share": 16.27
+      "contracts": 80625618,
+      "share": 16.33
      },
      "MEMX": {
-      "contracts": 14280158,
-      "share": 3.45
+      "contracts": 16976863,
+      "share": 3.44
      },
      "BOX": {
-      "contracts": 19601541,
-      "share": 4.73
+      "contracts": 23224147,
+      "share": 4.7
      },
      "Other": {
-      "contracts": 4023731,
-      "share": 0.97
+      "contracts": 5369654,
+      "share": 1.09
      }
     },
     "by_exchange": {
      "AMEX": [
-      35389895,
-      8.55
+      41944983,
+      8.49
      ],
      "ARCA": [
-      42322308,
-      10.22
+      50274919,
+      10.18
      ],
      "BATS": [
-      10520295,
-      2.54
+      12201118,
+      2.47
      ],
      "BOX": [
-      19601541,
-      4.73
+      23224147,
+      4.7
      ],
      "C2": [
-      9001131,
-      2.17
+      10626916,
+      2.15
      ],
      "CBOE": [
-      80340606,
-      19.4
+      95330303,
+      19.3
      ],
      "EDGX": [
-      21975023,
-      5.31
+      26057201,
+      5.28
      ],
      "EMLD": [
-      9695752,
-      2.34
+      11665961,
+      2.36
      ],
      "GEM": [
-      13579713,
-      3.28
+      16233396,
+      3.29
      ],
      "IEX": [
-      2590717,
-      0.63
+      3077542,
+      0.62
      ],
      "ISE": [
-      26148920,
-      6.32
+      31274555,
+      6.33
      ],
      "MCRY": [
-      10203284,
-      2.46
+      12243729,
+      2.48
      ],
      "MEMX": [
-      14280158,
-      3.45
+      16976863,
+      3.44
      ],
      "MIAX": [
-      35578558,
-      8.59
+      42678912,
+      8.64
      ],
      "MPRL": [
-      9060046,
-      2.19
+      10671638,
+      2.16
      ],
      "MXTO": [
-      1433014,
-      0.35
+      2292112,
+      0.46
      ],
      "NOBO": [
-      4402667,
+      5241550,
       1.06
      ],
      "NSDQ": [
-      17655321,
-      4.26
+      20446579,
+      4.14
      ],
      "PHLX": [
-      37247453,
-      9.0
+      45788061,
+      9.27
      ],
      "SPHR": [
-      13033034,
-      3.15
+      15609107,
+      3.16
      ]
     },
     "url": "https://marketdata.theocc.com/exchange-volume?reportView=market&reportType=M&reportDate=20261110&instrumentType=options&format=txt"
@@ -11987,7 +11987,7 @@
    },
    "2026-11": {
     "vix_avg": 22.05,
-    "ovx_avg": 59.83
+    "ovx_avg": 58.87
    }
   },
   "urls": {

@@ -9,15 +9,15 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\ANET` (filings + trans
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $12.6bn | $18.1bn |
-| Gross profit | $7.9bn | $11.4bn |
+| Revenue | $12.7bn | $18.1bn |
+| Gross profit | $8.0bn | $11.4bn |
 | Gross margin | 62.9% | 63.0% |
 | EBITDA | $6.2bn | $9.1bn |
 | EPS | $4.05 | $5.97 |
 | Capex | $180m | $245m |
-| OCF (≈EBITDA) | $6.2bn | $9.1bn |
+| OCF (FCF + capex cons) | $5.6bn | $7.9bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

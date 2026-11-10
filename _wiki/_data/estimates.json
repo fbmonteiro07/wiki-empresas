@@ -1,13 +1,13 @@
 {
  "asof": "2026-11-10",
  "units": "native reporting currency, millions (see per-company ccy; EPS per share, margins %)",
- "note": "Quarterly = direct BBG kFQ consensus. CY = calendar-year sum on a uniform non-GAAP basis: forecast quarters use kFQ consensus, and reported quarters use the BBG comparable/adjusted actual via a past fiscal-period override (NOT the GAAP bdh actual, which would mix bases and understate adjusted EPS/NI); fiscal quarters snapped to nearest calendar quarter. Street-high: _HI fields (capex _LO=high spend), outlier-guarded; CY street-high = sum of quarterly highs. OCF/capex/FCF = latest reported FY actual (no forward OCF consensus on wrapper). ccy = fundamentals currency (ADRs report native: TM ¥, TSM NT$, ASML/IFX €). 1FY/2FY/3FY = BBG annual consensus lines via BEST_FPERIOD_OVERRIDE — a DIFFERENT period from the CY sums whenever the fiscal year is not the calendar year; use the annual line for any fiscal-year claim and never net the two. pt = consensus target price/high/low/rating/rec counts (per LISTING: dual-listed names poll different panels).",
+ "note": "Quarterly = direct BBG kFQ consensus. CY = calendar-year sum on a uniform non-GAAP basis: forecast quarters use kFQ consensus, and reported quarters use the BBG comparable/adjusted actual via a past fiscal-period override (NOT the GAAP bdh actual, which would mix bases and understate adjusted EPS/NI); fiscal quarters snapped to nearest calendar quarter. Street-high: _HI fields (capex _LO=high spend), outlier-guarded; CY street-high = sum of quarterly highs. CY ocf = BEST_ESTIMATE_FCF + |BEST_CAPEX| on BBG's <yr>BC calendar blend (fcf_bc/capex_bc; no BEst OCF field; ocf_flag = OCF < 0 while EBITDA > 0 and |OCF| <= 25% of capex, i.e. a sign the FCF/capex analyst-set mismatch can flip -> unreliable). `actual` = latest reported FY OCF/capex/FCF. ccy = fundamentals currency (ADRs report native: TM ¥, TSM NT$, ASML/IFX €). 1FY/2FY/3FY = BBG annual consensus lines via BEST_FPERIOD_OVERRIDE — a DIFFERENT period from the CY sums whenever the fiscal year is not the calendar year; use the annual line for any fiscal-year claim and never net the two. pt = consensus target price/high/low/rating/rec counts (per LISTING: dual-listed names poll different panels).",
  "companies": {
   "AAOI": {
    "bbg": "AAOI US Equity",
-   "px": 51.35,
-   "mktcap": 4661077088.2,
-   "ev": 4369.2830882,
+   "px": 48.32,
+   "mktcap": 4386041770.24,
+   "ev": 4094.24777024,
    "name": "APPLIED OPTOELECTRONICS INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -67,7 +67,11 @@
      "ebitda_hi": 86.8,
      "eps_hi": 0.67,
      "capex_hi": 657.5,
-     "gm": 30.0
+     "gm": 30.0,
+     "fcf_bc": -1608.72,
+     "capex_bc": 1102.0,
+     "ocf": -506.72,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -84,7 +88,11 @@
      "ebitda_hi": 739.0,
      "eps_hi": 5.68,
      "capex_hi": 1050.0,
-     "gm": 32.5
+     "gm": 32.5,
+     "fcf_bc": -935.97,
+     "capex_bc": 650.0,
+     "ocf": -285.97,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -147,9 +155,9 @@
   },
   "AAPL": {
    "bbg": "AAPL US Equity",
-   "px": 348.4694,
-   "mktcap": 5064020742230.8,
-   "ev": 5021564.7422308,
+   "px": 348.51,
+   "mktcap": 5064610748820.0,
+   "ev": 5022154.74882,
    "name": "APPLE INC",
    "ccy": "USD",
    "lrq": "2026-09-26",
@@ -166,92 +174,100 @@
    "periods": {
     "1FQ": {
      "label": "Q4-26E",
-     "rev": 155966.02857142856,
-     "rev_hi": 164630.0,
-     "ebit": 51177.77419354839,
+     "rev": 155802.7142857143,
+     "rev_hi": 159075.0,
+     "ebit": 51140.48387096774,
      "ebit_hi": 56563.0,
-     "ebitda": 55222.26315789474,
+     "ebitda": 55152.63157894737,
      "ebitda_hi": 59038.0,
-     "ni": 42562.303,
-     "eps": 2.931,
+     "ni": 42538.152,
+     "eps": 2.93,
      "eps_hi": 3.24,
-     "gm": 46.034403476850336,
-     "capex": 3339.368421052631,
+     "gm": 46.041973927870075,
+     "capex": 3316.0,
      "capex_hi": 5476.0
     },
     "2FQ": {
      "label": "Q1-27E",
-     "rev": 124295.97058823529,
+     "rev": 124040.88235294117,
      "rev_hi": 142811.0,
-     "ebit": 38005.26666666666,
+     "ebit": 37899.13333333334,
      "ebit_hi": 43208.0,
-     "ebitda": 41549.84210526316,
+     "ebitda": 41361.52631578947,
      "ebitda_hi": 46758.0,
-     "ni": 31703.935,
-     "eps": 2.185,
+     "ni": 31625.355,
+     "eps": 2.18,
      "eps_hi": 2.49,
-     "gm": 47.05756409356684,
-     "capex": 2852.7894736842104,
-     "capex_hi": 4524.0
+     "gm": 47.04061082248732,
+     "capex": 2784.8947368421054,
+     "capex_hi": 4289.0
     },
     "CY2026": {
      "label": "CY2026",
      "nq": 4,
      "n_actual": 3,
-     "rev": 487948.25,
-     "ebit": 154251.78,
-     "ebitda": 167913.8,
-     "ni": 128157.81,
+     "rev": 487784.94,
+     "ebit": 154214.49,
+     "ebitda": 167844.17,
+     "ni": 128133.65,
      "eps": 8.78,
-     "capex": 13551.95,
-     "rev_hi": 496612.22,
+     "capex": 13528.58,
+     "rev_hi": 491057.22,
      "ebit_hi": 159637.01,
      "ebitda_hi": 171729.53,
      "eps_hi": 9.09,
      "capex_hi": 15688.58,
-     "gm": 47.4
+     "gm": 47.4,
+     "fcf_bc": 135592.46,
+     "capex_bc": 10012.47,
+     "ocf": 145604.93,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
      "nq": 4,
      "n_actual": 0,
-     "rev": 533439.91,
-     "ebit": 167342.5,
-     "ebitda": 182631.79,
-     "ni": 139681.06,
-     "eps": 9.71,
-     "capex": 12754.31,
-     "rev_hi": 585909.0,
-     "ebit_hi": 187330.0,
-     "ebitda_hi": 202231.0,
-     "eps_hi": 10.95,
-     "capex_hi": 20345.0,
-     "gm": 46.8
+     "rev": 532993.74,
+     "ebit": 167040.17,
+     "ebitda": 182087.42,
+     "ni": 139449.03,
+     "eps": 9.7,
+     "capex": 12503.94,
+     "rev_hi": 584707.0,
+     "ebit_hi": 187030.0,
+     "ebitda_hi": 201968.0,
+     "eps_hi": 10.85,
+     "capex_hi": 19548.0,
+     "gm": 46.8,
+     "fcf_bc": 156291.34,
+     "capex_bc": 12359.43,
+     "ocf": 168650.77,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
-     "rev": 526582.2,
+     "rev": 526164.48,
      "rev_hi": 565659.0,
-     "ebit": 163828.8,
+     "ebit": 163601.53333333335,
      "ebit_hi": 178771.0,
-     "ebitda": 179922.2,
+     "ebitda": 179588.9142857143,
      "ebitda_hi": 212967.0,
-     "ni": 136552.191,
+     "ni": 136382.191,
      "ni_hi": null,
-     "eps": 9.433,
+     "eps": 9.423,
      "eps_hi": 10.34,
-     "gm": 46.77661324080672,
+     "gm": 46.75203546487058,
      "gm_hi": null,
-     "capex": 13077.58620689655,
+     "capex": 12898.206896551723,
      "capex_hi": 23148.0
     },
     "2FY": {
      "label": "2FY",
-     "rev": 567214.953488372,
+     "rev": 566550.3023255814,
      "rev_hi": 625181.0,
-     "ebit": 175842.75609756098,
-     "ebit_hi": 203448.0,
-     "ebitda": 195497.56666666665,
+     "ebit": 175614.8292682927,
+     "ebit_hi": 196835.0,
+     "ebitda": 195132.93333333335,
      "ebitda_hi": 233862.0,
      "ni": 146560.927,
      "ni_hi": null,
@@ -259,25 +275,25 @@
      "eps_hi": 11.61,
      "gm": 47.214993764651375,
      "gm_hi": null,
-     "capex": 14383.518518518518,
+     "capex": 14343.296296296297,
      "capex_hi": 23697.0
     },
     "3FY": {
      "label": "3FY",
-     "rev": 607977.8636363636,
+     "rev": 606279.0909090909,
      "rev_hi": 708721.0,
-     "ebit": 189957.95,
-     "ebit_hi": 225846.0,
-     "ebitda": 209497.4375,
-     "ebitda_hi": 251168.0,
+     "ebit": 189341.3,
+     "ebit_hi": 213513.0,
+     "ebitda": 208599.75,
+     "ebitda_hi": 236805.0,
      "ni": 157799.526,
      "ni_hi": null,
      "eps": 11.377,
      "eps_hi": 12.77,
      "gm": 47.072293599802734,
      "gm_hi": null,
-     "capex": 13364.333333333334,
-     "capex_hi": 21558.0
+     "capex": 13285.866666666667,
+     "capex_hi": 20381.0
     }
    },
    "actual": {
@@ -289,9 +305,9 @@
   },
   "AGX": {
    "bbg": "AGX US Equity",
-   "px": 310.1401,
-   "mktcap": 4351216600.8642,
-   "ev": 3333.6856008642,
+   "px": 304.4,
+   "mktcap": 4270683904.799999,
+   "ev": 3253.1529047999993,
    "name": "ARGAN INC",
    "ccy": "USD",
    "lrq": "2026-07-31",
@@ -351,7 +367,11 @@
      "ebitda_hi": 231.93,
      "eps_hi": 12.29,
      "capex_hi": 15.23,
-     "gm": 18.9
+     "gm": 18.9,
+     "fcf_bc": 354.61,
+     "capex_bc": 14.83,
+     "ocf": 369.44,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -368,7 +388,11 @@
      "ebitda_hi": 371.0,
      "eps_hi": 19.27,
      "capex_hi": 10.77,
-     "gm": 20.1
+     "gm": 20.1,
+     "fcf_bc": 324.27,
+     "capex_bc": 8.72,
+     "ocf": 332.99,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -431,9 +455,9 @@
   },
   "AMD": {
    "bbg": "AMD US Equity",
-   "px": 536.69,
-   "mktcap": 880218426739.1901,
-   "ev": 873358.42673919,
+   "px": 515.21,
+   "mktcap": 844989352587.71,
+   "ev": 838129.35258771,
    "name": "ADVANCED MICRO DEVICES",
    "ccy": "USD",
    "lrq": "2026-09-26",
@@ -493,7 +517,11 @@
      "ebitda_hi": 15995.89,
      "eps_hi": 8.08,
      "capex_hi": 2181.86,
-     "gm": 55.5
+     "gm": 55.5,
+     "fcf_bc": 7446.63,
+     "capex_bc": 2447.23,
+     "ocf": 9893.86,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -510,7 +538,11 @@
      "ebitda_hi": 40425.0,
      "eps_hi": 25.0,
      "capex_hi": 4877.0,
-     "gm": 55.0
+     "gm": 55.0,
+     "fcf_bc": 19295.73,
+     "capex_bc": 2780.26,
+     "ocf": 22075.98,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -573,9 +605,9 @@
   },
   "AMZN": {
    "bbg": "AMZN US Equity",
-   "px": 272.33,
-   "mktcap": 2944741954872.9795,
-   "ev": 3125250.9548729793,
+   "px": 270.87,
+   "mktcap": 2928954772946.2197,
+   "ev": 3109463.77294622,
    "name": "AMAZON.COM INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -635,7 +667,11 @@
      "ebitda_hi": 215706.01,
      "eps_hi": 9.86,
      "capex_hi": 217876.13,
-     "gm": 51.3
+     "gm": 51.3,
+     "fcf_bc": -37468.79,
+     "capex_bc": 222897.44,
+     "ocf": 185428.66,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -652,7 +688,11 @@
      "ebitda_hi": 325418.0,
      "eps_hi": 13.18,
      "capex_hi": 372910.0,
-     "gm": 53.3
+     "gm": 53.3,
+     "fcf_bc": -49798.26,
+     "capex_bc": 306651.68,
+     "ocf": 256853.42,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -715,9 +755,9 @@
   },
   "ANET": {
    "bbg": "ANET US Equity",
-   "px": 190.2665,
-   "mktcap": 240383140372.2775,
-   "ev": 226024.1403722775,
+   "px": 185.02,
+   "mktcap": 233754700021.7,
+   "ev": 219395.7000217,
    "name": "ARISTA NETWORKS INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -734,17 +774,17 @@
    "periods": {
     "1FQ": {
      "label": "Q4-26E",
-     "rev": 3838.3703703703704,
+     "rev": 3923.703703703704,
      "rev_hi": 4004.0,
      "ebit": 1907.8461538461538,
      "ebit_hi": 1997.0,
      "ebitda": 1954.047619047619,
      "ebitda_hi": 2084.0,
-     "ni": 1607.808,
+     "ni": 1625.192,
      "eps": 1.283,
      "eps_hi": 1.37,
-     "gm": 63.425799789615795,
-     "capex": 65.43157894736842,
+     "gm": 63.42566267341001,
+     "capex": 65.45263157894736,
      "capex_hi": 121.0
     },
     "2FQ": {
@@ -758,26 +798,30 @@
      "ni": 1668.565,
      "eps": 1.32,
      "eps_hi": 1.42,
-     "gm": 62.844933647004396,
-     "capex": 57.1125,
+     "gm": 62.84498241375773,
+     "capex": 57.1375,
      "capex_hi": 122.0
     },
     "CY2026": {
      "label": "CY2026",
      "nq": 4,
      "n_actual": 3,
-     "rev": 12619.18,
+     "rev": 12704.51,
      "ebit": 6070.15,
      "ebitda": 6169.2,
-     "ni": 5134.05,
+     "ni": 5151.44,
      "eps": 4.05,
-     "capex": 180.32,
+     "capex": 180.34,
      "rev_hi": 12784.81,
      "ebit_hi": 6159.3,
      "ebitda_hi": 6299.15,
      "eps_hi": 4.14,
      "capex_hi": 235.88,
-     "gm": 62.9
+     "gm": 62.9,
+     "fcf_bc": 5362.62,
+     "capex_bc": 234.18,
+     "ocf": 5596.8,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -788,27 +832,31 @@
      "ebitda": 9079.27,
      "ni": 7565.52,
      "eps": 5.97,
-     "capex": 244.72,
+     "capex": 244.73,
      "rev_hi": 19390.0,
      "ebit_hi": 9504.0,
      "ebitda_hi": 9616.0,
      "eps_hi": 6.5,
      "capex_hi": 581.0,
-     "gm": 63.0
+     "gm": 63.0,
+     "fcf_bc": 7690.98,
+     "capex_bc": 236.1,
+     "ocf": 7927.08,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
-     "rev": 13145.625,
+     "rev": 13281.625,
      "rev_hi": 13537.0,
-     "ebit": 6441.518518518518,
-     "ebit_hi": 6564.0,
+     "ebit": 6497.777777777777,
+     "ebit_hi": 6601.0,
      "ebitda": 6587.130434782609,
      "ebitda_hi": 6758.0,
-     "ni": 5463.594,
+     "ni": 5507.75,
      "ni_hi": null,
-     "eps": 4.271,
+     "eps": 4.34,
      "eps_hi": 4.42,
-     "gm": 63.274189048892595,
+     "gm": 63.273621067673865,
      "gm_hi": null,
      "capex": 234.1818181818182,
      "capex_hi": 295.0
@@ -823,9 +871,9 @@
      "ebitda_hi": 10140.0,
      "ni": 7594.531,
      "ni_hi": null,
-     "eps": 5.918,
+     "eps": 5.968,
      "eps_hi": 6.45,
-     "gm": 63.0339071029727,
+     "gm": 63.03575338416087,
      "gm_hi": null,
      "capex": 236.0952380952381,
      "capex_hi": 581.0
@@ -840,9 +888,9 @@
      "ebitda_hi": 12710.0,
      "ni": 9475.111,
      "ni_hi": null,
-     "eps": 7.243,
-     "eps_hi": 8.27,
-     "gm": 62.99961148827805,
+     "eps": 7.2700000000000005,
+     "eps_hi": 8.96,
+     "gm": 62.997833457479786,
      "gm_hi": null,
      "capex": 257.57894736842104,
      "capex_hi": 547.0
@@ -857,9 +905,9 @@
   },
   "ASML": {
    "bbg": "ASML US Equity",
-   "px": 1541.545,
-   "mktcap": 598347224815.2949,
-   "ev": 524398.2644845536,
+   "px": 1507.85,
+   "mktcap": 585268586345.3499,
+   "ev": 513521.17810207815,
    "name": "ASML HOLDING NV-NY REG SHS",
    "ccy": "EUR",
    "lrq": "2026-09-27",
@@ -919,7 +967,11 @@
      "ebitda_hi": 19386.72,
      "eps_hi": 39.15,
      "capex_hi": 2287.93,
-     "gm": 54.8
+     "gm": 54.8,
+     "fcf_bc": 15434.08,
+     "capex_bc": 1933.04,
+     "ocf": 17367.12,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -936,7 +988,11 @@
      "ebitda_hi": 30146.0,
      "eps_hi": 58.83,
      "capex_hi": 3499.0,
-     "gm": 57.2
+     "gm": 57.2,
+     "fcf_bc": 19995.51,
+     "capex_bc": 2385.93,
+     "ocf": 22381.44,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -999,9 +1055,9 @@
   },
   "AVGO": {
    "bbg": "AVGO US Equity",
-   "px": 333.34,
-   "mktcap": 1591241779199.0999,
-   "ev": 1626685.7791990999,
+   "px": 331.98,
+   "mktcap": 1584749642582.7002,
+   "ev": 1620193.6425827001,
    "name": "BROADCOM INC",
    "ccy": "USD",
    "lrq": "2026-08-02",
@@ -1061,7 +1117,11 @@
      "ebitda_hi": 87210.38,
      "eps_hi": 14.04,
      "capex_hi": 3449.45,
-     "gm": 73.8
+     "gm": 73.8,
+     "fcf_bc": 55202.08,
+     "capex_bc": 2207.82,
+     "ocf": 57409.9,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -1078,7 +1138,11 @@
      "ebitda_hi": 152598.0,
      "eps_hi": 25.28,
      "capex_hi": 6971.0,
-     "gm": 71.4
+     "gm": 71.4,
+     "fcf_bc": 92400.28,
+     "capex_bc": 2777.84,
+     "ocf": 95178.12,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -1141,9 +1205,9 @@
   },
   "BKNG": {
    "bbg": "BKNG US Equity",
-   "px": 163.418,
-   "mktcap": 121533800165.79753,
-   "ev": 125860.80016579753,
+   "px": 159.26,
+   "mktcap": 118441862189.82002,
+   "ev": 122768.86218982002,
    "name": "BOOKING HOLDINGS INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -1203,7 +1267,11 @@
      "ebitda_hi": 10718.55,
      "eps_hi": 10.38,
      "capex_hi": 483.5,
-     "gm": 100.0
+     "gm": 100.0,
+     "fcf_bc": 8760.54,
+     "capex_bc": 361.07,
+     "ocf": 9121.61,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -1220,7 +1288,11 @@
      "ebitda_hi": 13174.0,
      "eps_hi": 13.42,
      "capex_hi": 786.0,
-     "gm": 100.0
+     "gm": 100.0,
+     "fcf_bc": 10437.91,
+     "capex_bc": 449.52,
+     "ocf": 10887.42,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -1283,14 +1355,14 @@
   },
   "CEG": {
    "bbg": "CEG US Equity",
-   "px": 271.015,
-   "mktcap": 96022614319.68498,
-   "ev": 119990.61431968499,
+   "px": 267.76,
+   "mktcap": 94869343801.03998,
+   "ev": 117574.34380103998,
    "name": "CONSTELLATION ENERGY",
    "ccy": "USD",
    "lrq": "2026-09-30",
    "pt": {
-    "cons": 347.6956481933594,
+    "cons": 347.9565124511719,
     "hi": 399.0,
     "lo": 290.0,
     "rating": 4.5714287757873535,
@@ -1302,29 +1374,29 @@
    "periods": {
     "1FQ": {
      "label": "Q4-26E",
-     "rev": 8487.538461538461,
-     "rev_hi": 11037.0,
-     "ebit": 1568.75,
+     "rev": 8357.615384615385,
+     "rev_hi": 10504.0,
+     "ebit": 1541.1666666666667,
      "ebit_hi": 2226.0,
      "ebitda": 1939.4166666666667,
      "ebitda_hi": 2559.0,
-     "ni": 1091.462,
-     "eps": 2.904,
+     "ni": 1071.538,
+     "eps": 2.865,
      "eps_hi": 3.73,
      "gm": 38.65342193403222,
-     "capex": 1319.0,
+     "capex": 1280.25,
      "capex_hi": 2214.0
     },
     "2FQ": {
      "label": "Q1-27E",
-     "rev": 9804.272727272728,
-     "rev_hi": 12025.0,
-     "ebit": 1709.0,
+     "rev": 9724.09090909091,
+     "rev_hi": 11408.0,
+     "ebit": 1708.5454545454545,
      "ebit_hi": 2534.0,
      "ebitda": 2132.5,
      "ebitda_hi": 2647.0,
-     "ni": 1089.727,
-     "eps": 3.004,
+     "ni": 1089.636,
+     "eps": 3.005,
      "eps_hi": 4.54,
      "gm": 40.778552347471766,
      "capex": 1005.1428571428572,
@@ -1334,64 +1406,72 @@
      "label": "CY2026",
      "nq": 4,
      "n_actual": 3,
-     "rev": 34300.87,
-     "ebit": 6232.27,
+     "rev": 34170.94,
+     "ebit": 6204.69,
      "ebitda": 7948.12,
-     "ni": 4230.23,
-     "eps": 11.6,
-     "capex": 5014.31,
-     "rev_hi": 36850.33,
+     "ni": 4210.31,
+     "eps": 11.56,
+     "capex": 4975.56,
+     "rev_hi": 36317.33,
      "ebit_hi": 6889.52,
      "ebitda_hi": 8567.7,
      "eps_hi": 12.43,
      "capex_hi": 5909.31,
-     "gm": 40.7
+     "gm": 40.7,
+     "fcf_bc": 3701.52,
+     "capex_bc": 4976.58,
+     "ocf": 8678.11,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
      "nq": 4,
      "n_actual": 0,
-     "rev": 36458.7,
-     "ebit": 6475.2,
+     "rev": 35977.65,
+     "ebit": 6481.16,
      "ebitda": 8833.77,
-     "ni": 4606.94,
-     "eps": 13.14,
+     "ni": 4611.98,
+     "eps": 13.17,
      "capex": 3962.57,
-     "rev_hi": 44952.0,
+     "rev_hi": 42940.0,
      "ebit_hi": 8875.0,
      "ebitda_hi": 11981.0,
      "eps_hi": 17.95,
      "capex_hi": 5000.0,
-     "gm": 38.8
+     "gm": 38.8,
+     "fcf_bc": 3271.8,
+     "capex_bc": 3976.67,
+     "ocf": 7248.47,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
-     "rev": 33173.090909090904,
+     "rev": 33015.954545454544,
      "rev_hi": 42960.0,
-     "ebit": 6209.523809523809,
+     "ebit": 6219.0,
      "ebit_hi": 7669.0,
      "ebitda": 8646.875,
      "ebitda_hi": 10315.0,
-     "ni": 4254.174,
+     "ni": 4272.043,
      "ni_hi": null,
-     "eps": 12.115,
+     "eps": 12.16,
      "eps_hi": 12.82,
      "gm": 48.23922584812706,
      "gm_hi": null,
-     "capex": 5028.25,
+     "capex": 4976.583333333333,
      "capex_hi": 8927.0
     },
     "2FY": {
      "label": "2FY",
-     "rev": 34596.36363636364,
+     "rev": 34396.181818181816,
      "rev_hi": 44943.0,
-     "ebit": 6531.142857142858,
+     "ebit": 6532.857142857142,
      "ebit_hi": 7653.0,
      "ebitda": 8954.611111111111,
      "ebitda_hi": 10860.0,
-     "ni": 4685.955,
+     "ni": 4687.818,
      "ni_hi": null,
-     "eps": 13.43,
+     "eps": 13.443,
      "eps_hi": 15.04,
      "gm": 46.5713518613196,
      "gm_hi": null,
@@ -1400,15 +1480,15 @@
     },
     "3FY": {
      "label": "3FY",
-     "rev": 37119.3,
+     "rev": 36897.85,
      "rev_hi": 49060.0,
-     "ebit": 8212.5,
+     "ebit": 8212.25,
      "ebit_hi": 10667.0,
      "ebitda": 10518.176470588236,
      "ebitda_hi": 12370.0,
-     "ni": 5706.381,
+     "ni": 5707.762,
      "ni_hi": null,
-     "eps": 16.933,
+     "eps": 16.952,
      "eps_hi": 19.15,
      "gm": 47.42389609594044,
      "gm_hi": null,
@@ -1425,9 +1505,9 @@
   },
   "CIEN": {
    "bbg": "CIEN US Equity",
-   "px": 276.68,
-   "mktcap": 39235582697.00001,
-   "ev": 39886.318697,
+   "px": 272.1,
+   "mktcap": 38586099652.5,
+   "ev": 39236.8356525,
    "name": "CIENA CORP",
    "ccy": "USD",
    "lrq": "2026-08-01",
@@ -1487,7 +1567,11 @@
      "ebitda_hi": 1625.47,
      "eps_hi": 8.01,
      "capex_hi": 307.82,
-     "gm": 44.8
+     "gm": 44.8,
+     "fcf_bc": 693.14,
+     "capex_bc": 268.56,
+     "ocf": 961.7,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -1504,7 +1588,11 @@
      "ebitda_hi": 2847.0,
      "eps_hi": 14.73,
      "capex_hi": 428.0,
-     "gm": 46.0
+     "gm": 46.0,
+     "fcf_bc": 1141.09,
+     "capex_bc": 336.66,
+     "ocf": 1477.76,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -1567,9 +1655,9 @@
   },
   "COHR": {
    "bbg": "COHR US Equity",
-   "px": 223.535,
-   "mktcap": 44027156074.91499,
-   "ev": 46952.923074914994,
+   "px": 214.66,
+   "mktcap": 42279147887.54,
+   "ev": 45204.91488754,
    "name": "COHERENT CORP",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -1629,7 +1717,11 @@
      "ebitda_hi": 2364.27,
      "eps_hi": 7.75,
      "capex_hi": 1851.68,
-     "gm": 40.4
+     "gm": 40.4,
+     "fcf_bc": -2140.96,
+     "capex_bc": 2330.97,
+     "ocf": 190.01,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -1646,7 +1738,11 @@
      "ebitda_hi": 4492.0,
      "eps_hi": 16.7,
      "capex_hi": 3638.0,
-     "gm": 42.3
+     "gm": 42.3,
+     "fcf_bc": 16.54,
+     "capex_bc": 2304.89,
+     "ocf": 2321.43,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -1709,9 +1805,9 @@
   },
   "CSCO": {
    "bbg": "CSCO US Equity",
-   "px": 98.29,
-   "mktcap": 387516863747.17004,
-   "ev": 402783.86374717,
+   "px": 98.15,
+   "mktcap": 386964901584.95,
+   "ev": 402231.90158495,
    "name": "CISCO SYSTEMS INC",
    "ccy": "USD",
    "lrq": "2026-07-25",
@@ -1730,65 +1826,73 @@
      "label": "Q3-26E",
      "rev": 18110.95238095238,
      "rev_hi": 18252.0,
-     "ebit": 6558.2,
-     "ebit_hi": 6669.0,
-     "ebitda": 6949.555555555556,
+     "ebit": 6565.95,
+     "ebit_hi": 6699.0,
+     "ebitda": 6958.88888888889,
      "ebitda_hi": 7363.0,
-     "ni": 5237.6,
+     "ni": 5241.95,
      "eps": 1.321,
      "eps_hi": 1.35,
-     "gm": 65.63354977213682,
-     "capex": 353.05882352941177,
+     "gm": 65.64478280070031,
+     "capex": 353.4117647058824,
      "capex_hi": 416.0
     },
     "2FQ": {
      "label": "Q4-26E",
-     "rev": 17836.18181818182,
+     "rev": 17849.590909090908,
      "rev_hi": 18526.0,
-     "ebit": 6172.45,
+     "ebit": 6178.0,
      "ebit_hi": 6352.0,
-     "ebitda": 6558.055555555556,
+     "ebitda": 6564.88888888889,
      "ebitda_hi": 6892.0,
-     "ni": 4889.238,
+     "ni": 4893.524,
      "eps": 1.228,
      "eps_hi": 1.27,
-     "gm": 64.4409470455693,
-     "capex": 342.94117647058823,
+     "gm": 64.43934117831914,
+     "capex": 343.29411764705884,
      "capex_hi": 430.0
     },
     "CY2026": {
      "label": "CY2026",
      "nq": 4,
      "n_actual": 2,
-     "rev": 68366.37,
-     "ebit": 23850.8,
-     "ebitda": 25617.3,
-     "ni": 18881.39,
+     "rev": 68379.78,
+     "ebit": 23864.1,
+     "ebitda": 25633.47,
+     "ni": 18890.02,
      "eps": 4.75,
-     "capex": 1303.4,
+     "capex": 1304.11,
      "rev_hi": 69197.24,
-     "ebit_hi": 24141.15,
+     "ebit_hi": 24171.15,
      "ebitda_hi": 26364.69,
      "eps_hi": 4.83,
      "capex_hi": 1453.4,
-     "gm": 65.5
+     "gm": 65.5,
+     "fcf_bc": 16453.79,
+     "capex_bc": 1482.06,
+     "ocf": 17935.84,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
      "nq": 4,
      "n_actual": 0,
-     "rev": 75640.99,
-     "ebit": 26262.25,
-     "ebitda": 27957.81,
-     "ni": 20854.76,
+     "rev": 75705.43,
+     "ebit": 26292.28,
+     "ebitda": 27994.97,
+     "ni": 20873.83,
      "eps": 5.26,
-     "capex": 1438.14,
+     "capex": 1439.77,
      "rev_hi": 82262.0,
-     "ebit_hi": 27403.0,
+     "ebit_hi": 27435.0,
      "ebitda_hi": 29890.0,
      "eps_hi": 5.59,
      "capex_hi": 1801.0,
-     "gm": 64.6
+     "gm": 64.6,
+     "fcf_bc": 18775.56,
+     "capex_bc": 1438.7,
+     "ocf": 20214.26,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -1796,15 +1900,15 @@
      "rev_hi": 76440.0,
      "ebit": 25563.55,
      "ebit_hi": 25902.0,
-     "ebitda": 27869.214285714286,
+     "ebitda": 27811.8,
      "ebitda_hi": 30462.0,
      "ni": 20284.545000000002,
      "ni_hi": null,
      "eps": 5.103,
      "eps_hi": 5.22,
-     "gm": 64.7912792402785,
+     "gm": 64.79374046650437,
      "gm_hi": null,
-     "capex": 1448.25,
+     "capex": 1449.3,
      "capex_hi": 1738.0
     },
     "2FY": {
@@ -1813,15 +1917,15 @@
      "rev_hi": 90698.0,
      "ebit": 27353.863636363636,
      "ebit_hi": 28948.0,
-     "ebitda": 29732.3,
+     "ebitda": 29760.95238095238,
      "ebitda_hi": 33248.0,
      "ni": 22007.417,
      "ni_hi": null,
      "eps": 5.554,
      "eps_hi": 5.93,
-     "gm": 64.69947540435658,
+     "gm": 64.69825467147477,
      "gm_hi": null,
-     "capex": 1527.9,
+     "capex": 1529.1,
      "capex_hi": 1995.0
     },
     "3FY": {
@@ -1830,15 +1934,15 @@
      "rev_hi": 90129.0,
      "ebit": 29646.533333333333,
      "ebit_hi": 31619.0,
-     "ebitda": 32080.0,
+     "ebitda": 32168.76923076923,
      "ebitda_hi": 36657.0,
      "ni": 23642.75,
      "ni_hi": null,
      "eps": 6.023,
      "eps_hi": 6.4,
-     "gm": 64.61912227475212,
+     "gm": 64.61872916898452,
      "gm_hi": null,
-     "capex": 1712.357142857143,
+     "capex": 1714.2142857142856,
      "capex_hi": 2277.0
     }
    },
@@ -1851,9 +1955,9 @@
   },
   "GEV": {
    "bbg": "GEV US Equity",
-   "px": 781.24,
-   "mktcap": 206776311041.83997,
-   "ev": 194815.31104183997,
+   "px": 797.04,
+   "mktcap": 210958208684.63998,
+   "ev": 198997.20868463998,
    "name": "GE VERNOVA INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -1913,7 +2017,11 @@
      "ebitda_hi": 6567.51,
      "eps_hi": 16.65,
      "capex_hi": 1758.8,
-     "gm": 24.6
+     "gm": 24.6,
+     "fcf_bc": 17158.87,
+     "capex_bc": 1792.32,
+     "ocf": 18951.19,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -1930,7 +2038,11 @@
      "ebitda_hi": 11735.0,
      "eps_hi": 30.84,
      "capex_hi": 3321.0,
-     "gm": 28.2
+     "gm": 28.2,
+     "fcf_bc": 8063.11,
+     "capex_bc": 1623.8,
+     "ocf": 9686.91,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -1993,9 +2105,9 @@
   },
   "GLW": {
    "bbg": "GLW US Equity",
-   "px": 114.27,
-   "mktcap": 98432304382.61998,
-   "ev": 105683.30438261999,
+   "px": 112.13,
+   "mktcap": 96588906015.77998,
+   "ev": 103839.90601577998,
    "name": "CORNING INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -2055,7 +2167,11 @@
      "ebitda_hi": 5668.0,
      "eps_hi": 3.35,
      "capex_hi": 2168.73,
-     "gm": 39.2
+     "gm": 39.2,
+     "fcf_bc": 2025.24,
+     "capex_bc": 2006.67,
+     "ocf": 4031.9,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -2072,7 +2188,11 @@
      "ebitda_hi": 7778.0,
      "eps_hi": 5.04,
      "capex_hi": 3094.0,
-     "gm": 40.4
+     "gm": 40.4,
+     "fcf_bc": 2569.69,
+     "capex_bc": 2368.31,
+     "ocf": 4938.0,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -2135,9 +2255,9 @@
   },
   "GOOG": {
    "bbg": "GOOG US Equity",
-   "px": 288.05,
-   "mktcap": 3556916310450.0,
-   "ev": 3456504.3104499998,
+   "px": 284.92,
+   "mktcap": 3518308170000.0,
+   "ev": 3417896.17,
    "name": "ALPHABET INC-CL C",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -2156,15 +2276,15 @@
      "label": "Q4-26E",
      "rev": 124424.85714285714,
      "rev_hi": 131377.0,
-     "ebit": 46840.85714285714,
+     "ebit": 46817.42857142857,
      "ebit_hi": 60032.0,
      "ebitda": 64002.625,
      "ebitda_hi": 74799.0,
      "ni": 40301.222,
      "eps": 3.451,
      "eps_hi": null,
-     "gm": 66.2524751698934,
-     "capex": 68504.4,
+     "gm": 66.22140266420396,
+     "capex": 68537.95,
      "capex_hi": 74924.0
     },
     "2FQ": {
@@ -2187,17 +2307,21 @@
      "nq": 4,
      "n_actual": 3,
      "rev": 428356.55,
-     "ebit": 166828.11,
+     "ebit": 166804.68,
      "ebitda": 229064.88,
      "ni": 151853.02,
      "eps": 12.86,
-     "capex": 204944.24,
+     "capex": 204977.79,
      "rev_hi": 435308.69,
      "ebit_hi": 180019.26,
      "ebitda_hi": 239861.25,
      "eps_hi": 12.86,
      "capex_hi": 211363.84,
-     "gm": 68.3
+     "gm": 68.3,
+     "fcf_bc": -11940.97,
+     "capex_bc": 202142.65,
+     "ocf": 190201.67,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -2214,55 +2338,59 @@
      "ebitda_hi": 383768.0,
      "eps_hi": 16.44,
      "capex_hi": 394510.0,
-     "gm": 67.3
+     "gm": 67.3,
+     "fcf_bc": -42633.07,
+     "capex_bc": 325840.06,
+     "ocf": 283206.99,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
-     "rev": 434088.87096774194,
-     "rev_hi": 444024.0,
-     "ebit": 168870.03225806452,
+     "rev": 433983.5161290323,
+     "rev_hi": 443220.0,
+     "ebit": 168867.83870967742,
      "ebit_hi": 194087.0,
      "ebitda": 222234.76923076922,
      "ebitda_hi": 300261.0,
      "ni": 240937.551,
      "ni_hi": null,
-     "eps": 18.649,
+     "eps": 18.629,
      "eps_hi": null,
-     "gm": 67.2120861241791,
+     "gm": 67.19149340470797,
      "gm_hi": null,
      "capex": 202184.568627451,
      "capex_hi": 251500.0
     },
     "2FY": {
      "label": "2FY",
-     "rev": 570136.0294117647,
+     "rev": 570255.9411764706,
      "rev_hi": 669489.0,
-     "ebit": 216208.42622950822,
+     "ebit": 216204.67213114756,
      "ebit_hi": 282237.0,
      "ebitda": 292594.6666666667,
      "ebitda_hi": 383767.0,
      "ni": 187996.038,
      "ni_hi": null,
-     "eps": 15.81,
+     "eps": 15.826,
      "eps_hi": null,
-     "gm": 65.67777833236916,
+     "gm": 65.68546915005048,
      "gm_hi": null,
      "capex": 325806.2549019608,
      "capex_hi": 379409.0
     },
     "3FY": {
      "label": "3FY",
-     "rev": 717096.2068965518,
+     "rev": 717080.6551724138,
      "rev_hi": 885191.0,
-     "ebit": 273064.44,
+     "ebit": 273060.3,
      "ebit_hi": 341461.0,
      "ebitda": 389847.380952381,
      "ebitda_hi": 458791.0,
      "ni": 230657.073,
      "ni_hi": null,
-     "eps": 19.918,
+     "eps": 19.909,
      "eps_hi": null,
-     "gm": 65.068811096676,
+     "gm": 65.03467551912304,
      "gm_hi": null,
      "capex": 367529.0238095238,
      "capex_hi": 543900.0
@@ -2277,9 +2405,9 @@
   },
   "LITE": {
    "bbg": "LITE US Equity",
-   "px": 605.72,
-   "mktcap": 54938804000.0,
-   "ev": 54389.404,
+   "px": 585.57,
+   "mktcap": 53111199000.00001,
+   "ev": 52561.799000000006,
    "name": "LUMENTUM HOLDINGS INC",
    "ccy": "USD",
    "lrq": "2026-09-26",
@@ -2339,7 +2467,11 @@
      "ebitda_hi": 2082.61,
      "eps_hi": 15.69,
      "capex_hi": 624.2,
-     "gm": 50.5
+     "gm": 50.5,
+     "fcf_bc": 522.22,
+     "capex_bc": 670.08,
+     "ocf": 1192.3,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -2356,7 +2488,11 @@
      "ebitda_hi": 5268.0,
      "eps_hi": 41.98,
      "capex_hi": 1808.0,
-     "gm": 54.7
+     "gm": 54.7,
+     "fcf_bc": 2280.22,
+     "capex_bc": 734.49,
+     "ocf": 3014.71,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -2419,9 +2555,9 @@
   },
   "META": {
    "bbg": "META US Equity",
-   "px": 645.55,
-   "mktcap": 1675992534892.1997,
-   "ev": 1705638.5348921998,
+   "px": 641.39,
+   "mktcap": 1665192242203.5598,
+   "ev": 1694838.2422035597,
    "name": "META PLATFORMS INC-CLASS A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -2481,7 +2617,11 @@
      "ebitda_hi": 128291.31,
      "eps_hi": 35.69,
      "capex_hi": 163416.81,
-     "gm": 79.9
+     "gm": 79.9,
+     "fcf_bc": -5672.07,
+     "capex_bc": 139751.89,
+     "ocf": 134079.82,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -2498,7 +2638,11 @@
      "ebitda_hi": 170397.0,
      "eps_hi": 47.17,
      "capex_hi": 291497.0,
-     "gm": 78.3
+     "gm": 78.3,
+     "fcf_bc": -53591.67,
+     "capex_bc": 222592.76,
+     "ocf": 169001.09,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -2561,9 +2705,9 @@
   },
   "MSFT": {
    "bbg": "MSFT US Equity",
-   "px": 543.01,
-   "mktcap": 4032497903681.52,
-   "ev": 4096161.90368152,
+   "px": 533.16,
+   "mktcap": 3959349887344.32,
+   "ev": 4023013.88734432,
    "name": "MICROSOFT CORP",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -2623,7 +2767,11 @@
      "ebitda_hi": 218910.95,
      "eps_hi": 18.02,
      "capex_hi": 168265.07,
-     "gm": 66.8
+     "gm": 66.8,
+     "fcf_bc": 54627.67,
+     "capex_bc": 152613.06,
+     "ocf": 207240.73,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -2640,7 +2788,11 @@
      "ebitda_hi": 297941.0,
      "eps_hi": 23.13,
      "capex_hi": 268019.0,
-     "gm": 65.5
+     "gm": 65.5,
+     "fcf_bc": 23946.98,
+     "capex_bc": 217537.02,
+     "ocf": 241484.0,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -2703,9 +2855,9 @@
   },
   "MU": {
    "bbg": "MU US Equity",
-   "px": 743.06,
-   "mktcap": 840715331908.7198,
-   "ev": 772441.3319087198,
+   "px": 725.11,
+   "mktcap": 820406285253.32,
+   "ev": 752132.28525332,
    "name": "MICRON TECHNOLOGY INC",
    "ccy": "USD",
    "lrq": "2026-09-03",
@@ -2765,7 +2917,11 @@
      "ebitda_hi": 147747.78,
      "eps_hi": 101.65,
      "capex_hi": 37493.99,
-     "gm": 83.3
+     "gm": 83.3,
+     "fcf_bc": 93332.01,
+     "capex_bc": 39408.22,
+     "ocf": 132740.23,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -2782,7 +2938,11 @@
      "ebitda_hi": 311429.0,
      "eps_hi": 237.07,
      "capex_hi": 132187.0,
-     "gm": 86.3
+     "gm": 86.3,
+     "fcf_bc": 157116.9,
+     "capex_bc": 65259.74,
+     "ocf": 222376.65,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -2845,9 +3005,9 @@
   },
   "NFLX": {
    "bbg": "NFLX US Equity",
-   "px": 62.91,
-   "mktcap": 258328962557.72998,
-   "ev": 267490.64055773,
+   "px": 63.26,
+   "mktcap": 259766176623.78,
+   "ev": 268927.85462378,
    "name": "NETFLIX INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -2907,7 +3067,11 @@
      "ebitda_hi": 16796.47,
      "eps_hi": 3.1,
      "capex_hi": 1273.26,
-     "gm": 50.1
+     "gm": 50.1,
+     "fcf_bc": 12034.52,
+     "capex_bc": 1022.92,
+     "ocf": 13057.44,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -2924,7 +3088,11 @@
      "ebitda_hi": 21217.0,
      "eps_hi": 4.03,
      "capex_hi": 1210.0,
-     "gm": 51.8
+     "gm": 51.8,
+     "fcf_bc": 13714.89,
+     "capex_bc": 850.78,
+     "ocf": 14565.66,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -2987,9 +3155,9 @@
   },
   "NOW": {
    "bbg": "NOW US Equity",
-   "px": 101.49,
-   "mktcap": 105341430000.0,
-   "ev": 109149.43,
+   "px": 99.61,
+   "mktcap": 103395180000.0,
+   "ev": 107203.18,
    "name": "SERVICENOW INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -3049,7 +3217,11 @@
      "ebitda_hi": 6244.5,
      "eps_hi": 4.05,
      "capex_hi": 1154.97,
-     "gm": 79.2
+     "gm": 79.2,
+     "fcf_bc": 5830.65,
+     "capex_bc": 526.83,
+     "ocf": 6357.47,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -3066,7 +3238,11 @@
      "ebitda_hi": 8729.0,
      "eps_hi": 5.43,
      "capex_hi": 1332.0,
-     "gm": 77.8
+     "gm": 77.8,
+     "fcf_bc": 7011.35,
+     "capex_bc": 775.67,
+     "ocf": 7787.02,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -3129,9 +3305,9 @@
   },
   "NVDA": {
    "bbg": "NVDA US Equity",
-   "px": 173.545,
-   "mktcap": 4182434499999.9995,
-   "ev": 4121925.4999999995,
+   "px": 168.89,
+   "mktcap": 4070248999999.9995,
+   "ev": 4009739.9999999995,
    "name": "NVIDIA CORP",
    "ccy": "USD",
    "lrq": "2026-07-26",
@@ -3155,22 +3331,22 @@
      "ebitda": 73378.34782608696,
      "ebitda_hi": 75927.0,
      "ni": 60152.978,
-     "eps": 2.476,
-     "eps_hi": 2.88,
+     "eps": 2.469,
+     "eps_hi": 2.7,
      "gm": 74.05129987313288,
      "capex": 2626.962962962963,
      "capex_hi": 6646.0
     },
     "2FQ": {
      "label": "Q4-26E",
-     "rev": 124416.44897959185,
+     "rev": 124304.12,
      "rev_hi": 137915.0,
      "ebit": 79493.45833333333,
      "ebit_hi": 89988.0,
      "ebitda": 80635.95652173914,
      "ebitda_hi": 91115.0,
      "ni": 66422.378,
-     "eps": 2.742,
+     "eps": 2.737,
      "eps_hi": 3.12,
      "gm": 71.93588489833266,
      "capex": 2856.038461538462,
@@ -3180,18 +3356,22 @@
      "label": "CY2026",
      "nq": 4,
      "n_actual": 2,
-     "rev": 405039.34,
+     "rev": 404927.01,
      "ebit": 264628.41,
      "ebitda": 269319.29,
      "ni": 220836.94,
-     "eps": 9.08,
+     "eps": 9.07,
      "capex": 8836.77,
      "rev_hi": 421967.21,
      "ebit_hi": 280272.86,
      "ebitda_hi": 282346.99,
-     "eps_hi": 9.86,
+     "eps_hi": 9.68,
      "capex_hi": 19180.77,
-     "gm": 73.8
+     "gm": 73.8,
+     "fcf_bc": 176375.54,
+     "capex_bc": 9485.12,
+     "ocf": 185860.66,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -3201,14 +3381,18 @@
      "ebit": 461305.99,
      "ebitda": 469551.51,
      "ni": 385845.2,
-     "eps": 15.86,
+     "eps": 15.89,
      "capex": 12296.85,
      "rev_hi": 803320.0,
      "ebit_hi": 537707.0,
      "ebitda_hi": 542215.0,
      "eps_hi": 18.75,
      "capex_hi": 23000.0,
-     "gm": 72.5
+     "gm": 72.5,
+     "fcf_bc": 321585.55,
+     "capex_bc": 12164.14,
+     "ocf": 333749.69,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -3237,7 +3421,7 @@
      "ebitda_hi": 542215.0,
      "ni": 382473.629,
      "ni_hi": null,
-     "eps": 15.894,
+     "eps": 15.919,
      "eps_hi": 18.75,
      "gm": 72.68207054932034,
      "gm_hi": null,
@@ -3271,9 +3455,9 @@
   },
   "ORCL": {
    "bbg": "ORCL US Equity",
-   "px": 119.835,
-   "mktcap": 373610543692.4099,
-   "ev": 511100.54369240993,
+   "px": 117.98,
+   "mktcap": 367827195267.07996,
+   "ev": 505317.19526708,
    "name": "ORACLE CORP",
    "ccy": "USD",
    "lrq": "2026-08-31",
@@ -3333,7 +3517,11 @@
      "ebitda_hi": 46291.74,
      "eps_hi": 7.48,
      "capex_hi": 69028.95,
-     "gm": 63.7
+     "gm": 63.7,
+     "fcf_bc": -32091.82,
+     "capex_bc": 84662.7,
+     "ocf": 52570.88,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -3350,7 +3538,11 @@
      "ebitda_hi": 76030.0,
      "eps_hi": 10.31,
      "capex_hi": 155192.0,
-     "gm": 55.4
+     "gm": 55.4,
+     "fcf_bc": -26575.01,
+     "capex_bc": 96444.19,
+     "ocf": 69869.18,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -3413,9 +3605,9 @@
   },
   "PWR": {
    "bbg": "PWR US Equity",
-   "px": 594.865,
-   "mktcap": 89632559860.425,
-   "ev": 94915.369860425,
+   "px": 583.14,
+   "mktcap": 87865870335.3,
+   "ev": 93148.6803353,
    "name": "QUANTA SERVICES INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -3475,7 +3667,11 @@
      "ebitda_hi": 3981.7,
      "eps_hi": 15.87,
      "capex_hi": 931.24,
-     "gm": 15.5
+     "gm": 15.5,
+     "fcf_bc": 2799.83,
+     "capex_bc": 986.96,
+     "ocf": 3786.79,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -3492,7 +3688,11 @@
      "ebitda_hi": 5960.0,
      "eps_hi": 24.99,
      "capex_hi": 1244.0,
-     "gm": 16.0
+     "gm": 16.0,
+     "fcf_bc": 3018.67,
+     "capex_bc": 1072.65,
+     "ocf": 4091.33,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -3555,9 +3755,9 @@
   },
   "SPOT": {
    "bbg": "SPOT US Equity",
-   "px": 597.72,
-   "mktcap": 123030218223.69315,
-   "ev": 100603.99684249052,
+   "px": 606.22,
+   "mktcap": 124779794705.82759,
+   "ev": 102328.78566536415,
    "name": "SPOTIFY TECHNOLOGY SA",
    "ccy": "EUR",
    "lrq": "2026-09-30",
@@ -3574,17 +3774,17 @@
    "periods": {
     "1FQ": {
      "label": "Q4-26E",
-     "rev": 5234.75,
+     "rev": 5233.583333333333,
      "rev_hi": 5412.0,
-     "ebit": 813.7878787878788,
+     "ebit": 816.030303030303,
      "ebit_hi": 831.0,
-     "ebitda": 858.8846153846155,
+     "ebitda": 861.6923076923077,
      "ebitda_hi": 945.0,
-     "ni": 682.515,
-     "eps": 3.314,
+     "ni": 684.273,
+     "eps": 3.322,
      "eps_hi": 3.9,
-     "gm": 33.80542928792263,
-     "capex": 14.226,
+     "gm": 33.809462296644895,
+     "capex": 14.218,
      "capex_hi": 25.999999999999996
     },
     "2FQ": {
@@ -3606,18 +3806,22 @@
      "label": "CY2026",
      "nq": 4,
      "n_actual": 3,
-     "rev": 19537.87,
-     "ebit": 2805.98,
-     "ebitda": 2980.33,
-     "ni": 2469.99,
-     "eps": 11.81,
-     "capex": 52.49,
+     "rev": 19536.71,
+     "ebit": 2808.22,
+     "ebitda": 2983.14,
+     "ni": 2471.74,
+     "eps": 11.82,
+     "capex": 52.48,
      "rev_hi": 19715.12,
      "ebit_hi": 2823.19,
      "ebitda_hi": 3066.44,
      "eps_hi": 12.39,
      "capex_hi": 64.26,
-     "gm": 33.2
+     "gm": 33.2,
+     "fcf_bc": 3258.96,
+     "capex_bc": 42.23,
+     "ocf": 3301.2,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -3634,57 +3838,61 @@
      "ebitda_hi": 4305.0,
      "eps_hi": 18.3,
      "capex_hi": 117.2,
-     "gm": 34.2
+     "gm": 34.2,
+     "fcf_bc": 4045.76,
+     "capex_bc": 47.33,
+     "ocf": 4093.1,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
-     "rev": 19519.739130434784,
+     "rev": 19522.0,
      "rev_hi": 19764.0,
-     "ebit": 2850.230769230769,
+     "ebit": 2858.0,
      "ebit_hi": 2880.0,
-     "ebitda": 2996.28125,
+     "ebitda": 2997.53125,
      "ebitda_hi": 3351.0,
-     "ni": 2490.878,
+     "ni": 2489.61,
      "ni_hi": null,
-     "eps": 12.045,
+     "eps": 12.035,
      "eps_hi": 15.0,
-     "gm": 33.37433483484581,
+     "gm": 33.30152033053835,
      "gm_hi": null,
-     "capex": 43.60606060606061,
+     "capex": 43.2030303030303,
      "capex_hi": 78.0
     },
     "2FY": {
      "label": "2FY",
-     "rev": 22405.021739130436,
+     "rev": 22409.152173913044,
      "rev_hi": 23020.0,
-     "ebit": 3722.9,
-     "ebit_hi": 4350.0,
-     "ebitda": 3890.8529411764707,
-     "ebitda_hi": 4350.0,
-     "ni": 3158.333,
+     "ebit": 3711.525,
+     "ebit_hi": 4153.0,
+     "ebitda": 3880.6470588235293,
+     "ebitda_hi": 4254.0,
+     "ni": 3156.714,
      "ni_hi": null,
-     "eps": 15.365,
+     "eps": 15.353,
      "eps_hi": 20.0,
-     "gm": 34.162866417868386,
+     "gm": 34.14786518979966,
      "gm_hi": null,
-     "capex": 49.25454545454545,
+     "capex": 49.27272727272727,
      "capex_hi": 102.0
     },
     "3FY": {
      "label": "3FY",
-     "rev": 25403.92105263158,
+     "rev": 25405.36842105263,
      "rev_hi": 26526.0,
-     "ebit": 4708.272727272727,
+     "ebit": 4692.151515151515,
      "ebit_hi": 5225.0,
-     "ebitda": 4832.444444444444,
+     "ebitda": 4817.259259259259,
      "ebitda_hi": 5306.0,
-     "ni": 3948.657,
+     "ni": 3945.8,
      "ni_hi": null,
-     "eps": 19.335,
+     "eps": 19.311,
      "eps_hi": 24.0,
-     "gm": 35.20852843068263,
+     "gm": 35.187841457446126,
      "gm_hi": null,
-     "capex": 59.54137931034483,
+     "capex": 59.57586206896552,
      "capex_hi": 164.0
     }
    },
@@ -3697,14 +3905,14 @@
   },
   "TLN": {
    "bbg": "TLN US Equity",
-   "px": 364.33,
-   "mktcap": 15850290320.959997,
-   "ev": 25107.290320959997,
+   "px": 361.18,
+   "mktcap": 15713248588.159998,
+   "ev": 24970.24858816,
    "name": "TALEN ENERGY CORP",
    "ccy": "USD",
    "lrq": "2026-09-30",
    "pt": {
-    "cons": 458.7149963378906,
+    "cons": 457.4150085449219,
     "hi": 560.0,
     "lo": 371.0,
     "rating": 4.65217399597168,
@@ -3716,31 +3924,31 @@
    "periods": {
     "1FQ": {
      "label": "Q4-26E",
-     "rev": 1267.0,
+     "rev": 1272.0833333333333,
      "rev_hi": 1513.0,
      "ebit": 625.3333333333334,
      "ebit_hi": null,
-     "ebitda": 603.7857142857142,
+     "ebitda": 604.1428571428572,
      "ebitda_hi": 668.0,
      "ni": 457.0,
      "eps": 8.864,
      "eps_hi": null,
-     "gm": 70.36951603099453,
+     "gm": 69.65617772015793,
      "capex": 59.0,
      "capex_hi": 125.0
     },
     "2FQ": {
      "label": "Q1-27E",
-     "rev": 1314.111111111111,
-     "rev_hi": 1649.0,
+     "rev": 1299.3333333333333,
+     "rev_hi": 1516.0,
      "ebit": 492.1666666666667,
      "ebit_hi": 590.0,
-     "ebitda": 647.5384615384615,
+     "ebitda": 659.5384615384615,
      "ebitda_hi": 800.0,
      "ni": 319.257,
      "eps": 6.324,
      "eps_hi": 11.05,
-     "gm": 50.7069796279894,
+     "gm": 52.9629111012035,
      "capex": 70.46666666666667,
      "capex_hi": 98.99999999999999
     },
@@ -3748,9 +3956,9 @@
      "label": "CY2026",
      "nq": 4,
      "n_actual": 3,
-     "rev": 4432.15,
+     "rev": 4437.23,
      "ebit": 1801.47,
-     "ebitda": 2050.9,
+     "ebitda": 2051.25,
      "ni": 1179.59,
      "eps": 25.25,
      "capex": 208.65,
@@ -3759,72 +3967,80 @@
      "ebitda_hi": 2115.11,
      "eps_hi": 25.25,
      "capex_hi": 274.65,
-     "gm": 67.4
+     "gm": 67.2,
+     "fcf_bc": 1266.15,
+     "capex_bc": 310.88,
+     "ocf": 1577.02,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
      "nq": 4,
      "n_actual": 0,
-     "rev": 5287.57,
+     "rev": 5260.7,
      "ebit": 2011.75,
-     "ebitda": 2675.32,
+     "ebitda": 2674.64,
      "ni": 1270.3,
      "eps": 28.8,
      "capex": 282.35,
-     "rev_hi": 6293.0,
+     "rev_hi": 6160.0,
      "ebit_hi": 2514.0,
-     "ebitda_hi": 3339.0,
+     "ebitda_hi": 3357.0,
      "eps_hi": 39.51,
      "capex_hi": 395.6,
-     "gm": 65.5
+     "gm": 62.1,
+     "fcf_bc": 1660.52,
+     "capex_bc": 271.24,
+     "ocf": 1931.76,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
-     "rev": 4429.047619047619,
+     "rev": 4435.714285714286,
      "rev_hi": 5913.0,
      "ebit": 1272.388888888889,
      "ebit_hi": 1755.0,
-     "ebitda": 2138.0,
+     "ebitda": 2138.5263157894738,
      "ebitda_hi": 2216.0,
      "ni": 740.889,
      "ni_hi": null,
      "eps": 15.383000000000001,
      "eps_hi": 25.84,
-     "gm": 57.066409030564344,
+     "gm": 55.63131617203793,
      "gm_hi": null,
      "capex": 310.875,
      "capex_hi": 473.0
     },
     "2FY": {
      "label": "2FY",
-     "rev": 5124.952380952381,
+     "rev": 5113.714285714286,
      "rev_hi": 6634.0,
      "ebit": 1860.3684210526317,
      "ebit_hi": 2248.0,
-     "ebitda": 2680.45,
+     "ebitda": 2680.0,
      "ebitda_hi": 2828.0,
      "ni": 1196.632,
      "ni_hi": null,
      "eps": 27.688,
      "eps_hi": 36.97,
-     "gm": 63.800304480524,
+     "gm": 63.198326365129674,
      "gm_hi": null,
      "capex": 271.2352941176471,
      "capex_hi": 461.0
     },
     "3FY": {
      "label": "3FY",
-     "rev": 5504.61111111111,
+     "rev": 5517.833333333333,
      "rev_hi": 7105.0,
      "ebit": 2135.666666666667,
      "ebit_hi": 2701.0,
-     "ebitda": 2991.8235294117644,
+     "ebitda": 3006.294117647059,
      "ebitda_hi": 3437.0,
      "ni": 1397.824,
      "ni_hi": null,
      "eps": 34.708,
      "eps_hi": 47.48,
-     "gm": 63.0357288983947,
+     "gm": 61.9984494962035,
      "gm_hi": null,
      "capex": 291.375,
      "capex_hi": 553.0
@@ -3839,9 +4055,9 @@
   },
   "TM": {
    "bbg": "TM US Equity",
-   "px": 214.14,
-   "mktcap": 312537061468.44,
-   "ev": 41783648.37543129,
+   "px": 214.78,
+   "mktcap": 313471140665.88,
+   "ev": 41966298.513598464,
    "name": "TOYOTA MOTOR CORP -SPON ADR",
    "ccy": "JPY",
    "lrq": "2026-09-30",
@@ -3901,7 +4117,11 @@
      "ebitda_hi": 6232900.58,
      "eps_hi": null,
      "capex_hi": 2775456.17,
-     "gm": 17.0
+     "gm": 17.0,
+     "fcf_bc": -343717.75,
+     "capex_bc": 4323082.33,
+     "ocf": 3979364.59,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -3918,7 +4138,11 @@
      "ebitda_hi": 7377555.0,
      "eps_hi": null,
      "capex_hi": 3173418.0,
-     "gm": 17.4
+     "gm": 17.4,
+     "fcf_bc": 4713534.3,
+     "capex_bc": 2544959.0,
+     "ocf": 7258493.3,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -3981,9 +4205,9 @@
   },
   "TSM": {
    "bbg": "TSM US Equity",
-   "px": 399.82,
-   "mktcap": 2073656039877.66,
-   "ev": 65168786.71869893,
+   "px": 396.48,
+   "mktcap": 2056333216674.24,
+   "ev": 64599420.16564892,
    "name": "TAIWAN SEMICONDUCTOR-SP ADR",
    "ccy": "TWD",
    "lrq": "2026-09-30",
@@ -4043,7 +4267,11 @@
      "ebitda_hi": 4090698.47,
      "eps_hi": 531.3,
      "capex_hi": 2276791.91,
-     "gm": 66.2
+     "gm": 66.2,
+     "fcf_bc": 1505453.94,
+     "capex_bc": 1959080.79,
+     "ocf": 3464534.74,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -4060,7 +4288,11 @@
      "ebitda_hi": 6418843.94,
      "eps_hi": 754.36,
      "capex_hi": 3607770.0,
-     "gm": 66.6
+     "gm": 66.6,
+     "fcf_bc": 2371653.39,
+     "capex_bc": 2444279.8,
+     "ocf": 4815933.19,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -4123,9 +4355,9 @@
   },
   "UBER": {
    "bbg": "UBER US Equity",
-   "px": 70.2027,
-   "mktcap": 143346757638.78897,
-   "ev": 152319.757638789,
+   "px": 70.05,
+   "mktcap": 143034959803.5,
+   "ev": 152007.9598035,
    "name": "UBER TECHNOLOGIES INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -4144,11 +4376,11 @@
      "label": "Q4-26E",
      "rev": 15651.113636363636,
      "rev_hi": 16025.0,
-     "ebit": 2542.6486486486488,
+     "ebit": 2552.722222222222,
      "ebit_hi": 3162.0,
-     "ebitda": 3195.439024390244,
+     "ebitda": 3194.875,
      "ebitda_hi": 3336.0,
-     "ni": 1955.652,
+     "ni": 1978.2730000000001,
      "eps": 0.967,
      "eps_hi": 1.02,
      "gm": 44.04388038540547,
@@ -4164,7 +4396,7 @@
      "ebitda": 3152.4375,
      "ebitda_hi": 3525.0,
      "ni": 1942.0,
-     "eps": 0.9560000000000001,
+     "eps": 0.962,
      "eps_hi": 1.02,
      "gm": 44.85935759054342,
      "capex": 123.97307692307693,
@@ -4175,9 +4407,9 @@
      "nq": 4,
      "n_actual": 3,
      "rev": 57877.73,
-     "ebit": 8749.62,
-     "ebitda": 11348.35,
-     "ni": 6877.16,
+     "ebit": 8759.69,
+     "ebitda": 11347.79,
+     "ni": 6899.78,
      "eps": 3.34,
      "capex": 399.7,
      "rev_hi": 58251.61,
@@ -4185,7 +4417,11 @@
      "ebitda_hi": 11488.91,
      "eps_hi": 3.4,
      "capex_hi": 520.12,
-     "gm": 43.1
+     "gm": 43.1,
+     "fcf_bc": 9491.26,
+     "capex_bc": 348.41,
+     "ocf": 9839.67,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -4195,14 +4431,18 @@
      "ebit": 11252.08,
      "ebitda": 13981.27,
      "ni": 8864.65,
-     "eps": 4.35,
+     "eps": 4.39,
      "capex": 535.59,
      "rev_hi": 69855.0,
      "ebit_hi": 12797.0,
      "ebitda_hi": 15189.0,
      "eps_hi": 4.82,
      "capex_hi": 1380.0,
-     "gm": 45.0
+     "gm": 45.0,
+     "fcf_bc": 12748.45,
+     "capex_bc": 509.45,
+     "ocf": 13257.9,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -4227,11 +4467,11 @@
      "rev_hi": 69627.0,
      "ebit": 11039.219512195123,
      "ebit_hi": 12157.0,
-     "ebitda": 13833.604166666666,
+     "ebitda": 13882.191489361701,
      "ebitda_hi": 14755.0,
      "ni": 8610.519,
      "ni_hi": null,
-     "eps": 4.362,
+     "eps": 4.392,
      "eps_hi": 5.57,
      "gm": 44.48435356604179,
      "gm_hi": null,
@@ -4265,9 +4505,9 @@
   },
   "VST": {
    "bbg": "VST US Equity",
-   "px": 133.69,
-   "mktcap": 45373675170.27,
-   "ev": 66975.67517027,
+   "px": 131.18,
+   "mktcap": 44521794515.939995,
+   "ev": 66123.79451594,
    "name": "VISTRA CORP",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -4327,7 +4567,11 @@
      "ebitda_hi": 7321.27,
      "eps_hi": 9.12,
      "capex_hi": 2556.79,
-     "gm": 55.2
+     "gm": 55.2,
+     "fcf_bc": 4017.03,
+     "capex_bc": 2699.06,
+     "ocf": 6716.09,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -4344,7 +4588,11 @@
      "ebitda_hi": 10391.0,
      "eps_hi": 16.92,
      "capex_hi": 3500.0,
-     "gm": null
+     "gm": null,
+     "fcf_bc": 4274.6,
+     "capex_bc": 2595.65,
+     "ocf": 6870.25,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -4407,9 +4655,9 @@
   },
   "WMB": {
    "bbg": "WMB US Equity",
-   "px": 68.25,
-   "mktcap": 85326321716.99998,
-   "ev": 123300.32171699998,
+   "px": 67.46,
+   "mktcap": 84338661729.35999,
+   "ev": 122312.66172935998,
    "name": "WILLIAMS COS INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -4469,7 +4717,11 @@
      "ebitda_hi": 8452.53,
      "eps_hi": 2.44,
      "capex_hi": 9889.39,
-     "gm": 81.6
+     "gm": 81.6,
+     "fcf_bc": -2325.38,
+     "capex_bc": 8178.63,
+     "ocf": 5853.25,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -4486,7 +4738,11 @@
      "ebitda_hi": 10578.0,
      "eps_hi": 3.55,
      "capex_hi": 10329.0,
-     "gm": null
+     "gm": null,
+     "fcf_bc": -860.57,
+     "capex_bc": 7614.88,
+     "ocf": 6754.31,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -4549,9 +4805,9 @@
   },
   "INTC": {
    "bbg": "INTC US Equity",
-   "px": 59.75,
-   "mktcap": 317571250000.0,
-   "ev": 321544.25,
+   "px": 58.13,
+   "mktcap": 308960950000.0,
+   "ev": 312933.95,
    "name": "INTEL CORP",
    "ccy": "USD",
    "lrq": "2026-09-26",
@@ -4611,7 +4867,11 @@
      "ebitda_hi": 19123.71,
      "eps_hi": 0.93,
      "capex_hi": 23974.48,
-     "gm": 38.7
+     "gm": 38.7,
+     "fcf_bc": 420.95,
+     "capex_bc": 18196.46,
+     "ocf": 18617.4,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -4628,7 +4888,11 @@
      "ebitda_hi": 25920.0,
      "eps_hi": 2.64,
      "capex_hi": 37700.0,
-     "gm": 42.4
+     "gm": 42.4,
+     "fcf_bc": -2689.93,
+     "capex_bc": 28217.71,
+     "ocf": 25527.78,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -4691,9 +4955,9 @@
   },
   "AMAT": {
    "bbg": "AMAT US Equity",
-   "px": 380.83,
-   "mktcap": 302225714217.69,
-   "ev": 300338.71421769,
+   "px": 372.53,
+   "mktcap": 295638855440.79,
+   "ev": 293751.85544078995,
    "name": "APPLIED MATERIALS INC",
    "ccy": "USD",
    "lrq": "2026-07-26",
@@ -4753,7 +5017,11 @@
      "ebitda_hi": 14010.01,
      "eps_hi": 15.13,
      "capex_hi": 2744.16,
-     "gm": 50.2
+     "gm": 50.2,
+     "fcf_bc": 6981.09,
+     "capex_bc": 2677.1,
+     "ocf": 9658.2,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -4770,7 +5038,11 @@
      "ebitda_hi": 20790.0,
      "eps_hi": 23.49,
      "capex_hi": 3588.0,
-     "gm": 51.1
+     "gm": 51.1,
+     "fcf_bc": 14138.04,
+     "capex_bc": 2571.76,
+     "ocf": 16709.8,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -4833,9 +5105,9 @@
   },
   "KLAC": {
    "bbg": "KLAC US Equity",
-   "px": 154.025,
-   "mktcap": 201003624930.3,
-   "ev": 202255.0779303,
+   "px": 152.99,
+   "mktcap": 199652943211.08002,
+   "ev": 200904.39621108002,
    "name": "KLA CORP",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -4895,7 +5167,11 @@
      "ebitda_hi": 7535.11,
      "eps_hi": 4.7,
      "capex_hi": 520.26,
-     "gm": 62.2
+     "gm": 62.2,
+     "fcf_bc": 4399.29,
+     "capex_bc": 550.76,
+     "ocf": 4950.06,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -4912,7 +5188,11 @@
      "ebitda_hi": 11130.0,
      "eps_hi": 7.14,
      "capex_hi": 1008.0,
-     "gm": 62.8
+     "gm": 62.8,
+     "fcf_bc": 7223.98,
+     "capex_bc": 716.39,
+     "ocf": 7940.37,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -4975,9 +5255,9 @@
   },
   "MRVL": {
    "bbg": "MRVL US Equity",
-   "px": 156.73,
-   "mktcap": 137436537000.00002,
-   "ev": 138789.837,
+   "px": 154.39,
+   "mktcap": 135384591000.00002,
+   "ev": 136737.891,
    "name": "MARVELL TECHNOLOGY INC",
    "ccy": "USD",
    "lrq": "2026-08-01",
@@ -5037,7 +5317,11 @@
      "ebitda_hi": 4962.75,
      "eps_hi": 4.45,
      "capex_hi": 583.9,
-     "gm": 58.4
+     "gm": 58.4,
+     "fcf_bc": 2386.02,
+     "capex_bc": 540.16,
+     "ocf": 2926.18,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -5054,7 +5338,11 @@
      "ebitda_hi": 9249.0,
      "eps_hi": 8.66,
      "capex_hi": 1086.0,
-     "gm": 57.9
+     "gm": 57.9,
+     "fcf_bc": 5014.76,
+     "capex_bc": 697.93,
+     "ocf": 5712.68,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -5117,9 +5405,9 @@
   },
   "TER": {
    "bbg": "TER US Equity",
-   "px": 252.71,
-   "mktcap": 39454285825.21001,
-   "ev": 39015.60082521001,
+   "px": 245.4,
+   "mktcap": 38313013895.4,
+   "ev": 37874.3288954,
    "name": "TERADYNE INC",
    "ccy": "USD",
    "lrq": "2026-09-27",
@@ -5179,7 +5467,11 @@
      "ebitda_hi": 1793.95,
      "eps_hi": 8.48,
      "capex_hi": 312.71,
-     "gm": 58.5
+     "gm": 58.5,
+     "fcf_bc": 1064.81,
+     "capex_bc": 322.67,
+     "ocf": 1387.48,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -5196,7 +5488,11 @@
      "ebitda_hi": 2768.0,
      "eps_hi": 13.81,
      "capex_hi": 410.6,
-     "gm": 59.0
+     "gm": 59.0,
+     "fcf_bc": 1265.91,
+     "capex_bc": 368.25,
+     "ocf": 1634.16,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -5259,9 +5555,9 @@
   },
   "VECO": {
    "bbg": "VECO US Equity",
-   "px": 39.65,
-   "mktcap": 2424207225.0499997,
-   "ev": 2204.2212250499997,
+   "px": 39.56,
+   "mktcap": 2418704610.92,
+   "ev": 2198.71861092,
    "name": "VEECO INSTRUMENTS INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -5321,7 +5617,11 @@
      "ebitda_hi": 116.89,
      "eps_hi": 1.51,
      "capex_hi": 25.0,
-     "gm": 41.0
+     "gm": 41.0,
+     "fcf_bc": 113.81,
+     "capex_bc": 19.1,
+     "ocf": 132.91,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -5338,7 +5638,11 @@
      "ebitda_hi": 349.1,
      "eps_hi": 3.6,
      "capex_hi": 30.0,
-     "gm": 44.0
+     "gm": 44.0,
+     "fcf_bc": 112.24,
+     "capex_bc": 28.0,
+     "ocf": 140.24,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -5401,50 +5705,50 @@
   },
   "IFX": {
    "bbg": "IFX GR Equity",
-   "px": 49.84,
-   "mktcap": 65087109468.08001,
-   "ev": 70877.10946808002,
+   "px": 49.735,
+   "mktcap": 64949987748.695,
+   "ev": 70739.987748695,
    "name": "INFINEON TECHNOLOGIES AG",
    "ccy": "EUR",
    "lrq": "2026-09-30",
    "pt": {
-    "cons": 87.20833587646484,
+    "cons": 86.45833587646484,
     "hi": 124.0,
     "lo": 50.0,
-    "rating": 4.77419376373291,
-    "n": 31.0,
-    "buy": 28.0,
+    "rating": 4.766666889190674,
+    "n": 30.0,
+    "buy": 27.0,
     "hold": 3.0,
     "sell": 0.0
    },
    "periods": {
     "1FQ": {
      "label": "Q4-26E",
-     "rev": 4622.071428571428,
-     "rev_hi": 4806.0,
-     "ebit": 1085.8181818181818,
-     "ebit_hi": 1187.0,
+     "rev": 4606.5,
+     "rev_hi": 4747.0,
+     "ebit": 1077.8181818181818,
+     "ebit_hi": 1130.0,
      "ebitda": 1516.3333333333333,
      "ebitda_hi": 1704.0,
-     "ni": 787.182,
-     "eps": 0.602,
-     "eps_hi": 0.67,
-     "gm": 43.99982778269652,
+     "ni": 777.364,
+     "eps": 0.595,
+     "eps_hi": 0.64,
+     "gm": 43.80882987625361,
      "capex": 908.6666666666666,
      "capex_hi": 1337.0
     },
     "2FQ": {
      "label": "Q1-27E",
-     "rev": 4824.714285714286,
+     "rev": 4830.142857142858,
      "rev_hi": 4942.0,
-     "ebit": 1178.909090909091,
-     "ebit_hi": 1243.0,
+     "ebit": 1181.6363636363637,
+     "ebit_hi": 1241.0,
      "ebitda": 1608.1666666666667,
      "ebitda_hi": 1823.0,
-     "ni": 858.5450000000001,
-     "eps": 0.655,
-     "eps_hi": 0.71,
-     "gm": 44.39559224557826,
+     "ni": 857.455,
+     "eps": 0.654,
+     "eps_hi": 0.7,
+     "gm": 44.230089611804495,
      "capex": 916.0,
      "capex_hi": 1317.0
     },
@@ -5452,85 +5756,93 @@
      "label": "CY2026",
      "nq": 4,
      "n_actual": 3,
-     "rev": 17294.05,
-     "ebit": 3652.8,
+     "rev": 17278.48,
+     "ebit": 3644.8,
      "ebitda": 5584.62,
-     "ni": 2681.38,
+     "ni": 2671.57,
      "eps": 2.02,
      "capex": 3299.67,
-     "rev_hi": 17477.98,
-     "ebit_hi": 3753.98,
+     "rev_hi": 17418.98,
+     "ebit_hi": 3696.98,
      "ebitda_hi": 5772.29,
-     "eps_hi": 2.09,
+     "eps_hi": 2.06,
      "capex_hi": 3728.0,
-     "gm": 42.2
+     "gm": 42.2,
+     "fcf_bc": 2307.3,
+     "capex_bc": 2627.67,
+     "ocf": 4934.96,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
      "nq": 4,
      "n_actual": 0,
-     "rev": 20671.17,
-     "ebit": 5377.35,
+     "rev": 20756.88,
+     "ebit": 5409.24,
      "ebitda": 7115.5,
-     "ni": 3933.01,
-     "eps": 3.0,
+     "ni": 3946.89,
+     "eps": 3.01,
      "capex": 4019.0,
      "rev_hi": 21722.0,
-     "ebit_hi": 5935.0,
+     "ebit_hi": 5933.0,
      "ebitda_hi": 8128.0,
      "eps_hi": 3.3,
      "capex_hi": 5148.0,
-     "gm": 45.8
+     "gm": 45.5,
+     "fcf_bc": 2970.49,
+     "capex_bc": 4019.0,
+     "ocf": 6989.49,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
-     "rev": 19812.67857142857,
+     "rev": 19858.25,
      "rev_hi": 20461.0,
-     "ebit": 4994.764705882353,
+     "ebit": 5004.647058823529,
      "ebit_hi": 5312.0,
      "ebitda": 6874.823529411765,
      "ebitda_hi": 7441.0,
-     "ni": 3705.875,
+     "ni": 3706.563,
      "ni_hi": null,
      "eps": 2.821,
      "eps_hi": 3.42,
-     "gm": 45.01588907717153,
+     "gm": 44.961014123408034,
      "gm_hi": null,
-     "capex": 3143.5,
+     "capex": 3091.5,
      "capex_hi": 5228.0
     },
     "2FY": {
      "label": "2FY",
-     "rev": 23115.076923076922,
+     "rev": 23198.115384615383,
      "rev_hi": 27924.0,
-     "ebit": 6552.529411764705,
+     "ebit": 6576.823529411765,
      "ebit_hi": 7650.0,
      "ebitda": 8299.0,
      "ebitda_hi": 9433.0,
-     "ni": 4991.688,
+     "ni": 5007.0,
      "ni_hi": null,
-     "eps": 3.765,
+     "eps": 3.774,
      "eps_hi": 5.49,
-     "gm": 47.07631971779095,
+     "gm": 46.96140153448871,
      "gm_hi": null,
-     "capex": 3221.285714285714,
+     "capex": 3200.571428571429,
      "capex_hi": 4908.0
     },
     "3FY": {
      "label": "3FY",
-     "rev": 25832.2,
+     "rev": 25991.833333333332,
      "rev_hi": 28102.0,
-     "ebit": 7815.0,
+     "ebit": 7687.8,
      "ebit_hi": 8801.0,
-     "ebitda": 9605.833333333334,
+     "ebitda": 9572.428571428572,
      "ebitda_hi": 10771.0,
-     "ni": 5663.667,
+     "ni": 5822.25,
      "ni_hi": null,
-     "eps": 4.446,
+     "eps": 4.42,
      "eps_hi": 5.53,
-     "gm": 48.8807588176939,
+     "gm": 47.762206095375724,
      "gm_hi": null,
-     "capex": 3681.1666666666665,
+     "capex": 3730.25,
      "capex_hi": 5555.0
     }
    },
@@ -5543,9 +5855,9 @@
   },
   "AIXA": {
    "bbg": "AIXA GR Equity",
-   "px": 32.18,
-   "mktcap": 3651017941.6000004,
-   "ev": 3060.3129416000006,
+   "px": 31.71,
+   "mktcap": 3597693565.200001,
+   "ev": 3006.9885652000007,
    "name": "AIXTRON SE",
    "ccy": "EUR",
    "lrq": "2026-09-30",
@@ -5605,7 +5917,11 @@
      "ebitda_hi": 140.26,
      "eps_hi": 0.79,
      "capex_hi": 44.35,
-     "gm": 42.2
+     "gm": 42.2,
+     "fcf_bc": 268.88,
+     "capex_bc": 41.93,
+     "ocf": 310.8,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -5622,7 +5938,11 @@
      "ebitda_hi": 346.1,
      "eps_hi": 1.94,
      "capex_hi": 34.0,
-     "gm": 45.5
+     "gm": 45.5,
+     "fcf_bc": 96.23,
+     "capex_bc": 46.7,
+     "ocf": 142.93,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -5685,9 +6005,9 @@
   },
   "SNDK": {
    "bbg": "SNDK US Equity",
-   "px": 899.15,
-   "mktcap": 127939482539.75,
-   "ev": 121601.48253975,
+   "px": 859.99,
+   "mktcap": 122367431006.35,
+   "ev": 116029.43100635,
    "name": "SANDISK CORP",
    "ccy": "USD",
    "lrq": "2026-10-02",
@@ -5747,7 +6067,11 @@
      "ebitda_hi": 28819.06,
      "eps_hi": 157.58,
      "capex_hi": 876.45,
-     "gm": 81.9
+     "gm": 81.9,
+     "fcf_bc": 24056.3,
+     "capex_bc": 350.55,
+     "ocf": 24406.85,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -5764,7 +6088,11 @@
      "ebitda_hi": 53627.0,
      "eps_hi": 348.98,
      "capex_hi": 3288.0,
-     "gm": 84.8
+     "gm": 84.8,
+     "fcf_bc": 37278.33,
+     "capex_bc": 1335.32,
+     "ocf": 38613.65,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -5827,9 +6155,9 @@
   },
   "STX": {
    "bbg": "STX US Equity",
-   "px": 498.93,
-   "mktcap": 114534924113.37,
-   "ev": 115948.92411337,
+   "px": 501.62,
+   "mktcap": 115152443496.57999,
+   "ev": 116566.44349657999,
    "name": "SEAGATE TECHNOLOGY HOLDINGS",
    "ccy": "USD",
    "lrq": "2026-10-02",
@@ -5889,7 +6217,11 @@
      "ebitda_hi": 7559.13,
      "eps_hi": 25.48,
      "capex_hi": 815.73,
-     "gm": 54.3
+     "gm": 54.3,
+     "fcf_bc": 5313.02,
+     "capex_bc": 808.83,
+     "ocf": 6121.85,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -5906,7 +6238,11 @@
      "ebitda_hi": 17614.0,
      "eps_hi": 61.0,
      "capex_hi": 1777.0,
-     "gm": 65.5
+     "gm": 65.5,
+     "fcf_bc": 10008.73,
+     "capex_bc": 1209.5,
+     "ocf": 11218.23,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -5969,9 +6305,9 @@
   },
   "WDC": {
    "bbg": "WDC US Equity",
-   "px": 289.45,
-   "mktcap": 108347870212.04999,
-   "ev": 107955.87021205,
+   "px": 289.2,
+   "mktcap": 108254289394.79999,
+   "ev": 107862.28939479998,
    "name": "WESTERN DIGITAL CORP",
    "ccy": "USD",
    "lrq": "2026-10-02",
@@ -6031,7 +6367,11 @@
      "ebitda_hi": 7992.62,
      "eps_hi": 16.05,
      "capex_hi": 939.96,
-     "gm": 54.9
+     "gm": 54.9,
+     "fcf_bc": 5420.16,
+     "capex_bc": 819.1,
+     "ocf": 6239.26,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -6048,7 +6388,11 @@
      "ebitda_hi": 17212.0,
      "eps_hi": 39.17,
      "capex_hi": 2413.0,
-     "gm": 65.2
+     "gm": 65.2,
+     "fcf_bc": 9758.13,
+     "capex_bc": 1817.18,
+     "ocf": 11575.31,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -6111,9 +6455,9 @@
   },
   "ADI": {
    "bbg": "ADI US Equity",
-   "px": 392.705,
-   "mktcap": 190291280932.82498,
-   "ev": 197087.92993282498,
+   "px": 393.3,
+   "mktcap": 190579597384.5,
+   "ev": 197376.2463845,
    "name": "ANALOG DEVICES INC",
    "ccy": "USD",
    "lrq": "2026-08-01",
@@ -6173,7 +6517,11 @@
      "ebitda_hi": 9678.93,
      "eps_hi": 14.56,
      "capex_hi": 1323.32,
-     "gm": 73.2
+     "gm": 73.2,
+     "fcf_bc": 5604.68,
+     "capex_bc": 652.81,
+     "ocf": 6257.49,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -6190,7 +6538,11 @@
      "ebitda_hi": 11998.0,
      "eps_hi": 21.93,
      "capex_hi": 1123.0,
-     "gm": 74.1
+     "gm": 74.1,
+     "fcf_bc": 7765.57,
+     "capex_bc": 821.97,
+     "ocf": 8587.53,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -6253,9 +6605,9 @@
   },
   "TXN": {
    "bbg": "TXN US Equity",
-   "px": 297.2,
-   "mktcap": 271572537915.19998,
-   "ev": 276985.5379152,
+   "px": 300.52,
+   "mktcap": 274606255364.31995,
+   "ev": 280019.25536431995,
    "name": "TEXAS INSTRUMENTS INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -6315,7 +6667,11 @@
      "ebitda_hi": 11850.73,
      "eps_hi": 8.54,
      "capex_hi": 3394.54,
-     "gm": 60.7
+     "gm": 60.7,
+     "fcf_bc": 8637.1,
+     "capex_bc": 2409.77,
+     "ocf": 11046.87,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -6332,7 +6688,11 @@
      "ebitda_hi": 17965.0,
      "eps_hi": 13.02,
      "capex_hi": 5946.0,
-     "gm": 64.2
+     "gm": 64.2,
+     "fcf_bc": 11032.04,
+     "capex_bc": 3170.09,
+     "ocf": 14202.13,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -6395,9 +6755,9 @@
   },
   "QCOM": {
    "bbg": "QCOM US Equity",
-   "px": 171.56,
-   "mktcap": 183569200000.0,
-   "ev": 191880.2,
+   "px": 173.53,
+   "mktcap": 185677100000.0,
+   "ev": 193988.1,
    "name": "QUALCOMM INC",
    "ccy": "USD",
    "lrq": "2026-09-27",
@@ -6457,7 +6817,11 @@
      "ebitda_hi": 14259.44,
      "eps_hi": 9.21,
      "capex_hi": 2145.34,
-     "gm": 54.0
+     "gm": 54.0,
+     "fcf_bc": 6353.83,
+     "capex_bc": 2494.17,
+     "ocf": 8848.0,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -6474,7 +6838,11 @@
      "ebitda_hi": 17984.0,
      "eps_hi": 11.92,
      "capex_hi": 3734.0,
-     "gm": 52.5
+     "gm": 52.5,
+     "fcf_bc": 8656.17,
+     "capex_bc": 2517.86,
+     "ocf": 11174.03,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -6537,9 +6905,9 @@
   },
   "MCHP": {
    "bbg": "MCHP US Equity",
-   "px": 62.56,
-   "mktcap": 34046630105.12,
-   "ev": 40629.43010512,
+   "px": 60.33,
+   "mktcap": 32833011416.909996,
+   "ev": 39415.81141691,
    "name": "MICROCHIP TECHNOLOGY INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -6556,31 +6924,31 @@
    "periods": {
     "1FQ": {
      "label": "Q4-26E",
-     "rev": 1606.1176470588236,
+     "rev": 1606.111111111111,
      "rev_hi": 1613.0,
-     "ebit": 606.4666666666666,
+     "ebit": 606.5,
      "ebit_hi": 615.0,
      "ebitda": 702.2,
      "ebitda_hi": 762.0,
-     "ni": 521.688,
-     "eps": 0.921,
-     "eps_hi": 1.12,
-     "gm": 64.55402606754754,
+     "ni": 521.765,
+     "eps": 0.912,
+     "eps_hi": 0.95,
+     "gm": 64.50069273421421,
      "capex": 30.9,
      "capex_hi": 36.0
     },
     "2FQ": {
      "label": "Q1-27E",
-     "rev": 1677.0952380952383,
-     "rev_hi": 1833.0,
-     "ebit": 636.35,
-     "ebit_hi": 756.0,
+     "rev": 1668.8095238095239,
+     "rev_hi": 1718.0,
+     "ebit": 630.0,
+     "ebit_hi": 657.0,
      "ebitda": 727.3,
      "ebitda_hi": 799.0,
-     "ni": 553.556,
-     "eps": 0.969,
-     "eps_hi": 1.13,
-     "gm": 64.77705080198787,
+     "ni": 547.444,
+     "eps": 0.96,
+     "eps_hi": 1.02,
+     "gm": 64.73260635754342,
      "capex": 29.592307692307692,
      "capex_hi": 36.0
     },
@@ -6588,35 +6956,43 @@
      "label": "CY2026",
      "nq": 4,
      "n_actual": 3,
-     "rev": 5930.84,
-     "ebit": 2102.62,
+     "rev": 5930.83,
+     "ebit": 2102.66,
      "ebitda": 2473.65,
-     "ni": 1742.39,
-     "eps": 3.06,
+     "ni": 1742.47,
+     "eps": 3.05,
      "capex": 96.54,
      "rev_hi": 5937.72,
      "ebit_hi": 2111.16,
      "ebitda_hi": 2533.45,
-     "eps_hi": 3.26,
+     "eps_hi": 3.09,
      "capex_hi": 101.64,
-     "gm": 63.9
+     "gm": 63.9,
+     "fcf_bc": 1640.39,
+     "capex_bc": 83.4,
+     "ocf": 1723.79,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
      "nq": 4,
      "n_actual": 0,
-     "rev": 7126.46,
-     "ebit": 2778.52,
+     "rev": 7110.2,
+     "ebit": 2769.64,
      "ebitda": 3141.14,
-     "ni": 2406.53,
-     "eps": 4.21,
-     "capex": 122.3,
-     "rev_hi": 7621.0,
-     "ebit_hi": 3104.0,
+     "ni": 2396.76,
+     "eps": 4.2,
+     "capex": 122.34,
+     "rev_hi": 7428.0,
+     "ebit_hi": 2925.0,
      "ebitda_hi": 3501.0,
-     "eps_hi": 4.71,
+     "eps_hi": 4.49,
      "capex_hi": 186.0,
-     "gm": 64.9
+     "gm": 64.9,
+     "fcf_bc": 2309.41,
+     "capex_bc": 122.34,
+     "ocf": 2431.75,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -6679,9 +7055,9 @@
   },
   "ON": {
    "bbg": "ON US Equity",
-   "px": 69.32,
-   "mktcap": 26985200777.479996,
-   "ev": 26565.700777479997,
+   "px": 69.61,
+   "mktcap": 27098093279.29,
+   "ev": 26678.593279290002,
    "name": "ON SEMICONDUCTOR",
    "ccy": "USD",
    "lrq": "2026-10-02",
@@ -6741,7 +7117,11 @@
      "ebitda_hi": 2092.95,
      "eps_hi": 3.32,
      "capex_hi": 206.79,
-     "gm": 40.4
+     "gm": 40.4,
+     "fcf_bc": 1614.82,
+     "capex_bc": 133.27,
+     "ocf": 1748.09,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -6758,7 +7138,11 @@
      "ebitda_hi": 3097.0,
      "eps_hi": 5.29,
      "capex_hi": 403.0,
-     "gm": 44.2
+     "gm": 44.2,
+     "fcf_bc": 1982.26,
+     "capex_bc": 379.13,
+     "ocf": 2361.39,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -6821,9 +7205,9 @@
   },
   "NXPI": {
    "bbg": "NXPI US Equity",
-   "px": 260.465,
-   "mktcap": 65650981519.41999,
-   "ev": 73062.98151941999,
+   "px": 261.56,
+   "mktcap": 65926979541.28,
+   "ev": 73338.97954128,
    "name": "NXP SEMICONDUCTORS NV",
    "ccy": "USD",
    "lrq": "2026-09-27",
@@ -6883,7 +7267,11 @@
      "ebitda_hi": 5884.85,
      "eps_hi": 15.15,
      "capex_hi": 481.55,
-     "gm": 58.2
+     "gm": 58.2,
+     "fcf_bc": 3820.41,
+     "capex_bc": 323.56,
+     "ocf": 4143.97,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -6900,11 +7288,15 @@
      "ebitda_hi": 6998.0,
      "eps_hi": 20.07,
      "capex_hi": 842.0,
-     "gm": 59.7
+     "gm": 59.7,
+     "fcf_bc": 4122.58,
+     "capex_bc": 785.0,
+     "ocf": 4907.58,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
-     "rev": 14317.625,
+     "rev": 14317.88,
      "rev_hi": 14357.0,
      "ebit": 5134.0,
      "ebit_hi": 5171.0,
@@ -6912,34 +7304,34 @@
      "ebitda_hi": 5955.0,
      "ni": 3844.286,
      "ni_hi": null,
-     "eps": 15.249,
+     "eps": 15.248000000000001,
      "eps_hi": 15.4,
-     "gm": 58.21121500386742,
+     "gm": 58.210624740505985,
      "gm_hi": null,
      "capex": 323.5625,
      "capex_hi": 430.0
     },
     "2FY": {
      "label": "2FY",
-     "rev": 16035.791666666666,
+     "rev": 16057.76,
      "rev_hi": 16788.0,
-     "ebit": 5975.636363636364,
-     "ebit_hi": 6266.0,
+     "ebit": 5990.521739130435,
+     "ebit_hi": 6318.0,
      "ebitda": 6571.7692307692305,
      "ebitda_hi": 7176.0,
      "ni": 4561.136,
      "ni_hi": null,
-     "eps": 18.463,
+     "eps": 18.505,
      "eps_hi": 20.2,
-     "gm": 59.70333097638516,
+     "gm": 59.734734609207,
      "gm_hi": null,
      "capex": 785.0,
      "capex_hi": 808.0
     },
     "3FY": {
      "label": "3FY",
-     "rev": 17472.88235294118,
-     "rev_hi": 18515.0,
+     "rev": 17550.166666666668,
+     "rev_hi": 18864.0,
      "ebit": 6746.5,
      "ebit_hi": 7211.0,
      "ebitda": 7406.181818181818,
@@ -6948,7 +7340,7 @@
      "ni_hi": null,
      "eps": 21.459,
      "eps_hi": 23.5,
-     "gm": 60.87649675082222,
+     "gm": 60.96292007768204,
      "gm_hi": null,
      "capex": 716.5454545454545,
      "capex_hi": 888.0
@@ -6963,14 +7355,14 @@
   },
   "ARM": {
    "bbg": "ARM US Equity",
-   "px": 183.795,
-   "mktcap": 196660650000.0,
-   "ev": 193519.65,
+   "px": 181.49,
+   "mktcap": 194194300000.00003,
+   "ev": 191053.30000000002,
    "name": "ARM HOLDINGS PLC-ADR",
    "ccy": "USD",
    "lrq": "2026-09-30",
    "pt": {
-    "cons": 271.4444580078125,
+    "cons": 270.729736328125,
     "hi": 430.0,
     "lo": 125.0,
     "rating": 4.254901885986328,
@@ -7025,7 +7417,11 @@
      "ebitda_hi": 2775.56,
      "eps_hi": 2.09,
      "capex_hi": 533.93,
-     "gm": 98.0
+     "gm": 98.0,
+     "fcf_bc": 1457.18,
+     "capex_bc": 449.09,
+     "ocf": 1906.27,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -7042,7 +7438,11 @@
      "ebitda_hi": 4378.0,
      "eps_hi": 3.33,
      "capex_hi": 1138.0,
-     "gm": 92.8
+     "gm": 92.8,
+     "fcf_bc": 2379.51,
+     "capex_bc": 481.3,
+     "ocf": 2860.81,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -7167,7 +7567,11 @@
      "ebitda_hi": 439672235.32,
      "eps_hi": 49526.19,
      "capex_hi": 86981593.78,
-     "gm": 69.0
+     "gm": 69.0,
+     "fcf_bc": 249062463.12,
+     "capex_bc": 75841037.59,
+     "ocf": 324903500.71,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -7184,7 +7588,11 @@
      "ebitda_hi": 745389925.0,
      "eps_hi": 91872.82,
      "capex_hi": 127733419.0,
-     "gm": 75.9
+     "gm": 75.9,
+     "fcf_bc": 402310256.26,
+     "capex_bc": 92212326.14,
+     "ocf": 494522582.4,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -7309,7 +7717,11 @@
      "ebitda_hi": 315268332.12,
      "eps_hi": 317555.02,
      "capex_hi": 58394266.29,
-     "gm": 84.2
+     "gm": 84.2,
+     "fcf_bc": 172452504.51,
+     "capex_bc": 47524091.77,
+     "ocf": 219976596.29,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -7326,7 +7738,11 @@
      "ebitda_hi": 562246352.0,
      "eps_hi": 777357.18,
      "capex_hi": 97413731.0,
-     "gm": 85.5
+     "gm": 85.5,
+     "fcf_bc": 305234170.52,
+     "capex_bc": 67758942.35,
+     "ocf": 372993112.87,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -7451,7 +7867,11 @@
      "ebitda_hi": 6594821.75,
      "eps_hi": 2832.64,
      "capex_hi": 469564.4,
-     "gm": 79.6
+     "gm": 79.6,
+     "fcf_bc": 3873868.04,
+     "capex_bc": 339973.4,
+     "ocf": 4213841.44,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -7468,7 +7888,11 @@
      "ebitda_hi": 12246166.0,
      "eps_hi": 6189.0,
      "capex_hi": 1020000.0,
-     "gm": 84.1
+     "gm": 84.1,
+     "fcf_bc": 6574627.71,
+     "capex_bc": 610643.0,
+     "ocf": 7185270.71,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -7514,7 +7938,7 @@
      "ebitda_hi": 21783000.0,
      "ni": 8599101.0,
      "ni_hi": null,
-     "eps": 6048.817,
+     "eps": 6048.816,
      "eps_hi": 9202.0,
      "gm": 82.42734980606443,
      "gm_hi": null,
@@ -7531,9 +7955,9 @@
   },
   "LRCX": {
    "bbg": "LRCX US Equity",
-   "px": 226.58,
-   "mktcap": 283037165180.0,
-   "ev": 279335.22518,
+   "px": 222.39,
+   "mktcap": 277803138690.0,
+   "ev": 274101.19869,
    "name": "LAM RESEARCH CORP",
    "ccy": "USD",
    "lrq": "2026-09-27",
@@ -7593,7 +8017,11 @@
      "ebitda_hi": 11659.32,
      "eps_hi": 7.82,
      "capex_hi": 1173.55,
-     "gm": 51.3
+     "gm": 51.3,
+     "fcf_bc": 7546.01,
+     "capex_bc": 1076.47,
+     "ocf": 8622.48,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -7610,7 +8038,11 @@
      "ebitda_hi": 17554.0,
      "eps_hi": 12.16,
      "capex_hi": 1830.0,
-     "gm": 52.9
+     "gm": 52.9,
+     "fcf_bc": 10999.24,
+     "capex_bc": 1282.25,
+     "ocf": 12281.48,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -7673,9 +8105,9 @@
   },
   "CRDO": {
    "bbg": "CRDO US Equity",
-   "px": 135.19,
-   "mktcap": 25409219794.42,
-   "ev": 24665.698794419997,
+   "px": 129.8,
+   "mktcap": 24396158956.399998,
+   "ev": 23652.637956399998,
    "name": "CREDO TECHNOLOGY GROUP HOLDI",
    "ccy": "USD",
    "lrq": "2026-08-01",
@@ -7735,7 +8167,11 @@
      "ebitda_hi": 1136.4,
      "eps_hi": 5.8,
      "capex_hi": 497.13,
-     "gm": 67.3
+     "gm": 67.3,
+     "fcf_bc": 652.75,
+     "capex_bc": 82.86,
+     "ocf": 735.61,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -7752,7 +8188,11 @@
      "ebitda_hi": 2237.0,
      "eps_hi": 10.47,
      "capex_hi": 290.3,
-     "gm": 67.2
+     "gm": 67.2,
+     "fcf_bc": 1375.82,
+     "capex_bc": 141.96,
+     "ocf": 1517.78,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -7815,9 +8255,9 @@
   },
   "ALAB": {
    "bbg": "ALAB US Equity",
-   "px": 220.73,
-   "mktcap": 38579647414.75,
-   "ev": 37246.39741475,
+   "px": 216.18,
+   "mktcap": 37784388973.5,
+   "ev": 36451.1389735,
    "name": "ASTERA LABS INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -7844,7 +8284,7 @@
      "eps": 1.645,
      "eps_hi": 1.73,
      "gm": 72.02017232596157,
-     "capex": 33.07142857142857,
+     "capex": 33.042857142857144,
      "capex_hi": 81.2
     },
     "2FQ": {
@@ -7858,8 +8298,8 @@
      "ni": 314.85,
      "eps": 1.649,
      "eps_hi": 1.97,
-     "gm": 71.4367122210393,
-     "capex": 33.86666666666667,
+     "gm": 71.43414485990517,
+     "capex": 33.85,
      "capex_hi": 81.2
     },
     "CY2026": {
@@ -7871,13 +8311,17 @@
      "ebitda": 795.4,
      "ni": 754.6,
      "eps": 4.06,
-     "capex": 76.56,
+     "capex": 76.53,
      "rev_hi": 1942.9,
      "ebit_hi": 815.85,
      "ebitda_hi": 844.6,
      "eps_hi": 4.15,
      "capex_hi": 124.69,
-     "gm": 72.5
+     "gm": 72.5,
+     "fcf_bc": 541.6,
+     "capex_bc": 99.15,
+     "ocf": 640.75,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -7888,13 +8332,17 @@
      "ebitda": 1246.67,
      "ni": 1371.9,
      "eps": 7.11,
-     "capex": 145.32,
+     "capex": 145.31,
      "rev_hi": 4065.0,
      "ebit_hi": 1600.0,
      "ebitda_hi": 1451.0,
      "eps_hi": 9.02,
      "capex_hi": 324.8,
-     "gm": 71.0
+     "gm": 71.0,
+     "fcf_bc": 1208.51,
+     "capex_bc": 133.6,
+     "ocf": 1342.11,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -7906,9 +8354,9 @@
      "ebitda_hi": 901.0,
      "ni": 810.2,
      "ni_hi": null,
-     "eps": 4.373,
+     "eps": 4.374,
      "eps_hi": 4.48,
-     "gm": 73.11482387732522,
+     "gm": 73.11642428849436,
      "gm_hi": null,
      "capex": 99.15,
      "capex_hi": 133.0
@@ -7923,9 +8371,9 @@
      "ebitda_hi": 1712.0,
      "ni": 1346.261,
      "ni_hi": null,
-     "eps": 7.142,
+     "eps": 7.143,
      "eps_hi": 9.02,
-     "gm": 71.06554375196316,
+     "gm": 71.06552113997496,
      "gm_hi": null,
      "capex": 133.6,
      "capex_hi": 325.0
@@ -7942,7 +8390,7 @@
      "ni_hi": null,
      "eps": 9.032,
      "eps_hi": 10.76,
-     "gm": 70.66649233665815,
+     "gm": 70.66823732933068,
      "gm_hi": null,
      "capex": 159.27272727272728,
      "capex_hi": 325.0
@@ -7957,9 +8405,9 @@
   },
   "APH": {
    "bbg": "APH US Equity",
-   "px": 81.13,
-   "mktcap": 200331160182.43997,
-   "ev": 213048.46018243997,
+   "px": 79.95,
+   "mktcap": 197417431980.6,
+   "ev": 210134.7319806,
    "name": "AMPHENOL CORP-CL A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -8019,7 +8467,11 @@
      "ebitda_hi": 11616.1,
      "eps_hi": 2.64,
      "capex_hi": 1459.27,
-     "gm": 38.9
+     "gm": 38.9,
+     "fcf_bc": 5926.21,
+     "capex_bc": 1535.92,
+     "ocf": 7462.14,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -8036,7 +8488,11 @@
      "ebitda_hi": 16207.0,
      "eps_hi": 3.87,
      "capex_hi": 2030.0,
-     "gm": 39.5
+     "gm": 39.5,
+     "fcf_bc": 8479.9,
+     "capex_bc": 1803.62,
+     "ocf": 10283.51,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -8099,9 +8555,9 @@
   },
   "TEL": {
    "bbg": "TEL US Equity",
-   "px": 219.72,
-   "mktcap": 62992646712.84,
-   "ev": 67084.64671284,
+   "px": 217.76,
+   "mktcap": 62430724322.71999,
+   "ev": 66522.72432272,
    "name": "TE CONNECTIVITY PLC",
    "ccy": "USD",
    "lrq": "2026-09-25",
@@ -8161,7 +8617,11 @@
      "ebitda_hi": 5522.83,
      "eps_hi": 11.96,
      "capex_hi": 1236.39,
-     "gm": 36.8
+     "gm": 36.8,
+     "fcf_bc": 3583.09,
+     "capex_bc": 1176.48,
+     "ocf": 4759.56,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -8178,7 +8638,11 @@
      "ebitda_hi": 6555.0,
      "eps_hi": 14.52,
      "capex_hi": 1444.0,
-     "gm": 36.9
+     "gm": 36.9,
+     "fcf_bc": 3810.06,
+     "capex_bc": 1290.17,
+     "ocf": 5100.24,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -8241,9 +8705,9 @@
   },
   "NVT": {
    "bbg": "NVT US Equity",
-   "px": 115.155,
-   "mktcap": 18608824599.300003,
-   "ev": 19867.324599300002,
+   "px": 112.48,
+   "mktcap": 18176549788.800003,
+   "ev": 19435.049788800003,
    "name": "NVENT ELECTRIC PLC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -8303,7 +8767,11 @@
      "ebitda_hi": 1268.56,
      "eps_hi": 5.12,
      "capex_hi": 146.28,
-     "gm": 37.3
+     "gm": 37.3,
+     "fcf_bc": 755.68,
+     "capex_bc": 139.41,
+     "ocf": 895.09,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -8320,7 +8788,11 @@
      "ebitda_hi": 1810.0,
      "eps_hi": 7.52,
      "capex_hi": 208.3,
-     "gm": 37.2
+     "gm": 37.2,
+     "fcf_bc": 977.78,
+     "capex_bc": 175.35,
+     "ocf": 1153.13,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -8383,9 +8855,9 @@
   },
   "VRT": {
    "bbg": "VRT US Equity",
-   "px": 196.61,
-   "mktcap": 75706729372.81,
-   "ev": 75263.22937281,
+   "px": 194.22,
+   "mktcap": 74786434966.61998,
+   "ev": 74342.93496661999,
    "name": "VERTIV HOLDINGS CO-A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -8445,7 +8917,11 @@
      "ebitda_hi": 3548.24,
      "eps_hi": 6.68,
      "capex_hi": 521.34,
-     "gm": 37.8
+     "gm": 37.8,
+     "fcf_bc": 2662.0,
+     "capex_bc": 575.39,
+     "ocf": 3237.4,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -8462,7 +8938,11 @@
      "ebitda_hi": 5832.0,
      "eps_hi": 11.92,
      "capex_hi": 869.0,
-     "gm": 39.1
+     "gm": 39.1,
+     "fcf_bc": 3178.51,
+     "capex_bc": 662.5,
+     "ocf": 3841.01,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -8525,9 +9005,9 @@
   },
   "FLEX": {
    "bbg": "FLEX US Equity",
-   "px": 78.975,
-   "mktcap": 29178166995.899998,
-   "ev": 32078.1669959,
+   "px": 76.09,
+   "mktcap": 28112272576.36,
+   "ev": 31012.27257636,
    "name": "FLEX LTD",
    "ccy": "USD",
    "lrq": "2026-09-25",
@@ -8587,7 +9067,11 @@
      "ebitda_hi": 2789.89,
      "eps_hi": 4.15,
      "capex_hi": 1506.67,
-     "gm": 9.9
+     "gm": 9.9,
+     "fcf_bc": 722.79,
+     "capex_bc": 1158.52,
+     "ocf": 1881.31,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -8604,7 +9088,11 @@
      "ebitda_hi": 4706.0,
      "eps_hi": 7.52,
      "capex_hi": 1848.0,
-     "gm": 11.2
+     "gm": 11.2,
+     "fcf_bc": 1685.74,
+     "capex_bc": 1399.58,
+     "ocf": 3085.31,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -8667,9 +9155,9 @@
   },
   "WOLF": {
    "bbg": "WOLF US Equity",
-   "px": 26.31,
-   "mktcap": 1409739210.1799998,
-   "ev": 2201.2392101799996,
+   "px": 26.23,
+   "mktcap": 1405452659.9399998,
+   "ev": 2196.9526599399996,
    "name": "WOLFSPEED INC",
    "ccy": "USD",
    "lrq": "2026-09-27",
@@ -8729,7 +9217,11 @@
      "ebitda_hi": null,
      "eps_hi": -9.11,
      "capex_hi": 112.5,
-     "gm": -12.9
+     "gm": -12.9,
+     "fcf_bc": -429.64,
+     "capex_bc": 87.24,
+     "ocf": -342.4,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -8746,7 +9238,11 @@
      "ebitda_hi": -142.8,
      "eps_hi": -5.48,
      "capex_hi": 42.4,
-     "gm": 0.6
+     "gm": 0.6,
+     "fcf_bc": -374.73,
+     "capex_bc": 42.39,
+     "ocf": -332.34,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -8809,9 +9305,9 @@
   },
   "NVTS": {
    "bbg": "NVTS US Equity",
-   "px": 9.525,
-   "mktcap": 2567059204.2,
-   "ev": 2042.1832041999996,
+   "px": 9.38,
+   "mktcap": 2527980612.64,
+   "ev": 2003.1046126399997,
    "name": "NAVITAS SEMICONDUCTOR CORP",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -8871,7 +9367,11 @@
      "ebitda_hi": -48.9,
      "eps_hi": -0.19,
      "capex_hi": 2.55,
-     "gm": 39.5
+     "gm": 39.5,
+     "fcf_bc": -102.95,
+     "capex_bc": 2.3,
+     "ocf": -100.65,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -8888,7 +9388,11 @@
      "ebitda_hi": -72.35,
      "eps_hi": -0.23,
      "capex_hi": 4.3,
-     "gm": 41.6
+     "gm": 41.6,
+     "fcf_bc": -75.15,
+     "capex_bc": 3.73,
+     "ocf": -71.42,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -8951,9 +9455,9 @@
   },
   "PANW": {
    "bbg": "PANW US Equity",
-   "px": 329.68,
-   "mktcap": 269932631308.08,
-   "ev": 264593.63130808,
+   "px": 326.36,
+   "mktcap": 267214309493.16,
+   "ev": 261875.30949316,
    "name": "PALO ALTO NETWORKS INC",
    "ccy": "USD",
    "lrq": "2026-07-31",
@@ -8977,7 +9481,7 @@
      "ebitda": 1166.5882352941178,
      "ebitda_hi": 1524.0,
      "ni": 818.205,
-     "eps": 0.972,
+     "eps": 0.973,
      "eps_hi": 1.01,
      "gm": 75.55347505284635,
      "capex": 87.97428571428571,
@@ -9013,7 +9517,11 @@
      "ebitda_hi": 5045.73,
      "eps_hi": 3.9,
      "capex_hi": 478.49,
-     "gm": 75.8
+     "gm": 75.8,
+     "fcf_bc": 4577.77,
+     "capex_bc": 395.65,
+     "ocf": 4973.43,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -9023,18 +9531,22 @@
      "ebit": 4562.01,
      "ebitda": 5339.38,
      "ni": 3753.57,
-     "eps": 4.5,
+     "eps": 4.51,
      "capex": 376.04,
      "rev_hi": 15658.0,
      "ebit_hi": 5429.0,
      "ebitda_hi": 6654.0,
      "eps_hi": 5.3,
      "capex_hi": 674.0,
-     "gm": 75.4
+     "gm": 75.4,
+     "fcf_bc": 5917.58,
+     "capex_bc": 376.52,
+     "ocf": 6294.11,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
-     "rev": 14161.72340425532,
+     "rev": 14161.479166666666,
      "rev_hi": 14309.0,
      "ebit": 4180.976190476191,
      "ebit_hi": 4261.0,
@@ -9042,7 +9554,7 @@
      "ebitda_hi": 7470.0,
      "ni": 3530.5950000000003,
      "ni_hi": null,
-     "eps": 4.183,
+     "eps": 4.188,
      "eps_hi": 4.37,
      "gm": 75.36684173945218,
      "gm_hi": null,
@@ -9059,7 +9571,7 @@
      "ebitda_hi": 7084.0,
      "ni": 4113.732,
      "ni_hi": null,
-     "eps": 4.867,
+     "eps": 4.865,
      "eps_hi": 5.82,
      "gm": 75.50996833934065,
      "gm_hi": null,
@@ -9068,19 +9580,19 @@
     },
     "3FY": {
      "label": "3FY",
-     "rev": 18435.28,
+     "rev": 18430.192307692305,
      "rev_hi": 21117.0,
-     "ebit": 5724.285714285714,
+     "ebit": 5717.636363636364,
      "ebit_hi": 7619.0,
      "ebitda": 5938.909090909091,
      "ebitda_hi": 7175.0,
-     "ni": 4712.857,
+     "ni": 4709.182,
      "ni_hi": null,
-     "eps": 5.708,
+     "eps": 5.6930000000000005,
      "eps_hi": 7.24,
      "gm": 75.45958166944992,
      "gm_hi": null,
-     "capex": 439.375,
+     "capex": 420.5882352941176,
      "capex_hi": 620.0
     }
    },
@@ -9093,9 +9605,9 @@
   },
   "CRWD": {
    "bbg": "CRWD US Equity",
-   "px": 229.28,
-   "mktcap": 234767780573.76,
-   "ev": 230611.91357376002,
+   "px": 225.76,
+   "mktcap": 231163529929.91998,
+   "ev": 227007.66292991998,
    "name": "CROWDSTRIKE HOLDINGS INC - A",
    "ccy": "USD",
    "lrq": "2026-07-31",
@@ -9155,7 +9667,11 @@
      "ebitda_hi": 2050.29,
      "eps_hi": 1.26,
      "capex_hi": 485.85,
-     "gm": 78.6
+     "gm": 78.6,
+     "fcf_bc": 1766.79,
+     "capex_bc": 492.57,
+     "ocf": 2259.36,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -9172,7 +9688,11 @@
      "ebitda_hi": 2519.0,
      "eps_hi": 1.77,
      "capex_hi": 883.0,
-     "gm": 79.3
+     "gm": 79.3,
+     "fcf_bc": 2329.97,
+     "capex_bc": 599.19,
+     "ocf": 2929.16,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -9235,9 +9755,9 @@
   },
   "CRM": {
    "bbg": "CRM US Equity",
-   "px": 212.99,
-   "mktcap": 175290770000.00003,
-   "ev": 205630.77000000002,
+   "px": 213.48,
+   "mktcap": 175694039999.99997,
+   "ev": 206034.03999999998,
    "name": "SALESFORCE INC",
    "ccy": "USD",
    "lrq": "2026-07-31",
@@ -9297,7 +9817,11 @@
      "ebitda_hi": 20442.67,
      "eps_hi": 14.01,
      "capex_hi": 751.51,
-     "gm": 80.4
+     "gm": 80.4,
+     "fcf_bc": 14926.86,
+     "capex_bc": 682.7,
+     "ocf": 15609.56,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -9314,7 +9838,11 @@
      "ebitda_hi": 23823.0,
      "eps_hi": 18.46,
      "capex_hi": 939.0,
-     "gm": 80.4
+     "gm": 80.4,
+     "fcf_bc": 16127.78,
+     "capex_bc": 739.18,
+     "ocf": 16866.96,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -9377,9 +9905,9 @@
   },
   "RDDT": {
    "bbg": "RDDT US Equity",
-   "px": 100.06,
-   "mktcap": 19320958723.86,
-   "ev": 16318.93572386,
+   "px": 98.67,
+   "mktcap": 19052558437.77,
+   "ev": 16050.53543777,
    "name": "REDDIT INC-CL A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -9421,8 +9949,8 @@
      "eps": 1.702,
      "eps_hi": 2.59,
      "gm": 91.48471291385384,
-     "capex": 2.6822,
-     "capex_hi": 10.8
+     "capex": 2.6872,
+     "capex_hi": 10.9
     },
     "CY2026": {
      "label": "CY2026",
@@ -9439,7 +9967,11 @@
      "ebitda_hi": 1486.08,
      "eps_hi": 7.31,
      "capex_hi": 19.61,
-     "gm": 91.4
+     "gm": 91.4,
+     "fcf_bc": 1380.48,
+     "capex_bc": 6.63,
+     "ocf": 1387.11,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -9450,13 +9982,17 @@
      "ebitda": 2005.42,
      "ni": 1851.26,
      "eps": 8.97,
-     "capex": 13.07,
+     "capex": 13.08,
      "rev_hi": 4878.0,
      "ebit_hi": 2329.0,
      "ebitda_hi": 2329.0,
      "eps_hi": 13.09,
-     "capex_hi": 54.7,
-     "gm": 91.5
+     "capex_hi": 55.0,
+     "gm": 91.5,
+     "fcf_bc": 1773.39,
+     "capex_bc": 13.91,
+     "ocf": 1787.3,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -9519,9 +10055,9 @@
   },
   "SHOP": {
    "bbg": "SHOP US Equity",
-   "px": 149.51,
-   "mktcap": 193730911949.7863,
-   "ev": 189191.9119497863,
+   "px": 146.61,
+   "mktcap": 188783038110.68314,
+   "ev": 184244.03811068315,
    "name": "SHOPIFY INC - CLASS A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -9581,7 +10117,11 @@
      "ebitda_hi": 2792.92,
      "eps_hi": 1.86,
      "capex_hi": 39.68,
-     "gm": 47.0
+     "gm": 47.0,
+     "fcf_bc": 2868.48,
+     "capex_bc": 19.73,
+     "ocf": 2888.21,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -9598,7 +10138,11 @@
      "ebitda_hi": 5098.0,
      "eps_hi": 3.5,
      "capex_hi": 91.7,
-     "gm": 46.7
+     "gm": 46.7,
+     "fcf_bc": 3715.43,
+     "capex_bc": 28.93,
+     "ocf": 3744.36,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -9661,9 +10205,9 @@
   },
   "DELL": {
    "bbg": "DELL US Equity",
-   "px": 338.608,
-   "mktcap": 215291283652.0,
-   "ev": 238993.283652,
+   "px": 334.38,
+   "mktcap": 212603067345.0,
+   "ev": 236305.067345,
    "name": "DELL TECHNOLOGIES -C",
    "ccy": "USD",
    "lrq": "2026-07-31",
@@ -9723,7 +10267,11 @@
      "ebitda_hi": 22685.11,
      "eps_hi": 24.55,
      "capex_hi": 4541.38,
-     "gm": 18.4
+     "gm": 18.4,
+     "fcf_bc": 13495.57,
+     "capex_bc": 4401.94,
+     "ocf": 17897.51,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -9740,7 +10288,11 @@
      "ebitda_hi": 34408.0,
      "eps_hi": 37.03,
      "capex_hi": 6834.0,
-     "gm": 18.4
+     "gm": 18.4,
+     "fcf_bc": 18598.51,
+     "capex_bc": 4835.14,
+     "ocf": 23433.64,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -9803,9 +10355,9 @@
   },
   "HPE": {
    "bbg": "HPE US Equity",
-   "px": 47.5752,
-   "mktcap": 63154402353.8808,
-   "ev": 77244.4023538808,
+   "px": 47.93,
+   "mktcap": 63625386857.46999,
+   "ev": 77715.38685747,
    "name": "HEWLETT PACKARD ENTERPRISE",
    "ccy": "USD",
    "lrq": "2026-07-31",
@@ -9865,7 +10417,11 @@
      "ebitda_hi": 10759.0,
      "eps_hi": 4.08,
      "capex_hi": 3652.7,
-     "gm": 36.2
+     "gm": 36.2,
+     "fcf_bc": 3658.65,
+     "capex_bc": 2832.96,
+     "ocf": 6491.61,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -9882,7 +10438,11 @@
      "ebitda_hi": 13584.0,
      "eps_hi": 5.62,
      "capex_hi": 4561.0,
-     "gm": 36.6
+     "gm": 36.6,
+     "fcf_bc": 5373.74,
+     "capex_bc": 3245.99,
+     "ocf": 8619.73,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -9945,9 +10505,9 @@
   },
   "SMCI": {
    "bbg": "SMCI US Equity",
-   "px": 28.459,
-   "mktcap": 18760951637.453,
-   "ev": 21042.166637453,
+   "px": 27.79,
+   "mktcap": 18319928528.93,
+   "ev": 20601.14352893,
    "name": "SUPER MICRO COMPUTER INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -10007,7 +10567,11 @@
      "ebitda_hi": 5577.43,
      "eps_hi": 5.19,
      "capex_hi": 283.25,
-     "gm": 11.3
+     "gm": 11.3,
+     "fcf_bc": -7079.7,
+     "capex_bc": 217.1,
+     "ocf": -6862.59,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -10024,7 +10588,11 @@
      "ebitda_hi": 8876.0,
      "eps_hi": 7.39,
      "capex_hi": 350.0,
-     "gm": 11.1
+     "gm": 11.1,
+     "fcf_bc": 1271.86,
+     "capex_bc": 259.1,
+     "ocf": 1530.96,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -10087,12 +10655,12 @@
   },
   "CRWV": {
    "bbg": "CRWV US Equity",
-   "px": 50.4,
-   "mktcap": 27797444740.800007,
-   "ev": 73866.44474080001,
+   "px": 48.73,
+   "mktcap": 26876378615.460003,
+   "ev": 72945.37861546001,
    "name": "COREWEAVE INC-CL A",
    "ccy": "USD",
-   "lrq": "2026-06-30",
+   "lrq": "2026-09-30",
    "pt": {
     "cons": 126.80952453613281,
     "hi": 278.0,
@@ -10105,21 +10673,6 @@
    },
    "periods": {
     "1FQ": {
-     "label": "Q3-26E",
-     "rev": 3555.4146341463415,
-     "rev_hi": 3751.0,
-     "ebit": 245.83783783783784,
-     "ebit_hi": 327.0,
-     "ebitda": 2050.363636363636,
-     "ebitda_hi": 2231.0,
-     "ni": -692.414,
-     "eps": -1.21,
-     "eps_hi": null,
-     "gm": 66.89565542540842,
-     "capex": 11602.151515151516,
-     "capex_hi": 15625.0
-    },
-    "2FQ": {
      "label": "Q4-26E",
      "rev": 4701.8,
      "rev_hi": 5031.0,
@@ -10134,22 +10687,41 @@
      "capex": 9513.121212121212,
      "capex_hi": 14047.0
     },
+    "2FQ": {
+     "label": "Q1-27E",
+     "rev": 5337.263157894738,
+     "rev_hi": 5818.0,
+     "ebit": 729.2702702702702,
+     "ebit_hi": 1117.0,
+     "ebitda": 3255.285714285714,
+     "ebitda_hi": 3595.0,
+     "ni": -392.35200000000003,
+     "eps": -0.682,
+     "eps_hi": null,
+     "gm": 69.9035667136735,
+     "capex": 10554.0,
+     "capex_hi": 17910.0
+    },
     "CY2026": {
      "label": "CY2026",
      "nq": 4,
-     "n_actual": 2,
+     "n_actual": 3,
      "rev": 12788.52,
      "ebit": 1003.67,
      "ebitda": 7474.05,
      "ni": -2218.99,
      "eps": -3.94,
      "capex": 35459.71,
-     "rev_hi": 13313.3,
-     "ebit_hi": 1327.42,
-     "ebitda_hi": 8029.55,
+     "rev_hi": 13117.72,
+     "ebit_hi": 1246.26,
+     "ebitda_hi": 7848.92,
      "eps_hi": -3.94,
-     "capex_hi": 44016.43,
-     "gm": 67.7
+     "capex_hi": 39993.58,
+     "gm": 67.7,
+     "fcf_bc": -27263.93,
+     "capex_bc": 35570.37,
+     "ocf": 8306.44,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -10166,7 +10738,11 @@
      "ebitda_hi": 20359.0,
      "eps_hi": -2.23,
      "capex_hi": 74846.0,
-     "gm": 70.6
+     "gm": 70.6,
+     "fcf_bc": -30224.07,
+     "capex_bc": 47879.92,
+     "ocf": 17655.85,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -10229,9 +10805,9 @@
   },
   "NBIS": {
    "bbg": "NBIS US Equity",
-   "px": 142.4599,
-   "mktcap": 40979333590.7582,
-   "ev": 42994.3335907582,
+   "px": 134.0,
+   "mktcap": 38545799212.0,
+   "ev": 40560.799212,
    "name": "NEBIUS GROUP NV",
    "ccy": "USD",
    "lrq": "2026-06-30",
@@ -10291,7 +10867,11 @@
      "ebitda_hi": 1695.6,
      "eps_hi": -3.6,
      "capex_hi": 28111.22,
-     "gm": 72.1
+     "gm": 72.1,
+     "fcf_bc": -15734.62,
+     "capex_bc": 24138.17,
+     "ocf": 8403.55,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -10308,7 +10888,11 @@
      "ebitda_hi": 10275.58,
      "eps_hi": -4.17,
      "capex_hi": 50850.67,
-     "gm": 73.6
+     "gm": 73.6,
+     "fcf_bc": -22656.46,
+     "capex_bc": 31201.05,
+     "ocf": 8544.59,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -10371,9 +10955,9 @@
   },
   "CDNS": {
    "bbg": "CDNS US Equity",
-   "px": 332.41,
-   "mktcap": 91206323390.00002,
-   "ev": 92387.54539000001,
+   "px": 331.64,
+   "mktcap": 90995051560.0,
+   "ev": 92176.27356,
    "name": "CADENCE DESIGN SYS INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -10433,7 +11017,11 @@
      "ebitda_hi": 3094.94,
      "eps_hi": 8.27,
      "capex_hi": 247.94,
-     "gm": 88.2
+     "gm": 88.2,
+     "fcf_bc": 1776.84,
+     "capex_bc": 237.57,
+     "ocf": 2014.41,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -10450,7 +11038,11 @@
      "ebitda_hi": 4048.0,
      "eps_hi": 10.52,
      "capex_hi": 310.1,
-     "gm": 88.4
+     "gm": 88.4,
+     "fcf_bc": 2375.98,
+     "capex_bc": 241.21,
+     "ocf": 2617.19,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -10513,9 +11105,9 @@
   },
   "SNPS": {
    "bbg": "SNPS US Equity",
-   "px": 462.92,
-   "mktcap": 88712436166.31999,
-   "ev": 95945.39616632,
+   "px": 459.95,
+   "mktcap": 88143275327.69998,
+   "ev": 95376.2353277,
    "name": "SYNOPSYS INC",
    "ccy": "USD",
    "lrq": "2026-07-31",
@@ -10575,7 +11167,11 @@
      "ebitda_hi": 5476.55,
      "eps_hi": 16.04,
      "capex_hi": 353.1,
-     "gm": 83.2
+     "gm": 83.2,
+     "fcf_bc": 2432.44,
+     "capex_bc": 266.54,
+     "ocf": 2698.98,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -10592,7 +11188,11 @@
      "ebitda_hi": 6880.0,
      "eps_hi": 22.49,
      "capex_hi": 553.0,
-     "gm": 84.3
+     "gm": 84.3,
+     "fcf_bc": 3354.48,
+     "capex_bc": 392.96,
+     "ocf": 3747.44,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -10717,7 +11317,11 @@
      "ebitda_hi": 1041953.0,
      "eps_hi": 339.5,
      "capex_hi": 218311.0,
-     "gm": 46.6
+     "gm": 46.6,
+     "fcf_bc": 497570.48,
+     "capex_bc": 160817.0,
+     "ocf": 658387.48,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -10734,7 +11338,11 @@
      "ebitda_hi": 1469983.0,
      "eps_hi": 570.33,
      "capex_hi": 145300.0,
-     "gm": 49.9
+     "gm": 49.9,
+     "fcf_bc": 842824.15,
+     "capex_bc": 138886.25,
+     "ocf": 981710.4,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -10859,7 +11467,11 @@
      "ebitda_hi": 808812.25,
      "eps_hi": 796.97,
      "capex_hi": 24544.0,
-     "gm": 67.8
+     "gm": 67.8,
+     "fcf_bc": 482738.1,
+     "capex_bc": 43692.0,
+     "ocf": 526430.1,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -10876,7 +11488,11 @@
      "ebitda_hi": 1368140.0,
      "eps_hi": 1430.39,
      "capex_hi": null,
-     "gm": 70.1
+     "gm": 70.1,
+     "fcf_bc": 799481.33,
+     "capex_bc": 55722.8,
+     "ocf": 855204.13,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -10939,9 +11555,9 @@
   },
   "BESI": {
    "bbg": "BESI NA Equity",
-   "px": 152.7,
-   "mktcap": 12391106892.599998,
-   "ev": 12154.550892599998,
+   "px": 150.8,
+   "mktcap": 12236928090.400002,
+   "ev": 12000.3720904,
    "name": "BE SEMICONDUCTOR INDUSTRIES",
    "ccy": "EUR",
    "lrq": "2026-09-30",
@@ -11001,7 +11617,11 @@
      "ebitda_hi": 468.01,
      "eps_hi": 4.52,
      "capex_hi": 16.38,
-     "gm": 64.4
+     "gm": 64.4,
+     "fcf_bc": 308.34,
+     "capex_bc": 14.46,
+     "ocf": 322.79,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -11018,7 +11638,11 @@
      "ebitda_hi": 746.0,
      "eps_hi": 7.54,
      "capex_hi": 27.37,
-     "gm": 65.2
+     "gm": 65.2,
+     "fcf_bc": 498.9,
+     "capex_bc": 22.59,
+     "ocf": 521.49,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -11143,7 +11767,11 @@
      "ebitda_hi": 254244.25,
      "eps_hi": 1656.03,
      "capex_hi": 42226.0,
-     "gm": 70.6
+     "gm": 70.6,
+     "fcf_bc": 169511.47,
+     "capex_bc": 41795.0,
+     "ocf": 211306.47,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -11160,7 +11788,11 @@
      "ebitda_hi": 321063.0,
      "eps_hi": 2115.58,
      "capex_hi": null,
-     "gm": 72.2
+     "gm": 72.2,
+     "fcf_bc": 167392.94,
+     "capex_bc": 35539.29,
+     "ocf": 202932.23,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -11224,8 +11856,8 @@
   "SMIC": {
    "bbg": "981 HK Equity",
    "px": 47.24,
-   "mktcap": 606739736176.9138,
-   "ev": 95764.61622437861,
+   "mktcap": 606668283441.5515,
+   "ev": 95753.537053065,
    "name": "SEMICONDUCTOR MANUFACTURI-H",
    "ccy": "USD",
    "lrq": "2026-06-30",
@@ -11285,7 +11917,11 @@
      "ebitda_hi": 6814.0,
      "eps_hi": 0.21,
      "capex_hi": 9114.5,
-     "gm": 23.2
+     "gm": 23.2,
+     "fcf_bc": -1182.86,
+     "capex_bc": 7947.16,
+     "ocf": 6764.3,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -11302,7 +11938,11 @@
      "ebitda_hi": 8972.0,
      "eps_hi": 0.34,
      "capex_hi": 9252.0,
-     "gm": 25.5
+     "gm": 25.5,
+     "fcf_bc": -948.45,
+     "capex_bc": 8143.58,
+     "ocf": 7195.13,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -11427,7 +12067,11 @@
      "ebitda_hi": 142507.37,
      "eps_hi": 74.6,
      "capex_hi": 25991.9,
-     "gm": 45.8
+     "gm": 45.8,
+     "fcf_bc": 55234.8,
+     "capex_bc": 18083.59,
+     "ocf": 73318.39,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -11444,7 +12088,11 @@
      "ebitda_hi": 395914.0,
      "eps_hi": 197.27,
      "capex_hi": 44922.0,
-     "gm": 44.3
+     "gm": 44.3,
+     "fcf_bc": 172361.02,
+     "capex_bc": 20701.59,
+     "ocf": 193062.61,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -11507,20 +12155,20 @@
   },
   "AKAM": {
    "bbg": "AKAM US Equity",
-   "px": 81.93,
-   "mktcap": 11816696307.75,
-   "ev": 17026.41630775,
+   "px": 83.71,
+   "mktcap": 12073424239.249998,
+   "ev": 17283.14423925,
    "name": "AKAMAI TECHNOLOGIES INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
    "pt": {
-    "cons": 132.5,
+    "cons": 129.5,
     "hi": 225.0,
     "lo": 73.0,
-    "rating": 4.291666507720947,
+    "rating": 4.208333492279053,
     "n": 24.0,
-    "buy": 17.0,
-    "hold": 6.0,
+    "buy": 16.0,
+    "hold": 7.0,
     "sell": 1.0
    },
    "periods": {
@@ -11569,7 +12217,11 @@
      "ebitda_hi": 1746.74,
      "eps_hi": 6.61,
      "capex_hi": 3852.17,
-     "gm": 70.6
+     "gm": 70.6,
+     "fcf_bc": -2006.62,
+     "capex_bc": 3585.15,
+     "ocf": 1578.53,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -11586,7 +12238,11 @@
      "ebitda_hi": 2365.0,
      "eps_hi": 8.06,
      "capex_hi": 6147.0,
-     "gm": 69.5
+     "gm": 69.5,
+     "fcf_bc": -2332.91,
+     "capex_bc": 4285.54,
+     "ocf": 1952.62,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -11649,9 +12305,9 @@
   },
   "AOSL": {
    "bbg": "AOSL US Equity",
-   "px": 28.62,
-   "mktcap": 867598128.0000001,
-   "ev": 714.8091280000001,
+   "px": 28.28,
+   "mktcap": 857291232.0000001,
+   "ev": 704.5022320000002,
    "name": "ALPHA & OMEGA SEMICONDUCTOR",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -11791,9 +12447,9 @@
   },
   "APP": {
    "bbg": "APP US Equity",
-   "px": 392.475,
-   "mktcap": 130035601950.00002,
-   "ev": 130378.00695000001,
+   "px": 395.51,
+   "mktcap": 131041164219.99997,
+   "ev": 131383.56921999998,
    "name": "APPLOVIN CORP-CLASS A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -11853,7 +12509,11 @@
      "ebitda_hi": 6881.46,
      "eps_hi": 16.47,
      "capex_hi": 21.39,
-     "gm": 88.5
+     "gm": 88.5,
+     "fcf_bc": 5220.76,
+     "capex_bc": 19.48,
+     "ocf": 5240.24,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -11870,7 +12530,11 @@
      "ebitda_hi": 9191.0,
      "eps_hi": 23.5,
      "capex_hi": 56.0,
-     "gm": 88.5
+     "gm": 88.5,
+     "fcf_bc": 7068.57,
+     "capex_bc": 42.23,
+     "ocf": 7110.8,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -11933,9 +12597,9 @@
   },
   "AXTI": {
    "bbg": "AXTI US Equity",
-   "px": 41.495,
-   "mktcap": 2720960431.9399996,
-   "ev": 2354.9054319399997,
+   "px": 39.31,
+   "mktcap": 2577682963.72,
+   "ev": 2211.62796372,
    "name": "AXT INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -11995,7 +12659,11 @@
      "ebitda_hi": 77.5,
      "eps_hi": 0.94,
      "capex_hi": 47.24,
-     "gm": 47.1
+     "gm": 47.1,
+     "fcf_bc": 4.13,
+     "capex_bc": 36.82,
+     "ocf": 40.96,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -12012,7 +12680,11 @@
      "ebitda_hi": 300.3,
      "eps_hi": 3.11,
      "capex_hi": 210.0,
-     "gm": 61.9
+     "gm": 61.9,
+     "fcf_bc": -13.93,
+     "capex_bc": 135.75,
+     "ocf": 121.82,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -12075,9 +12747,9 @@
   },
   "BE": {
    "bbg": "BE US Equity",
-   "px": 190.94,
-   "mktcap": 56452688197.65999,
-   "ev": 56637.65119765999,
+   "px": 185.42,
+   "mktcap": 54820663274.37999,
+   "ev": 55005.62627437999,
    "name": "BLOOM ENERGY CORP- A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -12137,7 +12809,11 @@
      "ebitda_hi": 961.6,
      "eps_hi": 2.39,
      "capex_hi": 270.26,
-     "gm": 33.4
+     "gm": 33.4,
+     "fcf_bc": 216.62,
+     "capex_bc": 296.96,
+     "ocf": 513.58,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -12154,7 +12830,11 @@
      "ebitda_hi": 2656.0,
      "eps_hi": 7.86,
      "capex_hi": 484.0,
-     "gm": 35.4
+     "gm": 35.4,
+     "fcf_bc": 806.14,
+     "capex_bc": 223.3,
+     "ocf": 1029.44,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -12217,9 +12897,9 @@
   },
   "ETN": {
    "bbg": "ETN US Equity",
-   "px": 358.53,
-   "mktcap": 139288905000.0,
-   "ev": 159964.905,
+   "px": 354.22,
+   "mktcap": 137614470000.0,
+   "ev": 158290.47,
    "name": "EATON CORP PLC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -12236,117 +12916,125 @@
    "periods": {
     "1FQ": {
      "label": "Q4-26E",
-     "rev": 8781.04347826087,
+     "rev": 8793.95652173913,
      "rev_hi": 9142.0,
-     "ebit": 1818.1666666666667,
+     "ebit": 1817.2222222222224,
      "ebit_hi": 2108.0,
-     "ebitda": 2172.2352941176473,
+     "ebitda": 2175.8823529411766,
      "ebitda_hi": 2298.0,
-     "ni": 1601.563,
-     "eps": 4.11,
+     "ni": 1605.313,
+     "eps": 4.117,
      "eps_hi": 4.3,
      "gm": 36.890849640188065,
-     "capex": 420.8333333333333,
-     "capex_hi": 466.0
+     "capex": 417.9166666666667,
+     "capex_hi": 450.0
     },
     "2FQ": {
      "label": "Q1-27E",
-     "rev": 8853.5,
-     "rev_hi": 9058.0,
-     "ebit": 1694.1666666666667,
-     "ebit_hi": 1944.0,
-     "ebitda": 2035.2727272727273,
-     "ebitda_hi": 2259.0,
-     "ni": 1334.385,
-     "eps": 3.517,
-     "eps_hi": 3.7,
+     "rev": 8868.764705882353,
+     "rev_hi": 9113.0,
+     "ebit": 1723.0,
+     "ebit_hi": 2069.0,
+     "ebitda": 2056.416666666667,
+     "ebitda_hi": 2289.0,
+     "ni": 1346.643,
+     "eps": 3.536,
+     "eps_hi": 3.86,
      "gm": 36.41165509271122,
-     "capex": 277.22222222222223,
+     "capex": 270.2,
      "capex_hi": 326.0
     },
     "CY2026": {
      "label": "CY2026",
      "nq": 4,
      "n_actual": 3,
-     "rev": 32559.63,
-     "ebit": 6342.03,
-     "ebitda": 7539.7,
-     "ni": 5237.71,
+     "rev": 32572.54,
+     "ebit": 6341.09,
+     "ebitda": 7543.35,
+     "ni": 5241.46,
      "eps": 13.49,
-     "capex": 1227.23,
+     "capex": 1224.32,
      "rev_hi": 32920.59,
      "ebit_hi": 6631.87,
      "ebitda_hi": 7665.46,
      "eps_hi": 13.68,
-     "capex_hi": 1272.4,
-     "gm": 37.2
+     "capex_hi": 1256.4,
+     "gm": 37.2,
+     "fcf_bc": 3956.46,
+     "capex_bc": 1149.1,
+     "ocf": 5105.56,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
      "nq": 4,
      "n_actual": 0,
-     "rev": 37343.47,
-     "ebit": 7685.57,
-     "ebitda": 9080.35,
-     "ni": 6192.17,
-     "eps": 16.14,
-     "capex": 1175.0,
-     "rev_hi": 39412.0,
-     "ebit_hi": 8809.0,
-     "ebitda_hi": 9930.0,
-     "eps_hi": 17.31,
-     "capex_hi": 1446.0,
-     "gm": 36.7
+     "rev": 37340.98,
+     "ebit": 7775.67,
+     "ebitda": 9127.12,
+     "ni": 6213.47,
+     "eps": 16.16,
+     "capex": 1186.2,
+     "rev_hi": 39467.0,
+     "ebit_hi": 8937.0,
+     "ebitda_hi": 9960.0,
+     "eps_hi": 17.47,
+     "capex_hi": 1505.0,
+     "gm": 36.7,
+     "fcf_bc": 4844.02,
+     "capex_bc": 1143.0,
+     "ocf": 5987.02,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
-     "rev": 33435.12903225806,
+     "rev": 33457.0,
      "rev_hi": 34071.0,
-     "ebit": 6513.7307692307695,
+     "ebit": 6516.153846153846,
      "ebit_hi": 8144.0,
-     "ebitda": 7896.357142857142,
+     "ebitda": 7903.357142857142,
      "ebitda_hi": 8948.0,
-     "ni": 5325.8640000000005,
+     "ni": 5330.8640000000005,
      "ni_hi": null,
      "eps": 13.661,
      "eps_hi": 13.93,
-     "gm": 35.64953591938106,
+     "gm": 35.577551753205256,
      "gm_hi": null,
-     "capex": 1147.7142857142856,
+     "capex": 1149.0952380952383,
      "capex_hi": 1268.0
     },
     "2FY": {
      "label": "2FY",
-     "rev": 37327.290322580644,
+     "rev": 37293.48387096774,
      "rev_hi": 40383.0,
-     "ebit": 7834.192307692308,
+     "ebit": 7830.0,
      "ebit_hi": 9631.0,
-     "ebitda": 9350.821428571428,
+     "ebitda": 9354.5,
      "ebitda_hi": 10548.0,
-     "ni": 6019.042,
+     "ni": 6013.042,
      "ni_hi": null,
      "eps": 16.17,
      "eps_hi": 17.78,
-     "gm": 37.207872753564175,
+     "gm": 37.066979351596295,
      "gm_hi": null,
-     "capex": 1131.0434782608695,
+     "capex": 1143.0,
      "capex_hi": 1438.0
     },
     "3FY": {
      "label": "3FY",
-     "rev": 41127.84,
+     "rev": 41077.68,
      "rev_hi": 44852.0,
-     "ebit": 8958.75,
-     "ebit_hi": 10374.0,
-     "ebitda": 10525.666666666666,
+     "ebit": 8957.0,
+     "ebit_hi": 10332.0,
+     "ebitda": 10532.809523809525,
      "ebitda_hi": 11453.0,
-     "ni": 6954.85,
+     "ni": 6949.7,
      "ni_hi": null,
      "eps": 18.874,
      "eps_hi": 20.86,
-     "gm": 38.03560673149215,
+     "gm": 37.86204666622836,
      "gm_hi": null,
-     "capex": 1240.6,
+     "capex": 1258.2,
      "capex_hi": 1555.0
     }
    },
@@ -12359,9 +13047,9 @@
   },
   "FSLY": {
    "bbg": "FSLY US Equity",
-   "px": 16.2763,
-   "mktcap": 2623739560.0,
-   "ev": 2669.06056,
+   "px": 16.24,
+   "mktcap": 2617888000.0,
+   "ev": 2663.209,
    "name": "FASTLY INC - CLASS A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -12421,7 +13109,11 @@
      "ebitda_hi": 139.51,
      "eps_hi": 0.43,
      "capex_hi": 65.21,
-     "gm": 64.6
+     "gm": 64.6,
+     "fcf_bc": 57.75,
+     "capex_bc": 75.32,
+     "ocf": 133.07,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -12438,7 +13130,11 @@
      "ebitda_hi": 206.7,
      "eps_hi": 0.84,
      "capex_hi": 101.5,
-     "gm": 65.9
+     "gm": 65.9,
+     "fcf_bc": 92.18,
+     "capex_bc": 89.63,
+     "ocf": 181.82,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -12501,20 +13197,20 @@
   },
   "MP": {
    "bbg": "MP US Equity",
-   "px": 36.8,
-   "mktcap": 6560261516.799999,
-   "ev": 6611.207516799999,
+   "px": 36.46,
+   "mktcap": 6499650404.960001,
+   "ev": 6550.596404960001,
    "name": "MP MATERIALS CORP",
    "ccy": "USD",
    "lrq": "2026-09-30",
    "pt": {
-    "cons": 68.3125,
+    "cons": 67.9375,
     "hi": 100.0,
     "lo": 40.0,
-    "rating": 4.904761791229248,
+    "rating": 5.0,
     "n": 21.0,
-    "buy": 20.0,
-    "hold": 1.0,
+    "buy": 21.0,
+    "hold": 0.0,
     "sell": 0.0
    },
    "periods": {
@@ -12563,7 +13259,11 @@
      "ebitda_hi": 125.71,
      "eps_hi": -0.17,
      "capex_hi": 591.76,
-     "gm": 36.4
+     "gm": 36.4,
+     "fcf_bc": -528.31,
+     "capex_bc": 580.9,
+     "ocf": 52.59,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -12580,7 +13280,11 @@
      "ebitda_hi": 370.73,
      "eps_hi": 0.32,
      "capex_hi": 792.0,
-     "gm": 45.2
+     "gm": 45.2,
+     "fcf_bc": -234.13,
+     "capex_bc": 537.5,
+     "ocf": 303.37,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -12607,9 +13311,9 @@
      "ebit_hi": null,
      "ebitda": 312.875,
      "ebitda_hi": 539.0,
-     "ni": 107.903,
+     "ni": 105.575,
      "ni_hi": null,
-     "eps": 0.531,
+     "eps": 0.511,
      "eps_hi": null,
      "gm": 47.41191449469235,
      "gm_hi": null,
@@ -12643,9 +13347,9 @@
   },
   "NET": {
    "bbg": "NET US Equity",
-   "px": 304.27,
-   "mktcap": 109047927450.33,
-   "ev": 108626.69245033,
+   "px": 305.8,
+   "mktcap": 109596267178.2,
+   "ev": 109175.0321782,
    "name": "CLOUDFLARE INC - CLASS A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -12705,7 +13409,11 @@
      "ebitda_hi": 696.93,
      "eps_hi": 1.32,
      "capex_hi": 528.69,
-     "gm": 73.5
+     "gm": 73.5,
+     "fcf_bc": 350.85,
+     "capex_bc": 431.67,
+     "ocf": 782.52,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -12722,7 +13430,11 @@
      "ebitda_hi": 1148.0,
      "eps_hi": 2.32,
      "capex_hi": 623.0,
-     "gm": 72.8
+     "gm": 72.8,
+     "fcf_bc": 589.52,
+     "capex_bc": 587.83,
+     "ocf": 1177.35,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -12785,9 +13497,9 @@
   },
   "PLTR": {
    "bbg": "PLTR US Equity",
-   "px": 167.595,
-   "mktcap": 403744817206.74,
-   "ev": 393525.67220673995,
+   "px": 168.82,
+   "mktcap": 406695904059.43994,
+   "ev": 396476.75905943994,
    "name": "PALANTIR TECHNOLOGIES INC-A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -12804,7 +13516,7 @@
    "periods": {
     "1FQ": {
      "label": "Q4-26E",
-     "rev": 2665.0434782608695,
+     "rev": 2670.730769230769,
      "rev_hi": 2771.0,
      "ebit": 1655.6315789473683,
      "ebit_hi": 1765.0,
@@ -12836,7 +13548,7 @@
      "label": "CY2026",
      "nq": 4,
      "n_actual": 3,
-     "rev": 8182.69,
+     "rev": 8188.38,
      "ebit": 4917.34,
      "ebitda": 4978.74,
      "ni": 4019.92,
@@ -12847,7 +13559,11 @@
      "ebitda_hi": 5094.44,
      "eps_hi": 1.61,
      "capex_hi": 65.37,
-     "gm": 85.8
+     "gm": 85.8,
+     "fcf_bc": 4884.2,
+     "capex_bc": 45.35,
+     "ocf": 4929.55,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -12864,7 +13580,11 @@
      "ebitda_hi": 9169.0,
      "eps_hi": 2.89,
      "capex_hi": 110.6,
-     "gm": 86.3
+     "gm": 86.3,
+     "fcf_bc": 7630.51,
+     "capex_bc": 66.08,
+     "ocf": 7696.58,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -12927,9 +13647,9 @@
   },
   "POET": {
    "bbg": "POET US Equity",
-   "px": 5.2592,
-   "mktcap": 910147096.4095999,
-   "ev": 121.60305240959997,
+   "px": 5.07,
+   "mktcap": 877404506.16,
+   "ev": 88.86046216,
    "name": "POET TECHNOLOGIES INC",
    "ccy": "USD",
    "lrq": "2026-06-30",
@@ -12989,7 +13709,11 @@
      "ebitda_hi": null,
      "eps_hi": -0.24,
      "capex_hi": null,
-     "gm": 91.3
+     "gm": 91.3,
+     "fcf_bc": -83.7,
+     "capex_bc": 15.0,
+     "ocf": -68.7,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -13006,7 +13730,11 @@
      "ebitda_hi": null,
      "eps_hi": -0.18,
      "capex_hi": null,
-     "gm": null
+     "gm": null,
+     "fcf_bc": -88.4,
+     "capex_bc": 30.0,
+     "ocf": -58.4,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -13069,9 +13797,9 @@
   },
   "POWI": {
    "bbg": "POWI US Equity",
-   "px": 44.74,
-   "mktcap": 2500162424.86,
-   "ev": 2212.0494248600003,
+   "px": 43.94,
+   "mktcap": 2455456793.66,
+   "ev": 2167.34379366,
    "name": "POWER INTEGRATIONS INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -13131,7 +13859,11 @@
      "ebitda_hi": 105.7,
      "eps_hi": 1.39,
      "capex_hi": 27.2,
-     "gm": 54.4
+     "gm": 54.4,
+     "fcf_bc": 100.75,
+     "capex_bc": 19.1,
+     "ocf": 119.85,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -13148,7 +13880,11 @@
      "ebitda_hi": 154.3,
      "eps_hi": 2.09,
      "capex_hi": 28.4,
-     "gm": 54.7
+     "gm": 54.7,
+     "fcf_bc": 106.04,
+     "capex_bc": 28.5,
+     "ocf": 134.54,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -13211,9 +13947,9 @@
   },
   "SANM": {
    "bbg": "SANM US Equity",
-   "px": 166.655,
-   "mktcap": 8932267364.179998,
-   "ev": 9720.30236418,
+   "px": 155.43,
+   "mktcap": 8330637043.08,
+   "ev": 9118.67204308,
    "name": "SANMINA CORP",
    "ccy": "USD",
    "lrq": "2026-10-03",
@@ -13273,7 +14009,11 @@
      "ebitda_hi": 1123.67,
      "eps_hi": 12.19,
      "capex_hi": 475.23,
-     "gm": 9.8
+     "gm": 9.8,
+     "fcf_bc": -747.51,
+     "capex_bc": 1544.21,
+     "ocf": 796.7,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -13290,7 +14030,11 @@
      "ebitda_hi": 1613.0,
      "eps_hi": 19.01,
      "capex_hi": 640.0,
-     "gm": 9.2
+     "gm": 9.2,
+     "fcf_bc": -479.25,
+     "capex_bc": 477.55,
+     "ocf": -1.71,
+     "ocf_flag": true
     },
     "1FY": {
      "label": "1FY",
@@ -13353,9 +14097,9 @@
   },
   "TSEM": {
    "bbg": "TSEM US Equity",
-   "px": 153.285,
-   "mktcap": 17400555432.809998,
-   "ev": 16081.410432809997,
+   "px": 147.6,
+   "mktcap": 16755207501.599998,
+   "ev": 15436.062501599998,
    "name": "TOWER SEMICONDUCTOR LTD",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -13415,7 +14159,11 @@
      "ebitda_hi": 762.77,
      "eps_hi": 3.98,
      "capex_hi": 784.5,
-     "gm": 32.2
+     "gm": 32.2,
+     "fcf_bc": 243.67,
+     "capex_bc": 736.67,
+     "ocf": 980.34,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -13432,7 +14180,11 @@
      "ebitda_hi": 1470.0,
      "eps_hi": 8.18,
      "capex_hi": 1566.0,
-     "gm": 39.9
+     "gm": 39.9,
+     "fcf_bc": 168.92,
+     "capex_bc": 962.0,
+     "ocf": 1130.92,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -13495,9 +14247,9 @@
   },
   "TSLA": {
    "bbg": "TSLA US Equity",
-   "px": 377.07,
-   "mktcap": 1490466438698.2197,
-   "ev": 1462064.4386982198,
+   "px": 379.78,
+   "mktcap": 1501178412731.88,
+   "ev": 1472776.4127318799,
    "name": "TESLA INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -13557,7 +14309,11 @@
      "ebitda_hi": 16953.89,
      "eps_hi": 1.75,
      "capex_hi": 28035.91,
-     "gm": 18.7
+     "gm": 18.7,
+     "fcf_bc": -3960.96,
+     "capex_bc": 20328.96,
+     "ocf": 16368.0,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -13574,7 +14330,11 @@
      "ebitda_hi": 21556.94,
      "eps_hi": 2.27,
      "capex_hi": 39456.0,
-     "gm": 19.3
+     "gm": 19.3,
+     "fcf_bc": -8971.78,
+     "capex_bc": 23960.46,
+     "ocf": 14988.68,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -13637,9 +14397,9 @@
   },
   "VEEV": {
    "bbg": "VEEV US Equity",
-   "px": 303.44,
-   "mktcap": 49129621444.0,
-   "ev": 42038.369443999996,
+   "px": 305.55,
+   "mktcap": 49471249117.5,
+   "ev": 42379.9971175,
    "name": "VEEVA SYSTEMS INC-CLASS A",
    "ccy": "USD",
    "lrq": "2026-07-31",
@@ -13699,7 +14459,11 @@
      "ebitda_hi": 1696.21,
      "eps_hi": 9.15,
      "capex_hi": 37.1,
-     "gm": 77.1
+     "gm": 77.1,
+     "fcf_bc": 1635.19,
+     "capex_bc": 24.28,
+     "ocf": 1659.47,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -13716,7 +14480,11 @@
      "ebitda_hi": 2018.0,
      "eps_hi": 10.75,
      "capex_hi": 42.7,
-     "gm": 77.2
+     "gm": 77.2,
+     "fcf_bc": 1753.57,
+     "capex_bc": 28.27,
+     "ocf": 1781.84,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -13779,9 +14547,9 @@
   },
   "SPCX": {
    "bbg": "SPCX US Equity",
-   "px": 143.815,
-   "mktcap": 1974871534049.6099,
-   "ev": 1924234.53404961,
+   "px": 143.09,
+   "mktcap": 1964915814116.4602,
+   "ev": 1914278.8141164603,
    "name": "SPACE EXPLORATION TECHN-CL A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -13841,7 +14609,11 @@
      "ebitda_hi": 25950.21,
      "eps_hi": -0.98,
      "capex_hi": 68195.02,
-     "gm": null
+     "gm": null,
+     "fcf_bc": -55703.89,
+     "capex_bc": 82439.42,
+     "ocf": 26735.53,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -13858,7 +14630,11 @@
      "ebitda_hi": 154701.76,
      "eps_hi": 4.07,
      "capex_hi": 517452.0,
-     "gm": 62.7
+     "gm": 62.7,
+     "fcf_bc": -147058.46,
+     "capex_bc": 253627.27,
+     "ocf": 106568.82,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -13921,9 +14697,9 @@
   },
   "SMTC": {
    "bbg": "SMTC US Equity",
-   "px": 114.51,
-   "mktcap": 10686717433.26,
-   "ev": 11007.659433260002,
+   "px": 113.49,
+   "mktcap": 10591525294.74,
+   "ev": 10912.467294740001,
    "name": "SEMTECH CORP",
    "ccy": "USD",
    "lrq": "2026-07-26",
@@ -13983,7 +14759,11 @@
      "ebitda_hi": 449.46,
      "eps_hi": 3.86,
      "capex_hi": 32.21,
-     "gm": 56.9
+     "gm": 56.9,
+     "fcf_bc": 215.93,
+     "capex_bc": 29.29,
+     "ocf": 245.22,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -14000,7 +14780,11 @@
      "ebitda_hi": 946.0,
      "eps_hi": 8.09,
      "capex_hi": 87.0,
-     "gm": 64.8
+     "gm": 64.8,
+     "fcf_bc": 613.5,
+     "capex_bc": 39.59,
+     "ocf": 653.09,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -14063,9 +14847,9 @@
   },
   "AEIS": {
    "bbg": "AEIS US Equity",
-   "px": 222.925,
-   "mktcap": 9024447843.675001,
-   "ev": 8991.847843675001,
+   "px": 221.69,
+   "mktcap": 8974452584.79,
+   "ev": 8941.85258479,
    "name": "ADVANCED ENERGY INDUSTRIES",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -14125,7 +14909,11 @@
      "ebitda_hi": 591.89,
      "eps_hi": 11.25,
      "capex_hi": 183.75,
-     "gm": 41.1
+     "gm": 41.1,
+     "fcf_bc": 187.02,
+     "capex_bc": 173.14,
+     "ocf": 360.16,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -14142,7 +14930,11 @@
      "ebitda_hi": 958.0,
      "eps_hi": 19.0,
      "capex_hi": 215.4,
-     "gm": 42.7
+     "gm": 42.7,
+     "fcf_bc": 443.43,
+     "capex_bc": 170.5,
+     "ocf": 613.93,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -14205,9 +14997,9 @@
   },
   "SNOW": {
    "bbg": "SNOW US Equity",
-   "px": 296.465,
-   "mktcap": 104592852000.0,
-   "ev": 105011.972,
+   "px": 295.76,
+   "mktcap": 104344128000.0,
+   "ev": 104763.24799999999,
    "name": "SNOWFLAKE INC",
    "ccy": "USD",
    "lrq": "2026-07-31",
@@ -14224,31 +15016,31 @@
    "periods": {
     "1FQ": {
      "label": "Q3-26E",
-     "rev": 1655.9047619047617,
-     "rev_hi": 1701.0,
+     "rev": 1657.7441860465117,
+     "rev_hi": 1735.0,
      "ebit": 256.1794871794872,
      "ebit_hi": 275.0,
      "ebitda": 319.7142857142857,
      "ebitda_hi": 382.0,
-     "ni": 230.077,
-     "eps": 0.6,
+     "ni": 230.9,
+     "eps": 0.602,
      "eps_hi": 0.75,
-     "gm": 71.15776148068888,
+     "gm": 71.18317487531283,
      "capex": 16.356764705882355,
      "capex_hi": 41.0
     },
     "2FQ": {
      "label": "Q4-26E",
-     "rev": 1726.2142857142856,
-     "rev_hi": 1808.0,
-     "ebit": 262.26190476190476,
+     "rev": 1728.232558139535,
+     "rev_hi": 1813.0,
+     "ebit": 263.25581395348837,
      "ebit_hi": 323.0,
      "ebitda": 315.7142857142857,
      "ebitda_hi": 401.0,
-     "ni": 232.564,
-     "eps": 0.6,
+     "ni": 233.225,
+     "eps": 0.602,
      "eps_hi": 0.78,
-     "gm": 70.73750081813387,
+     "gm": 70.7735004817708,
      "capex": 16.388235294117646,
      "capex_hi": 41.0
     },
@@ -14256,18 +15048,22 @@
      "label": "CY2026",
      "nq": 4,
      "n_actual": 2,
-     "rev": 6199.63,
-     "ebit": 826.6,
+     "rev": 6203.49,
+     "ebit": 827.59,
      "ebitda": 1059.44,
-     "ni": 751.9,
-     "eps": 1.96,
+     "ni": 753.39,
+     "eps": 1.97,
      "capex": 74.63,
-     "rev_hi": 6326.51,
+     "rev_hi": 6365.51,
      "ebit_hi": 906.16,
      "ebitda_hi": 1207.01,
      "eps_hi": 2.29,
      "capex_hi": 123.89,
-     "gm": 71.4
+     "gm": 71.4,
+     "fcf_bc": 1374.68,
+     "capex_bc": 50.64,
+     "ocf": 1425.32,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -14284,57 +15080,61 @@
      "ebitda_hi": 1793.0,
      "eps_hi": 4.1,
      "capex_hi": 206.4,
-     "gm": 71.4
+     "gm": 71.4,
+     "fcf_bc": 1844.02,
+     "capex_bc": 82.29,
+     "ocf": 1926.3,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
      "rev": 6323.428571428572,
      "rev_hi": 6486.0,
-     "ebit": 921.0476190476192,
-     "ebit_hi": 1009.0,
+     "ebit": 918.9024390243902,
+     "ebit_hi": 980.0,
      "ebitda": 1057.5652173913045,
      "ebitda_hi": 1493.0,
-     "ni": 844.267,
+     "ni": 845.587,
      "ni_hi": null,
      "eps": 2.239,
      "eps_hi": 3.1,
-     "gm": 71.28487249590728,
+     "gm": 71.302383453753,
      "gm_hi": null,
-     "capex": 54.03333333333334,
+     "capex": 54.3054054054054,
      "capex_hi": 127.0
     },
     "2FY": {
      "label": "2FY",
      "rev": 8167.714285714286,
      "rev_hi": 8815.0,
-     "ebit": 1319.3953488372092,
-     "ebit_hi": 1739.0,
+     "ebit": 1329.4772727272727,
+     "ebit_hi": 1763.0,
      "ebitda": 1471.4782608695652,
      "ebitda_hi": 2047.0,
-     "ni": 1179.136,
+     "ni": 1185.244,
      "ni_hi": null,
      "eps": 3.031,
      "eps_hi": 3.77,
-     "gm": 71.41617722728017,
+     "gm": 71.44412619124678,
      "gm_hi": null,
-     "capex": 90.5111111111111,
+     "capex": 91.03783783783784,
      "capex_hi": 206.0
     },
     "3FY": {
      "label": "3FY",
      "rev": 10472.216216216217,
      "rev_hi": 11746.0,
-     "ebit": 1966.09375,
-     "ebit_hi": 2456.0,
+     "ebit": 1991.8181818181818,
+     "ebit_hi": 2815.0,
      "ebitda": 2242.1176470588234,
      "ebitda_hi": 2718.0,
-     "ni": 1673.935,
+     "ni": 1691.906,
      "ni_hi": null,
      "eps": 4.3,
      "eps_hi": 5.73,
-     "gm": 71.59049853057697,
+     "gm": 71.64279815994111,
      "gm_hi": null,
-     "capex": 111.916,
+     "capex": 113.03461538461539,
      "capex_hi": 263.0
     }
    },
@@ -14347,9 +15147,9 @@
   },
   "MDB": {
    "bbg": "MDB US Equity",
-   "px": 334.78,
-   "mktcap": 26968651839.98,
-   "ev": 24612.410839980002,
+   "px": 331.98,
+   "mktcap": 26743094085.180004,
+   "ev": 24386.853085180002,
    "name": "MONGODB INC",
    "ccy": "USD",
    "lrq": "2026-07-31",
@@ -14409,7 +15209,11 @@
      "ebitda_hi": 668.07,
      "eps_hi": 6.74,
      "capex_hi": 20.98,
-     "gm": 74.8
+     "gm": 74.8,
+     "fcf_bc": 624.58,
+     "capex_bc": 9.78,
+     "ocf": 634.36,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -14426,7 +15230,11 @@
      "ebitda_hi": 958.0,
      "eps_hi": 9.18,
      "capex_hi": 36.8,
-     "gm": 75.0
+     "gm": 75.0,
+     "fcf_bc": 724.96,
+     "capex_bc": 12.24,
+     "ocf": 737.21,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -14489,9 +15297,9 @@
   },
   "DDOG": {
    "bbg": "DDOG US Equity",
-   "px": 181.0,
-   "mktcap": 65607689743.999985,
-   "ev": 61681.336743999986,
+   "px": 178.4,
+   "mktcap": 64665258841.6,
+   "ev": 60738.9058416,
    "name": "DATADOG INC - CLASS A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -14508,67 +15316,75 @@
    "periods": {
     "1FQ": {
      "label": "Q4-26E",
-     "rev": 1196.8947368421052,
+     "rev": 1197.8205128205127,
      "rev_hi": 1249.0,
      "ebit": 286.64102564102564,
      "ebit_hi": 306.0,
-     "ebitda": 316.5882352941176,
+     "ebitda": 318.3888888888889,
      "ebitda_hi": 370.0,
      "ni": 265.132,
      "eps": 0.714,
      "eps_hi": 0.95,
-     "gm": 80.67343417006329,
-     "capex": 21.427222222222223,
+     "gm": 80.66887011295637,
+     "capex": 21.331891891891892,
      "capex_hi": 124.0
     },
     "2FQ": {
      "label": "Q1-27E",
-     "rev": 1234.9189189189187,
+     "rev": 1235.921052631579,
      "rev_hi": 1276.0,
-     "ebit": 288.7894736842105,
+     "ebit": 289.71794871794873,
      "ebit_hi": 331.0,
-     "ebitda": 316.93333333333334,
+     "ebitda": 318.875,
      "ebitda_hi": 409.0,
-     "ni": 264.079,
+     "ni": 264.872,
      "eps": 0.6970000000000001,
      "eps_hi": 0.81,
-     "gm": 80.27498035524201,
-     "capex": 21.57428571428571,
+     "gm": 80.26456423426306,
+     "capex": 21.527777777777775,
      "capex_hi": 56.39999999999999
     },
     "CY2026": {
      "label": "CY2026",
      "nq": 4,
      "n_actual": 3,
-     "rev": 4380.68,
+     "rev": 4381.61,
      "ebit": 991.72,
-     "ebitda": 1093.22,
+     "ebitda": 1095.02,
      "ni": 912.2,
      "eps": 2.5,
-     "capex": 84.12,
+     "capex": 84.03,
      "rev_hi": 4432.79,
      "ebit_hi": 1011.08,
      "ebitda_hi": 1146.63,
      "eps_hi": 2.73,
      "capex_hi": 186.69,
-     "gm": 80.6
+     "gm": 80.6,
+     "fcf_bc": 1190.24,
+     "capex_bc": 53.51,
+     "ocf": 1243.75,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
      "nq": 4,
      "n_actual": 0,
-     "rev": 5499.04,
-     "ebit": 1342.91,
-     "ebitda": 1423.9,
-     "ni": 1209.85,
+     "rev": 5501.92,
+     "ebit": 1345.66,
+     "ebitda": 1438.79,
+     "ni": 1212.15,
      "eps": 3.18,
-     "capex": 93.72,
+     "capex": 93.69,
      "rev_hi": 5816.0,
-     "ebit_hi": 1559.0,
-     "ebitda_hi": 1643.0,
+     "ebit_hi": 1573.0,
+     "ebitda_hi": 1733.0,
      "eps_hi": 3.96,
      "capex_hi": 251.5,
-     "gm": 80.4
+     "gm": 80.4,
+     "fcf_bc": 1508.99,
+     "capex_bc": 95.88,
+     "ocf": 1604.88,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -14576,32 +15392,32 @@
      "rev_hi": 4574.0,
      "ebit": 1101.0,
      "ebit_hi": 1134.0,
-     "ebitda": 1194.4117647058822,
+     "ebitda": 1195.9444444444443,
      "ebitda_hi": 1335.0,
-     "ni": 1029.525,
+     "ni": 1030.268,
      "ni_hi": null,
      "eps": 2.745,
      "eps_hi": 2.95,
-     "gm": 80.3146066308869,
+     "gm": 80.3163274211434,
      "gm_hi": null,
-     "capex": 53.6,
+     "capex": 53.50526315789474,
      "capex_hi": 156.0
     },
     "2FY": {
      "label": "2FY",
-     "rev": 5533.733333333333,
+     "rev": 5535.217391304348,
      "rev_hi": 5988.0,
-     "ebit": 1319.7023255813954,
+     "ebit": 1324.7772727272727,
      "ebit_hi": 1622.0,
-     "ebitda": 1387.3333333333333,
-     "ebitda_hi": 1636.0,
-     "ni": 1235.791,
+     "ebitda": 1401.0526315789473,
+     "ebitda_hi": 1648.0,
+     "ni": 1238.932,
      "ni_hi": null,
      "eps": 3.227,
      "eps_hi": 4.42,
-     "gm": 80.35857505301684,
+     "gm": 80.3563448787621,
      "gm_hi": null,
-     "capex": 95.97368421052632,
+     "capex": 95.88461538461539,
      "capex_hi": 252.0
     },
     "3FY": {
@@ -14631,9 +15447,9 @@
   },
   "DT": {
    "bbg": "DT US Equity",
-   "px": 43.93,
-   "mktcap": 12605455762.689999,
-   "ev": 12037.85376269,
+   "px": 43.49,
+   "mktcap": 12479200344.17,
+   "ev": 11911.598344170001,
    "name": "DYNATRACE INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -14693,7 +15509,11 @@
      "ebitda_hi": 644.52,
      "eps_hi": 1.77,
      "capex_hi": 37.98,
-     "gm": 83.2
+     "gm": 83.2,
+     "fcf_bc": 610.53,
+     "capex_bc": 30.02,
+     "ocf": 640.55,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -14710,7 +15530,11 @@
      "ebitda_hi": 832.0,
      "eps_hi": 2.26,
      "capex_hi": 96.7,
-     "gm": 83.1
+     "gm": 83.1,
+     "fcf_bc": 675.17,
+     "capex_bc": 38.05,
+     "ocf": 713.22,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -14773,9 +15597,9 @@
   },
   "ESTC": {
    "bbg": "ESTC US Equity",
-   "px": 88.8,
-   "mktcap": 9411039273.6,
-   "ev": 8545.7722736,
+   "px": 87.25,
+   "mktcap": 9246770007.0,
+   "ev": 8381.503007,
    "name": "ELASTIC NV",
    "ccy": "USD",
    "lrq": "2026-07-31",
@@ -14835,7 +15659,11 @@
      "ebitda_hi": 351.32,
      "eps_hi": 3.03,
      "capex_hi": 14.81,
-     "gm": 77.9
+     "gm": 77.9,
+     "fcf_bc": 395.42,
+     "capex_bc": 6.43,
+     "ocf": 401.85,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -14852,7 +15680,11 @@
      "ebitda_hi": 494.0,
      "eps_hi": 4.26,
      "capex_hi": 22.6,
-     "gm": 78.1
+     "gm": 78.1,
+     "fcf_bc": 497.46,
+     "capex_bc": 7.83,
+     "ocf": 505.3,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -14915,9 +15747,9 @@
   },
   "CEREBRAS": {
    "bbg": "CBRS US Equity",
-   "px": 95.73,
-   "mktcap": 22742005644.93,
-   "ev": 16307.529644929999,
+   "px": 93.66,
+   "mktcap": 22250248080.059994,
+   "ev": 15815.772080059995,
    "name": "CEREBRAS SYSTEMS INC - A",
    "ccy": "USD",
    "lrq": "2026-06-30",
@@ -14977,7 +15809,11 @@
      "ebitda_hi": -94.69,
      "eps_hi": -0.68,
      "capex_hi": 1511.21,
-     "gm": 40.6
+     "gm": 40.6,
+     "fcf_bc": -1345.07,
+     "capex_bc": 1571.17,
+     "ocf": 226.09,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -14994,7 +15830,11 @@
      "ebitda_hi": 1319.97,
      "eps_hi": 1.8,
      "capex_hi": 4691.0,
-     "gm": 51.1
+     "gm": 51.1,
+     "fcf_bc": -1782.34,
+     "capex_bc": 4000.43,
+     "ocf": 2218.09,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -15057,9 +15897,9 @@
   },
   "OKTA": {
    "bbg": "OKTA US Equity",
-   "px": 181.475,
-   "mktcap": 31726771201.3,
-   "ev": 29480.7712013,
+   "px": 178.36,
+   "mktcap": 31182184386.08,
+   "ev": 28936.18438608,
    "name": "OKTA INC",
    "ccy": "USD",
    "lrq": "2026-07-31",
@@ -15119,7 +15959,11 @@
      "ebitda_hi": 894.2,
      "eps_hi": 4.02,
      "capex_hi": 27.89,
-     "gm": 82.0
+     "gm": 82.0,
+     "fcf_bc": 935.71,
+     "capex_bc": 8.3,
+     "ocf": 944.01,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -15136,7 +15980,11 @@
      "ebitda_hi": 1055.0,
      "eps_hi": 4.76,
      "capex_hi": 43.6,
-     "gm": 82.4
+     "gm": 82.4,
+     "fcf_bc": 1036.08,
+     "capex_bc": 15.23,
+     "ocf": 1051.3,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -15199,8 +16047,8 @@
   },
   "JPM": {
    "bbg": "JPM US Equity",
-   "px": 342.62,
-   "mktcap": 909864929973.58,
+   "px": 342.07,
+   "mktcap": 908404344743.6299,
    "ev": null,
    "name": "JPMORGAN CHASE & CO",
    "ccy": "USD",
@@ -15341,9 +16189,9 @@
   },
   "GS": {
    "bbg": "GS US Equity",
-   "px": 911.4,
-   "mktcap": 273407696100.0,
-   "ev": 817934.6961000001,
+   "px": 910.19,
+   "mktcap": 273044712435.0,
+   "ev": 817571.712435,
    "name": "GOLDMAN SACHS GROUP INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -15483,9 +16331,9 @@
   },
   "SPGI": {
    "bbg": "SPGI US Equity",
-   "px": 468.335,
-   "mktcap": 135770316500.00002,
-   "ev": 152380.31650000002,
+   "px": 473.38,
+   "mktcap": 137232862000.00002,
+   "ev": 153842.86200000002,
    "name": "S&P GLOBAL INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -15545,7 +16393,11 @@
      "ebitda_hi": 7974.5,
      "eps_hi": 18.29,
      "capex_hi": 246.69,
-     "gm": 68.9
+     "gm": 68.9,
+     "fcf_bc": 5099.1,
+     "capex_bc": 159.25,
+     "ocf": 5258.35,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -15562,7 +16414,11 @@
      "ebitda_hi": 8587.0,
      "eps_hi": 21.19,
      "capex_hi": 235.0,
-     "gm": 74.1
+     "gm": 74.1,
+     "fcf_bc": 5904.71,
+     "capex_bc": 179.27,
+     "ocf": 6083.98,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -15625,9 +16481,9 @@
   },
   "MCO": {
    "bbg": "MCO US Equity",
-   "px": 506.585,
-   "mktcap": 87335254000.0,
-   "ev": 91930.254,
+   "px": 510.71,
+   "mktcap": 88046404000.0,
+   "ev": 92641.404,
    "name": "MOODY'S CORP",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -15687,7 +16543,11 @@
      "ebitda_hi": 4308.08,
      "eps_hi": 16.59,
      "capex_hi": 523.51,
-     "gm": 75.6
+     "gm": 75.6,
+     "fcf_bc": 2886.97,
+     "capex_bc": 408.53,
+     "ocf": 3295.5,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -15704,7 +16564,11 @@
      "ebitda_hi": 4917.0,
      "eps_hi": 19.67,
      "capex_hi": 483.0,
-     "gm": 76.0
+     "gm": 76.0,
+     "fcf_bc": 3240.61,
+     "capex_bc": 377.24,
+     "ocf": 3617.84,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -15767,9 +16631,9 @@
   },
   "BX": {
    "bbg": "BX US Equity",
-   "px": 122.14,
-   "mktcap": 151633357224.34,
-   "ev": 170134.92822434,
+   "px": 122.53,
+   "mktcap": 152117531199.43,
+   "ev": 170619.10219943,
    "name": "BLACKSTONE INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -15829,7 +16693,11 @@
      "ebitda_hi": 9078.41,
      "eps_hi": 5.78,
      "capex_hi": 60.0,
-     "gm": null
+     "gm": null,
+     "fcf_bc": 7477.32,
+     "capex_bc": 74.0,
+     "ocf": 7551.32,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -15846,7 +16714,11 @@
      "ebitda_hi": 12965.0,
      "eps_hi": 8.23,
      "capex_hi": 60.0,
-     "gm": null
+     "gm": null,
+     "fcf_bc": 9608.03,
+     "capex_bc": 54.5,
+     "ocf": 9662.53,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -15909,14 +16781,14 @@
   },
   "KKR": {
    "bbg": "KKR US Equity",
-   "px": 98.55,
-   "mktcap": 87920351075.7,
-   "ev": 223058.5160757,
+   "px": 100.85,
+   "mktcap": 89972272003.89998,
+   "ev": 225110.4370039,
    "name": "KKR & CO INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
    "pt": {
-    "cons": 121.69999694824219,
+    "cons": 121.38095092773438,
     "hi": 156.0,
     "lo": 103.0,
     "rating": 4.666666507720947,
@@ -15971,7 +16843,11 @@
      "ebitda_hi": 9799.5,
      "eps_hi": 8.16,
      "capex_hi": null,
-     "gm": 100.0
+     "gm": 100.0,
+     "fcf_bc": 7853.9,
+     "capex_bc": 183.0,
+     "ocf": 8036.9,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -15988,7 +16864,11 @@
      "ebitda_hi": 9109.0,
      "eps_hi": 7.82,
      "capex_hi": null,
-     "gm": 100.0
+     "gm": 100.0,
+     "fcf_bc": 6787.4,
+     "capex_bc": 213.0,
+     "ocf": 7000.4,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -16051,9 +16931,9 @@
   },
   "APO": {
    "bbg": "APO US Equity",
-   "px": 122.315,
-   "mktcap": 72218761511.95999,
-   "ev": 70052.76151196,
+   "px": 122.74,
+   "mktcap": 72469695360.16,
+   "ev": 70303.69536016,
    "name": "APOLLO GLOBAL MANAGEMENT INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -16193,9 +17073,9 @@
   },
   "V": {
    "bbg": "V US Equity",
-   "px": 419.49,
-   "mktcap": 778387876516.8647,
-   "ev": 782980.8765168648,
+   "px": 423.0,
+   "mktcap": 784900883850.947,
+   "ev": 789493.883850947,
    "name": "VISA INC-CLASS A SHARES",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -16212,105 +17092,113 @@
    "periods": {
     "1FQ": {
      "label": "Q4-26E",
-     "rev": 12211.694444444445,
+     "rev": 12213.45945945946,
      "rev_hi": 12472.0,
      "ebit": 8425.64705882353,
      "ebit_hi": 8664.0,
      "ebitda": 8726.208333333334,
      "ebitda_hi": 8821.0,
-     "ni": 6793.0,
-     "eps": 3.632,
+     "ni": 6794.424,
+     "eps": 3.633,
      "eps_hi": 3.75,
-     "gm": 87.839105144482,
-     "capex": 413.6666666666667,
+     "gm": 82.99685493399167,
+     "capex": 416.27272727272725,
      "capex_hi": 515.0
     },
     "2FQ": {
      "label": "Q1-27E",
-     "rev": 12353.138888888889,
+     "rev": 12355.108108108108,
      "rev_hi": 12586.0,
      "ebit": 8392.264705882353,
      "ebit_hi": 8560.0,
      "ebitda": 8713.0,
      "ebitda_hi": 9142.0,
-     "ni": 6758.0,
+     "ni": 6759.469,
      "eps": 3.634,
      "eps_hi": 3.75,
-     "gm": 87.49033837934104,
-     "capex": 419.61904761904765,
+     "gm": 82.42588712599185,
+     "capex": 421.95454545454544,
      "capex_hi": 525.0
     },
     "CY2026": {
      "label": "CY2026",
      "nq": 4,
      "n_actual": 3,
-     "rev": 46442.44,
+     "rev": 46444.21,
      "ebit": 31264.0,
      "ebitda": 32608.34,
-     "ni": 25394.32,
+     "ni": 25395.74,
      "eps": 13.41,
-     "capex": 1560.14,
+     "capex": 1562.74,
      "rev_hi": 46702.75,
      "ebit_hi": 31502.35,
      "ebitda_hi": 32703.13,
      "eps_hi": 13.53,
      "capex_hi": 1661.47,
-     "gm": 81.1
+     "gm": 79.8,
+     "fcf_bc": 21313.86,
+     "capex_bc": 1709.27,
+     "ocf": 23023.13,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
      "nq": 4,
      "n_actual": 0,
-     "rev": 52465.22,
+     "rev": 52476.08,
      "ebit": 35598.67,
      "ebitda": 36912.42,
-     "ni": 28686.83,
+     "ni": 28697.6,
      "eps": 15.56,
-     "capex": 1779.9,
+     "capex": 1783.45,
      "rev_hi": 53626.0,
      "ebit_hi": 36714.0,
      "ebitda_hi": 38225.0,
      "eps_hi": 16.09,
      "capex_hi": 2244.0,
-     "gm": 84.4
+     "gm": 80.7,
+     "fcf_bc": 28919.58,
+     "capex_bc": 1783.45,
+     "ocf": 30703.03,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
-     "rev": 51062.0,
+     "rev": 51073.95121951219,
      "rev_hi": 51727.0,
      "ebit": 34597.37142857142,
      "ebit_hi": 35570.0,
      "ebitda": 35943.0,
      "ebitda_hi": 37108.0,
-     "ni": 27869.306,
+     "ni": 27880.73,
      "ni_hi": null,
-     "eps": 15.042,
+     "eps": 15.045,
      "eps_hi": 15.34,
-     "gm": 75.092347747316,
+     "gm": 73.73792544846435,
      "gm_hi": null,
-     "capex": 1749.4166666666667,
+     "capex": 1754.84,
      "capex_hi": 2172.0
     },
     "2FY": {
      "label": "2FY",
-     "rev": 56667.83783783784,
+     "rev": 56674.73684210526,
      "rev_hi": 58376.0,
      "ebit": 38573.59375,
      "ebit_hi": 39678.0,
      "ebitda": 39948.57692307692,
      "ebitda_hi": 41367.0,
-     "ni": 31050.824,
+     "ni": 31061.771,
      "ni_hi": null,
      "eps": 17.141000000000002,
      "eps_hi": 17.87,
-     "gm": 75.2453396528183,
+     "gm": 73.95401749826024,
      "gm_hi": null,
-     "capex": 1934.5652173913043,
+     "capex": 1932.5,
      "capex_hi": 2446.0
     },
     "3FY": {
      "label": "3FY",
-     "rev": 62524.086956521736,
+     "rev": 62516.333333333336,
      "rev_hi": 65736.0,
      "ebit": 42983.42105263158,
      "ebit_hi": 44830.0,
@@ -16335,9 +17223,9 @@
   },
   "MA": {
    "bbg": "MA US Equity",
-   "px": 652.36,
-   "mktcap": 568463094766.6401,
-   "ev": 581924.0947666401,
+   "px": 658.84,
+   "mktcap": 574109732902.16,
+   "ev": 587570.73290216,
    "name": "MASTERCARD INC - A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -16354,117 +17242,125 @@
    "periods": {
     "1FQ": {
      "label": "Q4-26E",
-     "rev": 9921.694444444445,
+     "rev": 9923.756756756757,
      "rev_hi": 10071.0,
      "ebit": 5713.970588235295,
      "ebit_hi": 5866.0,
-     "ebitda": 6054.260869565217,
+     "ebitda": 6063.208333333333,
      "ebitda_hi": 6403.0,
-     "ni": 4456.656,
-     "eps": 5.123,
+     "ni": 4458.3640000000005,
+     "eps": 5.124,
      "eps_hi": 5.27,
-     "gm": 12.622382070183223,
-     "capex": 194.2941176470588,
+     "gm": 12.654957454212168,
+     "capex": 191.83333333333334,
      "capex_hi": 443.0
     },
     "2FQ": {
      "label": "Q1-27E",
-     "rev": 9444.735294117647,
+     "rev": 9441.228571428572,
      "rev_hi": 9639.0,
      "ebit": 5698.96875,
      "ebit_hi": 5890.0,
-     "ebitda": 6054.863636363636,
+     "ebitda": 6056.608695652174,
      "ebitda_hi": 6208.0,
-     "ni": 4453.900000000001,
-     "eps": 5.162,
+     "ni": 4453.226,
+     "eps": 5.1610000000000005,
      "eps_hi": 5.35,
-     "gm": 12.323845801984554,
-     "capex": 190.2941176470588,
+     "gm": 12.2751163105565,
+     "capex": 188.05555555555554,
      "capex_hi": 411.0
     },
     "CY2026": {
      "label": "CY2026",
      "nq": 4,
      "n_actual": 3,
-     "rev": 36916.71,
+     "rev": 36918.77,
      "ebit": 21924.85,
-     "ebitda": 23185.42,
-     "ni": 17133.58,
+     "ebitda": 23194.36,
+     "ni": 17135.29,
      "eps": 19.45,
-     "capex": 688.61,
+     "capex": 686.15,
      "rev_hi": 37066.01,
      "ebit_hi": 22076.88,
      "ebitda_hi": 23534.15,
      "eps_hi": 19.6,
      "capex_hi": 937.31,
-     "gm": 12.6
+     "gm": 12.6,
+     "fcf_bc": 16413.94,
+     "capex_bc": 821.53,
+     "ocf": 17235.47,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
      "nq": 4,
      "n_actual": 0,
-     "rev": 42136.42,
+     "rev": 42115.46,
      "ebit": 25391.0,
-     "ebitda": 26822.66,
-     "ni": 19872.82,
-     "eps": 23.23,
-     "capex": 863.74,
+     "ebitda": 26825.14,
+     "ni": 19866.24,
+     "eps": 23.21,
+     "capex": 848.87,
      "rev_hi": 42988.0,
      "ebit_hi": 26405.0,
      "ebitda_hi": 28022.0,
      "eps_hi": 24.22,
      "capex_hi": 1832.0,
-     "gm": 12.6
+     "gm": 12.5,
+     "fcf_bc": 20488.06,
+     "capex_bc": 861.22,
+     "ocf": 21349.28,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
-     "rev": 37387.769230769234,
+     "rev": 37390.075,
      "rev_hi": 37553.0,
      "ebit": 22377.277777777777,
      "ebit_hi": 22580.0,
-     "ebitda": 23684.72,
+     "ebitda": 23704.23076923077,
      "ebitda_hi": 24576.0,
-     "ni": 17653.5,
+     "ni": 17655.429,
      "ni_hi": null,
-     "eps": 20.037,
+     "eps": 20.039,
      "eps_hi": 20.21,
-     "gm": 14.038584942826262,
+     "gm": 14.047571328850042,
      "gm_hi": null,
-     "capex": 821.8125,
+     "capex": 821.5294117647059,
      "capex_hi": 1110.0
     },
     "2FY": {
      "label": "2FY",
-     "rev": 42106.46153846154,
+     "rev": 42089.675,
      "rev_hi": 42799.0,
      "ebit": 25364.166666666668,
      "ebit_hi": 26395.0,
-     "ebitda": 26831.346153846152,
+     "ebitda": 26833.0,
      "ebitda_hi": 27848.0,
-     "ni": 19856.743000000002,
+     "ni": 19851.611,
      "ni_hi": null,
-     "eps": 23.183,
+     "eps": 23.173000000000002,
      "eps_hi": 23.63,
-     "gm": 12.683195111964954,
+     "gm": 12.609754523582067,
      "gm_hi": null,
-     "capex": 876.5882352941177,
+     "capex": 861.2222222222222,
      "capex_hi": 1833.0
     },
     "3FY": {
      "label": "3FY",
-     "rev": 47173.48484848485,
+     "rev": 47141.23529411764,
      "rev_hi": 48661.0,
      "ebit": 28682.53125,
      "ebit_hi": 29894.0,
-     "ebitda": 30256.761904761905,
+     "ebitda": 30254.0,
      "ebitda_hi": 31254.0,
      "ni": 22489.742000000002,
      "ni_hi": null,
      "eps": 26.961000000000002,
      "eps_hi": 28.14,
-     "gm": 12.126514015825721,
+     "gm": 12.089553204702506,
      "gm_hi": null,
-     "capex": 998.3333333333334,
+     "capex": 973.4375,
      "capex_hi": 1993.0
     }
    },
@@ -16477,9 +17373,9 @@
   },
   "HOOD": {
    "bbg": "HOOD US Equity",
-   "px": 81.895,
-   "mktcap": 73822212741.14499,
-   "ev": 85646.21274114499,
+   "px": 81.33,
+   "mktcap": 73312907530.83,
+   "ev": 70220.90753083,
    "name": "ROBINHOOD MARKETS INC - A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -16539,7 +17435,11 @@
      "ebitda_hi": 2964.21,
      "eps_hi": 2.16,
      "capex_hi": 107.12,
-     "gm": 95.4
+     "gm": 95.4,
+     "fcf_bc": 4053.03,
+     "capex_bc": 49.87,
+     "ocf": 4102.9,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -16556,7 +17456,11 @@
      "ebitda_hi": 4864.0,
      "eps_hi": 3.69,
      "capex_hi": 121.3,
-     "gm": 95.7
+     "gm": 95.7,
+     "fcf_bc": 3274.03,
+     "capex_bc": 64.02,
+     "ocf": 3338.05,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -16619,9 +17523,9 @@
   },
   "COIN": {
    "bbg": "COIN US Equity",
-   "px": 132.71,
-   "mktcap": 35136753202.78,
-   "ev": 33201.55620278,
+   "px": 132.13,
+   "mktcap": 34983190420.34,
+   "ev": 33047.99342034,
    "name": "COINBASE GLOBAL INC -CLASS A",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -16681,7 +17585,11 @@
      "ebitda_hi": 1534.2,
      "eps_hi": 0.06,
      "capex_hi": 44.6,
-     "gm": 85.8
+     "gm": 85.8,
+     "fcf_bc": 962.09,
+     "capex_bc": 53.38,
+     "ocf": 1015.47,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -16698,7 +17606,11 @@
      "ebitda_hi": 3123.19,
      "eps_hi": 2.71,
      "capex_hi": 66.8,
-     "gm": 84.2
+     "gm": 84.2,
+     "fcf_bc": 2096.36,
+     "capex_bc": 83.82,
+     "ocf": 2180.18,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -16761,9 +17673,9 @@
   },
   "MSCI": {
    "bbg": "MSCI US Equity",
-   "px": 647.425,
-   "mktcap": 46290887500.0,
-   "ev": 52895.987499999996,
+   "px": 656.86,
+   "mktcap": 46965490000.0,
+   "ev": 53570.59,
    "name": "MSCI INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -16823,7 +17735,11 @@
      "ebitda_hi": 2174.43,
      "eps_hi": 19.84,
      "capex_hi": 55.4,
-     "gm": 82.8
+     "gm": 82.8,
+     "fcf_bc": 1522.31,
+     "capex_bc": 43.22,
+     "ocf": 1565.53,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -16840,7 +17756,11 @@
      "ebitda_hi": 2459.0,
      "eps_hi": 23.62,
      "capex_hi": 53.6,
-     "gm": 83.1
+     "gm": 83.1,
+     "fcf_bc": 1733.13,
+     "capex_bc": 42.01,
+     "ocf": 1775.14,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -16903,9 +17823,9 @@
   },
   "EFX": {
    "bbg": "EFX US Equity",
-   "px": 184.09,
-   "mktcap": 21541691561.66,
-   "ev": 26696.79156166,
+   "px": 188.23,
+   "mktcap": 22026142662.02,
+   "ev": 27181.24266202,
    "name": "EQUIFAX INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -16965,7 +17885,11 @@
      "ebitda_hi": 2098.59,
      "eps_hi": 8.29,
      "capex_hi": 510.31,
-     "gm": 56.5
+     "gm": 56.5,
+     "fcf_bc": 1104.42,
+     "capex_bc": 500.69,
+     "ocf": 1605.11,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -16982,7 +17906,11 @@
      "ebitda_hi": 2684.26,
      "eps_hi": 10.54,
      "capex_hi": 561.0,
-     "gm": 55.6
+     "gm": 55.6,
+     "fcf_bc": 1185.75,
+     "capex_bc": 508.76,
+     "ocf": 1694.51,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -17045,9 +17973,9 @@
   },
   "TRU": {
    "bbg": "TRU US Equity",
-   "px": 80.88,
-   "mktcap": 15423816000.0,
-   "ev": 20169.616,
+   "px": 82.01,
+   "mktcap": 15639307000.000002,
+   "ev": 20385.107000000004,
    "name": "TRANSUNION",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -17071,7 +17999,7 @@
      "ebitda": 463.5,
      "ebitda_hi": 469.0,
      "ni": 231.5,
-     "eps": 1.209,
+     "eps": 1.202,
      "eps_hi": 1.24,
      "gm": 58.98543192923405,
      "capex": 92.21,
@@ -17079,7 +18007,7 @@
     },
     "2FQ": {
      "label": "Q1-27E",
-     "rev": 1332.1875,
+     "rev": 1326.6470588235295,
      "rev_hi": 1350.0,
      "ebit": 306.6666666666667,
      "ebit_hi": 398.0,
@@ -17107,13 +18035,17 @@
      "ebitda_hi": 1801.31,
      "eps_hi": 4.71,
      "capex_hi": 341.42,
-     "gm": 58.9
+     "gm": 58.9,
+     "fcf_bc": 908.93,
+     "capex_bc": 299.53,
+     "ocf": 1208.46,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
      "nq": 4,
      "n_actual": 0,
-     "rev": 5473.62,
+     "rev": 5457.41,
      "ebit": 1274.25,
      "ebitda": 1965.71,
      "ni": 996.69,
@@ -17124,7 +18056,11 @@
      "ebitda_hi": 2048.0,
      "eps_hi": 5.91,
      "capex_hi": 369.9,
-     "gm": 58.7
+     "gm": 58.7,
+     "fcf_bc": 962.33,
+     "capex_bc": 319.94,
+     "ocf": 1282.27,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -17145,7 +18081,7 @@
     },
     "2FY": {
      "label": "2FY",
-     "rev": 5480.428571428572,
+     "rev": 5464.681818181818,
      "rev_hi": 5557.0,
      "ebit": 1333.6666666666667,
      "ebit_hi": 1665.0,
@@ -17187,9 +18123,9 @@
   },
   "CME": {
    "bbg": "CME US Equity",
-   "px": 305.92,
-   "mktcap": 109499133793.28001,
-   "ev": 111022.63379328001,
+   "px": 309.09,
+   "mktcap": 110633784205.56,
+   "ev": 112157.28420555999,
    "name": "CME GROUP INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -17249,7 +18185,11 @@
      "ebitda_hi": 5412.82,
      "eps_hi": 12.53,
      "capex_hi": 96.43,
-     "gm": 100.0
+     "gm": 100.0,
+     "fcf_bc": 4400.78,
+     "capex_bc": 85.06,
+     "ocf": 4485.84,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -17266,7 +18206,11 @@
      "ebitda_hi": 6707.0,
      "eps_hi": 13.96,
      "capex_hi": 109.9,
-     "gm": 100.0
+     "gm": 100.0,
+     "fcf_bc": 4786.01,
+     "capex_bc": 89.06,
+     "ocf": 4875.07,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -17329,9 +18273,9 @@
   },
   "ICE": {
    "bbg": "ICE US Equity",
-   "px": 174.78,
-   "mktcap": 97677273249.35999,
-   "ev": 119803.27324935999,
+   "px": 176.36,
+   "mktcap": 98560269540.31999,
+   "ev": 120686.26954031999,
    "name": "INTERCONTINENTAL EXCHANGE IN",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -17391,7 +18335,11 @@
      "ebitda_hi": 7514.95,
      "eps_hi": 8.14,
      "capex_hi": 983.6,
-     "gm": null
+     "gm": null,
+     "fcf_bc": 4658.39,
+     "capex_bc": 975.75,
+     "ocf": 5634.14,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -17408,7 +18356,11 @@
      "ebitda_hi": 8267.0,
      "eps_hi": 9.42,
      "capex_hi": 1193.0,
-     "gm": null
+     "gm": null,
+     "fcf_bc": 4798.11,
+     "capex_bc": 943.88,
+     "ocf": 5741.99,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -17471,9 +18423,9 @@
   },
   "CBOE": {
    "bbg": "CBOE US Equity",
-   "px": 356.42,
-   "mktcap": 37185382358.7,
-   "ev": 36059.6823587,
+   "px": 364.81,
+   "mktcap": 38060713030.35,
+   "ev": 36935.013030350005,
    "name": "CBOE GLOBAL MARKETS INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -17533,7 +18485,11 @@
      "ebitda_hi": 2123.85,
      "eps_hi": 14.12,
      "capex_hi": 90.12,
-     "gm": null
+     "gm": null,
+     "fcf_bc": 2214.95,
+     "capex_bc": 96.07,
+     "ocf": 2311.02,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -17550,7 +18506,11 @@
      "ebitda_hi": 2613.0,
      "eps_hi": 16.6,
      "capex_hi": 112.0,
-     "gm": null
+     "gm": null,
+     "fcf_bc": 1581.2,
+     "capex_bc": 96.61,
+     "ocf": 1677.81,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -17613,9 +18573,9 @@
   },
   "NDAQ": {
    "bbg": "NDAQ US Equity",
-   "px": 107.92,
-   "mktcap": 59891580087.920006,
-   "ev": 68674.58008792001,
+   "px": 110.02,
+   "mktcap": 61057001865.02,
+   "ev": 69840.00186501999,
    "name": "NASDAQ INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -17675,7 +18635,11 @@
      "ebitda_hi": 3479.25,
      "eps_hi": 4.04,
      "capex_hi": 275.87,
-     "gm": null
+     "gm": null,
+     "fcf_bc": 2482.7,
+     "capex_bc": 271.22,
+     "ocf": 2753.92,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -17692,7 +18656,11 @@
      "ebitda_hi": 4157.0,
      "eps_hi": 5.06,
      "capex_hi": 323.7,
-     "gm": null
+     "gm": null,
+     "fcf_bc": 2839.05,
+     "capex_bc": 256.11,
+     "ocf": 3095.16,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -17755,9 +18723,9 @@
   },
   "OWL": {
    "bbg": "OWL US Equity",
-   "px": 10.055,
-   "mktcap": 15753220755.835,
-   "ev": 19701.299755834996,
+   "px": 10.21,
+   "mktcap": 15996060061.37,
+   "ev": 19944.13906137,
    "name": "BLUE OWL CAPITAL INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -17817,7 +18785,11 @@
      "ebitda_hi": 1408.0,
      "eps_hi": 0.89,
      "capex_hi": 92.3,
-     "gm": null
+     "gm": null,
+     "fcf_bc": 1419.9,
+     "capex_bc": 79.35,
+     "ocf": 1499.25,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -17834,7 +18806,11 @@
      "ebitda_hi": 1885.0,
      "eps_hi": 1.12,
      "capex_hi": 147.7,
-     "gm": null
+     "gm": null,
+     "fcf_bc": 1589.0,
+     "capex_bc": 112.5,
+     "ocf": 1701.5,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -17897,9 +18873,9 @@
   },
   "BLK": {
    "bbg": "BLK US Equity",
-   "px": 1213.485,
-   "mktcap": 197501842098.01498,
-   "ev": 209253.84209801498,
+   "px": 1222.15,
+   "mktcap": 198912121962.84998,
+   "ev": 210664.12196284998,
    "name": "BLACKROCK INC",
    "ccy": "USD",
    "lrq": "2026-09-30",
@@ -17959,7 +18935,11 @@
      "ebitda_hi": 12935.75,
      "eps_hi": 55.03,
      "capex_hi": 410.83,
-     "gm": 100.0
+     "gm": 100.0,
+     "fcf_bc": 9401.3,
+     "capex_bc": 422.0,
+     "ocf": 9823.3,
+     "ocf_flag": false
     },
     "CY2027": {
      "label": "CY2027",
@@ -17976,7 +18956,11 @@
      "ebitda_hi": 16005.0,
      "eps_hi": 69.83,
      "capex_hi": 558.0,
-     "gm": 100.0
+     "gm": 100.0,
+     "fcf_bc": 11211.2,
+     "capex_bc": 396.83,
+     "ocf": 11608.03,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -18101,7 +19085,11 @@
      "ebitda_hi": 369.4,
      "eps_hi": -1.98,
      "capex_hi": 14766.06,
-     "gm": 76.5
+     "gm": 76.5,
+     "fcf_bc": -12410.65,
+     "capex_bc": 11213.0,
+     "ocf": -1197.65,
+     "ocf_flag": true
     },
     "CY2027": {
      "label": "CY2027",
@@ -18118,7 +19106,11 @@
      "ebitda_hi": 4814.0,
      "eps_hi": -1.36,
      "capex_hi": 29762.0,
-     "gm": 84.7
+     "gm": 84.7,
+     "fcf_bc": -14526.91,
+     "capex_bc": 16810.11,
+     "ocf": 2283.21,
+     "ocf_flag": false
     },
     "1FY": {
      "label": "1FY",
@@ -18179,5 +19171,6 @@
     "rev": 707.007
    }
   }
- }
+ },
+ "ocf_asof": "2026-11-10"
 }

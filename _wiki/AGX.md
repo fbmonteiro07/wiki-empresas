@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AGX` (10-K + transcrip
 | EBITDA | $210m | $329m |
 | EPS | $11.28 | $16.33 |
 | Capex | $13m | $8m |
-| OCF (≈EBITDA) | $210m | $329m |
+| OCF (FCF + capex cons) | $369m | $333m |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 _Note: no briefings roll-up or equity calls (thin coverage). Bull/Bear thesis derived primarily from the transcripts; sell-side and on-disk briefings coverage is nil._
 

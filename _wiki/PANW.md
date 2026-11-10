@@ -11,11 +11,11 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\PANW` (10-K FY25, 10-Q
 | Gross profit | $9.9bn | $11.4bn |
 | Gross margin | 75.8% | 75.4% |
 | EBITDA | $4.4bn | $5.3bn |
-| EPS | $3.75 | $4.50 |
+| EPS | $3.75 | $4.51 |
 | Capex | $277m | $376m |
-| OCF (≈EBITDA) | $4.4bn | $5.3bn |
+| OCF (FCF + capex cons) | $5.0bn | $6.3bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

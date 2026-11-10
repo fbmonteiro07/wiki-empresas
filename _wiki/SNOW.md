@@ -13,11 +13,11 @@ _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\SNOW\transcri
 | Gross profit | $4.4bn | $5.8bn |
 | Gross margin | 71.4% | 71.4% |
 | EBITDA | $1.1bn | $1.5bn |
-| EPS | $1.96 | $3.04 |
+| EPS | $1.97 | $3.04 |
 | Capex | $75m | $84m |
-| OCF (≈EBITDA) | $1.1bn | $1.5bn |
+| OCF (FCF + capex cons) | $1.4bn | $1.9bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > **Fidelity flag:** all seven transcripts are third-party (MarketBeat / Quartr feed) diarized transcriptions, not company-issued. Speaker tags and numbers carry transcription noise — e.g. the Q1 FY27 file reads "79 customers spending more than $1 million" where the surrounding quarters (733 → 828) make ~779 the only plausible figure — Barclays' recap confirms 779 (Barclays · Raimo Lenschow, 2026-05-28); the Q2 FY26 file loses speaker names entirely and mis-tags Sridhar Ramaswamy as "Operator". Treat load-bearing numbers as directional until checked against the press release / 10-Q.

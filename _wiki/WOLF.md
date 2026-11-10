@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\WOLF` (10-K/10-Q filin
 | EBITDA | — | $-143m |
 | EPS | $-9.11 | $-5.48 |
 | Capex | $112m | $42m |
-| OCF (≈EBITDA) | — | $-143m |
+| OCF (FCF + capex cons) | $-342m | $-332m |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

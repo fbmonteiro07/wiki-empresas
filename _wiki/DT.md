@@ -15,9 +15,9 @@ _Wiki · generated 2026-09-04 · sources: `E:\Wiki Felipe empresas\DT\transcript
 | EBITDA | $638m | $763m |
 | EPS | $1.77 | $2.02 |
 | Capex | $33m | $38m |
-| OCF (≈EBITDA) | $638m | $763m |
+| OCF (FCF + capex cons) | $641m | $713m |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > **Fidelity flag:** all six transcripts are third-party (MarketBeat / Quartr) diarized transcriptions, not company-published. Verify load-bearing numbers against the press release / 10-Q. Known artefacts: the Q1 FY26 file has unlabeled speakers ("Speaker 1/2" = McConnell/Benson); the Q4 FY26 file garbles the FY26 buyback line ("$178 million… 90% of our free cash flow" — the same call later states $479M repurchased = 90% of FCF); the UBS analyst is tagged "Radi Sultan" on the Q1 FY27 call vs "Roddy Sultan" in the UBS corpus notes.

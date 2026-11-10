@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-25 · sources: `E:\Wiki Felipe empresas\CDNs\_importe
 | EBITDA | $1.7bn | $2.2bn |
 | EPS | $6.49 | $6.90 |
 | Capex | $3.8bn | $4.3bn |
-| OCF (≈EBITDA) | $1.7bn | $2.2bn |
+| OCF (FCF + capex cons) | $1.6bn | $2.0bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

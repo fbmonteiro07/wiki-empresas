@@ -20,9 +20,9 @@ _Wiki · generated 2026-06-20 · **recent IPO (priced 2026-05-13, first trade 20
 | EBITDA | $-95m | $950m |
 | EPS | $-0.68 | $1.28 |
 | Capex | $1.5bn | $4.0bn |
-| OCF (≈EBITDA) | $-95m | $950m |
+| OCF (FCF + capex cons) | $226m | $2.2bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

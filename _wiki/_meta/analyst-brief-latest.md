@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-11-10 · 44 active signals · latest reconciliation: reconciliation-2026-11-09-inbox.md._
+_Generated 2026-11-10 · 42 active signals · latest reconciliation: reconciliation-2026-11-09-inbox.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -8,18 +8,18 @@ _Generated 2026-11-10 · 44 active signals · latest reconciliation: reconciliat
 
 | Rank | Ticker | Book | Signals | Why focus now |
 |---:|---|---|---:|---|
-| 1 | **META** | seed | 1 | META — catalyst passed without a logged outcome |
-| 2 | **GOOG** | seed | 2 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2026-11-18: post-print watch items from the callbacks: (1) 4Q Cloud margin, where Sandler expects the… |
-| 3 | **NVDA** | seed | 2 | NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…; NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).… |
-| 4 | **MSFT** | seed | 1 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE. |
+| 1 | **GOOG** | seed | 2 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2026-11-18: post-print watch items from the callbacks: (1) 4Q Cloud margin, where Sandler expects the… |
+| 2 | **NVDA** | seed | 2 | NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…; NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).… |
+| 3 | **MSFT** | seed | 1 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE. |
+| 4 | **ANTHROPIC** | — | 1 | ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot |
 | 5 | **IREN** | — | 1 | IREN — derived thesis/debate state changed since the prior daily snapshot |
 | 6 | **PLTR** | — | 1 | PLTR — derived thesis/debate state changed since the prior daily snapshot |
 | 7 | **QCOM** | — | 3 | QCOM — catalyst passed without a logged outcome; QCOM — catalyst passed without a logged outcome |
 | 8 | **SKHYNIX** | — | 1 | SKHYNIX — derived thesis/debate state changed since the prior daily snapshot |
-| 9 | **CME** | — | 2 | CME — catalyst passed without a logged outcome; CME — 2026-12-07: CME Securities Clearing launch on 2026-12-07, ahead of the SEC Treasury clearing mandate… |
-| 10 | **FLEX** | — | 1 | FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail… |
-| 11 | **KKR** | — | 1 | KKR — catalyst passed without a logged outcome |
-| 12 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
+| 9 | **FLEX** | — | 1 | FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail… |
+| 10 | **KKR** | — | 1 | KKR — catalyst passed without a logged outcome |
+| 11 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
+| 12 | **SPCX** | — | 1 | SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.… |
 
 ## Highest-priority ideas
 
@@ -28,15 +28,28 @@ _Generated 2026-11-10 · 44 active signals · latest reconciliation: reconciliat
 _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 - **Tickers:** GOOG · seeded book: GOOG
-- **Why now:** Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $428.4bn as of 2026-11-09, a derived +17.9% gap. Revenue comparisons require a basis check.
+- **Why now:** Capstone carries 2026 revenue at $505.0bn versus Bloomberg consensus at $428.4bn as of 2026-11-10, a derived +17.9% gap. Revenue comparisons require a basis check.
 - **Belief update:** The house/Street disagreement requires an explicit driver bridge.
 - **Action:** Open the GOOG model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
 - **Read-through:** AVGO (supplier: custom ASIC (TPU)); NVDA (supplier: GPUs); SNOW (competitor: warehouse vs BigQuery); ANTHROPIC (customer: TPU compute); BE (supplier: on-site fuel cells); CIEN (supplier: DCI/optical); COHR (supplier: optical)
-- **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-11-09.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-b57bd0050bb6
+- **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-11-10.
+- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-c60c4b0fded3
 
-### 2. 🟡 IREN — derived thesis/debate state changed since the prior daily snapshot
+### 2. 🟡 ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot
+
+_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
+
+- **Tickers:** ANTHROPIC
+- **Why now:** verification (transcription QA): every figure, name and quote in the roadshow inserts re-read against the transcript and the S-1/A No. 2 text; all numbers and arithmetic tie. Three wording corrections in the Debate bullet, no number changed: (1) the "~12%" 3Q adjusted OM was attributed to a "10-27 bullet" and a "leaked" 11% figure; it is FUNDA's 2026-10-26 derivation from the secondhand 11% nine-month figure (Bloomberg 10-14, primary not pulled), and the filed nine-month figure is 12%, not 11%; (2) the filing…
+- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
+- **Action:** Re-grade the ANTHROPIC thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
+- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
+- **Read-through:** AMZN (supplier: AWS Trainium compute); GOOG (supplier: TPU compute); NVDA (supplier: GPUs); OPENAI (competitor: frontier models); NSCALE (supplier: neocloud compute ($44.6bn, Monarch 460 MW))
+- **Attribution:** ANTHROPIC page Changelog 2026-11-10.
+- **Evidence:** [ANTHROPIC.md](../ANTHROPIC.md) · signal beli-310767ca860d
+
+### 3. 🟡 IREN — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -49,7 +62,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** IREN page Changelog 2026-11-09.
 - **Evidence:** [IREN.md](../IREN.md) · signal beli-1e3f84cdf5c9
 
-### 3. 🟡 PLTR — derived thesis/debate state changed since the prior daily snapshot
+### 4. 🟡 PLTR — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -62,7 +75,7 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** PLTR page Changelog 2026-11-09.
 - **Evidence:** [PLTR.md](../PLTR.md) · signal beli-11eb6a7c0703
 
-### 4. 🟡 SKHYNIX — derived thesis/debate state changed since the prior daily snapshot
+### 5. 🟡 SKHYNIX — derived thesis/debate state changed since the prior daily snapshot
 
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
@@ -75,57 +88,57 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 - **Attribution:** SKHYNIX page Changelog 2026-11-09.
 - **Evidence:** [SKHYNIX.md](../SKHYNIX.md) · signal beli-0229b7e48bb5
 
-### 5. 🟡 CRWV — 2026 EPS house view is 17% below consensus
+### 6. 🟡 CRWV — 2026 EPS house view is 17% below consensus
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 - **Tickers:** CRWV
-- **Why now:** Capstone carries 2026 EPS at $-3.27 versus Bloomberg consensus at $-3.94 as of 2026-11-09, a derived -17.0% gap.
+- **Why now:** Capstone carries 2026 EPS at $-3.27 versus Bloomberg consensus at $-3.94 as of 2026-11-10, a derived -17.0% gap.
 - **Belief update:** The house/Street disagreement requires an explicit driver bridge.
 - **Action:** Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
 - **Read-through:** MSFT (customer: neocloud compute); NVDA (supplier: GPUs); IREN (competitor: GPU neocloud); NSCALE (competitor: GPU neocloud); AMD (supplier: MI GPUs); OPENAI (customer: neocloud compute)
-- **Attribution:** Capstone official model — P:\Felipe Monteiro\US Equities\Modelos oficiais\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-09.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-42312918a989
+- **Attribution:** Capstone official model — P:\Felipe Monteiro\US Equities\Modelos oficiais\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-10.
+- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-0b9075d75223
 
-### 6. 🟡 CRWV — 2027 EPS house view is 18% below consensus
+### 7. 🟡 CRWV — 2027 EPS house view is 18% below consensus
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 - **Tickers:** CRWV
-- **Why now:** Capstone carries 2027 EPS at $-1.83 versus Bloomberg consensus at $-2.23 as of 2026-11-09, a derived -17.9% gap.
+- **Why now:** Capstone carries 2027 EPS at $-1.83 versus Bloomberg consensus at $-2.23 as of 2026-11-10, a derived -17.9% gap.
 - **Belief update:** The house/Street disagreement requires an explicit driver bridge.
 - **Action:** Open the CRWV model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
 - **Read-through:** MSFT (customer: neocloud compute); NVDA (supplier: GPUs); IREN (competitor: GPU neocloud); NSCALE (competitor: GPU neocloud); AMD (supplier: MI GPUs); OPENAI (customer: neocloud compute)
-- **Attribution:** Capstone official model — P:\Felipe Monteiro\US Equities\Modelos oficiais\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-09.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-576e5f53ab87
+- **Attribution:** Capstone official model — P:\Felipe Monteiro\US Equities\Modelos oficiais\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-10.
+- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-8f19b63c0593
 
-### 7. 🟡 COHR — 2027 EPS house view is 15% below consensus
-
-_MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
-
-- **Tickers:** COHR
-- **Why now:** Capstone carries 2027 EPS at $11.30 versus Bloomberg consensus at $13.35 as of 2026-11-09, a derived -15.4% gap.
-- **Belief update:** The house/Street disagreement requires an explicit driver bridge.
-- **Action:** Open the COHR model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
-- **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
-- **Read-through:** AMZN (customer: optical); GOOG (customer: optical); MSFT (customer: optical); NVDA (customer: optical/InP); LITE (competitor: optical/InP); AIXA (supplier: MOCVD tools); ANET (customer: optical)
-- **Attribution:** Capstone initiation of coverage, 2026-09-01 (Felipe Monteiro) — NEUTRAL, 12-month PT $285 (25x CY27E EPS). Model: session scratchpad cohr · Bloomberg consensus 2026-11-09.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-e1a01d689a48
-
-### 8. 🟡 LITE — 2026 EPS house view is 16% below consensus
+### 8. 🟡 LITE — 2026 EPS house view is 17% below consensus
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 - **Tickers:** LITE
-- **Why now:** Capstone carries 2026 EPS at $12.81 versus Bloomberg consensus at $15.20 as of 2026-11-09, a derived -15.7% gap.
+- **Why now:** Capstone carries 2026 EPS at $12.81 versus Bloomberg consensus at $15.46 as of 2026-11-10, a derived -17.1% gap.
 - **Belief update:** The house/Street disagreement requires an explicit driver bridge.
 - **Action:** Open the LITE model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
 - **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
 - **Read-through:** AMZN (customer: optical); MSFT (customer: optical); NVDA (customer: optical); COHR (competitor: optical/InP); AIXA (supplier: MOCVD tools); ANET (customer: optical)
-- **Attribution:** Capstone official model (Modelo consolidado incl. LITE .xlsx — consolidated optics, 2026-06-16). · Bloomberg consensus 2026-11-09.
-- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-0c74f485a146
+- **Attribution:** Capstone official model (Modelo consolidado incl. LITE .xlsx — consolidated optics, 2026-06-16). · Bloomberg consensus 2026-11-10.
+- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-5b1b8a61ac28
+
+### 9. 🟡 COHR — 2027 EPS house view is 16% below consensus
+
+_MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
+
+- **Tickers:** COHR
+- **Why now:** Capstone carries 2027 EPS at $11.30 versus Bloomberg consensus at $13.39 as of 2026-11-10, a derived -15.6% gap.
+- **Belief update:** The house/Street disagreement requires an explicit driver bridge.
+- **Action:** Open the COHR model and bridge the claim into revenue, margin and EPS; compare house, consensus and company guidance on the same period and basis.
+- **Falsifier:** A same-period, same-definition bridge showing the apparent gap is only a basis mismatch.
+- **Read-through:** AMZN (customer: optical); GOOG (customer: optical); MSFT (customer: optical); NVDA (customer: optical/InP); LITE (competitor: optical/InP); AIXA (supplier: MOCVD tools); ANET (customer: optical)
+- **Attribution:** Capstone initiation of coverage, 2026-09-01 (Felipe Monteiro) — NEUTRAL, 12-month PT $285 (25x CY27E EPS). Model: session scratchpad cohr · Bloomberg consensus 2026-11-10.
+- **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-b6e8e26cc2d3
 
 ## Catalysts requiring preparation
 
@@ -140,16 +153,16 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
 ## Research hygiene
 
-- **META — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for META in outcomes.md. _Source: Catalyst outcome ledger._ (post-a3feaac29739)
-- **CME — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for CME in outcomes.md. _Source: Catalyst outcome ledger._ (post-6d84cf39ebcd)
 - **KKR — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for KKR in outcomes.md. _Source: Catalyst outcome ledger._ (post-63dfa9032158)
 - **QCOM — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for QCOM in outcomes.md. _Source: Catalyst outcome ledger._ (post-28fe0082cdd8)
 - **QCOM — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for QCOM in outcomes.md. _Source: Catalyst outcome ledger._ (post-83a69d6c194e)
 - **QCOM — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for QCOM in outcomes.md. _Source: Catalyst outcome ledger._ (post-b1cb3a9fa2d9)
-- **SNDK — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for SNDK in outcomes.md. _Source: Catalyst outcome ledger._ (post-295dee3c22c1)
 - **NOK — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NOK, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-11-10._ (data-15ec6c635939)
 - **NSCALE — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-11-10._ (data-d2ca4ba51926)
 - **NOK — latest earnings transcript absent** — Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-10._ (data-6c9de40f766b)
+- **NSCALE — latest earnings transcript absent** — Fetch the latest NSCALE earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-10._ (data-b19973c0cf1f)
+- **POET — latest earnings transcript absent** — Fetch the latest POET earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-10._ (data-d19efe2671ee)
+- **SMTC — latest earnings transcript absent** — Fetch the latest SMTC earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-10._ (data-8ce84989a3aa)
 
 ## Feedback loop
 

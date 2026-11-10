@@ -13,9 +13,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\SNPS` · `_equity_call
 | EBITDA | $4.8bn | $5.7bn |
 | EPS | $15.37 | $19.96 |
 | Capex | $323m | $393m |
-| OCF (≈EBITDA) | $4.8bn | $5.7bn |
+| OCF (FCF + capex cons) | $2.7bn | $3.7bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

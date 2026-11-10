@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\HPE` (filings + transc
 | EBITDA | $9.6bn | $11.4bn |
 | EPS | $3.80 | $4.83 |
 | Capex | $2.9bn | $3.3bn |
-| OCF (≈EBITDA) | $9.6bn | $11.4bn |
+| OCF (FCF + capex cons) | $6.5bn | $8.6bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

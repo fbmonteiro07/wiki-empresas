@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRM` (filings + transc
 | EBITDA | $19.0bn | $20.6bn |
 | EPS | $13.41 | $15.99 |
 | Capex | $694m | $744m |
-| OCF (≈EBITDA) | $19.0bn | $20.6bn |
+| OCF (FCF + capex cons) | $15.6bn | $16.9bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > 🆕🔴 **2026-08-27 — FIDELITY UPGRADE: THE Q2 FY27 CALL IS NOW FULLY PRIMARY.** A **Bloomberg FINAL TRANSCRIPT** of the 2026-08-26 Q2 FY27 earnings call (36pp) was ingested from `_inbox` and is on disk at [`CRM_Q2-FY27-earnings_2026-08-26_BBG-FINAL-TRANSCRIPT.md`](../CRM/transcripts/CRM_Q2-FY27-earnings_2026-08-26_BBG-FINAL-TRANSCRIPT.md) ([HTML](../relat%C3%B3rios%20bons/Salesforce_Inc_Earnings_Call_2026826_SD000000003117862151pdf.html)). **It SUPERSEDES the reconstruction blocks in the earlier digest, which was written when no verbatim transcript could be obtained.** ✅ **Every call quote this page carried has been re-checked against it and the material ones hold verbatim — the "435% y/y" AI-lab spend, the "9 of the top 10 AI companies", and the SaaSpocalypse framing are all confirmed word-for-word.** The digest file is kept unedited as the record of what was known before the transcript arrived. ⚠️ **Two Bloomberg artefacts: the "Company Participants" list wrongly includes the pre-show CUSTOMER guests (Xero / Legora / Replit executives — David Friedberg, Sukhinder Singh Cassidy, David Eckstein, Ghazi Masood, Mark Murphy are NOT Salesforce officers), and the ASR renders "A1E"/"A4X" for Agentforce One Edition / Agentforce for Apps and "informatic" for Informatica. Do not quote a garbled token as a name.**

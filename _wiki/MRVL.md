@@ -13,9 +13,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\MRVL` (filings + trans
 | EBITDA | $4.7bn | $8.3bn |
 | EPS | $4.21 | $7.36 |
 | Capex | $492m | $717m |
-| OCF (≈EBITDA) | $4.7bn | $8.3bn |
+| OCF (FCF + capex cons) | $2.9bn | $5.7bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

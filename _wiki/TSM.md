@@ -13,9 +13,9 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\TSM` (20-F + transcrip
 | EBITDA | NT$4042.2bn | NT$5875.8bn |
 | EPS | **NT$102.50** | **NT$143.50** |
 | Capex | NT$2027.2bn | NT$2522.1bn |
-| OCF (≈EBITDA) | NT$4042.2bn | NT$5875.8bn |
+| OCF (FCF + capex cons) | NT$3464.5bn | NT$4815.9bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 _**Bold** = Capstone official model; plain = BBG consensus._
 <!-- SNAPSHOT:END -->
 

@@ -13,9 +13,9 @@ _Wiki · generated 2026-06-19 · **20-F filer (UK foreign private issuer)** — 
 | EBITDA | $2.7bn | $3.7bn |
 | EPS | $2.02 | $2.79 |
 | Capex | $443m | $481m |
-| OCF (≈EBITDA) | $2.7bn | $3.7bn |
+| OCF (FCF + capex cons) | $1.9bn | $2.9bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\QCOM` (10-K FY25, 10-Q
 | EBITDA | $13.2bn | $14.3bn |
 | EPS | $9.14 | $10.17 |
 | Capex | $1.8bn | $2.5bn |
-| OCF (≈EBITDA) | $13.2bn | $14.3bn |
+| OCF (FCF + capex cons) | $8.8bn | $11.2bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

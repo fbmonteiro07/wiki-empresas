@@ -18,9 +18,9 @@ _Wiki · generated 2026-06-19 · **Korean issuer — NO SEC filings (no 10-K/10-
 | EBITDA | ₩299908.4bn | ₩487487.0bn |
 | EPS | ₩317555.02 | ₩520340.72 |
 | Capex | ₩50643.4bn | ₩69635.6bn |
-| OCF (≈EBITDA) | ₩299908.4bn | ₩487487.0bn |
+| OCF (FCF + capex cons) | ₩219976.6bn | ₩372993.1bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

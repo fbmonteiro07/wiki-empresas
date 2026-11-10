@@ -13,9 +13,9 @@ _Wiki · generated 2026-11-06 · sources: `E:\Wiki Felipe empresas\IREN`: 10-K F
 | EBITDA | $369m | $3.2bn |
 | EPS | $-1.98 | $-1.36 |
 | Capex | $11.3bn | $16.8bn |
-| OCF (≈EBITDA) | $369m | $3.2bn |
+| OCF (FCF + capex cons) | $-1.2bn ⚠ | $2.3bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years). ⚠ = small negative OCF against large capex while EBITDA > 0: FCF and capex consensus come from different analyst sets, so the sign is not reliable._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

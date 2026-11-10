@@ -1,0 +1,40 @@
+{
+  "source": "Anthropic S-1/A No.2 2026-11-10, pp.23-25,134-135. All inputs HARD as filed; $74 is the filing scenario, not final price. Conditional claims not guaranteed issuance.",
+  "inputs": {
+    "price": 74,
+    "basic": 13086672591,
+    "fd_A": 7430143944,
+    "fd_N": 7804580273,
+    "options_net": 1704567865,
+    "rsu": 1073701297,
+    "rollover": 1563617444,
+    "matching_issued": 27991850,
+    "matching_conditional": 553441297,
+    "acquisition_A": 561963,
+    "acquisition_N": 848882,
+    "acquisition_holdback": 1590190,
+    "public_benefit_already_in_basic": 846840960,
+    "primary_new": 801351354,
+    "secondary_sold": 23648646,
+    "placement": 351351348,
+    "founder_each_sold": 3378378
+  },
+  "results": {
+    "fd": 18012993379,
+    "additional_claims": 4926320788,
+    "basic_valuation": 968413771734,
+    "fd_valuation": 1332961510046,
+    "delta_valuation": 364547738312,
+    "primary_gross": 59300000196,
+    "secondary_gross": 1749999804,
+    "founder_each_gross": 249999972
+  },
+  "checks": {
+    "bridge_equals_fd": true,
+    "basic_matches_legal_class_A_N": true,
+    "new_ipo_cash_matches_filing": true,
+    "cofounder_sales_match_secondary": true,
+    "public_benefit_not_added_twice": true
+  },
+  "sensitivity": "Price variable; exact alternate-price counts require changing fixed-dollar placement shares, treasury-stock method and RSU withholding. No extrapolation across price range. Future ungranted pools, earnouts/evergreens, greenshoe excluded. No unknown calibrated constant."
+}

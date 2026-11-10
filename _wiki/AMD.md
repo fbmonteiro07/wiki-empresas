@@ -13,9 +13,9 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AMD` (filings + transc
 | EBITDA | $15.2bn | $34.1bn |
 | EPS | $7.79 | $17.62 |
 | Capex | $1.8bn | $2.8bn |
-| OCF (≈EBITDA) | $15.2bn | $34.1bn |
+| OCF (FCF + capex cons) | $9.9bn | $22.1bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot
@@ -399,6 +399,10 @@ _Source: Vivek Arya (BofA) @ BofA SEMICON West & OCP Takeaways call, 2026-10-19 
 - **Memory-supply lock-up dynamic — flagged as a reader/community comment, NOT SemiAnalysis analyst body content:** a comment from Drew Van Pelt on SemiAnalysis's "Memory Mania" piece (comment section, p.35, 2026-02-06) speculates that AMD (and Meta) could be incentivized to lock up disproportionate long-term memory supply if they perceive a risk of being squeezed out as laggards in the memory-shortage environment — i.e. a fear-driven over-ordering dynamic that could tighten HBM/DRAM allocation further or strand AMD with excess commitments if demand undershoots. This is explicitly a third-party comment, not part of SemiAnalysis's own analysis, and should be weighted accordingly.
 
 ## Intra-quarter — calls, commentary & reports (since the last print)
+
+**2026-11-10 — Anthropic says its Mythos model brought Claude up on AMD GPUs in ~3 days (issuer anecdote, read narrowly).** Spoken by the compute presenter ("Tom", surname UNCONFIRMED) in the IPO roadshow video: "this year we started working with AMD GPUs for the first time. In the past, bringing on a new chip platform took dozens of engineers months of work. This time we had Mythos try it out. It got Claude running on AMD in just 3 days with basically no human intervention. Claude ported or wrote almost 100% of the kernels." (Anthropic management (presenters UNCONFIRMED) @ Anthropic IPO roadshow video presentation, 2026-11-10 — Capstone notes (Notion transcript); file `ANTHROPIC/transcripts/ANTHROPIC_IPO-roadshow-video-presentation_2026-11-10.md`).
+- ⚠️ Issuer marketing during the offering period, not research: no workload, scale, volume or performance is attached, and the "3 days" / "almost 100% of the kernels" detail is NOT in the S-1/A No. 2 text (the filing was searched at ingest and says only, of new chip platforms in general and not of AMD or Mythos, that Anthropic can onboard them "in a fraction of the time it once took" against "many months" historically). No new AMD deal, MW or dollar figure — the existing Anthropic–AMD agreement on `themes/ai-compute-deals.md` is unchanged.
+- Read-through (Capstone, analysis): the claim cuts both ways for AMD — it lowers the software-porting barrier that kept labs off non-Nvidia silicon, and by the same logic lowers it for every other merchant or custom chip. Compare the narrow 08-03 SemiAnalysis software-enablement row below.
 
 **🆕🔴 2026-10-26 — UBS RAISES ITS C2030 SERVER-CPU TAM TO ~$210B (FROM ~$175B) AND GIVES AMD $62B (30%) OF IT AND 34% OF UNITS — BUT SAYS DRAM, NOT DEMAND, CAPS THE MARKET.** (UBS · **Timothy Arcuri / Seth Cho**, *"US Semiconductors: $210B Server CPU TAM By C2030; Gated By Memory Supply"*, **2026-10-26** — [source](../relat%C3%B3rios%20bons/20261026_UBS_210B_Server_CPU_TAM_By_C2030_Gated_By_Memory_Supply.html) · figure tables: [`_data/figures/20261026_UBS_210B_Server_CPU_TAM_Gated_By_Memory_Supply.md`](_data/figures/20261026_UBS_210B_Server_CPU_TAM_Gated_By_Memory_Supply.md) · Capstone workbook: [models/UBS_CPU_DRAM_2026-10-26.xlsx](models/UBS_CPU_DRAM_2026-10-26.xlsx). **UBS Buy (CBE) on AMD, px US$516.79 (23-Oct); no PT is printed in this note, so the page's UBS mark stands.**)
 - **TAM (Figs 4, 10-12):** bottom-up C2030E **$208B** = traditional 30MM × $1,606 ($48B) + AI head-node 22MM × $4,480 + AI standalone ~15MM × $4,223 (AI CPU ASP ~$4.4K vs prior $3.8K); top-down $288B; "unconstrained" ~150MM CPUs / **$548B**. UBS notes vendors already cite TAMs in this range (AMD $220B, NVDA $200B with no year).
@@ -956,6 +960,8 @@ _Already switched on in 2026: 25 MW._
 
 ## Changelog
 
+- 2026-11-10 — ingest (Notion, ANTHROPIC_IPO-roadshow-video-presentation_2026-11-10.md): 1 dated block at the top of Intra-quarter — Anthropic roadshow video says Mythos got Claude running on AMD GPUs in ~3 days with almost 100% of kernels ported or written by Claude (issuer anecdote, presenters UNCONFIRMED, not in the S-1/A No. 2 text; no deal, MW or dollar figure). Nothing superseded.
+- 2026-11-10 — verification (transcription QA): the roadshow quote re-read against the transcript, verbatim. One wording correction: the S-1/A No. 2 "fraction of the time" sentence is a general statement about new chip platforms, not about the AMD bring-up or Mythos; the block now says so. No number changed.
 - 2026-11-09 — run-inbox: Lip-Bu Tan CASPA CEO Summit fireside (event ≈10-23/24, uploaded 11-09) — 1 Intra-quarter row at the top of the live table: Tan says he recently asked Lisa Su to "find some area we can work together" (Intel-side overture, no area, not a deal). Nothing superseded; Sinal/Síntese unchanged.
 - 2026-11-09 — added the "DC construction pipeline — Aterio census" section (Aterio US census export 2026-08-31, licensed; facility MW): named end user 5 buildings, 292 MW under construction, 2026-30 not yet active High/Medium/Low 450/0/0 MW; project financier 2 buildings, 50 MW under construction, 2026-30 not yet active High/Medium/Low 170/0/0 MW. Reference: [themes/aterio-dc-census.md](themes/aterio-dc-census.md). Nothing superseded.
 - 2026-11-09 — Aterio census section refreshed: added the Capstone house-view table (GW IT-eq, 2026-30; Aterio census as of 2026-08-31, Capstone treatment: facility ÷ 1.15, switched on since Jan-2026 + under construction + delayed + planned High, Low-likelihood campuses with no tenant dropped; house rules of 2026-11-09): named end user 0.41 GW; project financier 0.15 GW. Facility figures in the section are unchanged (same export); nothing superseded.

@@ -13,9 +13,9 @@ _Wiki · created 2026-11-02 · research cutoff 2026-11-02 · Outlook review 2026
 | EBITDA | $1.8bn | $2.0bn |
 | EPS | $4.67 | $5.29 |
 | Capex | $319m | $315m |
-| OCF (≈EBITDA) | $1.8bn | $2.0bn |
+| OCF (FCF + capex cons) | $1.2bn | $1.3bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

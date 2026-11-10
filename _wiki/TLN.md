@@ -8,14 +8,14 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\TLN` (filings + transc
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | $4.4bn | $5.3bn |
-| Gross profit | $3.0bn | $3.5bn |
-| Gross margin | 67.4% | 65.5% |
+| Gross profit | $3.0bn | $3.3bn |
+| Gross margin | 67.2% | 62.1% |
 | EBITDA | $2.1bn | $2.7bn |
 | EPS | $25.25 | $28.80 |
 | Capex | $209m | $282m |
-| OCF (≈EBITDA) | $2.1bn | $2.7bn |
+| OCF (FCF + capex cons) | $1.6bn | $1.9bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 > Coverage note: thin file. No briefing roll-up exists for TLN and no equity-call attributions are logged in INDEX. Bull/bear below is built primarily from the company's own earnings transcripts plus the 10-K — sell-side views are paraphrased only as quoted by name in the Q&A (Wells Fargo, BofA, Wolfe, Jefferies, Morgan Stanley, JPM, Barclays, Evercore, UBS, Seaport, Tuohy). TLN relisted in 2024; history is short.

@@ -2,6 +2,33 @@
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
  "_updated": "2026-11-10",
  "terms": {
+  "LBBT": {
+   "correct": "LTBT (Anthropic's Long-Term Benefit Trust)",
+   "domain": "acronyms",
+   "rule": "Notion ASR of 'LTBT' one sentence after the speaker spells out 'the Long-Term Benefit Trust'; the Notion AI summary then repeats 'LBBT' as if it were the name.",
+   "first_seen": "2026-11-10 (Anthropic IPO roadshow video presentation, Notion transcript)"
+  },
+  "fundable pool": {
+   "correct": "fungible pool (of compute)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "Notion ASR of 'fungible' ('treat all of our chips ... as one fundable pool of compute'); the same recording says 'a single fungible pool' later and the S-1/A No. 2 says 'a single, fungible pool'.",
+   "first_seen": "2026-11-10 (Anthropic IPO roadshow video presentation, Notion transcript)"
+  },
+  "total expenses on cloud": {
+   "correct": "total expenses on Claude",
+   "domain": "names",
+   "ci": true,
+   "rule": "Notion ASR hears 'Claude' as 'cloud' in Anthropic material ('Fortune 500 customers spend less than 0.1% of their total expenses on cloud'; also 'return from their spend on cloud'). The figure is spend on Anthropic/Claude, NOT a cloud-spend share - never cite it as a cloud datapoint.",
+   "first_seen": "2026-11-10 (Anthropic IPO roadshow video presentation, Notion transcript)"
+  },
+  "win for VMS": {
+   "correct": "win for BMS (Bristol Myers Squibb) - reading inferred",
+   "domain": "names",
+   "ci": true,
+   "rule": "Notion ASR of a pharma customer testimonial in the Anthropic roadshow video ('a huge win for patients and ... for VMS'). The S-1/A No. 2 names Bristol Myers Squibb as a Fortune 500 customer; the speaker is not named. Write 'BMS [transcribed \"VMS\"], reading inferred'.",
+   "first_seen": "2026-11-10 (Anthropic IPO roadshow video presentation, Notion transcript)"
+  },
   "Hixle AI": {
    "correct": "Higgsfield (AI video startup)",
    "domain": "names",

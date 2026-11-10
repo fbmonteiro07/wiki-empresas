@@ -13,9 +13,9 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\MSFT` (filings + trans
 | EBITDA | $214.9bn | $265.5bn |
 | EPS | $17.88 | $21.75 |
 | Capex | $154.8bn | $217.5bn |
-| OCF (≈EBITDA) | $214.9bn | $265.5bn |
+| OCF (FCF + capex cons) | $207.2bn | $241.5bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

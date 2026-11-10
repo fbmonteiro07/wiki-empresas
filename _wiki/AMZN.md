@@ -13,9 +13,9 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\AMZN` (filings + trans
 | EBITDA | $211.6bn | $287.8bn |
 | EPS | $9.50 | $12.24 |
 | Capex | $199.2bn | $319.1bn |
-| OCF (≈EBITDA) | $211.6bn | $287.8bn |
+| OCF (FCF + capex cons) | $185.4bn | $256.9bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

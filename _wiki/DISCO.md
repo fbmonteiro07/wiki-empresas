@@ -17,9 +17,9 @@ _Wiki · generated 2026-06-20 · **No SEC filings — Japanese issuer (TSE Prime
 | EBITDA | ¥247.9bn | ¥307.7bn |
 | EPS | ¥1588.08 | ¥1949.93 |
 | Capex | ¥41.8bn | — |
-| OCF (≈EBITDA) | ¥247.9bn | ¥307.7bn |
+| OCF (FCF + capex cons) | ¥211.3bn | ¥202.9bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

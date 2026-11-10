@@ -13,9 +13,9 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWV` (10-K FY2025, fo
 | EBITDA | $7.5bn | $16.7bn |
 | EPS | **$-3.27** | **$-1.83** |
 | Capex | $35.5bn | $47.3bn |
-| OCF (≈EBITDA) | $7.5bn | $16.7bn |
+| OCF (FCF + capex cons) | $8.3bn | $17.7bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 _**Bold** = Capstone official model; plain = BBG consensus._
 <!-- SNAPSHOT:END -->
 

@@ -13,9 +13,9 @@ _Wiki · generated 2026-07-02 · sources: 9 broker reports ingested 2026-07-02 (
 | EBITDA | $585m | $910m |
 | EPS | $11.13 | $17.72 |
 | Capex | $177m | $194m |
-| OCF (≈EBITDA) | $585m | $910m |
+| OCF (FCF + capex cons) | $360m | $614m |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

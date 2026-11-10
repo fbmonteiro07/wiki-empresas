@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\RDDT` (10-K FY25 + 10-
 | EBITDA | $1.4bn | $2.0bn |
 | EPS | $6.65 | $8.97 |
 | Capex | $10m | $13m |
-| OCF (≈EBITDA) | $1.4bn | $2.0bn |
+| OCF (FCF + capex cons) | $1.4bn | $1.8bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

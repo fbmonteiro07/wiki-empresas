@@ -13,9 +13,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\CRDO` (filings + trans
 | EBITDA | $1.1bn | $2.0bn |
 | EPS | $5.12 | $9.27 |
 | Capex | $412m | $144m |
-| OCF (≈EBITDA) | $1.1bn | $2.0bn |
+| OCF (FCF + capex cons) | $736m | $1.5bn |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 
 ## Snapshot

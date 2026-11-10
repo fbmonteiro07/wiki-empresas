@@ -15,9 +15,9 @@ _Wiki · generated 2026-06-19 · sources: `E:\Wiki Felipe\VECO` (filings + trans
 | EBITDA | $115m | $278m |
 | EPS | $1.49 | $3.14 |
 | Capex | $24m | $28m |
-| OCF (≈EBITDA) | $115m | $278m |
+| OCF (FCF + capex cons) | $133m | $140m |
 
-_Gross profit = Revenue × GM%. OCF: no forward BBG consensus — EBITDA shown as proxy._
+_Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
 _**Internal coverage is thin** — Veeco has no equity-call notes and only incidental briefing mentions in our repo; this page is built mostly from primary sources (SEC filings + earnings transcripts)._
 
