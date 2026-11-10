@@ -276,6 +276,11 @@ Requested by Felipe on 2026-11-05: everything announced but not yet closed — M
 | **Yet to close, all tiers** | 29 | 24 | **513.9** | 504.9 | 9.0 |
 | *excluding tentative IPOs* | 22 | | **405.9** | | |
 
+> **Post-window update, 2026-11-10 (not re-totalled; the table above is the 2026-11-05 build).** Anthropic's S-1/A No. 2 (EDGAR acc. 0001628280-26-072484, filed 2026-11-10) sets the IPO range at **$70–78 for 825m shares (801.35m primary)**.
+> - In the JSON, the tier-4 Anthropic row `DEQ-ANTHROPIC-20261102-1` is re-marked from the ~$100bn press mark to **$59.3bn**, the filed primary at the midpoint ($56.1–62.5bn across the range).
+> - The filing adds a **$26.0bn concurrent Class N placement** (`DEQ-ANTHROPIC-20261110-1`, signed, tier 1, boundary-out).
+> - Re-totalled, the bar would read **$473.2bn excluding the placement / $499.2bn including it**, against $513.9bn (our arithmetic). Tentative IPOs would fall to $67.3bn.
+
 How to read the four tiers:
 
 - **Tier 1 · signed or committed, not closed.** A binding letter, signed purchase agreement or announced committed package whose cash has not moved: Anthropic's $63bn North Star (BofA/Citi/Morgan Stanley/Blackstone with Broadcom, 2026-10-26), SpaceX's ~$40bn Apollo GPU finance lease (binding letter 2026-10-24, closing expected before YE26 — SpaceX 8-K 2026-10-26), Blackstone's up-to-$5bn Crux equity (Alphabet 10-Q 2026-10-29), the $2bn General Catalyst-led Axiom preferred (Flex 8-K 2026-10-05), Corning/NVIDIA $0.5bn and AXT/Tongmei.
@@ -432,6 +437,20 @@ Six currencies in 2026 (USD, GBP, CHF, EUR, CAD, JPY, AUD) with ~44% of its IG f
 
 The S-1 shows who funds what: the three CSPs are at once compute suppliers, lenders and shareholders — Google's 2026 NPA (up to $30bn; $10bn used in the Series H; $20bn left to 2030; 14.99% cap; plus an option on $10bn of Class N at the IPO price) and Amazon's 2026 NPA (up to $20bn; $5bn into Series H; $15bn released in $5bn tranches on compute-capacity milestones; 12% cap) (Anthropic S-1 filed 2026-10-26, pp.166-169, F-41/F-43). Amazon carries the Anthropic convertible notes at $146.2bn fair value and the preferred at $92.5bn (Amazon 10-Q, 2026-10-30). The chip-lease structures (Big Sky, North Star) sit outside the balance sheet of both the lab and the chipmaker: Broadcom's exposure is residual-value support of ~$29bn (Big Sky, 10-Q 2026-09-10) and ~$43bn at peak (North Star, 8-K 2026-10-27), not loan principal.
 
+**Post-window update, 2026-11-10 — S-1/A No. 2** (EDGAR acc. 0001628280-26-072484; [Anthropic page](../ANTHROPIC.md); [change analysis](../_meta/research/2026-11-10-anthropic-s1a2/analysis.md)):
+
+| Deal ID | Event | Instrument (bucket) | Size · basis | Pricing | Status |
+|---|---|---|---|---|---|
+| `DEQ-ANTHROPIC-20261102-1` (update) | 2026-11-10 | IPO — range **$70.00–$78.00**, **825m** Class A shares (801,351,354 primary + 23,648,646 secondary, 3,378,378 from each co-founder); option 123.75m (IPO) | Primary **$56.1–62.5bn** gross ($59.3bn at the $74 midpoint, per the dilution table); net proceeds **$84.6bn** at midpoint including the placement ($93.7bn with the option) | Range only; per-share underwriting discount blank; expenses $68m | filed — range set, not priced |
+| `DEQ-ANTHROPIC-20261110-1` (new, post-window) | 2026-11-10 | Concurrent private placement of Class N at the IPO price — Google $10.0bn · NVIDIA $10.0bn · AMD $2.5bn · Broadcom / Micron / Microsoft $1.0bn each · TSMC $0.5bn; no underwriting fee; no lock-up (PIPE / private placement) | **$26.0bn** · aggregate purchase price (351.4m shares at $74) | IPO price | signed; contingent on IPO completion and stockholder approval |
+
+What the placement does to the existing support lines:
+- Google's $10bn is the full exercise of its NPA IPO option. The **Google 2026 NPA's remaining amount falls from $20bn to $10bn**.
+- AMD's $2.5bn satisfies half of its up-to-$5bn equity commitment; the rest needs GPU milestones, the first expected in 2027.
+- Amazon elected **not** to waive its 12% cap: 1.56bn Class N stay in rollover notes.
+- Five of the seven buyers are Anthropic's direct compute/hardware counterparties (Google, NVIDIA, AMD, Broadcom, Microsoft): **supplier equity** on the same model as the Series H NPA draws.
+- Implied equity value at $70–78 (our arithmetic): $0.92–1.02tn basic / $1.26–1.41tn fully diluted.
+
 ### SpaceX ($100.0bn priced/closed; ~$40bn GPU lease committed)
 
 | Deal ID | Event | Instrument (bucket) | Size · basis | Pricing | Status |
@@ -576,7 +595,7 @@ Microsoft had issued $0 of bonds in 2026 through 20-Aug (Barclays FICC, 2026-08-
 
 - Oracle closed both legs on 11-04 (8-K) — done. Nscale's $1.0bn NVIDIA piece ~11-16; Anthropic's listing, targeted for 11-16 on All-In (2026-10-30, podcast); Meta's underwriter options lapse ~11-25. 2026-11-03 Apollo Q3 (Big Sky draws), 2026-11-09 KKR Q3 (Helix); IREN's print (Blue Owl chip financing terms).
 - CoreWeave 3Q26 call (early November): ATM use and price, the 2027 funding plan against UBS $21–22bn / MS $24–37bn, whether a tranche is placed with a hyperscaler offtaker (MS's preferred path), and the financing of the ~$21bn April Meta contract (Barclays expects a deal before year-end).
-- Anthropic's price-range amendment; Nscale pricing (ask "up to $35bn"); OpenAI's first close; the ~$21bn North Star IG bond in 1Q27 and the final second-lien/equity split; SpaceX/Apollo master-lease closing before YE26 and the fixed rate set at pricing.
+- Anthropic's price-range amendment (✅ filed 2026-11-10: $70–78, 825m shares + $26.0bn concurrent placement — see the Anthropic section; pricing date still open); Nscale pricing (ask "up to $35bn"); OpenAI's first close; the ~$21bn North Star IG bond in 1Q27 and the final second-lien/equity split; SpaceX/Apollo master-lease closing before YE26 and the fixed rate set at pricing.
 - Meta: forward settlement(s), over-allotment on the preferred, Class C ATM launch after 2027-01-19, and whether a $20–30bn bond follows (Wells Fargo's expectation, 2026-10-22). Amazon: first draws on the $80bn supplier facility from 1Q27. Nebius: asset-backed financing on >$40bn of IG customer contracts (Nave, 2026-10-22).
 - Signposts the credit desks named: new-issue concessions and the capex second derivative (GS Credit, 2026-08-03/09); the CoreWeave-vs-Amazon offtake spread (MS, 2026-08-20) — compression retires the "interim capacity provider" discount, widening prices the Bernstein thesis.
 
@@ -596,6 +615,11 @@ Pre-window deals that the window's pricing is measured against: Oracle $25bn eig
 
 ## Changelog
 
+- 2026-11-10 (post-window, Anthropic S-1/A No. 2 ingest; EDGAR acc. 0001628280-26-072484):
+  - `DEQ-ANTHROPIC-20261102-1` updated with the filed range ($70–78, 825m shares). Its ytc mark moves **$100bn → $59.3bn** (filed primary at midpoint); the old value is kept in the JSON as `ytc_usd_bn_2026_11_05`.
+  - Added **`DEQ-ANTHROPIC-20261110-1`**, the $26.0bn concurrent Class N placement (signed, tier 1, boundary-out, not in totals).
+  - The 2026-11-05 totals and the yet-to-close table are **not re-totalled**. Re-marked arithmetic is in the note under that table ($473.2bn excluding / $499.2bn including the placement).
+  - Watch item "Anthropic's price-range amendment" marked as filed.
 - 2026-11-05 (yet-to-close pass, requested by Felipe) — added the **Yet to close** section and the `ytc_tier` / `ytc_usd_bn` / `ytc_basis` / `cash_pending` fields in the JSON: 29 rows, **$513.9bn** in the bar ($110.8bn signed or committed · $191.1bn programmes, options and undrawn capacity · $104.0bn reported · $108.0bn tentative IPOs), never added to the priced total. New rows: Meta underwriter options ($5.6bn), Alphabet ATM balance ($27.6bn), Blackstone's Crux equity (up to $5bn), the $2bn Axiom preferred split out of the Flex debt row (8-K 2026-10-05), Lambda's round, Crusoe's Series F (adjacent, closed, not summed) and IPO rows for SB Energy, Firmus, OpenAI, Lambda and Crusoe; the Anthropic and Nscale IPO rows now carry their reported sizes. **Closed deal added:** Blackstone's BXDC REIT IPO, $1.75bn (priced 2026-05-13) — priced/closed total **$790.3bn (81 rows) → $792.1bn (82 rows)**; equity $263.4bn → $265.2bn. **Oracle's $20bn closed on 11-04** (8-K filed 2026-11-04) — status 'priced, closing not confirmed' → 'closed'. The 'Announced, committed, planned or reported' table is folded into the tiers. Old values preserved here.
 
 - 2026-11-05 — EDGAR sweep of every SEC-filing wiki name (2026-05-03 → 2026-11-05), each filing read directly: **45 records added** (see the 'Added' section) — Microsoft $25bn (10-29), Meta $15bn + €9bn (11-03/04), Alphabet €6bn (11-02), ServiceNow $4bn, Dell $3bn (June), Booking, Mastercard, ADI, Quanta, Williams, Amphenol, Equifax, nVent, Blackstone, Vistra hybrids; six 0% converts (Advanced Energy, onsemi, Akamai, Ciena, Cloudflare, Dynatrace); Corning/NVIDIA $500m PIPE; ATMs (AAOI, Navitas, Super Micro); AXT/Tongmei subscription; AMD CP programme; 18 credit facilities. Corrections: Flex now itemised from the 8-Ks ($3.3bn term loan + $1.1bn bridge, both drawn 10-14); CoreWeave's €2.0bn leg and Uber's €4.5bn converted at the Bloomberg EURUSD close on the pricing date and added to the total; OpenAI round note (~$11bn of reported commitments); Oracle closing still unconfirmed on 11-05. Totals: priced/closed **$684.6bn (58 rows) → $790.3bn (81 rows)**; IG bonds $195.5bn → $284.5bn; facilities $53.5bn (5) → $90.0bn (23). Window end moved 2026-11-03 → 2026-11-05. Old values preserved here.

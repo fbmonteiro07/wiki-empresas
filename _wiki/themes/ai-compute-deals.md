@@ -1,5 +1,43 @@
 # AI compute deals — announcements and confirmations
 
+## 2026-11-10 recorded — Anthropic S-1/A Amendment No. 2: Microsoft re-sized, Lambda August tranche terminable, aggregate $900.9bn; supplier equity placement $26bn (financing, no compute ID)
+
+_Procedure: searched this theme for `ANTH-AZURE-NVDA|Microsoft.*44.9`, `ANTH-LAMBDA-20260831|terminable|facility lease`, `ANTH-AMD-20260722|equity commitment`, `Google 2026 NPA|IPO price`, `895.4|213.8` before writing. All Anthropic items are amendments or confirmations of existing IDs or of the 11-06 aggregate block. **No new compute deal ID.** The $26bn Class N placement is equity financing, logged in the register as `DEQ-ANTHROPIC-20261110-1`. Source: [Anthropic S-1/A No. 2, filed 2026-11-10, acc. 0001628280-26-072484](https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm) ([archived](../../ANTHROPIC/ANTHROPIC_S-1A2_2026-11-10_0001628280-26-072484.html); [change analysis](../_meta/research/2026-11-10-anthropic-s1a2/analysis.md)). Evidence level: company disclosure in a filed registration statement; nothing below is delivery or funding evidence._
+
+- **ANTH-AZURE-NVDA-20251118 (Microsoft):** **at least $47.2bn and up to $49.2bn**, Nov-2026–Jun-2033, "regardless of actual usage", amended "between February and November 2026" (p.180).
+  - Prior: at least $44.9bn on both the 10-26 S-1 (Nov-26–May-33) and the 11-02 S-1/A (Nov-26–Jun-33).
+  - The increment is +$2.3bn on the minimum, with a $2.0bn band above it. The filing does not say what drives the ceiling.
+  - The per-tranche cancellation exception now reads "certain undelivered tranches" (11-02: "undelivered tranches").
+  - Latest cumulative value; not additive to the earlier vintages.
+- **ANTH-LAMBDA-20260831 (August tranche, ~$34.9bn):** *"Lambda did not secure the facility lease by such date and, as a result, the August 2026 agreement is currently terminable by either party. Neither party has delivered notice of termination as of the date of this prospectus, and we do not currently intend to terminate the agreement"* (p.181).
+  - Status change: a contingent term turns into an **exercisable termination right**.
+  - Relationship aggregate ~$41.3bn unchanged. No cancellation recorded.
+  - Hut 8's Beacon Point financing (backfill, 11-03) is the landlord-side history on the same ID. This filing does not say which facility lease was missed.
+- **ANTH-AMD-20260722 (AMD Hardware Supply Agreement):** AMD's $2.5bn of placement stock satisfies half of the up-to-$5.0bn AMD equity commitment, dollar for dollar.
+  - The remaining $2.5bn can be drawn only once cumulative GPU delivery/deployment milestone accruals exceed $2.5bn. The **first milestone is expected in 2027** (p.172).
+  - The >$20bn expected procurement and the 2,000 MW exhibit vintage are unchanged.
+- **Anthropic aggregate (no ID; supersedes the 11-06 block's 11-02 vintage, which stays below):**
+  - **$900.9bn** (was $895.4bn); before 2031 $451.6bn (was $447.5bn); next 12 months $70.7bn (was $69.8bn), of which $4.2bn conditional (was $4.3bn).
+  - **Termination-right/conditional portion $186.2bn (was $213.8bn)**.
+  - Post-Sep-30 longer-term commitments **$105.7bn (was $100.2bn)**; short-term $6.6bn unchanged.
+  - $150–175bn of no-fixed-amount arrangements, unchanged and outside the aggregate (pp.8, 178–179).
+  - The +$5.5bn on the aggregate equals the +$5.5bn on post-Sep-30 commitments. Microsoft's +$2.3bn sits inside it; the rest is unallocated (our arithmetic).
+  - Do not read the −$27.6bn on the conditional portion as cancellations. The filing gives no bridge; conditions satisfied or commenced is one possible reading, not confirmed.
+- **Guarantees (no ID):** developer cost-reimbursement guarantees fall to **$4.2bn** (was $4.7bn), triggered by a missing definitive lease or construction financing, with remaining terms under one year. **New $500m guaranty** of an unnamed data-center provider's payments under a power purchase contract, expiring by 2038-12-31 (F-61). Power-side credit support, not compute.
+- **Financing context (no compute ID): the IPO's $26.0bn concurrent Class N placement.**
+  - Google $10.0bn, NVIDIA $10.0bn, AMD $2.5bn, Broadcom $1.0bn, Micron $1.0bn, Microsoft $1.0bn, TSMC $0.5bn, at the IPO price (pp.1, 20).
+  - Google's piece is the full exercise of its 2026 NPA IPO option; the **NPA's remaining amount falls from $20bn to $10bn** (pp.174, 177). That is still not mapped to ANTH-GOOG rows, per the 10-26 rule.
+  - **Amazon did not waive its ownership cap**: 1.56bn Class N stay in rollover notes (pp.62–63, 173).
+  - Five of the seven buyers are direct compute/hardware counterparties of Anthropic (Google, NVIDIA, AMD, Broadcom, Microsoft); Micron and TSMC sit upstream. This is vendor equity alongside supply contracts. Contingent on the IPO closing; not funded.
+
+## 2026-11-10 recorded — Google / Constellation power context: primary terms recovered, no incremental compute commitment
+
+_Procedure: searched this theme and CEG.md for Google, Constellation, CEG, Peak+, Calvert and the 3.6 GW reference. The November 6 Bernstein entry below explicitly treats this as power context without a compute-deal ID. Preserve that classification; this is a confirmation and basis clarification, not a new contract or additive compute GW. Company-page changes are deferred under the morning brief's explicit no-company-page-edit instruction._
+
+- **Original event 2026-10-06; confirmed/restated 2026-11-09; recorded 2026-11-10:** the [Google / Constellation company announcement](https://www.constellationenergy.com/news/2026/10/google-and-constellation-announce-landmark-agreement-to-bring-890-mw-of-new-nuclear-capacity-to-pjm-grid.html) identifies a **20-year PPA supporting 890 MW of incremental nuclear generation**, first uprate expected in 2028, and a **separate 15-year, 2,700 MW financial energy supply agreement** involving existing operating assets. The [CEG November 9 earnings release](https://www.constellationenergy.com/news/2026/11/constellation-reports-third-quarter-2026-results.html) repeats the split and calls the latter a financial energy load-following agreement. The November 6 Bernstein ~3.6 GW headline is therefore not all new generation or data-center IT load. No delivery, funded capex or incremental compute commitment established by the announcements; do not add the two bases to a compute-capacity series.
+- **Historical status retained:** the November 6 context row's “date and terms UNVERIFIED” described evidence then retrieved. It is superseded for the company-announced terms by the primaries above, not silently deleted. The separate five-year Google Cloud/Gemini technology alliance in the October 6 release has no disclosed purchase amount here; no compute dollar total inferred.
+- **Research change log, 2026-11-10:** primary-source confirmation and basis correction only; no new deal ID. Evidence/check record: [_meta/analyst-evidence/2026-11-10-morning-source-checks.json](../_meta/analyst-evidence/2026-11-10-morning-source-checks.json). Company pages and house models unchanged.
+
 ## 2026-11-09 recorded (DC-registry cross-check against Daniel's build matrix) — new ID MSFT-NSCALE-TX-202510: Microsoft declined the option to expand Nscale's Texas contract; ORCL-JUPITER-EXEC gets a pipeline-delay backfill; Colossus 1 already sits under ANTH-SPCX-20260506
 
 _Procedure: searched this theme for `Nscale|Ward|Barstow|Ionic|Texas` (only MSFT-NSCALE-LOUGHTON-202509 and ANTH-NSCALE-20260826 exist; no Texas site ID), `Jupiter|force majeure|Energy Transfer` (ORCL-JUPITER-EXEC; the 09-24 notice is logged, the pipeline date is not) and `Colossus|ANTH-SPCX` (ANTH-SPCX-20260506 already holds the May-26 Colossus 1 lease). Prompted by Daniel's build matrix (Capstone research, as of 2026-11-05); every row below was re-checked in the source it cites._
@@ -553,6 +591,15 @@ Follow-up: Riot's Q3 8-K/deck (slide 8 layout, slide 13 NOI) to confirm the Cors
 
 ## Confirmations, revisions and execution history
 
+
+### Recorded 2026-11-10 — Anthropic S-1/A Amendment No. 2 (filed 2026-11-10, acc. 0001628280-26-072484)
+
+| Event / source date | Stable ID | Original terms and subsequent evidence | Execution / reconciliation |
+|---|---|---|---|
+| Amended Feb–Nov 2026; filed 2026-11-10 | ANTH-AZURE-NVDA-20251118 | Prior: **at least $44.9bn** (S-1 10-26: Nov-26–May-33; S-1/A 11-02: Nov-26–Jun-33). Now: **at least $47.2bn and up to $49.2bn**, Nov-26–Jun-33, regardless of usage ([S-1/A No. 2, p.180](https://www.sec.gov/Archives/edgar/data/2130357/000162828026072484/anthropicpbc-sx1ax2.htm)). | Amendment: +$2.3bn on the minimum, plus a $2.0bn band. Cumulative value, not additive. Non-cancelable except for Microsoft's uncured breach or, per tranche, "certain" undelivered tranches. No delivery evidence. |
+| Lease deadline passed (date not given); filed 2026-11-10 | ANTH-LAMBDA-20260831 | Prior (S-1 10-26): the August agreement (~$34.9bn of the ~$41.3bn relationship) is terminable if Lambda does not timely secure the facility lease. Now: Lambda **did not** secure it by the date; **currently terminable by either party**; no notice delivered; Anthropic does not currently intend to terminate (p.181). | Status: **exercisable termination right, not a cancellation**. Amount unchanged. Watch for notice, cure or re-paper. Landlord financing history on this ID (Beacon Point, 11-03) is not tied to the missed lease by the filing. |
+| Placement agreement Nov-2026; filed 2026-11-10 | ANTH-AMD-20260722 | Prior: AMD equity commitment up to **$5.0bn**, drawable on GPU delivery/deployment milestones. Now: AMD buys **$2.5bn** of Class N in the IPO placement, satisfying half dollar for dollar. **Up to $2.5bn remains**, drawable only once milestone accruals exceed $2.5bn; first milestone expected **2027** (p.172). | Equity financing linked to the supply framework; contingent on the IPO closing. Procurement estimate (>$20bn) unchanged. Not delivery. |
+| Aggregate as of filing | (no ID; Anthropic aggregate) | 11-02 vintage: $895.4bn / $447.5bn pre-2031 / $69.8bn 12-month / $213.8bn conditional / $100.2bn post-Sep-30. Now **$900.9bn / $451.6bn / $70.7bn / $186.2bn / $105.7bn** (pp.8, 178–179). | Re-mark, not additive. The conditional portion falling $27.6bn has no bridge in the filing; do not book it as cancellations. |
 
 ### Recorded 2026-11-06 — primary financing milestones and historical backfills
 
@@ -1186,6 +1233,13 @@ Research change log, 2026-11-06: backfilled original Loughton project and cancel
 ## Changelog
 
 
+- **2026-11-10 — Anthropic S-1/A No. 2 (EDGAR, acc. 0001628280-26-072484):** one dated top block plus a "Recorded 2026-11-10" history table. No new deal ID. Updates under existing IDs:
+  - **ANTH-AZURE-NVDA-20251118**: at least $44.9bn → at least $47.2bn / up to $49.2bn.
+  - **ANTH-LAMBDA-20260831**: the August tranche is now terminable by either party (lease deadline missed; no notice; Anthropic does not intend to terminate).
+  - **ANTH-AMD-20260722**: the $2.5bn placement halves the equity commitment; first milestone 2027.
+  - Aggregate re-marked $895.4bn → $900.9bn; conditional portion $213.8bn → $186.2bn.
+  - The $26bn supplier Class N placement and the Google NPA cut ($20bn → $10bn) are financing context. Register IDs `DEQ-ANTHROPIC-20261110-1` / `DEQ-ANTHROPIC-20261102-1`.
+  - Old values kept in the 11-06 block and the 10-26 table.
 - 2026-11-07 — terminology correction (transcription QA): "Cruso [Crusoe]" → `Crusoe [transcribed "Cruso"]` in the 11-07 All-In block.
 - 2026-11-07 — run-inbox: All-In (2026-11-07, hosts only) → 1 dated top block, no new deal ID, no history row: ANTH-SPCX-20260506 mutual 90-day out restated (✅) inside Chamath's spot re-pricing scenario (2–3x guess; omits the Jan./Mar.-2027 non-cancellable periods; no notice or amendment); watch item, no ID, for "Google just took over a Crusoe data center" (✅ vs the 06-11/06-12 Wyoming relays; Crusoe update in the show notes not read). Terms unchanged (podcast, All-In).
 - 2026-11-07 — verification (transcription QA): the 06-11 "1.8 GW Wyoming DC pause" relay in the All-In 11-07 block was misattributed to the Jefferies desk; the 2026-06-11 company-specific briefing carries it under Morgan Stanley · Thomas Wigg (TMT morning note). The 06-12 BBG relay via Jefferies' Rankie Wong is correct.

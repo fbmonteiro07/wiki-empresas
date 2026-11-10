@@ -43,7 +43,7 @@ Each page follows the [_TEMPLATE](_TEMPLATE.md): Snapshot · Current state (late
 ## AI labs (private)
 | Ticker | Page | One-line thesis |
 |---|---|---|
-| ANTHROPIC | [Anthropic](ANTHROPIC.md) | Pre-IPO frontier lab (S-1 2026-10-26, Nasdaq: ANT): 2Q26 rev $11.6bn, first op. profit; 85% serving GM (1H26); 48% sold via AWS/GCP/Azure, which are also its compute suppliers and financiers. Q3/IPO terms blank. |
+| ANTHROPIC | [Anthropic](ANTHROPIC.md) | Pre-IPO frontier lab (Nasdaq: ANT; S-1/A No. 2 2026-11-10: $70-78 range, 825m sh + $26bn supplier Class N placement): Oct-31 run-rate ~$81bn; 2Q26 first op. profit; 85% serving GM (1H26); 48% sold via AWS/GCP/Azure, which are also its compute suppliers and financiers. |
 | OPENAI | [OpenAI](OPENAI.md) | Private frontier lab (ChatGPT/GPT); scale + distribution vs cash burn + sub-50% share; Microsoft-anchored. No public financials. |
 
 ## Semiconductor equipment (semicap)

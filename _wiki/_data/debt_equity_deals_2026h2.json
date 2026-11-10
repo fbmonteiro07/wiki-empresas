@@ -53,7 +53,10 @@
    "Bloomberg Desktop API bdp (localhost): ANNOUNCE_DT/ISSUE_DT/CPN/AMT_ISSUED/ISSUE_PX/ratings",
    "WebSearch extended (gap fill, labelled per record)"
   ],
-  "count": 144
+  "count": 144,
+  "post_window_updates": [
+   "2026-11-10 — Anthropic S-1/A No. 2: DEQ-ANTHROPIC-20261102-1 range/ytc re-mark (100 → 59.3); DEQ-ANTHROPIC-20261110-1 added (boundary-out, $26.0bn placement). Totals in the theme page remain the 2026-11-05 build."
+  ]
  },
  "deals": [
   {
@@ -1341,7 +1344,7 @@
    "tenant_or_beneficiary": null,
    "sector": "AI labs (private)",
    "instrument_bucket": "IPO",
-   "instrument": "IPO registration — S-1 filed 2026-10-26 (Nasdaq 'ANT'), Amendment No. 1 filed 2026-11-02; price range and share count blank; confidential filing 2026-06-01",
+   "instrument": "IPO registration — S-1 filed 2026-10-26 (Nasdaq 'ANT'), Amendment No. 1 filed 2026-11-02; Amendment No. 2 filed 2026-11-10 sets the range at $70.00–$78.00 for 825,000,000 Class A shares (801,351,354 primary + 23,648,646 secondary from the seven co-founders; underwriters' option 123,750,000); confidential filing 2026-06-01",
    "date_announced": "2026-10-26",
    "date_priced": null,
    "date_closed": null,
@@ -1353,10 +1356,11 @@
    "tenor": null,
    "pricing": null,
    "use_of_proceeds": null,
-   "status": "filed (not priced)",
-   "source": "Anthropic S-1 (SEC acc. 0001628280-26-067168) and S-1/A (acc. 0001628280-26-068676); FT 2026-09-18 ('largest ever' expectation); Jefferies · Favuzza 2026-09-07 ('chatter': marketing mid-October, listing before the midterms — not met); Bloomberg 2026-08-21 (IPO size to 'match' SpaceX's $75bn, via The Standard); All-In #295 2026-10-30 (Calacanis: Goldman/Morgan Stanley lead, 'targeting November 16th', '$100 billion'; Polymarket 78% on at least $95bn; Chamath $80–120bn at $1.3–1.7tn) via ANTHROPIC page — podcast, not broker research",
+   "status": "filed — price range set 2026-11-10 (not priced)",
+   "source": "Anthropic S-1 (SEC acc. 0001628280-26-067168) and S-1/A (acc. 0001628280-26-068676); FT 2026-09-18 ('largest ever' expectation); Jefferies · Favuzza 2026-09-07 ('chatter': marketing mid-October, listing before the midterms — not met); Bloomberg 2026-08-21 (IPO size to 'match' SpaceX's $75bn, via The Standard); All-In #295 2026-10-30 (Calacanis: Goldman/Morgan Stanley lead, 'targeting November 16th', '$100 billion'; Polymarket 78% on at least $95bn; Chamath $80–120bn at $1.3–1.7tn) via ANTHROPIC page — podcast, not broker research; Anthropic S-1/A No. 2 (SEC acc. 0001628280-26-072484, filed 2026-11-10: range, share count, $84.6bn net proceeds incl. the concurrent placement)",
    "source_links": [
-    "ANTHROPIC/ANTHROPIC_S-1A_2026-11-02_0001628280-26-068676.html"
+    "ANTHROPIC/ANTHROPIC_S-1A_2026-11-02_0001628280-26-068676.html",
+    "ANTHROPIC/ANTHROPIC_S-1A2_2026-11-10_0001628280-26-072484.html"
    ],
    "compute_deal_id": null,
    "workbook_ticker": null,
@@ -1365,10 +1369,50 @@
    "in_totals": false,
    "facility": false,
    "added": "2026-11-03 register",
-   "notes": "Google holds an option to buy $10bn of Class N in a private placement at the IPO price (reduces its NPA by the same amount) — S-1 pp.166-169. Size marks are press/podcast, not a filed range.",
+   "notes": "Google holds an option to buy $10bn of Class N in a private placement at the IPO price (reduces its NPA by the same amount) — S-1 pp.166-169. Size marks are press/podcast, not a filed range. | 2026-11-10 post-window update (S-1/A No. 2, cover/pp.20-21): range $70–78; primary gross $56.1–62.5bn ($59.3bn at the $74 midpoint, per the dilution table); base deal incl. secondary $57.75–64.35bn; net proceeds $84.6bn at midpoint INCLUDING the $26.0bn concurrent Class N placement (separate row DEQ-ANTHROPIC-20261110-1); Google's $10bn IPO option is exercised inside that placement. Underwriting discount per share still blank. The ytc fields below are re-marked from the 2026-11-05 press mark ($100bn) to the filed primary at midpoint; the 2026-11-05 snapshot value is kept in ytc_usd_bn_2026_11_05.",
    "ytc_tier": "4 · tentative IPO",
-   "ytc_usd_bn": 100.0,
-   "ytc_basis": "most-cited reported raise (~$100bn; range $75bn–$120bn)",
+   "ytc_usd_bn": 59.3,
+   "ytc_basis": "filed range, primary shares at the $74 midpoint ($56.1–62.5bn at $70–78; S-1/A No. 2, 2026-11-10); re-marked 2026-11-10 from the most-cited reported raise (~$100bn, 2026-11-05 build)",
+   "cash_pending": null,
+   "ytc_usd_bn_2026_11_05": 100.0
+  },
+  {
+   "deal_id": "DEQ-ANTHROPIC-20261110-1",
+   "ticker": "ANTHROPIC",
+   "issuer": "Anthropic, PBC",
+   "tenant_or_beneficiary": "Purchasers: Google LLC $10.0bn, NVIDIA $10.0bn, AMD $2.5bn, Broadcom $1.0bn, Micron $1.0bn, Microsoft $1.0bn, TSMC Partners $0.5bn",
+   "sector": "AI labs (private)",
+   "instrument_bucket": "PIPE / private placement",
+   "instrument": "Concurrent private placement of Class N common stock at the IPO price — $26.0bn aggregate; 351,351,348 shares at the $74 midpoint (Google/NVIDIA 135,135,135 each, AMD 33,783,783, Broadcom/Micron/Microsoft 13,513,513 each, TSMC 6,756,756); no underwriting fee; restricted securities, not subject to lock-up; Google's purchase = full exercise of its 2026 NPA IPO option (NPA remaining $20bn → $10bn); AMD's purchase satisfies $2.5bn of its up-to-$5bn equity commitment",
+   "date_announced": "2026-11-10",
+   "date_priced": null,
+   "date_closed": null,
+   "event_date": "2026-11-10",
+   "size_local": 26.0,
+   "currency": "USD",
+   "size_usd_bn": 26.0,
+   "size_basis": "aggregate purchase price under signed purchase agreements (fixed dollar amount; share count varies with the IPO price)",
+   "tenor": null,
+   "pricing": "IPO price (range $70.00–$78.00)",
+   "use_of_proceeds": "General corporate purposes, with the IPO proceeds (net proceeds $84.6bn combined at the midpoint, of which $3.8bn RSU-settlement tax withholding)",
+   "status": "signed (contingent on IPO completion and stockholder approval; scheduled to close immediately after the IPO)",
+   "source": "Anthropic S-1/A No. 2 (SEC acc. 0001628280-26-072484, filed 2026-11-10), cover, pp.20-21, 172, 174, 177, 348, F-67; Exhibit 10.15 (Google Class N purchase agreement, 2026-11-10) and 10.16 (form of agreement)",
+   "source_links": [
+    "ANTHROPIC/ANTHROPIC_S-1A2_2026-11-10_0001628280-26-072484.html",
+    "ANTHROPIC/S-1A2_exhibits/exhibit1015-sx1ax2.htm",
+    "ANTHROPIC/S-1A2_exhibits/exhibit1016-sx1ax2.htm"
+   ],
+   "compute_deal_id": "ANTH-AMD-20260722 (AMD equity commitment); Google 2026 NPA (financing, not mapped to ANTH-GOOG rows)",
+   "workbook_ticker": null,
+   "window_flag": "boundary-out (post-window: signed/filed 2026-11-10, after the 2026-11-05 window end)",
+   "roster": true,
+   "in_totals": false,
+   "facility": false,
+   "added": "2026-11-10 (S-1/A No. 2 ingest)",
+   "notes": "Vendor equity: five of seven purchasers are direct compute/hardware counterparties (Google, NVIDIA, AMD, Broadcom, Microsoft); Micron and TSMC are upstream. Not in the 2026-11-05 yet-to-close bar (post-window). Do not add Google's $10bn to the Google NPA capacity — it reduces it.",
+   "ytc_tier": "1 — signed or committed, not closed",
+   "ytc_usd_bn": 26.0,
+   "ytc_basis": "signed purchase agreements; post-window (2026-11-10), not in the 2026-11-05 bar",
    "cash_pending": null
   },
   {
