@@ -636,11 +636,17 @@ def guardrails(rows, results, aggs, rules) -> list[dict]:
     u = aggs["bear"]["construction"]
     uc = u["total"] - u["wf"]["energized"]
     ate = bm["aterio_census"]
-    cov = uc / ate["value"]
+    ak = bench_k(ate, rules)
+    ate_it = ate["value"] / ak              # the census figure on the registry's basis (as stated if the block is untagged)
+    cov = uc / ate_it
     out.append({"id": "level-aterio", "kind": "stock · coverage",
-                "check": "Registry GW still under construction (campuses under construction, dated 2026-30, excl. energized; IT-eq) vs Aterio's US under-construction census",
-                "model": round(uc, 1), "anchor": ate["value"], "ratio": round(cov, 2),
-                "flag": flag(cov, 0.75, 1.25, 0.5, 1.5), "source": ate["source"], "caveat": ate["caveat"] + " The census counts buildings under construction; the deck's 139.5 GW counts campuses (later phases included), so the two don't reconcile with each other either."})
+                "check": "Registry GW still under construction (campuses under construction, dated 2026-30, excl. energized; IT-eq) vs Aterio's US under-construction census"
+                         + (f" ({ate['value']:g} GW facility ÷ {ak:g} = {ate_it:.1f} GW IT-eq)" if ak != 1.0 else f" ({ate['value']:g} GW, as stated)"),
+                "model": round(uc, 1), "anchor": round(ate_it, 1) if ak != 1.0 else ate["value"], "ratio": round(cov, 2),
+                "flag": flag(cov, 0.75, 1.25, 0.5, 1.5), "source": ate["source"],
+                "caveat": ate["caveat"]
+                          + (f" Basis: read as facility power since 2026-11-10, because the 2026-08-31 census matches the call on its facility field (55 GW active on the call vs 51.8 in the census; 83 GW and ~858 buildings under construction vs 80.4 GW and 912 buildings under construction or delayed), so it is divided by Aterio's facility/IT median ({ak:g}). Before that the anchor was {ate['value']:g} and this ratio read lower." if ak != 1.0 else "")
+                          + " The census counts buildings under construction; the deck's 139.5 GW counts campuses (later phases included), so the two don't reconcile with each other either."})
     deck = bm["capstone_deck"]
     dk = bench_k(deck, rules)
     deck_it = deck["total"] / dk            # the deck's total on the registry's basis
@@ -972,8 +978,11 @@ def aterio_compare(model: dict, deck: dict | None, ax: dict | None, cv: dict | N
                      rc["campus_2630"] + rc.get("uc_nocampus_2630", 0)))
     ac = bm.get("aterio_census") or {}
     if ac.get("value"):
-        g.append(row("aterio", "Aterio at a GS-hosted call", "2026-10-20", f"{ac['value']:g} GW", "n/s",
-                     "Under construction, all completion dates, ~858 buildings; basis not stated (later than the 08-31 export)", ac["value"]))
+        ac_fac = str(ac.get("basis", "")).lower() == "facility"      # the same tag bench_k() reads for the guardrail
+        g.append(row("aterio", "Aterio at a GS-hosted call", "2026-10-20", f"{ac['value']:g} GW", "facility" if ac_fac else "n/s",
+                     "Under construction, all completion dates, ~858 buildings (later than the 08-31 export); "
+                     + ("basis not stated on the call, read as facility because the census matches the call on its facility field" if ac_fac
+                        else "basis not stated"), ac["value"]))
     g.append(row("ref", "Reference deck (Aterio base)", "2026-11-06", f"{ref['total']:g} GW", "facility",
                  "Campuses with at least one building under construction, 2026-30 (campus level)", ref["total"]))
     cu = agg["base"]["construction"]

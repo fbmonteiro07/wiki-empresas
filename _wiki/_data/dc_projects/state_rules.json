@@ -590,8 +590,13 @@
  "benchmarks": {
   "aterio_census": {
    "value": 83,
+   "basis": "facility",
+   "basis_note": "The value is as stated on the call (machine transcript). The call states no basis (IT vs facility). It is tagged facility because the Aterio census export of 2026-08-31, seven weeks earlier, matches the call on its facility field (SELECTED_POWER_CAPACITY_MW) and not on IT-eq. Active: 55 GW on the call vs 51.8 GW facility in the census (45.1 IT-eq). Under construction: 83 GW and about 858 buildings on the call vs 71.5 GW / 821 buildings in stage Construction and 80.4 GW / 912 buildings in Construction + Delayed (62.2 / 69.9 IT-eq). Timing: the call's 'about 30' in 2027 vs 28.0 GW facility under construction or delayed dated 2027 (24.3 IT-eq). Read as IT GW, the call would put active facility power at 63 GW, about 11 GW more than the census seven weeks earlier, against about 3 GW on a facility reading. Checked 2026-11-10 against the archived transcript and the export; the independent skeptic pass of 2026-11-09 recommended the tag. The engine divides a block tagged facility by Aterio's own facility/IT median (house rule 1 in _data/aterio/treatment.json, measured through _tools/aterio_core.py; 1.15 on the 08-31 export) before the level-aterio guardrail and the coverage factor of the 2027 timing checks use it. Remove the tag to use the figure as stated.",
+   "basis_history": [
+    {"date": "2026-11-10", "change": "tagged facility. Until this date the 83 GW was used as stated against the registry's IT-eq GW, so registry coverage read 0.87 (83 ÷ 1.15 = 72.2 GW IT-eq puts it at 1.00) and the three 2027 timing checks were scaled by 0.87. Decided by Felipe ('Yes, convert it') after the 2026-11-09 basis fix of the reference deck."}
+   ],
    "source": "Aterio @ Goldman Sachs-hosted call, 2026-10-20 (relatórios bons/2026_10_20_aterio_gs_20_oct_2026.html)",
-   "caveat": "US GW under construction (~858 buildings), all completion dates; basis (IT vs facility) not stated. Data vendor, not broker."
+   "caveat": "US GW under construction (~858 buildings), all completion dates. The call states no basis (IT vs facility). Data vendor, not broker."
   },
   "capstone_deck": {
    "source": "Reference deck shared by Felipe on 2026-11-06 (Aterio base; Portuguese; author and affiliation to confirm — the corpus file is 2026_11_06_amigo_felipe_gw_atrasa_pausas_estaduais.html)",

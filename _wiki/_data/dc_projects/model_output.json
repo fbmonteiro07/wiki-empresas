@@ -4666,16 +4666,16 @@
      "deck_total": 139.5,
      "target_total": 121.3,
      "state_targets": {
+      "TX": 30.52,
+      "IN": 5.39,
+      "LA": 3.91,
+      "VA": 15.48,
+      "AZ": 3.3,
+      "GA": 5.22,
+      "OH": 8.43,
+      "MO": 4.09,
       "NV": 4.0,
       "PA": 5.65,
-      "LA": 3.91,
-      "AZ": 3.3,
-      "TX": 30.52,
-      "VA": 15.48,
-      "MO": 4.09,
-      "OH": 8.43,
-      "GA": 5.22,
-      "IN": 5.39,
       "_rest": 35.3
      },
      "year_targets": {
@@ -4703,16 +4703,16 @@
       "IN": 3.22
      },
      "fit_state": {
+      "TX": 30.52,
+      "IN": 5.39,
+      "LA": 3.91,
+      "VA": 15.48,
+      "AZ": 3.3,
+      "GA": 5.22,
+      "OH": 8.43,
+      "MO": 4.09,
       "NV": 4.0,
       "PA": 5.65,
-      "LA": 3.91,
-      "AZ": 3.3,
-      "TX": 30.52,
-      "VA": 15.48,
-      "MO": 4.09,
-      "OH": 8.43,
-      "GA": 5.22,
-      "IN": 5.39,
       "_rest": 35.3
      },
      "fit_year": {
@@ -9384,16 +9384,16 @@
      "deck_total": 139.5,
      "target_total": 121.3,
      "state_targets": {
+      "TX": 30.52,
+      "IN": 5.39,
+      "LA": 3.91,
+      "VA": 15.48,
+      "AZ": 3.3,
+      "GA": 5.22,
+      "OH": 8.43,
+      "MO": 4.09,
       "NV": 4.0,
       "PA": 5.65,
-      "LA": 3.91,
-      "AZ": 3.3,
-      "TX": 30.52,
-      "VA": 15.48,
-      "MO": 4.09,
-      "OH": 8.43,
-      "GA": 5.22,
-      "IN": 5.39,
       "_rest": 35.3
      },
      "year_targets": {
@@ -9421,16 +9421,16 @@
       "IN": 3.22
      },
      "fit_state": {
+      "TX": 30.52,
+      "IN": 5.39,
+      "LA": 3.91,
+      "VA": 15.48,
+      "AZ": 3.3,
+      "GA": 5.22,
+      "OH": 8.43,
+      "MO": 4.09,
       "NV": 4.0,
       "PA": 5.65,
-      "LA": 3.91,
-      "AZ": 3.3,
-      "TX": 30.52,
-      "VA": 15.48,
-      "MO": 4.09,
-      "OH": 8.43,
-      "GA": 5.22,
-      "IN": 5.39,
       "_rest": 35.3
      },
      "fit_year": {
@@ -14102,16 +14102,16 @@
      "deck_total": 139.5,
      "target_total": 121.3,
      "state_targets": {
+      "TX": 30.52,
+      "IN": 5.39,
+      "LA": 3.91,
+      "VA": 15.48,
+      "AZ": 3.3,
+      "GA": 5.22,
+      "OH": 8.43,
+      "MO": 4.09,
       "NV": 4.0,
       "PA": 5.65,
-      "LA": 3.91,
-      "AZ": 3.3,
-      "TX": 30.52,
-      "VA": 15.48,
-      "MO": 4.09,
-      "OH": 8.43,
-      "GA": 5.22,
-      "IN": 5.39,
       "_rest": 35.3
      },
      "year_targets": {
@@ -14139,16 +14139,16 @@
       "IN": 3.22
      },
      "fit_state": {
+      "TX": 30.52,
+      "IN": 5.39,
+      "LA": 3.91,
+      "VA": 15.48,
+      "AZ": 3.3,
+      "GA": 5.22,
+      "OH": 8.43,
+      "MO": 4.09,
       "NV": 4.0,
       "PA": 5.65,
-      "LA": 3.91,
-      "AZ": 3.3,
-      "TX": 30.52,
-      "VA": 15.48,
-      "MO": 4.09,
-      "OH": 8.43,
-      "GA": 5.22,
-      "IN": 5.39,
       "_rest": 35.3
      },
      "fit_year": {
@@ -14216,13 +14216,13 @@
   {
    "id": "level-aterio",
    "kind": "stock · coverage",
-   "check": "Registry GW still under construction (campuses under construction, dated 2026-30, excl. energized; IT-eq) vs Aterio's US under-construction census",
+   "check": "Registry GW still under construction (campuses under construction, dated 2026-30, excl. energized; IT-eq) vs Aterio's US under-construction census (83 GW facility ÷ 1.15 = 72.2 GW IT-eq)",
    "model": 72.1,
-   "anchor": 83,
-   "ratio": 0.87,
+   "anchor": 72.2,
+   "ratio": 1.0,
    "flag": "🟢",
    "source": "Aterio @ Goldman Sachs-hosted call, 2026-10-20 (relatórios bons/2026_10_20_aterio_gs_20_oct_2026.html)",
-   "caveat": "US GW under construction (~858 buildings), all completion dates; basis (IT vs facility) not stated. Data vendor, not broker. The census counts buildings under construction; the deck's 139.5 GW counts campuses (later phases included), so the two don't reconcile with each other either."
+   "caveat": "US GW under construction (~858 buildings), all completion dates. The call states no basis (IT vs facility). Data vendor, not broker. Basis: read as facility power since 2026-11-10, because the 2026-08-31 census matches the call on its facility field (55 GW active on the call vs 51.8 in the census; 83 GW and ~858 buildings under construction vs 80.4 GW and 912 buildings under construction or delayed), so it is divided by Aterio's facility/IT median (1.15). Before that the anchor was 83 and this ratio read lower. The census counts buildings under construction; the deck's 139.5 GW counts campuses (later phases included), so the two don't reconcile with each other either."
   },
   {
    "id": "level-deck",
@@ -14238,32 +14238,32 @@
   {
    "id": "timing-2027-semianalysis",
    "kind": "flow · timing",
-   "check": "Registry 2027 adds vs SemiAnalysis 33.8 GW (top-20 states) × registry coverage (0.87) — above 1 means the registry's dates are front-loaded",
+   "check": "Registry 2027 adds vs SemiAnalysis 33.8 GW (top-20 states) × registry coverage (1.00) — above 1 means the registry's dates are front-loaded",
    "model": 24.7,
-   "anchor": 29.4,
-   "ratio": 0.84,
-   "flag": "🟢",
+   "anchor": 33.8,
+   "ratio": 0.73,
+   "flag": "🟡",
    "source": "SemiAnalysis, 'The Datacenter Backlash Goes Bipartisan', 2026-11-01",
    "caveat": "Top-20 states only; IT capacity (SemiAnalysis states its model in IT GW: US 2027 +38 GW IT, 2026-09-15); ~3/4 already under construction. Full SemiAnalysis subset on the SemiAnalysis tab."
   },
   {
    "id": "timing-2027-jefferies",
    "kind": "flow · timing",
-   "check": "Registry 2027 adds vs Jefferies 18.0 IT-GW (North America) × registry coverage (0.87) — above 1 means the registry's dates are front-loaded",
+   "check": "Registry 2027 adds vs Jefferies 18.0 IT-GW (North America) × registry coverage (1.00) — above 1 means the registry's dates are front-loaded",
    "model": 24.7,
-   "anchor": 15.6,
-   "ratio": 1.58,
-   "flag": "🔴",
+   "anchor": 18.0,
+   "ratio": 1.37,
+   "flag": "🟡",
    "source": "Jefferies pipeline-to-online, 2026-10-09 (themes/ai-datacenter-power.md)",
    "caveat": "IT-GW, North America, Jefferies' own probabilities on Aterio data — closest basis to ours."
   },
   {
    "id": "timing-2027-bernstein",
    "kind": "flow · timing",
-   "check": "Registry 2027 adds vs Bernstein +19 IT-GW × registry coverage (0.87) — above 1 means the registry's dates are front-loaded",
+   "check": "Registry 2027 adds vs Bernstein +19 IT-GW × registry coverage (1.00) — above 1 means the registry's dates are front-loaded",
    "model": 24.7,
-   "anchor": 16.5,
-   "ratio": 1.5,
+   "anchor": 19.0,
+   "ratio": 1.3,
    "flag": "🟡",
    "source": "Bernstein US DC capacity, 2026-10-02 (themes/ai-datacenter-power.md)",
    "caveat": "IT-GW installed-base increment, US; ~25 facility GW."
@@ -14904,8 +14904,16 @@
   "benchmarks": {
    "aterio_census": {
     "value": 83,
+    "basis": "facility",
+    "basis_note": "The value is as stated on the call (machine transcript). The call states no basis (IT vs facility). It is tagged facility because the Aterio census export of 2026-08-31, seven weeks earlier, matches the call on its facility field (SELECTED_POWER_CAPACITY_MW) and not on IT-eq. Active: 55 GW on the call vs 51.8 GW facility in the census (45.1 IT-eq). Under construction: 83 GW and about 858 buildings on the call vs 71.5 GW / 821 buildings in stage Construction and 80.4 GW / 912 buildings in Construction + Delayed (62.2 / 69.9 IT-eq). Timing: the call's 'about 30' in 2027 vs 28.0 GW facility under construction or delayed dated 2027 (24.3 IT-eq). Read as IT GW, the call would put active facility power at 63 GW, about 11 GW more than the census seven weeks earlier, against about 3 GW on a facility reading. Checked 2026-11-10 against the archived transcript and the export; the independent skeptic pass of 2026-11-09 recommended the tag. The engine divides a block tagged facility by Aterio's own facility/IT median (house rule 1 in _data/aterio/treatment.json, measured through _tools/aterio_core.py; 1.15 on the 08-31 export) before the level-aterio guardrail and the coverage factor of the 2027 timing checks use it. Remove the tag to use the figure as stated.",
+    "basis_history": [
+     {
+      "date": "2026-11-10",
+      "change": "tagged facility. Until this date the 83 GW was used as stated against the registry's IT-eq GW, so registry coverage read 0.87 (83 ÷ 1.15 = 72.2 GW IT-eq puts it at 1.00) and the three 2027 timing checks were scaled by 0.87. Decided by Felipe ('Yes, convert it') after the 2026-11-09 basis fix of the reference deck."
+     }
+    ],
     "source": "Aterio @ Goldman Sachs-hosted call, 2026-10-20 (relatórios bons/2026_10_20_aterio_gs_20_oct_2026.html)",
-    "caveat": "US GW under construction (~858 buildings), all completion dates; basis (IT vs facility) not stated. Data vendor, not broker."
+    "caveat": "US GW under construction (~858 buildings), all completion dates. The call states no basis (IT vs facility). Data vendor, not broker."
    },
    "capstone_deck": {
     "source": "Reference deck shared by Felipe on 2026-11-06 (Aterio base; Portuguese; author and affiliation to confirm — the corpus file is 2026_11_06_amigo_felipe_gw_atrasa_pausas_estaduais.html)",
@@ -18215,16 +18223,16 @@
   "deck_total": 139.5,
   "target_total": 121.3,
   "state_targets": {
+   "TX": 30.52,
+   "IN": 5.39,
+   "LA": 3.91,
+   "VA": 15.48,
+   "AZ": 3.3,
+   "GA": 5.22,
+   "OH": 8.43,
+   "MO": 4.09,
    "NV": 4.0,
    "PA": 5.65,
-   "LA": 3.91,
-   "AZ": 3.3,
-   "TX": 30.52,
-   "VA": 15.48,
-   "MO": 4.09,
-   "OH": 8.43,
-   "GA": 5.22,
-   "IN": 5.39,
    "_rest": 35.3
   },
   "year_targets": {
@@ -18252,16 +18260,16 @@
    "IN": 3.22
   },
   "fit_state": {
+   "TX": 30.52,
+   "IN": 5.39,
+   "LA": 3.91,
+   "VA": 15.48,
+   "AZ": 3.3,
+   "GA": 5.22,
+   "OH": 8.43,
+   "MO": 4.09,
    "NV": 4.0,
    "PA": 5.65,
-   "LA": 3.91,
-   "AZ": 3.3,
-   "TX": 30.52,
-   "VA": 15.48,
-   "MO": 4.09,
-   "OH": 8.43,
-   "GA": 5.22,
-   "IN": 5.39,
    "_rest": 35.3
   },
   "fit_year": {
@@ -57892,7 +57900,7 @@
  "moved": {
   "live": {
    "base": "2026-11-06T17:31",
-   "head": "2026-11-09T19:09",
+   "head": "2026-11-10T08:56",
    "as_of": [
     "2026-11",
     "2026-11"
