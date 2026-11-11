@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-11-10 · 42 active signals · latest reconciliation: reconciliation-2026-11-09-inbox.md._
+_Generated 2026-11-10 · 43 active signals · latest reconciliation: reconciliation-2026-11-10-inbox.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -67,13 +67,13 @@ _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 _NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
 
 - **Tickers:** PLTR
-- **Why now:** run-inbox: UBS "Midterm Election Impact on AI Build-Outs" (2026-11-08) — 1 Debate bullet (UBS constructive on PLTR into 2027; Buy). Nothing superseded.
+- **Why now:** /run-inbox: Karp (CEO) on The Builders with Walter Isaacson (published 11-10, taped 08-06) → 1 dated block at the top of Current state (enterprises vs LLM vendors, Anthropic/"not Lord Vader", ontology as alpha creator + protective layer, France/Europe "contractually not allowed to mention", domestic-use ban on battlefield AI). No intra-quarter table on this page. Nothing superseded; no number given.
 - **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
 - **Action:** Re-grade the PLTR thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
 - **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
 - **Read-through:** —
-- **Attribution:** PLTR page Changelog 2026-11-09.
-- **Evidence:** [PLTR.md](../PLTR.md) · signal beli-11eb6a7c0703
+- **Attribution:** PLTR page Changelog 2026-11-10.
+- **Evidence:** [PLTR.md](../PLTR.md) · signal beli-70ac3cdf3e9d
 
 ### 5. 🟡 SKHYNIX — derived thesis/debate state changed since the prior daily snapshot
 
@@ -146,6 +146,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE.** — 🆕 2026-11-17 to 11-20, SF — MSFT IGNITE. _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c9f20420ff39)
 - **FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail…** — 🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands. Flex said "more strategy details will be shared at an Innovation Day event on November 10, 2026 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-30cf21294c0d)
 - **SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…** — 🆕🔴🔴 2026-11-12 — OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset. OpenAI's own post: "We're ending our partnership with Cursor following its acquisit _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c76406c38a7d)
+- **CRWV — 2026-11-10: NEXT: the Q3'26 margin print vs JPM's 7.0% adj. OM forecast against 7.5% consensus (JPM /…** — 🆕 NEXT: the Q3'26 margin print vs JPM's 7.0% adj. OM forecast against 7.5% consensus (JPM / Samik Chatterjee, 2026-08-11) — the explicit reason JPM is Neutral, and now the cleanest single falsifia _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-26775afcbe13)
 - **IFX — 2026-11-10: FYQ4 print + FY27 guide (Jefferies · Janardan Menon, 2026-09-30, via sales relays).…** — 🆕 2026-11-10 — FYQ4 print + FY27 guide (Jefferies · Janardan Menon, 2026-09-30, via sales relays). Jefferies expects FYQ4 revenue €4.71bn / segment margin 23.7%; FY27 revenue ~€20bn (+22%), segmen _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-ce699c62b4f0)
 - **COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk…** — 🆕 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk · Jeffrey Favuzza, 2026-09-28, corporate-access list). _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c030b28ed093)
 - **NSCALE — 2026-11-16: NVIDIA Sale ($1.0bn convertible notes / non-voting shares) expected to close on or around…** — 2026-11-16 — NVIDIA Sale ($1.0bn convertible notes / non-voting shares) expected to close on or around this date. _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-eb7d5753b962)

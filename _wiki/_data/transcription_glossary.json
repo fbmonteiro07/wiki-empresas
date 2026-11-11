@@ -2,6 +2,20 @@
  "_about": "Hand-edited ledger of machine-transcription garbles (Notion AI, Bloomberg ASR, auto-translation) seen in the archive, with the correct reading. Used by E:\\.claude\\scripts\\transcript_qa.py (source-file scan, page-diff scan) and by ingest_notion_meetings.py (writes a 'Transcription QA' block into every archived Notion file). Keys are matched with word boundaries, case-sensitive unless 'ci' is true. 'keep_when' = regex contexts (same line, ~80 chars around the hit) where the token is legitimate and must NOT be flagged. Add an entry the first time a garble is caught; never delete one. Standing rule (Felipe, 2026-09-28): ALWAYS double-check transcript content — acronyms, names, units, numbers — before it travels to a page.",
  "_updated": "2026-11-10",
  "terms": {
+  "pound here": {
+   "correct": "Palantir",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of 'Palantir' in Karp's own speech ('ideally morphed for building uh essentially pound here'); the rest of the recording transcribes Palantir correctly.",
+   "first_seen": "2026-11-10 (Alex Karp on The Builders with Walter Isaacson, taped 2026-08-06, YouTube ASR)"
+  },
+  "terror tax": {
+   "correct": "terror attacks",
+   "domain": "terms",
+   "ci": true,
+   "rule": "YouTube ASR of 'terror attacks' ('you stop the terror tax and you protect civil liberties') - not a tax; the same recording says 'terror attacks' correctly elsewhere.",
+   "first_seen": "2026-11-10 (Alex Karp on The Builders with Walter Isaacson, taped 2026-08-06, YouTube ASR)"
+  },
   "LBBT": {
    "correct": "LTBT (Anthropic's Long-Term Benefit Trust)",
    "domain": "acronyms",
@@ -8142,6 +8156,226 @@
    "ci": true,
    "rule": "YouTube ASR.",
    "first_seen": "2026-11-10 (Sources / Alex Heath, Matt Garman (AWS CEO) episode, YouTube ASR)"
+  },
+  "Lit-Bhutan": {
+   "correct": "Lip-Bu Tan (Intel CEO)",
+   "domain": "people",
+   "ci": true,
+   "rule": "YouTube ASR of 'Lip-Bu Tan' ('Does Lit-Bhutan prioritize…'); see also 'lift Bhutan'.",
+   "first_seen": "2026-11-10 (Semi Doped, Intel's Earnings Disaster, recorded 2026-11-03, YouTube ASR)"
+  },
+  "Lit-Bu": {
+   "correct": "Lip-Bu (Tan, Intel CEO)",
+   "domain": "people",
+   "ci": true,
+   "rule": "YouTube ASR of Lip-Bu Tan's first name ('that's what Lit-Bu is doing'); also 'Lit Bu'.",
+   "first_seen": "2026-11-10 (Semi Doped, Intel's Earnings Disaster, recorded 2026-11-03, YouTube ASR)"
+  },
+  "Lit Bu": {
+   "correct": "Lip-Bu (Tan, Intel CEO)",
+   "domain": "people",
+   "ci": false,
+   "rule": "see 'Lit-Bu' ('ultimately it's Lit Bu, who's responsible').",
+   "first_seen": "2026-11-10 (Semi Doped, Intel's Earnings Disaster, recorded 2026-11-03, YouTube ASR)"
+  },
+  "Lipbu": {
+   "correct": "Lip-Bu (Tan, Intel CEO)",
+   "domain": "people",
+   "ci": true,
+   "rule": "YouTube ASR of Lip-Bu Tan's first name ('this is all falls onto Lipbu').",
+   "first_seen": "2026-11-10 (Semi Doped, Intel's Earnings Disaster, recorded 2026-11-03, YouTube ASR)"
+  },
+  "Lip Put and": {
+   "correct": "Lip-Bu Tan (Intel CEO)",
+   "domain": "people",
+   "ci": true,
+   "rule": "YouTube ASR ('you can hear Lip Put and say'); match the three-word phrase only.",
+   "first_seen": "2026-11-10 (Semi Doped, Intel's Earnings Disaster, recorded 2026-11-03, YouTube ASR)"
+  },
+  "cheeky Pine": {
+   "correct": "Cheeky Pint (podcast)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of the Cheeky Pint podcast ('he said on this cheeky Pine podcast', Sam Altman's idle-RAM remark as relayed by a host).",
+   "first_seen": "2026-11-10 (Semi Doped, Intel's Earnings Disaster, recorded 2026-11-03, YouTube ASR)"
+  },
+  "gigantic AI": {
+   "correct": "agentic AI",
+   "domain": "terms",
+   "ci": true,
+   "rule": "YouTube ASR of 'agentic AI' ('this once in a lifetime thing with gigantic AI').",
+   "first_seen": "2026-11-10 (Semi Doped, Intel's Earnings Disaster, recorded 2026-11-03, YouTube ASR)"
+  },
+  "custom A6": {
+   "correct": "custom ASICs",
+   "domain": "acronyms",
+   "ci": true,
+   "rule": "YouTube ASR of 'custom ASICs' in Intel context ('a little bit of talk of custom A6. Custom A6 was a very broad bucket').",
+   "first_seen": "2026-11-10 (Semi Doped, Intel's Earnings Disaster, recorded 2026-11-03, YouTube ASR)"
+  },
+  "18 AP": {
+   "correct": "18A-P (Intel process node)",
+   "domain": "acronyms",
+   "ci": false,
+   "rule": "YouTube ASR splits Intel 18A-P ('convince them 18 AP is great'; '18 AP or 14 A'). Also rendered '18AP'.",
+   "first_seen": "2026-11-10 (Semi Doped, Intel's Earnings Disaster, recorded 2026-11-03, YouTube ASR)"
+  },
+  "Eneb": {
+   "correct": "EMIB (Intel embedded multi-die interconnect bridge packaging)",
+   "domain": "acronyms",
+   "ci": true,
+   "rule": "YouTube ASR of EMIB ('Eneb and advanced packaging hopefully… packaged by Intel in New Mexico').",
+   "first_seen": "2026-11-10 (Semi Doped, Intel's Earnings Disaster, recorded 2026-11-03, YouTube ASR)"
+  },
+  "Uni Micron": {
+   "correct": "Unimicron (substrates, Taiwan)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR ('Ibiden and or Uni Uni Micron'). The host calls the group 'Japanese substrate makers' — a speaker slip: Unimicron is Taiwanese, AT&S Austrian.",
+   "first_seen": "2026-11-10 (Semi Doped, Intel's Earnings Disaster, recorded 2026-11-03, YouTube ASR)"
+  },
+  "AT and S": {
+   "correct": "AT&S (substrates, Austria)",
+   "domain": "names",
+   "ci": false,
+   "rule": "YouTube ASR of AT&S in a substrate-maker list ('there are like a few of them like AT and S').",
+   "first_seen": "2026-11-10 (Semi Doped, Intel's Earnings Disaster, recorded 2026-11-03, YouTube ASR)"
+  },
+  "Austin Lines": {
+   "correct": "Austin Lyons (Chipstrat; Semi Doped co-host)",
+   "domain": "people",
+   "ci": true,
+   "rule": "YouTube ASR of the host's self-introduction ('I'm Austin Lines of Chip Strat').",
+   "first_seen": "2026-11-10 (Semi Doped, Intel's Earnings Disaster, recorded 2026-11-03, YouTube ASR)"
+  },
+  "Vic Shekhar": {
+   "correct": "Vik Sekar (Vikram Sekar; Vik's Newsletter; Semi Doped co-host)",
+   "domain": "people",
+   "ci": true,
+   "rule": "YouTube ASR of the host's self-introduction ('I'm Vic Shekhar'); bare 'Vic' in this show = Vik.",
+   "first_seen": "2026-11-10 (Semi Doped, Intel's Earnings Disaster, recorded 2026-11-03, YouTube ASR)"
+  },
+  "Cloudfire": {
+   "correct": "Cloudflare",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR ('Cloudfire is I mean fascinating in this part').",
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
+  },
+  "Site Time": {
+   "correct": "SiTime (MEMS timing)",
+   "domain": "names",
+   "rule": "YouTube ASR splits the company name; also 'Cait Time'.",
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
+  },
+  "Cait Time": {
+   "correct": "SiTime (MEMS timing)",
+   "domain": "names",
+   "ci": true,
+   "rule": "see 'Site Time'.",
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
+  },
+  "Renosus": {
+   "correct": "Renesas",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR ('they just bought Renosus' uh timing business'); the same episode also renders it 'Renaissance' ('they've bought uh Renaissance and and division') - read Renesas in a SiTime/timing sentence.",
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
+  },
+  "rettimers": {
+   "correct": "retimers",
+   "domain": "terms",
+   "ci": true,
+   "rule": "YouTube ASR spelling.",
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
+  },
+  "Lisa Sue": {
+   "correct": "Lisa Su (AMD CEO)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR spelling.",
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
+  },
+  "Ben Beharin": {
+   "correct": "Ben Bajarin (Creative Strategies)",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR of the host's self-introduction; the feed's show notes print 'Ben Beheron'.",
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
+  },
+  "Ben Beheron": {
+   "correct": "Ben Bajarin (Creative Strategies)",
+   "domain": "names",
+   "ci": true,
+   "rule": "see 'Ben Beharin' (machine-written show notes).",
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
+  },
+  "socks index": {
+   "correct": "SOX index (PHLX Semiconductor)",
+   "domain": "terms",
+   "ci": true,
+   "rule": "YouTube ASR ('one of the worst days in socks index performance').",
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
+  },
+  "claw search": {
+   "correct": "Claude search",
+   "domain": "products",
+   "ci": true,
+   "rule": "YouTube ASR ('I just did a claw search to see who makes it').",
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
+  },
+  "CSOS": {
+   "correct": "CISOs",
+   "domain": "roles",
+   "rule": "YouTube ASR ('we did one with CSOS as well' - a CISO survey).",
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
+  },
+  "broadcast switch": {
+   "correct": "Broadcom switch",
+   "domain": "names",
+   "ci": true,
+   "rule": "YouTube ASR ('why does a broadcast switch need a bunch of rettimers'); the next sentence has 'Broadcom switches'.",
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
+  },
+  "$und00 billion": {
+   "correct": "$100 billion",
+   "domain": "units",
+   "rule": "YouTube ASR of 'a hundred billion' ('AMD could conceivably do $und00 billion next year in revenue'; the speaker repeats 'a hundred billion dollars' two sentences later).",
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
+  },
+  "Teeu": {
+   "correct": "Temu",
+   "domain": "names",
+   "rule": "YouTube ASR ('we can get some on Teeu in a month').",
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
+  },
+  "Carl Kjerstedt": {
+   "correct": "Karl Keirstead (UBS software/cloud analyst)",
+   "domain": "names",
+   "rule": "AlphaSense fast-follow earnings transcript renders the UBS analyst's name phonetically.",
+   "first_seen": "2026-11-10 (CoreWeave Q3 2026 earnings call, fast-follow transcript, 2026-11-10)"
+  },
+  "open claw": {
+   "correct": "OpenClaw",
+   "domain": "products",
+   "rule": "YouTube ASR splits the product name into two words.",
+   "first_seen": "2026-11-10 (Semi Doped, 'Intel's Earnings Disaster…' 2026-11-09, YouTube ASR)"
+  },
+  "X-PUs": {
+   "correct": "XPUs",
+   "domain": "acronyms",
+   "rule": "YouTube ASR spells XPU (custom accelerator) as 'X-PUs' (also heard as 'X CPUs' — check context before correcting that variant, it can be legitimate).",
+   "first_seen": "2026-11-10 (Semi Doped, 'Intel's Earnings Disaster…' 2026-11-09, YouTube ASR)"
+  },
+  "Akos": {
+   "correct": "Akash Palkhiwala (Qualcomm CFO)",
+   "domain": "names",
+   "rule": "YouTube ASR ('Akos was signaling Qualcomm CFO that data center or the adjacencies…').",
+   "keep_when": [
+    "Hungar",
+    "Ákos"
+   ],
+   "first_seen": "2026-11-10 (The Circuit, 'The \"Semi-Apocalypse\"…' 2026-11-09, YouTube ASR)"
   }
  },
  "summary_traps": [

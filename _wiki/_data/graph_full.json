@@ -2,7 +2,7 @@
  "generated": "2026-11-10",
  "counts": {
   "nodes": 212,
-  "edges": 2386
+  "edges": 2390
  },
  "nodes": [
   {
@@ -33,7 +33,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-11-09"
+   "last_chg": "2026-11-10"
   },
   {
    "id": "ADI",
@@ -284,7 +284,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-26"
+   "last_chg": "2026-11-10"
   },
   {
    "id": "ASML",
@@ -584,10 +584,10 @@
    "in_book": false,
    "docs": {
     "briefing": 1,
-    "transcript": 6,
+    "transcript": 7,
     "wiki": 1
    },
-   "next_catalyst": "",
+   "next_catalyst": "2026-11-10",
    "last_chg": "2026-11-10"
   },
   {
@@ -875,7 +875,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-11-09"
+   "last_chg": "2026-11-10"
   },
   {
    "id": "IREN",
@@ -1076,7 +1076,7 @@
     "wiki": 1
    },
    "next_catalyst": "2027-01-19",
-   "last_chg": "2026-11-09"
+   "last_chg": "2026-11-10"
   },
   {
    "id": "MP",
@@ -1198,7 +1198,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-11-09"
+   "last_chg": "2026-11-10"
   },
   {
    "id": "NFLX",
@@ -1269,7 +1269,7 @@
     "wiki": 1
    },
    "next_catalyst": "2026-11-17",
-   "last_chg": "2026-11-09"
+   "last_chg": "2026-11-10"
   },
   {
    "id": "NVT",
@@ -1418,7 +1418,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-11-09"
+   "last_chg": "2026-11-10"
   },
   {
    "id": "POET",
@@ -1475,7 +1475,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-26"
+   "last_chg": "2026-11-10"
   },
   {
    "id": "RDDT",
@@ -1827,7 +1827,7 @@
     "wiki": 1
    },
    "next_catalyst": "",
-   "last_chg": "2026-10-26"
+   "last_chg": "2026-11-10"
   },
   {
    "id": "TXN",
@@ -4336,6 +4336,12 @@
   },
   {
    "u": "theme:ai-cybersecurity",
+   "v": "NET",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:ai-cybersecurity",
    "v": "PANW",
    "type": "exposes",
    "label": ""
@@ -4894,6 +4900,12 @@
   },
   {
    "u": "theme:china-export",
+   "v": "GLW",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:china-export",
    "v": "INTC",
    "type": "exposes",
    "label": ""
@@ -5033,6 +5045,12 @@
   {
    "u": "theme:cowos-packaging",
    "v": "INTC",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:cowos-packaging",
+   "v": "LITE",
    "type": "exposes",
    "label": ""
   },
@@ -5471,6 +5489,12 @@
   {
    "u": "theme:hbm-memory",
    "v": "GOOG",
+   "type": "exposes",
+   "label": ""
+  },
+  {
+   "u": "theme:hbm-memory",
+   "v": "INTC",
    "type": "exposes",
    "label": ""
   },
@@ -7329,14 +7353,14 @@
    "v": "AAPL",
    "type": "covers",
    "label": "",
-   "w": 201
+   "w": 203
   },
   {
    "u": "broker:JPM",
    "v": "AAPL",
    "type": "covers",
    "label": "",
-   "w": 253
+   "w": 254
   },
   {
    "u": "broker:MS",
@@ -8106,7 +8130,7 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 439
+   "w": 445
   },
   {
    "u": "broker:JPM",
@@ -8127,7 +8151,7 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 209
+   "w": 210
   },
   {
    "u": "broker:Citi",
@@ -8225,7 +8249,7 @@
    "v": "AMD",
    "type": "covers",
    "label": "",
-   "w": 251
+   "w": 252
   },
   {
    "u": "broker:Barrons",
@@ -8869,14 +8893,14 @@
    "v": "ARM",
    "type": "covers",
    "label": "",
-   "w": 281
+   "w": 282
   },
   {
    "u": "broker:JPM",
    "v": "ARM",
    "type": "covers",
    "label": "",
-   "w": 44
+   "w": 48
   },
   {
    "u": "broker:MS",
@@ -10556,28 +10580,28 @@
    "v": "CRWV",
    "type": "covers",
    "label": "",
-   "w": 214
+   "w": 234
   },
   {
    "u": "broker:JPM",
    "v": "CRWV",
    "type": "covers",
    "label": "",
-   "w": 131
+   "w": 139
   },
   {
    "u": "broker:MS",
    "v": "CRWV",
    "type": "covers",
    "label": "",
-   "w": 50
+   "w": 51
   },
   {
    "u": "broker:Jefferies",
    "v": "CRWV",
    "type": "covers",
    "label": "",
-   "w": 65
+   "w": 71
   },
   {
    "u": "broker:Citi",
@@ -10591,7 +10615,7 @@
    "v": "CRWV",
    "type": "covers",
    "label": "",
-   "w": 54
+   "w": 55
   },
   {
    "u": "broker:DB",
@@ -10605,14 +10629,14 @@
    "v": "CRWV",
    "type": "covers",
    "label": "",
-   "w": 103
+   "w": 107
   },
   {
    "u": "broker:Bernstein",
    "v": "CRWV",
    "type": "covers",
    "label": "",
-   "w": 175
+   "w": 176
   },
   {
    "u": "broker:Redburn",
@@ -10647,7 +10671,7 @@
    "v": "CRWV",
    "type": "covers",
    "label": "",
-   "w": 2
+   "w": 3
   },
   {
    "u": "broker:Mizuho",
@@ -12061,7 +12085,7 @@
    "v": "INTC",
    "type": "covers",
    "label": "",
-   "w": 606
+   "w": 609
   },
   {
    "u": "broker:JPM",
@@ -12117,7 +12141,7 @@
    "v": "INTC",
    "type": "covers",
    "label": "",
-   "w": 115
+   "w": 116
   },
   {
    "u": "broker:Redburn",
@@ -12173,7 +12197,7 @@
    "v": "INTC",
    "type": "covers",
    "label": "",
-   "w": 87
+   "w": 88
   },
   {
    "u": "broker:Stratechery",
@@ -13251,7 +13275,7 @@
    "v": "META",
    "type": "covers",
    "label": "",
-   "w": 194
+   "w": 196
   },
   {
    "u": "broker:Redburn",
@@ -14462,7 +14486,7 @@
    "v": "NVDA",
    "type": "covers",
    "label": "",
-   "w": 317
+   "w": 319
   },
   {
    "u": "broker:Stratechery",
@@ -17584,14 +17608,14 @@
    "v": "TSM",
    "type": "covers",
    "label": "",
-   "w": 429
+   "w": 430
   },
   {
    "u": "broker:JPM",
    "v": "TSM",
    "type": "covers",
    "label": "",
-   "w": 372
+   "w": 374
   },
   {
    "u": "broker:MS",

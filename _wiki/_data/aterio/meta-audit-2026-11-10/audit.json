@@ -1,0 +1,488 @@
+{
+  "recorded_date": "2026-11-10",
+  "source": "P:\\Felipe Monteiro\\Aterio\\data-centers\\inventory\\data_center_inventory_20260831.csv",
+  "source_asof": "2026-08-31",
+  "source_sha256": "40067207ac64748a116ac1100dc04cac268b2ac04e37397596ebf8a6ae30e8b1",
+  "matched_us_buildings": 269,
+  "live_buildings": 259,
+  "ratio": {
+    "median_rounded": 1.15,
+    "rows_with_both": 1025,
+    "rows_equal_to_one": 417
+  },
+  "inputs": {
+    "building_mw_dates_status": "HARD as vendor fields, not independently verified engineering facts",
+    "median_1_15": "HARD measured cross-sectional median; ESTIMATE when applied to each Meta building",
+    "bernstein_14_60": "Broker chart reading from November 6, 2026; PARTIAL, chart precision and scope unresolved",
+    "native_it_sensitivity": "Uses vendor CRITICAL_IT_CAPACITY_MW where positive; field quality not independently validated, not adopted"
+  },
+  "values": {
+    "operating_facility_mw": 5201.29,
+    "pre2026_operating_facility_mw": 4239.93,
+    "construction_facility_mw": 8848.6,
+    "house_facility_mw": 13258.04,
+    "house_self_facility_mw": 9312.44,
+    "house_tenant_facility_mw": 3945.6,
+    "medium_facility_mw": 1489.3200000000002,
+    "after2030_facility_mw": 3362.0,
+    "undated_facility_mw": 182.06,
+    "campus_construction_sensitivity_facility_mw": 15785.36,
+    "operating_it_eq_gw": 4.522860869565218,
+    "pre2026_operating_it_eq_gw": 3.686895652173914,
+    "construction_it_eq_gw": 7.694434782608697,
+    "house_it_eq_gw": 11.52873043478261,
+    "house_self_it_eq_gw": 8.09777391304348,
+    "house_tenant_it_eq_gw": 3.4309565217391307,
+    "medium_it_eq_gw": 1.2950608695652177,
+    "after2030_it_eq_gw": 2.9234782608695653,
+    "undated_it_eq_gw": 0.1583130434782609,
+    "campus_construction_sensitivity_it_eq_gw": 13.726400000000002,
+    "end2030_it_eq_gw": 15.215626086956522,
+    "end2030_with_medium_it_eq_gw": 16.51068695652174,
+    "house_native_it_else_proxy_sensitivity_gw": 11.924382608695652,
+    "house_ratio_1_17_gw": 11.33165811965812,
+    "house_ratio_1_27_gw": 10.439401574803151,
+    "construction_numeric_gap_vs_bernstein_14_60_gw_basis_unreconciled": 5.7513999999999985
+  },
+  "checks": {
+    "house_matches_dashboard": true,
+    "medium_matches_dashboard": true,
+    "no_duplicate_building_ids": true,
+    "self_tenant_roles_partition_house": true
+  },
+  "external_checks": {
+    "stock": "PARTIAL: independent company total installed stock unavailable; only census bookkeeping validated",
+    "flow": "PARTIAL: Bernstein reports a stock under construction, not annual delivery; do not splice into annual adds",
+    "construction_benchmark": "UNRECONCILED: later Bernstein/Aterio chart versus August building export; campus classification can also explain part of gap",
+    "physical_constant": "1.15 >= 1; plausible facility/IT proxy but 1.000 vendor rows expose basis ambiguity"
+  },
+  "notes_only_attribution": [
+    {
+      "ATERIO_DATA_CENTER_UID": "8c5eb1c4-35bd-452c-9ad7-338657086592",
+      "DATA_CENTER_BUILDING_NAME": "HOU3",
+      "DATA_CENTER_CAMPUS_NAME": "Houston Dual-Facility Campus",
+      "PROVIDER_NAME": "CyrusOne",
+      "END_USER_COMPANIES": "",
+      "DATA_CENTER_STAGE": "Active",
+      "DATA_CENTER_ACTIVATION_DATE": "2016-01-05",
+      "SELECTED_POWER_CAPACITY_MW": "43",
+      "NOTES": "[2026-06-06 JR] Additional Info: Project confirmed leased by Meta under Paile LLC, confirmed through comptroller data."
+    }
+  ],
+  "campuses": [
+    {
+      "name": "Hyperion, Meta Campus",
+      "state": "LA",
+      "live_facility_mw": 5040.2,
+      "house_facility_mw": 2040.0,
+      "medium_facility_mw": 857.2,
+      "after2030_facility_mw": 2143.0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Piqua Campus",
+      "state": "OH",
+      "live_facility_mw": 1400.0,
+      "house_facility_mw": 300.0,
+      "medium_facility_mw": 400.0,
+      "after2030_facility_mw": 700.0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Prometheus, Meta Campus",
+      "state": "OH",
+      "live_facility_mw": 1263.3,
+      "house_facility_mw": 832.18,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Project Domino",
+      "state": "IN",
+      "live_facility_mw": 1200.0,
+      "house_facility_mw": 1200.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Big Cedar Industrial Park",
+      "state": "IA",
+      "live_facility_mw": 1050.0,
+      "house_facility_mw": 1050.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Childress Clean Campus",
+      "state": "TX",
+      "live_facility_mw": 1000.0,
+      "house_facility_mw": 1000.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "El Paso, Meta Campus",
+      "state": "TX",
+      "live_facility_mw": 999.9000000000001,
+      "house_facility_mw": 999.9000000000001,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Eagle Mountain, Meta Campus",
+      "state": "UT",
+      "live_facility_mw": 831.0,
+      "house_facility_mw": 330.0,
+      "medium_facility_mw": 141.0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Kansas City, Meta Campus",
+      "state": "MO",
+      "live_facility_mw": 750.0,
+      "house_facility_mw": 96.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 519.0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Los Lunas, Meta Campus",
+      "state": "NM",
+      "live_facility_mw": 714.56,
+      "house_facility_mw": 334.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Montgomery Data Center",
+      "state": "AL",
+      "live_facility_mw": 686.0,
+      "house_facility_mw": 686.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Warrenton Campus",
+      "state": "MO",
+      "live_facility_mw": 600.0,
+      "house_facility_mw": 600.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Altoona, Meta Campus",
+      "state": "IA",
+      "live_facility_mw": 536.36,
+      "house_facility_mw": 48.18,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Stanton Springs, Meta Campus",
+      "state": "GA",
+      "live_facility_mw": 470.0,
+      "house_facility_mw": 150.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Sarpy Nebraska, Meta Campus",
+      "state": "NE",
+      "live_facility_mw": 460.38,
+      "house_facility_mw": 70.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Henrico, Meta Campus",
+      "state": "VA",
+      "live_facility_mw": 425.0,
+      "house_facility_mw": 200.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Prineville, Meta Campus",
+      "state": "OR",
+      "live_facility_mw": 402.5,
+      "house_facility_mw": 0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Project Stampede",
+      "state": "TX",
+      "live_facility_mw": 400.0,
+      "house_facility_mw": 400.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Huntsville, Meta Campus",
+      "state": "AL",
+      "live_facility_mw": 385.0,
+      "house_facility_mw": 170.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Bowling Green Data Center Campus",
+      "state": "OH",
+      "live_facility_mw": 350.0,
+      "house_facility_mw": 350.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0.0,
+      "missing_mw_buildings": 1
+    },
+    {
+      "name": "Temple Data Center Campus",
+      "state": "TX",
+      "live_facility_mw": 300.0,
+      "house_facility_mw": 300.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Mesa, Meta Campus",
+      "state": "AZ",
+      "live_facility_mw": 275.0,
+      "house_facility_mw": 50.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Kuna Data Center",
+      "state": "ID",
+      "live_facility_mw": 266.36,
+      "house_facility_mw": 266.36,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 1
+    },
+    {
+      "name": "Cheyenne, Meta Campus",
+      "state": "WY",
+      "live_facility_mw": 266.0,
+      "house_facility_mw": 266.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "DeKalb, Meta Campus",
+      "state": "IL",
+      "live_facility_mw": 225.0,
+      "house_facility_mw": 0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0.0,
+      "missing_mw_buildings": 1
+    },
+    {
+      "name": "Temple Data Center",
+      "state": "TX",
+      "live_facility_mw": 200.46,
+      "house_facility_mw": 48.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Project Anthem",
+      "state": "OK",
+      "live_facility_mw": 200.0,
+      "house_facility_mw": 200.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Fort Worth, Meta Campus",
+      "state": "TX",
+      "live_facility_mw": 200.0,
+      "house_facility_mw": 0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Gallatin, Meta Campus",
+      "state": "TN",
+      "live_facility_mw": 193.96,
+      "house_facility_mw": 100.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "LC (Ashburn) Cloud HQ Campus",
+      "state": "VA",
+      "live_facility_mw": 180.0,
+      "house_facility_mw": 180.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Rosemount, Meta Campus",
+      "state": "MN",
+      "live_facility_mw": 170.0,
+      "house_facility_mw": 170.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Jeffersonville, Meta Campus",
+      "state": "IN",
+      "live_facility_mw": 170.0,
+      "house_facility_mw": 170.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "New Albany, QTS Campus",
+      "state": "OH",
+      "live_facility_mw": 144.0,
+      "house_facility_mw": 144.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Forest City, Meta Campus",
+      "state": "NC",
+      "live_facility_mw": 142.83,
+      "house_facility_mw": 0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Freestone Energy Center Campus",
+      "state": "TX",
+      "live_facility_mw": 126.6,
+      "house_facility_mw": 126.6,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Beaver Dam, Meta Campus",
+      "state": "WI",
+      "live_facility_mw": 91.12,
+      "house_facility_mw": 91.12,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 1
+    },
+    {
+      "name": "Aiken, Meta Campus",
+      "state": "SC",
+      "live_facility_mw": 91.12,
+      "house_facility_mw": 91.12,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "New Albany 2, QTS Campus",
+      "state": "OH",
+      "live_facility_mw": 83.0,
+      "house_facility_mw": 83.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Meridian, Compass Campus",
+      "state": "MS",
+      "live_facility_mw": 62.0,
+      "house_facility_mw": 62.0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Davenport Meta AI Campus",
+      "state": "IA",
+      "live_facility_mw": 53.58,
+      "house_facility_mw": 53.58,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "",
+      "state": "MN",
+      "live_facility_mw": 45.56,
+      "house_facility_mw": 0,
+      "medium_facility_mw": 45.56,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "",
+      "state": "MN",
+      "live_facility_mw": 45.56,
+      "house_facility_mw": 0,
+      "medium_facility_mw": 45.56,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Ashburn (VA1), Vantage Campus",
+      "state": "VA",
+      "live_facility_mw": 35.0,
+      "house_facility_mw": 0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": " Project Cornmaze",
+      "state": "WI",
+      "live_facility_mw": 0.0,
+      "house_facility_mw": 0,
+      "medium_facility_mw": 0.0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 1
+    },
+    {
+      "name": "Howell Township Campus",
+      "state": "MI",
+      "live_facility_mw": 0,
+      "house_facility_mw": 0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 0
+    },
+    {
+      "name": "Menomonie Data Center Campus",
+      "state": "WI",
+      "live_facility_mw": 0.0,
+      "house_facility_mw": 0,
+      "medium_facility_mw": 0,
+      "after2030_facility_mw": 0,
+      "missing_mw_buildings": 4
+    }
+  ]
+}

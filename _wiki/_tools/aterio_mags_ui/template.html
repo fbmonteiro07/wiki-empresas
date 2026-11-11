@@ -772,7 +772,7 @@ function fourKpi(){
   $("fourKpi").innerHTML = kpi(`House view ${Y0}-${Y1}, the four`, `${f1(sH)}<small>GW</small>`, `${roleTxt()}; a shared building counts for each tenant`, "lead") +
     kpi(`+ Announced medium ${Y0}-${Y1}`, `+${f1(sM)}<small>GW</small>`, `outside the house view · with it ${f1(sH + sM)} GW; ${C.map(c => `${esc(c.tick)} ${f1(medOf(c))}`).join(" · ")}`) +
     kpi("Share of the US house view", pc(sH / M.us.house), `of ${f1(M.us.house)} GW for the whole census`) +
-    kpi("Operating today", `${f1(op)}<small>GW</small>`, "the four, same basis") +
+    kpi(`Operating at ${M.asof}`, `${f1(op)}<small>GW</small>`, "the four, same basis") +
     kpi("Under construction", `${f1(uc)}<small>GW</small>`, `plus delayed ${f1(dl)} GW`) +
     kpi("Top two states", top2.length ? pc(t2 / sH) : "–", top2.length ? `${top2.map(([s, v]) => `${esc(SN(s))} ${f1(v)}`).join(" + ")} GW of the house view` : "");
 }
@@ -873,13 +873,16 @@ function showCo(i){
     const extra = rk.filter(k => k !== "op" && k !== "ten");
     if (four && extra.length) h += `<p class="cs" style="margin:-6px 0 14px">“Self-built + leased” is the basis of <a href="#four">The four compared</a>. ${esc(e.n)} is also named as ${extra.map(k => RL[k][1]).join(" and ")} on other buildings; “All roles” adds them.</p>`;
     h += `<div class="kpis">` +
-      kpi(`House view ${Y0}-${Y1}`, gqv(A.house), `went live ${Y0} ${gq(yrSum(0))} · building ${gq(yrSum(1))} · delayed ${gq(yrSum(2))} · announced high ${gq(yrSum(3))}`, "lead") +
+      kpi(`US additions ${Y0}-${Y1} · house view`, gqv(A.house), `went live ${Y0} ${gq(yrSum(0))} · building ${gq(yrSum(1))} · delayed ${gq(yrSum(2))} · announced high ${gq(yrSum(3))}`, "lead") +
       medKpi(A) +
-      kpi("Operating today", gqv(A.g[0]), `${gq(A.base)} switched on before ${Y0}`) +
+      kpi(`Operating at ${M.asof}`, gqv(A.g[0]), `${gq(A.base)} switched on before ${Y0}`) +
       kpi(`End-${Y1}, house view`, gqv(end), A.base > 0.05 ? `×${(end / A.base).toFixed(1)} vs end-${Y0 - 1}; no retirements` : "operating base + house view adds") +
       kpi("Under construction", gqv(A.g[1]), `plus delayed ${gq(A.g[2])}`) +
       kpi("Announced, any date", gqv(A.g[3] + A.g[4] + A.g[5]), `high ${gq(A.g[3])} · medium ${gq(A.g[4])} · low ${gq(A.g[5])}`) +
       kpi("Footprint", `${A.n.toLocaleString("en-US")}<small>bldgs</small>`, `${A.list.length} campuses · ${Object.keys(A.st).length} states${A.after > 0.05 ? ` · after ${Y1} ${gq(A.after)}` : ""}${A.g[6] > 0.05 ? ` · withdrawn ${gq(A.g[6])}` : ""}`) + `</div>`;
+    if (e.t === "META" && e.kind === "wiki" && M.asof === "2026-08-31") h += panel("Meta scope check · 10 Nov 2026", "August census arithmetic verified; total company capacity remains incomplete.",
+      `<p class="cs">The headline counts <b>US additions in 2026–30</b>. Self-built + recorded leases total <b>11.53 GW IT-eq</b>; adding the pre-2026 operating base gives <b>15.22 GW at end-2030</b>, or <b>16.51 GW including the separate Medium layer</b>. These are census scenarios, with no retirements, not a global Meta capacity forecast.</p>` +
+      `<p class="cs">Hyperion contributes only <b>1.77 GW IT-eq</b> under the house rules; its remaining census phases are Medium or dated after 2030. <a href="https://datacenters.atmeta.com/richland-parish-data-center/">Meta describes 5 GW of compute capacity at full build</a> (page checked 10 Nov; no dated ramp). <a href="../_data/aterio/meta-audit-2026-11-10/bernstein-exhibit15-p14.jpg">Bernstein / Rezaei et al., 6 Nov, Exhibit 15</a> shows about <b>15 GW under construction</b> versus <b>8.85 GW facility</b> in our August building census: vintage, classification and GW basis are unresolved. <a href="../index.html#META">Full research note and sources</a>.</p>`);
     h += panel("Two sources", "Aterio's census next to Capstone's public-source registry. GW IT-eq. They count differently, so compare them, never add them.", twoSrc(e, A, RA, (opts.find(o => o[0] === role) || ["", ""])[1]));
     h += `<div class="grid2">` + panel("How it grows: capacity at each year end", `IT-eq · operating base + the house view adds, stacked by stage; ×multiple vs end-${Y0 - 1}`, cumChart(A)) +
       panel("Adds per year", "IT-eq · house view by activation year (Aterio's dates, no delay haircut)", coYears(A)) + `</div>`;
@@ -903,7 +906,7 @@ function showCo(i){
     }
     h += bt ? panel("Behind-the-meter generation", "", bt) : RA.n ? "" : `<p class="why">No buildings recorded for this name.</p>`;
   }
-  h += note(`Aterio census as of ${esc(M.asof)}, Capstone treatment: GW IT-eq = facility MW ÷ ${FK}; house view = went live in ${Y0}, under construction, delayed, and announced High, dated ${Y0}-${Y1} on Aterio's dates. ${MED_NOTE} A building counts once here even if the company holds several roles on it, but it also counts in full for every other company named on it, so never add companies together. Roles are Aterio's fields, not checked one by one. End-${Y1} assumes nothing operating today retires.` +
+  h += note(`Aterio census as of ${esc(M.asof)}, Capstone treatment: GW IT-eq = facility MW ÷ ${FK}; house view = went live in ${Y0}, under construction, delayed, and announced High, dated ${Y0}-${Y1} on Aterio's dates. ${MED_NOTE} A building counts once here even if the company holds several roles on it, but it also counts in full for every other company named on it, so never add companies together. Roles are Aterio's fields, not checked one by one. End-${Y1} assumes nothing operating at the census snapshot retires.` +
     ` Public registry: Capstone's bottom-up list of the large US campuses from public sources (build of ${esc(RGM.asof)}, the DC delay-risk page), matched to this name on its developer and tenant fields; a separate count, never added to Aterio's.`);
   $("view").innerHTML = h;
   if (rk.length) { seg($("coRole"), opts, role, k => { LS.role = k; showCo(i); }); $("coCsv").onclick = () => coCsv(e, A); }
@@ -931,7 +934,7 @@ function showState(st){
   h += `<div class="kpis">` +
     kpi(`House view adds ${Y0}-${Y1}`, gqv(A.house), us ? "the whole census, house rules" : `${pc(A.house / U.house)} of the US house view`, "lead") +
     medKpi(A) +
-    kpi("Operating today", gqv(A.g[0]), `${gq(A.base)} before ${Y0} · ${gq(went)} went live in ${Y0}`) +
+    kpi(`Operating at ${M.asof}`, gqv(A.g[0]), `${gq(A.base)} before ${Y0} · ${gq(went)} went live in ${Y0}`) +
     kpi(`End-${Y1}, house view`, gqv(end), A.base > 0.5 ? `×${(end / A.base).toFixed(1)} vs end-${Y0 - 1} · ~${Math.round((Math.pow(end / A.base, 1 / (Y1 - Y0 + 1)) - 1) * 100)}% a year` : "") +
     kpi("Under construction", gqv(A.g[1]), `plus delayed ${gq(A.g[2])}`) +
     kpi("Announced, any date", gqv(A.g[3] + A.g[4] + A.g[5]), `high ${gq(A.g[3])} · medium ${gq(A.g[4])} · low ${gq(A.g[5])}`) +
@@ -944,7 +947,7 @@ function showState(st){
     ["geo", us ? "By state" : "By county", `<p class="cs">GW IT-eq, ranked by the house view adds.</p><div class="tscroll">${stGeo(A, st)}</div>`],
     ["cp", "Tenants, money and power", `<p class="cs">Other companies named on the ${esc(nm)} buildings, ranked by the house view adds on them (withdrawn excluded).</p>${stCounter(A)}`]];
   h += `<section class="panel">${tabsHTML(tabs)}<div style="margin-top:12px"><button type="button" class="btn" id="stCsv">${ICON_DL}Download CSV of every campus</button></div></section>`;
-  h += note(`Aterio census as of ${esc(M.asof)}, Capstone treatment: GW IT-eq = facility MW ÷ ${FK}; house view = went live in ${Y0}, under construction, delayed, and announced High, dated ${Y0}-${Y1} on Aterio's dates. ${MED_NOTE} Operating before ${Y0} = active buildings dated before ${Y0} or undated. End-${Y1} assumes nothing operating today retires. Aterio's dates have slipped export after export (median +9 months for what was under construction a year ago), so read the later years as an upper path.`);
+  h += note(`Aterio census as of ${esc(M.asof)}, Capstone treatment: GW IT-eq = facility MW ÷ ${FK}; house view = went live in ${Y0}, under construction, delayed, and announced High, dated ${Y0}-${Y1} on Aterio's dates. ${MED_NOTE} Operating before ${Y0} = active buildings dated before ${Y0} or undated. End-${Y1} assumes nothing operating at the census snapshot retires. Aterio's dates have slipped export after export (median +9 months for what was under construction a year ago), so read the later years as an upper path.`);
   $("view").innerHTML = h;
   fitStMap(A, st);
   $("stCsv").onclick = () => coCsv({own: new Set(), n: nm}, A);
@@ -956,13 +959,13 @@ function showMethod(){
   $("view").innerHTML = vhead("Reference", "Method and sources", "", `Aterio census as of ${esc(M.asof)} · house rules of ${esc(M.rules_decided)} · page built ${esc(M.built)}`, "") +
     panel("How the numbers are built", "", `<dl class="mdl">
       <dt>Licensed data</dt><dd>Aterio data-center census, internal use only.</dd>
-      <dt>GW IT-eq</dt><dd>Facility power ÷ ${M.fac_it}, Aterio's own median (house rule 1). The Bernstein table below is the one place on facility GW.</dd>
+      <dt>GW IT-eq</dt><dd>Selected facility power ÷ ${M.fac_it}, Aterio's own median (house rule 1), applied to every building even where Aterio supplies an IT field. This is a proxy, not site-specific measured IT load. In the Bernstein table, our figures are facility GW; Bernstein's GW basis is unverified.</dd>
       <dt>Self-built</dt><dd>Aterio lists the company as the <b>provider</b>: owner and operator of the building.</dd>
-      <dt>Leased</dt><dd>Aterio names the company among the <b>end users</b> of someone else's building (colo, developer or neocloud). Leases are only what Aterio has recorded, so leased GW is a floor.</dd>
+      <dt>Leased</dt><dd>Aterio names the company among the <b>end users</b> of someone else's building (colo, developer or neocloud). This is an incomplete attribution of leases and cloud contracts. Shared buildings count in full for each tenant, so the total is not a strict lower bound.</dd>
       <dt>Shared buildings</dt><dd>A building with several named tenants counts in full for each (${C.map(c => `${esc(c.name)} ${f1(c.shared_it)}`).join(", ")} GW shared), so never add companies together.</dd>
       <dt>House view</dt><dd>What went live in ${Y0}, what is under construction or delayed, and announced projects rated High likelihood, dated ${Y0}-${Y1} on Aterio's own dates; a hyperscaler self-build counts as having a tenant. Same rules as the Aterio deck tab of the <a href="dc-delay-risk.html#aterio-deck">DC delay-risk page</a>.</dd>
       <dt>Medium layer</dt><dd>Announced projects Aterio rates <b>Medium</b> likelihood, dated ${Y0}-${Y1}, with the same low-likelihood / no-tenant campus rule. Drawn hatched on top of the house view and never counted in it: the house rules take High only. US: ${f1(M.us.med || 0)} GW on top of the ${f1(M.us.house)} GW house view; the four: ${C.map(c => `${esc(c.name)} ${f1(c.med || 0)}`).join(", ")} GW.</dd>
-      <dt>Dates</dt><dd>Aterio's dates have slipped export after export (median +9 months for what was under construction a year ago), so read the later years as an upper path. End-${Y1} totals assume nothing operating today retires.</dd>
+      <dt>Dates</dt><dd>Aterio's dates have slipped export after export (median +9 months for what was under construction a year ago), so read the later years as an upper path. End-${Y1} totals assume nothing operating at the census snapshot retires.</dd>
       <dt>Search</dt><dd>Covers every name the census carries in any role (operator, tenant, backer, financier, partner, utility, behind-the-meter). Wiki companies bundle their aliases with the same matching as their page sections, so a wiki company can count more than its hyperscaler card (Google also appears as a financier). It also finds every developer and tenant the public registry names.</dd>
       <dt>Public registry</dt><dd>Capstone's bottom-up registry of the large US campuses from public sources (the <a href="dc-delay-risk.html">DC delay-risk page</a>; build of ${esc(RGM.asof)}): one row per dated phase, with developer, tenant, status, base date and the delay model's ${esc(RGM.scenLabel)} result. A company's registry rows are the phases whose developer or tenant field names it, matched on the name without legal or generic tail words (the terms are shown in its tab). Registry campuses are tied to Aterio campuses by the delay-risk page's hand-reviewed campus map. On the map, diamonds are registry campuses and circles Aterio's. The registry covers the large campuses only, so it sits below Aterio; never add the two.</dd></dl>`) +
     panel("Cross-check: Bernstein's player table", `<span id="bLead"></span>`, `<div class="tscroll"><table id="bTable"></table></div>`) +
@@ -971,7 +974,7 @@ function showMethod(){
 }
 function bern(){
   const B = M.bernstein; if (!B) { $("bLead").textContent = "No Bernstein file on disk."; return; }
-  $("bLead").innerHTML = `${esc(B.source.broker)}, <i>${esc(B.source.title)}</i> (${esc(B.source.date)}; ${esc(B.source.analysts)}), Exhibits 15-17: GW by player on <b>Aterio data via Bernstein</b>, a later export than our ${esc(M.asof)}, basis not stated. Ours here is <b>facility</b> GW (no ÷${M.fac_it}) so the two sit on the same basis. A Bernstein figure above ours can mean a later export, campus-level counting or leases Aterio recorded later. Two what-ifs on the building side: <b>+ Delayed</b> adds Aterio's Delayed stage to + leased; <b>whole campus</b> also counts every announced building, any likelihood, on a campus where at least one building is already under construction. The highlighted cell in each block is our figure closest to Bernstein's. Whole-campus counting overshoots wherever a campus under construction carries a long announced tail, so a close match there points to a few specific campuses rather than to Bernstein's general method.`;
+  $("bLead").innerHTML = `${esc(B.source.broker)}, <i>${esc(B.source.title)}</i> (${esc(B.source.date)}; ${esc(B.source.analysts)}), Exhibits 15-17: GW by player on <b>Aterio data via Bernstein</b>. The report is later than our ${esc(M.asof)} export; its underlying export date, company attribution and GW basis are unverified. Ours here is <b>facility</b> GW (no ÷${M.fac_it}); Bernstein is shown without conversion, so basis alignment is <b>unresolved</b>. Values were digitized from chart bars (approximately ±1% of the axis), not disclosed to two decimals. A difference can reflect vintage, campus classification, attribution or power basis; it is not a measured omission. Two what-ifs on the building side: <b>+ Delayed</b> adds Aterio's Delayed stage to + leased; <b>whole campus</b> also counts every announced building, any likelihood, on a campus where at least one building is already under construction. The highlighted cell is only the numerical closest match, not validation of Bernstein's method. Whole-campus counting includes planned phases and must not be described as capacity already under construction.`;
   const near = (vals, b) => { if (b == null) return -1; let k = -1, best = Infinity; vals.forEach((v, i) => { if (v != null && Math.abs(v - b) < best) { best = Math.abs(v - b); k = i; } }); return k; };
   const cell = (v, hit) => `<td class="n"${hit ? ` style="background:color-mix(in srgb,var(--accent) 16%,transparent);font-weight:650"` : ""}>${f1(v)}</td>`;
   $("bTable").innerHTML = `<tr><th>Company</th><th class="n">Operating · ours, self-built</th><th class="n">ours, + leased</th><th class="n">Bernstein</th><th class="n">Building · ours, self-built</th><th class="n">ours, + leased</th><th class="n">+ Delayed</th><th class="n">whole campus</th><th class="n">Bernstein</th></tr>` +

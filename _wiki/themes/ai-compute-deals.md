@@ -1179,6 +1179,10 @@ Duplicate search: Microsoft/MSFT, Nscale, Loughton and buyer/supplier pages revi
 
 Research change log, 2026-11-06: backfilled original Loughton project and cancellation under one ID; reconciled MSFT and NSCALE pages and preserved old status/values in their Changelogs. Existing IREN partial-delivery and reconfiguration history re-read, unchanged. No new funded or delivered MW inferred.
 
+## Research recheck recorded 2026-11-10 — Meta census scope
+
+Searched existing Hyperion references and **META-NBIS-202603 / META-NBIS-202511 / META-CRWV-202509 / META-CRUSOE-202606** before this update and reviewed the existing October 19 contract reconciliation and later confirmation history. [Meta's Richland Parish page](https://datacenters.atmeta.com/richland-parish-data-center/), accessed 2026-11-10, restates **5 GW of compute capacity** at full build, without a dated ramp; its older “over two gigawatts” paragraph remains. [Nebius's March 16 release](https://nebius.com/newsroom/nebius-signs-new-ai-infrastructure-agreement-with-meta) retains **$12bn dedicated / up to $15bn contingent** and early-2027 dedicated deployment, without a GW disclosure. Neither is a new commitment or delivery event. August Aterio Meta attribution lacks Nebius/CoreWeave provider rows, but already includes Childress/Warrenton; no cloud-capacity subtotal is added to the census. [Capacity audit](../_meta/aterio-meta-audit-2026-11-10.md): arithmetic passes, current/global completeness and basis remain partial. Existing IDs, terms and histories are preserved; no new deal ID or catalyst outcome.
+
 ## Update procedure
 
 1. Search this page and the buyer/supplier pages before creating a deal ID. Match counterparties, site, tranche and contract scope; company-name matches alone are insufficient. Retain the ID if a later filing changes the reported signing date or legal counterparty name.
@@ -1240,6 +1244,8 @@ Research change log, 2026-11-06: backfilled original Loughton project and cancel
 - **S7 — Goldman Sachs (Della Vigna et al.), "Carbonomics: Behind-the-meter power solutions for data centers", 2026-09-23**, 50pp. Source of the Generac-Amazon vendor agreement and the Oracle Project Jupiter fuel-cell pipeline entry. ⚠️ Its GW are INSTALLED GENERATION capacity — a different basis from every other GW on this page. [Archived render](../relat%C3%B3rios%20bons/Carbonomics__Behind-the-meter_power_solutions_for_data_centers__gas_turbines_fuel_cells_and_reciprocating_engines.html).
 
 ## Changelog
+
+- 2026-11-10 — Meta Aterio audit: rechecked existing Hyperion and Meta cloud-deal references against Meta/Nebius public sources. Added a scope-reconciliation note; retained all deal IDs, original terms and confirmation history. No new agreement, delivery or additive capacity inferred. [Audit](../_meta/aterio-meta-audit-2026-11-10.md).
 
 
 - **2026-11-10 — Anthropic S-1/A No. 2 (EDGAR, acc. 0001628280-26-072484):** one dated top block plus a "Recorded 2026-11-10" history table. No new deal ID. Updates under existing IDs:
