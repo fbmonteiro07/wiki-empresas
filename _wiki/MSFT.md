@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\MSFT` (filings + transcripts) · `_equity_calls` · `_briefings\by-ticker\MSFT.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-10 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-11 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $356.5bn | $433.5bn |
-| Gross profit | $238.1bn | $283.9bn |
-| Gross margin | 66.8% | 65.5% |
-| EBITDA | $214.9bn | $265.5bn |
-| EPS | $17.88 | $21.75 |
-| Capex | $154.8bn | $217.5bn |
-| OCF (FCF + capex cons) | $207.2bn | $241.5bn |
+| Revenue | $356.5bn | $434.1bn |
+| Gross profit | $238.2bn | $283.9bn |
+| Gross margin | 66.8% | 65.4% |
+| EBITDA | $214.9bn | $267.8bn |
+| EPS | $17.88 | $21.74 |
+| Capex | $155.7bn | $222.2bn |
+| OCF (FCF + capex cons) | $207.6bn | $245.9bn |
 
 _Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->

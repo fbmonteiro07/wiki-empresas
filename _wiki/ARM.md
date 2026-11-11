@@ -3,7 +3,7 @@
 _Wiki · generated 2026-06-19 · **20-F filer (UK foreign private issuer)** — files annual 20-F, no 10-K/10-Q · sources: `E:\Wiki Felipe\ARM` (20-Fs FY24–FY26 + transcripts + equity calls) · `_briefings\2026` roll-up · theme [custom-asic-tpu](themes/custom-asic-tpu.md). Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-10 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-11 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -11,9 +11,9 @@ _Wiki · generated 2026-06-19 · **20-F filer (UK foreign private issuer)** — 
 | Gross profit | $5.5bn | $7.1bn |
 | Gross margin | 98.0% | 92.8% |
 | EBITDA | $2.7bn | $3.7bn |
-| EPS | $2.02 | $2.79 |
-| Capex | $443m | $481m |
-| OCF (FCF + capex cons) | $1.9bn | $2.9bn |
+| EPS | $2.02 | $2.80 |
+| Capex | $438m | $449m |
+| OCF (FCF + capex cons) | $1.9bn | $2.8bn |
 
 _Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->

@@ -3,15 +3,15 @@
 _Wiki · created 2026-10-31 · research cutoff 2026-10-31 · email review 2026-11-01 · [Financials](themes/financials.md) · [Company index](00_INDEX.md). Source archive: [KKR](_dashboards/financials-sources.html#KKR)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-10 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-11 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
-| Revenue | $10.7bn | $12.1bn |
-| Gross profit | $10.7bn | $12.1bn |
+| Revenue | $11.3bn | $11.7bn |
+| Gross profit | $11.3bn | $11.7bn |
 | Gross margin | 100.0% | 100.0% |
 | EBITDA | $9.7bn | $8.9bn |
-| EPS | $7.79 | $7.31 |
+| EPS | $7.89 | $7.19 |
 | Capex | — | — |
 | OCF (FCF + capex cons) | $8.0bn | $7.0bn |
 

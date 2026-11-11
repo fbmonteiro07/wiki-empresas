@@ -3,7 +3,7 @@
 _Wiki · generated 2026-11-06 · sources: `E:\Wiki Felipe empresas\IREN`: 10-K FY25 + FY26, 10-Qs Nov-25 → Nov-26, 20-F/A, Q4 FY26 and Q1 FY27 8-K press releases, and the [Q1 FY27 call transcript](../IREN/transcripts/IREN_Q1-FY27-earnings_2026-11-05.md). Also BBG consensus (pulled 2026-11-06, pre-revision), and corpus mentions on [[NBIS]], [[CRWV]], [[MSFT]], [[NVDA]], [[PWR]] and [ai-compute-deals](themes/ai-compute-deals.md). Fiscal year ends **30 June**: Q1 FY27 = the Sep-26 quarter. Master index: [00_INDEX.md](00_INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-10 · USD
+### 📊 Consensus snapshot — BBG · asof 2026-11-11 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -11,9 +11,9 @@ _Wiki · generated 2026-11-06 · sources: `E:\Wiki Felipe empresas\IREN`: 10-K F
 | Gross profit | $692m | $4.0bn |
 | Gross margin | 76.5% | 84.7% |
 | EBITDA | $369m | $3.2bn |
-| EPS | $-1.98 | $-1.36 |
+| EPS | $-1.98 | $-1.19 |
 | Capex | $11.3bn | $16.8bn |
-| OCF (FCF + capex cons) | $-1.2bn ⚠ | $2.3bn |
+| OCF (FCF + capex cons) | $-1.2bn ⚠ | $3.4bn |
 
 _Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years). ⚠ = small negative OCF against large capex while EBITDA > 0: FCF and capex consensus come from different analyst sets, so the sign is not reliable._
 <!-- SNAPSHOT:END -->

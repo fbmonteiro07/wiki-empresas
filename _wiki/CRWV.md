@@ -3,17 +3,17 @@
 _Wiki · generated 2026-06-20 · sources: `E:\Wiki Felipe\CRWV` (10-K FY2025, four 10-Qs, transcripts) · `E:\briefings\2026`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-11-10 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-11-11 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | **$12.8bn** | **$26.7bn** |
-| Gross profit | $8.7bn | $18.9bn |
-| Gross margin | 67.7% | 70.6% |
-| EBITDA | $7.5bn | $16.7bn |
+| Gross profit | $8.7bn | $18.8bn |
+| Gross margin | 67.8% | 70.4% |
+| EBITDA | $7.6bn | $17.0bn |
 | EPS | **$-3.27** | **$-1.83** |
-| Capex | $35.5bn | $47.3bn |
-| OCF (FCF + capex cons) | $8.3bn | $17.7bn |
+| Capex | $35.1bn | $46.3bn |
+| OCF (FCF + capex cons) | $10.1bn | $17.7bn |
 
 _Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 _**Bold** = Capstone official model; plain = BBG consensus._

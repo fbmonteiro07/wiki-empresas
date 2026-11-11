@@ -5,7 +5,7 @@
 _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\COHR` (filings + transcripts + decks) · `_equity_calls` · `_briefings\by-ticker\COHR.md`. Master index: [../INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Snapshot — Capstone official model + BBG · asof 2026-11-10 · USD
+### 📊 Snapshot — Capstone official model + BBG · asof 2026-11-11 · USD
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
@@ -15,7 +15,7 @@ _Wiki · generated 2026-06-18 · sources: `E:\Wiki Felipe\COHR` (filings + trans
 | EBITDA | $2.3bn | $4.0bn |
 | EPS | **$7.30** | **$11.30** |
 | Capex | $1.6bn | $2.3bn |
-| OCF (FCF + capex cons) | $190m | $2.3bn |
+| OCF (FCF + capex cons) | $157m | $2.2bn |
 
 _Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 _**Bold** = Capstone official model; plain = BBG consensus._

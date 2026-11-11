@@ -5,17 +5,17 @@
 _Wiki · generated 2026-06-19 · **German issuer — NO SEC 10-K/10-Q/20-F filings exist.** Covered via earnings-call transcripts (`E:\Wiki Felipe\IFX\transcripts`) + Infineon IR + BBG consensus (EUR). Equity calls: `E:\equity_calls_transcripts`. Briefing roll-ups: `E:\briefings\2026`. Master index: [INDEX.md](../INDEX.md)._
 
 <!-- SNAPSHOT:START (auto: _tools/build_snapshot.py — do not hand-edit) -->
-### 📊 Consensus snapshot — BBG · asof 2026-11-10 · EUR
+### 📊 Consensus snapshot — BBG · asof 2026-11-11 · EUR
 
 | Metric | CY2026E | CY2027E |
 |---|--:|--:|
 | Revenue | €17.3bn | €20.8bn |
-| Gross profit | €7.3bn | €9.4bn |
-| Gross margin | 42.2% | 45.5% |
-| EBITDA | €5.6bn | €7.1bn |
-| EPS | €2.02 | €3.01 |
-| Capex | €3.3bn | €4.0bn |
-| OCF (FCF + capex cons) | €4.9bn | €7.0bn |
+| Gross profit | €7.3bn | €9.6bn |
+| Gross margin | 42.3% | 46.0% |
+| EBITDA | €5.6bn | €7.2bn |
+| EPS | €2.02 | €3.05 |
+| Capex | €3.2bn | €4.1bn |
+| OCF (FCF + capex cons) | €5.3bn | €7.4bn |
 
 _Gross profit = Revenue × GM%. OCF = BBG FCF consensus + capex consensus on BBG's calendar blend (no BBG OCF consensus field; its capex can differ from the Capex row for non-December fiscal years)._
 <!-- SNAPSHOT:END -->
