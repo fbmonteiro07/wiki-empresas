@@ -367,7 +367,10 @@ def registry() -> dict | None:
         rows.append([p["campus"], p["phase"], p["dev"], p["ten"], p["st"], p["city"], p["county"], xy[0], xy[1],
                      p["it"], p["mw"], p["basis"], p["ps"], p["lk"], p["cod"], r["b"], r["n"], url(p["src"]), p["sd"]])
     return {"asof": datetime.date.fromtimestamp(os.path.getmtime(REGF)).isoformat(), "scen": sc,
-            "scenLabel": m["scenarios"][sc]["label"], "rows": rows}
+            "scenLabel": m["scenarios"][sc]["label"], "rows": rows,
+            # campuses under construction, base schedule, GW IT-eq added per state x year: the DC delay page's
+            # registry figure next to its Aterio waterfall, reused by the US view's "GW added by state"
+            "ucBase": {st: v.get("ab", {}) for st, v in (m.get("aggs", {}).get(sc, {}).get("construction", {}).get("states", {})).items()}}
 
 
 def font_face() -> str:

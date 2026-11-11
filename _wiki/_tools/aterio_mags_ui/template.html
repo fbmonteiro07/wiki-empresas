@@ -930,6 +930,61 @@ function regStates(R){
     rows.map(r => `<tr><td><a class="ent" href="#" data-st="${r.st}">${esc(SN(r.st))}</a></td><td class="n">${gw(r.en)}</td><td class="n">${gw(r.uc)}</td><td class="n">${gw(r.ns)}</td><td class="n"><b>${gw(r.t)}</b></td></tr>`).join("") + `</table></div>`;
 }
 
+/* ------------------------------------------------------------------ US view: GW added by state (waterfall), the DC delay page's Aterio cut */
+const SWF = {win: "all", at: "all"};
+let SWD = null;
+function swData(){   // state -> year -> [went live, under construction, delayed, announced high, announced medium], MW IT-eq
+  if (SWD) return SWD; SWD = {};
+  LU.bld.forEach(b => { const c = b[0], g = b[1], mw = b[2], act = b[3], fl = b[5], y = act ? String(Math.floor(act / 100)) : "";
+    if (!y || +y < Y0 || +y > Y1) return;
+    const k = (fl & 1) && g <= 3 ? g : (fl & 32) ? 4 : -1; if (k < 0) return;
+    const st = LU.camps[c][1] || "", o = SWD[st] = SWD[st] || {}, r = o[y] = o[y] || [0, 0, 0, 0, 0]; r[k] += (mw || 0) / FK; });
+  return SWD;
+}
+const SWB = [["Went live in the window", "var(--g-op)"], ["Under construction", "var(--g-uc)"], ["Delayed", "var(--g-dl)"], ["Announced / land bank, rated High", "var(--g-aH)"], ["Announced · medium (outside the house view)", "url(#hatchW)"]];
+const HATCHW = '<defs><pattern id="hatchW" patternUnits="userSpaceOnUse" width="6" height="6" patternTransform="rotate(45)"><rect width="6" height="6" fill="var(--g-aM)" opacity=".35"/><line x1="0" y1="0" x2="0" y2="6" stroke="var(--g-aM)" stroke-width="3"/></pattern></defs>';
+function usWaterfall(){
+  const D = swData(), ys = SWF.win === "all" ? YRS : [SWF.win], wl = SWF.win === "all" ? `${Y0}-${Y1}` : SWF.win;
+  const bk = SWF.at === "uc" ? [1, 2] : SWF.at === "med" ? [0, 1, 2, 3, 4] : [0, 1, 2, 3];
+  seg($("swfWin"), [["all", `${Y0}-${String(Y1).slice(2)}`], ...YRS.map(y => [y, y])], SWF.win, k => { SWF.win = k; usWaterfall(); });
+  seg($("swfAt"), [["all", "House rules (all stages)"], ["uc", "Under construction + delayed"], ["med", "+ Announced medium"]], SWF.at, k => { SWF.at = k; usWaterfall(); });
+  const K5 = [0, 1, 2, 3, 4];
+  const rows = Object.entries(D).filter(([st]) => st).map(([st, o]) => { const r = {st, v: [0, 0, 0, 0, 0]};
+    ys.forEach(y => (o[y] || []).forEach((x, k) => { r.v[k] += x / 1000; })); r.t = bk.reduce((a, k) => a + r.v[k], 0); return r; })
+    .filter(r => r.t > 0.0005).sort((a, b) => b.t - a.t);
+  const N = 14, top = rows.slice(0, N), rest = rows.slice(N);
+  const steps = top.concat(rest.length ? [{st: "", other: rest.length, v: K5.map(k => sum(rest.map(r => r.v[k]))), t: sum(rest.map(r => r.t))}] : []);
+  const tot = sum(steps.map(r => r.t)), totV = K5.map(k => sum(steps.map(r => r.v[k])));
+  let cum = 0; steps.forEach(r => { r.c0 = cum; cum += r.t; });
+  const ymax = Math.max(tot, 0.1) * 1.04, W = 1100, H = 340, padL = 42, padB = 44, padT = 26, n = steps.length + 1, gap = (W - padL - 10) / n, bw = Math.min(gap * 0.64, 54);
+  const y = v => padT + (H - padT - padB) * (1 - v / ymax);
+  const step = ymax > 120 ? 50 : ymax > 40 ? 20 : ymax > 15 ? 5 : ymax > 6 ? 2 : 1;
+  const tipT = (nm, r) => `<b>${esc(nm)}</b>: <b>${f1(r.t)} GW</b> IT-eq in ${wl}${tot ? ` (${(r.t / tot * 100).toFixed(1)}% of the US)` : ""}` + bk.filter(k => r.v[k] > 0.0005).map(k => `<br>${SWB[k][0]}: ${f1(r.v[k])} GW`).join("");
+  const stack = (x, base, r, nm) => { let acc = 0, h = "";
+    bk.forEach(k => { const v = r.v[k]; if (v <= 0.0005) return; const y0 = y(base + acc), y1 = y(base + acc + v), hh = y0 - y1;
+      h += `<rect x="${x}" y="${y1}" width="${bw}" height="${Math.max(hh - (hh > 3 ? 2 : 0), 1)}" rx="3" fill="${SWB[k][1]}" data-t="${esc(tipT(nm, r))}"/>`; acc += v; });
+    return h; };
+  let s = `<svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Waterfall of GW added by state, ${wl}">` + HATCHW;
+  for (let t = 0; t <= ymax; t += step) s += `<line class="gl" x1="${padL}" x2="${W - 6}" y1="${y(t)}" y2="${y(t)}"/><text class="ax" x="${padL - 6}" y="${y(t) + 4}" text-anchor="end">${t}</text>`;
+  steps.forEach((r, i) => { const x = padL + i * gap + (gap - bw) / 2, nm = r.st ? SN(r.st) : `Other ${r.other} states`;
+    s += `<g${r.st ? ` class="swfs" data-sw="${r.st}" style="cursor:pointer"` : ""}><rect x="${x - (gap - bw) / 2}" y="${padT}" width="${gap}" height="${H - padT - padB}" fill="transparent" data-t="${esc(tipT(nm, r) + (r.st ? "<br><i>Click to open the state</i>" : ""))}"/>` + stack(x, r.c0, r, nm) + `</g>`;
+    s += `<text class="val" x="${x + bw / 2}" y="${y(r.c0 + r.t) - 6}" text-anchor="middle">${f1(r.t)}</text>`;
+    s += `<text class="ax" x="${x + bw / 2}" y="${H - padB + 15}" text-anchor="middle" style="font-weight:600">${r.st || "Other"}</text><text class="ax" x="${x + bw / 2}" y="${H - padB + 28}" text-anchor="middle">${tot ? Math.round(r.t / tot * 100) + "%" : ""}</text>`;
+    const nx = padL + (i + 1) * gap + (gap - bw) / 2;
+    s += `<line x1="${x + bw}" x2="${nx}" y1="${y(r.c0 + r.t)}" y2="${y(r.c0 + r.t)}" stroke="var(--muted)" stroke-dasharray="2 3" stroke-width="1"/>`; });
+  const xt = padL + steps.length * gap + (gap - bw) / 2;
+  s += stack(xt, 0, {v: totV, t: tot}, "United States") + `<text class="val" x="${xt + bw / 2}" y="${y(tot) - 6}" text-anchor="middle">${f1(tot)}</text><text class="ax" x="${xt + bw / 2}" y="${H - padB + 15}" text-anchor="middle" style="font-weight:600">US</text><text class="ax" x="${xt + bw / 2}" y="${H - padB + 28}" text-anchor="middle">total</text></svg>`;
+  $("swf").innerHTML = s;
+  $("swfLegend").innerHTML = bk.map(k => `<span><i style="background:${k === 4 ? "repeating-linear-gradient(45deg,var(--g-aM) 0 2px,transparent 2px 5px)" : SWB[k][1]}"></i>${SWB[k][0]}</span>`).join("") + `<span class="why">Aterio census ${esc(M.asof)}, Capstone treatment · IT-eq = facility ÷ ${FK} · no pause scenario</span>`;
+  const t3 = steps.filter(r => r.st).slice(0, 3), uc = totV[1] + totV[2];
+  const rg = sum(Object.values(RGM.ucBase || {}).map(v => sum(ys.map(y => +(v[y] || 0)))));
+  $("swfRead").innerHTML = tot ? `<b>${t3.map(r => `${SN(r.st)} ${f1(r.t)} GW (${Math.round(r.t / tot * 100)}%)`).join(" · ")}</b> of ${f1(tot)} GW IT-eq in Aterio's ${wl}. Under construction + delayed: <b>${f1(uc)} GW</b>` +
+    (rg > 0.05 ? `, against <b>${f1(rg)} GW</b> in the Capstone registry (campuses under construction, base schedule, build ${esc(RGM.asof)}; <a href="dc-delay-risk.html">DC delay risk</a>)` : "") +
+    (SWF.at !== "uc" ? `; announced High adds ${f1(totV[3])} GW and buildings that already went live ${f1(totV[0])} GW` : "") +
+    (SWF.at === "med" ? `; announced Medium, outside the house view, ${f1(totV[4])} GW` : "") + "." : "No Aterio GW dated in this window.";
+  $("swf").querySelectorAll(".swfs").forEach(g => { g.onclick = ev => { ev.preventDefault(); ev.stopPropagation(); openSt(g.dataset.sw); }; });
+}
+
 /* ------------------------------------------------------------------ view: a state, or the whole US */
 let US_A = null;
 function showState(st){
@@ -958,9 +1013,12 @@ function showState(st){
     ["geo", us ? "By state" : "By county", `<p class="cs">GW IT-eq, ranked by the house view adds.</p><div class="tscroll">${stGeo(A, st)}</div>`],
     ["cp", "Tenants, money and power", `<p class="cs">Other companies named on the ${esc(nm)} buildings, ranked by the house view adds on them (withdrawn excluded).</p>${stCounter(A)}`]];
   h += `<section class="panel">${tabsHTML(tabs)}<div style="margin-top:12px"><button type="button" class="btn" id="stCsv">${ICON_DL}Download CSV of every campus</button></div></section>`;
+  if (us) h += panel("GW added by state", `IT-eq GW each state adds in the window in the <b>Aterio census</b> (export as of ${esc(M.asof)}), under the house rules: facility MW ÷ ${FK}, Aterio's activation dates as published with no delay haircut and no pause scenario; buildings that went live in the window, under construction, delayed, and announcements / land bank rated High; campuses rated Low with no named end user are dropped. Stages stack from firmest (bottom) up; the last bar is the US total. Click a step to open the state.`,
+    `<div class="toolbar"><span class="lbl">Window</span><span class="seg" id="swfWin"></span><span class="lbl" style="margin-left:8px">Aterio stages</span><span class="seg" id="swfAt"></span></div><div class="legend" id="swfLegend"></div><div class="chart" id="swf"></div><p class="cs" id="swfRead" style="margin:10px 0 0"></p>`);
   h += note(`Aterio census as of ${esc(M.asof)}, Capstone treatment: GW IT-eq = facility MW ÷ ${FK}; house view = went live in ${Y0}, under construction, delayed, and announced High, dated ${Y0}-${Y1} on Aterio's dates. ${MED_NOTE} Operating before ${Y0} = active buildings dated before ${Y0} or undated. End-${Y1} assumes nothing operating at the census snapshot retires. Aterio's dates have slipped export after export (median +9 months for what was under construction a year ago), so read the later years as an upper path.`);
   $("view").innerHTML = h;
   fitStMap(A, st);
+  if (us) usWaterfall();
   $("stCsv").onclick = () => coCsv({own: new Set(), n: nm}, A);
 }
 
