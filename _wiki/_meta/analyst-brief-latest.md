@@ -1,6 +1,6 @@
 # Daily Analyst Brief
 
-_Generated 2026-11-10 · 43 active signals · latest reconciliation: reconciliation-2026-11-10-inbox.md._
+_Generated 2026-11-11 · 32 active signals · latest reconciliation: reconciliation-2026-11-10-inbox.md._
 
 > ⚠️ **Portfolio priority is provisional.** _data/book.json is still a seed with unknown weights. Book badges identify seeded names but do not represent real exposure.
 
@@ -10,16 +10,16 @@ _Generated 2026-11-10 · 43 active signals · latest reconciliation: reconciliat
 |---:|---|---|---:|---|
 | 1 | **GOOG** | seed | 2 | GOOG — 2026 revenue house view is 18% above consensus; GOOG — 2026-11-18: post-print watch items from the callbacks: (1) 4Q Cloud margin, where Sandler expects the… |
 | 2 | **NVDA** | seed | 2 | NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…; NVDA — 2026-11-23: NVDA investor call (IR) (Rothschild & Co Redburn TMT sales · Rowan Adley, 2026-09-28).… |
-| 3 | **MSFT** | seed | 1 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE. |
-| 4 | **ANTHROPIC** | — | 1 | ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot |
-| 5 | **IREN** | — | 1 | IREN — derived thesis/debate state changed since the prior daily snapshot |
-| 6 | **PLTR** | — | 1 | PLTR — derived thesis/debate state changed since the prior daily snapshot |
-| 7 | **QCOM** | — | 3 | QCOM — catalyst passed without a logged outcome; QCOM — catalyst passed without a logged outcome |
-| 8 | **SKHYNIX** | — | 1 | SKHYNIX — derived thesis/debate state changed since the prior daily snapshot |
-| 9 | **FLEX** | — | 1 | FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail… |
-| 10 | **KKR** | — | 1 | KKR — catalyst passed without a logged outcome |
-| 11 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
-| 12 | **SPCX** | — | 1 | SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.… |
+| 3 | **SPCX** | — | 1 | SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.… |
+| 4 | **MSFT** | seed | 1 | MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE. |
+| 5 | **NSCALE** | — | 3 | NSCALE — Bloomberg consensus missing; NSCALE — latest earnings transcript absent |
+| 6 | **NOK** | — | 2 | NOK — Bloomberg consensus missing; NOK — latest earnings transcript absent |
+| 7 | **CRWV** | — | 2 | CRWV — 2026 EPS house view is 17% below consensus; CRWV — 2027 EPS house view is 18% below consensus |
+| 8 | **COHR** | — | 2 | COHR — 2027 EPS house view is 16% below consensus; COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk… |
+| 9 | **LITE** | — | 1 | LITE — 2026 EPS house view is 17% below consensus |
+| 10 | **POET** | — | 1 | POET — latest earnings transcript absent |
+| 11 | **SMTC** | — | 1 | SMTC — latest earnings transcript absent |
+| 12 | **PANW** | — | 1 | PANW — 2026-11-18: PRE-REGISTERED TEST T1 — F1Q27 print ~2026-11-18: ORGANIC NGS ARR growth on the… |
 
 ## Highest-priority ideas
 
@@ -36,59 +36,7 @@ _MODEL CHECK · HIGH IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Google Modelo oficial.xlsx, 2026-06-05). Model years 2025/26/27 (≈CY). · Bloomberg consensus 2026-11-10.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-c60c4b0fded3
 
-### 2. 🟡 ANTHROPIC — derived thesis/debate state changed since the prior daily snapshot
-
-_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
-
-- **Tickers:** ANTHROPIC
-- **Why now:** verification (transcription QA): every figure, name and quote in the roadshow inserts re-read against the transcript and the S-1/A No. 2 text; all numbers and arithmetic tie. Three wording corrections in the Debate bullet, no number changed: (1) the "~12%" 3Q adjusted OM was attributed to a "10-27 bullet" and a "leaked" 11% figure; it is FUNDA's 2026-10-26 derivation from the secondhand 11% nine-month figure (Bloomberg 10-14, primary not pulled), and the filed nine-month figure is 12%, not 11%; (2) the filing…
-- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
-- **Action:** Re-grade the ANTHROPIC thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
-- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
-- **Read-through:** AMZN (supplier: AWS Trainium compute); GOOG (supplier: TPU compute); NVDA (supplier: GPUs); OPENAI (competitor: frontier models); NSCALE (supplier: neocloud compute ($44.6bn, Monarch 460 MW))
-- **Attribution:** ANTHROPIC page Changelog 2026-11-10.
-- **Evidence:** [ANTHROPIC.md](../ANTHROPIC.md) · signal beli-310767ca860d
-
-### 3. 🟡 IREN — derived thesis/debate state changed since the prior daily snapshot
-
-_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
-
-- **Tickers:** IREN
-- **Why now:** run-inbox: UBS "Midterm Election Impact on AI Build-Outs" (2026-11-08) — 1 Debate bullet (Childress/Horizon 1-4 on UBS's MSFT large-project list, started). Nothing superseded.
-- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
-- **Action:** Re-grade the IREN thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
-- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
-- **Read-through:** MSFT (customer: neocloud compute (200 MW IT, Childress)); NVDA (supplier: GPUs (GB300/B300/VR200)); NVDA (customer: neocloud compute ($3.4bn 5-yr)); CRWV (competitor: GPU neocloud); NBIS (competitor: GPU neocloud); NSCALE (competitor: GPU neocloud); AMD (supplier: MI350X GPUs)
-- **Attribution:** IREN page Changelog 2026-11-09.
-- **Evidence:** [IREN.md](../IREN.md) · signal beli-1e3f84cdf5c9
-
-### 4. 🟡 PLTR — derived thesis/debate state changed since the prior daily snapshot
-
-_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
-
-- **Tickers:** PLTR
-- **Why now:** /run-inbox: Karp (CEO) on The Builders with Walter Isaacson (published 11-10, taped 08-06) → 1 dated block at the top of Current state (enterprises vs LLM vendors, Anthropic/"not Lord Vader", ontology as alpha creator + protective layer, France/Europe "contractually not allowed to mention", domestic-use ban on battlefield AI). No intra-quarter table on this page. Nothing superseded; no number given.
-- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
-- **Action:** Re-grade the PLTR thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
-- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
-- **Read-through:** —
-- **Attribution:** PLTR page Changelog 2026-11-10.
-- **Evidence:** [PLTR.md](../PLTR.md) · signal beli-70ac3cdf3e9d
-
-### 5. 🟡 SKHYNIX — derived thesis/debate state changed since the prior daily snapshot
-
-_NARRATIVE SHIFT · MEDIUM IMPACT · IMMEDIATE · HIGH CONFIDENCE_
-
-- **Tickers:** SKHYNIX
-- **Why now:** run-inbox: Morgan Stanley · Shawn Kim et al. "Memory – Key Debate Post Mid-terms" (2026-11-09) → Current-state block, Debate bullet, 1 Intra-quarter row, Sinal update, Sources entry. Superseded: MS PT W2,600,000 (set 05-18, reiterated 07-02 / 08-19) → W1,600,000; MS bull / bear W3,000,000 / W1,100,000 (07-02) → W1,850,000 / W677,000; MS HBM OPM 78-80% (2027-28) → ~70%; MS long-term DRAM margin assumption ~60% through 2035 → 32% (2029-35e).
-- **Belief update:** The standing thesis or debate wording changed; inspect the Changelog before adopting the new frame.
-- **Action:** Re-grade the SKHYNIX thesis evidence and define the next falsifier. Preserve the prior framing in the page Changelog if the thesis moves.
-- **Falsifier:** The fingerprint moved only because of formatting or a derived snapshot insertion.
-- **Read-through:** AVGO (customer: HBM); NVDA (customer: HBM); MU (competitor: HBM); SAMSUNG (competitor: HBM/DRAM); AMAT (supplier: WFE); AMD (customer: HBM); ASML (supplier: litho)
-- **Attribution:** SKHYNIX page Changelog 2026-11-09.
-- **Evidence:** [SKHYNIX.md](../SKHYNIX.md) · signal beli-0229b7e48bb5
-
-### 6. 🟡 CRWV — 2026 EPS house view is 17% below consensus
+### 2. 🟡 CRWV — 2026 EPS house view is 17% below consensus
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -101,7 +49,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model — P:\Felipe Monteiro\US Equities\Modelos oficiais\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-10.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-0b9075d75223
 
-### 7. 🟡 CRWV — 2027 EPS house view is 18% below consensus
+### 3. 🟡 CRWV — 2027 EPS house view is 18% below consensus
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -114,7 +62,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model — P:\Felipe Monteiro\US Equities\Modelos oficiais\Template DCF CRWV.xlsx (2026-10-14, Felipe Monteiro), first CRWV model in the official Template DCF <TICKER family (same sheets and conventions as AMD/AVGO/ADVANTEST/TER, plus History and Debt sheets; labels in English). Build and verification pipeline in · Bloomberg consensus 2026-11-10.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-8f19b63c0593
 
-### 8. 🟡 LITE — 2026 EPS house view is 17% below consensus
+### 4. 🟡 LITE — 2026 EPS house view is 17% below consensus
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -127,7 +75,7 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 - **Attribution:** Capstone official model (Modelo consolidado incl. LITE .xlsx — consolidated optics, 2026-06-16). · Bloomberg consensus 2026-11-10.
 - **Evidence:** [house.json](../_data/house.json) · [estimates.json](../_data/estimates.json) · signal esti-5b1b8a61ac28
 
-### 9. 🟡 COHR — 2027 EPS house view is 16% below consensus
+### 5. 🟡 COHR — 2027 EPS house view is 16% below consensus
 
 _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 
@@ -143,21 +91,16 @@ _MODEL CHECK · MEDIUM IMPACT · STANDING · PROVISIONAL CONFIDENCE_
 ## Catalysts requiring preparation
 
 - **NVDA — 2026-11-17: CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the…** — ✅🔴 CLOSED 2026-09-10 — THE GS COMMUNACOPIA FIRESIDE HAPPENED. OUTCOME: Jensen reaffirmed the ~70% FY28 revenue growth ("we could grow 70% year-over-year, and we are confident about that"), _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-4dea9544cec3)
-- **MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE.** — 🆕 2026-11-17 to 11-20, SF — MSFT IGNITE. _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c9f20420ff39)
-- **FLEX — 2026-11-10: INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail…** — 🆕🔴 INNOVATION DAY — 2026-11-10, AUSTIN, TX: the dated event where the Axiom strategy detail lands. Flex said "more strategy details will be shared at an Innovation Day event on November 10, 2026 _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-30cf21294c0d)
 - **SPCX — 2026-11-12: OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset.…** — 🆕🔴🔴 2026-11-12 — OPENAI CUTS CURSOR'S DIRECT ACCESS TO ITS MODELS. A hard date on a newly acquired asset. OpenAI's own post: "We're ending our partnership with Cursor following its acquisit _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c76406c38a7d)
-- **CRWV — 2026-11-10: NEXT: the Q3'26 margin print vs JPM's 7.0% adj. OM forecast against 7.5% consensus (JPM /…** — 🆕 NEXT: the Q3'26 margin print vs JPM's 7.0% adj. OM forecast against 7.5% consensus (JPM / Samik Chatterjee, 2026-08-11) — the explicit reason JPM is Neutral, and now the cleanest single falsifia _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-26775afcbe13)
-- **IFX — 2026-11-10: FYQ4 print + FY27 guide (Jefferies · Janardan Menon, 2026-09-30, via sales relays).…** — 🆕 2026-11-10 — FYQ4 print + FY27 guide (Jefferies · Janardan Menon, 2026-09-30, via sales relays). Jefferies expects FYQ4 revenue €4.71bn / segment margin 23.7%; FY27 revenue ~€20bn (+22%), segmen _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-ce699c62b4f0)
+- **GOOG — 2026-11-18: post-print watch items from the callbacks: (1) 4Q Cloud margin, where Sandler expects the…** — 🆕 2026-10-29 (notion-ingest) — post-print watch items from the callbacks: (1) 4Q Cloud margin, where Sandler expects the SpaceX ramp to cost ~$3bn a quarter (300-400bp) for 3-4 quarters (Ross _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-cc6e54e27c15)
+- **MSFT — 2026-11-17: 2026-11-17 to 11-20, SF — MSFT IGNITE.** — 🆕 2026-11-17 to 11-20, SF — MSFT IGNITE. _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c9f20420ff39)
 - **COHR — 2026-11-12: 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk…** — 🆕 2026-11-12 → 11-20 — COHR Asia NDR with Jefferies (Blayne Curtis) (Jefferies trading desk · Jeffrey Favuzza, 2026-09-28, corporate-access list). _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-c030b28ed093)
 - **NSCALE — 2026-11-16: NVIDIA Sale ($1.0bn convertible notes / non-voting shares) expected to close on or around…** — 2026-11-16 — NVIDIA Sale ($1.0bn convertible notes / non-voting shares) expected to close on or around this date. _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-eb7d5753b962)
+- **PANW — 2026-11-18: PRE-REGISTERED TEST T1 — F1Q27 print ~2026-11-18: ORGANIC NGS ARR growth on the…** — 🧪 PRE-REGISTERED TEST T1 — F1Q27 print ~2026-11-18: ORGANIC NGS ARR growth on the re-segmented basis ≥ 28% y/y (the last disclosed organic rate, Q2 FY26) AND non-GAAP OM ≥ 30% = bull; orga _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-2c7b4a6f3c93)
 - **STX — 2026-11-17: final approval hearing, securities class-action settlement ($175M; ~$70M insurers; $105M…** — 🆕 2026-11-17 — final approval hearing, securities class-action settlement ($175M; ~$70M insurers; $105M already escrowed) (STX 10-Q, filed 2026-10-29). _Action:_ Freeze the pre-event bull/base/bear expectations and the exact datapoints that arbitrate the debate; log the outcome after the event. (cata-30156bc5bf33)
 
 ## Research hygiene
 
-- **KKR — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for KKR in outcomes.md. _Source: Catalyst outcome ledger._ (post-63dfa9032158)
-- **QCOM — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for QCOM in outcomes.md. _Source: Catalyst outcome ledger._ (post-28fe0082cdd8)
-- **QCOM — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for QCOM in outcomes.md. _Source: Catalyst outcome ledger._ (post-83a69d6c194e)
-- **QCOM — catalyst passed without a logged outcome** — Write a source-attributed bull won|bear won|neutral outcome for QCOM in outcomes.md. _Source: Catalyst outcome ledger._ (post-b1cb3a9fa2d9)
 - **NOK — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NOK, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-11-10._ (data-15ec6c635939)
 - **NSCALE — Bloomberg consensus missing** — Run the merge-safe Bloomberg estimate fetch for NSCALE, then rebuild the snapshot and Analyst Inbox. _Source: Wiki remediation worklist 2026-11-10._ (data-d2ca4ba51926)
 - **NOK — latest earnings transcript absent** — Fetch the latest NOK earnings transcript into the ticker transcript folder, ingest it, and rebuild. _Source: Wiki remediation worklist 2026-11-10._ (data-6c9de40f766b)

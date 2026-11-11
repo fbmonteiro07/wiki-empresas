@@ -1,8 +1,8 @@
-== SENTIMENT MONITOR · 2026-11-10 ==
+== SENTIMENT MONITOR · 2026-11-11 ==
 
-**Market mood.** CNN Fear & Greed is at **33 (fear)** — up from 24 a week ago and 44 a month ago (fear).
+**Market mood.** CNN Fear & Greed is at **37 (fear)** — up from 34 a week ago and 44 a month ago (fear).
 
-Since 2021, readings in the 30 band (±5) were followed by SPY **+0.29%** over five sessions (up 62% of the time, n=221 overlapping readings; QQQ +0.40% / 61%).
+Since 2021, readings in the 40 band (±5) were followed by SPY **+0.32%** over five sessions (up 59% of the time, n=257 overlapping readings; QQQ +0.25% / 57%).
 
 Last extreme crossing: down to ≤30 on 2026-11-05 (F&G 20); its five-session window matures after the next sessions.
 

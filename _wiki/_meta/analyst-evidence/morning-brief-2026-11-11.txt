@@ -1,0 +1,76 @@
+Morning Analyst Inbox — 2026-11-11
+
+Cutoff: 07:33 São Paulo / 10:33 UTC. Book prioritization is PROVISIONAL: portfolio weights remain a seed. Research priorities, not trade instructions.
+
+Today's focus: CRWV's financing execution; FLEX/Axiom's standalone economics; CSCO's pre-print demand quality; IFX's scope-correct earnings bridge; NVDA's governance risk versus mechanical broker actions.
+
+Evidence key: E = _wiki/_meta/analyst-evidence/2026-11-11-morning-source-checks.json. Supplemental “supp-” IDs are research signals, not engine alerts.
+
+FIVE PRIORITY IDEAS
+
+1. CRWV — The operating bull case strengthened; the funding bear case is not yet extinguished.
+
+Management evidence: Mike Intrator / Nitin Agrawal, November 10 call (fast-follow transcript), reports approximately $3.7bn revenue, $379m adjusted operating income and >1.7GW active critical IT load. Management expects ~$9bn customer prepayments/deposits over three months and a forthcoming secured facility at 7–7.5%; neither is cash already received under that future plan.
+
+The crucial qualification: 2027 capex “in line with 2026” is a committed-backlog-only scenario, alongside <$5bn incremental parent-level capital through 2027. JPM / Chatterjee, Patel, Herman and Nishi, recap received November 11 UTC, expects growth beyond that scenario within the same parent-capital guardrail. That extension is analyst judgment.
+
+Action/inference: rebuild sources and uses by legal borrower, draw condition and timing. Do not combine the lower-capex scenario with the old higher-capacity revenue path without a bridge; do not net <$5bn parent capital against the November 8 BofA sales relay of Tal Liani's ~$20bn total-funding estimate. Barclays / Raimo Lenschow and Sheldon McMeans, November 11, calls the print strong but cuts its target $105→$85, retaining Equal Weight: better results need not restore the old multiple.
+Falsifier: failed/delayed funding or prepayments, or worse dilution, offsets the operating gain.
+Signals esti-8f19b63c0593; supp-20261111-crwv. Evidence: E.crwv; CRWV/transcripts/CRWV_Q3-2026-earnings_2026-11-10.md; _wiki/CRWV.md.
+
+2. FLEX — Axiom is not one homogeneous AI-power earnings stream.
+
+Company evidence: November 10 Axiom presentation, slides 61–62, gives CY27 revenue $20–21bn, adjusted EBITDA margin 13–14% including ~1.25% of revenue in standalone corporate costs, and FCF conversion 40%+ of adjusted net income. Its CY27–30 framework has Power growing 40%+ annually versus Cloud & Cooling 10%+. Preferred financing is presented at $2bn, 6% cash or 7% in kind, subject to final financing terms—not confirmed closing. [Company exhibit](https://www.sec.gov/Archives/edgar/data/866374/000119312526454502/d150156dex992.htm)
+
+Broker read: JPM / Joseph Cardoso, Manmohanpreet Singh and Marc Vitenzon, recap received November 11 UTC, sees Power/FCF strength balanced by subdued Cloud growth. Faster Cloud growth could dilute the consolidated margin trajectory.
+
+Action/inference: value the two operating streams separately, then deduct corporate costs and reconcile debt/preferred claims to common equity. EPC standalone earnings still need isolation.
+Falsifier: execution costs, working capital or dilution consume the promised cash-flow improvement.
+Signal supp-20261111-flex; resolved readout alert post-80fb6407b2e6. Evidence: E.flex; _wiki/FLEX.md; _wiki/_meta/outcomes.md.
+
+3. CSCO — A beat can still be borrowed from the next quarter.
+
+Broker evidence: MS / Meta Marshall and Antonio Jaramillo, November 11, remains EW/$120 despite more optimistic investor feedback. Its F1Q27 expectations: revenue $18.3–18.4bn, adjusted gross margin 66%, hyperscaler AI orders $3–3.5bn and product-order growth excluding hyperscalers 18–20%. These are broker forecasts, not results or company guidance.
+
+Action/inference: tomorrow's print should separate price, units, order timing and hyperscaler mix. A new price increase can lift near-term orders without improving underlying demand; growing AI sales can also lower gross margin. Ask whether non-hyperscaler demand remains strong after the pricing deadline.
+Falsifier: sustained unit/order growth without pull-forward, alongside a credible margin bridge, weakens MS's caution.
+Signal supp-20261111-csco. Evidence: E.csco; _wiki/CSCO.md.
+
+4. IFX — Better visibility is not the same as higher earnings estimates.
+
+Management-relayed evidence: MS / Lee Simpson, Shawn Kim and Amelia Scicluna, November 11, splits the ~€4bn FY27 data-center outlook into ~€3.2bn accelerators and ~€0.8bn classic CPU power. It reports €10bn+ LTAs and supply constraints. Yet MS's FY27/28 EPS moves to €1.73/€2.83 from €1.76/€2.89, with EW/€65 unchanged.
+
+Action/inference: compare AI-only figures with AI-only history and fiscal forecasts with fiscal forecasts. Track Dresden output, startup costs and margin conversion; do not book the full LTA total into FY27 revenue or interpret order visibility as guaranteed cash.
+Falsifier: ramp delays/cost absorption prevent the second-half margin improvement, or customers defer committed volumes.
+Signal supp-20261111-ifx. Evidence: E.ifx; _wiki/IFX.md. This advances yesterday's release-only assessment with a broker call recap, not a full independently reviewed transcript.
+
+5. NVDA — Distinguish a stop-loss rule from an earnings downgrade.
+
+Broker evidence: MS / Joseph Moore and team, November 11, removes NVDA as Top Pick under its stop-loss policy after a >25% decline since selection on October 2. Overweight and the $300 target remain unchanged. Yesterday's BofA US 1 removal likewise retained Buy ratings (US 1 Committee, November 10).
+
+Action/inference: preferred-list removals show deteriorating conviction/price discipline, but are not themselves earnings cuts. Keep governance, leadership continuity, export access and customer orders as separate evidence tracks. These broker actions do not adjudicate allegations.
+Falsifier of a “valuation-only” reading: documented restrictions, order losses or leadership disruption impair expected operations.
+Signal supp-20261111-nvda. Evidence: E.nvda; _wiki/NVDA.md. Ignore the engine's recycled closed September fireside as a current catalyst.
+
+MODEL REVISIONS / CONFLICTS
+
+• CRWV: October 14 house CY27 capex $50.9bn versus November 10 BBG 2FY $47.9bn and management's conditional flat-capex scenario needs reconciliation—not an automatic model cut. The BBG snapshot is not verified as post-print; refresh before calling it current consensus. Adjusted operating income also needs a basis bridge to BBG EBIT. House CY26/27 EPS -$3.27/-$1.83 remains MORE optimistic than saved BBG -$3.94/-$2.23 despite the engine's “below” labels (esti-0b9075d75223; esti-8f19b63c0593).
+• Optics: November 10 BBG LITE CY26 EPS $15.46 versus June 16 house $12.81; COHR CY27 $13.39 versus September 1 house $11.30. Refresh standalone operating assumptions; do not incorporate unclosed merger synergies into LITE earnings (esti-5b1b8a61ac28; esti-b6e8e26cc2d3).
+• GOOG: June 5 house gross revenue $505bn versus November 10 BBG net $428.4bn is still a definition mismatch, not an investable forecast gap (esti-c60c4b0fded3).
+Evidence: E.models; _wiki/_data/house.json; _wiki/_data/estimates.json; _wiki/_meta/reconciliation-2026-11-10-inbox.md.
+
+CATALYSTS / NEXT ACTIONS
+
+• November 12, 4:30pm ET: CSCO results call, confirmed on the company calendar checked November 11. Freeze the order/margin tests above. Signal supp-20261111-csco; E.csco. [Company calendar](https://investor.cisco.com/default.aspx?LanguageId=1&SectionId=817fbab8-2828-44a2-91a0-f10cb8ac2b03)
+• November 12–20: COHR Asia NDR, per Jefferies / Jeffrey Favuzza's September 28 invitation for Blayne Curtis. Reconfirm access; seek CY27 volume/margin assumptions and contract protection, not another headline TAM. Signal cata-c030b28ed093; E.optics; _wiki/COHR.md.
+• Coming weeks: CRWV's next secured financing; next three months: expected prepayments (November 10 company call). Verify pricing, closing, drawability and receipt separately. Signal supp-20261111-crwv; E.crwv.
+
+WHAT MATERIALLY CHANGED
+
+CRWV/FLEX move from preparation to post-event underwriting. IFX now has a scope split and cost/ramp commentary. CSCO becomes an imminent demand-quality test. NVDA adds a second preferred-list removal, with MS explicitly identifying a mechanical trigger. Yesterday's memory-share-count and CEG/NRG earnings questions remain open.
+
+Narrative: funding visibility and earnings quality are replacing simple AI-demand arguments. CRWV's constructive commentary plus Barclays' target cut, and IFX's improved visibility without EPS upgrades, illustrate the split between operating evidence and valuation.
+
+Final engine: 32 active / 2 high / 24 focus names / zero belief changes, versus yesterday's emailed 41 / 2 / 31 / 3. Yesterday's later rebuilt snapshot was 43 / 2 / 32 / 4; today's initial 33 became 32 after logging FLEX's neutral/mixed readout. Alert expiry and ledger closure are not bullish resolutions. GOOG's basis mismatch and NVDA's stale event still account for both high alerts. Evidence: E.engine_delta; _wiki/_data/analyst/history/.
+
+Scope: 755 mailbox entries inventoried; selected research bodies and local/primary sources reviewed, not an exhaustive audit. FLEX outcome and CRWV aggregate financing/deployment context updated. No company pages or house models edited.

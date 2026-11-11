@@ -1,5 +1,5 @@
 {
- "run_at": "2026-11-10T15:58:40-03:00",
+ "run_at": "2026-11-11T16:00:16-03:00",
  "offline": false,
  "steps": {
   "kcs_detail": {
@@ -17,28 +17,28 @@
    "detail": {
     "latest_month": "2026-09",
     "rows": 1993,
-    "retrieved_at": "2026-11-10T15:58:52-03:00"
+    "retrieved_at": "2026-11-11T16:00:28-03:00"
    },
-   "seconds": 12.9
+   "seconds": 12.6
   },
   "kcs_country": {
    "status": "ok",
    "detail": {
     "latest_month": "2026-09",
     "rows": 10979,
-    "retrieved_at": "2026-11-10T15:59:08-03:00"
+    "retrieved_at": "2026-11-11T16:00:41-03:00"
    },
-   "seconds": 124.5
+   "seconds": 84.3
   },
   "kcs_tentative": {
    "status": "ok",
    "detail": {
     "latest": [
-     "2026-10",
-     "01~31"
+     "2026-11",
+     "01~10"
     ]
    },
-   "seconds": 19.9
+   "seconds": 16.0
   },
   "motie_release": {
    "status": "ok",
@@ -48,7 +48,7 @@
     "benchmark_rows_added": 0,
     "benchmark_conflicts": []
    },
-   "seconds": 25.4
+   "seconds": 25.7
   },
   "bok_index": {
    "status": "ok",
@@ -94,22 +94,22 @@
     },
     "missing_items": []
    },
-   "seconds": 205.5
+   "seconds": 206.9
   },
   "market_prices": {
    "status": "ok",
    "detail": {
     "series": 26,
-    "asof": "2026-11-10",
-    "raw_folder": "E:\\korea-memory-monitor\\raw\\bbg\\20261110T160520"
+    "asof": "2026-11-11",
+    "raw_folder": "E:\\korea-memory-monitor\\raw\\bbg\\20261111T160613"
    },
-   "seconds": 8.6
+   "seconds": 10.0
   },
   "japan_mof": {
    "status": "ok",
    "detail": {
     "latest_month": "2026-09",
-    "retrieved_at": "2026-11-10T16:05:25-03:00",
+    "retrieved_at": "2026-11-11T16:06:19-03:00",
     "servlet_note": "servlet: not yet published; 1988年01月 ～ 2026年09月",
     "supplement_status": "not_published",
     "files": {
@@ -123,14 +123,14 @@
      "2026": "2026-10-29"
     }
    },
-   "seconds": 33.0
+   "seconds": 38.9
   },
   "models_and_report": {
    "status": "ok",
    "detail": {
     "latest_export_month": "2026-09"
    },
-   "seconds": 23.3
+   "seconds": 20.6
   },
   "source_health": {
    "status": "ok",
@@ -140,38 +140,38 @@
     "automatic_sources": 8,
     "research_ledgers": 3
    },
-   "seconds": 0.4
+   "seconds": 0.6
   }
  },
  "failures": [],
  "latest_observations": {
   "kcs_detail": {
    "latest": "2026-09",
-   "retrieved": "2026-11-10"
+   "retrieved": "2026-11-11"
   },
   "kcs_extended": {
    "latest": "2026-09",
-   "retrieved": "2026-11-10"
+   "retrieved": "2026-11-11"
   },
   "kcs_country": {
    "latest": "2026-09",
-   "retrieved": "2026-11-10"
+   "retrieved": "2026-11-11"
   },
   "kcs_tentative": {
-   "latest": "2026-10 01~31",
-   "retrieved": "2026-11-10"
+   "latest": "2026-11 01~10",
+   "retrieved": "2026-11-11"
   },
   "motie_release": {
    "latest": "2026-10",
-   "retrieved": "2026-11-10"
+   "retrieved": "2026-11-11"
   },
   "bok_index": {
    "latest": "2026-09",
-   "retrieved": "2026-11-10"
+   "retrieved": "2026-11-11"
   },
   "japan_mof": {
    "latest": "2026-09",
-   "retrieved": "2026-11-10"
+   "retrieved": "2026-11-11"
   },
   "kioxia_asp": {
    "latest": "2026Q2",
@@ -182,11 +182,11 @@
    "retrieved": "2026-10-28"
   },
   "market_prices": {
-   "latest": "2026-11-10",
-   "retrieved": "2026-11-10"
+   "latest": "2026-11-11",
+   "retrieved": "2026-11-11"
   }
  },
  "status": "ok",
  "changes_since_last_run": {},
- "previous_run_at": "2026-11-10T09:11:15-03:00"
+ "previous_run_at": "2026-11-11T09:14:08-03:00"
 }
