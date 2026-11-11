@@ -44,7 +44,7 @@ button,input{font:inherit}
 .side{position:fixed;inset:0 auto 0 0;width:232px;background:#11263b;color:#e9eff6;display:flex;flex-direction:column;padding:26px 14px 18px;z-index:60;overflow:auto}
 .brand{display:flex;align-items:center;gap:11px;padding:0 10px 24px;color:#fff;text-decoration:none;font-size:13px;font-weight:750;letter-spacing:1.8px;line-height:1.35}
 .brand-mark{display:grid;place-items:center;width:32px;height:36px;border:1px solid #4b7b87;border-radius:7px;color:#8ed3c3;font-size:21px;font-weight:500;flex:none}
-.brand small{display:block;font-size:7px;letter-spacing:1.1px;color:#a3b6c9;margin-top:4px}
+.brand small{display:block;white-space:nowrap;font-size:7px;letter-spacing:1.1px;color:#a3b6c9;margin-top:4px}
 .ng{margin:0 0 18px}
 .ng>p{margin:0 10px 6px;color:#8ca6bd;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;white-space:nowrap}
 .nav a{display:flex;align-items:center;gap:9px;padding:7px 10px;margin:1px 0;color:#b9c9d8;border-radius:6px;text-decoration:none;font-size:12px;line-height:1.35}
@@ -242,11 +242,11 @@ details.note p{margin:8px 0 0}
 @media print{.side,.srch,.theme,.skip{display:none}.work{margin:0}.top{position:static}.panel,.hcard,.kpi{box-shadow:none;break-inside:avoid}.tbl-wrap{max-height:none}}
 @media (prefers-reduced-motion:reduce){*{transition:none!important}}
 </style>
-</head>
+<style>img.cap-logo{display:block;object-fit:contain;border:0!important;border-radius:0!important;padding:0!important;background:none!important;flex:none}.or-sidebar img.cap-logo,.side img.cap-logo{width:36px!important;height:36px!important;filter:brightness(1.35)}</style></head>
 <body>
 <a class="skip" href="#main">Skip to the dashboard</a>
 <aside class="side">
-  <a class="brand" href="index.html" aria-label="Capstone research dashboards"><span class="brand-mark" aria-hidden="true">C</span><span>CAPSTONE<small>RESEARCH INTELLIGENCE</small></span></a>
+  <a class="brand" href="index.html" aria-label="Capstone research dashboards"><img class="brand-mark cap-logo" src="data:image/png;base64,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" alt="" aria-hidden="true"><span>CAPSTONE<small>RESEARCH INTELLIGENCE</small></span></a>
   <nav class="nav" id="nav" aria-label="Views"></nav>
   <div class="side-foot" id="sideFoot"></div>
 </aside>
@@ -347,11 +347,18 @@ const gqv = v => { const s = gq(v), m = s.match(/^(.+) (GW|MW)$/); return m ? `$
 const ymS = a => a ? `${Math.floor(a / 100)}-${String(a % 100).padStart(2, "0")}` : "";
 const rxEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const rolesTxt = e => [...Object.keys(e.r).map(k => `${RL[k][1]} ${new Set(e.r[k]).size}`), ...Object.keys(e.b).map(k => `BTM ${BRL[k]} ${new Set(e.b[k]).size}`)].join(" · ");
-const kindTag = e => e.kind === "reg" ? `<span class="tag">public registry</span>` : e.kind === "wiki" ? `<span class="tag">wiki · ${esc(e.w)}</span>` : e.kind === "group" ? `<span class="tag">all names · ${esc(e.t)}</span>`
+const kindTag = e => e.kind === "reg" ? `<span class="tag">public registry</span>` : e.kind === "sum" ? `<span class="tag">the four added together</span>` : e.kind === "wiki" ? `<span class="tag">wiki · ${esc(e.w)}</span>` : e.kind === "group" ? `<span class="tag">all names · ${esc(e.t)}</span>`
   : e.kind === "state" ? `<span class="tag">${e.t === "US" ? "all states" : "state · " + esc(e.t)}</span>` : (e.t ? `<span class="tag">${esc(e.t)}</span>` : "");
 const LS = {e: null, st: null, role: null, hi: 0, hits: []};
 const FOURI = Object.fromEntries(C.map(c => [c.id, ENT.findIndex(e => e.kind === "wiki" && e.t === c.tick)]));
 const coHash = i => "#co=" + encodeURIComponent(ENT[i].n);
+// the four added together: one entry holding the union of their buildings, so a building two of them share counts once
+const COMB = (() => { const parts = C.map(c => FOURI[c.id]).filter(i => i >= 0); if (parts.length < 2) return -1;
+  const e = {n: "All four hyperscalers", t: C.map(c => c.tick).join("/"), w: "", al: "hyperscalers combined total sum soma somatorio somatório todos big four added together", r: {}, b: {}, own: new Set(), kind: "sum", parts};
+  const un = (dst, src) => Object.entries(src).forEach(([k, a]) => { dst[k] = [...new Set([...(dst[k] || []), ...a])]; });
+  parts.forEach(i => { un(e.r, ENT[i].r); un(e.b, ENT[i].b); ENT[i].own.forEach(x => e.own.add(x)); });
+  const sb = allJ(e.r); e.nb = sb.size; e.mw = [...sb].reduce((a, j) => a + (LU.bld[j][1] !== 6 ? (LU.bld[j][2] || 0) : 0), 0) / FK; e.nbtm = allJ(e.b).size;
+  return ENT.push(e) - 1; })();
 
 /* ------------------------------------------------------------------ public registry layer: Capstone's DC delay-risk registry (public sources) */
 const RGM = M.registry || {rows: [], asof: "", scen: "bear", scenLabel: ""};
@@ -382,6 +389,7 @@ function nameTerms(s){ const full = stripW(s, LEGAL), core = stripW(s, DESC), t 
 function regTerms(e){
   if (e.kind === "state" || PLACEHOLDER.test(e.n)) return [];
   if (e.kind === "reg") return [e.n];
+  if (e.kind === "sum") return [...new Set(e.parts.flatMap(i => regTerms(ENT[i])))];
   const t = new Set(), add = s => nameTerms(s).forEach(x => t.add(x));
   add(e.kind === "group" ? e.n.replace(/\s*\(.*$/, "") : e.n.replace(/\s*\([^)]*\)/g, ""));
   if (e.kind !== "group") (e.n.match(/\(([^)]+)\)/g) || []).forEach(x => add(x.slice(1, -1)));
@@ -746,7 +754,7 @@ function setView(key, crumb){
 function showFour(){
   LS.e = null; LS.st = null; setView("four", "The four hyperscalers");
   $("view").innerHTML = vhead("Hyperscalers · self-built + recorded leases", "Amazon, Google, Meta and Microsoft", "", `Aterio census as of ${esc(M.asof)} · GW IT-eq · house view = house rules of ${esc(M.rules_decided)}`,
-      `Click a company card to open its full view. Leases are what Aterio recorded, so leased GW is a floor. The method and the Bernstein cross-check sit under <a href="#method">Reference</a>.`) +
+      `Click a company card to open its full view${COMB >= 0 ? `, or <a href="${coHash(COMB)}">open the four added together</a> (capacity path, adds per year, map, campuses)` : ""}. Leases are what Aterio recorded, so leased GW is a floor. The method and the Bernstein cross-check sit under <a href="#method">Reference</a>.`) +
     `<div class="toolbar"><span class="lbl">Count</span><span class="seg" id="segRole"></span><span class="lbl" style="margin-left:8px">Map and states</span><span class="seg" id="segMetric"></span></div>` +
     `<div class="kpis" id="fourKpi"></div><div class="cards" id="cards"></div>` +
     panel("House view: GW added per year, 2026-30", `<span id="multLead"></span>`, `<div class="legend" id="multLegend"></div><div class="mult" id="mult"></div>`) +
@@ -851,7 +859,7 @@ function camps(){
 /* ------------------------------------------------------------------ view: one company (any name in the census; the four default to self-built + leased) */
 function showCo(i){
   const e = ENT[i]; LS.e = i; LS.st = null;
-  const four = e.kind === "wiki" && FOUR.has(e.t), rk = Object.keys(e.r);
+  const comb = e.kind === "sum", four = comb || (e.kind === "wiki" && FOUR.has(e.t)), rk = Object.keys(e.r);
   const opts = [...(four && (e.r.op || e.r.ten) ? [["sl", "Self-built + leased"]] : []), ["all", `All roles (${e.nb})`], ...rk.map(k => [k, `${RL[k][0]} (${new Set(e.r[k]).size})`])];
   let role = LS.role; if (!opts.some(o => o[0] === role)) role = opts[0][0]; LS.role = role;
   const A = coAgg(e, role === "sl" ? ["op", "ten"] : role), th = e.w && LU.th[e.w];
@@ -859,19 +867,22 @@ function showCo(i){
   const cov = e.kind === "raw" ? [...new Set(coveredBy[i - R0] || [])].filter(x => x !== i) : [];
   setView("e:" + i, e.n);
   let wk = "";
-  if (e.kind === "wiki") wk = `<a href="../index.html#${esc(e.w)}">Wiki page: ${esc(e.w)}</a>${th ? ` · ${esc(th)}` : ""}`;
+  if (comb) { const cards = sum(C.map(c => c.house)) * 1000, un = coAgg(e, ["op", "ten"]).house;
+    wk = `${C.map(c => `<a href="${coHash(FOURI[c.id])}">${esc(c.name)}</a>`).join(" + ")}, as one view. A building counts once here even when two of the four are named on it: self-built + leased house view ${gq(un)}, against ${gq(cards)} for the four cards added up` +
+      (Math.abs(cards - un) < 5 ? " (no overlap between them)." : ` (${gq(cards - un)} sits on buildings they share).`); }
+  else if (e.kind === "wiki") wk = `<a href="../index.html#${esc(e.w)}">Wiki page: ${esc(e.w)}</a>${th ? ` · ${esc(th)}` : ""}`;
   else if (e.kind === "group") wk = `Every name Aterio carries under ${esc(e.t)}: ${esc(e.al)}.` + (e.w ? ` <a href="../index.html#${esc(e.w)}">Wiki page</a>` : "");
   else if (e.kind === "reg") wk = `Not in the Aterio census under this name (Aterio may write it differently: try a shorter search). Everything below is from Capstone's public-source registry.`;
   else wk = `Name as Aterio writes it.${e.w ? ` <a href="../index.html#${esc(e.w)}">Wiki page: ${esc(e.w)}</a>${th ? ` · ${esc(th)}` : ""}` : ""}` +
     (cov.length ? ` Part of ${cov.map(x => `<a class="ent" href="#" data-e="${x}">${esc(ENT[x].n)}</a>`).join(", ")}, which also counts its other names.` : "");
-  const kick = e.kind === "reg" ? "Company, as the public registry names it" : four ? "Hyperscaler" : e.kind === "wiki" ? "Wiki company" : e.kind === "group" ? "Company group" : "Company, as Aterio names it";
+  const kick = e.kind === "reg" ? "Company, as the public registry names it" : comb ? "Hyperscalers · the four added together" : four ? "Hyperscaler" : e.kind === "wiki" ? "Wiki company" : e.kind === "group" ? "Company group" : "Company, as Aterio names it";
   const regTxt = RA.n ? `registry ${RA.n} phase${RA.n > 1 ? "s" : ""} on ${RA.list.length} campus${RA.list.length > 1 ? "es" : ""}` : "";
   let h = vhead(kick, e.n, e.t, e.kind === "reg" ? `Public ${regTxt}` : `${esc(rolesTxt(e)) || "–"} <span class="why">(buildings; BTM = generation phases)</span>${regTxt ? " · " + regTxt : ""}`, wk);
   if (rk.length) {
     const yrSum = gi => YRS.reduce((a, y) => a + A.hy[y][gi], 0), end = A.base + A.house;
     h += `<div class="toolbar"><span class="lbl">Role</span><span class="seg" id="coRole"></span><button type="button" class="btn" id="coCsv" title="Download every campus row">${ICON_DL}Download CSV</button></div>`;
     const extra = rk.filter(k => k !== "op" && k !== "ten");
-    if (four && extra.length) h += `<p class="cs" style="margin:-6px 0 14px">“Self-built + leased” is the basis of <a href="#four">The four compared</a>. ${esc(e.n)} is also named as ${extra.map(k => RL[k][1]).join(" and ")} on other buildings; “All roles” adds them.</p>`;
+    if (four && extra.length) h += `<p class="cs" style="margin:-6px 0 14px">“Self-built + leased” is the basis of <a href="#four">The four compared</a>. ${comb ? "The four are" : esc(e.n) + " is"} also named as ${extra.map(k => RL[k][1]).join(" and ")} on other buildings; “All roles” adds them.</p>`;
     h += `<div class="kpis">` +
       kpi(`US additions ${Y0}-${Y1} · house view`, gqv(A.house), `went live ${Y0} ${gq(yrSum(0))} · building ${gq(yrSum(1))} · delayed ${gq(yrSum(2))} · announced high ${gq(yrSum(3))}`, "lead") +
       medKpi(A) +
@@ -994,7 +1005,8 @@ function buildNav(){
   const gw1 = v => (v / 1000).toFixed(1);
   $("nav").innerHTML =
     grp("Overview", [li("four", "#four", "The four compared", f1(sum(C.map(c => c.house)))), li("st:US", "#st=US", "United States", gw1(STX.US.house))]) +
-    grp("Hyperscalers · GW 26-30", C.map(c => FOURI[c.id] >= 0 ? li("e:" + FOURI[c.id], coHash(FOURI[c.id]), c.name, f1(c.house), `var(--c-${c.id})`) : "")) +
+    grp("Hyperscalers · GW 26-30", C.map(c => FOURI[c.id] >= 0 ? li("e:" + FOURI[c.id], coHash(FOURI[c.id]), c.name, f1(c.house), `var(--c-${c.id})`) : "")
+      .concat(COMB >= 0 ? [li("e:" + COMB, coHash(COMB), "All four combined", gw1(coAgg(ENT[COMB], ["op", "ten"]).house), "var(--muted)")] : [])) +
     grp("Top states · GW 26-30", stTop.map(([e]) => li("st:" + e.st, "#st=" + e.st, e.n, gw1(e.house)))) +
     grp("Companies", wikiTop.map(([e, i]) => li("e:" + i, coHash(i), e.n, e.t))) +
     grp("Reference", [li("method", "#method", "Method and Bernstein check")]);

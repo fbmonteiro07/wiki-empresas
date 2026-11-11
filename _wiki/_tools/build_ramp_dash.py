@@ -1094,6 +1094,8 @@ def build(artifact=False):
 
     from ramp_dashboard_ui import enhance
     html = enhance("".join(p), META, LAT_A, labw(WK[-1]))
+    import capstone_logo
+    html = capstone_logo.apply(html)
     dest = ART if artifact else OUT
     with io.open(dest, "w", encoding="utf-8") as f:
         f.write(html)

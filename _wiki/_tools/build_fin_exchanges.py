@@ -387,7 +387,8 @@ def main() -> None:
 </div></section>"""
     html = page("Exchange volumes", "Monthly volumes, share and revenue capture for CME, ICE, Cboe and Nasdaq "
                 "against volatility and consensus", body, mounts)
-    OUT.write_text(html, encoding="utf-8", newline="\n")
+    import capstone_logo
+    OUT.write_text(capstone_logo.apply(html), encoding="utf-8", newline="\n")
     print(f"wrote {OUT.relative_to(WIKI)} ({len(html) / 1024:.0f} KB) · latest {latest}")
     print("trading-day disagreements:", days_check or "none")
     print("corr CME/VIX", r_cme, "Cboe/VIX", r_cboe, "ICE/OVX", r_ice)

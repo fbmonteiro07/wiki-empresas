@@ -308,7 +308,8 @@ def main() -> None:
 </section>"""
     html = page("AI infrastructure financing", "Asset managers' AI-infrastructure deals on their stated bases, "
                 "with project-bond marks from the official AI-credit workbook", body, mounts)
-    OUT.write_text(html, encoding="utf-8", newline="\n")
+    import capstone_logo
+    OUT.write_text(capstone_logo.apply(html), encoding="utf-8", newline="\n")
     print(f"wrote {OUT.relative_to(WIKI)} ({len(html) / 1024:.0f} KB) · {len(deals)} deals · {len(linked)} linked bonds")
     print("drift:", newer or "none", "| missing IDs:", missing or "none")
 

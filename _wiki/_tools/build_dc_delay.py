@@ -1324,6 +1324,8 @@ def font_face() -> str:
 def write_page(payload: str) -> None:
     tpl = open(TEMPLATE, encoding="utf-8").read()
     page = tpl.replace("/*__FONT__*/", font_face()).replace("/*__DATA__*/null", payload)
+    import capstone_logo
+    page = capstone_logo.apply(page)
     with open(DASH, "w", encoding="utf-8", newline="\n") as fh:
         fh.write(page)
 

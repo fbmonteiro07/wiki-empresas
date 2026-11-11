@@ -183,4 +183,5 @@ def enhance(page, deals, market):
         'DATA': json_script(data),
     }
     template = (ASSETS / 'monitor.html').read_text(encoding='utf-8')
-    return re.sub(r'@@([A-Z_]+)@@', lambda m: parts[m[1]], template)
+    import capstone_logo
+    return capstone_logo.apply(re.sub(r'@@([A-Z_]+)@@', lambda m: parts[m[1]], template))

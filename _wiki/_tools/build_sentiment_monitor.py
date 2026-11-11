@@ -911,7 +911,8 @@ def main() -> int:
             "CNN pulled live with a cache fallback; the desk read comes from the 10:00 sentiment-radar task. Numbers in <code>monitor.json</code>.</p>"
             f"</main></div></div><script>window.__SENT__ = {parts['payload']};window.__MON__ = {mon_json};</script>"
             f"<script>{SX_JS}</script><script>{OR_JS}</script><script>{PAGE_JS}</script></body></html>")
-    OUT.write_text(page, encoding="utf-8")
+    import capstone_logo
+    OUT.write_text(capstone_logo.apply(page), encoding="utf-8")
     print(f"  -> {OUT} ({len(page)/1e6:.1f} MB)")
     print(f"  cnn {cnn_status}: {fg} ({cnn_rating(fg)}) · BBG X through {bx_through} · own X through {tw_through} ({tw_age} d) · mail {ss_through} ({ss_age} d) · prices {px_through} · desk review {rv_date}")
     print(f"  movers: BBG {len(b_rise)}↑/{len(b_fall)}↓ · own {len(rising)}↑/{len(falling)}↓")

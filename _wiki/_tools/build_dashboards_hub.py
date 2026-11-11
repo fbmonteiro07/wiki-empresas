@@ -560,7 +560,8 @@ def main() -> int:
         f"{shell}{''.join(parts)}</main></div></div>"
         f"<script>{OR_JS}</script><script>{HUB_JS}</script></body></html>"
     )
-    OUT.write_text(page, encoding="utf-8")
+    import capstone_logo
+    OUT.write_text(capstone_logo.apply(page), encoding="utf-8")
 
     print(f"hub -> {OUT}  ({total} cards: home {len(home_cards)}, "
           + (f"themes {theme_total} unique [" + ", ".join(f"{g['title']} {len(by_group[g['id']])}" for g in groups if by_group[g['id']]) + "], " if theme_total else "")

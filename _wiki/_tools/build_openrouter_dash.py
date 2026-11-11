@@ -920,6 +920,7 @@ FULL = ('<!DOCTYPE html><html lang="en" data-theme="light"><head><meta charset="
 # Artifact fragment: no doctype/html/head/body (the Artifact host injects those); drop the wiki back-link.
 FRAG = '<style>' + CSS + '</style>' + BODY.replace(' · <a href="../index.html">← wiki</a>', '') + '<script>' + JS + '</script>'
 
-(DASH / "openrouter.html").write_text(FULL, encoding="utf-8")
-(OR / "openrouter.artifact.html").write_text(FRAG, encoding="utf-8")
+import capstone_logo
+(DASH / "openrouter.html").write_text(capstone_logo.apply(FULL), encoding="utf-8")
+(OR / "openrouter.artifact.html").write_text(capstone_logo.apply(FRAG), encoding="utf-8")
 print("wrote", DASH / "openrouter.html", "(full %.0f KB) + artifact fragment (%.0f KB)" % (len(FULL) / 1024, len(FRAG) / 1024))

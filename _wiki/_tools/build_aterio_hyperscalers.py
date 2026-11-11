@@ -348,7 +348,8 @@ def write(out: dict) -> None:
     payload = json.dumps({**out, "map": bdd.state_paths(), "stateNames": bdd.STATE_NAMES, "registry": registry()},
                          ensure_ascii=False, separators=(",", ":")).replace("</", "<\\/")
     with open(DASH, "w", encoding="utf-8", newline="\n") as fh:
-        fh.write(tpl.replace("/*__FONT__*/", font_face()).replace("/*__DATA__*/null", payload))
+        import capstone_logo
+        fh.write(capstone_logo.apply(tpl.replace("/*__FONT__*/", font_face()).replace("/*__DATA__*/null", payload)))
 
 
 def registry() -> dict | None:

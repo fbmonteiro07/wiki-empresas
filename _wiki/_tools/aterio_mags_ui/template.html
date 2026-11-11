@@ -44,7 +44,7 @@ button,input{font:inherit}
 .side{position:fixed;inset:0 auto 0 0;width:232px;background:#11263b;color:#e9eff6;display:flex;flex-direction:column;padding:26px 14px 18px;z-index:60;overflow:auto}
 .brand{display:flex;align-items:center;gap:11px;padding:0 10px 24px;color:#fff;text-decoration:none;font-size:13px;font-weight:750;letter-spacing:1.8px;line-height:1.35}
 .brand-mark{display:grid;place-items:center;width:32px;height:36px;border:1px solid #4b7b87;border-radius:7px;color:#8ed3c3;font-size:21px;font-weight:500;flex:none}
-.brand small{display:block;font-size:7px;letter-spacing:1.1px;color:#a3b6c9;margin-top:4px}
+.brand small{display:block;white-space:nowrap;font-size:7px;letter-spacing:1.1px;color:#a3b6c9;margin-top:4px}
 .ng{margin:0 0 18px}
 .ng>p{margin:0 10px 6px;color:#8ca6bd;font-size:9px;font-weight:700;text-transform:uppercase;letter-spacing:1.2px;white-space:nowrap}
 .nav a{display:flex;align-items:center;gap:9px;padding:7px 10px;margin:1px 0;color:#b9c9d8;border-radius:6px;text-decoration:none;font-size:12px;line-height:1.35}
@@ -347,11 +347,18 @@ const gqv = v => { const s = gq(v), m = s.match(/^(.+) (GW|MW)$/); return m ? `$
 const ymS = a => a ? `${Math.floor(a / 100)}-${String(a % 100).padStart(2, "0")}` : "";
 const rxEsc = s => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
 const rolesTxt = e => [...Object.keys(e.r).map(k => `${RL[k][1]} ${new Set(e.r[k]).size}`), ...Object.keys(e.b).map(k => `BTM ${BRL[k]} ${new Set(e.b[k]).size}`)].join(" · ");
-const kindTag = e => e.kind === "reg" ? `<span class="tag">public registry</span>` : e.kind === "wiki" ? `<span class="tag">wiki · ${esc(e.w)}</span>` : e.kind === "group" ? `<span class="tag">all names · ${esc(e.t)}</span>`
+const kindTag = e => e.kind === "reg" ? `<span class="tag">public registry</span>` : e.kind === "sum" ? `<span class="tag">the four added together</span>` : e.kind === "wiki" ? `<span class="tag">wiki · ${esc(e.w)}</span>` : e.kind === "group" ? `<span class="tag">all names · ${esc(e.t)}</span>`
   : e.kind === "state" ? `<span class="tag">${e.t === "US" ? "all states" : "state · " + esc(e.t)}</span>` : (e.t ? `<span class="tag">${esc(e.t)}</span>` : "");
 const LS = {e: null, st: null, role: null, hi: 0, hits: []};
 const FOURI = Object.fromEntries(C.map(c => [c.id, ENT.findIndex(e => e.kind === "wiki" && e.t === c.tick)]));
 const coHash = i => "#co=" + encodeURIComponent(ENT[i].n);
+// the four added together: one entry holding the union of their buildings, so a building two of them share counts once
+const COMB = (() => { const parts = C.map(c => FOURI[c.id]).filter(i => i >= 0); if (parts.length < 2) return -1;
+  const e = {n: "All four hyperscalers", t: C.map(c => c.tick).join("/"), w: "", al: "hyperscalers combined total sum soma somatorio somatório todos big four added together", r: {}, b: {}, own: new Set(), kind: "sum", parts};
+  const un = (dst, src) => Object.entries(src).forEach(([k, a]) => { dst[k] = [...new Set([...(dst[k] || []), ...a])]; });
+  parts.forEach(i => { un(e.r, ENT[i].r); un(e.b, ENT[i].b); ENT[i].own.forEach(x => e.own.add(x)); });
+  const sb = allJ(e.r); e.nb = sb.size; e.mw = [...sb].reduce((a, j) => a + (LU.bld[j][1] !== 6 ? (LU.bld[j][2] || 0) : 0), 0) / FK; e.nbtm = allJ(e.b).size;
+  return ENT.push(e) - 1; })();
 
 /* ------------------------------------------------------------------ public registry layer: Capstone's DC delay-risk registry (public sources) */
 const RGM = M.registry || {rows: [], asof: "", scen: "bear", scenLabel: ""};
@@ -382,6 +389,7 @@ function nameTerms(s){ const full = stripW(s, LEGAL), core = stripW(s, DESC), t 
 function regTerms(e){
   if (e.kind === "state" || PLACEHOLDER.test(e.n)) return [];
   if (e.kind === "reg") return [e.n];
+  if (e.kind === "sum") return [...new Set(e.parts.flatMap(i => regTerms(ENT[i])))];
   const t = new Set(), add = s => nameTerms(s).forEach(x => t.add(x));
   add(e.kind === "group" ? e.n.replace(/\s*\(.*$/, "") : e.n.replace(/\s*\([^)]*\)/g, ""));
   if (e.kind !== "group") (e.n.match(/\(([^)]+)\)/g) || []).forEach(x => add(x.slice(1, -1)));
@@ -746,7 +754,7 @@ function setView(key, crumb){
 function showFour(){
   LS.e = null; LS.st = null; setView("four", "The four hyperscalers");
   $("view").innerHTML = vhead("Hyperscalers · self-built + recorded leases", "Amazon, Google, Meta and Microsoft", "", `Aterio census as of ${esc(M.asof)} · GW IT-eq · house view = house rules of ${esc(M.rules_decided)}`,
-      `Click a company card to open its full view. Leases are what Aterio recorded, so leased GW is a floor. The method and the Bernstein cross-check sit under <a href="#method">Reference</a>.`) +
+      `Click a company card to open its full view${COMB >= 0 ? `, or <a href="${coHash(COMB)}">open the four added together</a> (capacity path, adds per year, map, campuses)` : ""}. Leases are what Aterio recorded, so leased GW is a floor. The method and the Bernstein cross-check sit under <a href="#method">Reference</a>.`) +
     `<div class="toolbar"><span class="lbl">Count</span><span class="seg" id="segRole"></span><span class="lbl" style="margin-left:8px">Map and states</span><span class="seg" id="segMetric"></span></div>` +
     `<div class="kpis" id="fourKpi"></div><div class="cards" id="cards"></div>` +
     panel("House view: GW added per year, 2026-30", `<span id="multLead"></span>`, `<div class="legend" id="multLegend"></div><div class="mult" id="mult"></div>`) +
@@ -851,7 +859,7 @@ function camps(){
 /* ------------------------------------------------------------------ view: one company (any name in the census; the four default to self-built + leased) */
 function showCo(i){
   const e = ENT[i]; LS.e = i; LS.st = null;
-  const four = e.kind === "wiki" && FOUR.has(e.t), rk = Object.keys(e.r);
+  const comb = e.kind === "sum", four = comb || (e.kind === "wiki" && FOUR.has(e.t)), rk = Object.keys(e.r);
   const opts = [...(four && (e.r.op || e.r.ten) ? [["sl", "Self-built + leased"]] : []), ["all", `All roles (${e.nb})`], ...rk.map(k => [k, `${RL[k][0]} (${new Set(e.r[k]).size})`])];
   let role = LS.role; if (!opts.some(o => o[0] === role)) role = opts[0][0]; LS.role = role;
   const A = coAgg(e, role === "sl" ? ["op", "ten"] : role), th = e.w && LU.th[e.w];
@@ -859,19 +867,22 @@ function showCo(i){
   const cov = e.kind === "raw" ? [...new Set(coveredBy[i - R0] || [])].filter(x => x !== i) : [];
   setView("e:" + i, e.n);
   let wk = "";
-  if (e.kind === "wiki") wk = `<a href="../index.html#${esc(e.w)}">Wiki page: ${esc(e.w)}</a>${th ? ` · ${esc(th)}` : ""}`;
+  if (comb) { const cards = sum(C.map(c => c.house)) * 1000, un = coAgg(e, ["op", "ten"]).house;
+    wk = `${C.map(c => `<a href="${coHash(FOURI[c.id])}">${esc(c.name)}</a>`).join(" + ")}, as one view. A building counts once here even when two of the four are named on it: self-built + leased house view ${gq(un)}, against ${gq(cards)} for the four cards added up` +
+      (Math.abs(cards - un) < 5 ? " (no overlap between them)." : ` (${gq(cards - un)} sits on buildings they share).`); }
+  else if (e.kind === "wiki") wk = `<a href="../index.html#${esc(e.w)}">Wiki page: ${esc(e.w)}</a>${th ? ` · ${esc(th)}` : ""}`;
   else if (e.kind === "group") wk = `Every name Aterio carries under ${esc(e.t)}: ${esc(e.al)}.` + (e.w ? ` <a href="../index.html#${esc(e.w)}">Wiki page</a>` : "");
   else if (e.kind === "reg") wk = `Not in the Aterio census under this name (Aterio may write it differently: try a shorter search). Everything below is from Capstone's public-source registry.`;
   else wk = `Name as Aterio writes it.${e.w ? ` <a href="../index.html#${esc(e.w)}">Wiki page: ${esc(e.w)}</a>${th ? ` · ${esc(th)}` : ""}` : ""}` +
     (cov.length ? ` Part of ${cov.map(x => `<a class="ent" href="#" data-e="${x}">${esc(ENT[x].n)}</a>`).join(", ")}, which also counts its other names.` : "");
-  const kick = e.kind === "reg" ? "Company, as the public registry names it" : four ? "Hyperscaler" : e.kind === "wiki" ? "Wiki company" : e.kind === "group" ? "Company group" : "Company, as Aterio names it";
+  const kick = e.kind === "reg" ? "Company, as the public registry names it" : comb ? "Hyperscalers · the four added together" : four ? "Hyperscaler" : e.kind === "wiki" ? "Wiki company" : e.kind === "group" ? "Company group" : "Company, as Aterio names it";
   const regTxt = RA.n ? `registry ${RA.n} phase${RA.n > 1 ? "s" : ""} on ${RA.list.length} campus${RA.list.length > 1 ? "es" : ""}` : "";
   let h = vhead(kick, e.n, e.t, e.kind === "reg" ? `Public ${regTxt}` : `${esc(rolesTxt(e)) || "–"} <span class="why">(buildings; BTM = generation phases)</span>${regTxt ? " · " + regTxt : ""}`, wk);
   if (rk.length) {
     const yrSum = gi => YRS.reduce((a, y) => a + A.hy[y][gi], 0), end = A.base + A.house;
     h += `<div class="toolbar"><span class="lbl">Role</span><span class="seg" id="coRole"></span><button type="button" class="btn" id="coCsv" title="Download every campus row">${ICON_DL}Download CSV</button></div>`;
     const extra = rk.filter(k => k !== "op" && k !== "ten");
-    if (four && extra.length) h += `<p class="cs" style="margin:-6px 0 14px">“Self-built + leased” is the basis of <a href="#four">The four compared</a>. ${esc(e.n)} is also named as ${extra.map(k => RL[k][1]).join(" and ")} on other buildings; “All roles” adds them.</p>`;
+    if (four && extra.length) h += `<p class="cs" style="margin:-6px 0 14px">“Self-built + leased” is the basis of <a href="#four">The four compared</a>. ${comb ? "The four are" : esc(e.n) + " is"} also named as ${extra.map(k => RL[k][1]).join(" and ")} on other buildings; “All roles” adds them.</p>`;
     h += `<div class="kpis">` +
       kpi(`US additions ${Y0}-${Y1} · house view`, gqv(A.house), `went live ${Y0} ${gq(yrSum(0))} · building ${gq(yrSum(1))} · delayed ${gq(yrSum(2))} · announced high ${gq(yrSum(3))}`, "lead") +
       medKpi(A) +
@@ -994,7 +1005,8 @@ function buildNav(){
   const gw1 = v => (v / 1000).toFixed(1);
   $("nav").innerHTML =
     grp("Overview", [li("four", "#four", "The four compared", f1(sum(C.map(c => c.house)))), li("st:US", "#st=US", "United States", gw1(STX.US.house))]) +
-    grp("Hyperscalers · GW 26-30", C.map(c => FOURI[c.id] >= 0 ? li("e:" + FOURI[c.id], coHash(FOURI[c.id]), c.name, f1(c.house), `var(--c-${c.id})`) : "")) +
+    grp("Hyperscalers · GW 26-30", C.map(c => FOURI[c.id] >= 0 ? li("e:" + FOURI[c.id], coHash(FOURI[c.id]), c.name, f1(c.house), `var(--c-${c.id})`) : "")
+      .concat(COMB >= 0 ? [li("e:" + COMB, coHash(COMB), "All four combined", gw1(coAgg(ENT[COMB], ["op", "ten"]).house), "var(--muted)")] : [])) +
     grp("Top states · GW 26-30", stTop.map(([e]) => li("st:" + e.st, "#st=" + e.st, e.n, gw1(e.house)))) +
     grp("Companies", wikiTop.map(([e, i]) => li("e:" + i, coHash(i), e.n, e.t))) +
     grp("Reference", [li("method", "#method", "Method and Bernstein check")]);
